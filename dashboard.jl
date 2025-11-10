@@ -1,4 +1,3 @@
-
 using Pkg
 using Bonito
 using WGLMakie
