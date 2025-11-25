@@ -1,12 +1,12 @@
 using Pkg
 Pkg.activate(dirname(@__DIR__))
 
-include("run_benchmarks.jl")
+include("run_all.jl")
 
 function populate_history(n_runs=5)
     
     for i in 1:n_runs
-        run_and_save_benchmarks()
+        run_all_benchmarks()
         if i < n_runs
             sleep(2)
         end
