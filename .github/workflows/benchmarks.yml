@@ -12,6 +12,7 @@ on:
     paths:
       - 'src/**'
       - 'Project.toml'
+      - 'action.yml'
       - '.github/workflows/benchmarks.yml'
 
   pull_request:
