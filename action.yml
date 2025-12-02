@@ -38,9 +38,8 @@ inputs:
     default: 'benchmarks/'
 
   github_token:
-    description: 'GitHub token for pushing results (default: ${{ github.token }})'
-    required: false
-    default: ${{ github.token }}
+    description: 'GitHub token for pushing results'
+    required: true
 
 outputs:
   history_file:
