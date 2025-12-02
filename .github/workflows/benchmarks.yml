@@ -1,0 +1,78 @@
+name: Run Benchmarks
+
+on:
+  schedule:
+    - cron: '0 2 * * *'
+
+  workflow_dispatch:
+
+  push:
+    branches:
+      - main
+    paths:
+      - 'src/**'
+      - 'Project.toml'
+      - '.github/workflows/benchmarks.yml'
+
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run BenchmarkExplorer
+        uses: ./
+        with:
+          benchmark_script: 'src/benchmarks_trixi.jl'
+          history_file: 'data/history_trixi.json'
+          group_name: 'trixi'
+          julia_version: '1.10'
+          persist_to_branch: 'gh-pages'
+          persist_path: 'benchmarks/'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Comment on PR (optional)
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const history = JSON.parse(fs.readFileSync('${{ steps.benchmark.outputs.history_file }}', 'utf8'));
+
+            let comment = '## Benchmark Results\n\n';
+            comment += `Total benchmarks: ${{ steps.benchmark.outputs.num_benchmarks }}\n\n`;
+            comment += '| Benchmark | Time (ms) |\n';
+            comment += '|-----------|----------|\n';
+
+            let count = 0;
+            for (const [name, runs] of Object.entries(history)) {
+              if (count++ >= 10) break;
+              const latestRun = Math.max(...Object.keys(runs).map(Number));
+              const time = runs[latestRun].mean_time_ns / 1e6;
+              comment += `| ${name} | ${time.toFixed(2)} |\n`;
+            }
+
+            if (Object.keys(history).length > 10) {
+              comment += `| ... | ... |\n`;
+              comment += `\n*Showing 10 of ${Object.keys(history).length} benchmarks*\n`;
+            }
+
+            comment += '\n📊 [View full results on GitHub Pages](https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/)\n';
+
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: comment
+            });

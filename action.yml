@@ -1,0 +1,225 @@
+name: 'BenchmarkExplorer CI'
+description: 'Run Julia benchmarks and save results in BenchmarkExplorer format with persistent history'
+author: 'Yaroslav Kachur'
+
+branding:
+  icon: 'activity'
+  color: 'purple'
+
+inputs:
+  benchmark_script:
+    description: 'Path to the Julia file that defines SUITE (default: src/benchmarks_trixi.jl)'
+    required: false
+    default: 'src/benchmarks_trixi.jl'
+
+  history_file:
+    description: 'Path to history JSON file (default: data/history_ci.json)'
+    required: false
+    default: 'data/history_ci.json'
+
+  group_name:
+    description: 'Benchmark group name (default: package name)'
+    required: false
+    default: ''
+
+  julia_version:
+    description: 'Julia version to use (default: "1.10")'
+    required: false
+    default: '1.10'
+
+  persist_to_branch:
+    description: 'Branch to persist history data (default: gh-pages). Set to empty to disable persistence.'
+    required: false
+    default: 'gh-pages'
+
+  persist_path:
+    description: 'Path within persist branch to store history (default: benchmarks/)'
+    required: false
+    default: 'benchmarks/'
+
+  github_token:
+    description: 'GitHub token for pushing results (default: ${{ github.token }})'
+    required: false
+    default: ${{ github.token }}
+
+outputs:
+  history_file:
+    description: 'Path to the generated history JSON file'
+    value: ${{ inputs.history_file }}
+
+  num_benchmarks:
+    description: 'Number of benchmarks executed'
+    value: ${{ steps.run_benchmarks.outputs.num_benchmarks }}
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Set up Julia
+      uses: julia-actions/setup-julia@v2
+      with:
+        version: ${{ inputs.julia_version }}
+
+    - name: Cache Julia packages
+      uses: actions/cache@v4
+      with:
+        path: ~/.julia
+        key: julia-${{ runner.os }}-${{ inputs.julia_version }}-${{ hashFiles('**/Project.toml', '**/Manifest.toml') }}
+        restore-keys: |
+          julia-${{ runner.os }}-${{ inputs.julia_version }}-
+
+    - name: Fetch existing history from persist branch
+      if: inputs.persist_to_branch != ''
+      shell: bash
+      run: |
+        git fetch origin ${{ inputs.persist_to_branch }} || true
+        HISTORY_DIR=$(dirname "${{ inputs.history_file }}")
+        mkdir -p "$HISTORY_DIR"
+        git show origin/${{ inputs.persist_to_branch }}:${{ inputs.persist_path }}$(basename ${{ inputs.history_file }}) > ${{ inputs.history_file }} 2>/dev/null || true
+
+    - name: Run benchmarks
+      id: run_benchmarks
+      shell: bash
+      env:
+        BENCHMARK_GROUP: ${{ inputs.group_name }}
+        GITHUB_SHA: ${{ github.sha }}
+        GITHUB_REF: ${{ github.ref }}
+      run: |
+        cat > /tmp/benchmark_runner.jl << 'EOFSCRIPT'
+        using Pkg
+        Pkg.activate(".")
+        Pkg.instantiate()
+
+        using BenchmarkTools
+        using JSON
+        using Dates
+        using Statistics
+
+        benchmark_file = "${{ inputs.benchmark_script }}"
+        if !isfile(benchmark_file)
+          error("Benchmark file not found: $benchmark_file")
+        end
+        include(benchmark_file)
+
+        if !isdefined(Main, :SUITE)
+          error("SUITE not defined in $benchmark_file")
+        end
+
+        history_file = "${{ inputs.history_file }}"
+        group_name = get(ENV, "BENCHMARK_GROUP", "${{ inputs.group_name }}")
+        if isempty(group_name)
+          using Pkg
+          group_name = Pkg.TOML.parsefile("Project.toml")["name"]
+        end
+
+        results = run(SUITE, verbose=true)
+
+        function flatten_benchmarks(group::BenchmarkTools.BenchmarkGroup, path::Vector{String}=String[])
+          results_dict = Dict{String, BenchmarkTools.Trial}()
+          for (key, value) in group
+            current_path = [path..., string(key)]
+            if value isa BenchmarkTools.Trial
+              benchmark_path = join(current_path, "/")
+              results_dict[benchmark_path] = value
+            elseif value isa BenchmarkTools.BenchmarkGroup
+              nested_results = flatten_benchmarks(value, current_path)
+              merge!(results_dict, nested_results)
+            end
+          end
+          return results_dict
+        end
+
+        history = if isfile(history_file)
+          JSON.parsefile(history_file)
+        else
+          Dict{String, Any}()
+        end
+
+        run_timestamp = string(now())
+        julia_ver = string(VERSION)
+        commit_sha = get(ENV, "GITHUB_SHA", "unknown")
+        git_ref = get(ENV, "GITHUB_REF", "unknown")
+
+        flat_benchmarks = flatten_benchmarks(results)
+
+        for (benchmark_path, trial) in flat_benchmarks
+          if !haskey(history, benchmark_path)
+            history[benchmark_path] = Dict{String, Any}()
+          end
+
+          existing_runs = keys(history[benchmark_path])
+          next_run = isempty(existing_runs) ? 1 : maximum(parse(Int, k) for k in existing_runs) + 1
+
+          history[benchmark_path][string(next_run)] = Dict(
+            "mean_time_ns" => mean(trial).time,
+            "min_time_ns" => minimum(trial).time,
+            "median_time_ns" => median(trial).time,
+            "max_time_ns" => maximum(trial).time,
+            "std_time_ns" => std(trial.times),
+            "memory_bytes" => trial.memory,
+            "allocs" => trial.allocs,
+            "timestamp" => run_timestamp,
+            "samples" => length(trial.times),
+            "julia_version" => julia_ver,
+            "commit_sha" => commit_sha,
+            "git_ref" => git_ref
+          )
+        end
+
+        mkpath(dirname(history_file))
+        open(history_file, "w") do f
+          JSON.print(f, history, 2)
+        end
+
+        println("::set-output name=num_benchmarks::$(length(flat_benchmarks))")
+        EOFSCRIPT
+
+        julia /tmp/benchmark_runner.jl
+
+    - name: Publish results to persist branch
+      if: inputs.persist_to_branch != ''
+      shell: bash
+      env:
+        GITHUB_TOKEN: ${{ inputs.github_token }}
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+
+        git fetch origin ${{ inputs.persist_to_branch }} || true
+        git checkout ${{ inputs.persist_to_branch }} || git checkout --orphan ${{ inputs.persist_to_branch }}
+
+        find . -maxdepth 1 ! -name '.git' ! -name '.' -exec rm -rf {} +
+        mkdir -p ${{ inputs.persist_path }}
+        git checkout ${{ github.sha }} -- ${{ inputs.history_file }}
+        mv ${{ inputs.history_file }} ${{ inputs.persist_path }}$(basename ${{ inputs.history_file }})
+
+        cat > index.html << 'EOF'
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <title>Benchmark Results</title>
+          <meta charset="utf-8">
+        </head>
+        <body>
+          <h1>Benchmark Results</h1>
+          <p>This branch contains benchmark history data for BenchmarkExplorer.</p>
+          <h2>Available Data:</h2>
+          <ul>
+            <li><a href="${{ inputs.persist_path }}$(basename ${{ inputs.history_file }})">Benchmark History JSON</a></li>
+          </ul>
+          <p>Updated: $(date -u +"%Y-%m-%d %H:%M:%S UTC")</p>
+          <p>Commit: <a href="${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}">${{ github.sha }}</a></p>
+        </body>
+        </html>
+        EOF
+
+        git add -A
+        git commit -m "Update benchmark results for ${{ github.sha }}" || true
+        git push origin ${{ inputs.persist_to_branch }}
+        git checkout ${{ github.sha }}
+
+    - name: Upload history artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: benchmark-history
+        path: ${{ inputs.history_file }}
+        retention-days: 30
