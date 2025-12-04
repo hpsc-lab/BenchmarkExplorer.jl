@@ -84,6 +84,7 @@ runs:
         GITHUB_REF: ${{ github.ref }}
       run: |
         cat > /tmp/benchmark_runner.jl << 'EOFSCRIPT'
+        cd(ENV["GITHUB_WORKSPACE"])
         using Pkg
         Pkg.activate(".")
         Pkg.instantiate()
