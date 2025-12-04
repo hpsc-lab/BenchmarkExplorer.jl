@@ -106,10 +106,11 @@ runs:
         using Statistics
 
         benchmark_file = "${{ inputs.benchmark_script }}"
-        if !isfile(benchmark_file)
-          error("Benchmark file not found: $benchmark_file")
+        benchmark_file_abs = abspath(benchmark_file)
+        if !isfile(benchmark_file_abs)
+          error("Benchmark file not found: $benchmark_file_abs")
         end
-        include(benchmark_file)
+        include(benchmark_file_abs)
 
         if !isdefined(Main, :SUITE)
           error("SUITE not defined in $benchmark_file")
