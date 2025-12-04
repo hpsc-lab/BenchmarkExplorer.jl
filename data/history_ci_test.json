@@ -1,0 +1,62 @@
+{
+  "test/fast": {
+    "1": {
+      "std_time_ns": 5.362147626904475,
+      "median_time_ns": 48.0,
+      "commit_sha": "unknown",
+      "allocs": 0,
+      "julia_version": "1.11.5",
+      "memory_bytes": 0,
+      "min_time_ns": 43.0,
+      "mean_time_ns": 48.4197,
+      "max_time_ns": 366.0,
+      "git_ref": "unknown",
+      "samples": 10000,
+      "timestamp": "2025-12-01T17:08:33.807"
+    },
+    "2": {
+      "std_time_ns": 5.398236198556481,
+      "median_time_ns": 47.0,
+      "commit_sha": "unknown",
+      "allocs": 0,
+      "julia_version": "1.11.5",
+      "memory_bytes": 0,
+      "min_time_ns": 40.0,
+      "mean_time_ns": 46.8498,
+      "max_time_ns": 378.0,
+      "git_ref": "unknown",
+      "samples": 10000,
+      "timestamp": "2025-12-01T17:09:15.174"
+    }
+  },
+  "test/array": {
+    "1": {
+      "std_time_ns": 73760.53688993708,
+      "median_time_ns": 8401.0,
+      "commit_sha": "unknown",
+      "allocs": 7,
+      "julia_version": "1.11.5",
+      "memory_bytes": 81944,
+      "min_time_ns": 6044.0,
+      "mean_time_ns": 19678.6956,
+      "max_time_ns": 3.028812e6,
+      "git_ref": "unknown",
+      "samples": 10000,
+      "timestamp": "2025-12-01T17:08:33.807"
+    },
+    "2": {
+      "std_time_ns": 64123.389823652426,
+      "median_time_ns": 7130.5,
+      "commit_sha": "unknown",
+      "allocs": 7,
+      "julia_version": "1.11.5",
+      "memory_bytes": 81944,
+      "min_time_ns": 5394.0,
+      "mean_time_ns": 16634.7817,
+      "max_time_ns": 2.853941e6,
+      "git_ref": "unknown",
+      "samples": 10000,
+      "timestamp": "2025-12-01T17:09:15.174"
+    }
+  }
+}

@@ -12,6 +12,11 @@ inputs:
     required: false
     default: 'src/benchmarks_trixi.jl'
 
+  benchmark_project:
+    description: 'Path to Julia project directory for benchmark (if different from main). Leave empty to use main project.'
+    required: false
+    default: ''
+
   history_file:
     description: 'Path to history JSON file (default: data/history_ci.json)'
     required: false
@@ -86,7 +91,13 @@ runs:
         cat > /tmp/benchmark_runner.jl << 'EOFSCRIPT'
         cd(ENV["GITHUB_WORKSPACE"])
         using Pkg
-        Pkg.activate(".")
+
+        benchmark_project = "${{ inputs.benchmark_project }}"
+        if !isempty(benchmark_project)
+            Pkg.activate(benchmark_project)
+        else
+            Pkg.activate(".")
+        end
         Pkg.instantiate()
 
         using BenchmarkTools
@@ -94,15 +105,7 @@ runs:
         using Dates
         using Statistics
 
-        # Debug info
-        println("Current directory: ", pwd())
-        println("GITHUB_WORKSPACE: ", get(ENV, "GITHUB_WORKSPACE", "not set"))
-
         benchmark_file = "${{ inputs.benchmark_script }}"
-        println("Looking for benchmark file: ", benchmark_file)
-        println("Absolute path: ", abspath(benchmark_file))
-        println("File exists: ", isfile(benchmark_file))
-
         if !isfile(benchmark_file)
           error("Benchmark file not found: $benchmark_file")
         end

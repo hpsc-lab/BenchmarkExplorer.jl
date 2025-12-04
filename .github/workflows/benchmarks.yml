@@ -35,7 +35,8 @@ jobs:
       - name: Run BenchmarkExplorer
         uses: ./
         with:
-          benchmark_script: 'src/benchmarks_trixi.jl'
+          benchmark_script: 'benchmarks/trixi/benchmarks.jl'
+          benchmark_project: 'benchmarks/trixi'
           history_file: 'data/history_trixi.json'
           group_name: 'trixi'
           julia_version: '1.11'
@@ -69,7 +70,7 @@ jobs:
               comment += `\n*Showing 10 of ${Object.keys(history).length} benchmarks*\n`;
             }
 
-            comment += '\n📊 [View full results on GitHub Pages](https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/)\n';
+            comment += '\n [View full results on GitHub Pages](https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/)\n';
 
             github.rest.issues.createComment({
               issue_number: context.issue.number,
