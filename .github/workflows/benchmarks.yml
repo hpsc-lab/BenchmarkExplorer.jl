@@ -38,7 +38,7 @@ jobs:
           benchmark_script: 'src/benchmarks_trixi.jl'
           history_file: 'data/history_trixi.json'
           group_name: 'trixi'
-          julia_version: '1.10'
+          julia_version: '1.11'
           persist_to_branch: 'gh-pages'
           persist_path: 'benchmarks/'
           github_token: ${{ secrets.GITHUB_TOKEN }}

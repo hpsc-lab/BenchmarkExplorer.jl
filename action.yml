@@ -23,9 +23,9 @@ inputs:
     default: ''
 
   julia_version:
-    description: 'Julia version to use (default: "1.10")'
+    description: 'Julia version to use (default: "1.11")'
     required: false
-    default: '1.10'
+    default: '1.11'
 
   persist_to_branch:
     description: 'Branch to persist history data (default: gh-pages). Set to empty to disable persistence.'
