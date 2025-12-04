@@ -94,7 +94,15 @@ runs:
         using Dates
         using Statistics
 
+        # Debug info
+        println("Current directory: ", pwd())
+        println("GITHUB_WORKSPACE: ", get(ENV, "GITHUB_WORKSPACE", "not set"))
+
         benchmark_file = "${{ inputs.benchmark_script }}"
+        println("Looking for benchmark file: ", benchmark_file)
+        println("Absolute path: ", abspath(benchmark_file))
+        println("File exists: ", isfile(benchmark_file))
+
         if !isfile(benchmark_file)
           error("Benchmark file not found: $benchmark_file")
         end
