@@ -12,7 +12,3 @@ When this file is committed and pushed:
 2. The workflow should run benchmarks
 3. Results should be saved to gh-pages branch
 4. No errors should occur
-
----
-
-Test by: Claude & Yarka
