@@ -5,6 +5,7 @@ Pkg.instantiate()
 using BenchmarkTools
 using JSON
 using Dates
+using Statistics
 
 include("../src/benchmarks_trixi.jl")
 
