@@ -203,6 +203,8 @@ runs:
 
         git fetch origin ${{ inputs.persist_to_branch }} || true
 
+        git clean -fdx
+
         if git rev-parse --verify origin/${{ inputs.persist_to_branch }} >/dev/null 2>&1; then
           git checkout -B ${{ inputs.persist_to_branch }} origin/${{ inputs.persist_to_branch }}
         else
