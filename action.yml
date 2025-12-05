@@ -199,6 +199,7 @@ runs:
         git config user.email "github-actions[bot]@users.noreply.github.com"
 
         cp ${{ inputs.history_file }} /tmp/history_update.json
+        git restore ${{ inputs.history_file }} || rm -f ${{ inputs.history_file }}
 
         git fetch origin ${{ inputs.persist_to_branch }} || true
 
