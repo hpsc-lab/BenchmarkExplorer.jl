@@ -182,7 +182,10 @@ runs:
           JSON.print(f, history, 2)
         end
 
-        println("::set-output name=num_benchmarks::$(length(flat_benchmarks))")
+        # Use environment files instead of deprecated set-output
+        open(ENV["GITHUB_OUTPUT"], "a") do io
+          println(io, "num_benchmarks=$(length(flat_benchmarks))")
+        end
         EOFSCRIPT
 
         julia /tmp/benchmark_runner.jl
@@ -204,7 +207,10 @@ runs:
         git checkout ${{ github.sha }} -- ${{ inputs.history_file }}
         mv ${{ inputs.history_file }} ${{ inputs.persist_path }}$(basename ${{ inputs.history_file }})
 
-        cat > index.html << 'EOF'
+        HISTORY_BASENAME=$(basename ${{ inputs.history_file }})
+        CURRENT_DATE=$(date -u +"%Y-%m-%d %H:%M:%S UTC")
+
+        cat > index.html << EOF
         <!DOCTYPE html>
         <html>
         <head>
@@ -216,9 +222,9 @@ runs:
           <p>This branch contains benchmark history data for BenchmarkExplorer.</p>
           <h2>Available Data:</h2>
           <ul>
-            <li><a href="${{ inputs.persist_path }}$(basename ${{ inputs.history_file }})">Benchmark History JSON</a></li>
+            <li><a href="${{ inputs.persist_path }}${HISTORY_BASENAME}">Benchmark History JSON</a></li>
           </ul>
-          <p>Updated: $(date -u +"%Y-%m-%d %H:%M:%S UTC")</p>
+          <p>Updated: ${CURRENT_DATE}</p>
           <p>Commit: <a href="${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}">${{ github.sha }}</a></p>
         </body>
         </html>
