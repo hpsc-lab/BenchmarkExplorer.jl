@@ -182,7 +182,6 @@ runs:
           JSON.print(f, history, 2)
         end
 
-        # Use environment files instead of deprecated set-output
         open(ENV["GITHUB_OUTPUT"], "a") do io
           println(io, "num_benchmarks=$(length(flat_benchmarks))")
         end
@@ -199,13 +198,20 @@ runs:
         git config user.name "github-actions[bot]"
         git config user.email "github-actions[bot]@users.noreply.github.com"
 
-        git fetch origin ${{ inputs.persist_to_branch }} || true
-        git checkout ${{ inputs.persist_to_branch }} || git checkout --orphan ${{ inputs.persist_to_branch }}
+        cp ${{ inputs.history_file }} /tmp/history_update.json
 
-        find . -maxdepth 1 ! -name '.git' ! -name '.' -exec rm -rf {} +
+        git fetch origin ${{ inputs.persist_to_branch }} || true
+
+        if git rev-parse --verify origin/${{ inputs.persist_to_branch }} >/dev/null 2>&1; then
+          git checkout -B ${{ inputs.persist_to_branch }} origin/${{ inputs.persist_to_branch }}
+        else
+          git checkout --orphan ${{ inputs.persist_to_branch }}
+          git rm -rf . || true
+        fi
+
         mkdir -p ${{ inputs.persist_path }}
-        git checkout ${{ github.sha }} -- ${{ inputs.history_file }}
-        mv ${{ inputs.history_file }} ${{ inputs.persist_path }}$(basename ${{ inputs.history_file }})
+
+        mv /tmp/history_update.json ${{ inputs.persist_path }}$(basename ${{ inputs.history_file }})
 
         HISTORY_BASENAME=$(basename ${{ inputs.history_file }})
         CURRENT_DATE=$(date -u +"%Y-%m-%d %H:%M:%S UTC")
@@ -231,9 +237,10 @@ runs:
         EOF
 
         git add -A
-        git commit -m "Update benchmark results for ${{ github.sha }}" || true
+        git commit -m "Update benchmark results for ${{ github.sha }}" || echo "No changes to commit"
         git push origin ${{ inputs.persist_to_branch }}
-        git checkout ${{ github.sha }}
+
+        git checkout -f ${{ github.sha }}
 
     - name: Upload history artifact
       uses: actions/upload-artifact@v4
