@@ -23,7 +23,7 @@ permissions:
   contents: write
 
 jobs:
-  benchmark:
+  benchmark-trixi:
     runs-on: ubuntu-latest
 
     steps:
@@ -39,6 +39,27 @@ jobs:
           benchmark_project: 'benchmarks/trixi'
           history_file: 'data/history_trixi.json'
           group_name: 'trixi'
+          julia_version: '1.11'
+          persist_to_branch: 'gh-pages'
+          persist_path: 'benchmarks/'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+  benchmark-enzyme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run BenchmarkExplorer
+        uses: ./
+        with:
+          benchmark_script: 'benchmarks/enzyme/benchmarks.jl'
+          benchmark_project: 'benchmarks/enzyme'
+          history_file: 'data/history_enzyme.json'
+          group_name: 'enzyme'
           julia_version: '1.11'
           persist_to_branch: 'gh-pages'
           persist_path: 'benchmarks/'
