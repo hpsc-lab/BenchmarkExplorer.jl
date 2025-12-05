@@ -32,7 +32,7 @@ function flatten_benchmarks(group::BenchmarkTools.BenchmarkGroup, path::Vector{S
     return results_dict
 end
 
-history = if isfile(history_file)
+history = if isfile(history_file) && filesize(history_file) > 0
     JSON.parsefile(history_file)
 else
     Dict{String, Any}()

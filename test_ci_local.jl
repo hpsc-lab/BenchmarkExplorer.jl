@@ -42,7 +42,7 @@ flat_benchmarks = flatten_benchmarks(results)
 
 history_file = "data/history_test.json"
 
-history = if isfile(history_file)
+history = if isfile(history_file) && filesize(history_file) > 0
     JSON.parsefile(history_file)
 else
     Dict{String, Any}()

@@ -39,7 +39,7 @@ function flatten_benchmarks(group::BenchmarkTools.BenchmarkGroup, path::Vector{S
 end
 
 function save_benchmark_results(suite_results, history_file="data/history.json")
-    if isfile(history_file)
+    if isfile(history_file) && filesize(history_file) > 0
         history = JSON.parsefile(history_file)
     else
         history = Dict()

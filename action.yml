@@ -140,7 +140,7 @@ runs:
           return results_dict
         end
 
-        history = if isfile(history_file)
+        history = if isfile(history_file) && filesize(history_file) > 0
           JSON.parsefile(history_file)
         else
           Dict{String, Any}()
