@@ -221,6 +221,8 @@ runs:
 
         HISTORY_BASENAME=$(basename ${{ inputs.history_file }})
 
+        julia -e 'using Pkg; Pkg.add(["JSON", "Dates"])'
+
         julia /tmp/generate_static_page.jl \
           "${{ inputs.persist_path }}${HISTORY_BASENAME}" \
           "${{ inputs.group_name }}.html" \
