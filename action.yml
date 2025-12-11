@@ -217,27 +217,19 @@ runs:
         mv /tmp/history_update.json ${{ inputs.persist_path }}$(basename ${{ inputs.history_file }})
 
         HISTORY_BASENAME=$(basename ${{ inputs.history_file }})
-        CURRENT_DATE=$(date -u +"%Y-%m-%d %H:%M:%S UTC")
 
-        cat > index.html << EOF
-        <!DOCTYPE html>
-        <html>
-        <head>
-          <title>Benchmark Results</title>
-          <meta charset="utf-8">
-        </head>
-        <body>
-          <h1>Benchmark Results</h1>
-          <p>This branch contains benchmark history data for BenchmarkExplorer.</p>
-          <h2>Available Data:</h2>
-          <ul>
-            <li><a href="${{ inputs.persist_path }}${HISTORY_BASENAME}">Benchmark History JSON</a></li>
-          </ul>
-          <p>Updated: ${CURRENT_DATE}</p>
-          <p>Commit: <a href="${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}">${{ github.sha }}</a></p>
-        </body>
-        </html>
-        EOF
+        julia ${{ github.action_path }}/ci/generate_static_page.jl \
+          "${{ inputs.persist_path }}${HISTORY_BASENAME}" \
+          "${{ inputs.group_name }}.html" \
+          "${{ inputs.group_name }}" \
+          "${{ github.server_url }}/${{ github.repository }}" \
+          "${{ github.sha }}"
+
+        julia ${{ github.action_path }}/ci/generate_index_page.jl \
+          "${{ inputs.persist_path }}" \
+          "index.html" \
+          "${{ github.server_url }}/${{ github.repository }}" \
+          "${{ github.sha }}"
 
         git add -A
         git commit -m "Update benchmark results for ${{ github.sha }}" || echo "No changes to commit"
