@@ -201,6 +201,9 @@ runs:
         cp ${{ inputs.history_file }} /tmp/history_update.json
         git restore ${{ inputs.history_file }} || rm -f ${{ inputs.history_file }}
 
+        cp ${{ github.action_path }}/ci/generate_static_page.jl /tmp/
+        cp ${{ github.action_path }}/ci/generate_index_page.jl /tmp/
+
         git fetch origin ${{ inputs.persist_to_branch }} || true
 
         git clean -fdx
@@ -218,14 +221,14 @@ runs:
 
         HISTORY_BASENAME=$(basename ${{ inputs.history_file }})
 
-        julia ${{ github.action_path }}/ci/generate_static_page.jl \
+        julia /tmp/generate_static_page.jl \
           "${{ inputs.persist_path }}${HISTORY_BASENAME}" \
           "${{ inputs.group_name }}.html" \
           "${{ inputs.group_name }}" \
           "${{ github.server_url }}/${{ github.repository }}" \
           "${{ github.sha }}"
 
-        julia ${{ github.action_path }}/ci/generate_index_page.jl \
+        julia /tmp/generate_index_page.jl \
           "${{ inputs.persist_path }}" \
           "index.html" \
           "${{ github.server_url }}/${{ github.repository }}" \
