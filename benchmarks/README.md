@@ -10,8 +10,6 @@ benchmarks/
 └── enzyme/     - Enzyme.jl benchmarks
 ```
 
-Each suite has `Project.toml` and `benchmarks.jl`.
-
 ## Running
 
 ```bash
@@ -34,7 +32,7 @@ SUITE["test"] = @benchmarkable my_function()
 
 if abspath(PROGRAM_FILE) == @__FILE__
     results = run(SUITE, verbose=true)
-    save_benchmark_results(results, "../../data/history.json")
+    save_benchmark_results(results, "mygroup"; data_dir="../../data", commit_hash="")
 end
 ```
 
