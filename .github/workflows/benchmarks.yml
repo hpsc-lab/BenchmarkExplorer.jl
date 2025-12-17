@@ -45,6 +45,7 @@ jobs:
 
   benchmark-enzyme:
     runs-on: ubuntu-latest
+    needs: benchmark-trixi
 
     steps:
       - name: Checkout repository
