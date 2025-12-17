@@ -101,6 +101,7 @@ runs:
         git config user.email "github-actions[bot]@users.noreply.github.com"
 
         cp -r ${{ inputs.data_dir }} /tmp/data_update
+        cp -r ${{ github.action_path }}/ci /tmp/ci_scripts
 
         git fetch origin ${{ inputs.persist_to_branch }} || true
         git clean -fdx
@@ -115,10 +116,10 @@ runs:
         mkdir -p ${{ inputs.persist_path }}
         cp -r /tmp/data_update/* ${{ inputs.persist_path }}
 
-        julia ${{ github.action_path }}/ci/generate_index_page.jl ${{ inputs.persist_path }} ${{ inputs.persist_path }}index.html \
+        julia /tmp/ci_scripts/generate_index_page.jl ${{ inputs.persist_path }} ${{ inputs.persist_path }}index.html \
           "${{ github.server_url }}/${{ github.repository }}" "${{ github.sha }}"
 
-        julia ${{ github.action_path }}/ci/generate_static_page.jl ${{ inputs.persist_path }} \
+        julia /tmp/ci_scripts/generate_static_page.jl ${{ inputs.persist_path }} \
           ${{ inputs.persist_path }}${{ inputs.group_name }}.html ${{ inputs.group_name }} \
           "${{ github.server_url }}/${{ github.repository }}" "${{ github.sha }}"
 
