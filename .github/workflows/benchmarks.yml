@@ -40,7 +40,7 @@ jobs:
           group_name: 'trixi'
           julia_version: '1.11'
           persist_to_branch: 'gh-pages'
-          persist_path: 'benchmarks/'
+          persist_path: ''
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
   benchmark-enzyme:
@@ -60,5 +60,5 @@ jobs:
           group_name: 'enzyme'
           julia_version: '1.11'
           persist_to_branch: 'gh-pages'
-          persist_path: 'benchmarks/'
+          persist_path: ''
           github_token: ${{ secrets.GITHUB_TOKEN }}
