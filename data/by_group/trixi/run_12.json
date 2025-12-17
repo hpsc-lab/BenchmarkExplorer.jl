@@ -1,0 +1,50 @@
+{
+  "metadata": {
+    "run_number": 12,
+    "julia_version": "1.11.5",
+    "timestamp": "2025-11-26T11:22:30.926",
+    "group": "trixi"
+  },
+  "benchmarks": {
+    "structured_1d_dgsem/elixir_euler_sedov.jl/p3_rhs!": {
+      "max_time_ns": 65076.0,
+      "allocs": 0,
+      "min_time_ns": 7100.0,
+      "mean_time_ns": 8365.4394,
+      "samples": 10000,
+      "std_time_ns": 741.1962133674934,
+      "median_time_ns": 8373.0,
+      "memory_bytes": 0
+    },
+    "structured_1d_dgsem/elixir_euler_sedov.jl/p7_analysis": {
+      "max_time_ns": 339666.0,
+      "allocs": 128,
+      "min_time_ns": 5546.0,
+      "mean_time_ns": 7996.7405,
+      "samples": 10000,
+      "std_time_ns": 4323.736168015436,
+      "median_time_ns": 7776.0,
+      "memory_bytes": 8192
+    },
+    "structured_1d_dgsem/elixir_euler_sedov.jl/p3_analysis": {
+      "max_time_ns": 78496.0,
+      "allocs": 128,
+      "min_time_ns": 2924.0,
+      "mean_time_ns": 5132.0885,
+      "samples": 10000,
+      "std_time_ns": 1747.7325781091936,
+      "median_time_ns": 4740.0,
+      "memory_bytes": 6144
+    },
+    "structured_1d_dgsem/elixir_euler_sedov.jl/p7_rhs!": {
+      "max_time_ns": 47712.0,
+      "allocs": 0,
+      "min_time_ns": 18815.0,
+      "mean_time_ns": 22424.4877,
+      "samples": 10000,
+      "std_time_ns": 821.6114316288255,
+      "median_time_ns": 22231.0,
+      "memory_bytes": 0
+    }
+  }
+}

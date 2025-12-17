@@ -17,15 +17,15 @@ inputs:
     required: false
     default: ''
 
-  history_file:
-    description: 'Path to history JSON file (default: data/history_ci.json)'
+  data_dir:
+    description: 'Path to data directory (default: data)'
     required: false
-    default: 'data/history_ci.json'
+    default: 'data'
 
   group_name:
-    description: 'Benchmark group name (default: package name)'
+    description: 'Benchmark group name (default: trixi)'
     required: false
-    default: ''
+    default: 'trixi'
 
   julia_version:
     description: 'Julia version to use (default: "1.11")'
@@ -47,9 +47,9 @@ inputs:
     required: true
 
 outputs:
-  history_file:
-    description: 'Path to the generated history JSON file'
-    value: ${{ inputs.history_file }}
+  data_dir:
+    description: 'Path to the data directory with benchmark results'
+    value: ${{ inputs.data_dir }}
 
   num_benchmarks:
     description: 'Number of benchmarks executed'
@@ -71,14 +71,16 @@ runs:
         restore-keys: |
           julia-${{ runner.os }}-${{ inputs.julia_version }}-
 
-    - name: Fetch existing history from persist branch
+    - name: Fetch existing data from persist branch
       if: inputs.persist_to_branch != ''
       shell: bash
       run: |
         git fetch origin ${{ inputs.persist_to_branch }} || true
-        HISTORY_DIR=$(dirname "${{ inputs.history_file }}")
-        mkdir -p "$HISTORY_DIR"
-        git show origin/${{ inputs.persist_to_branch }}:${{ inputs.persist_path }}$(basename ${{ inputs.history_file }}) > ${{ inputs.history_file }} 2>/dev/null || true
+        mkdir -p ${{ inputs.data_dir }}
+        git show origin/${{ inputs.persist_to_branch }}:${{ inputs.persist_path }}index.json > ${{ inputs.data_dir }}/index.json 2>/dev/null || true
+        git show origin/${{ inputs.persist_to_branch }}:${{ inputs.persist_path }}latest_100.json > ${{ inputs.data_dir }}/latest_100.json 2>/dev/null || true
+        mkdir -p ${{ inputs.data_dir }}/by_group/${{ inputs.group_name }}
+        git archive origin/${{ inputs.persist_to_branch }} ${{ inputs.persist_path }}by_group/${{ inputs.group_name }} | tar -x -C ${{ inputs.data_dir }} 2>/dev/null || true
 
     - name: Run benchmarks
       id: run_benchmarks
@@ -86,108 +88,8 @@ runs:
       env:
         BENCHMARK_GROUP: ${{ inputs.group_name }}
         GITHUB_SHA: ${{ github.sha }}
-        GITHUB_REF: ${{ github.ref }}
       run: |
-        cat > /tmp/benchmark_runner.jl << 'EOFSCRIPT'
-        cd(ENV["GITHUB_WORKSPACE"])
-        using Pkg
-
-        benchmark_project = "${{ inputs.benchmark_project }}"
-        if !isempty(benchmark_project)
-            Pkg.activate(benchmark_project)
-        else
-            Pkg.activate(".")
-        end
-        Pkg.instantiate()
-
-        using BenchmarkTools
-        using JSON
-        using Dates
-        using Statistics
-
-        benchmark_file = "${{ inputs.benchmark_script }}"
-        benchmark_file_abs = abspath(benchmark_file)
-        if !isfile(benchmark_file_abs)
-          error("Benchmark file not found: $benchmark_file_abs")
-        end
-        include(benchmark_file_abs)
-
-        if !isdefined(Main, :SUITE)
-          error("SUITE not defined in $benchmark_file")
-        end
-
-        history_file = "${{ inputs.history_file }}"
-        group_name = get(ENV, "BENCHMARK_GROUP", "${{ inputs.group_name }}")
-        if isempty(group_name)
-          using Pkg
-          group_name = Pkg.TOML.parsefile("Project.toml")["name"]
-        end
-
-        results = run(SUITE, verbose=true)
-
-        function flatten_benchmarks(group::BenchmarkTools.BenchmarkGroup, path::Vector{String}=String[])
-          results_dict = Dict{String, BenchmarkTools.Trial}()
-          for (key, value) in group
-            current_path = [path..., string(key)]
-            if value isa BenchmarkTools.Trial
-              benchmark_path = join(current_path, "/")
-              results_dict[benchmark_path] = value
-            elseif value isa BenchmarkTools.BenchmarkGroup
-              nested_results = flatten_benchmarks(value, current_path)
-              merge!(results_dict, nested_results)
-            end
-          end
-          return results_dict
-        end
-
-        history = if isfile(history_file) && filesize(history_file) > 0
-          JSON.parsefile(history_file)
-        else
-          Dict{String, Any}()
-        end
-
-        run_timestamp = string(now())
-        julia_ver = string(VERSION)
-        commit_sha = get(ENV, "GITHUB_SHA", "unknown")
-        git_ref = get(ENV, "GITHUB_REF", "unknown")
-
-        flat_benchmarks = flatten_benchmarks(results)
-
-        for (benchmark_path, trial) in flat_benchmarks
-          if !haskey(history, benchmark_path)
-            history[benchmark_path] = Dict{String, Any}()
-          end
-
-          existing_runs = keys(history[benchmark_path])
-          next_run = isempty(existing_runs) ? 1 : maximum(parse(Int, k) for k in existing_runs) + 1
-
-          history[benchmark_path][string(next_run)] = Dict(
-            "mean_time_ns" => mean(trial).time,
-            "min_time_ns" => minimum(trial).time,
-            "median_time_ns" => median(trial).time,
-            "max_time_ns" => maximum(trial).time,
-            "std_time_ns" => std(trial.times),
-            "memory_bytes" => trial.memory,
-            "allocs" => trial.allocs,
-            "timestamp" => run_timestamp,
-            "samples" => length(trial.times),
-            "julia_version" => julia_ver,
-            "commit_sha" => commit_sha,
-            "git_ref" => git_ref
-          )
-        end
-
-        mkpath(dirname(history_file))
-        open(history_file, "w") do f
-          JSON.print(f, history, 2)
-        end
-
-        open(ENV["GITHUB_OUTPUT"], "a") do io
-          println(io, "num_benchmarks=$(length(flat_benchmarks))")
-        end
-        EOFSCRIPT
-
-        julia /tmp/benchmark_runner.jl
+        julia ${{ github.action_path }}/ci/run_benchmarks.jl "${{ inputs.data_dir }}" "${{ inputs.group_name }}"
 
     - name: Publish results to persist branch
       if: inputs.persist_to_branch != ''
@@ -198,14 +100,9 @@ runs:
         git config user.name "github-actions[bot]"
         git config user.email "github-actions[bot]@users.noreply.github.com"
 
-        cp ${{ inputs.history_file }} /tmp/history_update.json
-        git restore ${{ inputs.history_file }} || rm -f ${{ inputs.history_file }}
-
-        cp ${{ github.action_path }}/ci/generate_static_page.jl /tmp/
-        cp ${{ github.action_path }}/ci/generate_index_page.jl /tmp/
+        cp -r ${{ inputs.data_dir }} /tmp/data_update
 
         git fetch origin ${{ inputs.persist_to_branch }} || true
-
         git clean -fdx
 
         if git rev-parse --verify origin/${{ inputs.persist_to_branch }} >/dev/null 2>&1; then
@@ -216,35 +113,24 @@ runs:
         fi
 
         mkdir -p ${{ inputs.persist_path }}
+        cp -r /tmp/data_update/* ${{ inputs.persist_path }}
 
-        mv /tmp/history_update.json ${{ inputs.persist_path }}$(basename ${{ inputs.history_file }})
+        julia ${{ github.action_path }}/ci/generate_index_page.jl ${{ inputs.persist_path }} ${{ inputs.persist_path }}index.html \
+          "${{ github.server_url }}/${{ github.repository }}" "${{ github.sha }}"
 
-        HISTORY_BASENAME=$(basename ${{ inputs.history_file }})
-
-        julia -e 'using Pkg; Pkg.add(["JSON", "Dates"])'
-
-        julia /tmp/generate_static_page.jl \
-          "${{ inputs.persist_path }}${HISTORY_BASENAME}" \
-          "${{ inputs.group_name }}.html" \
-          "${{ inputs.group_name }}" \
-          "${{ github.server_url }}/${{ github.repository }}" \
-          "${{ github.sha }}"
-
-        julia /tmp/generate_index_page.jl \
-          "${{ inputs.persist_path }}" \
-          "index.html" \
-          "${{ github.server_url }}/${{ github.repository }}" \
-          "${{ github.sha }}"
+        julia ${{ github.action_path }}/ci/generate_static_page.jl ${{ inputs.persist_path }} \
+          ${{ inputs.persist_path }}${{ inputs.group_name }}.html ${{ inputs.group_name }} \
+          "${{ github.server_url }}/${{ github.repository }}" "${{ github.sha }}"
 
         git add -A
-        git commit -m "Update benchmark results for ${{ github.sha }}" || echo "No changes to commit"
+        git commit -m "Update benchmarks: ${{ inputs.group_name }} @ ${{ github.sha }}" || echo "No changes"
         git push origin ${{ inputs.persist_to_branch }}
 
         git checkout -f ${{ github.sha }}
 
-    - name: Upload history artifact
+    - name: Upload data artifact
       uses: actions/upload-artifact@v4
       with:
-        name: benchmark-history-${{ inputs.group_name }}
-        path: ${{ inputs.history_file }}
+        name: benchmark-data-${{ inputs.group_name }}
+        path: ${{ inputs.data_dir }}
         retention-days: 30

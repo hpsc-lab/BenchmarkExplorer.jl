@@ -555,26 +555,16 @@ function create_group_section(session, group_name, history, show_mean, show_min,
 end
 
 function start_dashboard(; port=8000)
-    history_files = [
-        ("Trixi", "data/history_trixi.json"),
-        ("Enzyme", "data/history_enzyme.json"),
-        ("Trixi", "data/history.json")
-    ]
-    
+    all_groups = load_history("data")
     histories = Dict{String, Any}()
-    
-    for (name, file) in history_files
-        if isfile(file) && !haskey(histories, name)
-            try
-                histories[name] = load_history(file)
-            catch e
-                @warn "Failed to load $file" exception=e
-            end
-        end
+
+    for (group, history) in all_groups
+        display_name = uppercasefirst(group)
+        histories[display_name] = history
     end
-    
+
     if isempty(histories)
-        @error "No history files found!"
+        @error "No benchmark data found. Run benchmarks first."
         return
     end
     

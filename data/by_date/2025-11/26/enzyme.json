@@ -1,0 +1,80 @@
+{
+  "metadata": {
+    "run_number": 16,
+    "julia_version": "1.11.5",
+    "timestamp": "2025-11-26T11:26:02.187",
+    "group": "enzyme"
+  },
+  "benchmarks": {
+    "basics/make_zero/array": {
+      "max_time_ns": 114351.0,
+      "allocs": 2,
+      "min_time_ns": 31.0,
+      "mean_time_ns": 303.0936,
+      "samples": 10000,
+      "std_time_ns": 1614.3411845037715,
+      "median_time_ns": 42.0,
+      "memory_bytes": 928
+    },
+    "basics/make_zero/namedtuple": {
+      "max_time_ns": 52.0,
+      "allocs": 0,
+      "min_time_ns": 14.0,
+      "mean_time_ns": 17.0062,
+      "samples": 10000,
+      "std_time_ns": 1.4194939437368623,
+      "median_time_ns": 17.0,
+      "memory_bytes": 0
+    },
+    "autodiff/reverse/complex": {
+      "max_time_ns": 332134.0,
+      "allocs": 3,
+      "min_time_ns": 18558.0,
+      "mean_time_ns": 25694.9361,
+      "samples": 10000,
+      "std_time_ns": 17546.690483498853,
+      "median_time_ns": 23707.0,
+      "memory_bytes": 8072
+    },
+    "autodiff/forward/complex": {
+      "max_time_ns": 211172.0,
+      "allocs": 3,
+      "min_time_ns": 12221.0,
+      "mean_time_ns": 18430.7177,
+      "samples": 10000,
+      "std_time_ns": 15313.75461258408,
+      "median_time_ns": 15905.5,
+      "memory_bytes": 8072
+    },
+    "basics/make_zero/struct": {
+      "max_time_ns": 10004.0,
+      "allocs": 7,
+      "min_time_ns": 122.0,
+      "mean_time_ns": 146.8179,
+      "samples": 10000,
+      "std_time_ns": 132.70229737861723,
+      "median_time_ns": 135.0,
+      "memory_bytes": 496
+    },
+    "autodiff/forward/simple": {
+      "max_time_ns": 104067.0,
+      "allocs": 5,
+      "min_time_ns": 136.0,
+      "mean_time_ns": 925.8582,
+      "samples": 10000,
+      "std_time_ns": 1701.6407197780266,
+      "median_time_ns": 1160.0,
+      "memory_bytes": 2752
+    },
+    "autodiff/reverse/simple": {
+      "max_time_ns": 220778.0,
+      "allocs": 5,
+      "min_time_ns": 305.0,
+      "mean_time_ns": 1438.7001,
+      "samples": 10000,
+      "std_time_ns": 4758.1028237531955,
+      "median_time_ns": 1380.0,
+      "memory_bytes": 2752
+    }
+  }
+}

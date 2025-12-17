@@ -93,6 +93,3 @@ for field in required_fields
         error("Missing field: $field")
     end
 end
-
-println("Test completed successfully")
-println("Results saved to: $history_file")

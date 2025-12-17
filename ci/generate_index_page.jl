@@ -2,45 +2,34 @@ using JSON
 using Dates
 
 function generate_index_page(benchmarks_dir::String, output_file::String, repo_url::String, commit_sha::String)
-    history_files = filter(f -> endswith(f, ".json") && !contains(f, "test"), readdir(benchmarks_dir, join=true))
+    index_path = joinpath(benchmarks_dir, "index.json")
+    latest_path = joinpath(benchmarks_dir, "latest_100.json")
 
     benchmark_groups = Dict{String, Any}()
 
-    for history_file in history_files
-        if !isfile(history_file)
-            continue
-        end
+    if !isfile(index_path)
+        return
+    end
 
-        filename = basename(history_file)
+    index = JSON.parsefile(index_path)
 
-        if !startswith(filename, "history_")
-            continue
-        end
+    latest_data = if isfile(latest_path)
+        JSON.parsefile(latest_path)
+    else
+        Dict("groups" => Dict())
+    end
 
-        group_name = replace(replace(filename, "history_" => ""), ".json" => "")
-
-        history = JSON.parsefile(history_file)
-        num_benchmarks = length(history)
-
-        total_runs = 0
-        latest_time = ""
-
-        for (benchmark_name, runs) in history
-            run_numbers = parse.(Int, keys(runs))
-            if !isempty(run_numbers)
-                total_runs += length(run_numbers)
-                latest_run = runs[string(maximum(run_numbers))]
-                timestamp = get(latest_run, "timestamp", "")
-                if timestamp > latest_time
-                    latest_time = timestamp
-                end
-            end
+    for (group_name, group_info) in get(index, "groups", Dict())
+        num_benchmarks = if haskey(latest_data, "groups") && haskey(latest_data["groups"], group_name)
+            length(latest_data["groups"][group_name])
+        else
+            0
         end
 
         benchmark_groups[group_name] = Dict(
             "num_benchmarks" => num_benchmarks,
-            "total_runs" => total_runs,
-            "latest_update" => latest_time,
+            "total_runs" => get(group_info, "total_runs", 0),
+            "latest_update" => get(group_info, "last_run_date", ""),
             "url" => "$(group_name).html"
         )
     end
@@ -328,14 +317,10 @@ function generate_index_page(benchmarks_dir::String, output_file::String, repo_u
     open(output_file, "w") do f
         write(f, html)
     end
-
-    println("Index page generated: $output_file")
 end
 
-# CLI usage
 if abspath(PROGRAM_FILE) == @__FILE__
     if length(ARGS) < 2
-        println("Usage: julia generate_index_page.jl <benchmarks_dir> <output_file> [repo_url] [commit_sha]")
         exit(1)
     end
 

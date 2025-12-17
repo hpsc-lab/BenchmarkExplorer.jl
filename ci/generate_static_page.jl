@@ -1,13 +1,20 @@
 using JSON
 using Dates
 
-function generate_static_page(history_file::String, output_file::String, group_name::String, repo_url::String, commit_sha::String)
-    if !isfile(history_file)
-        @warn "History file not found: $history_file"
+function generate_static_page(data_dir::String, output_file::String, group_name::String, repo_url::String, commit_sha::String)
+    latest_path = joinpath(data_dir, "latest_100.json")
+
+    if !isfile(latest_path)
         return
     end
 
-    history = JSON.parsefile(history_file)
+    latest_data = JSON.parsefile(latest_path)
+
+    if !haskey(latest_data, "groups") || !haskey(latest_data["groups"], group_name)
+        return
+    end
+
+    history = latest_data["groups"][group_name]
 
     benchmarks_data = Dict{String, Any}()
 
@@ -771,22 +778,18 @@ function generate_static_page(history_file::String, output_file::String, group_n
     open(output_file, "w") do f
         write(f, html)
     end
-
-    println("Static page generated: $output_file")
 end
 
-# CLI usage
 if abspath(PROGRAM_FILE) == @__FILE__
     if length(ARGS) < 3
-        println("Usage: julia generate_static_page.jl <history_file> <output_file> <group_name> [repo_url] [commit_sha]")
         exit(1)
     end
 
-    history_file = ARGS[1]
+    data_dir = ARGS[1]
     output_file = ARGS[2]
     group_name = ARGS[3]
     repo_url = length(ARGS) >= 4 ? ARGS[4] : "https://github.com/unknown/repo"
     commit_sha = length(ARGS) >= 5 ? ARGS[5] : "unknown"
 
-    generate_static_page(history_file, output_file, group_name, repo_url, commit_sha)
+    generate_static_page(data_dir, output_file, group_name, repo_url, commit_sha)
 end

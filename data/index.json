@@ -1,0 +1,472 @@
+{
+  "groups": {
+    "test": {
+      "total_runs": 2,
+      "latest_run": 2,
+      "first_run_date": "2025-12-17",
+      "runs": [
+        {
+          "run_number": 1,
+          "julia_version": "1.11.5",
+          "commit_hash": "abc1234",
+          "benchmark_count": 2,
+          "date": "2025-12-17",
+          "timestamp": "2025-12-17T07:16:53.995",
+          "file_path": "by_group/test/run_1.json"
+        },
+        {
+          "run_number": 2,
+          "julia_version": "1.11.5",
+          "commit_hash": "abc1234",
+          "benchmark_count": 2,
+          "date": "2025-12-17",
+          "timestamp": "2025-12-17T07:17:09.999",
+          "file_path": "by_group/test/run_2.json"
+        }
+      ],
+      "last_run_date": "2025-12-17"
+    },
+    "general": {
+      "total_runs": 22,
+      "latest_run": 22,
+      "first_run_date": "2025-11-09",
+      "runs": [
+        {
+          "run_number": 1,
+          "julia_version": "unknown",
+          "benchmark_count": 24,
+          "date": "2025-11-10",
+          "timestamp": "2025-11-10T16:03:53.774",
+          "file_path": "by_group/general/run_1.json"
+        },
+        {
+          "run_number": 2,
+          "julia_version": "unknown",
+          "benchmark_count": 24,
+          "date": "2025-11-10",
+          "timestamp": "2025-11-10T16:05:44.027",
+          "file_path": "by_group/general/run_2.json"
+        },
+        {
+          "run_number": 3,
+          "julia_version": "unknown",
+          "benchmark_count": 24,
+          "date": "2025-11-10",
+          "timestamp": "2025-11-10T16:40:37.790",
+          "file_path": "by_group/general/run_3.json"
+        },
+        {
+          "run_number": 4,
+          "julia_version": "unknown",
+          "benchmark_count": 24,
+          "date": "2025-11-10",
+          "timestamp": "2025-11-10T16:42:24.662",
+          "file_path": "by_group/general/run_4.json"
+        },
+        {
+          "run_number": 5,
+          "julia_version": "unknown",
+          "benchmark_count": 24,
+          "date": "2025-11-10",
+          "timestamp": "2025-11-10T16:44:09.457",
+          "file_path": "by_group/general/run_5.json"
+        },
+        {
+          "run_number": 6,
+          "julia_version": "unknown",
+          "benchmark_count": 24,
+          "date": "2025-11-10",
+          "timestamp": "2025-11-10T16:45:56.587",
+          "file_path": "by_group/general/run_6.json"
+        },
+        {
+          "run_number": 7,
+          "julia_version": "unknown",
+          "benchmark_count": 24,
+          "date": "2025-11-10",
+          "timestamp": "2025-11-10T16:47:41.117",
+          "file_path": "by_group/general/run_7.json"
+        },
+        {
+          "run_number": 8,
+          "julia_version": "unknown",
+          "benchmark_count": 8,
+          "date": "2025-11-10",
+          "timestamp": "2025-11-10T16:40:37.790",
+          "file_path": "by_group/general/run_8.json"
+        },
+        {
+          "run_number": 9,
+          "julia_version": "unknown",
+          "benchmark_count": 8,
+          "date": "2025-11-10",
+          "timestamp": "2025-11-10T16:42:24.662",
+          "file_path": "by_group/general/run_9.json"
+        },
+        {
+          "run_number": 10,
+          "julia_version": "unknown",
+          "benchmark_count": 8,
+          "date": "2025-11-10",
+          "timestamp": "2025-11-10T16:44:09.457",
+          "file_path": "by_group/general/run_10.json"
+        },
+        {
+          "run_number": 11,
+          "julia_version": "unknown",
+          "benchmark_count": 8,
+          "date": "2025-11-10",
+          "timestamp": "2025-11-10T16:45:56.587",
+          "file_path": "by_group/general/run_11.json"
+        },
+        {
+          "run_number": 12,
+          "julia_version": "unknown",
+          "benchmark_count": 8,
+          "date": "2025-11-10",
+          "timestamp": "2025-11-10T16:47:41.117",
+          "file_path": "by_group/general/run_12.json"
+        },
+        {
+          "run_number": 13,
+          "julia_version": "unknown",
+          "benchmark_count": 4,
+          "date": "2025-11-09",
+          "timestamp": "2025-11-09T22:02:48.181",
+          "file_path": "by_group/general/run_13.json"
+        },
+        {
+          "run_number": 14,
+          "julia_version": "unknown",
+          "benchmark_count": 4,
+          "date": "2025-11-09",
+          "timestamp": "2025-11-09T22:03:02.477",
+          "file_path": "by_group/general/run_14.json"
+        },
+        {
+          "run_number": 15,
+          "julia_version": "unknown",
+          "benchmark_count": 4,
+          "date": "2025-11-09",
+          "timestamp": "2025-11-09T22:03:16.677",
+          "file_path": "by_group/general/run_15.json"
+        },
+        {
+          "run_number": 16,
+          "julia_version": "unknown",
+          "benchmark_count": 4,
+          "date": "2025-11-10",
+          "timestamp": "2025-11-10T16:03:53.774",
+          "file_path": "by_group/general/run_16.json"
+        },
+        {
+          "run_number": 17,
+          "julia_version": "unknown",
+          "benchmark_count": 4,
+          "date": "2025-11-10",
+          "timestamp": "2025-11-10T16:05:44.027",
+          "file_path": "by_group/general/run_17.json"
+        },
+        {
+          "run_number": 18,
+          "julia_version": "unknown",
+          "benchmark_count": 4,
+          "date": "2025-11-10",
+          "timestamp": "2025-11-10T16:40:37.790",
+          "file_path": "by_group/general/run_18.json"
+        },
+        {
+          "run_number": 19,
+          "julia_version": "unknown",
+          "benchmark_count": 4,
+          "date": "2025-11-10",
+          "timestamp": "2025-11-10T16:42:24.662",
+          "file_path": "by_group/general/run_19.json"
+        },
+        {
+          "run_number": 20,
+          "julia_version": "unknown",
+          "benchmark_count": 4,
+          "date": "2025-11-10",
+          "timestamp": "2025-11-10T16:44:09.457",
+          "file_path": "by_group/general/run_20.json"
+        },
+        {
+          "run_number": 21,
+          "julia_version": "unknown",
+          "benchmark_count": 4,
+          "date": "2025-11-10",
+          "timestamp": "2025-11-10T16:45:56.587",
+          "file_path": "by_group/general/run_21.json"
+        },
+        {
+          "run_number": 22,
+          "julia_version": "unknown",
+          "benchmark_count": 4,
+          "date": "2025-11-10",
+          "timestamp": "2025-11-10T16:47:41.117",
+          "file_path": "by_group/general/run_22.json"
+        }
+      ],
+      "last_run_date": "2025-11-10"
+    },
+    "trixi": {
+      "total_runs": 14,
+      "latest_run": 14,
+      "first_run_date": "2025-11-21",
+      "runs": [
+        {
+          "run_number": 1,
+          "julia_version": "1.10.10",
+          "benchmark_count": 24,
+          "date": "2025-11-21",
+          "timestamp": "2025-11-21T04:15:57.257",
+          "file_path": "by_group/trixi/run_1.json"
+        },
+        {
+          "run_number": 2,
+          "julia_version": "1.11.5",
+          "benchmark_count": 24,
+          "date": "2025-11-26",
+          "timestamp": "2025-11-26T10:56:49.765",
+          "file_path": "by_group/trixi/run_2.json"
+        },
+        {
+          "run_number": 3,
+          "julia_version": "1.11.5",
+          "benchmark_count": 24,
+          "date": "2025-11-26",
+          "timestamp": "2025-11-26T10:58:41.423",
+          "file_path": "by_group/trixi/run_3.json"
+        },
+        {
+          "run_number": 4,
+          "julia_version": "1.11.5",
+          "benchmark_count": 24,
+          "date": "2025-11-26",
+          "timestamp": "2025-11-26T11:00:17.093",
+          "file_path": "by_group/trixi/run_4.json"
+        },
+        {
+          "run_number": 5,
+          "julia_version": "1.11.5",
+          "benchmark_count": 24,
+          "date": "2025-11-26",
+          "timestamp": "2025-11-26T11:01:52.446",
+          "file_path": "by_group/trixi/run_5.json"
+        },
+        {
+          "run_number": 6,
+          "julia_version": "1.11.5",
+          "benchmark_count": 24,
+          "date": "2025-11-26",
+          "timestamp": "2025-11-26T11:03:27.798",
+          "file_path": "by_group/trixi/run_6.json"
+        },
+        {
+          "run_number": 7,
+          "julia_version": "1.11.5",
+          "benchmark_count": 24,
+          "date": "2025-11-26",
+          "timestamp": "2025-11-26T11:18:56.410",
+          "file_path": "by_group/trixi/run_7.json"
+        },
+        {
+          "run_number": 8,
+          "julia_version": "1.11.5",
+          "benchmark_count": 24,
+          "date": "2025-11-26",
+          "timestamp": "2025-11-26T11:20:50.169",
+          "file_path": "by_group/trixi/run_8.json"
+        },
+        {
+          "run_number": 9,
+          "julia_version": "1.11.5",
+          "benchmark_count": 24,
+          "date": "2025-11-26",
+          "timestamp": "2025-11-26T11:22:30.926",
+          "file_path": "by_group/trixi/run_9.json"
+        },
+        {
+          "run_number": 10,
+          "julia_version": "1.11.5",
+          "benchmark_count": 24,
+          "date": "2025-11-26",
+          "timestamp": "2025-11-26T11:24:08.808",
+          "file_path": "by_group/trixi/run_10.json"
+        },
+        {
+          "run_number": 11,
+          "julia_version": "1.11.5",
+          "benchmark_count": 24,
+          "date": "2025-11-26",
+          "timestamp": "2025-11-26T11:25:47.989",
+          "file_path": "by_group/trixi/run_11.json"
+        },
+        {
+          "run_number": 12,
+          "julia_version": "1.11.5",
+          "benchmark_count": 4,
+          "date": "2025-11-26",
+          "timestamp": "2025-11-26T11:22:30.926",
+          "file_path": "by_group/trixi/run_12.json"
+        },
+        {
+          "run_number": 13,
+          "julia_version": "1.11.5",
+          "benchmark_count": 4,
+          "date": "2025-11-26",
+          "timestamp": "2025-11-26T11:24:08.808",
+          "file_path": "by_group/trixi/run_13.json"
+        },
+        {
+          "run_number": 14,
+          "julia_version": "1.11.5",
+          "benchmark_count": 4,
+          "date": "2025-11-26",
+          "timestamp": "2025-11-26T11:25:47.989",
+          "file_path": "by_group/trixi/run_14.json"
+        }
+      ],
+      "last_run_date": "2025-11-26"
+    },
+    "enzyme": {
+      "total_runs": 16,
+      "latest_run": 16,
+      "first_run_date": "2025-11-19",
+      "runs": [
+        {
+          "run_number": 1,
+          "julia_version": "1.10.10",
+          "benchmark_count": 7,
+          "date": "2025-11-19",
+          "timestamp": "2025-11-19T09:24:26.892",
+          "file_path": "by_group/enzyme/run_1.json"
+        },
+        {
+          "run_number": 2,
+          "julia_version": "1.10.10",
+          "benchmark_count": 7,
+          "date": "2025-11-19",
+          "timestamp": "2025-11-19T10:14:54.953",
+          "file_path": "by_group/enzyme/run_2.json"
+        },
+        {
+          "run_number": 3,
+          "julia_version": "1.10.10",
+          "benchmark_count": 7,
+          "date": "2025-11-19",
+          "timestamp": "2025-11-19T10:16:06.706",
+          "file_path": "by_group/enzyme/run_3.json"
+        },
+        {
+          "run_number": 4,
+          "julia_version": "1.10.10",
+          "benchmark_count": 7,
+          "date": "2025-11-19",
+          "timestamp": "2025-11-19T10:16:20.378",
+          "file_path": "by_group/enzyme/run_4.json"
+        },
+        {
+          "run_number": 5,
+          "julia_version": "1.10.10",
+          "benchmark_count": 7,
+          "date": "2025-11-19",
+          "timestamp": "2025-11-19T10:16:35.469",
+          "file_path": "by_group/enzyme/run_5.json"
+        },
+        {
+          "run_number": 6,
+          "julia_version": "1.11.5",
+          "benchmark_count": 7,
+          "date": "2025-11-25",
+          "timestamp": "2025-11-25T17:52:17.464",
+          "file_path": "by_group/enzyme/run_6.json"
+        },
+        {
+          "run_number": 7,
+          "julia_version": "1.11.5",
+          "benchmark_count": 7,
+          "date": "2025-11-26",
+          "timestamp": "2025-11-26T10:57:15.648",
+          "file_path": "by_group/enzyme/run_7.json"
+        },
+        {
+          "run_number": 8,
+          "julia_version": "1.11.5",
+          "benchmark_count": 7,
+          "date": "2025-11-26",
+          "timestamp": "2025-11-26T10:58:53.375",
+          "file_path": "by_group/enzyme/run_8.json"
+        },
+        {
+          "run_number": 9,
+          "julia_version": "1.11.5",
+          "benchmark_count": 7,
+          "date": "2025-11-26",
+          "timestamp": "2025-11-26T11:00:29.025",
+          "file_path": "by_group/enzyme/run_9.json"
+        },
+        {
+          "run_number": 10,
+          "julia_version": "1.11.5",
+          "benchmark_count": 7,
+          "date": "2025-11-26",
+          "timestamp": "2025-11-26T11:02:04.433",
+          "file_path": "by_group/enzyme/run_10.json"
+        },
+        {
+          "run_number": 11,
+          "julia_version": "1.11.5",
+          "benchmark_count": 7,
+          "date": "2025-11-26",
+          "timestamp": "2025-11-26T11:03:39.693",
+          "file_path": "by_group/enzyme/run_11.json"
+        },
+        {
+          "run_number": 12,
+          "julia_version": "1.11.5",
+          "benchmark_count": 7,
+          "date": "2025-11-26",
+          "timestamp": "2025-11-26T11:19:22.215",
+          "file_path": "by_group/enzyme/run_12.json"
+        },
+        {
+          "run_number": 13,
+          "julia_version": "1.11.5",
+          "benchmark_count": 7,
+          "date": "2025-11-26",
+          "timestamp": "2025-11-26T11:21:04.433",
+          "file_path": "by_group/enzyme/run_13.json"
+        },
+        {
+          "run_number": 14,
+          "julia_version": "1.11.5",
+          "benchmark_count": 7,
+          "date": "2025-11-26",
+          "timestamp": "2025-11-26T11:22:43.438",
+          "file_path": "by_group/enzyme/run_14.json"
+        },
+        {
+          "run_number": 15,
+          "julia_version": "1.11.5",
+          "benchmark_count": 7,
+          "date": "2025-11-26",
+          "timestamp": "2025-11-26T11:24:22.776",
+          "file_path": "by_group/enzyme/run_15.json"
+        },
+        {
+          "run_number": 16,
+          "julia_version": "1.11.5",
+          "benchmark_count": 7,
+          "date": "2025-11-26",
+          "timestamp": "2025-11-26T11:26:02.187",
+          "file_path": "by_group/enzyme/run_16.json"
+        }
+      ],
+      "last_run_date": "2025-11-26"
+    }
+  },
+  "last_updated": "2025-12-17T07:17:10.656",
+  "version": "2.0"
+}

@@ -1,0 +1,90 @@
+{
+  "metadata": {
+    "run_number": 10,
+    "julia_version": "unknown",
+    "timestamp": "2025-11-10T16:44:09.457",
+    "group": "general"
+  },
+  "benchmarks": {
+    "tree_1d_dgsem/elixir_mhd_ec.jl/p7_rhs!": {
+      "max_time_ns": 0.0,
+      "allocs": 0,
+      "min_time_ns": 13841.0,
+      "mean_time_ns": 14576.1864,
+      "samples": 0,
+      "std_time_ns": 0.0,
+      "median_time_ns": 14084.0,
+      "memory_bytes": 0
+    },
+    "tree_1d_dgsem/elixir_mhd_ec.jl/p7_analysis": {
+      "max_time_ns": 0.0,
+      "allocs": 0,
+      "min_time_ns": 8358.0,
+      "mean_time_ns": 11076.0449,
+      "samples": 0,
+      "std_time_ns": 0.0,
+      "median_time_ns": 11041.0,
+      "memory_bytes": 0
+    },
+    "tree_1d_dgsem/elixir_mhd_ec.jl/p3_analysis": {
+      "max_time_ns": 0.0,
+      "allocs": 0,
+      "min_time_ns": 3577.0,
+      "mean_time_ns": 4013.6586,
+      "samples": 0,
+      "std_time_ns": 0.0,
+      "median_time_ns": 3951.0,
+      "memory_bytes": 0
+    },
+    "structured_1d_dgsem/elixir_euler_sedov.jl/p3_rhs!": {
+      "max_time_ns": 0.0,
+      "allocs": 0,
+      "min_time_ns": 12921.0,
+      "mean_time_ns": 15064.5872,
+      "samples": 0,
+      "std_time_ns": 0.0,
+      "median_time_ns": 14387.0,
+      "memory_bytes": 0
+    },
+    "structured_1d_dgsem/elixir_euler_sedov.jl/p7_analysis": {
+      "max_time_ns": 0.0,
+      "allocs": 64,
+      "min_time_ns": 8826.0,
+      "mean_time_ns": 10932.3623,
+      "samples": 0,
+      "std_time_ns": 0.0,
+      "median_time_ns": 9872.0,
+      "memory_bytes": 8192
+    },
+    "tree_1d_dgsem/elixir_mhd_ec.jl/p3_rhs!": {
+      "max_time_ns": 0.0,
+      "allocs": 0,
+      "min_time_ns": 5121.0,
+      "mean_time_ns": 5643.6963,
+      "samples": 0,
+      "std_time_ns": 0.0,
+      "median_time_ns": 5479.0,
+      "memory_bytes": 0
+    },
+    "structured_1d_dgsem/elixir_euler_sedov.jl/p3_analysis": {
+      "max_time_ns": 0.0,
+      "allocs": 64,
+      "min_time_ns": 5384.0,
+      "mean_time_ns": 7567.0719,
+      "samples": 0,
+      "std_time_ns": 0.0,
+      "median_time_ns": 7235.0,
+      "memory_bytes": 6144
+    },
+    "structured_1d_dgsem/elixir_euler_sedov.jl/p7_rhs!": {
+      "max_time_ns": 0.0,
+      "allocs": 0,
+      "min_time_ns": 33176.0,
+      "mean_time_ns": 34395.7031,
+      "samples": 0,
+      "std_time_ns": 0.0,
+      "median_time_ns": 33461.0,
+      "memory_bytes": 0
+    }
+  }
+}
