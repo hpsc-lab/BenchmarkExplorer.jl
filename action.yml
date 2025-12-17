@@ -91,6 +91,12 @@ runs:
       run: |
         julia ${{ github.action_path }}/ci/run_benchmarks.jl "${{ inputs.data_dir }}" "${{ inputs.group_name }}"
 
+    - name: Install dependencies for HTML generation
+      if: inputs.persist_to_branch != ''
+      shell: bash
+      run: |
+        julia --project=${{ github.action_path }} -e 'using Pkg; Pkg.instantiate()'
+
     - name: Generate HTML pages
       if: inputs.persist_to_branch != ''
       shell: bash
