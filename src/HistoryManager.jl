@@ -37,8 +37,17 @@ function save_benchmark_results(suite_results, group::String;
 
     mkpath(by_group_dir)
 
-    if isfile(index_path)
-        index = JSON.parsefile(index_path)
+    if isfile(index_path) && filesize(index_path) > 0
+        try
+            index = JSON.parsefile(index_path)
+        catch e
+            @warn "Failed to parse index.json, creating new one" exception=e
+            index = Dict(
+                "version" => "2.0",
+                "groups" => Dict(),
+                "last_updated" => string(now())
+            )
+        end
     else
         index = Dict(
             "version" => "2.0",
@@ -161,8 +170,17 @@ end
 function update_latest_cache(data_dir, group, run_number, run_data)
     cache_path = joinpath(data_dir, "latest_100.json")
 
-    if isfile(cache_path)
-        cache = JSON.parsefile(cache_path)
+    if isfile(cache_path) && filesize(cache_path) > 0
+        try
+            cache = JSON.parsefile(cache_path)
+        catch e
+            @warn "Failed to parse latest_100.json, creating new one" exception=e
+            cache = Dict(
+                "version" => "2.0",
+                "cached_at" => string(now()),
+                "groups" => Dict()
+            )
+        end
     else
         cache = Dict(
             "version" => "2.0",
