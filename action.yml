@@ -129,10 +129,16 @@ runs:
           git rm -rf . || true
         fi
 
-        mkdir -p ${{ inputs.persist_path }}
-        cp -r /tmp/data_update/* ${{ inputs.persist_path }}
-        cp /tmp/index.html ${{ inputs.persist_path }}index.html
-        cp /tmp/${{ inputs.group_name }}.html ${{ inputs.persist_path }}${{ inputs.group_name }}.html
+        if [ -n "${{ inputs.persist_path }}" ]; then
+          mkdir -p ${{ inputs.persist_path }}
+          cp -r /tmp/data_update/* ${{ inputs.persist_path }}
+          cp /tmp/index.html ${{ inputs.persist_path }}index.html
+          cp /tmp/${{ inputs.group_name }}.html ${{ inputs.persist_path }}${{ inputs.group_name }}.html
+        else
+          cp -r /tmp/data_update/* .
+          cp /tmp/index.html index.html
+          cp /tmp/${{ inputs.group_name }}.html ${{ inputs.group_name }}.html
+        fi
 
         git add -A
         git commit -m "Update benchmarks: ${{ inputs.group_name }} @ ${{ github.sha }}" || echo "No changes"
