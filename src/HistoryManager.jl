@@ -9,7 +9,8 @@ using Printf
 
 export save_benchmark_results, load_history, get_benchmark_names,
        get_subbenchmark_names, extract_timeseries_with_timestamps,
-       update_index, generate_markdown_report
+       update_index, generate_markdown_report, load_by_hash,
+       generate_all_runs_index
 
 function flatten_benchmarks(group::BenchmarkTools.BenchmarkGroup, path::Vector{String}=String[])
     results = Dict{String, BenchmarkTools.Trial}()
@@ -33,6 +34,7 @@ function save_benchmark_results(suite_results, group::String;
                                 data_dir="data", commit_hash="")
     by_date_dir = joinpath(data_dir, "by_date")
     by_group_dir = joinpath(data_dir, "by_group", group)
+    by_hash_dir = joinpath(data_dir, "by_hash")
     index_path = joinpath(data_dir, "index.json")
 
     mkpath(by_group_dir)
@@ -40,8 +42,7 @@ function save_benchmark_results(suite_results, group::String;
     if isfile(index_path) && filesize(index_path) > 0
         try
             index = JSON.parsefile(index_path)
-        catch e
-            @warn "Failed to parse index.json, creating new one" exception=e
+        catch
             index = Dict(
                 "version" => "2.0",
                 "groups" => Dict(),
@@ -110,6 +111,15 @@ function save_benchmark_results(suite_results, group::String;
         JSON.print(f, run_data, 2)
     end
 
+    if !isempty(commit_hash)
+        hash_dir = joinpath(by_hash_dir, commit_hash)
+        mkpath(hash_dir)
+        by_hash_path = joinpath(hash_dir, "$(group).json")
+        open(by_hash_path, "w") do f
+            JSON.print(f, run_data, 2)
+        end
+    end
+
     if !haskey(index["groups"], group)
         index["groups"][group] = Dict(
             "runs" => [],
@@ -173,8 +183,7 @@ function update_latest_cache(data_dir, group, run_number, run_data)
     if isfile(cache_path) && filesize(cache_path) > 0
         try
             cache = JSON.parsefile(cache_path)
-        catch e
-            @warn "Failed to parse latest_100.json, creating new one" exception=e
+        catch
             cache = Dict(
                 "version" => "2.0",
                 "cached_at" => string(now()),
@@ -208,7 +217,8 @@ function update_latest_cache(data_dir, group, run_number, run_data)
             "allocs" => data["allocs"],
             "samples" => data["samples"],
             "timestamp" => run_data["metadata"]["timestamp"],
-            "julia_version" => run_data["metadata"]["julia_version"]
+            "julia_version" => run_data["metadata"]["julia_version"],
+            "commit_hash" => get(run_data["metadata"], "commit_hash", "")
         )
     end
 
@@ -395,6 +405,93 @@ function update_index(data_dir="data")
     end
 
     return index
+end
+
+function load_by_hash(commit_hash::String, group::String=""; data_dir="data")
+    by_hash_dir = joinpath(data_dir, "by_hash")
+
+    if !isdir(by_hash_dir)
+        return nothing
+    end
+
+    hash_dirs = readdir(by_hash_dir)
+    matching_hash = nothing
+
+    for h in hash_dirs
+        if startswith(h, commit_hash) || startswith(commit_hash, h)
+            matching_hash = h
+            break
+        end
+    end
+
+    if isnothing(matching_hash)
+        return nothing
+    end
+
+    hash_path = joinpath(by_hash_dir, matching_hash)
+
+    if isempty(group)
+        result = Dict()
+        for filename in readdir(hash_path)
+            if endswith(filename, ".json")
+                group_name = replace(filename, ".json" => "")
+                result[group_name] = JSON.parsefile(joinpath(hash_path, filename))
+            end
+        end
+        return result
+    else
+        group_file = joinpath(hash_path, "$(group).json")
+        if !isfile(group_file)
+            return nothing
+        end
+        return JSON.parsefile(group_file)
+    end
+end
+
+function generate_all_runs_index(data_dir="data")
+    index_path = joinpath(data_dir, "index.json")
+
+    if !isfile(index_path)
+        error("index.json not found at $index_path")
+    end
+
+    index = JSON.parsefile(index_path)
+
+    all_runs_index = Dict(
+        "version" => "2.0",
+        "generated_at" => string(now()),
+        "groups" => Dict{String, Any}()
+    )
+
+    for (group_name, group_info) in get(index, "groups", Dict())
+        runs_list = []
+
+        for run_info in get(group_info, "runs", [])
+            push!(runs_list, Dict(
+                "run" => run_info["run_number"],
+                "date" => run_info["date"],
+                "timestamp" => run_info["timestamp"],
+                "julia_version" => get(run_info, "julia_version", "unknown"),
+                "commit_hash" => get(run_info, "commit_hash", "unknown"),
+                "benchmark_count" => run_info["benchmark_count"],
+                "url" => run_info["file_path"]
+            ))
+        end
+
+        all_runs_index["groups"][group_name] = Dict(
+            "total_runs" => get(group_info, "total_runs", 0),
+            "first_run_date" => get(group_info, "first_run_date", ""),
+            "last_run_date" => get(group_info, "last_run_date", ""),
+            "runs" => runs_list
+        )
+    end
+
+    output_path = joinpath(data_dir, "all_runs_index.json")
+    open(output_path, "w") do f
+        JSON.print(f, all_runs_index, 2)
+    end
+
+    return output_path
 end
 
 end

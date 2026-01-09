@@ -32,13 +32,13 @@ Generate pages locally:
 
 ```bash
 mkdir -p /tmp/preview
-cp data/history_*.json /tmp/preview/
+cp -r data/index.json data/latest_100.json /tmp/preview/
 
 julia ci/generate_index_page.jl /tmp/preview /tmp/preview/index.html \
   "https://github.com/username/repo" "$(git rev-parse HEAD)"
 
-julia ci/generate_static_page.jl /tmp/preview/history.json \
-  /tmp/preview/group.html group "https://github.com/username/repo" "$(git rev-parse HEAD)"
+julia ci/generate_static_page.jl /tmp/preview \
+  /tmp/preview/trixi.html trixi "https://github.com/username/repo" "$(git rev-parse HEAD)"
 
 xdg-open /tmp/preview/index.html
 ```

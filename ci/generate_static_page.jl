@@ -500,6 +500,7 @@ function generate_static_page(data_dir::String, output_file::String, group_name:
                 <button class="mode-btn" id="toggle-percentage">% Change</button>
                 <button class="mode-btn" id="toggle-dark">🌙 Dark</button>
                 <button class="export-btn" id="export-csv">📥 Export CSV</button>
+                <button class="export-btn" id="load-full-history" onclick="loadFullHistory()" style="background: #667eea;">📊 Load Full History</button>
             </div>
             <input type="text" id="search" class="search-box" placeholder="🔍 Search benchmarks...">
         </div>
@@ -514,13 +515,12 @@ function generate_static_page(data_dir::String, output_file::String, group_name:
     <script>
         const benchmarksData = $benchmarks_json;
 
-        // Calculate summary stats
         const totalBenchmarks = Object.keys(benchmarksData).length;
         let totalRuns = 0;
         let totalAvgTime = 0;
 
         for (const [name, data] of Object.entries(benchmarksData)) {
-            totalRuns += data.num_runs;
+            totalRuns = Math.max(totalRuns, data.num_runs);
             totalAvgTime += data.latest_mean;
         }
 
@@ -528,7 +528,6 @@ function generate_static_page(data_dir::String, output_file::String, group_name:
         document.getElementById('total-runs').textContent = totalRuns;
         document.getElementById('avg-time').textContent = totalBenchmarks > 0 ? (totalAvgTime / totalBenchmarks).toFixed(2) : '0';
 
-        // Render benchmarks
         function renderBenchmarks(filter = '') {
             const container = document.getElementById('benchmarks-container');
             container.innerHTML = '';
@@ -584,10 +583,8 @@ function generate_static_page(data_dir::String, output_file::String, group_name:
                 `;
                 container.appendChild(item);
 
-                // Create chart
                 const ctx = document.getElementById(`chart-\${index}`).getContext('2d');
 
-                // Process data for percentage mode
                 function toPercentage(arr) {
                     if (!percentageMode || arr.length === 0) return arr;
                     const baseline = arr[0];
@@ -690,7 +687,6 @@ function generate_static_page(data_dir::String, output_file::String, group_name:
             return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
         }
 
-        // Global state
         let showMean = true;
         let showMin = true;
         let showMedian = true;
@@ -698,7 +694,6 @@ function generate_static_page(data_dir::String, output_file::String, group_name:
         let percentageMode = false;
         let allCharts = [];
 
-        // Toggle buttons
         document.getElementById('toggle-mean').addEventListener('click', function() {
             showMean = !showMean;
             this.classList.toggle('active');
@@ -763,10 +758,74 @@ function generate_static_page(data_dir::String, output_file::String, group_name:
             window.URL.revokeObjectURL(url);
         }
 
-        // Initial render
+        let fullHistoryLoaded = false;
+        let allRunsIndex = null;
+
+        async function loadFullHistory() {
+            if (fullHistoryLoaded) return;
+
+            const loadBtn = document.getElementById('load-full-history');
+            loadBtn.disabled = true;
+            loadBtn.textContent = 'Loading...';
+
+            try {
+                const response = await fetch('benchmarks/all_runs_index.json');
+                allRunsIndex = await response.json();
+
+                const group = allRunsIndex.groups['$group_name'];
+                if (!group) return;
+
+                const runsToLoad = group.runs.filter(r => !benchmarksData[Object.keys(benchmarksData)[0]][String(r.run)]);
+
+                for (const runInfo of runsToLoad) {
+                    const runResponse = await fetch('benchmarks/' + runInfo.url);
+                    const runData = await runResponse.json();
+
+                    for (const [benchName, data] of Object.entries(runData.benchmarks)) {
+                        if (!benchmarksData[benchName]) {
+                            benchmarksData[benchName] = {};
+                        }
+
+                        benchmarksData[benchName][String(runInfo.run)] = {
+                            mean: data.mean_time_ns / 1e6,
+                            min: data.min_time_ns / 1e6,
+                            median: data.median_time_ns / 1e6,
+                            max: data.max_time_ns / 1e6,
+                            latest_mean: data.mean_time_ns / 1e6,
+                            latest_min: data.min_time_ns / 1e6,
+                            latest_memory: data.memory_bytes,
+                            latest_allocs: data.allocs,
+                            num_runs: runInfo.run,
+                            timestamp: runData.metadata.timestamp,
+                            julia_version: runData.metadata.julia_version
+                        };
+                    }
+
+                    for (const benchName of Object.keys(benchmarksData)) {
+                        const runs = Object.keys(benchmarksData[benchName]).map(Number).sort((a, b) => a - b);
+                        benchmarksData[benchName].labels = runs.map((r, i) => `Run \${i + 1}`);
+                        benchmarksData[benchName].mean = runs.map(r => benchmarksData[benchName][String(r)].mean);
+                        benchmarksData[benchName].min = runs.map(r => benchmarksData[benchName][String(r)].min);
+                        benchmarksData[benchName].median = runs.map(r => benchmarksData[benchName][String(r)].median);
+                        benchmarksData[benchName].max = runs.map(r => benchmarksData[benchName][String(r)].max);
+                        benchmarksData[benchName].num_runs = runs.length;
+                    }
+                }
+
+                fullHistoryLoaded = true;
+                loadBtn.textContent = 'Full History Loaded ✓';
+                document.getElementById('total-runs').textContent = group.total_runs;
+
+                updateAllCharts();
+            } catch (error) {
+                console.error('Failed to load full history:', error);
+                loadBtn.textContent = 'Load Full History (Error)';
+                loadBtn.disabled = false;
+            }
+        }
+
         renderBenchmarks();
 
-        // Search functionality
         document.getElementById('search').addEventListener('input', (e) => {
             renderBenchmarks(e.target.value);
         });
