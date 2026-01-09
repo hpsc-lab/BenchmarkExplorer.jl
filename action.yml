@@ -81,6 +81,8 @@ runs:
         git show origin/${{ inputs.persist_to_branch }}:${{ inputs.persist_path }}latest_100.json > ${{ inputs.data_dir }}/latest_100.json 2>/dev/null || true
         mkdir -p ${{ inputs.data_dir }}/by_group/${{ inputs.group_name }}
         git archive origin/${{ inputs.persist_to_branch }} ${{ inputs.persist_path }}by_group/${{ inputs.group_name }} | tar -x -C ${{ inputs.data_dir }} 2>/dev/null || true
+        mkdir -p ${{ inputs.data_dir }}/by_hash
+        git archive origin/${{ inputs.persist_to_branch }} ${{ inputs.persist_path }}by_hash | tar -x -C ${{ inputs.data_dir }} 2>/dev/null || true
 
     - name: Run benchmarks
       id: run_benchmarks
@@ -104,9 +106,11 @@ runs:
         julia --project=${{ github.action_path }} ${{ github.action_path }}/ci/generate_index_page.jl ${{ inputs.data_dir }} /tmp/index.html \
           "${{ github.server_url }}/${{ github.repository }}" "${{ github.sha }}"
 
-        julia --project=${{ github.action_path }} ${{ github.action_path }}/ci/generate_static_page.jl ${{ inputs.data_dir }} \
+        julia --project=${{ github.action_path }} ${{ github.action_path }}/ci/generate_static_page_plotly.jl ${{ inputs.data_dir }} \
           /tmp/${{ inputs.group_name }}.html ${{ inputs.group_name }} \
           "${{ github.server_url }}/${{ github.repository }}" "${{ github.sha }}"
+
+        julia --project=${{ github.action_path }} -e 'include("src/HistoryManager.jl"); using .HistoryManager; generate_all_runs_index("${{ inputs.data_dir }}")'
 
     - name: Publish results to persist branch
       if: inputs.persist_to_branch != ''
