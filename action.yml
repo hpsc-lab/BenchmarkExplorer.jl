@@ -112,6 +112,13 @@ runs:
 
         julia --project=${{ github.action_path }} -e 'include("src/HistoryManager.jl"); using .HistoryManager; generate_all_runs_index("${{ inputs.data_dir }}")'
 
+    - name: Upload data artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: benchmark-data-${{ inputs.group_name }}
+        path: ${{ inputs.data_dir }}
+        retention-days: 30
+
     - name: Publish results to persist branch
       if: inputs.persist_to_branch != ''
       shell: bash
@@ -149,10 +156,3 @@ runs:
         git push origin ${{ inputs.persist_to_branch }}
 
         git checkout -f ${{ github.sha }}
-
-    - name: Upload data artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: benchmark-data-${{ inputs.group_name }}
-        path: ${{ inputs.data_dir }}
-        retention-days: 30

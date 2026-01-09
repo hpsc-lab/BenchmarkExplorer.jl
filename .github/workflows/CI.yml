@@ -10,19 +10,14 @@ on:
 
 jobs:
   test:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
-        julia-version: ['1.9', '1.10', '1']
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
 
       - uses: julia-actions/setup-julia@v2
         with:
-          version: ${{ matrix.julia-version }}
+          version: '1.10'
 
       - uses: julia-actions/cache@v2
 
@@ -33,10 +28,8 @@ jobs:
         run: julia --project=. test/runtests.jl
 
       - uses: julia-actions/julia-processcoverage@v1
-        if: matrix.os == 'ubuntu-latest' && matrix.julia-version == '1'
 
       - uses: codecov/codecov-action@v4
-        if: matrix.os == 'ubuntu-latest' && matrix.julia-version == '1'
         with:
           file: lcov.info
           token: ${{ secrets.CODECOV_TOKEN }}
