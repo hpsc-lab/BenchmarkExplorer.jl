@@ -146,7 +146,6 @@ If you use BenchmarkExplorer.jl in your research, please cite:
 ```bibtex
 @software{benchmarkexplorer,
   title = {BenchmarkExplorer.jl: Performance Tracking for Julia},
-  author = {Yaroslav Kachur and contributors},
   year = {2025},
   url = {https://github.com/hpsc-lab/BenchmarkExplorer.jl}
 }
