@@ -1,0 +1,533 @@
+{
+  "groups": {
+    "trixi": {
+      "total_runs": 29,
+      "first_run_date": "2025-12-17",
+      "runs": [
+        {
+          "julia_version": "1.11.8",
+          "run": 1,
+          "commit_hash": "7d7593854ef6182b97fa6b35b5481529fd1c8e76",
+          "benchmark_count": 24,
+          "date": "2025-12-17",
+          "timestamp": "2025-12-17T09:59:33.390",
+          "url": "by_group/trixi/run_1.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 2,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 24,
+          "date": "2025-12-17",
+          "timestamp": "2025-12-17T10:19:09.515",
+          "url": "by_group/trixi/run_2.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 3,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 24,
+          "date": "2025-12-18",
+          "timestamp": "2025-12-18T02:45:17.333",
+          "url": "by_group/trixi/run_3.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 4,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 24,
+          "date": "2025-12-19",
+          "timestamp": "2025-12-19T02:47:35.494",
+          "url": "by_group/trixi/run_4.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 5,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 24,
+          "date": "2025-12-20",
+          "timestamp": "2025-12-20T02:45:01.781",
+          "url": "by_group/trixi/run_5.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 6,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 24,
+          "date": "2025-12-21",
+          "timestamp": "2025-12-21T02:52:19.218",
+          "url": "by_group/trixi/run_6.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 7,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 24,
+          "date": "2025-12-22",
+          "timestamp": "2025-12-22T02:53:13.345",
+          "url": "by_group/trixi/run_7.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 8,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 24,
+          "date": "2025-12-23",
+          "timestamp": "2025-12-23T02:49:12.021",
+          "url": "by_group/trixi/run_8.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 9,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 24,
+          "date": "2025-12-24",
+          "timestamp": "2025-12-24T02:47:18.372",
+          "url": "by_group/trixi/run_9.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 10,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 24,
+          "date": "2025-12-25",
+          "timestamp": "2025-12-25T02:49:23.523",
+          "url": "by_group/trixi/run_10.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 11,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 24,
+          "date": "2025-12-26",
+          "timestamp": "2025-12-26T02:48:32.549",
+          "url": "by_group/trixi/run_11.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 12,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 24,
+          "date": "2025-12-27",
+          "timestamp": "2025-12-27T02:46:10.114",
+          "url": "by_group/trixi/run_12.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 13,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 24,
+          "date": "2025-12-28",
+          "timestamp": "2025-12-28T02:57:49.819",
+          "url": "by_group/trixi/run_13.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 14,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 24,
+          "date": "2025-12-29",
+          "timestamp": "2025-12-29T02:57:07.052",
+          "url": "by_group/trixi/run_14.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 15,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 24,
+          "date": "2025-12-30",
+          "timestamp": "2025-12-30T02:49:41.653",
+          "url": "by_group/trixi/run_15.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 16,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 24,
+          "date": "2025-12-31",
+          "timestamp": "2025-12-31T02:49:30.690",
+          "url": "by_group/trixi/run_16.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 17,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 24,
+          "date": "2026-01-01",
+          "timestamp": "2026-01-01T02:59:34.594",
+          "url": "by_group/trixi/run_17.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 18,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 24,
+          "date": "2026-01-02",
+          "timestamp": "2026-01-02T02:51:26.722",
+          "url": "by_group/trixi/run_18.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 19,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 24,
+          "date": "2026-01-03",
+          "timestamp": "2026-01-03T02:46:02.120",
+          "url": "by_group/trixi/run_19.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 20,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 24,
+          "date": "2026-01-04",
+          "timestamp": "2026-01-04T02:59:23.292",
+          "url": "by_group/trixi/run_20.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 21,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 24,
+          "date": "2026-01-05",
+          "timestamp": "2026-01-05T03:00:11.833",
+          "url": "by_group/trixi/run_21.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 22,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 24,
+          "date": "2026-01-06",
+          "timestamp": "2026-01-06T02:51:00.562",
+          "url": "by_group/trixi/run_22.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 23,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 24,
+          "date": "2026-01-07",
+          "timestamp": "2026-01-07T02:52:06.695",
+          "url": "by_group/trixi/run_23.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 24,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 24,
+          "date": "2026-01-08",
+          "timestamp": "2026-01-08T02:50:57.818",
+          "url": "by_group/trixi/run_24.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 25,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 24,
+          "date": "2026-01-09",
+          "timestamp": "2026-01-09T02:51:32.322",
+          "url": "by_group/trixi/run_25.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 26,
+          "commit_hash": "4e56806da9ac35dc2c4266a198203a582749b5ad",
+          "benchmark_count": 24,
+          "date": "2026-01-09",
+          "timestamp": "2026-01-09T12:17:10.480",
+          "url": "by_group/trixi/run_26.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 27,
+          "commit_hash": "dadfcd8c04e3f12508897e2ed1311394b99a8496",
+          "benchmark_count": 24,
+          "date": "2026-01-09",
+          "timestamp": "2026-01-09T13:06:51.188",
+          "url": "by_group/trixi/run_27.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 28,
+          "commit_hash": "dadfcd8c04e3f12508897e2ed1311394b99a8496",
+          "benchmark_count": 24,
+          "date": "2026-01-09",
+          "timestamp": "2026-01-09T13:31:44.381",
+          "url": "by_group/trixi/run_28.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 29,
+          "commit_hash": "6016e7a52975e914ce68f101b5b2d419f3b7edc1",
+          "benchmark_count": 24,
+          "date": "2026-01-09",
+          "timestamp": "2026-01-09T21:54:03.181",
+          "url": "by_group/trixi/run_29.json"
+        }
+      ],
+      "last_run_date": "2026-01-09"
+    },
+    "enzyme": {
+      "total_runs": 28,
+      "first_run_date": "2025-12-17",
+      "runs": [
+        {
+          "julia_version": "1.11.8",
+          "run": 1,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 7,
+          "date": "2025-12-17",
+          "timestamp": "2025-12-17T10:23:57.051",
+          "url": "by_group/enzyme/run_1.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 2,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 7,
+          "date": "2025-12-18",
+          "timestamp": "2025-12-18T02:47:17.805",
+          "url": "by_group/enzyme/run_2.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 3,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 7,
+          "date": "2025-12-19",
+          "timestamp": "2025-12-19T02:52:39.976",
+          "url": "by_group/enzyme/run_3.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 4,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 7,
+          "date": "2025-12-20",
+          "timestamp": "2025-12-20T02:50:13.103",
+          "url": "by_group/enzyme/run_4.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 5,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 7,
+          "date": "2025-12-21",
+          "timestamp": "2025-12-21T02:57:20.688",
+          "url": "by_group/enzyme/run_5.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 6,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 7,
+          "date": "2025-12-22",
+          "timestamp": "2025-12-22T02:58:20.644",
+          "url": "by_group/enzyme/run_6.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 7,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 7,
+          "date": "2025-12-23",
+          "timestamp": "2025-12-23T02:54:31.418",
+          "url": "by_group/enzyme/run_7.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 8,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 7,
+          "date": "2025-12-24",
+          "timestamp": "2025-12-24T02:52:28.408",
+          "url": "by_group/enzyme/run_8.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 9,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 7,
+          "date": "2025-12-25",
+          "timestamp": "2025-12-25T02:54:39.876",
+          "url": "by_group/enzyme/run_9.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 10,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 7,
+          "date": "2025-12-26",
+          "timestamp": "2025-12-26T02:53:40.318",
+          "url": "by_group/enzyme/run_10.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 11,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 7,
+          "date": "2025-12-27",
+          "timestamp": "2025-12-27T02:51:35.599",
+          "url": "by_group/enzyme/run_11.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 12,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 7,
+          "date": "2025-12-28",
+          "timestamp": "2025-12-28T03:03:01.451",
+          "url": "by_group/enzyme/run_12.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 13,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 7,
+          "date": "2025-12-29",
+          "timestamp": "2025-12-29T03:02:09.231",
+          "url": "by_group/enzyme/run_13.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 14,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 7,
+          "date": "2025-12-30",
+          "timestamp": "2025-12-30T02:54:47.106",
+          "url": "by_group/enzyme/run_14.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 15,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 7,
+          "date": "2025-12-31",
+          "timestamp": "2025-12-31T02:54:45.148",
+          "url": "by_group/enzyme/run_15.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 16,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 7,
+          "date": "2026-01-01",
+          "timestamp": "2026-01-01T03:16:07.672",
+          "url": "by_group/enzyme/run_16.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 17,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 7,
+          "date": "2026-01-02",
+          "timestamp": "2026-01-02T02:56:36.192",
+          "url": "by_group/enzyme/run_17.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 18,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 7,
+          "date": "2026-01-03",
+          "timestamp": "2026-01-03T02:51:05.654",
+          "url": "by_group/enzyme/run_18.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 19,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 7,
+          "date": "2026-01-04",
+          "timestamp": "2026-01-04T03:04:32.771",
+          "url": "by_group/enzyme/run_19.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 20,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 7,
+          "date": "2026-01-05",
+          "timestamp": "2026-01-05T03:05:29.471",
+          "url": "by_group/enzyme/run_20.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 21,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 7,
+          "date": "2026-01-06",
+          "timestamp": "2026-01-06T02:56:18.004",
+          "url": "by_group/enzyme/run_21.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 22,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 7,
+          "date": "2026-01-07",
+          "timestamp": "2026-01-07T02:57:14.384",
+          "url": "by_group/enzyme/run_22.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 23,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 7,
+          "date": "2026-01-08",
+          "timestamp": "2026-01-08T02:56:06.614",
+          "url": "by_group/enzyme/run_23.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 24,
+          "commit_hash": "e675a6f8d370001f2df4d41b331aa6ec18fdf190",
+          "benchmark_count": 7,
+          "date": "2026-01-09",
+          "timestamp": "2026-01-09T02:56:32.979",
+          "url": "by_group/enzyme/run_24.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 25,
+          "commit_hash": "4e56806da9ac35dc2c4266a198203a582749b5ad",
+          "benchmark_count": 7,
+          "date": "2026-01-09",
+          "timestamp": "2026-01-09T12:22:13.973",
+          "url": "by_group/enzyme/run_25.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 26,
+          "commit_hash": "dadfcd8c04e3f12508897e2ed1311394b99a8496",
+          "benchmark_count": 7,
+          "date": "2026-01-09",
+          "timestamp": "2026-01-09T13:12:15.624",
+          "url": "by_group/enzyme/run_26.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 27,
+          "commit_hash": "dadfcd8c04e3f12508897e2ed1311394b99a8496",
+          "benchmark_count": 7,
+          "date": "2026-01-09",
+          "timestamp": "2026-01-09T13:47:47.849",
+          "url": "by_group/enzyme/run_27.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 28,
+          "commit_hash": "6016e7a52975e914ce68f101b5b2d419f3b7edc1",
+          "benchmark_count": 7,
+          "date": "2026-01-09",
+          "timestamp": "2026-01-09T21:59:15.422",
+          "url": "by_group/enzyme/run_28.json"
+        }
+      ],
+      "last_run_date": "2026-01-09"
+    }
+  },
+  "version": "2.0",
+  "generated_at": "2026-01-09T21:59:27.633"
+}
