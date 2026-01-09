@@ -1,9 +1,4 @@
 @testset "HistoryManager" begin
-    include("../src/HistoryManager.jl")
-    using .HistoryManager
-    using .HistoryManager: save_benchmark_results, load_history, load_by_hash,
-                          generate_all_runs_index, extract_timeseries_with_timestamps
-
     @testset "flatten_benchmarks" begin
         suite = BenchmarkGroup()
         suite["category1"] = BenchmarkGroup()
@@ -12,7 +7,7 @@
         suite["category2"] = @benchmarkable exp(1.0)
 
         results = run(suite)
-        flattened = HistoryManager.flatten_benchmarks(results)
+        flattened = BenchmarkExplorer.flatten_benchmarks(results)
 
         @test haskey(flattened, "category1/test1")
         @test haskey(flattened, "category1/test2")

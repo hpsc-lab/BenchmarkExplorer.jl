@@ -10,7 +10,7 @@ using Printf
 export save_benchmark_results, load_history, get_benchmark_names,
        get_subbenchmark_names, extract_timeseries_with_timestamps,
        update_index, generate_markdown_report, load_by_hash,
-       generate_all_runs_index
+       generate_all_runs_index, flatten_benchmarks
 
 function flatten_benchmarks(group::BenchmarkTools.BenchmarkGroup, path::Vector{String}=String[])
     results = Dict{String, BenchmarkTools.Trial}()

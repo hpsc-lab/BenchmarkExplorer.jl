@@ -262,7 +262,7 @@ function format_commit_hash(hash::String; length::Int=7)
     if isempty(hash) || hash == "unknown"
         return "unknown"
     end
-    return hash[1:min(length, length(hash))]
+    return hash[1:min(length, Base.length(hash))]
 end
 
 end

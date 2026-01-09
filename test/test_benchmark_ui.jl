@@ -94,8 +94,6 @@ using Statistics
     end
 
     @testset "load_dashboard_data" begin
-        include("../src/BenchmarkUI.jl")
-        using .BenchmarkUI
 
         data = load_dashboard_data(test_dir)
 
@@ -108,8 +106,6 @@ using Statistics
     end
 
     @testset "prepare_plot_data" begin
-        include("../src/BenchmarkUI.jl")
-        using .BenchmarkUI
 
         data = load_dashboard_data(test_dir)
         history = data.histories["test_group"]
@@ -158,8 +154,6 @@ using Statistics
     end
 
     @testset "format_time_short" begin
-        include("../src/BenchmarkUI.jl")
-        using .BenchmarkUI
 
         @test format_time_short(500.0) == "500 ns"
         @test format_time_short(1500.0) == "1.5 μs"
@@ -168,8 +162,6 @@ using Statistics
     end
 
     @testset "format_memory" begin
-        include("../src/BenchmarkUI.jl")
-        using .BenchmarkUI
 
         @test format_memory(512) == "512 B"
         @test format_memory(2048) == "2.0 KB"
@@ -178,8 +170,6 @@ using Statistics
     end
 
     @testset "format_commit_hash" begin
-        include("../src/BenchmarkUI.jl")
-        using .BenchmarkUI
 
         @test format_commit_hash("abc1234567890def") == "abc1234"
         @test format_commit_hash("abc1234567890def"; length=10) == "abc1234567"
@@ -189,8 +179,6 @@ using Statistics
     end
 
     @testset "get_benchmark_groups" begin
-        include("../src/BenchmarkUI.jl")
-        using .BenchmarkUI
 
         data = load_dashboard_data(test_dir)
         history = data.histories["test_group"]
@@ -203,8 +191,6 @@ using Statistics
     end
 
     @testset "get_benchmark_summary" begin
-        include("../src/BenchmarkUI.jl")
-        using .BenchmarkUI
 
         data = load_dashboard_data(test_dir)
         history = data.histories["test_group"]
@@ -230,8 +216,6 @@ using Statistics
     end
 
     @testset "calculate_stats" begin
-        include("../src/BenchmarkUI.jl")
-        using .BenchmarkUI
 
         data = load_dashboard_data(test_dir)
 
