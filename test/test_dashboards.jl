@@ -107,38 +107,6 @@ using Dates
             @test "string/uppercase" in groups["string"]
         end
 
-#         @testset "Static page generation (Plotly)" begin
-#             include("../ci/generate_static_page_plotly.jl")
-# 
-#             output_file = joinpath(temp_dir, "test_output.html")
-#             generate_static_page_plotly(
-#                 temp_dir,
-#                 output_file,
-#                 "test_group",
-#                 "https://github.com/test/repo",
-#                 "abc1234567890"
-#             )
-# 
-#             @test isfile(output_file)
-#             html_content = read(output_file, String)
-# 
-# 
-#             @test occursin("<!DOCTYPE html>", html_content)
-#             @test occursin("test_group", html_content)
-#             @test occursin("Plotly", html_content)
-#             @test occursin("benchmarksData", html_content)
-# 
-# 
-#             @test occursin("abc1234", html_content)  # Short form of first commit
-#             @test occursin("commit_hashes", html_content)
-# 
-# 
-#             @test occursin("hovertext", html_content) || occursin("hovertemplate", html_content)
-# 
-# 
-#             @test occursin("Commit", html_content)
-#         end
-
         @testset "All runs index with commit hashes" begin
             index_path = generate_all_runs_index(temp_dir)
             @test isfile(index_path)

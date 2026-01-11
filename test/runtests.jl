@@ -10,4 +10,7 @@ using Dates
     include("test_dashboards.jl")
     include("test_import.jl")
     include("test_conversion.jl")
+    include("test_edge_cases.jl")
+    include("test_ui_extended.jl")
+    include("test_scripts.jl")
 end
