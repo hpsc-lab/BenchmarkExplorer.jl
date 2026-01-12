@@ -1,7 +1,7 @@
 {
   "groups": {
     "trixi": {
-      "total_runs": 31,
+      "total_runs": 32,
       "first_run_date": "2025-12-17",
       "runs": [
         {
@@ -282,9 +282,18 @@
           "date": "2026-01-11",
           "timestamp": "2026-01-11T02:55:28.836",
           "url": "by_group/trixi/run_31.json"
+        },
+        {
+          "julia_version": "1.11.8",
+          "run": 32,
+          "commit_hash": "1bbef96738ceb1e2c80a7b208e734b1cd2a0b88e",
+          "benchmark_count": 24,
+          "date": "2026-01-12",
+          "timestamp": "2026-01-12T02:55:58.153",
+          "url": "by_group/trixi/run_32.json"
         }
       ],
-      "last_run_date": "2026-01-11"
+      "last_run_date": "2026-01-12"
     },
     "enzyme": {
       "total_runs": 30,
@@ -565,5 +574,5 @@
     }
   },
   "version": "2.0",
-  "generated_at": "2026-01-11T03:00:52.560"
+  "generated_at": "2026-01-12T02:56:14.318"
 }
