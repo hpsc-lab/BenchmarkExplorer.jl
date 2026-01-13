@@ -88,9 +88,8 @@ function prepare_plot_data(history, benchmark_path;
     if !haskey(history, benchmark_path)
         return (x=Int[], y=Float64[], timestamps=String[], run_numbers=Int[],
                 commit_hashes=String[], julia_versions=String[],
-                all_metrics=NamedTuple{(:mean, :median, :min, :max, :memory, :allocs),
-                                       Tuple{Vector{Float64}, Vector{Float64}, Vector{Float64},
-                                             Vector{Float64}, Vector{Int}, Vector{Int}}}[])
+                mean=Float64[], median=Float64[], min=Float64[], max=Float64[],
+                memory=Int[], allocs=Int[])
     end
 
     runs = history[benchmark_path]
@@ -192,7 +191,11 @@ end
 
 function format_time_short(ns)
     if ns < 1e3
-        return @sprintf("%.0f ns", ns)
+        if ns >= 1.0
+            return @sprintf("%.0f ns", ns)
+        else
+            return @sprintf("%g ns", ns)
+        end
     elseif ns < 1e6
         return @sprintf("%.1f μs", ns / 1e3)
     elseif ns < 1e9
@@ -222,14 +225,17 @@ function format_time_ago(dt)
     diff = now() - dt
     hours = Dates.value(diff) / (1000 * 3600)
 
-    if hours < 1
+    if hours < 1/60
+        return "just now"
+    elseif hours < 1
         mins = round(Int, hours * 60)
-        return "$mins min ago"
+        return mins == 1 ? "1 minute ago" : "$mins minutes ago"
     elseif hours < 24
-        return "$(round(Int, hours)) hours ago"
+        hrs = round(Int, hours)
+        return hrs == 1 ? "1 hour ago" : "$hrs hours ago"
     else
         days = round(Int, hours / 24)
-        return "$days days ago"
+        return days == 1 ? "1 day ago" : "$days days ago"
     end
 end
 

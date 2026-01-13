@@ -69,6 +69,10 @@ function save_benchmark_results(suite_results, group::String;
 
     flat_benchmarks = flatten_benchmarks(suite_results)
 
+    if isempty(flat_benchmarks)
+        error("Cannot save empty benchmark suite")
+    end
+
     benchmarks_dict = Dict()
     for (benchmark_path, trial) in flat_benchmarks
         benchmarks_dict[benchmark_path] = Dict(

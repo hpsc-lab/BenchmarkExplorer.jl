@@ -15,7 +15,7 @@ using Statistics
         @test format_time_short(1000.0) == "1.0 μs"
         @test format_time_short(1000000.0) == "1.0 ms"
         @test format_time_short(1000000000.0) == "1.00 s"
-        @test format_time_short(1e15) == "277778 s"
+        @test format_time_short(1e15) == "1000000.00 s"
         @test format_time_short(-100.0) == "-100 ns"
     end
 
@@ -155,10 +155,10 @@ using Statistics
         plot_min = prepare_plot_data(history, "test"; metric=:min)
         plot_max = prepare_plot_data(history, "test"; metric=:max)
 
-        @test plot_mean.y[1] ≈ 1.0
-        @test plot_median.y[1] ≈ 0.95
-        @test plot_min.y[1] ≈ 0.9
-        @test plot_max.y[1] ≈ 1.1
+        @test plot_mean.y[1] ≈ 1000.0 / 1e6
+        @test plot_median.y[1] ≈ 950.0 / 1e6
+        @test plot_min.y[1] ≈ 900.0 / 1e6
+        @test plot_max.y[1] ≈ 1100.0 / 1e6
     end
 
     @testset "get_benchmark_groups empty history" begin
@@ -304,11 +304,8 @@ using Statistics
 
     @testset "calculate_stats empty data" begin
         histories = Dict()
-        index = Dict(
-            "groups" => Dict()
-        )
 
-        stats = BenchmarkUI.calculate_stats(histories, index)
+        stats = BenchmarkUI.calculate_stats(histories)
 
         @test stats.total_benchmarks == 0
         @test stats.total_runs == 0
@@ -339,7 +336,7 @@ using Statistics
         plot_data = prepare_plot_data(history, "test"; metric=:mean)
 
         @test length(plot_data.y) == 1
-        @test isempty(plot_data.commit_hashes) || plot_data.commit_hashes[1] == ""
+        @test plot_data.commit_hashes[1] == "unknown"
     end
 
     @testset "prepare_plot_data with extreme values" begin
