@@ -515,10 +515,11 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 return (bytes/(1024*1024*1024)).toFixed(2) + ' GB';
             }
 
-            function toPercentage(trace) {
-                if (!percentageMode || trace.y.length === 0) return trace.y;
-                const baseline = trace.y[0];
-                return trace.y.map(v => ((v / baseline) - 1) * 100);
+            function toPercentage(values, baselineValues) {
+                if (!percentageMode || values.length === 0) return values;
+                const baseline = baselineValues[0];
+                if (baseline === 0) return values;
+                return values.map(v => ((v / baseline) - 1) * 100);
             }
 
             function renderBenchmarks(filter = '') {
@@ -580,7 +581,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                     const traces = [
                         {
                             x: data.mean.x,
-                            y: toPercentage(data.mean),
+                            y: toPercentage(data.mean.y, data.mean.y),
                             type: 'scatter',
                             mode: 'lines+markers',
                             name: 'Mean',
@@ -591,23 +592,27 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                         },
                         {
                             x: data.min.x,
-                            y: toPercentage(data.min),
+                            y: toPercentage(data.min.y, data.mean.y),
                             type: 'scatter',
                             mode: 'lines',
                             name: 'Min',
                             line: {color: '#27ae60', width: 2, dash: 'dash'},
                             visible: 'legendonly',
-                            hovertemplate: data.min.hovertemplate || 'Commit: %{x}<br>Min: %{y:.3f} ms<extra></extra>'
+                            hovertemplate: percentageMode ?
+                                'Commit: %{x}<br>Min: %{y:.2f}%<extra></extra>' :
+                                'Commit: %{x}<br>Min: %{y:.3f} ms<extra></extra>'
                         },
                         {
                             x: data.median.x,
-                            y: toPercentage(data.median),
+                            y: toPercentage(data.median.y, data.mean.y),
                             type: 'scatter',
                             mode: 'lines',
                             name: 'Median',
                             line: {color: '#f39c12', width: 2, dash: 'dot'},
                             visible: 'legendonly',
-                            hovertemplate: data.median.hovertemplate || 'Commit: %{x}<br>Median: %{y:.3f} ms<extra></extra>'
+                            hovertemplate: percentageMode ?
+                                'Commit: %{x}<br>Median: %{y:.2f}%<extra></extra>' :
+                                'Commit: %{x}<br>Median: %{y:.3f} ms<extra></extra>'
                         }
                     ];
 
