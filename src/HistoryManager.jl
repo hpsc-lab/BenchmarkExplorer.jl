@@ -7,6 +7,24 @@ using Pkg
 using BenchmarkTools
 using Printf
 
+# Windows-safe file writing with retry logic
+function safe_open_write(f, path; max_retries=5, delay=0.1)
+    for attempt in 1:max_retries
+        try
+            open(path, "w") do io
+                f(io)
+            end
+            return
+        catch e
+            if Sys.iswindows() && attempt < max_retries
+                sleep(delay)
+            else
+                rethrow(e)
+            end
+        end
+    end
+end
+
 export save_benchmark_results, load_history, get_benchmark_names,
        get_subbenchmark_names, extract_timeseries_with_timestamps,
        update_index, generate_markdown_report, load_by_hash,
@@ -99,7 +117,7 @@ function save_benchmark_results(suite_results, group::String;
     )
 
     by_group_path = joinpath(by_group_dir, "run_$(next_run).json")
-    open(by_group_path, "w") do f
+    safe_open_write(by_group_path) do f
         JSON.print(f, run_data, 2)
     end
 
@@ -111,7 +129,7 @@ function save_benchmark_results(suite_results, group::String;
     mkpath(date_dir)
 
     by_date_path = joinpath(date_dir, "$(group).json")
-    open(by_date_path, "w") do f
+    safe_open_write(by_date_path) do f
         JSON.print(f, run_data, 2)
     end
 
@@ -119,7 +137,7 @@ function save_benchmark_results(suite_results, group::String;
         hash_dir = joinpath(by_hash_dir, commit_hash)
         mkpath(hash_dir)
         by_hash_path = joinpath(hash_dir, "$(group).json")
-        open(by_hash_path, "w") do f
+        safe_open_write(by_hash_path) do f
             JSON.print(f, run_data, 2)
         end
     end
@@ -149,7 +167,7 @@ function save_benchmark_results(suite_results, group::String;
     index["groups"][group]["last_run_date"] = date_str
     index["last_updated"] = string(now())
 
-    open(index_path, "w") do f
+    safe_open_write(index_path) do f
         JSON.print(f, index, 2)
     end
 
@@ -165,7 +183,7 @@ function save_benchmark_results(suite_results, group::String;
             write(f, report_content)
         end
     else
-        open(report_path, "w") do f
+        safe_open_write(report_path) do f
             write(f, report_content)
         end
     end
@@ -228,7 +246,7 @@ function update_latest_cache(data_dir, group, run_number, run_data)
 
     cache["cached_at"] = string(now())
 
-    open(cache_path, "w") do f
+    safe_open_write(cache_path) do f
         JSON.print(f, cache, 2)
     end
 end
@@ -404,7 +422,7 @@ function update_index(data_dir="data")
         end
     end
 
-    open(index_path, "w") do f
+    safe_open_write(index_path) do f
         JSON.print(f, index, 2)
     end
 
@@ -491,7 +509,7 @@ function generate_all_runs_index(data_dir="data")
     end
 
     output_path = joinpath(data_dir, "all_runs_index.json")
-    open(output_path, "w") do f
+    safe_open_write(output_path) do f
         JSON.print(f, all_runs_index, 2)
     end
 
