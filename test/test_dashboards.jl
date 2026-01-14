@@ -5,7 +5,7 @@ using JSON
 using Dates
 
 @testset "Dashboard Integration Tests" begin
-    mktempdir() do temp_dir
+    safe_mktempdir() do temp_dir
         suite = BenchmarkGroup()
         suite["math"] = BenchmarkGroup()
         suite["math"]["sin"] = @benchmarkable sin(1.0)

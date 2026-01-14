@@ -4,6 +4,18 @@ using JSON
 using BenchmarkTools
 using Dates
 
+# Windows-safe mktempdir that properly releases file handles before cleanup
+function safe_mktempdir(f)
+    mktempdir() do dir
+        try
+            f(dir)
+        finally
+            GC.gc()
+            Sys.iswindows() && sleep(0.1)
+        end
+    end
+end
+
 @testset "BenchmarkExplorer.jl" begin
     include("test_benchmark_ui.jl")
     include("test_history_manager.jl")

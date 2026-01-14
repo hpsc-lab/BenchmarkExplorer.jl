@@ -20,7 +20,7 @@
     end
 
     @testset "save_benchmark_results" begin
-        mktempdir() do temp_dir
+        safe_mktempdir() do temp_dir
             suite = BenchmarkGroup()
             suite["test"] = @benchmarkable sin(1.0)
             results = run(suite)
@@ -59,7 +59,7 @@
     end
 
     @testset "load_history" begin
-        mktempdir() do temp_dir
+        safe_mktempdir() do temp_dir
             suite = BenchmarkGroup()
             suite["test"] = @benchmarkable sin(1.0)
             results = run(suite)
@@ -83,7 +83,7 @@
     end
 
     @testset "load_by_hash" begin
-        mktempdir() do temp_dir
+        safe_mktempdir() do temp_dir
             suite = BenchmarkGroup()
             suite["test"] = @benchmarkable sin(1.0)
             results = run(suite)
@@ -111,7 +111,7 @@
     end
 
     @testset "generate_all_runs_index" begin
-        mktempdir() do temp_dir
+        safe_mktempdir() do temp_dir
             suite = BenchmarkGroup()
             suite["test"] = @benchmarkable sin(1.0)
             results = run(suite)
@@ -142,7 +142,7 @@
     end
 
     @testset "extract_timeseries_with_timestamps" begin
-        mktempdir() do temp_dir
+        safe_mktempdir() do temp_dir
             suite = BenchmarkGroup()
             suite["test"] = @benchmarkable sin(1.0)
             results = run(suite)
@@ -164,7 +164,7 @@
     end
 
     @testset "multiple groups and benchmarks" begin
-        mktempdir() do temp_dir
+        safe_mktempdir() do temp_dir
             suite1 = BenchmarkGroup()
             suite1["math"] = BenchmarkGroup()
             suite1["math"]["sin"] = @benchmarkable sin(1.0)
@@ -195,7 +195,7 @@
     end
 
     @testset "incremental run numbers" begin
-        mktempdir() do temp_dir
+        safe_mktempdir() do temp_dir
             suite = BenchmarkGroup()
             suite["test"] = @benchmarkable sin(1.0)
             results = run(suite)
@@ -219,7 +219,7 @@
     end
 
     @testset "commit_hash in latest_100 cache" begin
-        mktempdir() do temp_dir
+        safe_mktempdir() do temp_dir
             suite = BenchmarkGroup()
             suite["test"] = @benchmarkable sin(1.0)
             results = run(suite)

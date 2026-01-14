@@ -5,7 +5,7 @@ using Dates
 using Statistics
 
 @testset "BenchmarkUI" begin
-    mktempdir() do test_dir
+    safe_mktempdir() do test_dir
         mock_data = Dict(
         "version" => "2.0",
         "cached_at" => string(now()),
