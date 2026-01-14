@@ -4,6 +4,15 @@ using Dates
 include("../src/BenchmarkUI.jl")
 using .BenchmarkUI
 
+function format_date_nice(iso_str::String)
+    try
+        dt = DateTime(split(iso_str, ".")[1])
+        return Dates.format(dt, "d u yyyy, HH:MM")
+    catch
+        return iso_str
+    end
+end
+
 function generate_static_page_plotly(data_dir::String, output_file::String, group_name::String, repo_url::String, commit_sha::String)
     data = try
         load_dashboard_data(data_dir)
@@ -61,7 +70,7 @@ function generate_static_page_plotly(data_dir::String, output_file::String, grou
             "Memory: $(format_memory(plot_data_mean.memory[i]))<br>" *
             "Allocs: $(plot_data_mean.allocs[i])<br>" *
             "Julia: $(plot_data_mean.julia_versions[i])<br>" *
-            "Date: $(plot_data_mean.timestamps[i])"
+            "Date: $(format_date_nice(plot_data_mean.timestamps[i]))"
             for i in 1:length(plot_data_mean.y)
         ]
 
@@ -515,6 +524,18 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 return (bytes/(1024*1024*1024)).toFixed(2) + ' GB';
             }
 
+            function formatDate(isoString) {
+                if (!isoString) return '';
+                const d = new Date(isoString);
+                const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+                const day = d.getDate();
+                const month = months[d.getMonth()];
+                const year = d.getFullYear();
+                const hours = String(d.getHours()).padStart(2, '0');
+                const mins = String(d.getMinutes()).padStart(2, '0');
+                return `\${day} \${month} \${year}, \${hours}:\${mins}`;
+            }
+
             function toPercentage(values, baselineValues) {
                 if (!percentageMode || values.length === 0) return values;
                 const baseline = baselineValues[0];
@@ -791,7 +812,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                                 \`Memory: \${formatBytes(data.memory_bytes)}<br>\` +
                                 \`Allocs: \${data.allocs}<br>\` +
                                 \`Julia: \${runData.metadata.julia_version}<br>\` +
-                                \`Date: \${runData.metadata.timestamp}\`;
+                                \`Date: \${formatDate(runData.metadata.timestamp)}\`;
 
                             benchmarksData[benchName].mean.hovertext.push(hoverText);
 
