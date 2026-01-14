@@ -5,9 +5,8 @@ using Dates
 using Statistics
 
 @testset "BenchmarkUI" begin
-    test_dir = mktempdir()
-
-    mock_data = Dict(
+    mktempdir() do test_dir
+        mock_data = Dict(
         "version" => "2.0",
         "cached_at" => string(now()),
         "groups" => Dict(
@@ -224,7 +223,5 @@ using Statistics
         @test !isnothing(data.stats.last_run)
         @test data.stats.fastest[2] < data.stats.slowest[2]
     end
-
-
-    rm(test_dir, recursive=true)
+    end
 end

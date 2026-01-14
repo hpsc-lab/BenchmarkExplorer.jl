@@ -662,10 +662,40 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 });
             }
 
+            function updatePercentageMode() {
+                Object.entries(benchmarksData).forEach(([name, data]) => {
+                    const plotId = 'plot-' + name.replace(/[^a-zA-Z0-9]/g, '-');
+                    const plotDiv = document.getElementById(plotId);
+                    if (!plotDiv) return;
+
+                    Plotly.restyle(plotDiv, {
+                        'y': [
+                            toPercentage(data.mean.y, data.mean.y),
+                            toPercentage(data.min.y, data.mean.y),
+                            toPercentage(data.median.y, data.mean.y)
+                        ],
+                        'hovertemplate': [
+                            null,  // mean uses hovertext
+                            percentageMode ?
+                                'Commit: %{x}<br>Min: %{y:.2f}%<extra></extra>' :
+                                'Commit: %{x}<br>Min: %{y:.3f} ms<extra></extra>',
+                            percentageMode ?
+                                'Commit: %{x}<br>Median: %{y:.2f}%<extra></extra>' :
+                                'Commit: %{x}<br>Median: %{y:.3f} ms<extra></extra>'
+                        ]
+                    }, [0, 1, 2]);
+
+                    // Update y-axis label
+                    Plotly.relayout(plotDiv, {
+                        'yaxis.title': percentageMode ? 'Change (%)' : 'Time (ms)'
+                    });
+                });
+            }
+
             document.getElementById('btn-percentage').addEventListener('click', function() {
                 percentageMode = !percentageMode;
                 this.classList.toggle('active');
-                renderBenchmarks(document.getElementById('search').value);
+                updatePercentageMode();
             });
 
             document.getElementById('btn-dark').addEventListener('click', function() {

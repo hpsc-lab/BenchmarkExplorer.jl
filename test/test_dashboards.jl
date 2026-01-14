@@ -5,11 +5,6 @@ using JSON
 using Dates
 
 @testset "Dashboard Integration Tests" begin
-    include("../src/HistoryManager.jl")
-    include("../src/BenchmarkUI.jl")
-    using .HistoryManager
-    using .BenchmarkUI
-
     mktempdir() do temp_dir
         suite = BenchmarkGroup()
         suite["math"] = BenchmarkGroup()
