@@ -693,7 +693,8 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                         ],
                         'visible': currentVisibility
                     }, {
-                        'yaxis.title': percentageMode ? 'Change (%)' : 'Time (ms)'
+                        'yaxis.title': percentageMode ? 'Change (%)' : 'Time (ms)',
+                        'yaxis.autorange': true
                     }, [0, 1, 2]);
                 });
             }
