@@ -72,11 +72,13 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
+          julia --project=. ci/generate_index_page.jl data /tmp/index.html \
+            "${{ github.server_url }}/${{ github.repository }}" "${{ github.sha }}"
+
           git fetch origin gh-pages
           git checkout gh-pages
 
-          julia --project=. ci/generate_index_page.jl data index.html \
-            "${{ github.server_url }}/${{ github.repository }}" "${{ github.sha }}"
+          cp /tmp/index.html index.html
 
           git add index.html
           git commit -m "Update index page after all benchmarks" || echo "No changes"
