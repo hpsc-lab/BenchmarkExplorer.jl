@@ -666,29 +666,35 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 Object.entries(benchmarksData).forEach(([name, data]) => {
                     const plotId = 'plot-' + name.replace(/[^a-zA-Z0-9]/g, '-');
                     const plotDiv = document.getElementById(plotId);
-                    if (!plotDiv) return;
+                    if (!plotDiv || !plotDiv.data) return;
 
-                    Plotly.restyle(plotDiv, {
-                        'y': [
-                            toPercentage(data.mean.y, data.mean.y),
-                            toPercentage(data.min.y, data.mean.y),
-                            toPercentage(data.median.y, data.mean.y)
-                        ],
+                    const currentVisibility = plotDiv.data.map(trace => trace.visible);
+
+                    const newMeanY = toPercentage(data.mean.y, data.mean.y);
+                    const newMinY = toPercentage(data.min.y, data.mean.y);
+                    const newMedianY = toPercentage(data.median.y, data.mean.y);
+
+                    const meanHoverTexts = percentageMode ?
+                        data.mean.commit_hashes.map((hash, i) =>
+                            \`Commit: \${hash}<br>Change: \${newMeanY[i].toFixed(2)}%<br>Original: \${data.mean.y[i].toFixed(3)} ms\`
+                        ) : data.mean.hovertext;
+
+                    Plotly.update(plotDiv, {
+                        'y': [newMeanY, newMinY, newMedianY],
+                        'hovertext': [meanHoverTexts, null, null],
                         'hovertemplate': [
-                            null,  // mean uses hovertext
+                            null,
                             percentageMode ?
                                 'Commit: %{x}<br>Min: %{y:.2f}%<extra></extra>' :
                                 'Commit: %{x}<br>Min: %{y:.3f} ms<extra></extra>',
                             percentageMode ?
                                 'Commit: %{x}<br>Median: %{y:.2f}%<extra></extra>' :
                                 'Commit: %{x}<br>Median: %{y:.3f} ms<extra></extra>'
-                        ]
-                    }, [0, 1, 2]);
-
-                    // Update y-axis label
-                    Plotly.relayout(plotDiv, {
+                        ],
+                        'visible': currentVisibility
+                    }, {
                         'yaxis.title': percentageMode ? 'Change (%)' : 'Time (ms)'
-                    });
+                    }, [0, 1, 2]);
                 });
             }
 
