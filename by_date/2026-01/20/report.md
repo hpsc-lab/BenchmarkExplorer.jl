@@ -1,15 +1,19 @@
-# Run #44 - 2026-01-20
+# Run #46 - 2026-01-20
 
-Julia 1.11.8 | 7 benchmarks
- | 1bb7895
+Julia 1.11.8 | 24 benchmarks
+ | 4d18393
 
 ## Significant Changes (>5%)
 
 | Benchmark | Time (ms) | Prev (ms) | Change |
 |-----------|-----------|-----------|--------|
-| autodiff/reverse/simple | 0.003 | 0.001 | +128.6% |
-| basics/make_zero/namedtuple | 0.000 | 0.000 | +52.5% |
-| autodiff/forward/simple | 0.001 | 0.001 | +32.4% |
-| basics/make_zero/struct | 0.000 | 0.000 | -9.3% |
-| autodiff/forward/complex | 0.021 | 0.019 | +7.7% |
-| basics/make_zero/array | 0.000 | 0.000 | +5.0% |
+| tree_2d_dgsem/elixir_advection_amr_nonperiodic.jl/p3_analysis | 0.630 | 0.841 | -25.1% |
+| tree_2d_dgsem/elixir_advection_amr_nonperiodic.jl/p7_analysis | 3.041 | 3.954 | -23.1% |
+| tree_2d_dgsem/elixir_euler_ec.jl/p3_rhs! | 1.144 | 1.466 | -21.9% |
+| tree_2d_dgsem/elixir_euler_ec.jl/p7_rhs! | 7.729 | 9.477 | -18.4% |
+| tree_1d_dgsem/elixir_mhd_ec.jl/p7_rhs! | 0.012 | 0.015 | -16.6% |
+| tree_1d_dgsem/elixir_mhd_ec.jl/p3_rhs! | 0.005 | 0.005 | -15.2% |
+| tree_2d_dgsem/elixir_advection_amr_nonperiodic.jl/p7_rhs! | 0.371 | 0.325 | +14.1% |
+| structured_1d_dgsem/elixir_euler_sedov.jl/p7_rhs! | 0.030 | 0.034 | -12.5% |
+| tree_2d_dgsem/elixir_advection_extended.jl/p7_analysis | 0.743 | 0.824 | -9.8% |
+| tree_2d_dgsem/elixir_euler_vortex_mortar.jl/p7_rhs! | 1.233 | 1.125 | +9.6% |
