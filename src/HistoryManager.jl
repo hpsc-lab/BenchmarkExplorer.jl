@@ -7,8 +7,12 @@ using Pkg
 using BenchmarkTools
 using Printf
 
-# Windows-safe file writing with retry logic
-function safe_open_write(f, path; max_retries=5, delay=0.1)
+function safe_open_write(f, path; max_retries=10, delay=0.2)
+    dir = dirname(path)
+    if !isempty(dir) && !isdir(dir)
+        mkpath(dir)
+    end
+
     for attempt in 1:max_retries
         try
             open(path, "w") do io
@@ -17,7 +21,8 @@ function safe_open_write(f, path; max_retries=5, delay=0.1)
             return
         catch e
             if Sys.iswindows() && attempt < max_retries
-                sleep(delay)
+                GC.gc()
+                sleep(delay * attempt)
             else
                 rethrow(e)
             end

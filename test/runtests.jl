@@ -4,14 +4,26 @@ using JSON
 using BenchmarkTools
 using Dates
 
-# Windows-safe mktempdir that properly releases file handles before cleanup
 function safe_mktempdir(f)
-    mktempdir() do dir
-        try
-            f(dir)
-        finally
+    dir = mktempdir()
+    try
+        f(dir)
+    finally
+        GC.gc()
+        if Sys.iswindows()
+            sleep(0.5)
             GC.gc()
-            Sys.iswindows() && sleep(0.1)
+            for attempt in 1:5
+                try
+                    rm(dir, recursive=true, force=true)
+                    break
+                catch
+                    sleep(0.2 * attempt)
+                    GC.gc()
+                end
+            end
+        else
+            rm(dir, recursive=true, force=true)
         end
     end
 end

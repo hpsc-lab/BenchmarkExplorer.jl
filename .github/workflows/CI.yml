@@ -1,12 +1,20 @@
 name: CI
 
 on:
+  schedule:
+    - cron: '0 3 * * *'
   push:
     branches:
       - main
+    paths:
+      - 'src/**'
+      - 'test/**'
+      - 'Project.toml'
+      - '.github/workflows/CI.yml'
   pull_request:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   test:
