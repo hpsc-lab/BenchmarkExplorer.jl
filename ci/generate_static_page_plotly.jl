@@ -468,7 +468,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
         <div class="container">
             <header>
                 <h1>📊 $group_name</h1>
-                <p>Interactive Benchmark Dashboard • Commit: $commit_short</p>
+                <p>Interactive Benchmark Dashboard • Commit: <a href="$repo_url/commit/$commit_sha" target="_blank" style="color: #a8d8ff; text-decoration: none;">$commit_short</a></p>
             </header>
 
             <div class="stats-panel" id="stats-panel"></div>
@@ -476,8 +476,15 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             <div class="controls">
                 <button class="btn btn-primary" id="btn-percentage">% Change Mode</button>
                 <button class="btn btn-secondary" id="btn-dark">🌙 Dark Mode</button>
+                <button class="btn btn-secondary" id="btn-reset-zoom">🔍 Reset Zoom</button>
                 <button class="btn btn-secondary" id="btn-export">📥 Export CSV</button>
                 $(all_runs_available ? """<button class="btn btn-secondary" id="btn-load-all">📊 Load Full History</button>""" : "")
+                <select id="trend-filter" class="search-box" style="min-width: 150px; flex: 0;">
+                    <option value="all">All Trends</option>
+                    <option value="faster">↓ Faster</option>
+                    <option value="slower">↑ Slower</option>
+                    <option value="stable">→ Stable</option>
+                </select>
                 <input type="text" id="search" class="search-box" placeholder="🔍 Search benchmarks...">
             </div>
 
@@ -492,8 +499,12 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
         <script>
             const benchmarksData = $benchmarks_json;
             const statsData = $stats_json;
+            const repoUrl = '$repo_url';
             let percentageMode = false;
             let darkMode = false;
+            let trendFilter = 'all';
+            const renderedPlots = new Set();
+            let plotObserver = null;
 
             function renderStats() {
                 const panel = document.getElementById('stats-panel');
@@ -513,6 +524,10 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                     <div class="stat-card">
                         <div class="value" style="-webkit-text-fill-color: #e74c3c;">\${statsData.slowest.time}</div>
                         <div class="label">Slowest</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="value" style="font-size: 1.2em;">\${statsData.last_updated}</div>
+                        <div class="label">Last Updated</div>
                     </div>
                 `;
             }
@@ -543,12 +558,122 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 return values.map(v => ((v / baseline) - 1) * 100);
             }
 
+            function renderSinglePlot(name, data, plotId) {
+                if (renderedPlots.has(plotId)) return;
+                renderedPlots.add(plotId);
+
+                const traces = [
+                    {
+                        x: data.mean.x,
+                        y: toPercentage(data.mean.y, data.mean.y),
+                        type: 'scatter',
+                        mode: 'lines+markers',
+                        name: 'Mean',
+                        line: {color: '#667eea', width: 3},
+                        marker: {size: 8},
+                        hovertext: data.mean.hovertext,
+                        hoverinfo: data.mean.hoverinfo || 'text'
+                    },
+                    {
+                        x: data.min.x,
+                        y: toPercentage(data.min.y, data.mean.y),
+                        type: 'scatter',
+                        mode: 'lines',
+                        name: 'Min',
+                        line: {color: '#27ae60', width: 2, dash: 'dash'},
+                        visible: 'legendonly',
+                        hovertemplate: percentageMode ?
+                            'Commit: %{x}<br>Min: %{y:.2f}%<extra></extra>' :
+                            'Commit: %{x}<br>Min: %{y:.3f} ms<extra></extra>'
+                    },
+                    {
+                        x: data.median.x,
+                        y: toPercentage(data.median.y, data.mean.y),
+                        type: 'scatter',
+                        mode: 'lines',
+                        name: 'Median',
+                        line: {color: '#f39c12', width: 2, dash: 'dot'},
+                        visible: 'legendonly',
+                        hovertemplate: percentageMode ?
+                            'Commit: %{x}<br>Median: %{y:.2f}%<extra></extra>' :
+                            'Commit: %{x}<br>Median: %{y:.3f} ms<extra></extra>'
+                    }
+                ];
+
+                const layout = {
+                    title: '',
+                    xaxis: {
+                        title: 'Commit',
+                        showgrid: true,
+                        zeroline: false,
+                        tickangle: 45
+                    },
+                    yaxis: {
+                        title: percentageMode ? 'Change (%)' : 'Time (ms)',
+                        showgrid: true,
+                        zeroline: true
+                    },
+                    hovermode: 'closest',
+                    showlegend: true,
+                    legend: {
+                        x: 1,
+                        xanchor: 'right',
+                        y: 1
+                    },
+                    margin: {l: 60, r: 20, t: 20, b: 60},
+                    plot_bgcolor: darkMode ? '#2c3e50' : '#ffffff',
+                    paper_bgcolor: darkMode ? '#34495e' : '#ffffff',
+                    font: {
+                        color: darkMode ? '#ecf0f1' : '#2c3e50'
+                    }
+                };
+
+                const config = {
+                    responsive: true,
+                    displayModeBar: true,
+                    modeBarButtonsToAdd: ['hoverclosest', 'hovercompare'],
+                    displaylogo: false,
+                    toImageButtonOptions: {
+                        format: 'png',
+                        filename: name.replace(/\\//g, '_'),
+                        height: 600,
+                        width: 1200,
+                        scale: 2
+                    }
+                };
+
+                Plotly.newPlot(plotId, traces, layout, config);
+            }
+
+            function initPlotObserver() {
+                if (plotObserver) plotObserver.disconnect();
+
+                plotObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const plotContainer = entry.target;
+                            const plotId = plotContainer.id;
+                            const name = plotContainer.dataset.benchmarkName;
+                            if (name && benchmarksData[name]) {
+                                renderSinglePlot(name, benchmarksData[name], plotId);
+                            }
+                        }
+                    });
+                }, { rootMargin: '100px' });
+            }
+
             function renderBenchmarks(filter = '') {
                 const container = document.getElementById('benchmarks-container');
                 container.innerHTML = '';
+                renderedPlots.clear();
+                initPlotObserver();
 
                 const filtered = Object.entries(benchmarksData)
-                    .filter(([name]) => name.toLowerCase().includes(filter.toLowerCase()))
+                    .filter(([name, data]) => {
+                        const matchesSearch = name.toLowerCase().includes(filter.toLowerCase());
+                        const matchesTrend = trendFilter === 'all' || data.stats.trend === trendFilter;
+                        return matchesSearch && matchesTrend;
+                    })
                     .sort(([a], [b]) => a.localeCompare(b));
 
                 if (filtered.length === 0) {
@@ -582,6 +707,10 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                                     <span class="stat-val">\${stats.latest_mean} ms</span>
                                 </div>
                                 <div class="stat">
+                                    <span class="stat-key">Commit</span>
+                                    <span class="stat-val"><a href="\${repoUrl}/commit/\${stats.latest_commit}" target="_blank" style="color: #667eea; text-decoration: none;">\${stats.latest_commit.substring(0, 7)}</a></span>
+                                </div>
+                                <div class="stat">
                                     <span class="stat-key">Memory</span>
                                     <span class="stat-val">\${formatBytes(stats.latest_memory)}</span>
                                 </div>
@@ -595,91 +724,16 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                                 </div>
                             </div>
                         </div>
-                        <div class="plot-container" id="\${plotId}"></div>
+                        <div class="plot-container" id="\${plotId}" data-benchmark-name="\${name}">
+                            <div style="display: flex; align-items: center; justify-content: center; height: 350px; color: #6c757d;">
+                                Loading chart...
+                            </div>
+                        </div>
                     `;
                     container.appendChild(item);
 
-                    const traces = [
-                        {
-                            x: data.mean.x,
-                            y: toPercentage(data.mean.y, data.mean.y),
-                            type: 'scatter',
-                            mode: 'lines+markers',
-                            name: 'Mean',
-                            line: {color: '#667eea', width: 3},
-                            marker: {size: 8},
-                            hovertext: data.mean.hovertext,
-                            hoverinfo: data.mean.hoverinfo || 'text'
-                        },
-                        {
-                            x: data.min.x,
-                            y: toPercentage(data.min.y, data.mean.y),
-                            type: 'scatter',
-                            mode: 'lines',
-                            name: 'Min',
-                            line: {color: '#27ae60', width: 2, dash: 'dash'},
-                            visible: 'legendonly',
-                            hovertemplate: percentageMode ?
-                                'Commit: %{x}<br>Min: %{y:.2f}%<extra></extra>' :
-                                'Commit: %{x}<br>Min: %{y:.3f} ms<extra></extra>'
-                        },
-                        {
-                            x: data.median.x,
-                            y: toPercentage(data.median.y, data.mean.y),
-                            type: 'scatter',
-                            mode: 'lines',
-                            name: 'Median',
-                            line: {color: '#f39c12', width: 2, dash: 'dot'},
-                            visible: 'legendonly',
-                            hovertemplate: percentageMode ?
-                                'Commit: %{x}<br>Median: %{y:.2f}%<extra></extra>' :
-                                'Commit: %{x}<br>Median: %{y:.3f} ms<extra></extra>'
-                        }
-                    ];
-
-                    const layout = {
-                        title: '',
-                        xaxis: {
-                            title: 'Commit',
-                            showgrid: true,
-                            zeroline: false,
-                            tickangle: 45
-                        },
-                        yaxis: {
-                            title: percentageMode ? 'Change (%)' : 'Time (ms)',
-                            showgrid: true,
-                            zeroline: true
-                        },
-                        hovermode: 'closest',
-                        showlegend: true,
-                        legend: {
-                            x: 1,
-                            xanchor: 'right',
-                            y: 1
-                        },
-                        margin: {l: 60, r: 20, t: 20, b: 60},
-                        plot_bgcolor: darkMode ? '#2c3e50' : '#ffffff',
-                        paper_bgcolor: darkMode ? '#34495e' : '#ffffff',
-                        font: {
-                            color: darkMode ? '#ecf0f1' : '#2c3e50'
-                        }
-                    };
-
-                    const config = {
-                        responsive: true,
-                        displayModeBar: true,
-                        modeBarButtonsToAdd: ['hoverclosest', 'hovercompare'],
-                        displaylogo: false,
-                        toImageButtonOptions: {
-                            format: 'png',
-                            filename: name.replace(/\\//g, '_'),
-                            height: 600,
-                            width: 1200,
-                            scale: 2
-                        }
-                    };
-
-                    Plotly.newPlot(plotId, traces, layout, config);
+                    const plotContainer = document.getElementById(plotId);
+                    plotObserver.observe(plotContainer);
                 });
             }
 
@@ -697,7 +751,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
 
                     const meanHoverTexts = percentageMode ?
                         data.mean.commit_hashes.map((hash, i) =>
-                            \`Commit: \${hash}<br>Change: \${newMeanY[i].toFixed(2)}%<br>Original: \${data.mean.y[i].toFixed(3)} ms\`
+                            \`Commit: \${hash}<br>Change: \${newMeanY[i].toFixed(2)}%<br>Original: \${data.mean.y[i].toFixed(3)} ms<br>Date: \${formatDate(data.mean.timestamps[i])}\`
                         ) : data.mean.hovertext;
 
                     Plotly.update(plotDiv, {
@@ -730,11 +784,36 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 darkMode = !darkMode;
                 document.body.classList.toggle('dark-mode');
                 this.classList.toggle('active');
+                localStorage.setItem('darkMode', darkMode);
                 renderBenchmarks(document.getElementById('search').value);
             });
 
+            if (localStorage.getItem('darkMode') === 'true') {
+                darkMode = true;
+                document.body.classList.add('dark-mode');
+                document.getElementById('btn-dark').classList.add('active');
+            }
+
             document.getElementById('search').addEventListener('input', function(e) {
                 renderBenchmarks(e.target.value);
+            });
+
+            document.getElementById('trend-filter').addEventListener('change', function(e) {
+                trendFilter = e.target.value;
+                renderBenchmarks(document.getElementById('search').value);
+            });
+
+            document.getElementById('btn-reset-zoom').addEventListener('click', function() {
+                Object.entries(benchmarksData).forEach(([name]) => {
+                    const plotId = 'plot-' + name.replace(/[^a-zA-Z0-9]/g, '-');
+                    const plotDiv = document.getElementById(plotId);
+                    if (plotDiv && plotDiv.data) {
+                        Plotly.relayout(plotDiv, {
+                            'xaxis.autorange': true,
+                            'yaxis.autorange': true
+                        });
+                    }
+                });
             });
 
             document.getElementById('btn-export').addEventListener('click', function() {
