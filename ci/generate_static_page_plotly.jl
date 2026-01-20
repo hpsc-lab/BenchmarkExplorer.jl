@@ -551,21 +551,21 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 return `\${day} \${month} \${year}, \${hours}:\${mins}`;
             }
 
-            function toPercentage(values, baselineValues) {
+            function toPercentage(values, baselineValue) {
                 if (!percentageMode || values.length === 0) return values;
-                const baseline = baselineValues[0];
-                if (baseline === 0) return values;
-                return values.map(v => ((v / baseline) - 1) * 100);
+                if (baselineValue === 0) return values;
+                return values.map((v, i) => i === 0 ? 0 : ((v / baselineValue) - 1) * 100);
             }
 
             function renderSinglePlot(name, data, plotId) {
                 if (renderedPlots.has(plotId)) return;
                 renderedPlots.add(plotId);
 
+                const baseline = data.mean.y[0];
                 const traces = [
                     {
                         x: data.mean.x,
-                        y: toPercentage(data.mean.y, data.mean.y),
+                        y: toPercentage(data.mean.y, baseline),
                         type: 'scatter',
                         mode: 'lines+markers',
                         name: 'Mean',
@@ -576,7 +576,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                     },
                     {
                         x: data.min.x,
-                        y: toPercentage(data.min.y, data.mean.y),
+                        y: toPercentage(data.min.y, baseline),
                         type: 'scatter',
                         mode: 'lines',
                         name: 'Min',
@@ -588,7 +588,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                     },
                     {
                         x: data.median.x,
-                        y: toPercentage(data.median.y, data.mean.y),
+                        y: toPercentage(data.median.y, baseline),
                         type: 'scatter',
                         mode: 'lines',
                         name: 'Median',
@@ -656,10 +656,23 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                             const name = plotContainer.dataset.benchmarkName;
                             if (name && benchmarksData[name]) {
                                 renderSinglePlot(name, benchmarksData[name], plotId);
+                                plotObserver.unobserve(plotContainer);
                             }
                         }
                     });
-                }, { rootMargin: '100px' });
+                }, { rootMargin: '200px', threshold: 0 });
+            }
+
+            function renderVisiblePlots() {
+                document.querySelectorAll('.plot-container[data-benchmark-name]').forEach(container => {
+                    const rect = container.getBoundingClientRect();
+                    if (rect.top < window.innerHeight + 200) {
+                        const name = container.dataset.benchmarkName;
+                        if (name && benchmarksData[name] && !renderedPlots.has(container.id)) {
+                            renderSinglePlot(name, benchmarksData[name], container.id);
+                        }
+                    }
+                });
             }
 
             function renderBenchmarks(filter = '') {
@@ -735,6 +748,8 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                     const plotContainer = document.getElementById(plotId);
                     plotObserver.observe(plotContainer);
                 });
+
+                setTimeout(renderVisiblePlots, 100);
             }
 
             function updatePercentageMode() {
@@ -745,32 +760,39 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
 
                     const currentVisibility = plotDiv.data.map(trace => trace.visible);
 
-                    const newMeanY = toPercentage(data.mean.y, data.mean.y);
-                    const newMinY = toPercentage(data.min.y, data.mean.y);
-                    const newMedianY = toPercentage(data.median.y, data.mean.y);
+                    const newMeanY = percentageMode ?
+                        data.mean.y.map((v, i) => i === 0 ? 0 : ((v / data.mean.y[0]) - 1) * 100) :
+                        data.mean.y;
+                    const newMinY = percentageMode ?
+                        data.min.y.map((v, i) => i === 0 ? 0 : ((v / data.mean.y[0]) - 1) * 100) :
+                        data.min.y;
+                    const newMedianY = percentageMode ?
+                        data.median.y.map((v, i) => i === 0 ? 0 : ((v / data.mean.y[0]) - 1) * 100) :
+                        data.median.y;
 
                     const meanHoverTexts = percentageMode ?
                         data.mean.commit_hashes.map((hash, i) =>
                             \`Commit: \${hash}<br>Change: \${newMeanY[i].toFixed(2)}%<br>Original: \${data.mean.y[i].toFixed(3)} ms<br>Date: \${formatDate(data.mean.timestamps[i])}\`
                         ) : data.mean.hovertext;
 
-                    Plotly.update(plotDiv, {
-                        'y': [newMeanY, newMinY, newMedianY],
-                        'hovertext': [meanHoverTexts, null, null],
-                        'hovertemplate': [
-                            null,
-                            percentageMode ?
-                                'Commit: %{x}<br>Min: %{y:.2f}%<extra></extra>' :
-                                'Commit: %{x}<br>Min: %{y:.3f} ms<extra></extra>',
-                            percentageMode ?
-                                'Commit: %{x}<br>Median: %{y:.2f}%<extra></extra>' :
-                                'Commit: %{x}<br>Median: %{y:.3f} ms<extra></extra>'
-                        ],
-                        'visible': currentVisibility
-                    }, {
+                    Plotly.restyle(plotDiv, {y: [newMeanY], hovertext: [meanHoverTexts]}, [0]);
+                    Plotly.restyle(plotDiv, {
+                        y: [newMinY],
+                        hovertemplate: percentageMode ?
+                            'Commit: %{x}<br>Min: %{y:.2f}%<extra></extra>' :
+                            'Commit: %{x}<br>Min: %{y:.3f} ms<extra></extra>'
+                    }, [1]);
+                    Plotly.restyle(plotDiv, {
+                        y: [newMedianY],
+                        hovertemplate: percentageMode ?
+                            'Commit: %{x}<br>Median: %{y:.2f}%<extra></extra>' :
+                            'Commit: %{x}<br>Median: %{y:.3f} ms<extra></extra>'
+                    }, [2]);
+                    Plotly.restyle(plotDiv, {visible: currentVisibility}, [0, 1, 2]);
+                    Plotly.relayout(plotDiv, {
                         'yaxis.title': percentageMode ? 'Change (%)' : 'Time (ms)',
                         'yaxis.autorange': true
-                    }, [0, 1, 2]);
+                    });
                 });
             }
 
@@ -785,8 +807,22 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 document.body.classList.toggle('dark-mode');
                 this.classList.toggle('active');
                 localStorage.setItem('darkMode', darkMode);
-                renderBenchmarks(document.getElementById('search').value);
+                updatePlotColors();
             });
+
+            function updatePlotColors() {
+                Object.entries(benchmarksData).forEach(([name]) => {
+                    const plotId = 'plot-' + name.replace(/[^a-zA-Z0-9]/g, '-');
+                    const plotDiv = document.getElementById(plotId);
+                    if (plotDiv && plotDiv.data) {
+                        Plotly.relayout(plotDiv, {
+                            'plot_bgcolor': darkMode ? '#2c3e50' : '#ffffff',
+                            'paper_bgcolor': darkMode ? '#34495e' : '#ffffff',
+                            'font.color': darkMode ? '#ecf0f1' : '#2c3e50'
+                        });
+                    }
+                });
+            }
 
             if (localStorage.getItem('darkMode') === 'true') {
                 darkMode = true;
