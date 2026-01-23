@@ -34,8 +34,7 @@ end
     include("test_dashboards.jl")
     include("test_import.jl")
     include("test_conversion.jl")
-    # Skipping problematic tests:
-    # include("test_edge_cases.jl")      # Too slow: runs 1000 benchmarks
-    # include("test_ui_extended.jl")     # Too slow
-    # include("test_scripts.jl")         # Too slow
+    include("test_extended_fields.jl")
+    include("test_error_handling.jl")
+    include("test_markdown_report.jl")
 end

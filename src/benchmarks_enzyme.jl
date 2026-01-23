@@ -36,7 +36,7 @@ SUITE_ENZYME["autodiff"]["reverse"]["simple"] = @benchmarkable Enzyme.autodiff(
 
 function f_complex(x)
     result = 0.0
-    for i in 1:length(x)
+    for i in eachindex(x)
         result += sin(x[i]) * cos(x[i])
     end
     return result

@@ -7,6 +7,23 @@ using Pkg
 using BenchmarkTools
 using Printf
 
+function get_git_branch()
+    try
+        return strip(read(`git rev-parse --abbrev-ref HEAD`, String))
+    catch
+        return ""
+    end
+end
+
+function is_git_dirty()
+    try
+        output = strip(read(`git status --porcelain`, String))
+        return !isempty(output)
+    catch
+        return false
+    end
+end
+
 function safe_open_write(f, path; max_retries=10, delay=0.2)
     dir = dirname(path)
     if !isempty(dir) && !isdir(dir)
@@ -90,6 +107,14 @@ function save_benchmark_results(suite_results, group::String;
     timestamp_str = string(run_timestamp)
     julia_ver = string(VERSION)
 
+    system_info = Dict(
+        "os" => string(Sys.KERNEL),
+        "arch" => string(Sys.ARCH),
+        "cpu_threads" => Sys.CPU_THREADS,
+        "word_size" => Sys.WORD_SIZE,
+        "julia_threads" => Threads.nthreads()
+    )
+
     flat_benchmarks = flatten_benchmarks(suite_results)
 
     if isempty(flat_benchmarks)
@@ -98,15 +123,29 @@ function save_benchmark_results(suite_results, group::String;
 
     benchmarks_dict = Dict()
     for (benchmark_path, trial) in flat_benchmarks
+        sorted_times = sort(trial.times)
+        n = length(sorted_times)
+        mean_time = mean(trial).time
+        std_time = std(trial.times)
+        p25 = n > 0 ? sorted_times[max(1, ceil(Int, n * 0.25))] : 0
+        p75 = n > 0 ? sorted_times[max(1, ceil(Int, n * 0.75))] : 0
+
         benchmarks_dict[benchmark_path] = Dict(
-            "mean_time_ns" => mean(trial).time,
+            "mean_time_ns" => mean_time,
             "median_time_ns" => median(trial).time,
             "min_time_ns" => minimum(trial).time,
             "max_time_ns" => maximum(trial).time,
-            "std_time_ns" => std(trial.times),
+            "std_time_ns" => std_time,
             "memory_bytes" => trial.memory,
             "allocs" => trial.allocs,
-            "samples" => length(trial.times)
+            "samples" => n,
+            "gc_time_ns" => mean(trial).gctime,
+            "p25_time_ns" => p25,
+            "p75_time_ns" => p75,
+            "p95_time_ns" => n > 0 ? sorted_times[max(1, ceil(Int, n * 0.95))] : 0,
+            "p99_time_ns" => n > 0 ? sorted_times[max(1, ceil(Int, n * 0.99))] : 0,
+            "iqr_time_ns" => p75 - p25,
+            "cv" => mean_time > 0 ? std_time / mean_time : 0.0
         )
     end
 
@@ -116,7 +155,11 @@ function save_benchmark_results(suite_results, group::String;
             "group" => group,
             "timestamp" => timestamp_str,
             "julia_version" => julia_ver,
-            "commit_hash" => commit_hash
+            "commit_hash" => commit_hash,
+            "git_branch" => get_git_branch(),
+            "git_dirty" => is_git_dirty(),
+            "hostname" => gethostname(),
+            "system" => system_info
         ),
         "benchmarks" => benchmarks_dict
     )
@@ -301,7 +344,7 @@ function get_subbenchmark_names(history, benchmark_name)
     return sort(subbench_names)
 end
 
-function extract_timeseries_with_timestamps(history, benchmark_name, subbench_name)
+function extract_timeseries_with_timestamps(history, _benchmark_name, subbench_name)
     if !haskey(history, subbench_name)
         error("benchmark $subbench_name not found")
     end
