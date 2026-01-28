@@ -192,9 +192,11 @@ end
 
 function format_time_short(ns)
     if ns < 1e3
-        # Use integer format for values >= 1, decimal for values < 1
-        fmt = ns >= 1.0 ? "%.0f ns" : "%g ns"
-        return @sprintf(fmt, ns)
+        if ns >= 1.0
+            return @sprintf("%.0f ns", ns)
+        else
+            return @sprintf("%.2g ns", ns)
+        end
     elseif ns < 1e6
         return @sprintf("%.1f μs", ns / 1e3)
     elseif ns < 1e9
