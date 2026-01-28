@@ -6,6 +6,8 @@ using WGLMakie
 using Dates
 using Printf
 using JSON
+using URIs
+using HTTP
 
 include("src/HistoryManager.jl")
 using .HistoryManager
@@ -66,9 +68,12 @@ function calculate_stats(histories)
                 latest_run = runs[string(run_numbers[end])]
 
                 if haskey(latest_run, "timestamp")
-                    run_time = DateTime(latest_run["timestamp"])
-                    if isnothing(last_run_time) || run_time > last_run_time
-                        last_run_time = run_time
+                    try
+                        run_time = DateTime(split(latest_run["timestamp"], ".")[1])
+                        if isnothing(last_run_time) || run_time > last_run_time
+                            last_run_time = run_time
+                        end
+                    catch
                     end
                 end
 
@@ -110,42 +115,54 @@ function calculate_trend(runs)
     return (trend, pct)
 end
 
-function create_benchmark_plot(runs, show_mean, show_min, show_median, show_percentage, dark_mode)
+function create_benchmark_plot(runs, group_name, benchmark_path, port, show_mean, show_min, show_median, show_percentage, dark_mode)
     run_numbers = sort(parse.(Int, keys(runs)))
     isempty(run_numbers) && return Figure()
 
     mean_times = Float64[]
     min_times = Float64[]
     median_times = Float64[]
+    commits = String[]
+    timestamps = String[]
 
     for rn in run_numbers
         data = runs[string(rn)]
         push!(mean_times, get(data, "mean_time_ns", 0) / 1e6)
         push!(min_times, get(data, "min_time_ns", 0) / 1e6)
         push!(median_times, get(data, "median_time_ns", 0) / 1e6)
+        push!(commits, get(data, "commit_hash", "unknown")[1:min(7, length(get(data, "commit_hash", "unknown")))])
+        push!(timestamps, get(data, "timestamp", ""))
     end
 
-    x = collect(1:length(run_numbers))
+    function calc_pct_from_prev(values)
+        result = zeros(length(values))
+        for i in 2:length(values)
+            if values[i-1] > 0
+                result[i] = (values[i] / values[i-1] - 1.0) * 100.0
+            end
+        end
+        return result
+    end
 
     mean_data = @lift begin
-        if $show_percentage && length(mean_times) > 0 && mean_times[1] > 0
-            [(t / mean_times[1] - 1.0) * 100.0 for t in mean_times]
+        if $show_percentage && length(mean_times) > 0
+            calc_pct_from_prev(mean_times)
         else
             mean_times
         end
     end
 
     min_data = @lift begin
-        if $show_percentage && length(min_times) > 0 && min_times[1] > 0
-            [(t / min_times[1] - 1.0) * 100.0 for t in min_times]
+        if $show_percentage && length(min_times) > 0
+            calc_pct_from_prev(min_times)
         else
             min_times
         end
     end
 
     median_data = @lift begin
-        if $show_percentage && length(median_times) > 0 && median_times[1] > 0
-            [(t / median_times[1] - 1.0) * 100.0 for t in median_times]
+        if $show_percentage && length(median_times) > 0
+            calc_pct_from_prev(median_times)
         else
             median_times
         end
@@ -165,18 +182,111 @@ function create_benchmark_plot(runs, show_mean, show_min, show_median, show_perc
         xticklabelcolor=text_color,
         yticklabelcolor=text_color)
 
-    lines!(ax, x, mean_data, color=:steelblue, linewidth=2, visible=show_mean, label="Mean")
-    scatter!(ax, x, mean_data, color=:steelblue, markersize=8, visible=show_mean)
+    lines!(ax, run_numbers, mean_data, color=:steelblue, linewidth=2, visible=show_mean, label="Mean")
+    scatter!(ax, run_numbers, mean_data, color=:steelblue, markersize=10, visible=show_mean,
+        inspector_label = (self, i, p) -> begin
+            idx = findfirst(==(round(Int, p[1])), run_numbers)
+            if !isnothing(idx) && idx <= length(mean_times)
+                run_data = runs[string(run_numbers[idx])]
+                """
+                Run #$(run_numbers[idx])
+                Mean: $(round(mean_times[idx], digits=3)) ms
+                Min: $(round(min_times[idx], digits=3)) ms
+                Median: $(round(median_times[idx], digits=3)) ms
+                Memory: $(format_memory(get(run_data, "memory_bytes", 0)))
+                Allocs: $(get(run_data, "allocs", 0))
+                Commit: $(commits[idx])
+                Click to open details
+                """
+            else
+                ""
+            end
+        end)
 
-    lines!(ax, x, min_data, color=:green, linewidth=2, visible=show_min, label="Min")
-    scatter!(ax, x, min_data, color=:green, markersize=6, visible=show_min)
+    lines!(ax, run_numbers, min_data, color=:green, linewidth=2, visible=show_min, label="Min")
+    scatter!(ax, run_numbers, min_data, color=:green, markersize=8, visible=show_min,
+        inspector_label = (self, i, p) -> begin
+            idx = findfirst(==(round(Int, p[1])), run_numbers)
+            if !isnothing(idx) && idx <= length(min_times)
+                "Run #$(run_numbers[idx])\nMin: $(round(min_times[idx], digits=3)) ms\nClick to open details"
+            else
+                ""
+            end
+        end)
 
-    lines!(ax, x, median_data, color=:orange, linewidth=2, visible=show_median, label="Median")
-    scatter!(ax, x, median_data, color=:orange, markersize=6, visible=show_median)
+    lines!(ax, run_numbers, median_data, color=:orange, linewidth=2, visible=show_median, label="Median")
+    scatter!(ax, run_numbers, median_data, color=:orange, markersize=8, visible=show_median,
+        inspector_label = (self, i, p) -> begin
+            idx = findfirst(==(round(Int, p[1])), run_numbers)
+            if !isnothing(idx) && idx <= length(median_times)
+                "Run #$(run_numbers[idx])\nMedian: $(round(median_times[idx], digits=3)) ms\nClick to open details"
+            else
+                ""
+            end
+        end)
 
     hlines!(ax, [0.0], color=:gray, linestyle=:dash, linewidth=1, visible=show_percentage)
 
     axislegend(ax, position=:lt, backgroundcolor=bg_color)
+    DataInspector(fig)
+
+    on(events(fig).mousebutton) do event
+        if event.button == Mouse.left && event.action == Mouse.press
+            plt = mouseposition(ax.scene)
+
+            closest_idx = 0
+            min_dist = Inf
+
+            for (i, rn) in enumerate(run_numbers)
+                if show_mean[]
+                    dx = plt[1] - rn
+                    dy = plt[2] - mean_data[][i]
+                    dist = sqrt(dx^2 + dy^2)
+                    if dist < min_dist && dist < 2.0
+                        min_dist = dist
+                        closest_idx = i
+                    end
+                end
+
+                if show_min[]
+                    dx = plt[1] - rn
+                    dy = plt[2] - min_data[][i]
+                    dist = sqrt(dx^2 + dy^2)
+                    if dist < min_dist && dist < 2.0
+                        min_dist = dist
+                        closest_idx = i
+                    end
+                end
+
+                if show_median[]
+                    dx = plt[1] - rn
+                    dy = plt[2] - median_data[][i]
+                    dist = sqrt(dx^2 + dy^2)
+                    if dist < min_dist && dist < 2.0
+                        min_dist = dist
+                        closest_idx = i
+                    end
+                end
+            end
+
+            if closest_idx > 0
+                run_num = run_numbers[closest_idx]
+                encoded_path = URIs.escapeuri(benchmark_path)
+                detail_url = "http://localhost:$port/detail/$group_name/$encoded_path/$run_num"
+
+                try
+                    if Sys.islinux()
+                        run(`xdg-open $detail_url`, wait=false)
+                    elseif Sys.isapple()
+                        run(`open $detail_url`, wait=false)
+                    elseif Sys.iswindows()
+                        run(`cmd /c start $detail_url`, wait=false)
+                    end
+                catch
+                end
+            end
+        end
+    end
 
     return fig
 end
@@ -201,8 +311,6 @@ function start_dashboard(data_dir="data"; port=8000)
         show_median = Observable(false)
         show_percentage = Observable(false)
         dark_mode = Observable(false)
-        search_filter = Observable("")
-        trend_filter = Observable("all")
 
         css = DOM.style("""
             * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -219,9 +327,6 @@ function start_dashboard(data_dir="data"; port=8000)
             .controls { padding: 20px 30px; background: white; border-bottom: 1px solid #e9ecef; display: flex; gap: 15px; flex-wrap: wrap; align-items: center; }
             .control-group { display: flex; align-items: center; gap: 8px; background: #f8f9fa; padding: 10px 15px; border-radius: 8px; }
             .control-group label { cursor: pointer; font-weight: 500; color: #495057; }
-            .search-box { flex: 1; min-width: 250px; padding: 12px 20px; border: 2px solid #e9ecef; border-radius: 8px; font-size: 1em; }
-            .search-box:focus { outline: none; border-color: #667eea; }
-            .trend-select { padding: 12px 15px; border: 2px solid #e9ecef; border-radius: 8px; font-size: 1em; background: white; }
             .benchmarks { padding: 30px; }
             .benchmark-card { background: white; border: 2px solid #e9ecef; border-radius: 12px; margin-bottom: 25px; overflow: hidden; transition: all 0.3s; }
             .benchmark-card:hover { border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
@@ -251,7 +356,6 @@ function start_dashboard(data_dir="data"; port=8000)
             .dark .benchmark-header { background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); }
             .dark .benchmark-name { color: #ecf0f1; }
             .dark .stat-val { color: #ecf0f1; }
-            .dark .search-box, .dark .trend-select { background: #2c3e50; color: #ecf0f1; border-color: #4a5568; }
         """)
 
         stats_panel = DOM.div(
@@ -295,7 +399,7 @@ function start_dashboard(data_dir="data"; port=8000)
                     DOM.span()
                 end
 
-                fig = create_benchmark_plot(runs, show_mean, show_min, show_median, show_percentage, dark_mode)
+                fig = create_benchmark_plot(runs, group_name, benchmark_path, port, show_mean, show_min, show_median, show_percentage, dark_mode)
 
                 card = DOM.div(
                     DOM.div(
@@ -315,9 +419,7 @@ function start_dashboard(data_dir="data"; port=8000)
                         class="benchmark-header"
                     ),
                     DOM.div(fig, class="plot-container"),
-                    class="benchmark-card",
-                    dataPath=benchmark_path,
-                    dataTrend=trend
+                    class="benchmark-card"
                 )
 
                 push!(benchmark_cards, card)
@@ -359,26 +461,15 @@ function start_dashboard(data_dir="data"; port=8000)
             class="controls"
         )
 
-        header = DOM.div(
-            DOM.h1("📊 BenchmarkExplorer"),
-            DOM.p("Interactive Benchmark Dashboard"),
-            class="header"
-        )
-
-        footer = DOM.div(
-            DOM.p("Generated by ", DOM.a("BenchmarkExplorer.jl", href=REPO_URL, target="_blank"), " • Powered by Bonito.jl + WGLMakie.jl"),
-            class="footer"
-        )
-
         DOM.div(
             css,
             DOM.div(
                 DOM.div(
-                    header,
+                    DOM.div(DOM.h1("📊 BenchmarkExplorer"), DOM.p("Interactive Dashboard • Click points for details"), class="header"),
                     stats_panel,
                     controls,
                     DOM.div(benchmark_cards..., class="benchmarks"),
-                    footer,
+                    DOM.div(DOM.p("Generated by ", DOM.a("BenchmarkExplorer.jl", href=REPO_URL, target="_blank"), " • Powered by Bonito.jl + WGLMakie.jl"), class="footer"),
                     class="container"
                 ),
                 class=dark_class
@@ -387,6 +478,137 @@ function start_dashboard(data_dir="data"; port=8000)
     end
 
     server = Bonito.Server(app, "0.0.0.0", port)
+
+    Bonito.route!(server, r"/detail/.*" => function(context)
+        path = context.request.target
+        parts = split(path[9:end], "/")
+
+        if length(parts) >= 3
+            group_name = URIs.unescapeuri(parts[1])
+            run_number_str = parts[end]
+            benchmark_path = URIs.unescapeuri(join(parts[2:end-1], "/"))
+
+            try
+                run_number = parse(Int, run_number_str)
+
+                if haskey(histories, group_name) && haskey(histories[group_name], benchmark_path)
+                    runs = histories[group_name][benchmark_path]
+
+                    if haskey(runs, string(run_number))
+                        data = runs[string(run_number)]
+
+                        mean_ms = get(data, "mean_time_ns", 0) / 1e6
+                        min_ms = get(data, "min_time_ns", 0) / 1e6
+                        median_ms = get(data, "median_time_ns", 0) / 1e6
+                        max_ms = get(data, "max_time_ns", 0) / 1e6
+                        memory_mb = get(data, "memory_bytes", 0) / (1024 * 1024)
+                        commit = get(data, "commit_hash", "unknown")
+
+                        detail_html = """
+                        <!DOCTYPE html>
+                        <html>
+                        <head>
+                            <title>Run #$run_number - $benchmark_path</title>
+                            <meta charset="utf-8">
+                            <style>
+                                body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; padding: 30px; background: #f8f9fa; margin: 0; }
+                                .container { max-width: 900px; margin: auto; background: white; padding: 40px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+                                h1 { color: #2c3e50; margin-bottom: 5px; font-size: 1.8em; }
+                                .subtitle { color: #7f8c8d; margin-bottom: 30px; }
+                                h2 { color: #2c3e50; margin-top: 30px; border-bottom: 2px solid #667eea; padding-bottom: 10px; font-size: 1.3em; }
+                                .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin: 20px 0; }
+                                .stat-box { background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 20px; border-radius: 12px; text-align: center; }
+                                .stat-label { font-weight: 600; font-size: 0.8em; color: #6c757d; text-transform: uppercase; margin-bottom: 8px; }
+                                .stat-value { font-size: 1.8em; font-weight: bold; }
+                                .blue { color: #3498db; }
+                                .orange { color: #e67e22; }
+                                .green { color: #27ae60; }
+                                .red { color: #e74c3c; }
+                                .purple { color: #9b59b6; }
+                                .teal { color: #16a085; }
+                                code { background: #e9ecef; padding: 4px 10px; border-radius: 4px; font-family: 'SF Mono', Monaco, monospace; }
+                                table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+                                td { padding: 12px; border-bottom: 1px solid #e9ecef; }
+                                td:first-child { font-weight: 600; width: 150px; color: #6c757d; }
+                                .btn { display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; padding: 12px 24px; border-radius: 8px; cursor: pointer; font-size: 14px; font-weight: 600; text-decoration: none; margin-right: 10px; }
+                                .btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4); }
+                                .btn-secondary { background: #6c757d; }
+                                pre { background: #2c3e50; color: #ecf0f1; padding: 20px; border-radius: 8px; overflow-x: auto; font-size: 0.85em; }
+                                @media (max-width: 768px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
+                            </style>
+                        </head>
+                        <body>
+                            <div class="container">
+                                <h1>📊 Benchmark Details</h1>
+                                <div class="subtitle">
+                                    <strong>$benchmark_path</strong> • Run #$run_number •
+                                    <a href="$REPO_URL/commit/$commit" target="_blank" style="color: #667eea;">$commit</a>
+                                </div>
+
+                                <h2>⏱️ Timing Statistics</h2>
+                                <div class="stats-grid">
+                                    <div class="stat-box">
+                                        <div class="stat-label">Mean</div>
+                                        <div class="stat-value blue">$(@sprintf("%.3f", mean_ms)) ms</div>
+                                    </div>
+                                    <div class="stat-box">
+                                        <div class="stat-label">Median</div>
+                                        <div class="stat-value orange">$(@sprintf("%.3f", median_ms)) ms</div>
+                                    </div>
+                                    <div class="stat-box">
+                                        <div class="stat-label">Min</div>
+                                        <div class="stat-value green">$(@sprintf("%.3f", min_ms)) ms</div>
+                                    </div>
+                                    <div class="stat-box">
+                                        <div class="stat-label">Max</div>
+                                        <div class="stat-value red">$(@sprintf("%.3f", max_ms)) ms</div>
+                                    </div>
+                                </div>
+
+                                <h2>💾 Memory</h2>
+                                <div class="stats-grid" style="grid-template-columns: repeat(2, 1fr);">
+                                    <div class="stat-box">
+                                        <div class="stat-label">Memory Used</div>
+                                        <div class="stat-value purple">$(@sprintf("%.2f", memory_mb)) MB</div>
+                                    </div>
+                                    <div class="stat-box">
+                                        <div class="stat-label">Allocations</div>
+                                        <div class="stat-value teal">$(get(data, "allocs", 0))</div>
+                                    </div>
+                                </div>
+
+                                <h2>📋 Metadata</h2>
+                                <table>
+                                    <tr><td>Timestamp</td><td>$(get(data, "timestamp", "unknown"))</td></tr>
+                                    <tr><td>Samples</td><td>$(get(data, "samples", "unknown"))</td></tr>
+                                    <tr><td>Julia Version</td><td>$(get(data, "julia_version", "unknown"))</td></tr>
+                                    <tr><td>Group</td><td>$group_name</td></tr>
+                                </table>
+
+                                <h2>📄 Raw Data</h2>
+                                <pre>$(JSON.json(data, 2))</pre>
+
+                                <br>
+                                <button class="btn" onclick="window.close()">Close</button>
+                                <a class="btn btn-secondary" href="/">Back to Dashboard</a>
+                            </div>
+                        </body>
+                        </html>
+                        """
+
+                        return HTTP.Response(200, ["Content-Type" => "text/html"], detail_html)
+                    end
+                end
+
+                return HTTP.Response(404, ["Content-Type" => "text/html"], "<h1>404 - Not Found</h1>")
+            catch e
+                return HTTP.Response(500, ["Content-Type" => "text/html"], "<h1>500 - Error: $e</h1>")
+            end
+        end
+
+        return HTTP.Response(404, ["Content-Type" => "text/html"], "<h1>404 - Not Found</h1>")
+    end)
+
     return server
 end
 

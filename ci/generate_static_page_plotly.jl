@@ -551,21 +551,27 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 return `\${day} \${month} \${year}, \${hours}:\${mins}`;
             }
 
-            function toPercentage(values, baselineValue) {
+            function toPercentage(values) {
                 if (!percentageMode || values.length === 0) return values;
-                if (baselineValue === 0) return values;
-                return values.map((v, i) => i === 0 ? 0 : ((v / baselineValue) - 1) * 100);
+                return values.map((v, i) => {
+                    if (i === 0) return 0;
+                    const prev = values[i - 1];
+                    if (prev === 0) return 0;
+                    return ((v / prev) - 1) * 100;
+                });
             }
 
             function renderSinglePlot(name, data, plotId) {
                 if (renderedPlots.has(plotId)) return;
                 renderedPlots.add(plotId);
 
-                const baseline = data.mean.y[0];
+                const plotDiv = document.getElementById(plotId);
+                if (plotDiv) plotDiv.innerHTML = '';
+
                 const traces = [
                     {
                         x: data.mean.x,
-                        y: toPercentage(data.mean.y, baseline),
+                        y: toPercentage(data.mean.y),
                         type: 'scatter',
                         mode: 'lines+markers',
                         name: 'Mean',
@@ -576,7 +582,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                     },
                     {
                         x: data.min.x,
-                        y: toPercentage(data.min.y, baseline),
+                        y: toPercentage(data.min.y),
                         type: 'scatter',
                         mode: 'lines',
                         name: 'Min',
@@ -588,7 +594,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                     },
                     {
                         x: data.median.x,
-                        y: toPercentage(data.median.y, baseline),
+                        y: toPercentage(data.median.y),
                         type: 'scatter',
                         mode: 'lines',
                         name: 'Median',
@@ -602,6 +608,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
 
                 const layout = {
                     title: '',
+                    height: 350,
                     xaxis: {
                         title: 'Commit',
                         showgrid: true,
@@ -625,7 +632,8 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                     paper_bgcolor: darkMode ? '#34495e' : '#ffffff',
                     font: {
                         color: darkMode ? '#ecf0f1' : '#2c3e50'
-                    }
+                    },
+                    autosize: true
                 };
 
                 const config = {
@@ -744,12 +752,17 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                         </div>
                     `;
                     container.appendChild(item);
-
-                    const plotContainer = document.getElementById(plotId);
-                    plotObserver.observe(plotContainer);
+                    renderSinglePlot(name, data, plotId);
                 });
+            }
 
-                setTimeout(renderVisiblePlots, 100);
+            function calcPercentFromPrev(values) {
+                return values.map((v, i) => {
+                    if (i === 0) return 0;
+                    const prev = values[i - 1];
+                    if (prev === 0) return 0;
+                    return ((v / prev) - 1) * 100;
+                });
             }
 
             function updatePercentageMode() {
@@ -760,15 +773,9 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
 
                     const currentVisibility = plotDiv.data.map(trace => trace.visible);
 
-                    const newMeanY = percentageMode ?
-                        data.mean.y.map((v, i) => i === 0 ? 0 : ((v / data.mean.y[0]) - 1) * 100) :
-                        data.mean.y;
-                    const newMinY = percentageMode ?
-                        data.min.y.map((v, i) => i === 0 ? 0 : ((v / data.mean.y[0]) - 1) * 100) :
-                        data.min.y;
-                    const newMedianY = percentageMode ?
-                        data.median.y.map((v, i) => i === 0 ? 0 : ((v / data.mean.y[0]) - 1) * 100) :
-                        data.median.y;
+                    const newMeanY = percentageMode ? calcPercentFromPrev(data.mean.y) : data.mean.y;
+                    const newMinY = percentageMode ? calcPercentFromPrev(data.min.y) : data.min.y;
+                    const newMedianY = percentageMode ? calcPercentFromPrev(data.median.y) : data.median.y;
 
                     const meanHoverTexts = percentageMode ?
                         data.mean.commit_hashes.map((hash, i) =>
@@ -790,7 +797,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                     }, [2]);
                     Plotly.restyle(plotDiv, {visible: currentVisibility}, [0, 1, 2]);
                     Plotly.relayout(plotDiv, {
-                        'yaxis.title': percentageMode ? 'Change (%)' : 'Time (ms)',
+                        'yaxis.title': percentageMode ? 'Change from prev (%)' : 'Time (ms)',
                         'yaxis.autorange': true
                     });
                 });
@@ -870,7 +877,6 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 a.click();
             });
 
-            // Load full history functionality
             $(all_runs_available ? """
             let fullHistoryLoaded = false;
 
@@ -889,24 +895,20 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                         throw new Error('Group not found in index');
                     }
 
-                    // Load all additional runs
                     for (const runInfo of group.runs) {
                         const runResponse = await fetch('benchmarks/' + runInfo.url);
                         const runData = await runResponse.json();
 
-                        // Merge data for each benchmark
                         for (const [benchName, data] of Object.entries(runData.benchmarks)) {
                             if (!benchmarksData[benchName]) continue;
 
                             const commitHash = runData.metadata.commit_hash || 'unknown';
                             const commitShort = commitHash.substring(0, 7);
 
-                            // Check if this run is already loaded
                             if (benchmarksData[benchName].mean.commit_hashes.includes(commitHash)) {
                                 continue;
                             }
 
-                            // Add new data point
                             benchmarksData[benchName].mean.x.push(commitShort);
                             benchmarksData[benchName].mean.y.push(data.mean_time_ns / 1e6);
                             benchmarksData[benchName].mean.timestamps.push(runData.metadata.timestamp);
@@ -918,7 +920,6 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                             benchmarksData[benchName].median.x.push(commitShort);
                             benchmarksData[benchName].median.y.push(data.median_time_ns / 1e6);
 
-                            // Update hover text
                             const hoverText =
                                 \`Commit: \${commitHash}<br>\` +
                                 \`Mean: \${(data.mean_time_ns / 1e6).toFixed(3)} ms<br>\` +
@@ -930,13 +931,10 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                                 \`Date: \${formatDate(runData.metadata.timestamp)}\`;
 
                             benchmarksData[benchName].mean.hovertext.push(hoverText);
-
-                            // Update stats
                             benchmarksData[benchName].stats.num_runs++;
                         }
                     }
 
-                    // Update stats panel
                     const panel = document.getElementById('stats-panel');
                     const totalRunsCard = panel.children[1];
                     if (totalRunsCard) {
@@ -945,8 +943,6 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
 
                     fullHistoryLoaded = true;
                     this.textContent = '✅ Full History Loaded';
-
-                    // Re-render all benchmarks with updated data
                     renderBenchmarks(document.getElementById('search').value);
 
                 } catch (error) {
