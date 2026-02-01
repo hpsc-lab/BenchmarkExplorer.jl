@@ -651,6 +651,19 @@
           "samples": 454,
           "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
           "timestamp": "2026-01-31T03:01:10.355"
+        },
+        "51": {
+          "std_time_ns": 75436.6727500813,
+          "median_time_ns": 1.0896738e7,
+          "allocs": 0,
+          "julia_version": "1.11.8",
+          "memory_bytes": 0,
+          "min_time_ns": 1.0858176e7,
+          "mean_time_ns": 1.0906542912663756e7,
+          "max_time_ns": 1.212133e7,
+          "samples": 458,
+          "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
+          "timestamp": "2026-02-01T03:11:19.572"
         }
       },
       "tree_1d_dgsem/elixir_mhd_ec.jl/p3_analysis": {
@@ -1303,6 +1316,19 @@
           "samples": 10000,
           "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
           "timestamp": "2026-01-31T03:01:10.355"
+        },
+        "51": {
+          "std_time_ns": 570.4773693150677,
+          "median_time_ns": 3166.0,
+          "allocs": 0,
+          "julia_version": "1.11.8",
+          "memory_bytes": 0,
+          "min_time_ns": 3116.0,
+          "mean_time_ns": 3214.8065,
+          "max_time_ns": 22272.0,
+          "samples": 10000,
+          "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
+          "timestamp": "2026-02-01T03:11:19.572"
         }
       },
       "tree_2d_dgsem/elixir_euler_ec.jl/p3_rhs!": {
@@ -1955,6 +1981,19 @@
           "samples": 3557,
           "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
           "timestamp": "2026-01-31T03:01:10.355"
+        },
+        "51": {
+          "std_time_ns": 16506.624538866185,
+          "median_time_ns": 1.3941585e6,
+          "allocs": 0,
+          "julia_version": "1.11.8",
+          "memory_bytes": 0,
+          "min_time_ns": 1.382458e6,
+          "mean_time_ns": 1.3952256987143655e6,
+          "max_time_ns": 1.876064e6,
+          "samples": 3578,
+          "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
+          "timestamp": "2026-02-01T03:11:19.572"
         }
       },
       "tree_1d_dgsem/elixir_mhd_ec.jl/p3_rhs!": {
@@ -2607,6 +2646,19 @@
           "samples": 10000,
           "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
           "timestamp": "2026-01-31T03:01:10.355"
+        },
+        "51": {
+          "std_time_ns": 643.275407598458,
+          "median_time_ns": 5420.0,
+          "allocs": 0,
+          "julia_version": "1.11.8",
+          "memory_bytes": 0,
+          "min_time_ns": 5371.0,
+          "mean_time_ns": 5478.4898,
+          "max_time_ns": 26510.0,
+          "samples": 10000,
+          "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
+          "timestamp": "2026-02-01T03:11:19.572"
         }
       },
       "tree_2d_dgsem/elixir_advection_amr_nonperiodic.jl/p3_analysis": {
@@ -3259,6 +3311,19 @@
           "samples": 5921,
           "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
           "timestamp": "2026-01-31T03:01:10.355"
+        },
+        "51": {
+          "std_time_ns": 16603.660407124902,
+          "median_time_ns": 839597.0,
+          "allocs": 0,
+          "julia_version": "1.11.8",
+          "memory_bytes": 0,
+          "min_time_ns": 828757.0,
+          "mean_time_ns": 841734.8767077079,
+          "max_time_ns": 1.764425e6,
+          "samples": 5929,
+          "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
+          "timestamp": "2026-02-01T03:11:19.572"
         }
       },
       "tree_2d_dgsem/elixir_advection_amr_nonperiodic.jl/p7_rhs!": {
@@ -3911,6 +3976,19 @@
           "samples": 10000,
           "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
           "timestamp": "2026-01-31T03:01:10.355"
+        },
+        "51": {
+          "std_time_ns": 5841.65414331648,
+          "median_time_ns": 320181.5,
+          "allocs": 0,
+          "julia_version": "1.11.8",
+          "memory_bytes": 0,
+          "min_time_ns": 317266.0,
+          "mean_time_ns": 322997.7121,
+          "max_time_ns": 458501.0,
+          "samples": 10000,
+          "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
+          "timestamp": "2026-02-01T03:11:19.572"
         }
       },
       "tree_2d_dgsem/elixir_euler_ec.jl/p7_rhs!": {
@@ -4563,6 +4641,19 @@
           "samples": 525,
           "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
           "timestamp": "2026-01-31T03:01:10.355"
+        },
+        "51": {
+          "std_time_ns": 82732.58430658052,
+          "median_time_ns": 9.437437e6,
+          "allocs": 0,
+          "julia_version": "1.11.8",
+          "memory_bytes": 0,
+          "min_time_ns": 9.418592e6,
+          "mean_time_ns": 9.448753e6,
+          "max_time_ns": 1.0702914e7,
+          "samples": 529,
+          "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
+          "timestamp": "2026-02-01T03:11:19.572"
         }
       },
       "tree_2d_dgsem/elixir_euler_vortex_mortar.jl/p7_rhs!": {
@@ -5215,6 +5306,19 @@
           "samples": 4390,
           "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
           "timestamp": "2026-01-31T03:01:10.355"
+        },
+        "51": {
+          "std_time_ns": 72397.71582576263,
+          "median_time_ns": 1.131565e6,
+          "allocs": 0,
+          "julia_version": "1.11.8",
+          "memory_bytes": 0,
+          "min_time_ns": 1.122018e6,
+          "mean_time_ns": 1.1441054005961935e6,
+          "max_time_ns": 2.142765e6,
+          "samples": 4361,
+          "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
+          "timestamp": "2026-02-01T03:11:19.572"
         }
       },
       "tree_1d_dgsem/elixir_mhd_ec.jl/p7_rhs!": {
@@ -5867,6 +5971,19 @@
           "samples": 10000,
           "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
           "timestamp": "2026-01-31T03:01:10.355"
+        },
+        "51": {
+          "std_time_ns": 1139.7362607870189,
+          "median_time_ns": 14528.0,
+          "allocs": 0,
+          "julia_version": "1.11.8",
+          "memory_bytes": 0,
+          "min_time_ns": 14417.0,
+          "mean_time_ns": 14674.0642,
+          "max_time_ns": 56296.0,
+          "samples": 10000,
+          "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
+          "timestamp": "2026-02-01T03:11:19.572"
         }
       },
       "structured_1d_dgsem/elixir_euler_sedov.jl/p3_rhs!": {
@@ -6519,6 +6636,19 @@
           "samples": 10000,
           "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
           "timestamp": "2026-01-31T03:01:10.355"
+        },
+        "51": {
+          "std_time_ns": 1094.545603559663,
+          "median_time_ns": 12052.0,
+          "allocs": 0,
+          "julia_version": "1.11.8",
+          "memory_bytes": 0,
+          "min_time_ns": 11923.0,
+          "mean_time_ns": 12195.5902,
+          "max_time_ns": 38542.0,
+          "samples": 10000,
+          "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
+          "timestamp": "2026-02-01T03:11:19.572"
         }
       },
       "tree_2d_dgsem/elixir_euler_ec.jl/p3_analysis": {
@@ -7171,6 +7301,19 @@
           "samples": 2165,
           "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
           "timestamp": "2026-01-31T03:01:10.355"
+        },
+        "51": {
+          "std_time_ns": 21553.65206116623,
+          "median_time_ns": 2.324085e6,
+          "allocs": 0,
+          "julia_version": "1.11.8",
+          "memory_bytes": 0,
+          "min_time_ns": 2.31561e6,
+          "mean_time_ns": 2.328678551048951e6,
+          "max_time_ns": 2.696555e6,
+          "samples": 2145,
+          "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
+          "timestamp": "2026-02-01T03:11:19.572"
         }
       },
       "structured_1d_dgsem/elixir_euler_sedov.jl/p7_analysis": {
@@ -7823,6 +7966,19 @@
           "samples": 10000,
           "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
           "timestamp": "2026-01-31T03:01:10.355"
+        },
+        "51": {
+          "std_time_ns": 1066.9428528780352,
+          "median_time_ns": 8165.0,
+          "allocs": 128,
+          "julia_version": "1.11.8",
+          "memory_bytes": 8192,
+          "min_time_ns": 7945.0,
+          "mean_time_ns": 8357.6319,
+          "max_time_ns": 30567.0,
+          "samples": 10000,
+          "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
+          "timestamp": "2026-02-01T03:11:19.572"
         }
       },
       "tree_2d_dgsem/elixir_euler_vortex_mortar.jl/p7_analysis": {
@@ -8475,6 +8631,19 @@
           "samples": 779,
           "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
           "timestamp": "2026-01-31T03:01:10.355"
+        },
+        "51": {
+          "std_time_ns": 25940.79885337577,
+          "median_time_ns": 6.301026e6,
+          "allocs": 0,
+          "julia_version": "1.11.8",
+          "memory_bytes": 0,
+          "min_time_ns": 6.2772e6,
+          "mean_time_ns": 6.305192866330391e6,
+          "max_time_ns": 6.639842e6,
+          "samples": 793,
+          "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
+          "timestamp": "2026-02-01T03:11:19.572"
         }
       },
       "tree_2d_dgsem/elixir_euler_vortex_mortar.jl/p3_rhs!": {
@@ -9127,6 +9296,19 @@
           "samples": 10000,
           "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
           "timestamp": "2026-01-31T03:01:10.355"
+        },
+        "51": {
+          "std_time_ns": 7710.579278961992,
+          "median_time_ns": 358854.0,
+          "allocs": 0,
+          "julia_version": "1.11.8",
+          "memory_bytes": 0,
+          "min_time_ns": 354275.0,
+          "mean_time_ns": 362047.8463,
+          "max_time_ns": 601861.0,
+          "samples": 10000,
+          "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
+          "timestamp": "2026-02-01T03:11:19.572"
         }
       },
       "tree_2d_dgsem/elixir_advection_amr_nonperiodic.jl/p7_analysis": {
@@ -9779,6 +9961,19 @@
           "samples": 1259,
           "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
           "timestamp": "2026-01-31T03:01:10.355"
+        },
+        "51": {
+          "std_time_ns": 29387.649831249946,
+          "median_time_ns": 3.959255e6,
+          "allocs": 0,
+          "julia_version": "1.11.8",
+          "memory_bytes": 0,
+          "min_time_ns": 3.935872e6,
+          "mean_time_ns": 3.9708626004765686e6,
+          "max_time_ns": 4.396657e6,
+          "samples": 1259,
+          "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
+          "timestamp": "2026-02-01T03:11:19.572"
         }
       },
       "tree_2d_dgsem/elixir_euler_vortex_mortar.jl/p3_analysis": {
@@ -10431,6 +10626,19 @@
           "samples": 3789,
           "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
           "timestamp": "2026-01-31T03:01:10.355"
+        },
+        "51": {
+          "std_time_ns": 19102.25147022538,
+          "median_time_ns": 1.305562e6,
+          "allocs": 0,
+          "julia_version": "1.11.8",
+          "memory_bytes": 0,
+          "min_time_ns": 1.299851e6,
+          "mean_time_ns": 1.3087744417933929e6,
+          "max_time_ns": 1.951215e6,
+          "samples": 3814,
+          "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
+          "timestamp": "2026-02-01T03:11:19.572"
         }
       },
       "tree_2d_dgsem/elixir_advection_extended.jl/p7_analysis": {
@@ -11083,6 +11291,19 @@
           "samples": 6042,
           "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
           "timestamp": "2026-01-31T03:01:10.355"
+        },
+        "51": {
+          "std_time_ns": 6820.392760666899,
+          "median_time_ns": 825109.0,
+          "allocs": 0,
+          "julia_version": "1.11.8",
+          "memory_bytes": 0,
+          "min_time_ns": 814390.0,
+          "mean_time_ns": 825137.447477254,
+          "max_time_ns": 953850.0,
+          "samples": 6045,
+          "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
+          "timestamp": "2026-02-01T03:11:19.572"
         }
       },
       "tree_2d_dgsem/elixir_advection_extended.jl/p7_rhs!": {
@@ -11735,6 +11956,19 @@
           "samples": 10000,
           "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
           "timestamp": "2026-01-31T03:01:10.355"
+        },
+        "51": {
+          "std_time_ns": 4852.570133889893,
+          "median_time_ns": 167956.0,
+          "allocs": 0,
+          "julia_version": "1.11.8",
+          "memory_bytes": 0,
+          "min_time_ns": 166272.0,
+          "mean_time_ns": 169710.9705,
+          "max_time_ns": 263645.0,
+          "samples": 10000,
+          "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
+          "timestamp": "2026-02-01T03:11:19.572"
         }
       },
       "structured_1d_dgsem/elixir_euler_sedov.jl/p3_analysis": {
@@ -12387,6 +12621,19 @@
           "samples": 10000,
           "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
           "timestamp": "2026-01-31T03:01:10.355"
+        },
+        "51": {
+          "std_time_ns": 4594.523278024994,
+          "median_time_ns": 5450.0,
+          "allocs": 128,
+          "julia_version": "1.11.8",
+          "memory_bytes": 6144,
+          "min_time_ns": 5019.0,
+          "mean_time_ns": 6045.0013,
+          "max_time_ns": 180859.0,
+          "samples": 10000,
+          "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
+          "timestamp": "2026-02-01T03:11:19.572"
         }
       },
       "tree_2d_dgsem/elixir_advection_extended.jl/p3_analysis": {
@@ -13039,6 +13286,19 @@
           "samples": 10000,
           "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
           "timestamp": "2026-01-31T03:01:10.355"
+        },
+        "51": {
+          "std_time_ns": 3727.5278203688035,
+          "median_time_ns": 169649.0,
+          "allocs": 0,
+          "julia_version": "1.11.8",
+          "memory_bytes": 0,
+          "min_time_ns": 168637.0,
+          "mean_time_ns": 171107.1776,
+          "max_time_ns": 255149.0,
+          "samples": 10000,
+          "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
+          "timestamp": "2026-02-01T03:11:19.572"
         }
       },
       "structured_1d_dgsem/elixir_euler_sedov.jl/p7_rhs!": {
@@ -13691,6 +13951,19 @@
           "samples": 10000,
           "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
           "timestamp": "2026-01-31T03:01:10.355"
+        },
+        "51": {
+          "std_time_ns": 1769.1060231378165,
+          "median_time_ns": 33312.0,
+          "allocs": 0,
+          "julia_version": "1.11.8",
+          "memory_bytes": 0,
+          "min_time_ns": 32962.0,
+          "mean_time_ns": 33594.1281,
+          "max_time_ns": 66364.0,
+          "samples": 10000,
+          "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
+          "timestamp": "2026-02-01T03:11:19.572"
         }
       },
       "tree_2d_dgsem/elixir_advection_extended.jl/p3_rhs!": {
@@ -14343,6 +14616,19 @@
           "samples": 10000,
           "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
           "timestamp": "2026-01-31T03:01:10.355"
+        },
+        "51": {
+          "std_time_ns": 2029.214257045633,
+          "median_time_ns": 44493.0,
+          "allocs": 0,
+          "julia_version": "1.11.8",
+          "memory_bytes": 0,
+          "min_time_ns": 43892.0,
+          "mean_time_ns": 44925.9222,
+          "max_time_ns": 84589.0,
+          "samples": 10000,
+          "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
+          "timestamp": "2026-02-01T03:11:19.572"
         }
       },
       "tree_1d_dgsem/elixir_mhd_ec.jl/p7_analysis": {
@@ -14995,6 +15281,19 @@
           "samples": 10000,
           "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
           "timestamp": "2026-01-31T03:01:10.355"
+        },
+        "51": {
+          "std_time_ns": 681.5990202456867,
+          "median_time_ns": 6653.0,
+          "allocs": 0,
+          "julia_version": "1.11.8",
+          "memory_bytes": 0,
+          "min_time_ns": 6592.0,
+          "mean_time_ns": 6716.6016,
+          "max_time_ns": 23554.0,
+          "samples": 10000,
+          "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
+          "timestamp": "2026-02-01T03:11:19.572"
         }
       },
       "tree_2d_dgsem/elixir_advection_amr_nonperiodic.jl/p3_rhs!": {
@@ -15647,6 +15946,19 @@
           "samples": 10000,
           "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
           "timestamp": "2026-01-31T03:01:10.355"
+        },
+        "51": {
+          "std_time_ns": 3706.1828182992613,
+          "median_time_ns": 89718.0,
+          "allocs": 0,
+          "julia_version": "1.11.8",
+          "memory_bytes": 0,
+          "min_time_ns": 88716.0,
+          "mean_time_ns": 90802.0869,
+          "max_time_ns": 171122.0,
+          "samples": 10000,
+          "commit_hash": "cf2c78b6d01d4cbbf84894c999d4527e48827c9f",
+          "timestamp": "2026-02-01T03:11:19.572"
         }
       }
     },
@@ -20036,5 +20348,5 @@
     }
   },
   "version": "2.0",
-  "cached_at": "2026-01-31T03:08:34.475"
+  "cached_at": "2026-02-01T03:11:21.837"
 }
