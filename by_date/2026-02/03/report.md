@@ -1,11 +1,12 @@
-# Run #53 - 2026-02-03
+# Run #51 - 2026-02-03
 
-Julia 1.11.8 | 24 benchmarks
+Julia 1.11.8 | 7 benchmarks
  | cf2c78b
 
 ## Significant Changes (>5%)
 
 | Benchmark | Time (ms) | Prev (ms) | Change |
 |-----------|-----------|-----------|--------|
-| structured_1d_dgsem/elixir_euler_sedov.jl/p3_analysis | 0.006 | 0.007 | -14.9% |
-| tree_1d_dgsem/elixir_mhd_ec.jl/p3_analysis | 0.003 | 0.003 | -7.3% |
+| autodiff/forward/simple | 0.001 | 0.001 | -13.3% |
+| basics/make_zero/array | 0.000 | 0.000 | -11.6% |
+| basics/make_zero/namedtuple | 0.000 | 0.000 | -5.6% |
