@@ -8,9 +8,9 @@ branding:
 
 inputs:
   benchmark_script:
-    description: 'Path to the Julia file that defines SUITE (default: src/benchmarks_trixi.jl)'
+    description: 'Path to the Julia file that defines SUITE. Leave empty for built-in groups (trixi, enzyme).'
     required: false
-    default: 'src/benchmarks_trixi.jl'
+    default: ''
 
   benchmark_project:
     description: 'Value passed to the --project flag. The default value is the repository root: "@."'
