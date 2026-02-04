@@ -11,6 +11,7 @@ on:
       - main
     paths:
       - 'src/**'
+      - 'ci/**'
       - 'Project.toml'
       - 'action.yml'
       - '.github/workflows/benchmarks.yml'
@@ -20,6 +21,7 @@ on:
       - main
     paths:
       - 'src/**'
+      - 'ci/**'
       - 'Project.toml'
       - 'action.yml'
       - '.github/workflows/benchmarks.yml'
