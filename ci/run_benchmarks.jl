@@ -7,20 +7,32 @@ commit_sha = get(ENV, "GITHUB_SHA", "")
 
 action_path = joinpath(@__DIR__, "..")
 
+benchmark_script_abs = !isempty(benchmark_script) ? abspath(benchmark_script) : ""
+is_external = !isempty(benchmark_script_abs) && isfile(benchmark_script_abs)
+
+if !is_external
+    benchmark_project = joinpath(action_path, "benchmarks", group_name)
+    if isdir(benchmark_project)
+        Pkg.activate(benchmark_project)
+        Pkg.instantiate()
+    else
+        error("Unknown group: $group_name. Provide benchmark_script for external use.")
+    end
+end
+
 using BenchmarkTools
 
-benchmark_script_abs = abspath(benchmark_script)
-if !isempty(benchmark_script) && isfile(benchmark_script_abs)
+if is_external
     include(benchmark_script_abs)
     suite = SUITE
-elseif group_name == "trixi" && isfile(joinpath(action_path, "src/benchmarks_trixi.jl"))
+elseif group_name == "trixi"
     include(joinpath(action_path, "src/benchmarks_trixi.jl"))
     suite = SUITE
-elseif group_name == "enzyme" && isfile(joinpath(action_path, "src/benchmarks_enzyme.jl"))
+elseif group_name == "enzyme"
     include(joinpath(action_path, "src/benchmarks_enzyme.jl"))
     suite = SUITE_ENZYME
 else
-    error("No benchmark script found. Provide benchmark_script input or use built-in group (trixi, enzyme).")
+    error("No benchmark script found.")
 end
 
 Pkg.activate(action_path)
