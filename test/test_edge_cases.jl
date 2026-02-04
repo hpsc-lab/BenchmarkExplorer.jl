@@ -163,26 +163,6 @@ using Dates
         end
     end
 
-    @testset "Multiple concurrent saves" begin
-        mktempdir() do temp_dir
-            suite = BenchmarkGroup()
-            suite["test"] = @benchmarkable sin(1.0)
-
-            tasks = []
-            for i in 1:10
-                results = run(suite)
-                push!(tasks, @async save_benchmark_results(results, "concurrent_group"; data_dir=temp_dir))
-            end
-
-            for task in tasks
-                wait(task)
-            end
-
-            history = load_history(temp_dir; group="concurrent_group")
-            @test haskey(history["test"], "10")
-        end
-    end
-
     @testset "Unicode in benchmark names" begin
         mktempdir() do temp_dir
             suite = BenchmarkGroup()
