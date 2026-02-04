@@ -1,17 +1,18 @@
 using JSON
 using Dates
-using Downloads
 
 const NANOSOLDIER_REPO = "https://api.github.com/repos/JuliaCI/NanosoldierReports/contents"
 const RAW_URL = "https://raw.githubusercontent.com/JuliaCI/NanosoldierReports/master"
 
 function fetch_json(url::String)
+    Downloads = Base.require(Base, :Downloads)
     buf = IOBuffer()
     Downloads.download(url, buf)
     return JSON.parse(String(take!(buf)))
 end
 
 function fetch_raw(url::String)
+    Downloads = Base.require(Base, :Downloads)
     buf = IOBuffer()
     Downloads.download(url, buf)
     return take!(buf)

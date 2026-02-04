@@ -37,4 +37,7 @@ end
     include("test_extended_fields.jl")
     include("test_error_handling.jl")
     include("test_markdown_report.jl")
+    include("test_nanosoldier.jl")
+    include("test_edge_cases.jl")
+    include("test_scripts.jl")
 end
