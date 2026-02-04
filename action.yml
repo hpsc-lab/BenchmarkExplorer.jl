@@ -13,9 +13,9 @@ inputs:
     default: 'src/benchmarks_trixi.jl'
 
   benchmark_project:
-    description: 'Path to Julia project directory for benchmark (if different from main). Leave empty to use main project.'
+    description: 'Value passed to the --project flag. The default value is the repository root: "@."'
     required: false
-    default: ''
+    default: '@.'
 
   data_dir:
     description: 'Path to data directory (default: data)'
@@ -84,6 +84,13 @@ runs:
         mkdir -p ${{ inputs.data_dir }}/by_hash
         git archive origin/${{ inputs.persist_to_branch }} ${{ inputs.persist_path }}by_hash | tar -x -C ${{ inputs.data_dir }} 2>/dev/null || true
 
+    - name: Instantiate user project
+      run: |
+        import Pkg
+        Pkg.resolve()
+        Pkg.instantiate()
+      shell: julia --color=yes --project=${{ inputs.benchmark_project }} {0}
+
     - name: Run benchmarks
       id: run_benchmarks
       shell: bash
@@ -91,7 +98,9 @@ runs:
         BENCHMARK_GROUP: ${{ inputs.group_name }}
         GITHUB_SHA: ${{ github.sha }}
       run: |
-        julia ${{ github.action_path }}/ci/run_benchmarks.jl "${{ inputs.data_dir }}" "${{ inputs.group_name }}"
+        julia --color=yes --project=${{ inputs.benchmark_project }} \
+          ${{ github.action_path }}/ci/run_benchmarks.jl \
+          "${{ inputs.data_dir }}" "${{ inputs.group_name }}" "${{ inputs.benchmark_script }}"
 
     - name: Install dependencies for HTML generation
       if: inputs.persist_to_branch != ''
