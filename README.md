@@ -92,10 +92,9 @@ jobs:
 ## Documentation
 
 - **[Quick Start Guide](docs/QUICK_START.md)** - Get started in 5 minutes
-- **[Unified Architecture](docs/UNIFIED_ARCHITECTURE.md)** - New dual-mode system
-- [Development Guide](DEVELOPMENT.md) - Architecture and implementation details
+- **[External Setup](docs/EXTERNAL_SETUP.md)** - Use in your own repository
+- [Unified Architecture](docs/UNIFIED_ARCHITECTURE.md) - Dual-mode system
 - [Data Structure](docs/DATA_STRUCTURE.md) - Storage format specification
-- [CI Setup](docs/BENCHMARK_CI.md) - Complete CI integration guide
 
 ## Data Organization
 

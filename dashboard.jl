@@ -609,6 +609,7 @@ function start_dashboard(data_dir="data"; port=8000)
         return HTTP.Response(404, ["Content-Type" => "text/html"], "<h1>404 - Not Found</h1>")
     end)
 
+index.html:415 
     return server
 end
 

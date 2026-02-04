@@ -131,7 +131,6 @@ function prepare_plot_data(history, benchmark_path;
         push!(commit_hashes, get(data, "commit_hash", "unknown"))
         push!(julia_versions, get(data, "julia_version", "unknown"))
 
-        # Collect all metrics
         push!(mean_values, get(data, "mean_time_ns", 0.0) / 1e6)
         push!(median_values, get(data, "median_time_ns", 0.0) / 1e6)
         push!(min_values, get(data, "min_time_ns", 0.0) / 1e6)

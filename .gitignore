@@ -10,11 +10,12 @@ data/*.json
 *~
 .DS_Store
 
-/Manifest.toml
-test/Manifest.toml
+**/Manifest.toml
+**/Manifest-*.toml
 *.jl.*.cov
 *.jl.cov
 *.jl.mem
 .vscode/
 .idea/
 *.md.bak
+docs/index.html
