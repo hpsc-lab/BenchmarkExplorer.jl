@@ -79,7 +79,6 @@ jobs:
       - name: Run BenchmarkExplorer
         uses: ./
         with:
-          benchmark_script: 'src/benchmarks_trixi.jl'
           data_dir: 'data'
           group_name: 'trixi'
           julia_version: '1.11'
@@ -101,7 +100,6 @@ jobs:
       - name: Run BenchmarkExplorer
         uses: ./
         with:
-          benchmark_script: 'src/benchmarks_enzyme.jl'
           data_dir: 'data'
           group_name: 'enzyme'
           julia_version: '1.11'
