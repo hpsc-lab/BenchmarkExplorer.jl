@@ -28,8 +28,45 @@ permissions:
   contents: write
 
 jobs:
+  check-changes:
+    runs-on: ubuntu-latest
+    outputs:
+      should_run: ${{ steps.check.outputs.should_run }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check if benchmarks needed
+        id: check
+        run: |
+          if [ "${{ github.event_name }}" != "schedule" ]; then
+            echo "should_run=true" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          git fetch origin gh-pages || true
+          LAST_HASH=$(git show origin/gh-pages:latest_100.json 2>/dev/null | grep -o '"commit_hash"[[:space:]]*:[[:space:]]*"[^"]*"' | head -1 | grep -o '"[^"]*"$' | tr -d '"' || echo "")
+
+          if [ -z "$LAST_HASH" ]; then
+            echo "No previous benchmark found, running"
+            echo "should_run=true" >> $GITHUB_OUTPUT
+          elif git merge-base --is-ancestor $LAST_HASH HEAD 2>/dev/null && [ "$LAST_HASH" != "${{ github.sha }}" ]; then
+            echo "New commits since last benchmark ($LAST_HASH), running"
+            echo "should_run=true" >> $GITHUB_OUTPUT
+          elif [ "$LAST_HASH" = "${{ github.sha }}" ]; then
+            echo "No changes since last benchmark, skipping"
+            echo "should_run=false" >> $GITHUB_OUTPUT
+          else
+            echo "Running benchmarks"
+            echo "should_run=true" >> $GITHUB_OUTPUT
+          fi
+
   benchmark-trixi:
     runs-on: ubuntu-latest
+    needs: check-changes
+    if: needs.check-changes.outputs.should_run == 'true'
 
     steps:
       - name: Checkout repository
@@ -50,7 +87,8 @@ jobs:
 
   benchmark-enzyme:
     runs-on: ubuntu-latest
-    needs: benchmark-trixi
+    needs: [check-changes, benchmark-trixi]
+    if: needs.check-changes.outputs.should_run == 'true'
 
     steps:
       - name: Checkout repository
@@ -77,6 +115,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
+          julia --project=. -e 'using Pkg; Pkg.instantiate()'
           julia --project=. ci/generate_index_page.jl data /tmp/index.html \
             "${{ github.server_url }}/${{ github.repository }}" "${{ github.sha }}"
 
