@@ -19,10 +19,11 @@ using Dates
         suite["test"] = @benchmarkable sin(1.0)
         results = run(suite)
 
-        @test_throws Base.IOError save_benchmark_results(
+        nonexistent = Sys.iswindows() ? "Z:\\nonexistent\\path" : "/nonexistent/path"
+        @test_throws Exception save_benchmark_results(
             results,
             "test_group";
-            data_dir="/nonexistent/path/that/does/not/exist"
+            data_dir=nonexistent
         )
     end
 
