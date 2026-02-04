@@ -9,8 +9,9 @@ action_path = joinpath(@__DIR__, "..")
 
 using BenchmarkTools
 
-if !isempty(benchmark_script) && isfile(benchmark_script)
-    include(benchmark_script)
+benchmark_script_abs = abspath(benchmark_script)
+if !isempty(benchmark_script) && isfile(benchmark_script_abs)
+    include(benchmark_script_abs)
     suite = SUITE
 elseif group_name == "trixi" && isfile(joinpath(action_path, "src/benchmarks_trixi.jl"))
     include(joinpath(action_path, "src/benchmarks_trixi.jl"))
