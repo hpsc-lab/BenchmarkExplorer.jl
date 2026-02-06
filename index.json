@@ -540,8 +540,8 @@
       "last_run_date": "2026-02-06"
     },
     "enzyme": {
-      "total_runs": 56,
-      "latest_run": 56,
+      "total_runs": 57,
+      "latest_run": 57,
       "first_run_date": "2025-12-17",
       "runs": [
         {
@@ -1047,11 +1047,20 @@
           "date": "2026-02-05",
           "timestamp": "2026-02-05T03:10:20.708",
           "file_path": "by_group/enzyme/run_56.json"
+        },
+        {
+          "run_number": 57,
+          "julia_version": "1.11.8",
+          "commit_hash": "9ed7154b276b6f1fbb0cc5fd7bc294332d83ef3d",
+          "benchmark_count": 7,
+          "date": "2026-02-06",
+          "timestamp": "2026-02-06T03:09:36.989",
+          "file_path": "by_group/enzyme/run_57.json"
         }
       ],
-      "last_run_date": "2026-02-05"
+      "last_run_date": "2026-02-06"
     }
   },
-  "last_updated": "2026-02-06T03:05:38.897",
+  "last_updated": "2026-02-06T03:09:38.677",
   "version": "2.0"
 }
