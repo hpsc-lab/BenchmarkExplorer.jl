@@ -1,10 +1,10 @@
-# Run #61 - 2026-02-08
+# Run #59 - 2026-02-08
 
-Julia 1.11.8 | 24 benchmarks
+Julia 1.11.8 | 7 benchmarks
  | 9ed7154
 
 ## Significant Changes (>5%)
 
 | Benchmark | Time (ms) | Prev (ms) | Change |
 |-----------|-----------|-----------|--------|
-| structured_1d_dgsem/elixir_euler_sedov.jl/p3_analysis | 0.006 | 0.007 | -5.4% |
+| basics/make_zero/array | 0.000 | 0.000 | -5.8% |
