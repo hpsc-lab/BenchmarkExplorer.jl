@@ -1,0 +1,487 @@
+{
+  "metadata": {
+    "head_hash": "00cb97f",
+    "comparison": "00cb97f_vs_bf6c31c",
+    "source": "NanosoldierReports",
+    "base_hash": "bf6c31c",
+    "imported_at": "2026-02-11T09:53:03.596"
+  },
+  "benchmarks": {
+    "[\"scalar\", \"arithmetic\", (\"div\", \"UInt64\", \"BigFloat\")]": {
+      "time_ratio": 1.01,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"sub\", \"BigFloat\", \"Float64\")]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum2\", \"BigFloat\", 1)]": {
+      "time_ratio": 1.21,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"sub\", \"BigFloat\", \"Complex{Int64}\")]": {
+      "time_ratio": 1.24,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"mul\", \"BigFloat\", \"ComplexF32\")]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"mul\", \"BigInt\", \"BigFloat\")]": {
+      "time_ratio": 1.13,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"sub\", \"ComplexF32\", \"BigFloat\")]": {
+      "time_ratio": 1.11,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"add\", \"Complex{BigFloat}\", \"BigFloat\")]": {
+      "time_ratio": 1.12,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"div\", \"Float32\", \"BigFloat\")]": {
+      "time_ratio": 1.01,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"*\", \"BigFloat\", \"(false, true)\")]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"add\", \"BigFloat\", \"ComplexF64\")]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"mul\", \"BigFloat\", \"Float32\")]": {
+      "time_ratio": 1.03,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"add\", \"UInt64\", \"BigFloat\")]": {
+      "time_ratio": 1.04,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"sub\", \"Complex{Int64}\", \"BigFloat\")]": {
+      "time_ratio": 1.18,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"div\", \"BigFloat\", \"Complex{UInt64}\")]": {
+      "time_ratio": 1.12,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"div\", \"Complex{BigFloat}\", \"BigFloat\")]": {
+      "time_ratio": 1.02,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"sub\", \"BigFloat\", \"Complex{BigFloat}\")]": {
+      "time_ratio": 1.25,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"div\", \"BigFloat\", \"UInt64\")]": {
+      "time_ratio": 1.16,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_binaryop\", \"*\", \"BigFloat\", \"(false, false)\")]": {
+      "time_ratio": 1.11,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"add\", \"Float64\", \"BigFloat\")]": {
+      "time_ratio": 0.99,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"div\", \"Complex{UInt64}\", \"BigFloat\")]": {
+      "time_ratio": 1.03,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"abs\", \"BigFloat\", 0)]": {
+      "time_ratio": 1.16,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"mul\", \"BigFloat\", \"Complex{UInt64}\")]": {
+      "time_ratio": 1.2,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"fastmath\", (\"mul\", \"BigFloat\")]": {
+      "time_ratio": 1.04,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"mul\", \"ComplexF64\", \"BigFloat\")]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"sub\", \"BigFloat\", \"ComplexF64\")]": {
+      "time_ratio": 1.15,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"add\", \"BigFloat\", \"UInt64\")]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"div\", \"ComplexF32\", \"BigFloat\")]": {
+      "time_ratio": 1.02,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"div\", \"BigFloat\", \"ComplexF32\")]": {
+      "time_ratio": 1.15,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"mul\", \"Complex{BigInt}\", \"BigFloat\")]": {
+      "time_ratio": 1.19,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"mul\", \"BigFloat\", \"Int64\")]": {
+      "time_ratio": 1.18,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"div\", \"ComplexF64\", \"BigFloat\")]": {
+      "time_ratio": 1.01,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"fastmath\", (\"sub\", \"BigFloat\")]": {
+      "time_ratio": 1.14,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"div\", \"BigFloat\", \"ComplexF64\")]": {
+      "time_ratio": 1.14,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"add\", \"Complex{BigInt}\", \"BigFloat\")]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"add\", \"ComplexF32\", \"BigFloat\")]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"mul\", \"BigFloat\", \"ComplexF64\")]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"sub\", \"BigFloat\", \"BigInt\")]": {
+      "time_ratio": 1.11,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"abs\", \"BigFloat\", 0)]": {
+      "time_ratio": 1.17,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"div\", \"BigFloat\", \"Complex{BigFloat}\")]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"sub\", \"BigFloat\", \"Int64\")]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"sub\", \"Float32\", \"BigFloat\")]": {
+      "time_ratio": 1.04,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"mul\", \"BigFloat\", \"UInt64\")]": {
+      "time_ratio": 1.17,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"*\", \"BigFloat\", \"(true, true)\")]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"mul\", \"UInt64\", \"BigFloat\")]": {
+      "time_ratio": 1.18,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"sum\", \"BigFloat\", 0)]": {
+      "time_ratio": 1.17,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"mul\", \"Complex{UInt64}\", \"BigFloat\")]": {
+      "time_ratio": 1.2,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"sub\", \"Int64\", \"BigFloat\")]": {
+      "time_ratio": 1.13,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"div\", \"BigFloat\", \"Int64\")]": {
+      "time_ratio": 1.12,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"sub\", \"Complex{BigFloat}\", \"BigFloat\")]": {
+      "time_ratio": 1.27,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"mul\", \"Complex{Int64}\", \"BigFloat\")]": {
+      "time_ratio": 1.19,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"add\", \"BigInt\", \"BigFloat\")]": {
+      "time_ratio": 1.02,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"add\", \"ComplexF64\", \"BigFloat\")]": {
+      "time_ratio": 1.04,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"mul\", \"Float64\", \"BigFloat\")]": {
+      "time_ratio": 0.99,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum\", \"BigFloat\", 0)]": {
+      "time_ratio": 1.22,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"mul\", \"BigFloat\", \"Complex{Int64}\")]": {
+      "time_ratio": 1.22,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"div\", \"Int64\", \"BigFloat\")]": {
+      "time_ratio": 1.01,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"div\", \"BigFloat\", \"Complex{BigInt}\")]": {
+      "time_ratio": 1.12,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"fastmath\", (\"div\", \"BigFloat\")]": {
+      "time_ratio": 1.01,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"sub\", \"BigFloat\", \"ComplexF32\")]": {
+      "time_ratio": 1.13,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"add\", \"Float32\", \"BigFloat\")]": {
+      "time_ratio": 0.98,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"add\", \"BigFloat\", \"BigFloat\")]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"add\", \"BigFloat\", \"ComplexF32\")]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"sub\", \"Complex{BigInt}\", \"BigFloat\")]": {
+      "time_ratio": 1.19,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"mul\", \"BigFloat\", \"Float64\")]": {
+      "time_ratio": 1.02,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"div\", \"BigFloat\", \"Float64\")]": {
+      "time_ratio": 1.02,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"add\", \"BigFloat\", \"Int64\")]": {
+      "time_ratio": 0.99,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"div\", \"BigInt\", \"BigFloat\")]": {
+      "time_ratio": 1.02,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"sub\", \"ComplexF64\", \"BigFloat\")]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"div\", \"BigFloat\", \"BigInt\")]": {
+      "time_ratio": 1.16,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"mul\", \"Int64\", \"BigFloat\")]": {
+      "time_ratio": 1.2,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"mul\", \"Float32\", \"BigFloat\")]": {
+      "time_ratio": 1.03,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"mul\", \"BigFloat\", \"Complex{BigInt}\")]": {
+      "time_ratio": 1.2,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum4\", \"BigFloat\", 0)]": {
+      "time_ratio": 1.23,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"add\", \"BigFloat\", \"Complex{BigInt}\")]": {
+      "time_ratio": 1.45,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"div\", \"BigFloat\", \"BigFloat\")]": {
+      "time_ratio": 1.01,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"div\", \"BigFloat\", \"Complex{Int64}\")]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"fastmath\", (\"add\", \"BigFloat\")]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"*\", \"BigFloat\", \"(true, true)\")]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_binaryop\", \"*\", \"BigFloat\", \"(false, true)\")]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"sub\", \"BigFloat\", \"UInt64\")]": {
+      "time_ratio": 1.12,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"sub\", \"Float64\", \"BigFloat\")]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"abs\", \"BigFloat\", 1)]": {
+      "time_ratio": 1.13,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"add\", \"BigFloat\", \"Complex{BigFloat}\")]": {
+      "time_ratio": 1.11,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"div\", \"Float64\", \"BigFloat\")]": {
+      "time_ratio": 1.01,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"div\", \"Complex{BigInt}\", \"BigFloat\")]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"div\", \"Complex{Int64}\", \"BigFloat\")]": {
+      "time_ratio": 1.03,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum4\", \"BigFloat\", 1)]": {
+      "time_ratio": 1.23,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"add\", \"Int64\", \"BigFloat\")]": {
+      "time_ratio": 1.02,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum3\", \"BigFloat\", 1)]": {
+      "time_ratio": 1.21,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"mul\", \"ComplexF32\", \"BigFloat\")]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum3\", \"BigFloat\", 0)]": {
+      "time_ratio": 1.23,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"sub\", \"BigInt\", \"BigFloat\")]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"add\", \"BigFloat\", \"Complex{Int64}\")]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum\", \"BigFloat\", 1)]": {
+      "time_ratio": 1.22,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"mul\", \"BigFloat\", \"BigFloat\")]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"sub\", \"UInt64\", \"BigFloat\")]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"add\", \"BigFloat\", \"BigInt\")]": {
+      "time_ratio": 1.03,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"*\", \"BigFloat\", \"(false, true)\")]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"add\", \"Complex{Int64}\", \"BigFloat\")]": {
+      "time_ratio": 1.11,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"sub\", \"Complex{UInt64}\", \"BigFloat\")]": {
+      "time_ratio": 1.13,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"add\", \"BigFloat\", \"Float32\")]": {
+      "time_ratio": 1.0,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"add\", \"BigFloat\", \"Complex{UInt64}\")]": {
+      "time_ratio": 1.11,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"add\", \"BigFloat\", \"Float64\")]": {
+      "time_ratio": 0.99,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"sub\", \"BigFloat\", \"BigFloat\")]": {
+      "time_ratio": 1.16,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"sub\", \"BigFloat\", \"Float32\")]": {
+      "time_ratio": 1.04,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"sub\", \"BigFloat\", \"Complex{BigInt}\")]": {
+      "time_ratio": 1.17,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"abs\", \"BigFloat\", 1)]": {
+      "time_ratio": 1.13,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum2\", \"BigFloat\", 0)]": {
+      "time_ratio": 1.22,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"add\", \"Complex{UInt64}\", \"BigFloat\")]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"*\", \"BigFloat\", \"(false, false)\")]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_binaryop\", \"*\", \"BigFloat\", \"(true, true)\")]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"perf_sumskipmissing\", \"BigFloat\", 0)]": {
+      "time_ratio": 1.23,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"div\", \"BigFloat\", \"Float32\")]": {
+      "time_ratio": 1.03,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"mul\", \"BigFloat\", \"BigInt\")]": {
+      "time_ratio": 1.18,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"mul\", \"BigFloat\", \"Complex{BigFloat}\")]": {
+      "time_ratio": 1.13,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"mul\", \"Complex{BigFloat}\", \"BigFloat\")]": {
+      "time_ratio": 1.12,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"sub\", \"BigFloat\", \"Complex{UInt64}\")]": {
+      "time_ratio": 1.22,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"*\", \"BigFloat\", \"(false, false)\")]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    }
+  }
+}

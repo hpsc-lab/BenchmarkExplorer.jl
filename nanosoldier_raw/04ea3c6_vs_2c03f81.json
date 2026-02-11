@@ -1,0 +1,111 @@
+{
+  "metadata": {
+    "head_hash": "04ea3c6",
+    "comparison": "04ea3c6_vs_2c03f81",
+    "source": "NanosoldierReports",
+    "base_hash": "2c03f81",
+    "imported_at": "2026-02-11T09:53:06.734"
+  },
+  "benchmarks": {
+    "[\"sort\", \"insertionsort\", (\"sort forwards\", \"descending\")]": {
+      "time_ratio": 1.3,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"abs\", \"Int64\", 0)]": {
+      "time_ratio": 1.68,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"identity\", \"Bool\", 1)]": {
+      "time_ratio": 0.79,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"foldl\", \"foldl(+, filter(...))\"]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum3\", \"BigFloat\", 0)]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum2\", \"BigFloat\", 1)]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum\", \"BigFloat\", 1)]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", (\"sort! forwards\", \"descending\")]": {
+      "time_ratio": 1.3,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_countequals\", \"Float64\")]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"collect\", \"all\", \"Bool\", 1)]": {
+      "time_ratio": 0.78,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"identity\", \"ComplexF64\", 1)]": {
+      "time_ratio": 0.9,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"collect\", \"all\", \"ComplexF64\", 1)]": {
+      "time_ratio": 0.9,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", (\"sort! forwards\", \"ascending\")]": {
+      "time_ratio": 0.66,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum4\", \"BigFloat\", 0)]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum2\", \"BigFloat\", 0)]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", (\"sort reverse\", \"ascending\")]": {
+      "time_ratio": 1.5,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", (\"sort! reverse\", \"ascending\")]": {
+      "time_ratio": 1.5,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", (\"sort forwards\", \"random\")]": {
+      "time_ratio": 1.51,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"foldl\", \"foldl(+, filter(...); init = 0.0)\"]": {
+      "time_ratio": 2.85,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", (\"sort! reverse\", \"random\")]": {
+      "time_ratio": 0.66,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", (\"sort reverse\", \"random\")]": {
+      "time_ratio": 0.66,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum4\", \"BigFloat\", 1)]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", (\"sort! forwards\", \"random\")]": {
+      "time_ratio": 1.5,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum\", \"BigFloat\", 0)]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum3\", \"BigFloat\", 1)]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    }
+  }
+}

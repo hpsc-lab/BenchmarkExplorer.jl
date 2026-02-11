@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "head_hash": "018a9ae",
+    "comparison": "018a9ae_vs_74fc310",
+    "source": "NanosoldierReports",
+    "base_hash": "74fc310",
+    "imported_at": "2026-02-11T09:53:04.202"
+  },
+  "benchmarks": {
+    "[\"linalg\", \"arithmetic\", (\"\\\\\", \"HermitianSparseWithNonZeroPivots\", \"Vector\", 1024)]": {
+      "time_ratio": 3.08,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"sparse solves\", \"square system (default), vector rhs\"]": {
+      "time_ratio": 1.28,
+      "memory_ratio": 1.0
+    },
+    "[\"linalg\", \"arithmetic\", (\"\\\\\", \"HermitianSparseWithNonZeroPivots\", \"Vector\", 256)]": {
+      "time_ratio": 3.43,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"sparse solves\", \"square system (default), matrix rhs\"]": {
+      "time_ratio": 1.3,
+      "memory_ratio": 1.0
+    }
+  }
+}

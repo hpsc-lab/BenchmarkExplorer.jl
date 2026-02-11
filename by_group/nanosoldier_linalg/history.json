@@ -1,0 +1,68 @@
+{
+  "linalg/arithmetic/(\\\\/HermitianSparseWithNonZeroPivots/Vector/256)": {
+    "9": {
+      "max_time_ns": 3.6015e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 3.2585e8,
+      "mean_time_ns": 3.43e8,
+      "samples": 1,
+      "commit_hash": "018a9ae",
+      "timestamp": "2026-02-11T09:53:04.202",
+      "median_time_ns": 3.43e8,
+      "memory_bytes": 0
+    }
+  },
+  "linalg/small exp #29116": {
+    "26": {
+      "max_time_ns": 1.1445000000000001e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 1.0355000000000001e8,
+      "mean_time_ns": 1.0900000000000001e8,
+      "samples": 1,
+      "commit_hash": "06b2bf2",
+      "timestamp": "2026-02-11T09:53:06.985",
+      "median_time_ns": 1.0900000000000001e8,
+      "memory_bytes": 0
+    },
+    "7": {
+      "max_time_ns": 1.1445000000000001e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 1.0355000000000001e8,
+      "mean_time_ns": 1.0900000000000001e8,
+      "samples": 1,
+      "commit_hash": "016630a",
+      "timestamp": "2026-02-11T09:53:03.899",
+      "median_time_ns": 1.0900000000000001e8,
+      "memory_bytes": 0
+    },
+    "11": {
+      "max_time_ns": 9.975e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 9.025e7,
+      "mean_time_ns": 9.5e7,
+      "samples": 1,
+      "commit_hash": "01d6fae",
+      "timestamp": "2026-02-11T09:53:04.525",
+      "median_time_ns": 9.5e7,
+      "memory_bytes": 0
+    }
+  },
+  "linalg/arithmetic/(\\\\/HermitianSparseWithNonZeroPivots/Vector/1024)": {
+    "9": {
+      "max_time_ns": 3.234e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 2.926e8,
+      "mean_time_ns": 3.08e8,
+      "samples": 1,
+      "commit_hash": "018a9ae",
+      "timestamp": "2026-02-11T09:53:04.202",
+      "median_time_ns": 3.08e8,
+      "memory_bytes": 0
+    }
+  }
+}

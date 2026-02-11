@@ -1,0 +1,163 @@
+{
+  "metadata": {
+    "head_hash": "0425751",
+    "comparison": "0425751_vs_61c0b41",
+    "source": "NanosoldierReports",
+    "base_hash": "61c0b41",
+    "imported_at": "2026-02-11T09:53:05.503"
+  },
+  "benchmarks": {
+    "[\"sort\", \"quicksort\", (\"sortperm! forwards\", \"random\")]": {
+      "time_ratio": 1.01,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"sort\", \"Float32\", 0)]": {
+      "time_ratio": 0.22,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"sort\", \"Union{Nothing, Bool}\", 0)]": {
+      "time_ratio": 1.39,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"sort\", \"BigInt\", 0)]": {
+      "time_ratio": 0.79,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"sort\", \"Float64\", 0)]": {
+      "time_ratio": 0.65,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"quicksort\", (\"sortperm! reverse\", \"ascending\")]": {
+      "time_ratio": 1.0,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"quicksort\", (\"sortperm! reverse\", \"ones\")]": {
+      "time_ratio": 0.97,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"quicksort\", (\"sortperm! reverse\", \"random\")]": {
+      "time_ratio": 1.0,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"sort\", \"Int64\", 0)]": {
+      "time_ratio": 0.79,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"sort\", \"Union{Nothing, BigInt}\", 0)]": {
+      "time_ratio": 0.88,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"quicksort\", (\"sortperm! forwards\", \"descending\")]": {
+      "time_ratio": 1.01,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", (\"sortperm! forwards\", \"ascending\")]": {
+      "time_ratio": 1.01,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"quicksort\", (\"sortperm! reverse\", \"descending\")]": {
+      "time_ratio": 1.01,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"sort\", \"Union{Missing, Float32}\", 1)]": {
+      "time_ratio": 0.22,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", (\"sortperm! reverse\", \"random\")]": {
+      "time_ratio": 1.0,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"sort\", \"Union{Nothing, Float64}\", 0)]": {
+      "time_ratio": 0.76,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"sort\", \"Union{Nothing, Int64}\", 0)]": {
+      "time_ratio": 0.74,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"sort\", \"BigFloat\", 0)]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"quicksort\", (\"sortperm! forwards\", \"ascending\")]": {
+      "time_ratio": 1.01,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"sort\", \"Union{Missing, Int64}\", 1)]": {
+      "time_ratio": 0.47,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"quicksort\", (\"sortperm! forwards\", \"ones\")]": {
+      "time_ratio": 0.97,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", (\"sortperm! reverse\", \"descending\")]": {
+      "time_ratio": 1.01,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", (\"sortperm! reverse\", \"ascending\")]": {
+      "time_ratio": 1.0,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"sort\", \"Union{Missing, Float64}\", 1)]": {
+      "time_ratio": 0.47,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"sort\", \"Bool\", 0)]": {
+      "time_ratio": 0.07,
+      "memory_ratio": 1.0
+    },
+    "[\"micro\", \"fib\"]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", (\"sortperm! forwards\", \"ones\")]": {
+      "time_ratio": 0.88,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"sort\", \"Union{Missing, Int8}\", 1)]": {
+      "time_ratio": 0.07,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", (\"sortperm! forwards\", \"descending\")]": {
+      "time_ratio": 1.0,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"sort\", \"Union{Nothing, Float32}\", 0)]": {
+      "time_ratio": 0.78,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", (\"sortperm! forwards\", \"random\")]": {
+      "time_ratio": 1.0,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"sort\", \"Union{Nothing, Int8}\", 0)]": {
+      "time_ratio": 0.65,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"sort\", \"Union{Missing, Bool}\", 1)]": {
+      "time_ratio": 0.05,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"sort\", \"Int8\", 0)]": {
+      "time_ratio": 0.03,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"sort\", \"Union{Missing, BigFloat}\", 1)]": {
+      "time_ratio": 1.02,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", (\"sortperm! reverse\", \"ones\")]": {
+      "time_ratio": 0.87,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"sort\", \"Union{Nothing, BigFloat}\", 0)]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"sort\", \"Union{Missing, BigInt}\", 1)]": {
+      "time_ratio": 0.78,
+      "memory_ratio": 1.0
+    }
+  }
+}

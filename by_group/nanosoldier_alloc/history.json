@@ -1,0 +1,30 @@
+{
+  "alloc/strings": {
+    "7": {
+      "max_time_ns": 1.1025e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 9.975e7,
+      "mean_time_ns": 1.05e8,
+      "samples": 1,
+      "commit_hash": "016630a",
+      "timestamp": "2026-02-11T09:53:03.899",
+      "median_time_ns": 1.05e8,
+      "memory_bytes": 0
+    }
+  },
+  "alloc/arrays": {
+    "7": {
+      "max_time_ns": 9.87e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 8.93e7,
+      "mean_time_ns": 9.4e7,
+      "samples": 1,
+      "commit_hash": "016630a",
+      "timestamp": "2026-02-11T09:53:03.899",
+      "median_time_ns": 9.4e7,
+      "memory_bytes": 0
+    }
+  }
+}

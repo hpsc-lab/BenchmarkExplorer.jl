@@ -1,0 +1,1008 @@
+{
+  "sparse/index/(spmat/col/array/1000)": {
+    "19": {
+      "max_time_ns": 7.35e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 6.65e7,
+      "mean_time_ns": 7.0e7,
+      "samples": 1,
+      "commit_hash": "03de024",
+      "timestamp": "2026-02-11T09:53:05.411",
+      "median_time_ns": 7.0e7,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/matmul/(At_mul_B/dense 5x5/sparse 5x500 -> dense 5x500)": {
+    "19": {
+      "max_time_ns": 6.089999999999999e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 5.509999999999999e7,
+      "mean_time_ns": 5.799999999999999e7,
+      "samples": 1,
+      "commit_hash": "03de024",
+      "timestamp": "2026-02-11T09:53:05.411",
+      "median_time_ns": 5.799999999999999e7,
+      "memory_bytes": 0
+    },
+    "8": {
+      "max_time_ns": 1.8375e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 1.6625e8,
+      "mean_time_ns": 1.75e8,
+      "samples": 1,
+      "commit_hash": "017b515",
+      "timestamp": "2026-02-11T09:53:04.079",
+      "median_time_ns": 1.75e8,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/matmul/(A_mul_Bt/sparse 500x500/dense 5x500 -> dense 500x5)": {
+    "19": {
+      "max_time_ns": 7.245e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 6.555e7,
+      "mean_time_ns": 6.9e7,
+      "samples": 1,
+      "commit_hash": "03de024",
+      "timestamp": "2026-02-11T09:53:05.411",
+      "median_time_ns": 6.9e7,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/constructors/(IJV/1000)": {
+    "26": {
+      "max_time_ns": 1.134e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 1.026e8,
+      "mean_time_ns": 1.08e8,
+      "samples": 1,
+      "commit_hash": "06b2bf2",
+      "timestamp": "2026-02-11T09:53:06.985",
+      "median_time_ns": 1.08e8,
+      "memory_bytes": 0
+    },
+    "8": {
+      "max_time_ns": 9.765e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 8.835e7,
+      "mean_time_ns": 9.3e7,
+      "samples": 1,
+      "commit_hash": "017b515",
+      "timestamp": "2026-02-11T09:53:04.079",
+      "median_time_ns": 9.3e7,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/sparse solves/square system (default)/matrix rhs": {
+    "9": {
+      "max_time_ns": 1.365e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 1.235e8,
+      "mean_time_ns": 1.3e8,
+      "samples": 1,
+      "commit_hash": "018a9ae",
+      "timestamp": "2026-02-11T09:53:04.202",
+      "median_time_ns": 1.3e8,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/index/(spmat/logical/10)": {
+    "19": {
+      "max_time_ns": 2.0475e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 1.8525e8,
+      "mean_time_ns": 1.95e8,
+      "samples": 1,
+      "commit_hash": "03de024",
+      "timestamp": "2026-02-11T09:53:05.411",
+      "median_time_ns": 1.95e8,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/sparse matvec/non-adjoint": {
+    "14": {
+      "max_time_ns": 1.3965e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 1.2635e8,
+      "mean_time_ns": 1.33e8,
+      "samples": 1,
+      "commit_hash": "034cca2",
+      "timestamp": "2026-02-11T09:53:04.879",
+      "median_time_ns": 1.33e8,
+      "memory_bytes": 0
+    },
+    "8": {
+      "max_time_ns": 1.281e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 1.159e8,
+      "mean_time_ns": 1.22e8,
+      "samples": 1,
+      "commit_hash": "017b515",
+      "timestamp": "2026-02-11T09:53:04.079",
+      "median_time_ns": 1.22e8,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/constructors/(IV/1000)": {
+    "8": {
+      "max_time_ns": 6.825e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 6.175e7,
+      "mean_time_ns": 6.5e7,
+      "samples": 1,
+      "commit_hash": "017b515",
+      "timestamp": "2026-02-11T09:53:04.079",
+      "median_time_ns": 6.5e7,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/matmul/(A_mul_Bt/sparse 50x500/dense 5x500 -> dense 50x5)": {
+    "19": {
+      "max_time_ns": 6.615e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 5.985e7,
+      "mean_time_ns": 6.3e7,
+      "samples": 1,
+      "commit_hash": "03de024",
+      "timestamp": "2026-02-11T09:53:05.411",
+      "median_time_ns": 6.3e7,
+      "memory_bytes": 0
+    },
+    "8": {
+      "max_time_ns": 6.93e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 6.27e7,
+      "mean_time_ns": 6.6e7,
+      "samples": 1,
+      "commit_hash": "017b515",
+      "timestamp": "2026-02-11T09:53:04.079",
+      "median_time_ns": 6.6e7,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/constructors/(Tridiagonal/1000)": {
+    "26": {
+      "max_time_ns": 1.1550000000000001e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 1.0450000000000001e8,
+      "mean_time_ns": 1.1000000000000001e8,
+      "samples": 1,
+      "commit_hash": "06b2bf2",
+      "timestamp": "2026-02-11T09:53:06.985",
+      "median_time_ns": 1.1000000000000001e8,
+      "memory_bytes": 0
+    },
+    "8": {
+      "max_time_ns": 9.555e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 8.645e7,
+      "mean_time_ns": 9.1e7,
+      "samples": 1,
+      "commit_hash": "017b515",
+      "timestamp": "2026-02-11T09:53:04.079",
+      "median_time_ns": 9.1e7,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/constructors/(SymTridiagonal/1000)": {
+    "26": {
+      "max_time_ns": 1.134e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 1.026e8,
+      "mean_time_ns": 1.08e8,
+      "samples": 1,
+      "commit_hash": "06b2bf2",
+      "timestamp": "2026-02-11T09:53:06.985",
+      "median_time_ns": 1.08e8,
+      "memory_bytes": 0
+    },
+    "8": {
+      "max_time_ns": 9.87e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 8.93e7,
+      "mean_time_ns": 9.4e7,
+      "samples": 1,
+      "commit_hash": "017b515",
+      "timestamp": "2026-02-11T09:53:04.079",
+      "median_time_ns": 9.4e7,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/index/(spmat/col/logical/100)": {
+    "19": {
+      "max_time_ns": 1.7745e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 1.6055e8,
+      "mean_time_ns": 1.69e8,
+      "samples": 1,
+      "commit_hash": "03de024",
+      "timestamp": "2026-02-11T09:53:05.411",
+      "median_time_ns": 1.69e8,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/sparse solves/square system (ldlt)/matrix rhs": {
+    "19": {
+      "max_time_ns": 9.03e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 8.17e7,
+      "mean_time_ns": 8.6e7,
+      "samples": 1,
+      "commit_hash": "03de024",
+      "timestamp": "2026-02-11T09:53:05.411",
+      "median_time_ns": 8.6e7,
+      "memory_bytes": 0
+    },
+    "8": {
+      "max_time_ns": 9.87e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 8.93e7,
+      "mean_time_ns": 9.4e7,
+      "samples": 1,
+      "commit_hash": "017b515",
+      "timestamp": "2026-02-11T09:53:04.079",
+      "median_time_ns": 9.4e7,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/matmul/(At_mul_B/sparse 500x500/dense 500x5 -> dense 500x5)": {
+    "19": {
+      "max_time_ns": 1.533e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 1.387e8,
+      "mean_time_ns": 1.46e8,
+      "samples": 1,
+      "commit_hash": "03de024",
+      "timestamp": "2026-02-11T09:53:05.411",
+      "median_time_ns": 1.46e8,
+      "memory_bytes": 0
+    },
+    "8": {
+      "max_time_ns": 1.5855e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 1.4345e8,
+      "mean_time_ns": 1.51e8,
+      "samples": 1,
+      "commit_hash": "017b515",
+      "timestamp": "2026-02-11T09:53:04.079",
+      "median_time_ns": 1.51e8,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/matmul/(Ac_mul_B/sparse 500x500/dense 500x5 -> dense 500x5)": {
+    "16": {
+      "max_time_ns": 6.72e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 6.08e7,
+      "mean_time_ns": 6.4e7,
+      "samples": 1,
+      "commit_hash": "0371bf4",
+      "timestamp": "2026-02-11T09:53:05.038",
+      "median_time_ns": 6.4e7,
+      "memory_bytes": 0
+    },
+    "8": {
+      "max_time_ns": 7.35e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 6.65e7,
+      "mean_time_ns": 7.0e7,
+      "samples": 1,
+      "commit_hash": "017b515",
+      "timestamp": "2026-02-11T09:53:04.079",
+      "median_time_ns": 7.0e7,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/sparse solves/square system (default)/vector rhs": {
+    "9": {
+      "max_time_ns": 1.344e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 1.216e8,
+      "mean_time_ns": 1.28e8,
+      "samples": 1,
+      "commit_hash": "018a9ae",
+      "timestamp": "2026-02-11T09:53:04.202",
+      "median_time_ns": 1.28e8,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/matmul/(Ac_mul_B/dense 50x50/sparse 50x50 -> dense 50x50)": {
+    "16": {
+      "max_time_ns": 7.245e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 6.555e7,
+      "mean_time_ns": 6.9e7,
+      "samples": 1,
+      "commit_hash": "0371bf4",
+      "timestamp": "2026-02-11T09:53:05.038",
+      "median_time_ns": 6.9e7,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/constructors/(Diagonal/10)": {
+    "4": {
+      "max_time_ns": 9.66e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 8.74e7,
+      "mean_time_ns": 9.2e7,
+      "samples": 1,
+      "commit_hash": "0063f9a",
+      "timestamp": "2026-02-11T09:53:03.454",
+      "median_time_ns": 9.2e7,
+      "memory_bytes": 0
+    },
+    "19": {
+      "max_time_ns": 3.255e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 2.945e8,
+      "mean_time_ns": 3.1e8,
+      "samples": 1,
+      "commit_hash": "03de024",
+      "timestamp": "2026-02-11T09:53:05.411",
+      "median_time_ns": 3.1e8,
+      "memory_bytes": 0
+    },
+    "7": {
+      "max_time_ns": 9.87e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 8.93e7,
+      "mean_time_ns": 9.4e7,
+      "samples": 1,
+      "commit_hash": "016630a",
+      "timestamp": "2026-02-11T09:53:03.899",
+      "median_time_ns": 9.4e7,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/index/(spmat/range/10)": {
+    "19": {
+      "max_time_ns": 2.688e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 2.432e8,
+      "mean_time_ns": 2.56e8,
+      "samples": 1,
+      "commit_hash": "03de024",
+      "timestamp": "2026-02-11T09:53:05.411",
+      "median_time_ns": 2.56e8,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/matmul/(At_mul_Bt!/sparse 400x4000/dense 40x400 -> dense 4000x40)": {
+    "7": {
+      "max_time_ns": 1.491e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 1.349e8,
+      "mean_time_ns": 1.42e8,
+      "samples": 1,
+      "commit_hash": "016630a",
+      "timestamp": "2026-02-11T09:53:03.899",
+      "median_time_ns": 1.42e8,
+      "memory_bytes": 0
+    },
+    "8": {
+      "max_time_ns": 1.6485e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 1.4915e8,
+      "mean_time_ns": 1.57e8,
+      "samples": 1,
+      "commit_hash": "017b515",
+      "timestamp": "2026-02-11T09:53:04.079",
+      "median_time_ns": 1.57e8,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/matmul/(Ac_mul_B/sparse 50x50/dense 50x50 -> dense 50x50)": {
+    "16": {
+      "max_time_ns": 6.825e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 6.175e7,
+      "mean_time_ns": 6.5e7,
+      "samples": 1,
+      "commit_hash": "0371bf4",
+      "timestamp": "2026-02-11T09:53:05.038",
+      "median_time_ns": 6.5e7,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/matmul/(At_mul_B!/sparse 400x4000/dense 400x40 -> dense 4000x40)": {
+    "19": {
+      "max_time_ns": 6.93e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 6.27e7,
+      "mean_time_ns": 6.6e7,
+      "samples": 1,
+      "commit_hash": "03de024",
+      "timestamp": "2026-02-11T09:53:05.411",
+      "median_time_ns": 6.6e7,
+      "memory_bytes": 0
+    },
+    "16": {
+      "max_time_ns": 6.195e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 5.605e7,
+      "mean_time_ns": 5.9e7,
+      "samples": 1,
+      "commit_hash": "0371bf4",
+      "timestamp": "2026-02-11T09:53:05.038",
+      "median_time_ns": 5.9e7,
+      "memory_bytes": 0
+    },
+    "8": {
+      "max_time_ns": 7.245e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 6.555e7,
+      "mean_time_ns": 6.9e7,
+      "samples": 1,
+      "commit_hash": "017b515",
+      "timestamp": "2026-02-11T09:53:04.079",
+      "median_time_ns": 6.9e7,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/constructors/(Tridiagonal/10)": {
+    "19": {
+      "max_time_ns": 2.9925e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 2.7075e8,
+      "mean_time_ns": 2.85e8,
+      "samples": 1,
+      "commit_hash": "03de024",
+      "timestamp": "2026-02-11T09:53:05.411",
+      "median_time_ns": 2.85e8,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/constructors/(Bidiagonal/1000)": {
+    "26": {
+      "max_time_ns": 1.2074999999999999e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 1.0924999999999999e8,
+      "mean_time_ns": 1.1499999999999999e8,
+      "samples": 1,
+      "commit_hash": "06b2bf2",
+      "timestamp": "2026-02-11T09:53:06.985",
+      "median_time_ns": 1.1499999999999999e8,
+      "memory_bytes": 0
+    },
+    "8": {
+      "max_time_ns": 9.66e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 8.74e7,
+      "mean_time_ns": 9.2e7,
+      "samples": 1,
+      "commit_hash": "017b515",
+      "timestamp": "2026-02-11T09:53:04.079",
+      "median_time_ns": 9.2e7,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/constructors/(SymTridiagonal/10)": {
+    "19": {
+      "max_time_ns": 2.8665e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 2.5935e8,
+      "mean_time_ns": 2.73e8,
+      "samples": 1,
+      "commit_hash": "03de024",
+      "timestamp": "2026-02-11T09:53:05.411",
+      "median_time_ns": 2.73e8,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/matmul/(At_mul_B/dense 500x5/sparse 500x500 -> dense 5x500)": {
+    "19": {
+      "max_time_ns": 5.67e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 5.13e7,
+      "mean_time_ns": 5.4e7,
+      "samples": 1,
+      "commit_hash": "03de024",
+      "timestamp": "2026-02-11T09:53:05.411",
+      "median_time_ns": 5.4e7,
+      "memory_bytes": 0
+    },
+    "8": {
+      "max_time_ns": 1.9215e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 1.7385e8,
+      "mean_time_ns": 1.83e8,
+      "samples": 1,
+      "commit_hash": "017b515",
+      "timestamp": "2026-02-11T09:53:04.079",
+      "median_time_ns": 1.83e8,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/sparse solves/square system (ldlt)/vector rhs": {
+    "19": {
+      "max_time_ns": 9.45e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 8.55e7,
+      "mean_time_ns": 9.0e7,
+      "samples": 1,
+      "commit_hash": "03de024",
+      "timestamp": "2026-02-11T09:53:05.411",
+      "median_time_ns": 9.0e7,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/constructors/(IJV/10)": {
+    "19": {
+      "max_time_ns": 3.7695e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 3.4105e8,
+      "mean_time_ns": 3.59e8,
+      "samples": 1,
+      "commit_hash": "03de024",
+      "timestamp": "2026-02-11T09:53:05.411",
+      "median_time_ns": 3.59e8,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/index/(spmat/array/10)": {
+    "19": {
+      "max_time_ns": 1.281e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 1.159e8,
+      "mean_time_ns": 1.22e8,
+      "samples": 1,
+      "commit_hash": "03de024",
+      "timestamp": "2026-02-11T09:53:05.411",
+      "median_time_ns": 1.22e8,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/matmul/(At_mul_B!/dense 400x400/sparse 400x400 -> dense 400x400)": {
+    "8": {
+      "max_time_ns": 1.4175e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 1.2825e8,
+      "mean_time_ns": 1.35e8,
+      "samples": 1,
+      "commit_hash": "017b515",
+      "timestamp": "2026-02-11T09:53:04.079",
+      "median_time_ns": 1.35e8,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/constructors/(Diagonal/1000)": {
+    "26": {
+      "max_time_ns": 1.1969999999999999e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 1.0829999999999999e8,
+      "mean_time_ns": 1.1399999999999999e8,
+      "samples": 1,
+      "commit_hash": "06b2bf2",
+      "timestamp": "2026-02-11T09:53:06.985",
+      "median_time_ns": 1.1399999999999999e8,
+      "memory_bytes": 0
+    },
+    "8": {
+      "max_time_ns": 9.345e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 8.455e7,
+      "mean_time_ns": 8.9e7,
+      "samples": 1,
+      "commit_hash": "017b515",
+      "timestamp": "2026-02-11T09:53:04.079",
+      "median_time_ns": 8.9e7,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/index/(spvec/logical/1000)": {
+    "19": {
+      "max_time_ns": 1.2915e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 1.1685e8,
+      "mean_time_ns": 1.23e8,
+      "samples": 1,
+      "commit_hash": "03de024",
+      "timestamp": "2026-02-11T09:53:05.411",
+      "median_time_ns": 1.23e8,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/matmul/(At_mul_B/dense 50x5/sparse 50x500 -> dense 5x500)": {
+    "19": {
+      "max_time_ns": 5.355e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 4.845e7,
+      "mean_time_ns": 5.1e7,
+      "samples": 1,
+      "commit_hash": "03de024",
+      "timestamp": "2026-02-11T09:53:05.411",
+      "median_time_ns": 5.1e7,
+      "memory_bytes": 0
+    },
+    "8": {
+      "max_time_ns": 2.079e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 1.881e8,
+      "mean_time_ns": 1.98e8,
+      "samples": 1,
+      "commit_hash": "017b515",
+      "timestamp": "2026-02-11T09:53:04.079",
+      "median_time_ns": 1.98e8,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/index/(spmat/col/array/10)": {
+    "19": {
+      "max_time_ns": 1.554e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 1.406e8,
+      "mean_time_ns": 1.48e8,
+      "samples": 1,
+      "commit_hash": "03de024",
+      "timestamp": "2026-02-11T09:53:05.411",
+      "median_time_ns": 1.48e8,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/constructors/(IJV/100)": {
+    "19": {
+      "max_time_ns": 1.5015e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 1.3585e8,
+      "mean_time_ns": 1.43e8,
+      "samples": 1,
+      "commit_hash": "03de024",
+      "timestamp": "2026-02-11T09:53:05.411",
+      "median_time_ns": 1.43e8,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/constructors/(IV/10)": {
+    "4": {
+      "max_time_ns": 9.87e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 8.93e7,
+      "mean_time_ns": 9.4e7,
+      "samples": 1,
+      "commit_hash": "0063f9a",
+      "timestamp": "2026-02-11T09:53:03.454",
+      "median_time_ns": 9.4e7,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/constructors/(Bidiagonal/10)": {
+    "19": {
+      "max_time_ns": 3.129e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 2.831e8,
+      "mean_time_ns": 2.98e8,
+      "samples": 1,
+      "commit_hash": "03de024",
+      "timestamp": "2026-02-11T09:53:05.411",
+      "median_time_ns": 2.98e8,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/matmul/(Ac_mul_B/dense 50x5/sparse 50x500 -> dense 5x500)": {
+    "16": {
+      "max_time_ns": 7.245e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 6.555e7,
+      "mean_time_ns": 6.9e7,
+      "samples": 1,
+      "commit_hash": "0371bf4",
+      "timestamp": "2026-02-11T09:53:05.038",
+      "median_time_ns": 6.9e7,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/matmul/(A_mul_Bc/sparse 50x500/dense 5x500 -> dense 50x5)": {
+    "19": {
+      "max_time_ns": 6.825e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 6.175e7,
+      "mean_time_ns": 6.5e7,
+      "samples": 1,
+      "commit_hash": "03de024",
+      "timestamp": "2026-02-11T09:53:05.411",
+      "median_time_ns": 6.5e7,
+      "memory_bytes": 0
+    },
+    "8": {
+      "max_time_ns": 6.72e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 6.08e7,
+      "mean_time_ns": 6.4e7,
+      "samples": 1,
+      "commit_hash": "017b515",
+      "timestamp": "2026-02-11T09:53:04.079",
+      "median_time_ns": 6.4e7,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/constructors/(Diagonal/100)": {
+    "26": {
+      "max_time_ns": 1.2285e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 1.1115e8,
+      "mean_time_ns": 1.17e8,
+      "samples": 1,
+      "commit_hash": "06b2bf2",
+      "timestamp": "2026-02-11T09:53:06.985",
+      "median_time_ns": 1.17e8,
+      "memory_bytes": 0
+    },
+    "19": {
+      "max_time_ns": 1.6905e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 1.5295e8,
+      "mean_time_ns": 1.61e8,
+      "samples": 1,
+      "commit_hash": "03de024",
+      "timestamp": "2026-02-11T09:53:05.411",
+      "median_time_ns": 1.61e8,
+      "memory_bytes": 0
+    },
+    "7": {
+      "max_time_ns": 9.87e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 8.93e7,
+      "mean_time_ns": 9.4e7,
+      "samples": 1,
+      "commit_hash": "016630a",
+      "timestamp": "2026-02-11T09:53:03.899",
+      "median_time_ns": 9.4e7,
+      "memory_bytes": 0
+    },
+    "8": {
+      "max_time_ns": 9.765e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 8.835e7,
+      "mean_time_ns": 9.3e7,
+      "samples": 1,
+      "commit_hash": "017b515",
+      "timestamp": "2026-02-11T09:53:04.079",
+      "median_time_ns": 9.3e7,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/index/(spmat/OneTo/10)": {
+    "19": {
+      "max_time_ns": 2.646e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 2.394e8,
+      "mean_time_ns": 2.52e8,
+      "samples": 1,
+      "commit_hash": "03de024",
+      "timestamp": "2026-02-11T09:53:05.411",
+      "median_time_ns": 2.52e8,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/constructors/(Bidiagonal/100)": {
+    "19": {
+      "max_time_ns": 1.6485e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 1.4915e8,
+      "mean_time_ns": 1.57e8,
+      "samples": 1,
+      "commit_hash": "03de024",
+      "timestamp": "2026-02-11T09:53:05.411",
+      "median_time_ns": 1.57e8,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/matmul/(At_mul_B!/dense 40x400/sparse 40x400 -> dense 400x400)": {
+    "8": {
+      "max_time_ns": 1.428e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 1.292e8,
+      "mean_time_ns": 1.36e8,
+      "samples": 1,
+      "commit_hash": "017b515",
+      "timestamp": "2026-02-11T09:53:04.079",
+      "median_time_ns": 1.36e8,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/index/(spmat/col/logical/10)": {
+    "19": {
+      "max_time_ns": 2.2890000000000003e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 2.0710000000000003e8,
+      "mean_time_ns": 2.1800000000000003e8,
+      "samples": 1,
+      "commit_hash": "03de024",
+      "timestamp": "2026-02-11T09:53:05.411",
+      "median_time_ns": 2.1800000000000003e8,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/sparse matvec/adjoint": {
+    "14": {
+      "max_time_ns": 1.3335e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 1.2065e8,
+      "mean_time_ns": 1.27e8,
+      "samples": 1,
+      "commit_hash": "034cca2",
+      "timestamp": "2026-02-11T09:53:04.879",
+      "median_time_ns": 1.27e8,
+      "memory_bytes": 0
+    },
+    "19": {
+      "max_time_ns": 9.135e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 8.265e7,
+      "mean_time_ns": 8.7e7,
+      "samples": 1,
+      "commit_hash": "03de024",
+      "timestamp": "2026-02-11T09:53:05.411",
+      "median_time_ns": 8.7e7,
+      "memory_bytes": 0
+    },
+    "8": {
+      "max_time_ns": 1.2285e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 1.1115e8,
+      "mean_time_ns": 1.17e8,
+      "samples": 1,
+      "commit_hash": "017b515",
+      "timestamp": "2026-02-11T09:53:04.079",
+      "median_time_ns": 1.17e8,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/constructors/(Tridiagonal/100)": {
+    "19": {
+      "max_time_ns": 1.2915e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 1.1685e8,
+      "mean_time_ns": 1.23e8,
+      "samples": 1,
+      "commit_hash": "03de024",
+      "timestamp": "2026-02-11T09:53:05.411",
+      "median_time_ns": 1.23e8,
+      "memory_bytes": 0
+    },
+    "7": {
+      "max_time_ns": 9.975e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 9.025e7,
+      "mean_time_ns": 9.5e7,
+      "samples": 1,
+      "commit_hash": "016630a",
+      "timestamp": "2026-02-11T09:53:03.899",
+      "median_time_ns": 9.5e7,
+      "memory_bytes": 0
+    },
+    "11": {
+      "max_time_ns": 8.4e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 7.6e7,
+      "mean_time_ns": 8.0e7,
+      "samples": 1,
+      "commit_hash": "01d6fae",
+      "timestamp": "2026-02-11T09:53:04.525",
+      "median_time_ns": 8.0e7,
+      "memory_bytes": 0
+    },
+    "8": {
+      "max_time_ns": 9.345e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 8.455e7,
+      "mean_time_ns": 8.9e7,
+      "samples": 1,
+      "commit_hash": "017b515",
+      "timestamp": "2026-02-11T09:53:04.079",
+      "median_time_ns": 8.9e7,
+      "memory_bytes": 0
+    }
+  },
+  "sparse/constructors/(SymTridiagonal/100)": {
+    "19": {
+      "max_time_ns": 1.323e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 1.197e8,
+      "mean_time_ns": 1.26e8,
+      "samples": 1,
+      "commit_hash": "03de024",
+      "timestamp": "2026-02-11T09:53:05.411",
+      "median_time_ns": 1.26e8,
+      "memory_bytes": 0
+    },
+    "7": {
+      "max_time_ns": 9.45e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 8.55e7,
+      "mean_time_ns": 9.0e7,
+      "samples": 1,
+      "commit_hash": "016630a",
+      "timestamp": "2026-02-11T09:53:03.899",
+      "median_time_ns": 9.0e7,
+      "memory_bytes": 0
+    },
+    "8": {
+      "max_time_ns": 9.87e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 8.93e7,
+      "mean_time_ns": 9.4e7,
+      "samples": 1,
+      "commit_hash": "017b515",
+      "timestamp": "2026-02-11T09:53:04.079",
+      "median_time_ns": 9.4e7,
+      "memory_bytes": 0
+    }
+  }
+}

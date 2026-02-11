@@ -1,0 +1,39 @@
+{
+  "metadata": {
+    "head_hash": "037833c",
+    "comparison": "037833c_vs_c62f4ea",
+    "source": "NanosoldierReports",
+    "base_hash": "c62f4ea",
+    "imported_at": "2026-02-11T09:53:05.118"
+  },
+  "benchmarks": {
+    "[\"inference\", \"allinference\", \"broadcasting\"]": {
+      "time_ratio": 0.98,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"allinference\", \"many_method_matches\"]": {
+      "time_ratio": 0.97,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"many_opaque_closures\"]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"broadcasting\"]": {
+      "time_ratio": 0.98,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"many_invoke_calls\"]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"many_const_calls\"]": {
+      "time_ratio": 0.86,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"Base.init_stdio(::Ptr{Cvoid})\"]": {
+      "time_ratio": 0.98,
+      "memory_ratio": 1.0
+    }
+  }
+}

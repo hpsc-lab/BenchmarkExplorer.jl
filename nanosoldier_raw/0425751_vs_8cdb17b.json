@@ -1,0 +1,163 @@
+{
+  "metadata": {
+    "head_hash": "0425751",
+    "comparison": "0425751_vs_8cdb17b",
+    "source": "NanosoldierReports",
+    "base_hash": "8cdb17b",
+    "imported_at": "2026-02-11T09:53:05.578"
+  },
+  "benchmarks": {
+    "[\"sort\", \"mergesort\", (\"sortperm! reverse\", \"ones\")]": {
+      "time_ratio": 0.46,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"quicksort\", (\"sortperm! forwards\", \"random\")]": {
+      "time_ratio": 0.67,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", (\"sortperm forwards\", \"ones\")]": {
+      "time_ratio": 0.65,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", (\"sortperm reverse\", \"ones\")]": {
+      "time_ratio": 0.66,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"mergesort\", (\"sort reverse\", \"ones\")]": {
+      "time_ratio": 0.7,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"mergesort\", (\"sortperm forwards\", \"ones\")]": {
+      "time_ratio": 0.46,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"quicksort\", (\"sort! reverse\", \"ones\")]": {
+      "time_ratio": 0.48,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"quicksort\", (\"sortperm! reverse\", \"ones\")]": {
+      "time_ratio": 0.53,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"quicksort\", (\"sortperm! reverse\", \"random\")]": {
+      "time_ratio": 0.65,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"quicksort\", (\"sort! forwards\", \"random\")]": {
+      "time_ratio": 0.69,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"mergesort\", (\"sortperm reverse\", \"ones\")]": {
+      "time_ratio": 0.47,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"quicksort\", (\"sort forwards\", \"ones\")]": {
+      "time_ratio": 0.45,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", (\"sortperm! reverse\", \"random\")]": {
+      "time_ratio": 0.27,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"quicksort\", (\"sort! forwards\", \"ones\")]": {
+      "time_ratio": 0.44,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"quicksort\", (\"sortperm! forwards\", \"ones\")]": {
+      "time_ratio": 0.54,
+      "memory_ratio": 1.0
+    },
+    "[\"micro\", \"fib\"]": {
+      "time_ratio": 0.85,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", (\"sortperm! forwards\", \"ones\")]": {
+      "time_ratio": 0.62,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"mergesort\", (\"sortperm! forwards\", \"random\")]": {
+      "time_ratio": 0.58,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"mergesort\", (\"sortperm! reverse\", \"random\")]": {
+      "time_ratio": 0.58,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", (\"sortperm! forwards\", \"random\")]": {
+      "time_ratio": 0.26,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"quicksort\", (\"sort forwards\", \"random\")]": {
+      "time_ratio": 0.7,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", (\"sort forwards\", \"random\")]": {
+      "time_ratio": 0.43,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"quicksort\", (\"sortperm reverse\", \"random\")]": {
+      "time_ratio": 0.66,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", (\"sortperm reverse\", \"random\")]": {
+      "time_ratio": 0.27,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"mergesort\", (\"sortperm! forwards\", \"ones\")]": {
+      "time_ratio": 0.45,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"quicksort\", (\"sortperm reverse\", \"ones\")]": {
+      "time_ratio": 0.54,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"mergesort\", (\"sort! reverse\", \"ones\")]": {
+      "time_ratio": 0.69,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", (\"sortperm forwards\", \"random\")]": {
+      "time_ratio": 0.26,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", (\"sort! reverse\", \"random\")]": {
+      "time_ratio": 0.34,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", (\"sort reverse\", \"random\")]": {
+      "time_ratio": 0.34,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"mergesort\", (\"sortperm reverse\", \"random\")]": {
+      "time_ratio": 0.58,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", (\"sortperm! reverse\", \"ones\")]": {
+      "time_ratio": 0.63,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", (\"sort! forwards\", \"random\")]": {
+      "time_ratio": 0.43,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"mergesort\", (\"sort! forwards\", \"ones\")]": {
+      "time_ratio": 0.69,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"quicksort\", (\"sort reverse\", \"ones\")]": {
+      "time_ratio": 0.49,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"quicksort\", (\"sortperm forwards\", \"ones\")]": {
+      "time_ratio": 0.55,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"quicksort\", (\"sortperm forwards\", \"random\")]": {
+      "time_ratio": 0.67,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"mergesort\", (\"sortperm forwards\", \"random\")]": {
+      "time_ratio": 0.58,
+      "memory_ratio": 1.0
+    }
+  }
+}
