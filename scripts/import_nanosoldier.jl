@@ -126,13 +126,13 @@ end
 
 function convert_to_explorer_format(nanosoldier_dir::String, output_dir::String, group_name::String="nanosoldier")
     mkpath(output_dir)
-    mkpath(joinpath(output_dir, "by_group", group_name))
 
     files = filter(f -> endswith(f, ".json"), readdir(nanosoldier_dir))
 
-    history = Dict{String, Dict}()
+    all_benchmarks = Dict{String, Dict}()
     run_number = 1
     baseline_ns = 100_000_000.0
+    run_metadata = []
 
     for file in sort(files)
         data = JSON.parsefile(joinpath(nanosoldier_dir, file))
@@ -141,14 +141,14 @@ function convert_to_explorer_format(nanosoldier_dir::String, output_dir::String,
             clean_name = replace(bench_name, r"[\[\]\"']" => "")
             clean_name = replace(clean_name, ", " => "/")
 
-            if !haskey(history, clean_name)
-                history[clean_name] = Dict()
+            if !haskey(all_benchmarks, clean_name)
+                all_benchmarks[clean_name] = Dict()
             end
 
             ratio = get(bench_data, "time_ratio", 1.0)
             time_ns = baseline_ns * ratio
 
-            history[clean_name][string(run_number)] = Dict(
+            all_benchmarks[clean_name][string(run_number)] = Dict(
                 "mean_time_ns" => time_ns,
                 "min_time_ns" => time_ns * 0.95,
                 "median_time_ns" => time_ns,
@@ -162,24 +162,93 @@ function convert_to_explorer_format(nanosoldier_dir::String, output_dir::String,
             )
         end
 
+        push!(run_metadata, Dict(
+            "run_number" => run_number,
+            "timestamp" => get(data["metadata"], "imported_at", string(now())),
+            "commit_hash" => get(data["metadata"], "head_hash", ""),
+            "benchmark_count" => length(data["benchmarks"])
+        ))
+
         run_number += 1
     end
 
-    history_file = joinpath(output_dir, "by_group", group_name, "history.json")
-    open(history_file, "w") do f
-        JSON.print(f, history, 2)
+    categories = Dict{String, Dict{String, Dict}}()
+    for (bench_name, runs) in all_benchmarks
+        parts = split(bench_name, "/")
+        category = length(parts) > 1 ? parts[1] : "other"
+        if !haskey(categories, category)
+            categories[category] = Dict{String, Dict}()
+        end
+        categories[category][bench_name] = runs
     end
 
-    latest_100 = Dict("groups" => Dict(group_name => history))
+    groups = Dict{String, Any}()
+    for (category, benchmarks) in categories
+        cat_group = "$(group_name)_$(category)"
+        cat_dir = joinpath(output_dir, "by_group", cat_group)
+        mkpath(cat_dir)
+
+        history_file = joinpath(cat_dir, "history.json")
+        open(history_file, "w") do f
+            JSON.print(f, benchmarks, 2)
+        end
+
+        groups[cat_group] = benchmarks
+        println("  Category $category: $(length(benchmarks)) benchmarks")
+    end
+
+    mkpath(joinpath(output_dir, "by_group", group_name))
+    history_file = joinpath(output_dir, "by_group", group_name, "history.json")
+    open(history_file, "w") do f
+        JSON.print(f, all_benchmarks, 2)
+    end
+    groups[group_name] = all_benchmarks
+
+    latest_100 = Dict("groups" => groups)
     latest_file = joinpath(output_dir, "latest_100.json")
     open(latest_file, "w") do f
         JSON.print(f, latest_100, 2)
     end
 
+    index = Dict(
+        "version" => "2.0",
+        "groups" => Dict(),
+        "last_updated" => string(now())
+    )
+
+    for (group_key, benchmarks) in groups
+        dates = [split(rm["timestamp"], "T")[1] for rm in run_metadata]
+        filter!(!isempty, dates)
+
+        runs_list = [Dict(
+            "run_number" => rm["run_number"],
+            "timestamp" => rm["timestamp"],
+            "date" => split(rm["timestamp"], "T")[1],
+            "julia_version" => "nightly",
+            "commit_hash" => rm["commit_hash"],
+            "benchmark_count" => length(benchmarks),
+            "file_path" => "by_group/$(group_key)/history.json"
+        ) for rm in run_metadata]
+
+        index["groups"][group_key] = Dict(
+            "runs" => runs_list,
+            "total_runs" => length(run_metadata),
+            "latest_run" => length(run_metadata),
+            "first_run_date" => isempty(dates) ? "" : minimum(dates),
+            "last_run_date" => isempty(dates) ? "" : maximum(dates)
+        )
+    end
+
+    index_path = joinpath(output_dir, "index.json")
+    open(index_path, "w") do f
+        JSON.print(f, index, 2)
+    end
+
     println("Converted to Explorer format:")
-    println("  History: $history_file")
+    println("  Total: $(length(all_benchmarks)) benchmarks in $(length(categories)) categories")
+    println("  Groups: $(join(keys(groups), ", "))")
     println("  Cache: $latest_file")
-    return history_file
+    return latest_file
 end
 
 if abspath(PROGRAM_FILE) == @__FILE__

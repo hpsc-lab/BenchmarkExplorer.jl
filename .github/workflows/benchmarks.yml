@@ -12,6 +12,7 @@ on:
     paths:
       - 'src/**'
       - 'ci/**'
+      - 'scripts/**'
       - 'Project.toml'
       - 'action.yml'
       - '.github/workflows/benchmarks.yml'
@@ -22,6 +23,7 @@ on:
     paths:
       - 'src/**'
       - 'ci/**'
+      - 'scripts/**'
       - 'Project.toml'
       - 'action.yml'
       - '.github/workflows/benchmarks.yml'
@@ -106,6 +108,38 @@ jobs:
           persist_to_branch: 'gh-pages'
           persist_path: ''
           github_token: ${{ secrets.GITHUB_TOKEN }}
+
+  benchmark-nanosoldier:
+    runs-on: ubuntu-latest
+    needs: [check-changes, benchmark-enzyme]
+    if: needs.check-changes.outputs.should_run == 'true'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run BenchmarkExplorer
+        uses: ./
+        with:
+          data_dir: 'data'
+          group_name: 'nanosoldier'
+          julia_version: '1.11'
+          persist_to_branch: 'gh-pages'
+          persist_path: ''
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+  update-index:
+    runs-on: ubuntu-latest
+    needs: [check-changes, benchmark-nanosoldier]
+    if: needs.check-changes.outputs.should_run == 'true'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Update main index page
         shell: bash

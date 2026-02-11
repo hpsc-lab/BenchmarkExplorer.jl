@@ -1,5 +1,6 @@
 using JSON
 using Dates
+using Statistics
 
 include("../src/BenchmarkUI.jl")
 using .BenchmarkUI
@@ -11,6 +12,66 @@ function format_date_nice(iso_str::String)
     catch
         return iso_str
     end
+end
+
+function aggregate_by_commit(plot_data_mean, plot_data_min, plot_data_median)
+    commit_order = String[]
+    commit_indices = Dict{String, Vector{Int}}()
+
+    for (i, hash) in enumerate(plot_data_mean.commit_hashes)
+        if !haskey(commit_indices, hash)
+            commit_indices[hash] = Int[]
+            push!(commit_order, hash)
+        end
+        push!(commit_indices[hash], i)
+    end
+
+    agg_mean_y = Float64[]
+    agg_mean_err = Float64[]
+    agg_min_y = Float64[]
+    agg_median_y = Float64[]
+    agg_timestamps = String[]
+    agg_commit_hashes = String[]
+    agg_julia_versions = String[]
+    agg_memory = Int[]
+    agg_allocs = Int[]
+    agg_n_samples = Int[]
+    agg_mean_vals = Float64[]
+    agg_median_vals = Float64[]
+    agg_min_vals = Float64[]
+
+    for hash in commit_order
+        idx = commit_indices[hash]
+        n = length(idx)
+
+        means = [plot_data_mean.mean[i] for i in idx]
+        medians = [plot_data_median.median[i] for i in idx]
+        mins = [plot_data_min.min[i] for i in idx]
+
+        push!(agg_mean_y, mean(means))
+        push!(agg_mean_err, n > 1 ? std(means) : 0.0)
+        push!(agg_min_y, mean(mins))
+        push!(agg_median_y, mean(medians))
+        push!(agg_timestamps, plot_data_mean.timestamps[idx[end]])
+        push!(agg_commit_hashes, hash)
+        push!(agg_julia_versions, plot_data_mean.julia_versions[idx[end]])
+        push!(agg_memory, plot_data_mean.memory[idx[end]])
+        push!(agg_allocs, plot_data_mean.allocs[idx[end]])
+        push!(agg_n_samples, n)
+        push!(agg_mean_vals, mean(means))
+        push!(agg_median_vals, mean(medians))
+        push!(agg_min_vals, mean(mins))
+    end
+
+    return (
+        mean_y = agg_mean_y, mean_err = agg_mean_err,
+        min_y = agg_min_y, median_y = agg_median_y,
+        timestamps = agg_timestamps, commit_hashes = agg_commit_hashes,
+        julia_versions = agg_julia_versions, memory = agg_memory,
+        allocs = agg_allocs, n_samples = agg_n_samples,
+        mean_vals = agg_mean_vals, median_vals = agg_median_vals,
+        min_vals = agg_min_vals
+    )
 end
 
 function generate_static_page_plotly(data_dir::String, output_file::String, group_name::String, repo_url::String, commit_sha::String)
@@ -44,6 +105,8 @@ function generate_static_page_plotly(data_dir::String, output_file::String, grou
         plot_data_min = prepare_plot_data(history, benchmark_path; metric=:min)
         plot_data_median = prepare_plot_data(history, benchmark_path; metric=:median)
 
+        agg = aggregate_by_commit(plot_data_mean, plot_data_min, plot_data_median)
+
         latest_run = runs[string(run_numbers[end])]
         baseline_run = runs[string(run_numbers[1])]
 
@@ -60,37 +123,56 @@ function generate_static_page_plotly(data_dir::String, output_file::String, grou
             "stable"
         end
 
-        commit_labels = [format_commit_hash(h) for h in plot_data_mean.commit_hashes]
+        commit_labels = [format_commit_hash(h) for h in agg.commit_hashes]
 
         hover_texts_mean = [
-            "Commit: $(plot_data_mean.commit_hashes[i])<br>" *
-            "Mean: $(round(plot_data_mean.mean[i], digits=3)) ms<br>" *
-            "Median: $(round(plot_data_median.median[i], digits=3)) ms<br>" *
-            "Min: $(round(plot_data_min.min[i], digits=3)) ms<br>" *
-            "Memory: $(format_memory(plot_data_mean.memory[i]))<br>" *
-            "Allocs: $(plot_data_mean.allocs[i])<br>" *
-            "Julia: $(plot_data_mean.julia_versions[i])<br>" *
-            "Date: $(format_date_nice(plot_data_mean.timestamps[i]))"
-            for i in 1:length(plot_data_mean.y)
+            "Commit: $(agg.commit_hashes[i])<br>" *
+            "Mean: $(round(agg.mean_vals[i], digits=3)) ms<br>" *
+            (agg.mean_err[i] > 0 ? "Std: $(round(agg.mean_err[i], digits=3)) ms<br>" : "") *
+            "Median: $(round(agg.median_vals[i], digits=3)) ms<br>" *
+            "Min: $(round(agg.min_vals[i], digits=3)) ms<br>" *
+            "Memory: $(format_memory(agg.memory[i]))<br>" *
+            "Allocs: $(agg.allocs[i])<br>" *
+            "Julia: $(agg.julia_versions[i])<br>" *
+            "Runs: $(agg.n_samples[i])<br>" *
+            "Date: $(format_date_nice(agg.timestamps[i]))"
+            for i in 1:length(agg.mean_y)
         ]
 
+        has_errors = any(e -> e > 0, agg.mean_err)
+
+        mean_trace = Dict(
+            "x" => commit_labels,
+            "y" => agg.mean_y,
+            "y_raw" => agg.mean_y,
+            "timestamps" => agg.timestamps,
+            "commit_hashes" => agg.commit_hashes,
+            "type" => "scatter",
+            "mode" => "lines+markers",
+            "name" => "Mean",
+            "line" => Dict("width" => 2),
+            "marker" => Dict("size" => 6),
+            "hovertext" => hover_texts_mean,
+            "hoverinfo" => "text"
+        )
+
+        if has_errors
+            mean_trace["error_y"] = Dict(
+                "type" => "data",
+                "array" => agg.mean_err,
+                "visible" => true,
+                "color" => "rgba(102, 126, 234, 0.4)",
+                "thickness" => 1.5,
+                "width" => 4
+            )
+        end
+
         benchmark_traces[benchmark_path] = Dict(
-            "mean" => Dict(
-                "x" => commit_labels,
-                "y" => plot_data_mean.y,
-                "timestamps" => plot_data_mean.timestamps,
-                "commit_hashes" => plot_data_mean.commit_hashes,
-                "type" => "scatter",
-                "mode" => "lines+markers",
-                "name" => "Mean",
-                "line" => Dict("width" => 2),
-                "marker" => Dict("size" => 6),
-                "hovertext" => hover_texts_mean,
-                "hoverinfo" => "text"
-            ),
+            "mean" => mean_trace,
             "min" => Dict(
                 "x" => commit_labels,
-                "y" => plot_data_min.y,
+                "y" => agg.min_y,
+                "y_raw" => agg.min_y,
                 "type" => "scatter",
                 "mode" => "lines",
                 "name" => "Min",
@@ -100,7 +182,8 @@ function generate_static_page_plotly(data_dir::String, output_file::String, grou
             ),
             "median" => Dict(
                 "x" => commit_labels,
-                "y" => plot_data_median.y,
+                "y" => agg.median_y,
+                "y_raw" => agg.median_y,
                 "type" => "scatter",
                 "mode" => "lines",
                 "name" => "Median",
@@ -568,18 +651,31 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 const plotDiv = document.getElementById(plotId);
                 if (plotDiv) plotDiv.innerHTML = '';
 
+                const meanTrace = {
+                    x: data.mean.x,
+                    y: toPercentage(data.mean.y),
+                    type: 'scatter',
+                    mode: 'lines+markers',
+                    name: 'Mean',
+                    line: {color: '#667eea', width: 3},
+                    marker: {size: 8},
+                    hovertext: data.mean.hovertext,
+                    hoverinfo: data.mean.hoverinfo || 'text'
+                };
+
+                if (data.mean.error_y && !percentageMode) {
+                    meanTrace.error_y = {
+                        type: 'data',
+                        array: data.mean.error_y.array,
+                        visible: true,
+                        color: 'rgba(102, 126, 234, 0.4)',
+                        thickness: 1.5,
+                        width: 4
+                    };
+                }
+
                 const traces = [
-                    {
-                        x: data.mean.x,
-                        y: toPercentage(data.mean.y),
-                        type: 'scatter',
-                        mode: 'lines+markers',
-                        name: 'Mean',
-                        line: {color: '#667eea', width: 3},
-                        marker: {size: 8},
-                        hovertext: data.mean.hovertext,
-                        hoverinfo: data.mean.hoverinfo || 'text'
-                    },
+                    meanTrace,
                     {
                         x: data.min.x,
                         y: toPercentage(data.min.y),
@@ -651,6 +747,13 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 };
 
                 Plotly.newPlot(plotId, traces, layout, config);
+
+                plotDiv.on('plotly_click', function(clickData) {
+                    if (!clickData || !clickData.points || clickData.points.length === 0) return;
+                    const pt = clickData.points[0];
+                    const idx = pt.pointIndex;
+                    showDetailPage(name, data, idx);
+                });
             }
 
             function initPlotObserver() {
@@ -773,16 +876,24 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
 
                     const currentVisibility = plotDiv.data.map(trace => trace.visible);
 
-                    const newMeanY = percentageMode ? calcPercentFromPrev(data.mean.y) : data.mean.y;
-                    const newMinY = percentageMode ? calcPercentFromPrev(data.min.y) : data.min.y;
-                    const newMedianY = percentageMode ? calcPercentFromPrev(data.median.y) : data.median.y;
+                    const rawMean = data.mean.y_raw || data.mean.y;
+                    const rawMin = data.min.y_raw || data.min.y;
+                    const rawMedian = data.median.y_raw || data.median.y;
+
+                    const newMeanY = percentageMode ? calcPercentFromPrev(rawMean) : rawMean;
+                    const newMinY = percentageMode ? calcPercentFromPrev(rawMin) : rawMin;
+                    const newMedianY = percentageMode ? calcPercentFromPrev(rawMedian) : rawMedian;
 
                     const meanHoverTexts = percentageMode ?
                         data.mean.commit_hashes.map((hash, i) =>
-                            \`Commit: \${hash}<br>Change: \${newMeanY[i].toFixed(2)}%<br>Original: \${data.mean.y[i].toFixed(3)} ms<br>Date: \${formatDate(data.mean.timestamps[i])}\`
+                            \`Commit: \${hash}<br>Change: \${newMeanY[i].toFixed(2)}%<br>Original: \${rawMean[i].toFixed(3)} ms<br>Date: \${formatDate(data.mean.timestamps[i])}\`
                         ) : data.mean.hovertext;
 
-                    Plotly.restyle(plotDiv, {y: [newMeanY], hovertext: [meanHoverTexts]}, [0]);
+                    const errorUpdate = percentageMode ?
+                        {'error_y.visible': false} :
+                        (data.mean.error_y ? {'error_y.visible': true} : {});
+
+                    Plotly.restyle(plotDiv, Object.assign({y: [newMeanY], hovertext: [meanHoverTexts]}, errorUpdate), [0]);
                     Plotly.restyle(plotDiv, {
                         y: [newMinY],
                         hovertemplate: percentageMode ?
@@ -952,6 +1063,84 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 }
             });
             """ : "")
+
+            function showDetailPage(benchName, data, idx) {
+                const rawMean = data.mean.y_raw || data.mean.y;
+                const rawMin = data.min.y_raw || data.min.y;
+                const rawMedian = data.median.y_raw || data.median.y;
+
+                const commit = data.mean.commit_hashes[idx] || 'unknown';
+                const commitShort = commit.substring(0, 7);
+                const timestamp = data.mean.timestamps[idx] || '';
+                const meanVal = rawMean[idx];
+                const minVal = rawMin[idx];
+                const medianVal = rawMedian[idx];
+                const memory = data.stats.latest_memory;
+                const allocs = data.stats.latest_allocs;
+                const errVal = data.mean.error_y ? data.mean.error_y.array[idx] : 0;
+
+                let changeHtml = '';
+                if (idx > 0) {
+                    const prevMean = rawMean[idx - 1];
+                    if (prevMean > 0) {
+                        const change = ((meanVal / prevMean) - 1) * 100;
+                        const changeColor = change < -1 ? '#27ae60' : (change > 1 ? '#e74c3c' : '#6c757d');
+                        const sign = change > 0 ? '+' : '';
+                        changeHtml = '<div class="d-card wide"><div class="d-label">Change from previous commit</div><div class="d-value" style="color:' + changeColor + ';font-size:2em">' + sign + change.toFixed(2) + '%</div></div>';
+                    }
+                }
+
+                const commitLink = commit !== 'unknown' ? '<a href="' + repoUrl + '/commit/' + commit + '" target="_blank" style="color:#667eea;text-decoration:none">' + commit + '</a>' : commit;
+
+                const html = '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>' + benchName + ' - ' + commitShort + '</title><style>' +
+                    '*{margin:0;padding:0;box-sizing:border-box}' +
+                    'body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);min-height:100vh;padding:20px}' +
+                    '.container{max-width:900px;margin:0 auto;background:white;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,0.3);overflow:hidden}' +
+                    'header{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:white;padding:30px 40px}' +
+                    'header h1{font-size:1.6em;margin-bottom:8px;word-break:break-all}' +
+                    'header p{opacity:0.9;font-size:1em}' +
+                    '.body{padding:30px 40px}' +
+                    '.d-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:24px}' +
+                    '.d-card{background:#f8f9fa;padding:20px;border-radius:12px;text-align:center}' +
+                    '.d-card.wide{grid-column:1/-1}' +
+                    '.d-label{font-size:0.8em;color:#6c757d;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px}' +
+                    '.d-value{font-size:1.5em;font-weight:bold;color:#2c3e50}' +
+                    '.d-value.blue{color:#667eea}' +
+                    '.d-value.green{color:#27ae60}' +
+                    '.info-table{width:100%;border-collapse:collapse;margin-top:20px}' +
+                    '.info-table th,.info-table td{padding:12px 16px;text-align:left;border-bottom:1px solid #e9ecef}' +
+                    '.info-table th{color:#6c757d;font-size:0.85em;text-transform:uppercase;letter-spacing:0.5px;width:140px}' +
+                    '.info-table td{color:#2c3e50;font-weight:500}' +
+                    '.btn-back{display:inline-block;margin-top:24px;padding:10px 24px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:white;text-decoration:none;border-radius:8px;font-weight:600;border:none;cursor:pointer;font-size:1em}' +
+                    '</style></head><body><div class="container"><header><h1>' + benchName + '</h1><p>Commit ' + commitShort + ' &bull; ' + formatDate(timestamp) + '</p></header><div class="body">' +
+                    changeHtml +
+                    '<div class="d-grid">' +
+                    '<div class="d-card"><div class="d-label">Mean</div><div class="d-value blue">' + meanVal.toFixed(3) + ' ms</div></div>' +
+                    '<div class="d-card"><div class="d-label">Median</div><div class="d-value">' + medianVal.toFixed(3) + ' ms</div></div>' +
+                    '<div class="d-card"><div class="d-label">Min</div><div class="d-value green">' + minVal.toFixed(3) + ' ms</div></div>' +
+                    (errVal > 0 ? '<div class="d-card"><div class="d-label">Std Dev</div><div class="d-value">' + errVal.toFixed(3) + ' ms</div></div>' : '') +
+                    '<div class="d-card"><div class="d-label">Memory</div><div class="d-value">' + formatBytes(memory) + '</div></div>' +
+                    '<div class="d-card"><div class="d-label">Allocations</div><div class="d-value">' + allocs + '</div></div>' +
+                    '</div>' +
+                    '<table class="info-table">' +
+                    '<tr><th>Commit</th><td>' + commitLink + '</td></tr>' +
+                    '<tr><th>Date</th><td>' + formatDate(timestamp) + '</td></tr>' +
+                    '<tr><th>Mean Time</th><td>' + meanVal.toFixed(6) + ' ms (' + (meanVal * 1e6).toFixed(0) + ' ns)</td></tr>' +
+                    '<tr><th>Median Time</th><td>' + medianVal.toFixed(6) + ' ms (' + (medianVal * 1e6).toFixed(0) + ' ns)</td></tr>' +
+                    '<tr><th>Min Time</th><td>' + minVal.toFixed(6) + ' ms (' + (minVal * 1e6).toFixed(0) + ' ns)</td></tr>' +
+                    (errVal > 0 ? '<tr><th>Std Dev</th><td>' + errVal.toFixed(6) + ' ms</td></tr>' : '') +
+                    '<tr><th>Memory</th><td>' + formatBytes(memory) + ' (' + memory + ' bytes)</td></tr>' +
+                    '<tr><th>Allocations</th><td>' + allocs + '</td></tr>' +
+                    '</table>' +
+                    '<button class="btn-back" onclick="window.close()">Close</button>' +
+                    '</div></div></body></html>';
+
+                const w = window.open('', '_blank');
+                if (w) {
+                    w.document.write(html);
+                    w.document.close();
+                }
+            }
 
             renderStats();
             renderBenchmarks();

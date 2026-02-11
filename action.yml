@@ -8,7 +8,7 @@ branding:
 
 inputs:
   benchmark_script:
-    description: 'Path to the Julia file that defines SUITE. Leave empty for built-in groups (trixi, enzyme).'
+    description: 'Path to the Julia file that defines SUITE. Leave empty for built-in groups (trixi, enzyme, nanosoldier).'
     required: false
     default: ''
 
@@ -85,6 +85,7 @@ runs:
         git archive origin/${{ inputs.persist_to_branch }} ${{ inputs.persist_path }}by_hash | tar -x -C ${{ inputs.data_dir }} 2>/dev/null || true
 
     - name: Instantiate user project
+      if: inputs.group_name != 'nanosoldier'
       run: |
         import Pkg
         Pkg.resolve()
@@ -112,14 +113,25 @@ runs:
       if: inputs.persist_to_branch != ''
       shell: bash
       run: |
-        julia --project=${{ github.action_path }} ${{ github.action_path }}/ci/generate_index_page.jl ${{ inputs.data_dir }} /tmp/index.html \
+        mkdir -p /tmp/benchmark_html
+
+        julia --project=${{ github.action_path }} ${{ github.action_path }}/ci/generate_index_page.jl \
+          ${{ inputs.data_dir }} /tmp/benchmark_html/index.html \
           "${{ github.server_url }}/${{ github.repository }}" "${{ github.sha }}"
 
-        julia --project=${{ github.action_path }} ${{ github.action_path }}/ci/generate_static_page_plotly.jl ${{ inputs.data_dir }} \
-          /tmp/${{ inputs.group_name }}.html ${{ inputs.group_name }} \
+        julia --project=${{ github.action_path }} -e '
+          include(ARGS[1])
+          using JSON
+          latest = JSON.parsefile(joinpath(ARGS[2], "latest_100.json"))
+          for group in keys(get(latest, "groups", Dict()))
+            println("Generating page for: ", group)
+            generate_static_page_plotly(ARGS[2], joinpath(ARGS[3], group * ".html"), group, ARGS[4], ARGS[5])
+          end
+        ' -- "${{ github.action_path }}/ci/generate_static_page_plotly.jl" \
+          "${{ inputs.data_dir }}" "/tmp/benchmark_html" \
           "${{ github.server_url }}/${{ github.repository }}" "${{ github.sha }}"
 
-        julia --project=${{ github.action_path }} -e 'include("src/HistoryManager.jl"); using .HistoryManager; generate_all_runs_index("${{ inputs.data_dir }}")'
+        julia --project=${{ github.action_path }} -e 'include("${{ github.action_path }}/src/HistoryManager.jl"); using .HistoryManager; generate_all_runs_index("${{ inputs.data_dir }}")'
 
     - name: Upload data artifact
       uses: actions/upload-artifact@v4
@@ -152,12 +164,10 @@ runs:
         if [ -n "${{ inputs.persist_path }}" ]; then
           mkdir -p ${{ inputs.persist_path }}
           cp -r /tmp/data_update/* ${{ inputs.persist_path }}
-          cp /tmp/index.html ${{ inputs.persist_path }}index.html
-          cp /tmp/${{ inputs.group_name }}.html ${{ inputs.persist_path }}${{ inputs.group_name }}.html
+          cp /tmp/benchmark_html/*.html ${{ inputs.persist_path }}
         else
           cp -r /tmp/data_update/* .
-          cp /tmp/index.html index.html
-          cp /tmp/${{ inputs.group_name }}.html ${{ inputs.group_name }}.html
+          cp /tmp/benchmark_html/*.html .
         fi
 
         git add -A
