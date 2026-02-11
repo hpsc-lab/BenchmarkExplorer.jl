@@ -204,17 +204,39 @@ function convert_to_explorer_format(nanosoldier_dir::String, output_dir::String,
     end
     groups[group_name] = all_benchmarks
 
-    latest_100 = Dict("groups" => groups)
     latest_file = joinpath(output_dir, "latest_100.json")
+    if isfile(latest_file) && filesize(latest_file) > 0
+        try
+            latest_100 = JSON.parsefile(latest_file)
+            if !haskey(latest_100, "groups")
+                latest_100["groups"] = Dict()
+            end
+        catch
+            latest_100 = Dict("groups" => Dict())
+        end
+    else
+        latest_100 = Dict("groups" => Dict())
+    end
+    for (k, v) in groups
+        latest_100["groups"][k] = v
+    end
     open(latest_file, "w") do f
         JSON.print(f, latest_100, 2)
     end
 
-    index = Dict(
-        "version" => "2.0",
-        "groups" => Dict(),
-        "last_updated" => string(now())
-    )
+    index_path = joinpath(output_dir, "index.json")
+    if isfile(index_path) && filesize(index_path) > 0
+        try
+            index = JSON.parsefile(index_path)
+            if !haskey(index, "groups")
+                index["groups"] = Dict()
+            end
+        catch
+            index = Dict("version" => "2.0", "groups" => Dict(), "last_updated" => string(now()))
+        end
+    else
+        index = Dict("version" => "2.0", "groups" => Dict(), "last_updated" => string(now()))
+    end
 
     for (group_key, benchmarks) in groups
         dates = [split(rm["timestamp"], "T")[1] for rm in run_metadata]
@@ -239,7 +261,7 @@ function convert_to_explorer_format(nanosoldier_dir::String, output_dir::String,
         )
     end
 
-    index_path = joinpath(output_dir, "index.json")
+    index["last_updated"] = string(now())
     open(index_path, "w") do f
         JSON.print(f, index, 2)
     end
