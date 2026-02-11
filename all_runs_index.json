@@ -3484,6 +3484,22 @@
       ],
       "last_run_date": "2026-02-11"
     },
+    "trixi": {
+      "total_runs": 1,
+      "first_run_date": "2026-02-11",
+      "runs": [
+        {
+          "julia_version": "1.11.9",
+          "run": 1,
+          "commit_hash": "c105fa5adadea12369bba62be390719e74edc09b",
+          "benchmark_count": 24,
+          "date": "2026-02-11",
+          "timestamp": "2026-02-11T10:36:19.844",
+          "url": "by_group/trixi/run_1.json"
+        }
+      ],
+      "last_run_date": "2026-02-11"
+    },
     "nanosoldier_sparse": {
       "total_runs": 29,
       "first_run_date": "2026-02-11",
@@ -5898,5 +5914,5 @@
     }
   },
   "version": "2.0",
-  "generated_at": "2026-02-11T09:53:18.785"
+  "generated_at": "2026-02-11T10:36:33.083"
 }
