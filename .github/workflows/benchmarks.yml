@@ -141,6 +141,18 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Set up Julia
+        uses: julia-actions/setup-julia@v2
+        with:
+          version: '1.11'
+
+      - name: Fetch data from gh-pages
+        run: |
+          git fetch origin gh-pages || true
+          mkdir -p data
+          git show origin/gh-pages:index.json > data/index.json 2>/dev/null || true
+          git show origin/gh-pages:latest_100.json > data/latest_100.json 2>/dev/null || true
+
       - name: Update main index page
         shell: bash
         env:
@@ -149,8 +161,8 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          julia --project=. -e 'using Pkg; Pkg.instantiate()'
-          julia --project=. ci/generate_index_page.jl data /tmp/index.html \
+          julia --project=ci -e 'using Pkg; Pkg.Registry.update(); Pkg.instantiate()'
+          julia --project=ci ci/generate_index_page.jl data /tmp/index.html \
             "${{ github.server_url }}/${{ github.repository }}" "${{ github.sha }}"
 
           git fetch origin gh-pages

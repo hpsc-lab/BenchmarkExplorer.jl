@@ -40,4 +40,5 @@ end
     include("test_nanosoldier.jl")
     include("test_edge_cases.jl")
     include("test_scripts.jl")
+    include("test_static_page.jl")
 end
