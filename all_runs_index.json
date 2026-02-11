@@ -5108,6 +5108,22 @@
       ],
       "last_run_date": "2026-02-11"
     },
+    "enzyme": {
+      "total_runs": 1,
+      "first_run_date": "2026-02-11",
+      "runs": [
+        {
+          "julia_version": "1.11.9",
+          "run": 1,
+          "commit_hash": "c105fa5adadea12369bba62be390719e74edc09b",
+          "benchmark_count": 7,
+          "date": "2026-02-11",
+          "timestamp": "2026-02-11T10:40:18.052",
+          "url": "by_group/enzyme/run_1.json"
+        }
+      ],
+      "last_run_date": "2026-02-11"
+    },
     "nanosoldier_union": {
       "total_runs": 29,
       "first_run_date": "2026-02-11",
@@ -5914,5 +5930,5 @@
     }
   },
   "version": "2.0",
-  "generated_at": "2026-02-11T10:36:33.083"
+  "generated_at": "2026-02-11T10:40:31.120"
 }
