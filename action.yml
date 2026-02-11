@@ -88,7 +88,7 @@ runs:
       if: inputs.group_name != 'nanosoldier'
       run: |
         import Pkg
-        Pkg.resolve()
+        Pkg.Registry.update()
         Pkg.instantiate()
       shell: julia --color=yes --project=${{ inputs.benchmark_project }} {0}
 
