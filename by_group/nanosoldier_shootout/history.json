@@ -1,6 +1,6 @@
 {
   "shootout/k_nucleotide": {
-    "26": {
+    "27": {
       "max_time_ns": 8.505e7,
       "allocs": 0,
       "julia_version": "nightly",
@@ -8,7 +8,7 @@
       "mean_time_ns": 8.1e7,
       "samples": 1,
       "commit_hash": "06b2bf2",
-      "timestamp": "2026-02-22T03:23:27.220",
+      "timestamp": "2026-02-23T03:24:15.735",
       "median_time_ns": 8.1e7,
       "memory_bytes": 0
     },
@@ -20,13 +20,13 @@
       "mean_time_ns": 9.3e7,
       "samples": 1,
       "commit_hash": "016630a",
-      "timestamp": "2026-02-22T03:23:25.145",
+      "timestamp": "2026-02-23T03:24:11.621",
       "median_time_ns": 9.3e7,
       "memory_bytes": 0
     }
   },
   "shootout/fannkuch": {
-    "19": {
+    "20": {
       "max_time_ns": 9.66e7,
       "allocs": 0,
       "julia_version": "nightly",
@@ -34,7 +34,7 @@
       "mean_time_ns": 9.2e7,
       "samples": 1,
       "commit_hash": "03de024",
-      "timestamp": "2026-02-22T03:23:25.896",
+      "timestamp": "2026-02-23T03:24:13.720",
       "median_time_ns": 9.2e7,
       "memory_bytes": 0
     },
@@ -46,7 +46,7 @@
       "mean_time_ns": 1.07e8,
       "samples": 1,
       "commit_hash": "016630a",
-      "timestamp": "2026-02-22T03:23:25.145",
+      "timestamp": "2026-02-23T03:24:11.621",
       "median_time_ns": 1.07e8,
       "memory_bytes": 0
     }

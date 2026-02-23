@@ -1,6 +1,6 @@
 {
   "micro/mandel": {
-    "26": {
+    "27": {
       "max_time_ns": 1.2285e8,
       "allocs": 0,
       "julia_version": "nightly",
@@ -8,7 +8,7 @@
       "mean_time_ns": 1.17e8,
       "samples": 1,
       "commit_hash": "06b2bf2",
-      "timestamp": "2026-02-22T03:23:27.220",
+      "timestamp": "2026-02-23T03:24:15.735",
       "median_time_ns": 1.17e8,
       "memory_bytes": 0
     }
@@ -22,25 +22,13 @@
       "mean_time_ns": 1.06e8,
       "samples": 1,
       "commit_hash": "016630a",
-      "timestamp": "2026-02-22T03:23:25.145",
+      "timestamp": "2026-02-23T03:24:11.621",
       "median_time_ns": 1.06e8,
       "memory_bytes": 0
     }
   },
   "micro/fib": {
     "21": {
-      "max_time_ns": 8.925e7,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "min_time_ns": 8.075e7,
-      "mean_time_ns": 8.5e7,
-      "samples": 1,
-      "commit_hash": "0425751",
-      "timestamp": "2026-02-22T03:23:26.006",
-      "median_time_ns": 8.5e7,
-      "memory_bytes": 0
-    },
-    "20": {
       "max_time_ns": 1.113e8,
       "allocs": 0,
       "julia_version": "nightly",
@@ -48,8 +36,20 @@
       "mean_time_ns": 1.06e8,
       "samples": 1,
       "commit_hash": "0425751",
-      "timestamp": "2026-02-22T03:23:25.946",
+      "timestamp": "2026-02-23T03:24:13.881",
       "median_time_ns": 1.06e8,
+      "memory_bytes": 0
+    },
+    "22": {
+      "max_time_ns": 8.925e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "min_time_ns": 8.075e7,
+      "mean_time_ns": 8.5e7,
+      "samples": 1,
+      "commit_hash": "0425751",
+      "timestamp": "2026-02-23T03:24:14.027",
+      "median_time_ns": 8.5e7,
       "memory_bytes": 0
     },
     "11": {
@@ -60,7 +60,7 @@
       "mean_time_ns": 8.7e7,
       "samples": 1,
       "commit_hash": "01d6fae",
-      "timestamp": "2026-02-22T03:23:25.422",
+      "timestamp": "2026-02-23T03:24:12.258",
       "median_time_ns": 8.7e7,
       "memory_bytes": 0
     }
