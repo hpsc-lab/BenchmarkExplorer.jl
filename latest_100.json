@@ -41810,6 +41810,19 @@
           "samples": 10000,
           "commit_hash": "90b2c7dc6438cbd66b6eff029a42700de93af5d0",
           "timestamp": "2026-02-13T03:24:00.384"
+        },
+        "22": {
+          "std_time_ns": 228.46481883925736,
+          "median_time_ns": 60.0,
+          "allocs": 2,
+          "julia_version": "1.11.9",
+          "memory_bytes": 928,
+          "min_time_ns": 49.0,
+          "mean_time_ns": 78.0753,
+          "max_time_ns": 16631.0,
+          "samples": 10000,
+          "commit_hash": "90b2c7dc6438cbd66b6eff029a42700de93af5d0",
+          "timestamp": "2026-03-04T03:16:16.844"
         }
       },
       "basics/make_zero/namedtuple": {
@@ -42085,6 +42098,19 @@
           "samples": 10000,
           "commit_hash": "90b2c7dc6438cbd66b6eff029a42700de93af5d0",
           "timestamp": "2026-02-13T03:24:00.384"
+        },
+        "22": {
+          "std_time_ns": 131.59744944606666,
+          "median_time_ns": 30.0,
+          "allocs": 0,
+          "julia_version": "1.11.9",
+          "memory_bytes": 0,
+          "min_time_ns": 20.0,
+          "mean_time_ns": 30.6396,
+          "max_time_ns": 13185.0,
+          "samples": 10000,
+          "commit_hash": "90b2c7dc6438cbd66b6eff029a42700de93af5d0",
+          "timestamp": "2026-03-04T03:16:16.844"
         }
       },
       "autodiff/reverse/complex": {
@@ -42360,6 +42386,19 @@
           "samples": 10000,
           "commit_hash": "90b2c7dc6438cbd66b6eff029a42700de93af5d0",
           "timestamp": "2026-02-13T03:24:00.384"
+        },
+        "22": {
+          "std_time_ns": 3149.39785051182,
+          "median_time_ns": 31439.0,
+          "allocs": 3,
+          "julia_version": "1.11.9",
+          "memory_bytes": 8072,
+          "min_time_ns": 28033.0,
+          "mean_time_ns": 30819.6519,
+          "max_time_ns": 122579.0,
+          "samples": 10000,
+          "commit_hash": "90b2c7dc6438cbd66b6eff029a42700de93af5d0",
+          "timestamp": "2026-03-04T03:16:16.844"
         }
       },
       "autodiff/forward/complex": {
@@ -42635,6 +42674,19 @@
           "samples": 10000,
           "commit_hash": "90b2c7dc6438cbd66b6eff029a42700de93af5d0",
           "timestamp": "2026-02-13T03:24:00.384"
+        },
+        "22": {
+          "std_time_ns": 2676.7144335299304,
+          "median_time_ns": 19486.0,
+          "allocs": 3,
+          "julia_version": "1.11.9",
+          "memory_bytes": 8072,
+          "min_time_ns": 19046.0,
+          "mean_time_ns": 20228.1971,
+          "max_time_ns": 205965.0,
+          "samples": 10000,
+          "commit_hash": "90b2c7dc6438cbd66b6eff029a42700de93af5d0",
+          "timestamp": "2026-03-04T03:16:16.844"
         }
       },
       "basics/make_zero/struct": {
@@ -42910,6 +42962,19 @@
           "samples": 10000,
           "commit_hash": "90b2c7dc6438cbd66b6eff029a42700de93af5d0",
           "timestamp": "2026-02-13T03:24:00.384"
+        },
+        "22": {
+          "std_time_ns": 185.51229553937821,
+          "median_time_ns": 190.0,
+          "allocs": 7,
+          "julia_version": "1.11.9",
+          "memory_bytes": 496,
+          "min_time_ns": 170.0,
+          "mean_time_ns": 212.7317,
+          "max_time_ns": 10530.0,
+          "samples": 10000,
+          "commit_hash": "90b2c7dc6438cbd66b6eff029a42700de93af5d0",
+          "timestamp": "2026-03-04T03:16:16.844"
         }
       },
       "autodiff/forward/simple": {
@@ -43185,6 +43250,19 @@
           "samples": 10000,
           "commit_hash": "90b2c7dc6438cbd66b6eff029a42700de93af5d0",
           "timestamp": "2026-02-13T03:24:00.384"
+        },
+        "22": {
+          "std_time_ns": 1116.6552129074094,
+          "median_time_ns": 2014.0,
+          "allocs": 4,
+          "julia_version": "1.11.9",
+          "memory_bytes": 2720,
+          "min_time_ns": 190.0,
+          "mean_time_ns": 1525.0646,
+          "max_time_ns": 16881.0,
+          "samples": 10000,
+          "commit_hash": "90b2c7dc6438cbd66b6eff029a42700de93af5d0",
+          "timestamp": "2026-03-04T03:16:16.844"
         }
       },
       "autodiff/reverse/simple": {
@@ -43460,6 +43538,19 @@
           "samples": 10000,
           "commit_hash": "90b2c7dc6438cbd66b6eff029a42700de93af5d0",
           "timestamp": "2026-02-13T03:24:00.384"
+        },
+        "22": {
+          "std_time_ns": 1315.3536796231804,
+          "median_time_ns": 3767.0,
+          "allocs": 4,
+          "julia_version": "1.11.9",
+          "memory_bytes": 2720,
+          "min_time_ns": 1673.0,
+          "mean_time_ns": 3259.5351,
+          "max_time_ns": 25988.0,
+          "samples": 10000,
+          "commit_hash": "90b2c7dc6438cbd66b6eff029a42700de93af5d0",
+          "timestamp": "2026-03-04T03:16:16.844"
         }
       }
     },
@@ -51146,5 +51237,5 @@
       }
     }
   },
-  "cached_at": "2026-03-04T03:12:17.466"
+  "cached_at": "2026-03-04T03:16:19.231"
 }
