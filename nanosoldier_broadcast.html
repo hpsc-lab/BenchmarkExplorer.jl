@@ -24,9 +24,8 @@
             max-width: 1600px;
             margin: 0 auto;
             background: #fff;
-            border: 1px solid #191919;
-            border-radius: 12px;
-            overflow: hidden;
+            border: 1px solid #e9e9e7;
+            border-radius: 4px;
         }
 
         header {
@@ -93,8 +92,8 @@
 
         .btn {
             padding: 8px 16px;
-            border: 1px solid #191919;
-            border-radius: 8px;
+            border: 1px solid #e9e9e7;
+            border-radius: 3px;
             font-size: 0.85em;
             cursor: pointer;
             font-weight: 500;
@@ -128,8 +127,8 @@
             flex: 1;
             min-width: 260px;
             padding: 8px 14px;
-            border: 1px solid #191919;
-            border-radius: 8px;
+            border: 1px solid #e9e9e7;
+            border-radius: 3px;
             font-size: 0.9em;
             background: #fff;
             color: #191919;
@@ -146,14 +145,14 @@
         }
 
         .benchmark-item {
-            border: 1px solid #191919;
-            border-radius: 10px;
+            border: 1px solid #e9e9e7;
+            border-radius: 3px;
             margin-bottom: 20px;
             overflow: hidden;
         }
 
         .benchmark-item:hover {
-            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+            border-color: #191919;
         }
 
         .benchmark-header {
@@ -278,8 +277,8 @@
             padding: 10px 16px;
             margin-bottom: 4px;
             background: #f7f6f3;
-            border: 1px solid #191919;
-            border-radius: 8px;
+            border: 1px solid #e9e9e7;
+            border-radius: 3px;
             cursor: pointer;
             font-weight: 600;
             font-size: 0.95em;
@@ -290,6 +289,7 @@
 
         .tree-toggle:hover {
             background: #edece9;
+            border-color: #ccc;
         }
 
         .tree-toggle .arrow {
@@ -415,6 +415,7 @@
 
         body.dark-mode .tree-toggle:hover {
             background: #2a2a2a;
+            border-color: #555;
         }
 
         body.dark-mode .tree-toggle .count {
@@ -426,7 +427,7 @@
     <div class="container">
         <header>
             <h1>nanosoldier_broadcast</h1>
-            <p>Benchmark Dashboard &nbsp;&bull;&nbsp; Commit: <a href="https://github.com/hpsc-lab/BenchmarkExplorer.jl/commit/e597c46656ac9231f7f161c963cdb720f0e000bc" target="_blank" style="color: #ccc; text-decoration: none;">e597c46</a></p>
+            <p>Benchmark Dashboard &nbsp;&bull;&nbsp; Commit: <a href="https://github.com/hpsc-lab/BenchmarkExplorer.jl/commit/42331d8622cf105ba713390909c10d47bc7ec9b3" target="_blank" style="color: #ccc; text-decoration: none;">42331d8</a></p>
         </header>
 
         <div class="stats-panel" id="stats-panel"></div>
@@ -746,9 +747,7 @@
                         </div>
                     `;
                     container.appendChild(item);
-                    if (plotObserver) {
-                        plotObserver.observe(item.querySelector('.plot-container'));
-                    }
+                    renderSinglePlot(name, data, plotId);
                 }
                 if (entry.__children) {
                     const leafCount = countLeaves(entry.__children) + (entry.__leaf ? 1 : 0);
