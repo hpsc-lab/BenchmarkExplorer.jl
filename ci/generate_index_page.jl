@@ -44,204 +44,158 @@ function generate_index_page(benchmarks_dir::String, output_file::String, repo_u
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Benchmark Results</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f7f6f3;
             min-height: 100vh;
-            padding: 20px;
+            padding: 24px;
+            color: #191919;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            overflow: hidden;
+            background: #fff;
+            border: 1px solid #e9e9e7;
+            border-radius: 4px;
         }
 
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 60px 40px;
-            text-align: center;
+            background: #191919;
+            color: #fff;
+            padding: 36px 40px;
+            border-bottom: 1px solid #000;
         }
 
         h1 {
-            font-size: 3em;
-            margin-bottom: 15px;
+            font-size: 1.8em;
             font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 6px;
         }
 
         .subtitle {
-            font-size: 1.2em;
-            opacity: 0.9;
-            margin-bottom: 30px;
+            font-size: 0.9em;
+            color: #999;
         }
 
         .meta {
-            background: #f8f9fa;
-            padding: 20px 40px;
-            border-bottom: 1px solid #dee2e6;
+            background: #f7f6f3;
+            padding: 14px 40px;
+            border-bottom: 1px solid #e9e9e7;
             display: flex;
-            justify-content: space-between;
+            gap: 24px;
             flex-wrap: wrap;
-            gap: 15px;
+            font-size: 0.85em;
         }
 
-        .meta-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
+        .meta-item { display: flex; align-items: center; gap: 6px; }
 
-        .meta-label {
-            font-weight: 600;
-            color: #495057;
-        }
+        .meta-label { font-weight: 600; color: #191919; }
 
-        .meta-value {
-            color: #6c757d;
-        }
+        .meta-value { color: #787774; }
 
-        .meta-value a {
-            color: #667eea;
-            text-decoration: none;
-        }
+        .meta-value a { color: #191919; text-decoration: none; }
 
-        .meta-value a:hover {
-            text-decoration: underline;
-        }
+        .meta-value a:hover { text-decoration: underline; }
 
-        .content {
-            padding: 40px;
-        }
-
-        .intro {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .intro h2 {
-            color: #212529;
-            margin-bottom: 15px;
-        }
-
-        .intro p {
-            color: #6c757d;
-            font-size: 1.1em;
-        }
+        .content { padding: 32px 40px; }
 
         .groups-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 16px;
         }
 
         .group-card {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            border-radius: 12px;
-            padding: 30px;
+            background: #fff;
+            border: 1px solid #e9e9e7;
+            border-radius: 3px;
+            padding: 24px;
             text-decoration: none;
             color: inherit;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
             display: block;
+            transition: border-color 0.15s;
         }
 
         .group-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
-            border-color: #667eea;
+            border-color: #191919;
         }
 
         .group-name {
-            font-size: 1.8em;
+            font-size: 1.1em;
             font-weight: 700;
-            color: #667eea;
-            margin-bottom: 15px;
-            font-family: 'Courier New', monospace;
+            color: #191919;
+            margin-bottom: 16px;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
         }
 
         .group-stats {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin-top: 20px;
+            gap: 10px;
         }
 
         .stat-item {
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
+            background: #f7f6f3;
+            padding: 12px;
+            border-radius: 3px;
             text-align: center;
         }
 
         .stat-number {
-            font-size: 1.8em;
+            font-size: 1.5em;
             font-weight: 700;
-            color: #667eea;
+            color: #191919;
         }
 
         .stat-label {
-            font-size: 0.85em;
-            color: #6c757d;
-            margin-top: 5px;
+            font-size: 0.75em;
+            color: #787774;
+            margin-top: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .group-updated {
-            margin-top: 15px;
-            padding-top: 15px;
-            border-top: 1px solid #dee2e6;
-            font-size: 0.9em;
-            color: #6c757d;
+            margin-top: 14px;
+            padding-top: 14px;
+            border-top: 1px solid #e9e9e7;
+            font-size: 0.8em;
+            color: #787774;
         }
 
         .no-groups {
             text-align: center;
             padding: 60px 20px;
-            color: #6c757d;
+            color: #787774;
         }
 
         footer {
-            background: #f8f9fa;
-            padding: 20px 40px;
+            background: #191919;
+            padding: 14px 40px;
             text-align: center;
-            color: #6c757d;
-            border-top: 1px solid #dee2e6;
+            color: #787774;
+            border-top: 1px solid #000;
+            font-size: 0.85em;
         }
 
-        footer a {
-            color: #667eea;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
+        footer a { color: #fff; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
 
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 2em;
-            }
-
-            .groups-grid {
-                grid-template-columns: 1fr;
-            }
+            h1 { font-size: 1.4em; }
+            .groups-grid { grid-template-columns: 1fr; }
+            .content { padding: 24px 20px; }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>📊 Benchmark Dashboard</h1>
+            <h1>Benchmark Dashboard</h1>
             <div class="subtitle">Performance tracking for Julia projects</div>
         </header>
 
@@ -256,16 +210,11 @@ function generate_index_page(benchmarks_dir::String, output_file::String, repo_u
             </div>
             <div class="meta-item">
                 <span class="meta-label">Repository:</span>
-                <span class="meta-value"><a href="$repo_url" target="_blank">View on GitHub</a></span>
+                <span class="meta-value"><a href="$repo_url" target="_blank">GitHub</a></span>
             </div>
         </div>
 
         <div class="content">
-            <div class="intro">
-                <h2>Available Benchmark Groups</h2>
-                <p>Select a benchmark group to view detailed performance metrics and trends</p>
-            </div>
-
             <div class="groups-grid">
 """
 
@@ -288,12 +237,10 @@ function generate_index_page(benchmarks_dir::String, output_file::String, repo_u
                         </div>
                         <div class="stat-item">
                             <div class="stat-number">$(data["total_runs"])</div>
-                            <div class="stat-label">Total Runs</div>
+                            <div class="stat-label">Runs</div>
                         </div>
                     </div>
-                    <div class="group-updated">
-                        Last updated: $(data["latest_update"])
-                    </div>
+                    <div class="group-updated">Last updated: $(data["latest_update"])</div>
                 </a>
 """
         end
@@ -305,9 +252,6 @@ function generate_index_page(benchmarks_dir::String, output_file::String, repo_u
 
         <footer>
             <p>Powered by <a href="https://github.com/$(split(repo_url, "github.com/")[end])" target="_blank">BenchmarkExplorer</a></p>
-            <p style="margin-top: 10px;">
-                <a href="benchmarks/" target="_blank">📁 Raw Data</a>
-            </p>
         </footer>
     </div>
 </body>

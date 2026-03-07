@@ -74,7 +74,7 @@ function aggregate_by_commit(plot_data_mean, plot_data_min, plot_data_median)
     )
 end
 
-function generate_static_page_plotly(data_dir::String, output_file::String, group_name::String, repo_url::String, commit_sha::String)
+function generate_static_page_plotly(data_dir::String, output_file::String, group_name::String, repo_url::String, commit_sha::String, commit_base_url::String=repo_url)
     data = try
         load_dashboard_data(data_dir)
     catch e
@@ -220,14 +220,14 @@ function generate_static_page_plotly(data_dir::String, output_file::String, grou
         "last_updated" => isnothing(data.stats.last_run) ? "Unknown" : format_time_ago(data.stats.last_run)
     ))
 
-    html = generate_html_template(benchmarks_json, stats_json, group_name, repo_url, commit_sha, all_runs_available)
+    html = generate_html_template(benchmarks_json, stats_json, group_name, repo_url, commit_sha, all_runs_available, commit_base_url)
 
     open(output_file, "w") do f
         write(f, html)
     end
 end
 
-function generate_html_template(benchmarks_json, stats_json, group_name, repo_url, commit_sha, all_runs_available)
+function generate_html_template(benchmarks_json, stats_json, group_name, repo_url, commit_sha, all_runs_available, commit_base_url=repo_url)
     commit_short = commit_sha[1:min(7, length(commit_sha))]
 
     return """
@@ -246,201 +246,198 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             }
 
             body {
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                background: #f7f6f3;
                 min-height: 100vh;
-                padding: 20px;
+                padding: 24px;
+                color: #191919;
             }
 
             .container {
                 max-width: 1600px;
                 margin: 0 auto;
-                background: white;
-                border-radius: 20px;
-                box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-                overflow: hidden;
+                background: #fff;
+                border: 1px solid #e9e9e7;
+                border-radius: 4px;
             }
 
             header {
-                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                color: white;
-                padding: 40px;
-                text-align: center;
+                background: #191919;
+                color: #fff;
+                padding: 36px 40px;
+                border-bottom: 1px solid #000;
             }
 
             header h1 {
-                font-size: 3em;
-                margin-bottom: 10px;
-                text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+                font-size: 2em;
+                font-weight: 700;
+                letter-spacing: -0.5px;
+                margin-bottom: 6px;
             }
 
             header p {
-                font-size: 1.2em;
-                opacity: 0.9;
+                font-size: 0.95em;
+                color: #999;
             }
 
             .stats-panel {
                 display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                gap: 20px;
-                padding: 30px;
-                background: #f8f9fa;
-                border-bottom: 3px solid #667eea;
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+                gap: 0;
+                background: #f7f6f3;
+                border-bottom: 1px solid #e9e9e7;
             }
 
             .stat-card {
-                background: white;
-                padding: 20px;
-                border-radius: 12px;
-                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                background: #fff;
+                padding: 20px 24px;
                 text-align: center;
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                border-right: 1px solid #e9e9e7;
             }
 
-            .stat-card:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+            .stat-card:last-child {
+                border-right: none;
             }
 
             .stat-card .value {
-                font-size: 2.5em;
-                font-weight: bold;
-                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                background-clip: text;
-                margin-bottom: 10px;
+                font-size: 2em;
+                font-weight: 700;
+                color: #191919;
+                margin-bottom: 6px;
             }
 
             .stat-card .label {
-                color: #6c757d;
-                font-size: 0.9em;
+                color: #787774;
+                font-size: 0.8em;
                 text-transform: uppercase;
-                letter-spacing: 1px;
+                letter-spacing: 0.8px;
             }
 
             .controls {
-                padding: 30px;
-                background: white;
-                border-bottom: 1px solid #e9ecef;
+                padding: 16px 24px;
+                background: #fff;
+                border-bottom: 1px solid #e9e9e7;
                 display: flex;
-                gap: 15px;
+                gap: 10px;
                 flex-wrap: wrap;
                 align-items: center;
             }
 
             .btn {
-                padding: 12px 24px;
-                border: none;
-                border-radius: 8px;
-                font-size: 1em;
+                padding: 8px 16px;
+                border: 1px solid #e9e9e7;
+                border-radius: 3px;
+                font-size: 0.85em;
                 cursor: pointer;
-                transition: all 0.3s ease;
-                font-weight: 600;
-                text-transform: uppercase;
-                letter-spacing: 0.5px;
+                font-weight: 500;
+                background: #fff;
+                color: #191919;
+                transition: background 0.15s;
+            }
+
+            .btn:hover {
+                background: #f7f6f3;
             }
 
             .btn-primary {
-                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                color: white;
+                background: #191919;
+                color: #fff;
+                border-color: #191919;
             }
 
             .btn-primary:hover {
-                transform: translateY(-2px);
-                box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
-            }
-
-            .btn-secondary {
-                background: #6c757d;
-                color: white;
-            }
-
-            .btn-secondary:hover {
-                background: #5a6268;
+                background: #333;
+                border-color: #333;
             }
 
             .btn.active {
-                background: #28a745;
+                background: #191919;
+                color: #fff;
+                border-color: #191919;
             }
 
             .search-box {
                 flex: 1;
-                min-width: 300px;
-                padding: 12px 20px;
-                border: 2px solid #e9ecef;
-                border-radius: 8px;
-                font-size: 1em;
-                transition: border-color 0.3s ease;
+                min-width: 260px;
+                padding: 8px 14px;
+                border: 1px solid #e9e9e7;
+                border-radius: 3px;
+                font-size: 0.9em;
+                background: #fff;
+                color: #191919;
             }
 
             .search-box:focus {
                 outline: none;
-                border-color: #667eea;
+                border-color: #191919;
             }
 
             .benchmarks {
-                padding: 30px;
+                padding: 24px;
+                background: #fff;
             }
 
             .benchmark-item {
-                background: white;
-                border: 2px solid #e9ecef;
-                border-radius: 12px;
-                margin-bottom: 30px;
+                border: 1px solid #e9e9e7;
+                border-radius: 3px;
+                margin-bottom: 20px;
                 overflow: hidden;
-                transition: border-color 0.3s ease, box-shadow 0.3s ease;
             }
 
             .benchmark-item:hover {
-                border-color: #667eea;
-                box-shadow: 0 4px 12px rgba(102, 126, 234, 0.1);
+                border-color: #191919;
             }
 
             .benchmark-header {
-                background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-                padding: 20px;
+                background: #f7f6f3;
+                padding: 16px 20px;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 flex-wrap: wrap;
-                gap: 15px;
+                gap: 12px;
+                border-bottom: 1px solid #e9e9e7;
             }
 
             .benchmark-name {
-                font-size: 1.3em;
-                font-weight: bold;
-                color: #2c3e50;
+                font-size: 1em;
+                font-weight: 600;
+                color: #191919;
+                font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
                 display: flex;
                 align-items: center;
                 gap: 10px;
             }
 
             .trend-badge {
-                padding: 6px 12px;
-                border-radius: 20px;
-                font-size: 0.8em;
-                font-weight: bold;
+                padding: 3px 8px;
+                border-radius: 3px;
+                font-size: 0.75em;
+                font-weight: 600;
+                font-family: -apple-system, BlinkMacSystemFont, sans-serif;
             }
 
             .trend-faster {
-                background: #d4edda;
-                color: #155724;
+                background: #e6f4ea;
+                color: #1e7e34;
+                border: 1px solid #c3e6cb;
             }
 
             .trend-slower {
-                background: #f8d7da;
-                color: #721c24;
+                background: #fce8e8;
+                color: #b91c1c;
+                border: 1px solid #f5c6cb;
             }
 
             .trend-stable {
-                background: #d1ecf1;
-                color: #0c5460;
+                background: #f7f6f3;
+                color: #787774;
+                border: 1px solid #e9e9e7;
             }
 
             .benchmark-stats {
                 display: flex;
-                gap: 20px;
+                gap: 24px;
                 flex-wrap: wrap;
             }
 
@@ -450,36 +447,37 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
 
             .stat-key {
                 display: block;
-                font-size: 0.8em;
-                color: #6c757d;
-                margin-bottom: 4px;
+                font-size: 0.72em;
+                color: #787774;
+                margin-bottom: 3px;
                 text-transform: uppercase;
                 letter-spacing: 0.5px;
             }
 
             .stat-val {
                 display: block;
-                font-weight: bold;
-                color: #2c3e50;
-                font-size: 1.1em;
+                font-weight: 600;
+                color: #191919;
+                font-size: 0.95em;
             }
 
             .plot-container {
                 padding: 20px;
-                min-height: 400px;
+                min-height: 380px;
+                background: #fff;
             }
 
             footer {
-                background: #2c3e50;
-                color: white;
+                background: #191919;
+                color: #787774;
                 text-align: center;
-                padding: 20px;
+                padding: 16px;
+                font-size: 0.85em;
             }
 
             footer a {
-                color: #667eea;
+                color: #fff;
                 text-decoration: none;
-                font-weight: bold;
             }
 
             footer a:hover {
@@ -489,69 +487,180 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             .no-results {
                 text-align: center;
                 padding: 60px;
-                color: #6c757d;
+                color: #787774;
             }
 
             .no-results h2 {
                 margin-bottom: 10px;
+                color: #191919;
+            }
+
+            .tree-node {
+                margin-left: 16px;
+            }
+
+            .tree-node.root {
+                margin-left: 0;
+            }
+
+            .tree-toggle {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                padding: 10px 16px;
+                margin-bottom: 4px;
+                background: #f7f6f3;
+                border: 1px solid #e9e9e7;
+                border-radius: 3px;
+                cursor: pointer;
+                font-weight: 600;
+                font-size: 0.95em;
+                color: #191919;
+                transition: background 0.15s;
+                user-select: none;
+            }
+
+            .tree-toggle:hover {
+                background: #edece9;
+                border-color: #ccc;
+            }
+
+            .tree-toggle .arrow {
+                transition: transform 0.2s ease;
+                font-size: 0.7em;
+                color: #787774;
+            }
+
+            .tree-toggle.collapsed .arrow {
+                transform: rotate(-90deg);
+            }
+
+            .tree-toggle .count {
+                font-size: 0.75em;
+                color: #787774;
+                font-weight: 400;
+                margin-left: auto;
+            }
+
+            .tree-children {
+                overflow: hidden;
+            }
+
+            .tree-children.collapsed {
+                display: none;
             }
 
             body.dark-mode {
-                background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+                background: #191919;
+                color: #e9e9e7;
             }
 
             body.dark-mode .container {
-                background: #2c3e50;
+                background: #252525;
+                border-color: #383838;
+            }
+
+            body.dark-mode header {
+                background: #000;
+                border-bottom-color: #383838;
             }
 
             body.dark-mode .stats-panel {
-                background: #34495e;
-                border-bottom-color: #667eea;
+                background: #191919;
+                border-bottom-color: #383838;
             }
 
             body.dark-mode .stat-card {
-                background: #2c3e50;
-                color: #ecf0f1;
+                background: #252525;
+                border-right-color: #383838;
+                color: #e9e9e7;
+            }
+
+            body.dark-mode .stat-card .value {
+                color: #e9e9e7;
             }
 
             body.dark-mode .controls {
-                background: #34495e;
-                border-bottom-color: #4a5568;
+                background: #252525;
+                border-bottom-color: #383838;
             }
 
-            body.dark-mode .benchmarks {
-                background: #2c3e50;
+            body.dark-mode .btn {
+                background: #252525;
+                color: #e9e9e7;
+                border-color: #383838;
             }
 
-            body.dark-mode .benchmark-item {
-                background: #34495e;
-                border-color: #4a5568;
+            body.dark-mode .btn:hover {
+                background: #333;
             }
 
-            body.dark-mode .benchmark-header {
-                background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-            }
-
-            body.dark-mode .benchmark-name {
-                color: #ecf0f1;
-            }
-
-            body.dark-mode .stat-val {
-                color: #ecf0f1;
+            body.dark-mode .btn-primary, body.dark-mode .btn.active {
+                background: #e9e9e7;
+                color: #191919;
+                border-color: #e9e9e7;
             }
 
             body.dark-mode .search-box {
-                background: #2c3e50;
-                color: #ecf0f1;
-                border-color: #4a5568;
+                background: #252525;
+                color: #e9e9e7;
+                border-color: #383838;
+            }
+
+            body.dark-mode .search-box:focus {
+                border-color: #e9e9e7;
+            }
+
+            body.dark-mode .benchmarks {
+                background: #252525;
+            }
+
+            body.dark-mode .benchmark-item {
+                border-color: #383838;
+            }
+
+            body.dark-mode .benchmark-item:hover {
+                border-color: #e9e9e7;
+            }
+
+            body.dark-mode .benchmark-header {
+                background: #191919;
+                border-bottom-color: #383838;
+            }
+
+            body.dark-mode .benchmark-name {
+                color: #e9e9e7;
+            }
+
+            body.dark-mode .stat-val {
+                color: #e9e9e7;
+            }
+
+            body.dark-mode .plot-container {
+                background: #252525;
+            }
+
+            body.dark-mode .tree-toggle {
+                background: #191919;
+                border-color: #383838;
+                color: #e9e9e7;
+            }
+
+            body.dark-mode .tree-toggle:hover {
+                background: #2a2a2a;
+                border-color: #555;
+            }
+
+            body.dark-mode .tree-toggle .count {
+                color: #787774;
             }
         </style>
     </head>
     <body>
         <div class="container">
             <header>
-                <h1>📊 $group_name</h1>
-                <p>Interactive Benchmark Dashboard • Commit: <a href="$repo_url/commit/$commit_sha" target="_blank" style="color: #a8d8ff; text-decoration: none;">$commit_short</a></p>
+                <h1>$group_name</h1>
+                <p>Benchmark Dashboard &nbsp;&bull;&nbsp; Commit: <a href="$repo_url/commit/$commit_sha" target="_blank" style="color: #ccc; text-decoration: none;">$commit_short</a></p>
             </header>
 
             <div class="stats-panel" id="stats-panel"></div>
@@ -574,8 +683,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             <div class="benchmarks" id="benchmarks-container"></div>
 
             <footer>
-                <p>Generated by <a href="$repo_url" target="_blank">BenchmarkExplorer.jl</a> • Powered by Plotly.js</p>
-                <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.8;">Full interactive zoom, pan, and export capabilities</p>
+                <p>Generated by <a href="$repo_url" target="_blank">BenchmarkExplorer.jl</a></p>
             </footer>
         </div>
 
@@ -583,6 +691,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             const benchmarksData = $benchmarks_json;
             const statsData = $stats_json;
             const repoUrl = '$repo_url';
+            const commitBaseUrl = '$commit_base_url';
             let percentageMode = false;
             let darkMode = false;
             let trendFilter = 'all';
@@ -657,8 +766,8 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                     type: 'scatter',
                     mode: 'lines+markers',
                     name: 'Mean',
-                    line: {color: '#667eea', width: 3},
-                    marker: {size: 8},
+                    line: {color: '#191919', width: 2},
+                    marker: {size: 6, color: '#191919'},
                     hovertext: data.mean.hovertext,
                     hoverinfo: data.mean.hoverinfo || 'text'
                 };
@@ -668,7 +777,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                         type: 'data',
                         array: data.mean.error_y.array,
                         visible: true,
-                        color: 'rgba(102, 126, 234, 0.4)',
+                        color: 'rgba(120, 119, 116, 0.5)',
                         thickness: 1.5,
                         width: 4
                     };
@@ -682,7 +791,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                         type: 'scatter',
                         mode: 'lines',
                         name: 'Min',
-                        line: {color: '#27ae60', width: 2, dash: 'dash'},
+                        line: {color: '#787774', width: 1.5, dash: 'dash'},
                         visible: 'legendonly',
                         hovertemplate: percentageMode ?
                             'Commit: %{x}<br>Min: %{y:.2f}%<extra></extra>' :
@@ -694,7 +803,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                         type: 'scatter',
                         mode: 'lines',
                         name: 'Median',
-                        line: {color: '#f39c12', width: 2, dash: 'dot'},
+                        line: {color: '#aaa', width: 1.5, dash: 'dot'},
                         visible: 'legendonly',
                         hovertemplate: percentageMode ?
                             'Commit: %{x}<br>Median: %{y:.2f}%<extra></extra>' :
@@ -724,10 +833,11 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                         y: 1
                     },
                     margin: {l: 60, r: 20, t: 20, b: 60},
-                    plot_bgcolor: darkMode ? '#2c3e50' : '#ffffff',
-                    paper_bgcolor: darkMode ? '#34495e' : '#ffffff',
+                    plot_bgcolor: darkMode ? '#252525' : '#ffffff',
+                    paper_bgcolor: darkMode ? '#252525' : '#ffffff',
                     font: {
-                        color: darkMode ? '#ecf0f1' : '#2c3e50'
+                        color: darkMode ? '#e9e9e7' : '#191919',
+                        family: '-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif'
                     },
                     autosize: true
                 };
@@ -786,6 +896,117 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 });
             }
 
+            function buildTree(entries) {
+                const tree = {};
+                entries.forEach(([name, data]) => {
+                    const parts = name.split('/');
+                    let node = tree;
+                    for (let i = 0; i < parts.length; i++) {
+                        const part = parts[i];
+                        if (!node[part]) node[part] = {};
+                        if (i === parts.length - 1) {
+                            node[part].__leaf = { name, data };
+                        } else {
+                            if (!node[part].__children) node[part].__children = {};
+                            node = node[part].__children;
+                        }
+                    }
+                });
+                return tree;
+            }
+
+            function countLeaves(node) {
+                let count = 0;
+                for (const key of Object.keys(node)) {
+                    if (key === '__leaf' || key === '__children') continue;
+                    if (node[key].__leaf) count++;
+                    if (node[key].__children) count += countLeaves(node[key].__children);
+                }
+                return count;
+            }
+
+            function renderTreeNode(node, container, depth) {
+                const keys = Object.keys(node).filter(k => k !== '__leaf' && k !== '__children').sort();
+                for (const key of keys) {
+                    const entry = node[key];
+                    if (entry.__leaf) {
+                        const { name, data } = entry.__leaf;
+                        const stats = data.stats;
+                        const item = document.createElement('div');
+                        item.className = 'benchmark-item';
+
+                        let trendBadge = '';
+                        if (stats.num_runs > 1) {
+                            const arrow = stats.trend === 'faster' ? '↓' : (stats.trend === 'slower' ? '↑' : '→');
+                            const sign = stats.percent_change > 0 ? '+' : '';
+                            trendBadge = `<span class="trend-badge trend-\${stats.trend}">\${arrow} \${sign}\${stats.percent_change}%</span>`;
+                        }
+
+                        const plotId = 'plot-' + name.replace(/[^a-zA-Z0-9]/g, '-');
+
+                        item.innerHTML = `
+                            <div class="benchmark-header">
+                                <div class="benchmark-name">
+                                    <span>\${key}</span>
+                                    \${trendBadge}
+                                </div>
+                                <div class="benchmark-stats">
+                                    <div class="stat">
+                                        <span class="stat-key">Latest</span>
+                                        <span class="stat-val">\${stats.latest_mean} ms</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-key">Commit</span>
+                                        <span class="stat-val"><a href="\${commitBaseUrl}/commit/\${stats.latest_commit}" target="_blank" style="color: #667eea; text-decoration: none;">\${stats.latest_commit.substring(0, 7)}</a></span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-key">Memory</span>
+                                        <span class="stat-val">\${formatBytes(stats.latest_memory)}</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-key">Allocs</span>
+                                        <span class="stat-val">\${stats.latest_allocs}</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-key">Runs</span>
+                                        <span class="stat-val">\${stats.num_runs}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="plot-container" id="\${plotId}" data-benchmark-name="\${name}">
+                                <div style="display: flex; align-items: center; justify-content: center; height: 350px; color: #6c757d;">
+                                    Loading chart...
+                                </div>
+                            </div>
+                        `;
+                        container.appendChild(item);
+                        renderSinglePlot(name, data, plotId);
+                    }
+                    if (entry.__children) {
+                        const leafCount = countLeaves(entry.__children) + (entry.__leaf ? 1 : 0);
+                        const treeNode = document.createElement('div');
+                        treeNode.className = depth === 0 ? 'tree-node root' : 'tree-node';
+
+                        const toggle = document.createElement('div');
+                        toggle.className = 'tree-toggle';
+                        toggle.innerHTML = `<span class="arrow">&#9660;</span> \${key} <span class="count">\${leafCount} benchmarks</span>`;
+                        toggle.addEventListener('click', function() {
+                            this.classList.toggle('collapsed');
+                            children.classList.toggle('collapsed');
+                        });
+
+                        const children = document.createElement('div');
+                        children.className = 'tree-children';
+
+                        renderTreeNode(entry.__children, children, depth + 1);
+
+                        treeNode.appendChild(toggle);
+                        treeNode.appendChild(children);
+                        container.appendChild(treeNode);
+                    }
+                }
+            }
+
             function renderBenchmarks(filter = '') {
                 const container = document.getElementById('benchmarks-container');
                 container.innerHTML = '';
@@ -805,58 +1026,8 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                     return;
                 }
 
-                filtered.forEach(([name, data]) => {
-                    const stats = data.stats;
-                    const item = document.createElement('div');
-                    item.className = 'benchmark-item';
-
-                    let trendBadge = '';
-                    if (stats.num_runs > 1) {
-                        const arrow = stats.trend === 'faster' ? '↓' : (stats.trend === 'slower' ? '↑' : '→');
-                        const sign = stats.percent_change > 0 ? '+' : '';
-                        trendBadge = `<span class="trend-badge trend-\${stats.trend}">\${arrow} \${sign}\${stats.percent_change}%</span>`;
-                    }
-
-                    const plotId = 'plot-' + name.replace(/[^a-zA-Z0-9]/g, '-');
-
-                    item.innerHTML = `
-                        <div class="benchmark-header">
-                            <div class="benchmark-name">
-                                <span>\${name}</span>
-                                \${trendBadge}
-                            </div>
-                            <div class="benchmark-stats">
-                                <div class="stat">
-                                    <span class="stat-key">Latest</span>
-                                    <span class="stat-val">\${stats.latest_mean} ms</span>
-                                </div>
-                                <div class="stat">
-                                    <span class="stat-key">Commit</span>
-                                    <span class="stat-val"><a href="\${repoUrl}/commit/\${stats.latest_commit}" target="_blank" style="color: #667eea; text-decoration: none;">\${stats.latest_commit.substring(0, 7)}</a></span>
-                                </div>
-                                <div class="stat">
-                                    <span class="stat-key">Memory</span>
-                                    <span class="stat-val">\${formatBytes(stats.latest_memory)}</span>
-                                </div>
-                                <div class="stat">
-                                    <span class="stat-key">Allocs</span>
-                                    <span class="stat-val">\${stats.latest_allocs}</span>
-                                </div>
-                                <div class="stat">
-                                    <span class="stat-key">Runs</span>
-                                    <span class="stat-val">\${stats.num_runs}</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="plot-container" id="\${plotId}" data-benchmark-name="\${name}">
-                            <div style="display: flex; align-items: center; justify-content: center; height: 350px; color: #6c757d;">
-                                Loading chart...
-                            </div>
-                        </div>
-                    `;
-                    container.appendChild(item);
-                    renderSinglePlot(name, data, plotId);
-                });
+                const tree = buildTree(filtered);
+                renderTreeNode(tree, container, 0);
             }
 
             function calcPercentFromPrev(values) {
@@ -934,9 +1105,9 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                     const plotDiv = document.getElementById(plotId);
                     if (plotDiv && plotDiv.data) {
                         Plotly.relayout(plotDiv, {
-                            'plot_bgcolor': darkMode ? '#2c3e50' : '#ffffff',
-                            'paper_bgcolor': darkMode ? '#34495e' : '#ffffff',
-                            'font.color': darkMode ? '#ecf0f1' : '#2c3e50'
+                            'plot_bgcolor': darkMode ? '#252525' : '#ffffff',
+                            'paper_bgcolor': darkMode ? '#252525' : '#ffffff',
+                            'font.color': darkMode ? '#e9e9e7' : '#191919'
                         });
                     }
                 });
@@ -1090,7 +1261,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                     }
                 }
 
-                const commitLink = commit !== 'unknown' ? '<a href="' + repoUrl + '/commit/' + commit + '" target="_blank" style="color:#667eea;text-decoration:none">' + commit + '</a>' : commit;
+                const commitLink = commit !== 'unknown' ? '<a href="' + commitBaseUrl + '/commit/' + commit + '" target="_blank" style="color:#667eea;text-decoration:none">' + commit + '</a>' : commit;
 
                 const html = '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>' + benchName + ' - ' + commitShort + '</title><style>' +
                     '*{margin:0;padding:0;box-sizing:border-box}' +
@@ -1161,6 +1332,7 @@ if abspath(PROGRAM_FILE) == @__FILE__
     group_name = ARGS[3]
     repo_url = ARGS[4]
     commit_sha = length(ARGS) >= 5 ? ARGS[5] : "unknown"
+    commit_base_url = length(ARGS) >= 6 ? ARGS[6] : repo_url
 
-    generate_static_page_plotly(data_dir, output_file, group_name, repo_url, commit_sha)
+    generate_static_page_plotly(data_dir, output_file, group_name, repo_url, commit_sha, commit_base_url)
 end

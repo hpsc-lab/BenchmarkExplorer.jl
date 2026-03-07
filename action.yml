@@ -42,6 +42,11 @@ inputs:
     required: false
     default: 'benchmarks/'
 
+  commit_base_url:
+    description: 'Base URL for commit links (e.g. https://github.com/JuliaLang/julia). Defaults to the repository URL.'
+    required: false
+    default: ''
+
   github_token:
     description: 'GitHub token for pushing results'
     required: true
@@ -64,12 +69,7 @@ runs:
         version: ${{ inputs.julia_version }}
 
     - name: Cache Julia packages
-      uses: actions/cache@v4
-      with:
-        path: ~/.julia
-        key: julia-${{ runner.os }}-${{ inputs.julia_version }}-${{ hashFiles('**/Project.toml', '**/Manifest.toml') }}
-        restore-keys: |
-          julia-${{ runner.os }}-${{ inputs.julia_version }}-
+      uses: julia-actions/cache@v2
 
     - name: Fetch existing data from persist branch
       if: inputs.persist_to_branch != ''
@@ -88,7 +88,7 @@ runs:
       if: inputs.group_name != 'nanosoldier'
       run: |
         import Pkg
-        Pkg.Registry.update()
+        Pkg.Registry.add("General")
         Pkg.instantiate()
       shell: julia --color=yes --project=${{ inputs.benchmark_project }} {0}
 
@@ -107,7 +107,7 @@ runs:
       if: inputs.persist_to_branch != ''
       shell: bash
       run: |
-        julia --project=${{ github.action_path }} -e 'using Pkg; Pkg.instantiate()'
+        julia --project=${{ github.action_path }} -e 'using Pkg; Pkg.Registry.add("General"); Pkg.instantiate()'
 
     - name: Generate HTML pages
       if: inputs.persist_to_branch != ''
@@ -119,17 +119,22 @@ runs:
           ${{ inputs.data_dir }} /tmp/benchmark_html/index.html \
           "${{ github.server_url }}/${{ github.repository }}" "${{ github.sha }}"
 
+        COMMIT_BASE_URL="${{ inputs.commit_base_url }}"
+        if [ -z "$COMMIT_BASE_URL" ]; then
+          COMMIT_BASE_URL="${{ github.server_url }}/${{ github.repository }}"
+        fi
+
         julia --project=${{ github.action_path }} -e '
           include(ARGS[1])
           using JSON
           latest = JSON.parsefile(joinpath(ARGS[2], "latest_100.json"))
           for group in keys(get(latest, "groups", Dict()))
             println("Generating page for: ", group)
-            generate_static_page_plotly(ARGS[2], joinpath(ARGS[3], group * ".html"), group, ARGS[4], ARGS[5])
+            generate_static_page_plotly(ARGS[2], joinpath(ARGS[3], group * ".html"), group, ARGS[4], ARGS[5], ARGS[6])
           end
         ' -- "${{ github.action_path }}/ci/generate_static_page_plotly.jl" \
           "${{ inputs.data_dir }}" "/tmp/benchmark_html" \
-          "${{ github.server_url }}/${{ github.repository }}" "${{ github.sha }}"
+          "${{ github.server_url }}/${{ github.repository }}" "${{ github.sha }}" "$COMMIT_BASE_URL"
 
         julia --project=${{ github.action_path }} -e 'include("${{ github.action_path }}/src/HistoryManager.jl"); using .HistoryManager; generate_all_runs_index("${{ inputs.data_dir }}")'
 
