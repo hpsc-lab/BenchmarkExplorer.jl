@@ -257,8 +257,9 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 max-width: 1600px;
                 margin: 0 auto;
                 background: #fff;
-                border: 1px solid #e9e9e7;
-                border-radius: 4px;
+                border: 1px solid #191919;
+                border-radius: 12px;
+                overflow: hidden;
             }
 
             header {
@@ -325,8 +326,8 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
 
             .btn {
                 padding: 8px 16px;
-                border: 1px solid #e9e9e7;
-                border-radius: 3px;
+                border: 1px solid #191919;
+                border-radius: 8px;
                 font-size: 0.85em;
                 cursor: pointer;
                 font-weight: 500;
@@ -360,8 +361,8 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 flex: 1;
                 min-width: 260px;
                 padding: 8px 14px;
-                border: 1px solid #e9e9e7;
-                border-radius: 3px;
+                border: 1px solid #191919;
+                border-radius: 8px;
                 font-size: 0.9em;
                 background: #fff;
                 color: #191919;
@@ -378,14 +379,14 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             }
 
             .benchmark-item {
-                border: 1px solid #e9e9e7;
-                border-radius: 3px;
+                border: 1px solid #191919;
+                border-radius: 10px;
                 margin-bottom: 20px;
                 overflow: hidden;
             }
 
             .benchmark-item:hover {
-                border-color: #191919;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.12);
             }
 
             .benchmark-header {
@@ -510,8 +511,8 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 padding: 10px 16px;
                 margin-bottom: 4px;
                 background: #f7f6f3;
-                border: 1px solid #e9e9e7;
-                border-radius: 3px;
+                border: 1px solid #191919;
+                border-radius: 8px;
                 cursor: pointer;
                 font-weight: 600;
                 font-size: 0.95em;
@@ -522,7 +523,6 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
 
             .tree-toggle:hover {
                 background: #edece9;
-                border-color: #ccc;
             }
 
             .tree-toggle .arrow {
@@ -648,7 +648,6 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
 
             body.dark-mode .tree-toggle:hover {
                 background: #2a2a2a;
-                border-color: #555;
             }
 
             body.dark-mode .tree-toggle .count {
@@ -980,7 +979,9 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                             </div>
                         `;
                         container.appendChild(item);
-                        renderSinglePlot(name, data, plotId);
+                        if (plotObserver) {
+                            plotObserver.observe(item.querySelector('.plot-container'));
+                        }
                     }
                     if (entry.__children) {
                         const leafCount = countLeaves(entry.__children) + (entry.__leaf ? 1 : 0);

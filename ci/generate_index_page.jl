@@ -20,6 +20,8 @@ function generate_index_page(benchmarks_dir::String, output_file::String, repo_u
     end
 
     for (group_name, group_info) in get(index, "groups", Dict())
+        contains(group_name, "_") && any(startswith(group_name, p * "_") for p in ["nanosoldier", "ns"]) && continue
+
         num_benchmarks = if haskey(latest_data, "groups") && haskey(latest_data["groups"], group_name)
             length(latest_data["groups"][group_name])
         else
@@ -58,8 +60,9 @@ function generate_index_page(benchmarks_dir::String, output_file::String, repo_u
             max-width: 1200px;
             margin: 0 auto;
             background: #fff;
-            border: 1px solid #e9e9e7;
-            border-radius: 4px;
+            border: 1px solid #191919;
+            border-radius: 12px;
+            overflow: hidden;
         }
 
         header {
@@ -111,17 +114,17 @@ function generate_index_page(benchmarks_dir::String, output_file::String, repo_u
 
         .group-card {
             background: #fff;
-            border: 1px solid #e9e9e7;
-            border-radius: 3px;
+            border: 1px solid #191919;
+            border-radius: 10px;
             padding: 24px;
             text-decoration: none;
             color: inherit;
             display: block;
-            transition: border-color 0.15s;
+            transition: box-shadow 0.15s;
         }
 
         .group-card:hover {
-            border-color: #191919;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
         }
 
         .group-name {
@@ -141,7 +144,7 @@ function generate_index_page(benchmarks_dir::String, output_file::String, repo_u
         .stat-item {
             background: #f7f6f3;
             padding: 12px;
-            border-radius: 3px;
+            border-radius: 8px;
             text-align: center;
         }
 
