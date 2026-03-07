@@ -43,21 +43,23 @@
         .meta a:hover { text-decoration: underline; }
 
         .groups-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 16px;
-            max-width: 900px;
         }
 
         .group-card {
             background: #fff;
-            border: 1.5px solid #191919;
+            border: 2px solid #191919;
             border-radius: 14px;
             padding: 22px 20px 18px;
             text-decoration: none;
             color: inherit;
             display: block;
             transition: box-shadow 0.15s;
+            flex: 0 1 260px;
+            min-width: 200px;
         }
 
         .group-card:hover {
@@ -117,8 +119,8 @@
     <div class="container">
         <h1>Benchmark Dashboard</h1>
         <div class="meta">
-            <span>2026-03-07 03:16:35 MarchTC</span>
-            <span>commit: <a href="https://github.com/hpsc-lab/BenchmarkExplorer.jl/commit/cfb42866f3f8409f2c9ae461ffe1971e1d7cceba" target="_blank">cfb4286</a></span>
+            <span>2026-03-07 05:03:21 MarchTC</span>
+            <span>commit: <a href="https://github.com/hpsc-lab/BenchmarkExplorer.jl/commit/3f824eb2b02a3ef42586fdc5bd3f211da47b4937" target="_blank">3f824eb</a></span>
             <span><a href="https://github.com/hpsc-lab/BenchmarkExplorer.jl" target="_blank">GitHub</a></span>
         </div>
 
@@ -126,7 +128,7 @@
                 <a href="enzyme.html" class="group-card">
                     <div class="group-name">enzyme</div>
                     <div class="group-count">7</div>
-                    <div class="group-runs">62 runs</div>
+                    <div class="group-runs">61 runs</div>
                     <div class="group-updated">2026-03-07</div>
                 </a>
                 <a href="nanosoldier.html" class="group-card">
@@ -138,7 +140,7 @@
                 <a href="trixi.html" class="group-card">
                     <div class="group-name">trixi</div>
                     <div class="group-count">24</div>
-                    <div class="group-runs">65 runs</div>
+                    <div class="group-runs">64 runs</div>
                     <div class="group-updated">2026-03-07</div>
                 </a>
         </div>
