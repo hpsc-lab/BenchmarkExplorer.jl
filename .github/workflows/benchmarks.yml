@@ -133,8 +133,8 @@ jobs:
 
   update-index:
     runs-on: ubuntu-latest
-    needs: [check-changes, benchmark-nanosoldier]
-    if: needs.check-changes.outputs.should_run == 'true'
+    needs: [check-changes, benchmark-trixi, benchmark-enzyme, benchmark-nanosoldier]
+    if: always() && needs.check-changes.outputs.should_run == 'true'
 
     steps:
       - name: Checkout repository
