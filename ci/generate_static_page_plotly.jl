@@ -238,6 +238,9 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>$group_name - BenchmarkExplorer</title>
         <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
         <style>
             * {
                 margin: 0;
@@ -246,8 +249,8 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             }
 
             body {
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-                background: #f7f6f3;
+                font-family: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
+                background: #f5f5f5;
                 min-height: 100vh;
                 padding: 24px;
                 color: #191919;
@@ -263,21 +266,20 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             }
 
             header {
-                background: #191919;
-                color: #fff;
-                padding: 36px 40px;
-                border-bottom: 1px solid #000;
+                background: #fff;
+                color: #191919;
+                padding: 28px 32px 20px;
+                border-bottom: 1px solid #e9e9e7;
             }
 
             header h1 {
-                font-size: 2em;
+                font-size: 1.4em;
                 font-weight: 700;
-                letter-spacing: -0.5px;
-                margin-bottom: 6px;
+                margin-bottom: 4px;
             }
 
             header p {
-                font-size: 0.95em;
+                font-size: 0.8em;
                 color: #999;
             }
 
@@ -469,15 +471,16 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             }
 
             footer {
-                background: #191919;
-                color: #787774;
+                background: #fff;
+                color: #bbb;
                 text-align: center;
                 padding: 16px;
-                font-size: 0.85em;
+                font-size: 0.75em;
+                border-top: 1px solid #e9e9e7;
             }
 
             footer a {
-                color: #fff;
+                color: #999;
                 text-decoration: none;
             }
 
@@ -659,7 +662,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
         <div class="container">
             <header>
                 <h1>$group_name</h1>
-                <p>Benchmark Dashboard &nbsp;&bull;&nbsp; Commit: <a href="$repo_url/commit/$commit_sha" target="_blank" style="color: #ccc; text-decoration: none;">$commit_short</a></p>
+                <p>Benchmark Dashboard &nbsp;&bull;&nbsp; Commit: <a href="$repo_url/commit/$commit_sha" target="_blank" style="color: #666; text-decoration: none;">$commit_short</a></p>
             </header>
 
             <div class="stats-panel" id="stats-panel"></div>
@@ -1029,6 +1032,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
 
                 const tree = buildTree(filtered);
                 renderTreeNode(tree, container, 0);
+                renderVisiblePlots();
             }
 
             function calcPercentFromPrev(values) {

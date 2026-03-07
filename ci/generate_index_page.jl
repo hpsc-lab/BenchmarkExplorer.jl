@@ -45,78 +45,55 @@ function generate_index_page(benchmarks_dir::String, output_file::String, repo_u
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Benchmark Results</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #f7f6f3;
+            font-family: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
+            background: #f5f5f5;
             min-height: 100vh;
-            padding: 24px;
+            padding: 40px 24px;
             color: #191919;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 960px;
             margin: 0 auto;
-            background: #fff;
-            border: 1px solid #191919;
-            border-radius: 12px;
-            overflow: hidden;
-        }
-
-        header {
-            background: #191919;
-            color: #fff;
-            padding: 36px 40px;
-            border-bottom: 1px solid #000;
         }
 
         h1 {
-            font-size: 1.8em;
+            font-size: 1.3em;
             font-weight: 700;
-            letter-spacing: -0.5px;
+            color: #191919;
             margin-bottom: 6px;
         }
 
-        .subtitle {
-            font-size: 0.9em;
-            color: #999;
-        }
-
         .meta {
-            background: #f7f6f3;
-            padding: 14px 40px;
-            border-bottom: 1px solid #e9e9e7;
+            font-size: 0.78em;
+            color: #999;
+            margin-bottom: 32px;
             display: flex;
-            gap: 24px;
+            gap: 20px;
             flex-wrap: wrap;
-            font-size: 0.85em;
         }
 
-        .meta-item { display: flex; align-items: center; gap: 6px; }
-
-        .meta-label { font-weight: 600; color: #191919; }
-
-        .meta-value { color: #787774; }
-
-        .meta-value a { color: #191919; text-decoration: none; }
-
-        .meta-value a:hover { text-decoration: underline; }
-
-        .content { padding: 32px 40px; }
+        .meta a { color: #666; text-decoration: none; }
+        .meta a:hover { text-decoration: underline; }
 
         .groups-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 16px;
         }
 
         .group-card {
             background: #fff;
-            border: 1px solid #191919;
-            border-radius: 10px;
-            padding: 24px;
+            border: 1.5px solid #191919;
+            border-radius: 14px;
+            padding: 22px 20px 18px;
             text-decoration: none;
             color: inherit;
             display: block;
@@ -124,101 +101,69 @@ function generate_index_page(benchmarks_dir::String, output_file::String, repo_u
         }
 
         .group-card:hover {
-            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+            box-shadow: 0 4px 14px rgba(0,0,0,0.1);
         }
 
         .group-name {
-            font-size: 1.1em;
+            font-size: 0.82em;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .group-count {
+            font-size: 2.6em;
             font-weight: 700;
             color: #191919;
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+
+        .group-runs {
+            font-size: 0.72em;
+            color: #aaa;
             margin-bottom: 16px;
-            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
-        }
-
-        .group-stats {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
-        }
-
-        .stat-item {
-            background: #f7f6f3;
-            padding: 12px;
-            border-radius: 8px;
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 1.5em;
-            font-weight: 700;
-            color: #191919;
-        }
-
-        .stat-label {
-            font-size: 0.75em;
-            color: #787774;
-            margin-top: 4px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
         }
 
         .group-updated {
-            margin-top: 14px;
-            padding-top: 14px;
+            padding-top: 12px;
             border-top: 1px solid #e9e9e7;
-            font-size: 0.8em;
-            color: #787774;
+            font-size: 0.72em;
+            color: #aaa;
         }
 
         .no-groups {
             text-align: center;
             padding: 60px 20px;
-            color: #787774;
+            color: #999;
+            grid-column: 1 / -1;
         }
 
         footer {
-            background: #191919;
-            padding: 14px 40px;
+            margin-top: 36px;
             text-align: center;
-            color: #787774;
-            border-top: 1px solid #000;
-            font-size: 0.85em;
+            font-size: 0.72em;
+            color: #bbb;
         }
 
-        footer a { color: #fff; text-decoration: none; }
+        footer a { color: #999; text-decoration: none; }
         footer a:hover { text-decoration: underline; }
 
-        @media (max-width: 768px) {
-            h1 { font-size: 1.4em; }
+        @media (max-width: 700px) {
             .groups-grid { grid-template-columns: 1fr; }
-            .content { padding: 24px 20px; }
+            body { padding: 24px 16px; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>Benchmark Dashboard</h1>
-            <div class="subtitle">Performance tracking for Julia projects</div>
-        </header>
-
+        <h1>Benchmark Dashboard</h1>
         <div class="meta">
-            <div class="meta-item">
-                <span class="meta-label">Updated:</span>
-                <span class="meta-value">$current_time</span>
-            </div>
-            <div class="meta-item">
-                <span class="meta-label">Commit:</span>
-                <span class="meta-value"><a href="$repo_url/commit/$commit_sha" target="_blank">$(commit_sha[1:min(7, length(commit_sha))])</a></span>
-            </div>
-            <div class="meta-item">
-                <span class="meta-label">Repository:</span>
-                <span class="meta-value"><a href="$repo_url" target="_blank">GitHub</a></span>
-            </div>
+            <span>$current_time</span>
+            <span>commit: <a href="$repo_url/commit/$commit_sha" target="_blank">$(commit_sha[1:min(7, length(commit_sha))])</a></span>
+            <span><a href="$repo_url" target="_blank">GitHub</a></span>
         </div>
 
-        <div class="content">
-            <div class="groups-grid">
+        <div class="groups-grid">
 """
 
     if isempty(benchmark_groups)
@@ -233,28 +178,19 @@ function generate_index_page(benchmarks_dir::String, output_file::String, repo_u
             html *= """
                 <a href="$(data["url"])" class="group-card">
                     <div class="group-name">$name</div>
-                    <div class="group-stats">
-                        <div class="stat-item">
-                            <div class="stat-number">$(data["num_benchmarks"])</div>
-                            <div class="stat-label">Benchmarks</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">$(data["total_runs"])</div>
-                            <div class="stat-label">Runs</div>
-                        </div>
-                    </div>
-                    <div class="group-updated">Last updated: $(data["latest_update"])</div>
+                    <div class="group-count">$(data["num_benchmarks"])</div>
+                    <div class="group-runs">$(data["total_runs"]) runs</div>
+                    <div class="group-updated">$(data["latest_update"])</div>
                 </a>
 """
         end
     end
 
     html *= """
-            </div>
         </div>
 
         <footer>
-            <p>Powered by <a href="https://github.com/$(split(repo_url, "github.com/")[end])" target="_blank">BenchmarkExplorer</a></p>
+            <p>Powered by <a href="https://github.com/$(split(repo_url, "github.com/")[end])" target="_blank">BenchmarkExplorer.jl</a></p>
         </footer>
     </div>
 </body>
