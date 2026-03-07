@@ -84,21 +84,23 @@ function generate_index_page(benchmarks_dir::String, output_file::String, repo_u
         .meta a:hover { text-decoration: underline; }
 
         .groups-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 16px;
-            max-width: 900px;
         }
 
         .group-card {
             background: #fff;
-            border: 1.5px solid #191919;
+            border: 2px solid #191919;
             border-radius: 14px;
             padding: 22px 20px 18px;
             text-decoration: none;
             color: inherit;
             display: block;
             transition: box-shadow 0.15s;
+            flex: 0 1 260px;
+            min-width: 200px;
         }
 
         .group-card:hover {

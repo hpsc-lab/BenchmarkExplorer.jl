@@ -280,22 +280,21 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             }
 
             .stats-panel {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-                gap: 0;
-                background: #f7f6f3;
-                border-bottom: 1px solid #e9e9e7;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                padding: 16px 32px;
+                background: #fff;
+                border-bottom: 2px solid #191919;
             }
 
             .stat-card {
                 background: #fff;
-                padding: 20px 24px;
+                border: 2px solid #191919;
+                border-radius: 10px;
+                padding: 16px 24px;
                 text-align: center;
-                border-right: 1px solid #e9e9e7;
-            }
-
-            .stat-card:last-child {
-                border-right: none;
+                flex: 1 1 150px;
             }
 
             .stat-card .value {
@@ -315,7 +314,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             .controls {
                 padding: 16px 24px;
                 background: #fff;
-                border-bottom: 1px solid #e9e9e7;
+                border-bottom: 2px solid #191919;
                 display: flex;
                 gap: 10px;
                 flex-wrap: wrap;
@@ -324,7 +323,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
 
             .btn {
                 padding: 8px 16px;
-                border: 1px solid #191919;
+                border: 2px solid #191919;
                 border-radius: 8px;
                 font-size: 0.85em;
                 cursor: pointer;
@@ -359,7 +358,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 flex: 1;
                 min-width: 260px;
                 padding: 8px 14px;
-                border: 1px solid #191919;
+                border: 2px solid #191919;
                 border-radius: 8px;
                 font-size: 0.9em;
                 background: #fff;
@@ -377,7 +376,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             }
 
             .benchmark-item {
-                border: 1px solid #191919;
+                border: 2px solid #191919;
                 border-radius: 10px;
                 margin-bottom: 20px;
                 overflow: hidden;
@@ -461,7 +460,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             }
 
             .plot-container {
-                padding: 20px;
+                width: 100%;
                 min-height: 380px;
                 background: #fff;
             }
@@ -496,7 +495,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             }
 
             .tree-node {
-                margin-left: 0;
+                margin-left: 32px;
             }
 
             .tree-node.root {
@@ -546,6 +545,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
 
             .tree-children {
                 overflow: hidden;
+                padding-left: 32px;
             }
 
             .tree-children.collapsed {
@@ -861,7 +861,9 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                     }
                 };
 
-                Plotly.newPlot(plotId, traces, layout, config);
+                Plotly.newPlot(plotId, traces, layout, config).then(() => {
+                    Plotly.Plots.resize(plotDiv);
+                });
 
                 plotDiv.on('plotly_click', function(clickData) {
                     if (!clickData || !clickData.points || clickData.points.length === 0) return;
