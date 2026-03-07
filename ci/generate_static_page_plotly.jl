@@ -314,11 +314,9 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             .controls {
                 padding: 12px 32px;
                 background: #fff;
-                border-top: 2px solid #191919;
-                position: fixed;
-                bottom: 0;
-                left: 0;
-                right: 0;
+                border-bottom: 2px solid #191919;
+                position: sticky;
+                top: 0;
                 z-index: 100;
                 display: flex;
                 gap: 10px;
@@ -376,7 +374,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             }
 
             .benchmarks {
-                padding: 24px 32px 90px;
+                padding: 24px 32px;
                 background: #fff;
             }
 
@@ -640,7 +638,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
 
             body.dark-mode .controls {
                 background: #252525;
-                border-top-color: #444;
+                border-bottom-color: #444;
             }
 
             body.dark-mode .btn {
