@@ -17,26 +17,22 @@
 
         body {
             font-family: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
-            background: #f5f5f5;
+            background: #fff;
             min-height: 100vh;
-            padding: 24px;
+            padding: 0;
             color: #191919;
         }
 
         .container {
-            max-width: 1600px;
-            margin: 0 auto;
+            width: 100%;
             background: #fff;
-            border: 1px solid #191919;
-            border-radius: 12px;
-            overflow: hidden;
         }
 
         header {
             background: #fff;
             color: #191919;
             padding: 28px 32px 20px;
-            border-bottom: 1px solid #e9e9e7;
+            border-bottom: 1.5px solid #191919;
         }
 
         header h1 {
@@ -143,7 +139,7 @@
         }
 
         .benchmarks {
-            padding: 24px;
+            padding: 24px 32px;
             background: #fff;
         }
 
@@ -267,7 +263,7 @@
         }
 
         .tree-node {
-            margin-left: 16px;
+            margin-left: 0;
         }
 
         .tree-node.root {
@@ -277,37 +273,40 @@
         .tree-toggle {
             display: flex;
             align-items: center;
-            gap: 8px;
-            padding: 10px 16px;
-            margin-bottom: 4px;
-            background: #f7f6f3;
-            border: 1px solid #191919;
-            border-radius: 8px;
+            gap: 12px;
+            padding: 16px 24px;
+            margin: 0;
+            background: #fafafa;
+            border: none;
+            border-top: 1.5px solid #191919;
             cursor: pointer;
-            font-weight: 600;
-            font-size: 0.95em;
+            font-weight: 700;
+            font-size: 1em;
             color: #191919;
-            transition: background 0.15s;
             user-select: none;
+            width: 100%;
         }
 
         .tree-toggle:hover {
-            background: #edece9;
+            background: #f5f5f5;
         }
 
-        .tree-toggle .arrow {
-            transition: transform 0.2s ease;
-            font-size: 0.7em;
-            color: #787774;
-        }
-
-        .tree-toggle.collapsed .arrow {
-            transform: rotate(-90deg);
+        .toggle-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 22px;
+            height: 22px;
+            border: 1.5px solid #191919;
+            border-radius: 5px;
+            font-size: 1em;
+            font-weight: 700;
+            flex-shrink: 0;
         }
 
         .tree-toggle .count {
             font-size: 0.75em;
-            color: #787774;
+            color: #999;
             font-weight: 400;
             margin-left: auto;
         }
@@ -411,17 +410,21 @@
         }
 
         body.dark-mode .tree-toggle {
-            background: #191919;
-            border-color: #383838;
+            background: #1a1a1a;
+            border-top-color: #444;
             color: #e9e9e7;
         }
 
         body.dark-mode .tree-toggle:hover {
-            background: #2a2a2a;
+            background: #222;
+        }
+
+        body.dark-mode .toggle-icon {
+            border-color: #e9e9e7;
         }
 
         body.dark-mode .tree-toggle .count {
-            color: #787774;
+            color: #666;
         }
     </style>
 </head>
@@ -429,7 +432,7 @@
     <div class="container">
         <header>
             <h1>nanosoldier_linalg</h1>
-            <p>Benchmark Dashboard &nbsp;&bull;&nbsp; Commit: <a href="https://github.com/hpsc-lab/BenchmarkExplorer.jl/commit/9d1b26a8ba6b00ee327b2be37ea99d88e62c6048" target="_blank" style="color: #666; text-decoration: none;">9d1b26a</a></p>
+            <p>Benchmark Dashboard &nbsp;&bull;&nbsp; Commit: <a href="https://github.com/hpsc-lab/BenchmarkExplorer.jl/commit/cfb42866f3f8409f2c9ae461ffe1971e1d7cceba" target="_blank" style="color: #666; text-decoration: none;">cfb4286</a></p>
         </header>
 
         <div class="stats-panel" id="stats-panel"></div>
@@ -457,10 +460,10 @@
     </div>
 
     <script>
-        const benchmarksData = {"linalg/arithmetic/(\\\\/HermitianSparseWithNonZeroPivots/Vector/256)":{"median":{"visible":"legendonly","name":"Median","line":{"width":1,"dash":"dot"},"y_raw":[343.0],"mode":"lines","x":["018a9ae"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Median: %{y:.3f} ms<extra></extra>","y":[343.0]},"min":{"visible":"legendonly","name":"Min","line":{"width":1,"dash":"dash"},"y_raw":[325.85],"mode":"lines","x":["018a9ae"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Min: %{y:.3f} ms<extra></extra>","y":[325.85]},"stats":{"baseline_mean":343.0,"latest_memory":0,"latest_commit":"018a9ae","percent_change":0.0,"num_runs":1,"latest_allocs":0,"latest_mean":343.0,"latest_timestamp":"2026-03-07T03:01:01.589","trend":"stable"},"mean":{"mode":"lines+markers","x":["018a9ae"],"commit_hashes":["018a9ae"],"hoverinfo":"text","name":"Mean","y":[343.0],"line":{"width":2},"y_raw":[343.0],"marker":{"size":6},"hovertext":["Commit: 018a9ae<br>Mean: 343.0 ms<br>Median: 343.0 ms<br>Min: 325.85 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 7 Mar 2026, 03:01"],"timestamps":["2026-03-07T03:01:01.589"],"type":"scatter"}},"linalg/small exp #29116":{"median":{"visible":"legendonly","name":"Median","line":{"width":1,"dash":"dot"},"y_raw":[109.00000000000001,95.0,109.00000000000001],"mode":"lines","x":["016630a","01d6fae","06b2bf2"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Median: %{y:.3f} ms<extra></extra>","y":[109.00000000000001,95.0,109.00000000000001]},"min":{"visible":"legendonly","name":"Min","line":{"width":1,"dash":"dash"},"y_raw":[103.55000000000001,90.25,103.55000000000001],"mode":"lines","x":["016630a","01d6fae","06b2bf2"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Min: %{y:.3f} ms<extra></extra>","y":[103.55000000000001,90.25,103.55000000000001]},"stats":{"baseline_mean":109.0,"latest_memory":0,"latest_commit":"06b2bf2","percent_change":0.0,"num_runs":3,"latest_allocs":0,"latest_mean":109.0,"latest_timestamp":"2026-03-07T03:01:02.977","trend":"stable"},"mean":{"mode":"lines+markers","x":["016630a","01d6fae","06b2bf2"],"commit_hashes":["016630a","01d6fae","06b2bf2"],"hoverinfo":"text","name":"Mean","y":[109.00000000000001,95.0,109.00000000000001],"line":{"width":2},"y_raw":[109.00000000000001,95.0,109.00000000000001],"marker":{"size":6},"hovertext":["Commit: 016630a<br>Mean: 109.0 ms<br>Median: 109.0 ms<br>Min: 103.55 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 7 Mar 2026, 03:01","Commit: 01d6fae<br>Mean: 95.0 ms<br>Median: 95.0 ms<br>Min: 90.25 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 7 Mar 2026, 03:01","Commit: 06b2bf2<br>Mean: 109.0 ms<br>Median: 109.0 ms<br>Min: 103.55 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 7 Mar 2026, 03:01"],"timestamps":["2026-03-07T03:01:01.528","2026-03-07T03:01:01.654","2026-03-07T03:01:02.977"],"type":"scatter"}},"linalg/arithmetic/(\\\\/HermitianSparseWithNonZeroPivots/Vector/1024)":{"median":{"visible":"legendonly","name":"Median","line":{"width":1,"dash":"dot"},"y_raw":[308.0],"mode":"lines","x":["018a9ae"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Median: %{y:.3f} ms<extra></extra>","y":[308.0]},"min":{"visible":"legendonly","name":"Min","line":{"width":1,"dash":"dash"},"y_raw":[292.6],"mode":"lines","x":["018a9ae"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Min: %{y:.3f} ms<extra></extra>","y":[292.6]},"stats":{"baseline_mean":308.0,"latest_memory":0,"latest_commit":"018a9ae","percent_change":0.0,"num_runs":1,"latest_allocs":0,"latest_mean":308.0,"latest_timestamp":"2026-03-07T03:01:01.589","trend":"stable"},"mean":{"mode":"lines+markers","x":["018a9ae"],"commit_hashes":["018a9ae"],"hoverinfo":"text","name":"Mean","y":[308.0],"line":{"width":2},"y_raw":[308.0],"marker":{"size":6},"hovertext":["Commit: 018a9ae<br>Mean: 308.0 ms<br>Median: 308.0 ms<br>Min: 292.6 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 7 Mar 2026, 03:01"],"timestamps":["2026-03-07T03:01:01.589"],"type":"scatter"}}};
-        const statsData = {"total_runs":64,"fastest":{"name":"enzyme/basics/make_zero/namedtuple","time":"29 ns"},"last_updated":"1 min ago","total_benchmarks":2069,"slowest":{"name":"nanosoldier/sparse/constructors/(IJV/10)","time":"359.0 ms"}};
+        const benchmarksData = {"linalg/arithmetic/(\\\\/HermitianSparseWithNonZeroPivots/Vector/256)":{"median":{"visible":"legendonly","name":"Median","line":{"width":1,"dash":"dot"},"y_raw":[343.0],"mode":"lines","x":["018a9ae"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Median: %{y:.3f} ms<extra></extra>","y":[343.0]},"min":{"visible":"legendonly","name":"Min","line":{"width":1,"dash":"dash"},"y_raw":[325.85],"mode":"lines","x":["018a9ae"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Min: %{y:.3f} ms<extra></extra>","y":[325.85]},"stats":{"baseline_mean":343.0,"latest_memory":0,"latest_commit":"018a9ae","percent_change":0.0,"num_runs":1,"latest_allocs":0,"latest_mean":343.0,"latest_timestamp":"2026-03-07T02:38:21.437","trend":"stable"},"mean":{"mode":"lines+markers","x":["018a9ae"],"commit_hashes":["018a9ae"],"hoverinfo":"text","name":"Mean","y":[343.0],"line":{"width":2},"y_raw":[343.0],"marker":{"size":6},"hovertext":["Commit: 018a9ae<br>Mean: 343.0 ms<br>Median: 343.0 ms<br>Min: 325.85 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 7 Mar 2026, 02:38"],"timestamps":["2026-03-07T02:38:21.437"],"type":"scatter"}},"linalg/small exp #29116":{"median":{"visible":"legendonly","name":"Median","line":{"width":1,"dash":"dot"},"y_raw":[109.00000000000001,95.0,109.00000000000001],"mode":"lines","x":["016630a","01d6fae","06b2bf2"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Median: %{y:.3f} ms<extra></extra>","y":[109.00000000000001,95.0,109.00000000000001]},"min":{"visible":"legendonly","name":"Min","line":{"width":1,"dash":"dash"},"y_raw":[103.55000000000001,90.25,103.55000000000001],"mode":"lines","x":["016630a","01d6fae","06b2bf2"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Min: %{y:.3f} ms<extra></extra>","y":[103.55000000000001,90.25,103.55000000000001]},"stats":{"baseline_mean":109.0,"latest_memory":0,"latest_commit":"06b2bf2","percent_change":0.0,"num_runs":3,"latest_allocs":0,"latest_mean":109.0,"latest_timestamp":"2026-03-07T02:38:23.680","trend":"stable"},"mean":{"mode":"lines+markers","x":["016630a","01d6fae","06b2bf2"],"commit_hashes":["016630a","01d6fae","06b2bf2"],"hoverinfo":"text","name":"Mean","y":[109.00000000000001,95.0,109.00000000000001],"line":{"width":2},"y_raw":[109.00000000000001,95.0,109.00000000000001],"marker":{"size":6},"hovertext":["Commit: 016630a<br>Mean: 109.0 ms<br>Median: 109.0 ms<br>Min: 103.55 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 7 Mar 2026, 02:38","Commit: 01d6fae<br>Mean: 95.0 ms<br>Median: 95.0 ms<br>Min: 90.25 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 7 Mar 2026, 02:38","Commit: 06b2bf2<br>Mean: 109.0 ms<br>Median: 109.0 ms<br>Min: 103.55 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 7 Mar 2026, 02:38"],"timestamps":["2026-03-07T02:38:21.250","2026-03-07T02:38:21.649","2026-03-07T02:38:23.680"],"type":"scatter"}},"linalg/arithmetic/(\\\\/HermitianSparseWithNonZeroPivots/Vector/1024)":{"median":{"visible":"legendonly","name":"Median","line":{"width":1,"dash":"dot"},"y_raw":[308.0],"mode":"lines","x":["018a9ae"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Median: %{y:.3f} ms<extra></extra>","y":[308.0]},"min":{"visible":"legendonly","name":"Min","line":{"width":1,"dash":"dash"},"y_raw":[292.6],"mode":"lines","x":["018a9ae"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Min: %{y:.3f} ms<extra></extra>","y":[292.6]},"stats":{"baseline_mean":308.0,"latest_memory":0,"latest_commit":"018a9ae","percent_change":0.0,"num_runs":1,"latest_allocs":0,"latest_mean":308.0,"latest_timestamp":"2026-03-07T02:38:21.437","trend":"stable"},"mean":{"mode":"lines+markers","x":["018a9ae"],"commit_hashes":["018a9ae"],"hoverinfo":"text","name":"Mean","y":[308.0],"line":{"width":2},"y_raw":[308.0],"marker":{"size":6},"hovertext":["Commit: 018a9ae<br>Mean: 308.0 ms<br>Median: 308.0 ms<br>Min: 292.6 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 7 Mar 2026, 02:38"],"timestamps":["2026-03-07T02:38:21.437"],"type":"scatter"}}};
+        const statsData = {"total_runs":65,"fastest":{"name":"enzyme/basics/make_zero/namedtuple","time":"33 ns"},"last_updated":"0 min ago","total_benchmarks":2069,"slowest":{"name":"nanosoldier/sparse/constructors/(IJV/10)","time":"359.0 ms"}};
         const repoUrl = 'https://github.com/hpsc-lab/BenchmarkExplorer.jl';
-        const commitBaseUrl = 'https://github.com/JuliaLang/julia';
+        const commitBaseUrl = 'https://github.com/hpsc-lab/BenchmarkExplorer.jl';
         let percentageMode = false;
         let darkMode = false;
         let trendFilter = 'all';
@@ -760,14 +763,16 @@
 
                     const toggle = document.createElement('div');
                     toggle.className = 'tree-toggle';
-                    toggle.innerHTML = `<span class="arrow">&#9660;</span> ${key} <span class="count">${leafCount} benchmarks</span>`;
-                    toggle.addEventListener('click', function() {
-                        this.classList.toggle('collapsed');
-                        children.classList.toggle('collapsed');
-                    });
+                    toggle.innerHTML = `<span class="toggle-icon">+</span> ${key} <span class="count">${leafCount} benchmarks</span>`;
 
                     const children = document.createElement('div');
-                    children.className = 'tree-children';
+                    children.className = 'tree-children collapsed';
+
+                    toggle.addEventListener('click', function() {
+                        const isCollapsed = children.classList.toggle('collapsed');
+                        this.querySelector('.toggle-icon').textContent = isCollapsed ? '+' : '−';
+                        if (!isCollapsed) renderVisiblePlots();
+                    });
 
                     renderTreeNode(entry.__children, children, depth + 1);
 

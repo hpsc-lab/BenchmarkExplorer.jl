@@ -12,15 +12,15 @@
 
         body {
             font-family: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
-            background: #f5f5f5;
+            background: #fff;
             min-height: 100vh;
-            padding: 40px 24px;
+            padding: 0;
             color: #191919;
         }
 
         .container {
-            max-width: 960px;
-            margin: 0 auto;
+            width: 100%;
+            padding: 40px 48px;
         }
 
         h1 {
@@ -46,6 +46,7 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 16px;
+            max-width: 900px;
         }
 
         .group-card {
@@ -98,8 +99,7 @@
         }
 
         footer {
-            margin-top: 36px;
-            text-align: center;
+            margin-top: 48px;
             font-size: 0.72em;
             color: #bbb;
         }
@@ -117,8 +117,8 @@
     <div class="container">
         <h1>Benchmark Dashboard</h1>
         <div class="meta">
-            <span>2026-03-07 03:02:16 MarchTC</span>
-            <span>commit: <a href="https://github.com/hpsc-lab/BenchmarkExplorer.jl/commit/9d1b26a8ba6b00ee327b2be37ea99d88e62c6048" target="_blank">9d1b26a</a></span>
+            <span>2026-03-07 03:11:55 MarchTC</span>
+            <span>commit: <a href="https://github.com/hpsc-lab/BenchmarkExplorer.jl/commit/cfb42866f3f8409f2c9ae461ffe1971e1d7cceba" target="_blank">cfb4286</a></span>
             <span><a href="https://github.com/hpsc-lab/BenchmarkExplorer.jl" target="_blank">GitHub</a></span>
         </div>
 
@@ -126,7 +126,7 @@
                 <a href="enzyme.html" class="group-card">
                     <div class="group-name">enzyme</div>
                     <div class="group-count">7</div>
-                    <div class="group-runs">62 runs</div>
+                    <div class="group-runs">61 runs</div>
                     <div class="group-updated">2026-03-07</div>
                 </a>
                 <a href="nanosoldier.html" class="group-card">
@@ -138,7 +138,7 @@
                 <a href="trixi.html" class="group-card">
                     <div class="group-name">trixi</div>
                     <div class="group-count">24</div>
-                    <div class="group-runs">64 runs</div>
+                    <div class="group-runs">65 runs</div>
                     <div class="group-updated">2026-03-07</div>
                 </a>
         </div>
