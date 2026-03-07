@@ -312,11 +312,13 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             }
 
             .controls {
-                padding: 16px 32px;
+                padding: 12px 32px;
                 background: #fff;
                 border-top: 2px solid #191919;
-                position: sticky;
-                top: 0;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
                 z-index: 100;
                 display: flex;
                 gap: 10px;
@@ -374,7 +376,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             }
 
             .benchmarks {
-                padding: 24px 32px;
+                padding: 24px 32px 90px;
                 background: #fff;
             }
 
@@ -720,7 +722,6 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             body.compact-mode .benchmark-stats { display: none; }
             body.compact-mode .sparkline-svg { width: 120px !important; height: 36px !important; }
 
-            .controls { position: relative; }
             #render-progress-wrap {
                 position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: #e9e9e7;
             }
@@ -954,6 +955,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             let trendFilter = 'all';
             let maxRuns = null;
             const renderedPlots = new Set();
+            const hiddenPlots = new Set();
             let plotObserver = null;
 
             function renderStats() {
@@ -1357,13 +1359,19 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                             const nowHidden = plotCont.style.display === 'none';
                             plotCont.style.display = nowHidden ? '' : 'none';
                             if (nowHidden) {
+                                hiddenPlots.delete(name);
                                 const pid = plotCont.id;
                                 const bname = plotCont.dataset.benchmarkName;
                                 if (bname && benchmarksData[bname] && !renderedPlots.has(pid)) {
                                     renderSinglePlot(bname, benchmarksData[bname], pid);
                                 }
+                            } else {
+                                hiddenPlots.add(name);
                             }
                         });
+                        if (hiddenPlots.has(name)) {
+                            item.querySelector('.plot-container').style.display = 'none';
+                        }
                         if (plotObserver) {
                             plotObserver.observe(item.querySelector('.plot-container'));
                         }
