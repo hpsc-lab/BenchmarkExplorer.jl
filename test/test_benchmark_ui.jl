@@ -171,7 +171,7 @@ using Statistics
     @testset "format_commit_hash" begin
 
         @test format_commit_hash("abc1234567890def") == "abc1234"
-        @test format_commit_hash("abc1234567890def"; length=10) == "abc1234567"
+        @test format_commit_hash("abc1234567890def"; len=10) == "abc1234567"
         @test format_commit_hash("short") == "short"
         @test format_commit_hash("") == "unknown"
         @test format_commit_hash("unknown") == "unknown"

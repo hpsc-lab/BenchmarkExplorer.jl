@@ -48,6 +48,7 @@ function generate_index_page(benchmarks_dir::String, output_file::String, repo_u
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -161,7 +162,7 @@ function generate_index_page(benchmarks_dir::String, output_file::String, repo_u
         <h1>Benchmark Dashboard</h1>
         <div class="meta">
             <span>$current_time</span>
-            <span>commit: <a href="$repo_url/commit/$commit_sha" target="_blank">$(commit_sha[1:min(7, length(commit_sha))])</a></span>
+            <span>commit: <a href="$repo_url/commit/$commit_sha" target="_blank">$(commit_sha[1:min(7, lastindex(commit_sha))])</a></span>
             <span><a href="$repo_url" target="_blank">GitHub</a></span>
         </div>
 

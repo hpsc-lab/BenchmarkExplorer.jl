@@ -95,7 +95,8 @@ function generate_static_page_plotly(data_dir::String, output_file::String, grou
     benchmark_traces = Dict{String, Any}()
 
     for (benchmark_path, runs) in history
-        run_numbers = sort([parse(Int, k) for k in keys(runs)])
+        run_numbers = sort([parse(Int, k) for k in keys(runs)],
+                           by = k -> get(runs[string(k)], "timestamp", ""))
 
         if isempty(run_numbers)
             continue
@@ -228,7 +229,7 @@ function generate_static_page_plotly(data_dir::String, output_file::String, grou
 end
 
 function generate_html_template(benchmarks_json, stats_json, group_name, repo_url, commit_sha, all_runs_available, commit_base_url=repo_url)
-    commit_short = commit_sha[1:min(7, length(commit_sha))]
+    commit_short = commit_sha[1:min(7, lastindex(commit_sha))]
 
     return """
     <!DOCTYPE html>
@@ -241,6 +242,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>">
         <style>
             * {
                 margin: 0;
@@ -265,7 +267,6 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 background: #fff;
                 color: #191919;
                 padding: 28px 32px 20px;
-                border-bottom: 1.5px solid #191919;
             }
 
             header h1 {
@@ -285,16 +286,15 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 gap: 12px;
                 padding: 16px 32px;
                 background: #fff;
-                border-bottom: 2px solid #191919;
             }
 
             .stat-card {
                 background: #fff;
                 border: 2px solid #191919;
                 border-radius: 10px;
-                padding: 16px 24px;
+                padding: 12px 20px;
                 text-align: center;
-                flex: 1 1 150px;
+                flex: 1 1 130px;
             }
 
             .stat-card .value {
@@ -312,9 +312,9 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             }
 
             .controls {
-                padding: 16px 24px;
+                padding: 16px 32px;
                 background: #fff;
-                border-bottom: 2px solid #191919;
+                border-top: 2px solid #191919;
                 position: sticky;
                 top: 0;
                 z-index: 100;
@@ -383,10 +383,18 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 border-radius: 10px;
                 margin-bottom: 20px;
                 overflow: hidden;
+                transition: transform 0.15s ease, box-shadow 0.15s ease;
+                animation: fadeSlideIn 0.25s ease both;
+            }
+
+            @keyframes fadeSlideIn {
+                from { opacity: 0; transform: translateY(8px); }
+                to   { opacity: 1; transform: translateY(0); }
             }
 
             .benchmark-item:hover {
-                box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+                transform: translateY(-2px);
+                box-shadow: 0 6px 20px rgba(0,0,0,0.12);
             }
 
             .benchmark-header {
@@ -469,6 +477,57 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 padding-top: 16px;
             }
 
+            .benchmark-item.trend-faster { border-left: 5px solid #27ae60; }
+            .benchmark-item.trend-slower { border-left: 5px solid #e74c3c; }
+            .benchmark-item.trend-stable { border-left: 5px solid #ccc; }
+
+            .skeleton-chart {
+                padding: 20px;
+                height: 350px;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                justify-content: flex-end;
+            }
+
+            .skeleton-bar {
+                background: linear-gradient(90deg, #f0f0f0 25%, #e8e8e8 50%, #f0f0f0 75%);
+                background-size: 200% 100%;
+                animation: shimmer 1.4s infinite;
+                border-radius: 3px;
+            }
+
+            @keyframes shimmer {
+                0%   { background-position: 200% 0; }
+                100% { background-position: -200% 0; }
+            }
+
+            .anchor-btn {
+                background: none;
+                border: none;
+                cursor: pointer;
+                font-size: 0.8em;
+                color: #ccc;
+                padding: 2px 4px;
+                opacity: 0;
+                transition: opacity 0.15s;
+            }
+
+            .benchmark-header:hover .anchor-btn { opacity: 1; }
+
+            .sparkline-svg { vertical-align: middle; margin-left: 8px; }
+
+            .tree-children {
+                overflow: hidden;
+                max-height: 0;
+                transition: max-height 0.35s ease;
+            }
+
+            .tree-children.open {
+                max-height: 999999px;
+                transition: max-height 0.5s ease;
+            }
+
             footer {
                 background: #fff;
                 color: #bbb;
@@ -511,10 +570,10 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 align-items: center;
                 gap: 12px;
                 padding: 16px 24px;
-                margin: 0;
+                margin: 4px 0;
                 background: #fafafa;
-                border: none;
-                border-top: 1.5px solid #191919;
+                border: 2px solid #191919;
+                border-radius: 8px;
                 cursor: pointer;
                 font-weight: 700;
                 font-size: 1em;
@@ -545,15 +604,6 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 color: #999;
                 font-weight: 400;
                 margin-left: auto;
-            }
-
-            .tree-children {
-                overflow: hidden;
-                padding-left: 0;
-            }
-
-            .tree-children.collapsed {
-                display: none;
             }
 
             body.dark-mode {
@@ -588,7 +638,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
 
             body.dark-mode .controls {
                 background: #252525;
-                border-bottom-color: #383838;
+                border-top-color: #444;
             }
 
             body.dark-mode .btn {
@@ -648,7 +698,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
 
             body.dark-mode .tree-toggle {
                 background: #1a1a1a;
-                border-top-color: #444;
+                border-color: #444;
                 color: #e9e9e7;
             }
 
@@ -663,26 +713,219 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             body.dark-mode .tree-toggle .count {
                 color: #666;
             }
+
+            body.compact-mode .plot-container { display: none !important; }
+            body.compact-mode .benchmark-item { margin-bottom: 6px; }
+            body.compact-mode .benchmark-header { border-bottom: none; padding: 10px 16px; cursor: pointer; }
+            body.compact-mode .benchmark-stats { display: none; }
+            body.compact-mode .sparkline-svg { width: 120px !important; height: 36px !important; }
+
+            .controls { position: relative; }
+            #render-progress-wrap {
+                position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: #e9e9e7;
+            }
+            #render-progress-bar {
+                height: 100%; background: #191919; width: 0;
+                transition: width 0.3s ease, opacity 0.4s ease;
+            }
+
+            .heatmap-wrap { overflow-x: auto; padding: 0 32px 32px; }
+            .heatmap-table { border-collapse: collapse; font-size: 0.72em; white-space: nowrap; }
+            .heatmap-table th { padding: 4px 6px; font-weight: 600; border-bottom: 2px solid #191919; }
+            .heatmap-table td { height: 26px; text-align: center; font-size: 0.9em; transition: opacity 0.1s; }
+            .heatmap-table tr:hover td { opacity: 0.85; }
+            .heatmap-name { padding: 4px 14px 4px 4px !important; text-align: left !important; max-width: 260px; overflow: hidden; text-overflow: ellipsis; font-family: monospace; }
+
+            .comparison-panel { padding: 0 32px 24px; }
+            .comparison-table { width: 100%; border-collapse: collapse; font-size: 0.85em; }
+            .comparison-table th { padding: 8px 12px; text-align: left; border-bottom: 2px solid #191919; font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.5px; }
+            .comparison-table td { padding: 7px 12px; border-bottom: 1px solid #e9e9e7; }
+            .comparison-table tbody tr:hover { background: #f7f6f3; }
+
+            .shortcuts-modal {
+                display: none; position: fixed; inset: 0;
+                background: rgba(0,0,0,0.35); z-index: 10000;
+                align-items: center; justify-content: center;
+            }
+            .shortcuts-modal.open { display: flex; }
+            .shortcuts-box {
+                background: #fff; border: 2px solid #191919; border-radius: 14px;
+                padding: 28px 32px; min-width: 320px;
+                font-family: 'JetBrains Mono', monospace;
+            }
+            .shortcuts-box h3 { margin-bottom: 18px; font-size: 1em; }
+            .shortcut-row {
+                display: flex; justify-content: space-between; align-items: center;
+                gap: 24px; padding: 7px 0; border-bottom: 1px solid #e9e9e7; font-size: 0.82em;
+            }
+            .shortcut-row:last-of-type { border-bottom: none; }
+            kbd {
+                background: #f7f6f3; border: 1px solid #ccc; border-radius: 4px;
+                padding: 2px 7px; font-family: inherit; font-size: 0.9em;
+            }
+
+            mark.hl { background: #fff176; color: inherit; border-radius: 2px; padding: 0 1px; }
+
+            body.dark-mode .shortcuts-box { background: #252525; border-color: #444; color: #e9e9e7; }
+            body.dark-mode .shortcut-row { border-bottom-color: #383838; }
+            body.dark-mode kbd { background: #191919; border-color: #555; color: #e9e9e7; }
+            body.dark-mode mark.hl { background: #856a00; color: #fff; }
+            body.dark-mode .comparison-table th { border-bottom-color: #444; }
+            body.dark-mode .comparison-table td { border-bottom-color: #333; }
+            body.dark-mode .comparison-table tbody tr:hover { background: #1e1e1e; }
+            body.dark-mode .heatmap-table th { border-bottom-color: #444; }
+            body.dark-mode #render-progress-wrap { background: #333; }
+            body.dark-mode #render-progress-bar { background: #e9e9e7; }
+
+            #loading-overlay {
+                position: fixed;
+                inset: 0;
+                background: #fff;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                z-index: 9999;
+                gap: 20px;
+            }
+
+            #loading-overlay.hidden { display: none; }
+
+            .nyan-scene {
+                display: flex;
+                align-items: center;
+                animation: nyan-fly 0.35s ease-in-out infinite alternate;
+            }
+
+            @keyframes nyan-fly {
+                from { transform: translateY(-6px); }
+                to   { transform: translateY(6px);  }
+            }
+
+            .nyan-rainbow {
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+                margin-right: 0;
+            }
+
+            .nyan-rainbow span {
+                display: block;
+                height: 7px;
+                border-radius: 3px 0 0 3px;
+                animation: rainbow-grow 0.8s ease-in-out infinite alternate;
+            }
+
+            @keyframes rainbow-grow {
+                from { width: 60px; opacity: 0.7; }
+                to   { width: 100px; opacity: 1;  }
+            }
+
+            .nyan-rainbow span:nth-child(1) { background: #ff0000; animation-delay: 0s; }
+            .nyan-rainbow span:nth-child(2) { background: #ff7f00; animation-delay: 0.05s; }
+            .nyan-rainbow span:nth-child(3) { background: #ffff00; animation-delay: 0.10s; }
+            .nyan-rainbow span:nth-child(4) { background: #00cc00; animation-delay: 0.15s; }
+            .nyan-rainbow span:nth-child(5) { background: #0066ff; animation-delay: 0.20s; }
+            .nyan-rainbow span:nth-child(6) { background: #9900cc; animation-delay: 0.25s; }
+
+            .nyan-body {
+                background: #e8c9a0;
+                border: 2px solid #191919;
+                border-radius: 8px;
+                padding: 6px 10px;
+                position: relative;
+                font-family: monospace;
+                line-height: 1.2;
+                font-size: 0.78em;
+                white-space: pre;
+            }
+
+            .nyan-head {
+                font-size: 1.8em;
+                margin-left: -4px;
+            }
+
+            .nyan-stars {
+                position: absolute;
+                font-size: 1.1em;
+                animation: star-twinkle 0.6s ease-in-out infinite alternate;
+            }
+            .nyan-stars.s1 { top: -18px; right: -30px; animation-delay: 0s; }
+            .nyan-stars.s2 { bottom: -18px; right: -50px; animation-delay: 0.3s; }
+            .nyan-stars.s3 { top: 0px; right: -60px; animation-delay: 0.15s; }
+
+            @keyframes star-twinkle {
+                from { opacity: 0.2; transform: scale(0.7); }
+                to   { opacity: 1;   transform: scale(1.1); }
+            }
+
+            .nyan-loading-text {
+                font-family: 'JetBrains Mono', monospace;
+                font-size: 0.85em;
+                color: #999;
+                letter-spacing: 0.05em;
+            }
+
+            .nyan-dots::after {
+                content: '';
+                animation: dots 1.2s steps(4) infinite;
+            }
+
+            @keyframes dots {
+                0%   { content: ''; }
+                25%  { content: '.'; }
+                50%  { content: '..'; }
+                75%  { content: '...'; }
+                100% { content: ''; }
+            }
         </style>
     </head>
     <body>
-        <div class="container">
-            <header>
-                <div style="display:flex; align-items:baseline; gap:16px; margin-bottom:4px;">
-                    <a href="index.html" style="font-size:0.8em; color:#999; text-decoration:none;">← back</a>
-                    <h1>$group_name</h1>
+        <div id="loading-overlay">
+            <div class="nyan-scene">
+                <div class="nyan-rainbow">
+                    <span></span><span></span><span></span>
+                    <span></span><span></span><span></span>
                 </div>
+                <div class="nyan-body">
+┌─────────┐
+│  ^ᴗ^  ♪ │
+│▓▓▓▓▓▓▓▓▓│
+└─────────┘
+                    <span class="nyan-stars s1">✦</span>
+                    <span class="nyan-stars s2">✧</span>
+                    <span class="nyan-stars s3">✦</span>
+                </div>
+            </div>
+            <div class="nyan-loading-text">loading benchmarks<span class="nyan-dots"></span></div>
+        </div>
+        <div style="padding: 8px 32px; font-size: 0.8em;">
+            <a href="index.html" style="color: #999; text-decoration: none;">← back</a>
+        </div>
+        <div class="container">
+            <header style="text-align: center;">
+                <h1>$group_name</h1>
                 <p>Commit: <a href="$repo_url/commit/$commit_sha" target="_blank" style="color: #666; text-decoration: none;">$commit_short</a></p>
             </header>
 
             <div class="stats-panel" id="stats-panel"></div>
 
             <div class="controls">
-                <button class="btn btn-primary" id="btn-percentage">% Change Mode</button>
-                <button class="btn btn-secondary" id="btn-dark">🌙 Dark Mode</button>
+                <button class="btn btn-primary" id="btn-percentage">% Change</button>
+                <button class="btn btn-secondary" id="btn-dark">🌙 Dark</button>
+                <button class="btn btn-secondary" id="btn-compact">⊞ Compact</button>
+                <button class="btn btn-secondary" id="btn-heatmap">⊟ Heatmap</button>
+                <button class="btn btn-secondary" id="btn-compare">⇄ Compare</button>
                 <button class="btn btn-secondary" id="btn-reset-zoom">🔍 Reset Zoom</button>
-                <button class="btn btn-secondary" id="btn-export">📥 Export CSV</button>
-                $(all_runs_available ? """<button class="btn btn-secondary" id="btn-load-all">📊 Load Full History</button>""" : "")
+                <button class="btn btn-secondary" id="btn-export">📥 CSV</button>
+                $(all_runs_available ? """<button class="btn btn-secondary" id="btn-load-all">📊 Full History</button>""" : "")
+                <button class="btn" id="btn-shortcuts" title="Keyboard shortcuts" style="padding:8px 12px;">?</button>
+                <div style="display:flex;gap:0;border:2px solid #191919;border-radius:8px;overflow:hidden;flex-shrink:0;">
+                    <button class="btn range-btn" data-range="10" style="border:none;border-radius:0;padding:8px 11px;">10</button>
+                    <button class="btn range-btn" data-range="25" style="border:none;border-radius:0;border-left:1px solid #ccc;padding:8px 11px;">25</button>
+                    <button class="btn range-btn" data-range="50" style="border:none;border-radius:0;border-left:1px solid #ccc;padding:8px 11px;">50</button>
+                    <button class="btn range-btn active" data-range="all" style="border:none;border-radius:0;border-left:1px solid #ccc;padding:8px 11px;">All</button>
+                </div>
                 <select id="trend-filter" class="search-box" style="min-width: 150px; flex: 0;">
                     <option value="all">All Trends</option>
                     <option value="faster">↓ Faster</option>
@@ -690,8 +933,10 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                     <option value="stable">→ Stable</option>
                 </select>
                 <input type="text" id="search" class="search-box" placeholder="🔍 Search benchmarks...">
+                <div id="render-progress-wrap"><div id="render-progress-bar"></div></div>
             </div>
 
+            <div class="comparison-panel" id="comparison-panel" style="display:none;"></div>
             <div class="benchmarks" id="benchmarks-container"></div>
 
             <footer>
@@ -707,10 +952,14 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             let percentageMode = false;
             let darkMode = false;
             let trendFilter = 'all';
+            let maxRuns = null;
             const renderedPlots = new Set();
             let plotObserver = null;
 
             function renderStats() {
+                const allTrends = Object.values(benchmarksData).map(d => d.stats.trend);
+                const nFaster = allTrends.filter(t => t === 'faster').length;
+                const nSlower = allTrends.filter(t => t === 'slower').length;
                 const panel = document.getElementById('stats-panel');
                 panel.innerHTML = `
                     <div class="stat-card">
@@ -721,14 +970,22 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                         <div class="value">\${statsData.total_runs}</div>
                         <div class="label">Total Runs</div>
                     </div>
-                    <div class="stat-card">
-                        <div class="value" style="-webkit-text-fill-color: #27ae60;">\${statsData.fastest.time}</div>
+                    <div class="stat-card" style="border-color:#27ae60;background:linear-gradient(160deg,#f4fff6,#fff)">
+                        <div class="value" style="color:#27ae60">\${statsData.fastest.time}</div>
                         <div class="label">Fastest</div>
                     </div>
-                    <div class="stat-card">
-                        <div class="value" style="-webkit-text-fill-color: #e74c3c;">\${statsData.slowest.time}</div>
+                    <div class="stat-card" style="border-color:#e74c3c;background:linear-gradient(160deg,#fff4f4,#fff)">
+                        <div class="value" style="color:#e74c3c">\${statsData.slowest.time}</div>
                         <div class="label">Slowest</div>
                     </div>
+                    \${nFaster > 0 || nSlower > 0 ? `
+                    <div class="stat-card" style="\${nSlower > nFaster ? 'border-color:#e74c3c;background:linear-gradient(160deg,#fff4f4,#fff)' : 'border-color:#27ae60;background:linear-gradient(160deg,#f4fff6,#fff)'}">
+                        <div class="value" style="font-size:1.2em">
+                            \${nFaster > 0 ? \`<span style="color:#27ae60">↓\${nFaster}</span>\` : ''}
+                            \${nSlower > 0 ? \`<span style="color:#e74c3c;margin-left:6px">↑\${nSlower}</span>\` : ''}
+                        </div>
+                        <div class="label">Trend</div>
+                    </div>` : ''}
                     <div class="stat-card">
                         <div class="value" style="font-size: 1.2em;">\${statsData.last_updated}</div>
                         <div class="label">Last Updated</div>
@@ -783,27 +1040,29 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 const plotDiv = document.getElementById(plotId);
                 if (plotDiv) plotDiv.innerHTML = '';
 
-                const { label: tUnit, factor: tFactor } = autoUnit(data.mean.y);
+                const sliceN = (arr) => (!arr || maxRuns === null || arr.length <= maxRuns) ? arr : arr.slice(arr.length - maxRuns);
+
+                const { label: tUnit, factor: tFactor } = autoUnit(sliceN(data.mean.y));
                 const lineColor = darkMode ? '#ffffff' : '#191919';
 
                 const scaleY = (arr) => arr.map(v => v * tFactor);
 
                 const meanTrace = {
-                    x: data.mean.x,
-                    y: percentageMode ? toPercentage(data.mean.y) : scaleY(data.mean.y),
+                    x: sliceN(data.mean.x),
+                    y: percentageMode ? toPercentage(sliceN(data.mean.y)) : scaleY(sliceN(data.mean.y)),
                     type: 'scatter',
                     mode: 'lines+markers',
                     name: 'Mean',
                     line: {color: lineColor, width: 2},
                     marker: {size: 6, color: lineColor},
-                    hovertext: data.mean.hovertext,
+                    hovertext: sliceN(data.mean.hovertext),
                     hoverinfo: data.mean.hoverinfo || 'text'
                 };
 
                 if (data.mean.error_y && !percentageMode) {
                     meanTrace.error_y = {
                         type: 'data',
-                        array: data.mean.error_y.array,
+                        array: sliceN(data.mean.error_y.array),
                         visible: true,
                         color: 'rgba(120, 119, 116, 0.5)',
                         thickness: 1.5,
@@ -814,8 +1073,8 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 const traces = [
                     meanTrace,
                     {
-                        x: data.min.x,
-                        y: percentageMode ? toPercentage(data.min.y) : scaleY(data.min.y),
+                        x: sliceN(data.min.x),
+                        y: percentageMode ? toPercentage(sliceN(data.min.y)) : scaleY(sliceN(data.min.y)),
                         type: 'scatter',
                         mode: 'lines',
                         name: 'Min',
@@ -826,8 +1085,8 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                             \`Commit: %{x}<br>Min: %{y:.3f} \${tUnit}<extra></extra>\`
                     },
                     {
-                        x: data.median.x,
-                        y: percentageMode ? toPercentage(data.median.y) : scaleY(data.median.y),
+                        x: sliceN(data.median.x),
+                        y: percentageMode ? toPercentage(sliceN(data.median.y)) : scaleY(sliceN(data.median.y)),
                         type: 'scatter',
                         mode: 'lines',
                         name: 'Median',
@@ -859,10 +1118,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                     showlegend: true,
                     legend: { x: 1, xanchor: 'right', y: 1 },
                     margin: {l: 60, r: 20, t: 10, b: 60},
-                    shapes: lastX ? [{
-                        type: 'line', x0: lastX, x1: lastX, y0: 0, y1: 1, yref: 'paper',
-                        line: { color: darkMode ? 'rgba(255,255,255,0.3)' : 'rgba(0,0,0,0.2)', width: 1.5, dash: 'dot' }
-                    }] : [],
+                    shapes: [],
                     plot_bgcolor: darkMode ? '#1a1a1a' : '#ffffff',
                     paper_bgcolor: darkMode ? '#1a1a1a' : '#ffffff',
                     font: {
@@ -887,7 +1143,9 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 };
 
                 Plotly.newPlot(plotId, traces, layout, config).then(() => {
-                    Plotly.Plots.resize(plotDiv);
+                    requestAnimationFrame(() => requestAnimationFrame(() => Plotly.Plots.resize(plotDiv)));
+                    renderedPlotCount++;
+                    updateProgress();
                 });
 
                 plotDiv.on('plotly_click', function(clickData) {
@@ -928,6 +1186,69 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 });
             }
 
+            let totalPlots = 0, renderedPlotCount = 0;
+
+            function updateProgress() {
+                const bar = document.getElementById('render-progress-bar');
+                if (!bar) return;
+                const pct = totalPlots > 0 ? (renderedPlotCount / totalPlots * 100) : 0;
+                bar.style.width = pct + '%';
+                bar.style.opacity = pct >= 100 ? '0' : '1';
+            }
+
+            function highlightText(text, term) {
+                if (!term) return text;
+                const idx = text.toLowerCase().indexOf(term.toLowerCase());
+                if (idx < 0) return text;
+                return text.substring(0, idx) +
+                    `<mark class="hl">\${text.substring(idx, idx + term.length)}</mark>` +
+                    text.substring(idx + term.length);
+            }
+
+            function countTrends(node) {
+                let faster = 0, slower = 0;
+                for (const key of Object.keys(node)) {
+                    if (key === '__leaf' || key === '__children') continue;
+                    if (node[key].__leaf) {
+                        const t = node[key].__leaf.data.stats.trend;
+                        if (t === 'faster') faster++;
+                        else if (t === 'slower') slower++;
+                    }
+                    if (node[key].__children) {
+                        const sub = countTrends(node[key].__children);
+                        faster += sub.faster; slower += sub.slower;
+                    }
+                }
+                return { faster, slower };
+            }
+
+            function scrollToPlot(name) {
+                if (heatmapMode) {
+                    heatmapMode = false;
+                    document.getElementById('btn-heatmap').classList.remove('active');
+                    renderBenchmarks();
+                }
+                setTimeout(() => {
+                    const id = 'bench-' + name.replace(/[^a-zA-Z0-9]/g, '-');
+                    const el = document.getElementById(id);
+                    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 150);
+            }
+
+            function sparklineSVG(values, w, h) {
+                if (!values || values.length < 2) return '';
+                const min = Math.min(...values);
+                const max = Math.max(...values);
+                const range = max - min || 1;
+                const color = darkMode ? '#e9e9e7' : '#666';
+                const pts = values.map((v, i) => {
+                    const x = (i / (values.length - 1)) * w;
+                    const y = h - ((v - min) / range) * (h - 4) - 2;
+                    return \`\${x.toFixed(1)},\${y.toFixed(1)}\`;
+                }).join(' ');
+                return \`<svg class="sparkline-svg" width="\${w}" height="\${h}" viewBox="0 0 \${w} \${h}"><polyline fill="none" stroke="\${color}" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" points="\${pts}"/></svg>\`;
+            }
+
             function buildTree(entries) {
                 const tree = {};
                 entries.forEach(([name, data]) => {
@@ -966,7 +1287,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                         const { name, data } = entry.__leaf;
                         const stats = data.stats;
                         const item = document.createElement('div');
-                        item.className = 'benchmark-item';
+                        item.className = `benchmark-item trend-\${stats.trend}`;
 
                         let trendBadge = '';
                         if (stats.num_runs > 1) {
@@ -976,12 +1297,22 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                         }
 
                         const plotId = 'plot-' + name.replace(/[^a-zA-Z0-9]/g, '-');
+                        const anchorId = 'bench-' + name.replace(/[^a-zA-Z0-9]/g, '-');
+                        item.id = anchorId;
+                        const sparkSvg = sparklineSVG(data.mean.y_raw || data.mean.y, 80, 28);
+                        const searchTerm = document.getElementById('search').value;
+                        const highlightedKey = highlightText(key, searchTerm);
+
+                        const itemIdx = container.querySelectorAll('.benchmark-item').length;
+                        item.style.animationDelay = Math.min(itemIdx * 0.04, 0.5) + 's';
 
                         item.innerHTML = `
-                            <div class="benchmark-header">
+                            <div class="benchmark-header" style="cursor:pointer" title="Click to toggle chart">
                                 <div class="benchmark-name">
-                                    <span>\${key}</span>
+                                    <button class="anchor-btn" onclick="event.stopPropagation();navigator.clipboard.writeText(location.href.split('#')[0]+'#\${anchorId}').catch(()=>{})" title="Copy link">#</button>
+                                    <span>\${highlightedKey}</span>
                                     \${trendBadge}
+                                    \${sparkSvg}
                                 </div>
                                 <div class="benchmark-stats">
                                     <div class="stat">
@@ -1007,12 +1338,32 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                                 </div>
                             </div>
                             <div class="plot-container" id="\${plotId}" data-benchmark-name="\${name}">
-                                <div style="display: flex; align-items: center; justify-content: center; height: 350px; color: #6c757d;">
-                                    Loading chart...
+                                <div class="skeleton-chart">
+                                    <div class="skeleton-bar" style="height:30px"></div>
+                                    <div class="skeleton-bar" style="height:20px"></div>
+                                    <div class="skeleton-bar" style="height:50px"></div>
+                                    <div class="skeleton-bar" style="height:35px"></div>
+                                    <div class="skeleton-bar" style="height:60px"></div>
+                                    <div class="skeleton-bar" style="height:25px"></div>
+                                    <div class="skeleton-bar" style="height:45px"></div>
+                                    <div class="skeleton-bar" style="height:40px"></div>
                                 </div>
                             </div>
                         `;
                         container.appendChild(item);
+                        item.querySelector('.benchmark-header').addEventListener('click', function(e) {
+                            if (e.target.closest('.anchor-btn') || e.target.tagName === 'A') return;
+                            const plotCont = item.querySelector('.plot-container');
+                            const nowHidden = plotCont.style.display === 'none';
+                            plotCont.style.display = nowHidden ? '' : 'none';
+                            if (nowHidden) {
+                                const pid = plotCont.id;
+                                const bname = plotCont.dataset.benchmarkName;
+                                if (bname && benchmarksData[bname] && !renderedPlots.has(pid)) {
+                                    renderSinglePlot(bname, benchmarksData[bname], pid);
+                                }
+                            }
+                        });
                         if (plotObserver) {
                             plotObserver.observe(item.querySelector('.plot-container'));
                         }
@@ -1026,15 +1377,20 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                         const isFirstAtRoot = firstFolder && depth === 0;
                         toggle.className = 'tree-toggle';
                         toggle.style.paddingLeft = \`\${24 + depth * 32}px\`;
-                        toggle.innerHTML = \`<span class="toggle-icon">\${isFirstAtRoot ? '\u2212' : '+'}</span> \${key} <span class="count">\${leafCount} benchmarks</span>\`;
+                        const { faster: tf, slower: ts } = countTrends(entry.__children);
+                        const trendChips = [
+                            tf > 0 ? \`<span style="color:#27ae60;font-weight:400;font-size:0.75em;">↓\${tf}</span>\` : '',
+                            ts > 0 ? \`<span style="color:#e74c3c;font-weight:400;font-size:0.75em;">↑\${ts}</span>\` : ''
+                        ].filter(Boolean).join(' ');
+                        toggle.innerHTML = \`<span class="toggle-icon">\${isFirstAtRoot ? '\u2212' : '+'}</span> \${key} \${trendChips} <span class="count">\${leafCount} benchmarks</span>\`;
 
                         const children = document.createElement('div');
-                        children.className = isFirstAtRoot ? 'tree-children' : 'tree-children collapsed';
+                        children.className = isFirstAtRoot ? 'tree-children open' : 'tree-children';
 
                         toggle.addEventListener('click', function() {
-                            const isCollapsed = children.classList.toggle('collapsed');
-                            this.querySelector('.toggle-icon').textContent = isCollapsed ? '+' : '\u2212';
-                            if (!isCollapsed) renderVisiblePlots();
+                            const isOpen = children.classList.toggle('open');
+                            this.querySelector('.toggle-icon').textContent = isOpen ? '\u2212' : '+';
+                            if (isOpen) renderVisiblePlots();
                         });
 
                         renderTreeNode(entry.__children, children, depth + 1);
@@ -1047,10 +1403,17 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 }
             }
 
+            let heatmapMode = false;
+            let compareMode = false;
+            let compareCommitA = null, compareCommitB = null;
+
             function renderBenchmarks(filter = '') {
+                if (heatmapMode) { renderHeatmap(filter); return; }
+                if (compareMode) { renderComparisonPanel(); return; }
                 const container = document.getElementById('benchmarks-container');
                 container.innerHTML = '';
                 renderedPlots.clear();
+                renderedPlotCount = 0;
                 initPlotObserver();
 
                 const filtered = Object.entries(benchmarksData)
@@ -1068,6 +1431,8 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
 
                 const tree = buildTree(filtered);
                 renderTreeNode(tree, container, 0);
+                totalPlots = container.querySelectorAll('.plot-container').length;
+                updateProgress();
                 renderVisiblePlots();
             }
 
@@ -1171,6 +1536,17 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 renderBenchmarks(document.getElementById('search').value);
             });
 
+            document.querySelectorAll('.range-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('.range-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    const val = this.dataset.range;
+                    maxRuns = val === 'all' ? null : parseInt(val);
+                    renderedPlots.clear();
+                    renderBenchmarks(document.getElementById('search').value);
+                });
+            });
+
             document.getElementById('btn-reset-zoom').addEventListener('click', function() {
                 Object.entries(benchmarksData).forEach(([name]) => {
                     const plotId = 'plot-' + name.replace(/[^a-zA-Z0-9]/g, '-');
@@ -1179,7 +1555,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                         Plotly.relayout(plotDiv, {
                             'xaxis.autorange': true,
                             'yaxis.autorange': true
-                        }).then(() => Plotly.Plots.resize(plotDiv));
+                        });
                     }
                 });
             });
@@ -1356,9 +1732,192 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 }
             }
 
+            function renderHeatmap(filter = '') {
+                const container = document.getElementById('benchmarks-container');
+                container.innerHTML = '';
+                const benchmarks = Object.entries(benchmarksData)
+                    .filter(([name, data]) => {
+                        const matchesSearch = name.toLowerCase().includes(filter.toLowerCase());
+                        const matchesTrend = trendFilter === 'all' || data.stats.trend === trendFilter;
+                        return matchesSearch && matchesTrend;
+                    }).sort(([a], [b]) => a.localeCompare(b));
+                if (!benchmarks.length) { container.innerHTML = '<div class="no-results"><h2>No benchmarks</h2></div>'; return; }
+
+                const commitSet = new Map(); // hash → timestamp
+                benchmarks.forEach(([, data]) => {
+                    data.mean.commit_hashes.forEach((h, i) => {
+                        if (!commitSet.has(h)) commitSet.set(h, data.mean.timestamps[i] || '');
+                    });
+                });
+                const commits = [...commitSet.entries()]
+                    .sort((a, b) => a[1].localeCompare(b[1]))
+                    .slice(-25).map(([h]) => h);
+                const shortCommits = commits.map(h => h.substring(0, 7));
+
+                const wrap = document.createElement('div');
+                wrap.className = 'heatmap-wrap';
+                const table = document.createElement('table');
+                table.className = 'heatmap-table';
+                const headerRow = \`<thead><tr><th class="heatmap-name">Benchmark</th>\${shortCommits.map(c =>
+                    \`<th style="writing-mode:vertical-rl;transform:rotate(180deg);font-weight:400;padding:4px 6px;font-size:0.72em;">\${c}</th>\`).join('')}</tr></thead>\`;
+                table.innerHTML = headerRow;
+
+                const tbody = document.createElement('tbody');
+                benchmarks.forEach(([name, data]) => {
+                    const commitMap = {};
+                    data.mean.commit_hashes.forEach((h, i) => { commitMap[h] = data.mean.y[i]; });
+                    const vals = commits.map(h => commitMap[h] !== undefined ? commitMap[h] : null);
+                    const baseline = vals.find(v => v !== null) || 1;
+                    const shortName = name.split('/').slice(-2).join('/');
+                    const row = document.createElement('tr');
+                    const cells = commits.map((h, i) => {
+                        const v = vals[i];
+                        if (v === null) return \`<td style="background:#f7f6f3;width:36px"></td>\`;
+                        const ratio = v / baseline;
+                        const pct = ((ratio - 1) * 100).toFixed(0);
+                        const sat = Math.min(Math.abs(ratio - 1) * 400, 70);
+                        const hue = ratio <= 1 ? 140 : 0;
+                        const lt = 95 - sat * 0.5;
+                        const bg = \`hsl(\${hue},\${sat}%,\${lt}%)\`;
+                        const label = Math.abs(+pct) > 3 ? (pct > 0 ? '+' : '') + pct + '%' : '';
+                        return \`<td style="background:\${bg};width:36px;cursor:pointer;font-size:0.72em" title="\${name}\\n\${h.substring(0,7)}: \${v.toFixed(3)}ms (\${pct > 0 ? '+' : ''}\${pct}%)" onclick="scrollToPlot('\${name}')">\${label}</td>\`;
+                    }).join('');
+                    row.innerHTML = \`<td class="heatmap-name" title="\${name}">\${shortName}</td>\${cells}\`;
+                    tbody.appendChild(row);
+                });
+                table.appendChild(tbody);
+                wrap.appendChild(table);
+                container.appendChild(wrap);
+            }
+
+            function getAllCommits() {
+                const seen = new Map();
+                Object.values(benchmarksData).forEach(data => {
+                    data.mean.commit_hashes.forEach((h, i) => {
+                        if (!seen.has(h)) seen.set(h, data.mean.timestamps[i] || '');
+                    });
+                });
+                return [...seen.entries()].sort((a, b) => a[1].localeCompare(b[1])).map(([h]) => h);
+            }
+
+            function renderComparisonPanel() {
+                const container = document.getElementById('benchmarks-container');
+                container.innerHTML = '';
+                const panel = document.getElementById('comparison-panel');
+                panel.style.display = '';
+                const allCommits = getAllCommits();
+                const optionsA = allCommits.map(h =>
+                    \`<option value="\${h}" \${h===compareCommitA?'selected':''}>\${h.substring(0,7)}</option>\`).join('');
+                const optionsB = allCommits.map(h =>
+                    \`<option value="\${h}" \${h===compareCommitB?'selected':''}>\${h.substring(0,7)}</option>\`).join('');
+
+                let tableHtml = '';
+                if (compareCommitA && compareCommitB && compareCommitA !== compareCommitB) {
+                    const rows = [];
+                    Object.entries(benchmarksData).forEach(([name, data]) => {
+                        const idxA = data.mean.commit_hashes.indexOf(compareCommitA);
+                        const idxB = data.mean.commit_hashes.indexOf(compareCommitB);
+                        if (idxA < 0 || idxB < 0) return;
+                        const valA = data.mean.y[idxA], valB = data.mean.y[idxB];
+                        rows.push({ name, valA, valB, change: ((valB / valA) - 1) * 100 });
+                    });
+                    rows.sort((a, b) => b.change - a.change);
+                    const shortA = compareCommitA.substring(0, 7);
+                    const shortB = compareCommitB.substring(0, 7);
+                    tableHtml = \`<table class="comparison-table">
+                        <thead><tr><th>Benchmark</th><th>\${shortA}</th><th>\${shortB}</th><th>Change</th></tr></thead>
+                        <tbody>\${rows.map(r => {
+                            const c = r.change < -5 ? '#27ae60' : r.change > 5 ? '#e74c3c' : '#787774';
+                            const sign = r.change > 0 ? '+' : '';
+                            return \`<tr><td style="font-family:monospace;font-size:0.85em">\${r.name}</td><td>\${r.valA.toFixed(3)} ms</td><td>\${r.valB.toFixed(3)} ms</td><td style="color:\${c};font-weight:600">\${sign}\${r.change.toFixed(1)}%</td></tr>\`;
+                        }).join('')}</tbody></table>\`;
+                } else if (compareCommitA && compareCommitB) {
+                    tableHtml = '<p style="color:#999;padding:16px 0">Select two different commits to compare.</p>';
+                }
+
+                panel.innerHTML = \`<div style="display:flex;gap:12px;align-items:center;margin-bottom:16px;flex-wrap:wrap;">
+                    <select id="cmp-a" class="search-box" style="flex:0;min-width:200px;"><option value="">Commit A...</option>\${optionsA}</select>
+                    <span style="font-size:0.85em;color:#999">vs</span>
+                    <select id="cmp-b" class="search-box" style="flex:0;min-width:200px;"><option value="">Commit B...</option>\${optionsB}</select>
+                    <button class="btn btn-primary" id="btn-run-compare">Compare</button>
+                </div>\${tableHtml}\`;
+
+                document.getElementById('cmp-a').addEventListener('change', e => { compareCommitA = e.target.value || null; });
+                document.getElementById('cmp-b').addEventListener('change', e => { compareCommitB = e.target.value || null; });
+                document.getElementById('btn-run-compare').addEventListener('click', () => renderComparisonPanel());
+            }
+
+            document.getElementById('btn-compact').addEventListener('click', function() {
+                heatmapMode = false; compareMode = false;
+                document.getElementById('btn-heatmap').classList.remove('active');
+                document.getElementById('btn-compare').classList.remove('active');
+                const isCompact = document.body.classList.toggle('compact-mode');
+                this.classList.toggle('active', isCompact);
+                if (!isCompact) renderVisiblePlots();
+            });
+
+            document.getElementById('btn-heatmap').addEventListener('click', function() {
+                compareMode = false;
+                document.getElementById('btn-compare').classList.remove('active');
+                document.getElementById('comparison-panel').style.display = 'none';
+                heatmapMode = !heatmapMode;
+                this.classList.toggle('active', heatmapMode);
+                renderBenchmarks(document.getElementById('search').value);
+            });
+
+            document.getElementById('btn-compare').addEventListener('click', function() {
+                heatmapMode = false;
+                document.getElementById('btn-heatmap').classList.remove('active');
+                compareMode = !compareMode;
+                this.classList.toggle('active', compareMode);
+                if (!compareMode) {
+                    document.getElementById('comparison-panel').style.display = 'none';
+                    renderBenchmarks(document.getElementById('search').value);
+                } else {
+                    renderBenchmarks(document.getElementById('search').value);
+                }
+            });
+
+            document.getElementById('btn-shortcuts').addEventListener('click', function() {
+                document.getElementById('shortcuts-modal').classList.add('open');
+            });
+
+            document.addEventListener('keydown', function(e) {
+                if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT' || e.target.tagName === 'TEXTAREA') {
+                    if (e.key === 'Escape') e.target.blur();
+                    return;
+                }
+                switch (e.key) {
+                    case '/': e.preventDefault(); document.getElementById('search').focus(); break;
+                    case 'd': case 'D': document.getElementById('btn-dark').click(); break;
+                    case 'c': case 'C': document.getElementById('btn-compact').click(); break;
+                    case 'h': case 'H': document.getElementById('btn-heatmap').click(); break;
+                    case 'v': case 'V': document.getElementById('btn-compare').click(); break;
+                    case 'r': case 'R': document.getElementById('btn-reset-zoom').click(); break;
+                    case '?': document.getElementById('shortcuts-modal').classList.toggle('open'); break;
+                    case 'Escape': document.getElementById('shortcuts-modal').classList.remove('open'); break;
+                }
+            });
+
             renderStats();
             renderBenchmarks();
+            document.getElementById('loading-overlay').classList.add('hidden');
         </script>
+
+        <div class="shortcuts-modal" id="shortcuts-modal" onclick="if(event.target===this)this.classList.remove('open')">
+            <div class="shortcuts-box">
+                <h3>Keyboard Shortcuts</h3>
+                <div class="shortcut-row"><span>Focus search</span><kbd>/</kbd></div>
+                <div class="shortcut-row"><span>Toggle dark mode</span><kbd>D</kbd></div>
+                <div class="shortcut-row"><span>Compact view</span><kbd>C</kbd></div>
+                <div class="shortcut-row"><span>Heatmap view</span><kbd>H</kbd></div>
+                <div class="shortcut-row"><span>Compare commits</span><kbd>V</kbd></div>
+                <div class="shortcut-row"><span>Reset zoom</span><kbd>R</kbd></div>
+                <div class="shortcut-row"><span>This panel</span><kbd>?</kbd></div>
+                <div class="shortcut-row"><span>Close</span><kbd>Esc</kbd></div>
+                <button class="btn" onclick="document.getElementById('shortcuts-modal').classList.remove('open')" style="margin-top:18px;width:100%">Close</button>
+            </div>
+        </div>
     </body>
     </html>
     """

@@ -46,7 +46,8 @@ function calculate_stats(histories)
         for (bench_path, runs) in history
             total_benchmarks += 1
 
-            run_numbers = sort([parse(Int, k) for k in keys(runs)])
+            run_numbers = sort([parse(Int, k) for k in keys(runs)],
+                       by = k -> get(runs[string(k)], "timestamp", ""))
             total_runs = max(total_runs, maximum(run_numbers; init=0))
 
             if !isempty(run_numbers)
@@ -94,7 +95,8 @@ function prepare_plot_data(history, benchmark_path;
     end
 
     runs = history[benchmark_path]
-    run_numbers = sort([parse(Int, k) for k in keys(runs)])
+    run_numbers = sort([parse(Int, k) for k in keys(runs)],
+                       by = k -> get(runs[string(k)], "timestamp", ""))
 
     if !isnothing(max_runs) && length(run_numbers) > max_runs
         run_numbers = run_numbers[end-max_runs+1:end]
@@ -261,11 +263,11 @@ function get_benchmark_summary(history, benchmark_path, run_number)
     )
 end
 
-function format_commit_hash(hash::String; length::Int=7)
+function format_commit_hash(hash::String; len::Int=7)
     if isempty(hash) || hash == "unknown"
         return "unknown"
     end
-    return hash[1:min(length, Base.length(hash))]
+    return hash[1:min(len, lastindex(hash))]
 end
 
 end

@@ -2,9 +2,12 @@ using Test
 using JSON
 using Dates
 
+include("../scripts/convert_old_format.jl")
+include("../scripts/import_github_benchmark.jl")
+include("../scripts/rebuild_cache.jl")
+
 @testset "Utility Scripts Tests" begin
     @testset "convert_old_format.jl functionality" begin
-        include("../scripts/convert_old_format.jl")
 
         mktempdir() do temp_dir
             old_data = Dict(
@@ -82,8 +85,6 @@ using Dates
     end
 
     @testset "convert_old_format with commit_sha field" begin
-        include("../scripts/convert_old_format.jl")
-
         mktempdir() do temp_dir
             old_data = Dict(
                 "bench1" => Dict(
@@ -117,14 +118,10 @@ using Dates
     end
 
     @testset "convert_old_format with missing file" begin
-        include("../scripts/convert_old_format.jl")
-
         @test_throws Exception convert_old_to_new("/nonexistent/file.json", "test_group", "output")
     end
 
     @testset "import_github_benchmark.jl functionality" begin
-        include("../scripts/import_github_benchmark.jl")
-
         mktempdir() do temp_dir
             github_data = Dict(
                 "entries" => Dict(
@@ -187,8 +184,6 @@ using Dates
     end
 
     @testset "import_github_benchmark with missing extra field" begin
-        include("../scripts/import_github_benchmark.jl")
-
         mktempdir() do temp_dir
             github_data = Dict(
                 "entries" => Dict(
@@ -225,8 +220,6 @@ using Dates
     end
 
     @testset "rebuild_cache.jl functionality" begin
-        include("../scripts/rebuild_cache.jl")
-
         mktempdir() do temp_dir
             mkpath(joinpath(temp_dir, "by_group", "test_group"))
 
@@ -306,8 +299,6 @@ using Dates
     end
 
     @testset "rebuild_cache with max_runs limit" begin
-        include("../scripts/rebuild_cache.jl")
-
         mktempdir() do temp_dir
             mkpath(joinpath(temp_dir, "by_group", "test_group"))
 
@@ -380,8 +371,6 @@ using Dates
     end
 
     @testset "parse_extra helper function" begin
-        include("../scripts/import_github_benchmark.jl")
-
         result = parse_extra("memory=1024\nallocs=10\nsamples=100")
         @test result["memory"] == "1024"
         @test result["allocs"] == "10"

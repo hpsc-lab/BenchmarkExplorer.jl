@@ -22,6 +22,11 @@ function list_benchmark_comparisons(limit::Int=100)
     url = "$NANOSOLDIER_REPO/benchmark/by_hash"
     entries = fetch_json(url)
 
+    if !isa(entries, AbstractVector)
+        @warn "Unexpected API response type: $(typeof(entries))"
+        return String[]
+    end
+
     comparisons = String[]
     for entry in entries
         if entry["type"] == "dir"

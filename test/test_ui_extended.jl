@@ -35,8 +35,8 @@ using Statistics
         @test format_commit_hash("unknown") == "unknown"
         @test format_commit_hash("abc") == "abc"
         @test format_commit_hash("abcdefghijklmnop") == "abcdefg"
-        @test format_commit_hash("abc123"; length=3) == "abc"
-        @test format_commit_hash("abc123"; length=10) == "abc123"
+        @test format_commit_hash("abc123"; len=3) == "abc"
+        @test format_commit_hash("abc123"; len=10) == "abc123"
         @test format_commit_hash("a") == "a"
     end
 

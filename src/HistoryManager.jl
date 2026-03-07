@@ -344,7 +344,7 @@ function get_subbenchmark_names(history, benchmark_name)
     return sort(subbench_names)
 end
 
-function extract_timeseries_with_timestamps(history, _benchmark_name, subbench_name)
+function extract_timeseries_with_timestamps(history, ::Any, subbench_name)
     if !haskey(history, subbench_name)
         error("benchmark $subbench_name not found")
     end
