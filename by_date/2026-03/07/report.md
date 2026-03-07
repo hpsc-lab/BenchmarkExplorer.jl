@@ -1,11 +1,15 @@
-# Run #64 - 2026-03-07
+# Run #62 - 2026-03-07
 
-Julia 1.11.9 | 24 benchmarks
+Julia 1.11.9 | 7 benchmarks
  | 9d1b26a
 
 ## Significant Changes (>5%)
 
 | Benchmark | Time (ms) | Prev (ms) | Change |
 |-----------|-----------|-----------|--------|
-| structured_1d_dgsem/elixir_euler_sedov.jl/p3_analysis | 0.007 | 0.006 | +15.5% |
-| tree_2d_dgsem/elixir_advection_amr_nonperiodic.jl/p3_rhs! | 0.090 | 0.095 | -5.4% |
+| autodiff/reverse/simple | 0.003 | 0.002 | +84.5% |
+| autodiff/forward/complex | 0.020 | 0.018 | +15.2% |
+| basics/make_zero/struct | 0.000 | 0.000 | -14.9% |
+| basics/make_zero/namedtuple | 0.000 | 0.000 | -10.3% |
+| basics/make_zero/array | 0.000 | 0.000 | -9.1% |
+| autodiff/reverse/complex | 0.030 | 0.029 | +5.4% |
