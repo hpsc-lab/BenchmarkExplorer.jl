@@ -250,26 +250,22 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
 
             body {
                 font-family: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
-                background: #f5f5f5;
+                background: #fff;
                 min-height: 100vh;
-                padding: 24px;
+                padding: 0;
                 color: #191919;
             }
 
             .container {
-                max-width: 1600px;
-                margin: 0 auto;
+                width: 100%;
                 background: #fff;
-                border: 1px solid #191919;
-                border-radius: 12px;
-                overflow: hidden;
             }
 
             header {
                 background: #fff;
                 color: #191919;
                 padding: 28px 32px 20px;
-                border-bottom: 1px solid #e9e9e7;
+                border-bottom: 1.5px solid #191919;
             }
 
             header h1 {
@@ -376,7 +372,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             }
 
             .benchmarks {
-                padding: 24px;
+                padding: 24px 32px;
                 background: #fff;
             }
 
@@ -500,7 +496,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             }
 
             .tree-node {
-                margin-left: 16px;
+                margin-left: 0;
             }
 
             .tree-node.root {
@@ -510,37 +506,40 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             .tree-toggle {
                 display: flex;
                 align-items: center;
-                gap: 8px;
-                padding: 10px 16px;
-                margin-bottom: 4px;
-                background: #f7f6f3;
-                border: 1px solid #191919;
-                border-radius: 8px;
+                gap: 12px;
+                padding: 16px 24px;
+                margin: 0;
+                background: #fafafa;
+                border: none;
+                border-top: 1.5px solid #191919;
                 cursor: pointer;
-                font-weight: 600;
-                font-size: 0.95em;
+                font-weight: 700;
+                font-size: 1em;
                 color: #191919;
-                transition: background 0.15s;
                 user-select: none;
+                width: 100%;
             }
 
             .tree-toggle:hover {
-                background: #edece9;
+                background: #f5f5f5;
             }
 
-            .tree-toggle .arrow {
-                transition: transform 0.2s ease;
-                font-size: 0.7em;
-                color: #787774;
-            }
-
-            .tree-toggle.collapsed .arrow {
-                transform: rotate(-90deg);
+            .toggle-icon {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 22px;
+                height: 22px;
+                border: 1.5px solid #191919;
+                border-radius: 5px;
+                font-size: 1em;
+                font-weight: 700;
+                flex-shrink: 0;
             }
 
             .tree-toggle .count {
                 font-size: 0.75em;
-                color: #787774;
+                color: #999;
                 font-weight: 400;
                 margin-left: auto;
             }
@@ -644,17 +643,21 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             }
 
             body.dark-mode .tree-toggle {
-                background: #191919;
-                border-color: #383838;
+                background: #1a1a1a;
+                border-top-color: #444;
                 color: #e9e9e7;
             }
 
             body.dark-mode .tree-toggle:hover {
-                background: #2a2a2a;
+                background: #222;
+            }
+
+            body.dark-mode .toggle-icon {
+                border-color: #e9e9e7;
             }
 
             body.dark-mode .tree-toggle .count {
-                color: #787774;
+                color: #666;
             }
         </style>
     </head>
@@ -993,14 +996,16 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
 
                         const toggle = document.createElement('div');
                         toggle.className = 'tree-toggle';
-                        toggle.innerHTML = `<span class="arrow">&#9660;</span> \${key} <span class="count">\${leafCount} benchmarks</span>`;
-                        toggle.addEventListener('click', function() {
-                            this.classList.toggle('collapsed');
-                            children.classList.toggle('collapsed');
-                        });
+                        toggle.innerHTML = `<span class="toggle-icon">+</span> \${key} <span class="count">\${leafCount} benchmarks</span>`;
 
                         const children = document.createElement('div');
-                        children.className = 'tree-children';
+                        children.className = 'tree-children collapsed';
+
+                        toggle.addEventListener('click', function() {
+                            const isCollapsed = children.classList.toggle('collapsed');
+                            this.querySelector('.toggle-icon').textContent = isCollapsed ? '+' : '\u2212';
+                            if (!isCollapsed) renderVisiblePlots();
+                        });
 
                         renderTreeNode(entry.__children, children, depth + 1);
 

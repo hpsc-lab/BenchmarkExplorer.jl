@@ -53,15 +53,15 @@ function generate_index_page(benchmarks_dir::String, output_file::String, repo_u
 
         body {
             font-family: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
-            background: #f5f5f5;
+            background: #fff;
             min-height: 100vh;
-            padding: 40px 24px;
+            padding: 0;
             color: #191919;
         }
 
         .container {
-            max-width: 960px;
-            margin: 0 auto;
+            width: 100%;
+            padding: 40px 48px;
         }
 
         h1 {
@@ -87,6 +87,7 @@ function generate_index_page(benchmarks_dir::String, output_file::String, repo_u
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 16px;
+            max-width: 900px;
         }
 
         .group-card {
@@ -139,8 +140,7 @@ function generate_index_page(benchmarks_dir::String, output_file::String, repo_u
         }
 
         footer {
-            margin-top: 36px;
-            text-align: center;
+            margin-top: 48px;
             font-size: 0.72em;
             color: #bbb;
         }
