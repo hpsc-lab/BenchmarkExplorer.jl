@@ -3716,10 +3716,10 @@
         {
           "julia_version": "1.11.9",
           "run": 26,
-          "commit_hash": "42331d8622cf105ba713390909c10d47bc7ec9b3",
+          "commit_hash": "e597c46656ac9231f7f161c963cdb720f0e000bc",
           "benchmark_count": 24,
           "date": "2026-03-07",
-          "timestamp": "2026-03-07T02:25:15.759",
+          "timestamp": "2026-03-07T02:35:19.951",
           "url": "by_group/trixi/run_26.json"
         }
       ],
@@ -5334,7 +5334,7 @@
       "last_run_date": "2026-03-06"
     },
     "enzyme": {
-      "total_runs": 25,
+      "total_runs": 26,
       "first_run_date": "2026-02-11",
       "runs": [
         {
@@ -5556,11 +5556,20 @@
         {
           "julia_version": "1.11.9",
           "run": 25,
-          "commit_hash": "42331d8622cf105ba713390909c10d47bc7ec9b3",
+          "commit_hash": "d1b459a6f925ddf57cc32e075f07a9dca01bd7a0",
           "benchmark_count": 7,
           "date": "2026-03-07",
-          "timestamp": "2026-03-07T02:36:13.238",
+          "timestamp": "2026-03-07T02:30:23.009",
           "url": "by_group/enzyme/run_25.json"
+        },
+        {
+          "julia_version": "1.11.9",
+          "run": 26,
+          "commit_hash": "e597c46656ac9231f7f161c963cdb720f0e000bc",
+          "benchmark_count": 7,
+          "date": "2026-03-07",
+          "timestamp": "2026-03-07T02:37:16.897",
+          "url": "by_group/enzyme/run_26.json"
         }
       ],
       "last_run_date": "2026-03-07"
@@ -6371,5 +6380,5 @@
     }
   },
   "version": "2.0",
-  "generated_at": "2026-03-07T02:36:27.999"
+  "generated_at": "2026-03-07T02:37:31.319"
 }
