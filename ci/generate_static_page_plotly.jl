@@ -315,6 +315,9 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 padding: 16px 24px;
                 background: #fff;
                 border-bottom: 2px solid #191919;
+                position: sticky;
+                top: 0;
+                z-index: 100;
                 display: flex;
                 gap: 10px;
                 flex-wrap: wrap;
@@ -463,6 +466,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 width: 100%;
                 min-height: 380px;
                 background: #fff;
+                padding-top: 16px;
             }
 
             footer {
@@ -495,7 +499,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             }
 
             .tree-node {
-                margin-left: 32px;
+                margin-left: 0;
             }
 
             .tree-node.root {
@@ -545,7 +549,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
 
             .tree-children {
                 overflow: hidden;
-                padding-left: 32px;
+                padding-left: 0;
             }
 
             .tree-children.collapsed {
@@ -664,8 +668,11 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
     <body>
         <div class="container">
             <header>
-                <h1>$group_name</h1>
-                <p>Benchmark Dashboard &nbsp;&bull;&nbsp; Commit: <a href="$repo_url/commit/$commit_sha" target="_blank" style="color: #666; text-decoration: none;">$commit_short</a></p>
+                <div style="display:flex; align-items:baseline; gap:16px; margin-bottom:4px;">
+                    <a href="index.html" style="font-size:0.8em; color:#999; text-decoration:none;">← back</a>
+                    <h1>$group_name</h1>
+                </div>
+                <p>Commit: <a href="$repo_url/commit/$commit_sha" target="_blank" style="color: #666; text-decoration: none;">$commit_short</a></p>
             </header>
 
             <div class="stats-panel" id="stats-panel"></div>
@@ -758,6 +765,17 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 });
             }
 
+            function autoUnit(msValues) {
+                const nonZero = msValues.filter(v => v > 0);
+                if (nonZero.length === 0) return { label: 'ms', factor: 1 };
+                const sorted = [...nonZero].sort((a, b) => a - b);
+                const med = sorted[Math.floor(sorted.length / 2)];
+                if (med < 0.001) return { label: 'ns', factor: 1e6 };
+                if (med < 1) return { label: '\u03bcs', factor: 1e3 };
+                if (med >= 1000) return { label: 's', factor: 1e-3 };
+                return { label: 'ms', factor: 1 };
+            }
+
             function renderSinglePlot(name, data, plotId) {
                 if (renderedPlots.has(plotId)) return;
                 renderedPlots.add(plotId);
@@ -765,14 +783,19 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 const plotDiv = document.getElementById(plotId);
                 if (plotDiv) plotDiv.innerHTML = '';
 
+                const { label: tUnit, factor: tFactor } = autoUnit(data.mean.y);
+                const lineColor = darkMode ? '#ffffff' : '#191919';
+
+                const scaleY = (arr) => arr.map(v => v * tFactor);
+
                 const meanTrace = {
                     x: data.mean.x,
-                    y: toPercentage(data.mean.y),
+                    y: percentageMode ? toPercentage(data.mean.y) : scaleY(data.mean.y),
                     type: 'scatter',
                     mode: 'lines+markers',
                     name: 'Mean',
-                    line: {color: '#191919', width: 2},
-                    marker: {size: 6, color: '#191919'},
+                    line: {color: lineColor, width: 2},
+                    marker: {size: 6, color: lineColor},
                     hovertext: data.mean.hovertext,
                     hoverinfo: data.mean.hoverinfo || 'text'
                 };
@@ -792,29 +815,31 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                     meanTrace,
                     {
                         x: data.min.x,
-                        y: toPercentage(data.min.y),
+                        y: percentageMode ? toPercentage(data.min.y) : scaleY(data.min.y),
                         type: 'scatter',
                         mode: 'lines',
                         name: 'Min',
                         line: {color: '#787774', width: 1.5, dash: 'dash'},
                         visible: 'legendonly',
                         hovertemplate: percentageMode ?
-                            'Commit: %{x}<br>Min: %{y:.2f}%<extra></extra>' :
-                            'Commit: %{x}<br>Min: %{y:.3f} ms<extra></extra>'
+                            \`Commit: %{x}<br>Min: %{y:.2f}%<extra></extra>\` :
+                            \`Commit: %{x}<br>Min: %{y:.3f} \${tUnit}<extra></extra>\`
                     },
                     {
                         x: data.median.x,
-                        y: toPercentage(data.median.y),
+                        y: percentageMode ? toPercentage(data.median.y) : scaleY(data.median.y),
                         type: 'scatter',
                         mode: 'lines',
                         name: 'Median',
                         line: {color: '#aaa', width: 1.5, dash: 'dot'},
                         visible: 'legendonly',
                         hovertemplate: percentageMode ?
-                            'Commit: %{x}<br>Median: %{y:.2f}%<extra></extra>' :
-                            'Commit: %{x}<br>Median: %{y:.3f} ms<extra></extra>'
+                            \`Commit: %{x}<br>Median: %{y:.2f}%<extra></extra>\` :
+                            \`Commit: %{x}<br>Median: %{y:.3f} \${tUnit}<extra></extra>\`
                     }
                 ];
+
+                const lastX = data.mean.x.length > 0 ? data.mean.x[data.mean.x.length - 1] : null;
 
                 const layout = {
                     title: '',
@@ -826,23 +851,23 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                         tickangle: 45
                     },
                     yaxis: {
-                        title: percentageMode ? 'Change (%)' : 'Time (ms)',
+                        title: percentageMode ? 'Change (%)' : \`Time (\${tUnit})\`,
                         showgrid: true,
                         zeroline: true
                     },
                     hovermode: 'closest',
                     showlegend: true,
-                    legend: {
-                        x: 1,
-                        xanchor: 'right',
-                        y: 1
-                    },
-                    margin: {l: 60, r: 20, t: 20, b: 60},
-                    plot_bgcolor: darkMode ? '#252525' : '#ffffff',
-                    paper_bgcolor: darkMode ? '#252525' : '#ffffff',
+                    legend: { x: 1, xanchor: 'right', y: 1 },
+                    margin: {l: 60, r: 20, t: 10, b: 60},
+                    shapes: lastX ? [{
+                        type: 'line', x0: lastX, x1: lastX, y0: 0, y1: 1, yref: 'paper',
+                        line: { color: darkMode ? 'rgba(255,255,255,0.3)' : 'rgba(0,0,0,0.2)', width: 1.5, dash: 'dot' }
+                    }] : [],
+                    plot_bgcolor: darkMode ? '#1a1a1a' : '#ffffff',
+                    paper_bgcolor: darkMode ? '#1a1a1a' : '#ffffff',
                     font: {
                         color: darkMode ? '#e9e9e7' : '#191919',
-                        family: '-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif'
+                        family: "'JetBrains Mono', monospace"
                     },
                     autosize: true
                 };
@@ -934,6 +959,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
 
             function renderTreeNode(node, container, depth) {
                 const keys = Object.keys(node).filter(k => k !== '__leaf' && k !== '__children').sort();
+                let firstFolder = true;
                 for (const key of keys) {
                     const entry = node[key];
                     if (entry.__leaf) {
@@ -997,11 +1023,13 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                         treeNode.className = depth === 0 ? 'tree-node root' : 'tree-node';
 
                         const toggle = document.createElement('div');
+                        const isFirstAtRoot = firstFolder && depth === 0;
                         toggle.className = 'tree-toggle';
-                        toggle.innerHTML = `<span class="toggle-icon">+</span> \${key} <span class="count">\${leafCount} benchmarks</span>`;
+                        toggle.style.paddingLeft = \`\${24 + depth * 32}px\`;
+                        toggle.innerHTML = \`<span class="toggle-icon">\${isFirstAtRoot ? '\u2212' : '+'}</span> \${key} <span class="count">\${leafCount} benchmarks</span>\`;
 
                         const children = document.createElement('div');
-                        children.className = 'tree-children collapsed';
+                        children.className = isFirstAtRoot ? 'tree-children' : 'tree-children collapsed';
 
                         toggle.addEventListener('click', function() {
                             const isCollapsed = children.classList.toggle('collapsed');
@@ -1014,6 +1042,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                         treeNode.appendChild(toggle);
                         treeNode.appendChild(children);
                         container.appendChild(treeNode);
+                        firstFolder = false;
                     }
                 }
             }
@@ -1112,13 +1141,15 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             });
 
             function updatePlotColors() {
+                const lineColor = darkMode ? '#ffffff' : '#191919';
                 Object.entries(benchmarksData).forEach(([name]) => {
                     const plotId = 'plot-' + name.replace(/[^a-zA-Z0-9]/g, '-');
                     const plotDiv = document.getElementById(plotId);
                     if (plotDiv && plotDiv.data) {
+                        Plotly.restyle(plotDiv, {'line.color': lineColor, 'marker.color': lineColor}, [0]);
                         Plotly.relayout(plotDiv, {
-                            'plot_bgcolor': darkMode ? '#252525' : '#ffffff',
-                            'paper_bgcolor': darkMode ? '#252525' : '#ffffff',
+                            'plot_bgcolor': darkMode ? '#1a1a1a' : '#ffffff',
+                            'paper_bgcolor': darkMode ? '#1a1a1a' : '#ffffff',
                             'font.color': darkMode ? '#e9e9e7' : '#191919'
                         });
                     }
@@ -1148,7 +1179,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                         Plotly.relayout(plotDiv, {
                             'xaxis.autorange': true,
                             'yaxis.autorange': true
-                        });
+                        }).then(() => Plotly.Plots.resize(plotDiv));
                     }
                 });
             });
