@@ -373,28 +373,28 @@
             }
 
             body.dark-mode {
-                background: #191919;
+                background: #2a2a2a;
                 color: #e9e9e7;
             }
 
             body.dark-mode .container {
-                background: #252525;
-                border-color: #383838;
+                background: #333;
+                border-color: #484848;
             }
 
             body.dark-mode header {
-                background: #000;
-                border-bottom-color: #383838;
+                background: #222;
+                border-bottom-color: #484848;
             }
 
             body.dark-mode .stats-panel {
-                background: #191919;
-                border-bottom-color: #383838;
+                background: #2a2a2a;
+                border-bottom-color: #484848;
             }
 
             body.dark-mode .stat-card {
-                background: #252525;
-                border-right-color: #383838;
+                background: #333;
+                border-right-color: #484848;
                 color: #e9e9e7;
             }
 
@@ -403,18 +403,18 @@
             }
 
             body.dark-mode .controls {
-                background: #252525;
-                border-bottom-color: #444;
+                background: #333;
+                border-bottom-color: #484848;
             }
 
             body.dark-mode .btn {
-                background: #252525;
+                background: #333;
                 color: #e9e9e7;
-                border-color: #383838;
+                border-color: #484848;
             }
 
             body.dark-mode .btn:hover {
-                background: #333;
+                background: #404040;
             }
 
             body.dark-mode .btn-primary, body.dark-mode .btn.active {
@@ -424,9 +424,9 @@
             }
 
             body.dark-mode .search-box {
-                background: #252525;
+                background: #333;
                 color: #e9e9e7;
-                border-color: #383838;
+                border-color: #484848;
             }
 
             body.dark-mode .search-box:focus {
@@ -434,11 +434,11 @@
             }
 
             body.dark-mode .benchmarks {
-                background: #252525;
+                background: #333;
             }
 
             body.dark-mode .benchmark-item {
-                border-color: #383838;
+                border-color: #484848;
             }
 
             body.dark-mode .benchmark-item:hover {
@@ -446,8 +446,8 @@
             }
 
             body.dark-mode .benchmark-header {
-                background: #191919;
-                border-bottom-color: #383838;
+                background: #2a2a2a;
+                border-bottom-color: #484848;
             }
 
             body.dark-mode .benchmark-name {
@@ -459,17 +459,17 @@
             }
 
             body.dark-mode .plot-container {
-                background: #252525;
+                background: #333;
             }
 
             body.dark-mode .tree-toggle {
-                background: #1a1a1a;
-                border-color: #444;
+                background: #2a2a2a;
+                border-color: #484848;
                 color: #e9e9e7;
             }
 
             body.dark-mode .tree-toggle:hover {
-                background: #222;
+                background: #383838;
             }
 
             body.dark-mode .toggle-icon {
@@ -531,9 +531,9 @@
 
             mark.hl { background: #fff176; color: inherit; border-radius: 2px; padding: 0 1px; }
 
-            body.dark-mode .shortcuts-box { background: #252525; border-color: #444; color: #e9e9e7; }
-            body.dark-mode .shortcut-row { border-bottom-color: #383838; }
-            body.dark-mode kbd { background: #191919; border-color: #555; color: #e9e9e7; }
+            body.dark-mode .shortcuts-box { background: #333; border-color: #484848; color: #e9e9e7; }
+            body.dark-mode .shortcut-row { border-bottom-color: #484848; }
+            body.dark-mode kbd { background: #2a2a2a; border-color: #555; color: #e9e9e7; }
             body.dark-mode mark.hl { background: #856a00; color: #fff; }
             body.dark-mode .stat-key { color: #888; }
             body.dark-mode .trend-faster { background: #0d2b14; color: #5cc475; border-color: #1e5c2e; }
@@ -545,7 +545,7 @@
             body.dark-mode .comparison-table { color: #e9e9e7; }
             body.dark-mode .comparison-table th { border-bottom-color: #444; color: #aaa; }
             body.dark-mode .comparison-table td { border-bottom-color: #333; }
-            body.dark-mode .comparison-table tbody tr:hover { background: #1e1e1e; }
+            body.dark-mode .comparison-table tbody tr:hover { background: #2a2a2a; }
             body.dark-mode .heatmap-table { color: #e9e9e7; }
             body.dark-mode .heatmap-table th { border-bottom-color: #444; color: #aaa; }
             body.dark-mode .heatmap-table td { color: #e9e9e7; }
@@ -555,7 +555,7 @@
             body.dark-mode .anchor-btn:hover { background: #444; color: #e9e9e7; }
             body.dark-mode #render-progress-wrap { background: #333; }
             body.dark-mode #render-progress-bar { background: #e9e9e7; }
-            body.dark-mode #loading-overlay { background: #191919; color: #e9e9e7; }
+            body.dark-mode #loading-overlay { background: #2a2a2a; color: #e9e9e7; }
 
             #loading-overlay {
                 position: fixed;
@@ -685,12 +685,13 @@
         <div class="container">
             <header style="text-align: center;">
                 <h1>nanosoldier_shootout</h1>
-                <p>Commit: <a href="https://github.com/hpsc-lab/BenchmarkExplorer.jl/commit/290e4048c80a344f261cf1caa8f960168cbb6d92" target="_blank" style="color: #666; text-decoration: none;">290e404</a></p>
+                <p>Commit: <a href="https://github.com/hpsc-lab/BenchmarkExplorer.jl/commit/f81a51d8cc697598cc00b5e770c0f7d95f96d036" target="_blank" style="color: #666; text-decoration: none;">f81a51d</a></p>
             </header>
 
             <div class="stats-panel" id="stats-panel"></div>
 
             <div class="controls">
+                <span style="font-weight:700;font-size:0.95em;margin-right:4px;flex-shrink:0;">nanosoldier_shootout</span>
                 <button class="btn btn-primary" id="btn-percentage">% Change</button>
                 <button class="btn btn-secondary" id="btn-dark">🌙 Dark</button>
                 <button class="btn btn-secondary" id="btn-compact">⊞ Compact</button>
@@ -725,10 +726,10 @@
         </div>
 
         <script>
-            const benchmarksData = {"shootout/fasta":{"median":{"visible":"legendonly","name":"Median","line":{"width":1,"dash":"dot"},"y_raw":[105.0,94.0,94.0,106.0],"mode":"lines","x":["d27fe45","d03508a","c13f74b","c0b95ac"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Median: %{y:.3f} ms<extra></extra>","y":[105.0,94.0,94.0,106.0]},"min":{"visible":"legendonly","name":"Min","line":{"width":1,"dash":"dash"},"y_raw":[99.75,89.3,89.3,100.7],"mode":"lines","x":["d27fe45","d03508a","c13f74b","c0b95ac"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Min: %{y:.3f} ms<extra></extra>","y":[99.75,89.3,89.3,100.7]},"stats":{"baseline_mean":105.0,"latest_memory":0,"latest_commit":"c0b95ac","percent_change":0.95,"num_runs":4,"latest_allocs":0,"latest_mean":106.0,"latest_timestamp":"2026-03-10T00:41:08.226","trend":"stable"},"mean":{"mode":"lines+markers","x":["d27fe45","d03508a","c13f74b","c0b95ac"],"commit_hashes":["d27fe45","d03508a","c13f74b","c0b95ac"],"hoverinfo":"text","name":"Mean","y":[105.0,94.0,94.0,106.0],"line":{"width":2},"y_raw":[105.0,94.0,94.0,106.0],"marker":{"size":6},"hovertext":["Commit: d27fe45<br>Mean: 105.0 ms<br>Median: 105.0 ms<br>Min: 99.75 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:40","Commit: d03508a<br>Mean: 94.0 ms<br>Median: 94.0 ms<br>Min: 89.3 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:40","Commit: c13f74b<br>Mean: 94.0 ms<br>Median: 94.0 ms<br>Min: 89.3 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:41","Commit: c0b95ac<br>Mean: 106.0 ms<br>Median: 106.0 ms<br>Min: 100.7 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:41"],"timestamps":["2026-03-10T00:40:47.111","2026-03-10T00:40:50.823","2026-03-10T00:41:07.423","2026-03-10T00:41:08.226"],"type":"scatter"}},"shootout/pidigits":{"median":{"visible":"legendonly","name":"Median","line":{"width":1,"dash":"dot"},"y_raw":[106.0],"mode":"lines","x":["d22c304"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Median: %{y:.3f} ms<extra></extra>","y":[106.0]},"min":{"visible":"legendonly","name":"Min","line":{"width":1,"dash":"dash"},"y_raw":[100.7],"mode":"lines","x":["d22c304"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Min: %{y:.3f} ms<extra></extra>","y":[100.7]},"stats":{"baseline_mean":106.0,"latest_memory":0,"latest_commit":"d22c304","percent_change":0.0,"num_runs":1,"latest_allocs":0,"latest_mean":106.0,"latest_timestamp":"2026-03-10T00:40:47.554","trend":"stable"},"mean":{"mode":"lines+markers","x":["d22c304"],"commit_hashes":["d22c304"],"hoverinfo":"text","name":"Mean","y":[106.0],"line":{"width":2},"y_raw":[106.0],"marker":{"size":6},"hovertext":["Commit: d22c304<br>Mean: 106.0 ms<br>Median: 106.0 ms<br>Min: 100.7 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:40"],"timestamps":["2026-03-10T00:40:47.554"],"type":"scatter"}},"shootout/meteor_contest":{"median":{"visible":"legendonly","name":"Median","line":{"width":1,"dash":"dot"},"y_raw":[105.0,126.0,112.5],"mode":"lines","x":["d13bdc0","c11a4fd","bf5f420"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Median: %{y:.3f} ms<extra></extra>","y":[105.0,126.0,112.5]},"min":{"visible":"legendonly","name":"Min","line":{"width":1,"dash":"dash"},"y_raw":[99.75,119.7,106.875],"mode":"lines","x":["d13bdc0","c11a4fd","bf5f420"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Min: %{y:.3f} ms<extra></extra>","y":[99.75,119.7,106.875]},"stats":{"baseline_mean":105.0,"latest_memory":0,"latest_commit":"bf5f420","percent_change":2.86,"num_runs":4,"latest_allocs":0,"latest_mean":108.0,"latest_timestamp":"2026-03-10T00:41:10.019","trend":"stable"},"mean":{"mode":"lines+markers","x":["d13bdc0","c11a4fd","bf5f420"],"commit_hashes":["d13bdc0","c11a4fd","bf5f420"],"hoverinfo":"text","name":"Mean","error_y":{"visible":true,"array":[0.0,0.0,6.363961030678928],"thickness":1.5,"color":"rgba(102, 126, 234, 0.4)","width":4,"type":"data"},"y":[105.0,126.0,112.5],"line":{"width":2},"y_raw":[105.0,126.0,112.5],"marker":{"size":6},"hovertext":["Commit: d13bdc0<br>Mean: 105.0 ms<br>Median: 105.0 ms<br>Min: 99.75 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:40","Commit: c11a4fd<br>Mean: 126.0 ms<br>Median: 126.0 ms<br>Min: 119.7 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:41","Commit: bf5f420<br>Mean: 112.5 ms<br>Std: 6.364 ms<br>Median: 112.5 ms<br>Min: 106.875 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 2<br>Date: 10 Mar 2026, 00:41"],"timestamps":["2026-03-10T00:40:50.051","2026-03-10T00:41:07.608","2026-03-10T00:41:10.019"],"type":"scatter"}},"shootout/spectralnorm":{"median":{"visible":"legendonly","name":"Median","line":{"width":1,"dash":"dot"},"y_raw":[100.0],"mode":"lines","x":["d13bdc0"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Median: %{y:.3f} ms<extra></extra>","y":[100.0]},"min":{"visible":"legendonly","name":"Min","line":{"width":1,"dash":"dash"},"y_raw":[95.0],"mode":"lines","x":["d13bdc0"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Min: %{y:.3f} ms<extra></extra>","y":[95.0]},"stats":{"baseline_mean":100.0,"latest_memory":0,"latest_commit":"d13bdc0","percent_change":0.0,"num_runs":1,"latest_allocs":0,"latest_mean":100.0,"latest_timestamp":"2026-03-10T00:40:50.051","trend":"stable"},"mean":{"mode":"lines+markers","x":["d13bdc0"],"commit_hashes":["d13bdc0"],"hoverinfo":"text","name":"Mean","y":[100.0],"line":{"width":2},"y_raw":[100.0],"marker":{"size":6},"hovertext":["Commit: d13bdc0<br>Mean: 100.0 ms<br>Median: 100.0 ms<br>Min: 95.0 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:40"],"timestamps":["2026-03-10T00:40:50.051"],"type":"scatter"}},"shootout/binary_trees":{"median":{"visible":"legendonly","name":"Median","line":{"width":1,"dash":"dot"},"y_raw":[105.0,139.0,106.0,91.0,75.0],"mode":"lines","x":["ce6fbae","ce4b085","cd2ebfc","c6a98e3","c165fbe"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Median: %{y:.3f} ms<extra></extra>","y":[105.0,139.0,106.0,91.0,75.0]},"min":{"visible":"legendonly","name":"Min","line":{"width":1,"dash":"dash"},"y_raw":[99.75,132.05,100.7,86.45,71.25],"mode":"lines","x":["ce6fbae","ce4b085","cd2ebfc","c6a98e3","c165fbe"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Min: %{y:.3f} ms<extra></extra>","y":[99.75,132.05,100.7,86.45,71.25]},"stats":{"baseline_mean":105.0,"latest_memory":0,"latest_commit":"c165fbe","percent_change":-28.57,"num_runs":5,"latest_allocs":0,"latest_mean":75.0,"latest_timestamp":"2026-03-10T00:41:07.217","trend":"faster"},"mean":{"mode":"lines+markers","x":["ce6fbae","ce4b085","cd2ebfc","c6a98e3","c165fbe"],"commit_hashes":["ce6fbae","ce4b085","cd2ebfc","c6a98e3","c165fbe"],"hoverinfo":"text","name":"Mean","y":[105.0,139.0,106.0,91.0,75.0],"line":{"width":2},"y_raw":[105.0,139.0,106.0,91.0,75.0],"marker":{"size":6},"hovertext":["Commit: ce6fbae<br>Mean: 105.0 ms<br>Median: 105.0 ms<br>Min: 99.75 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:40","Commit: ce4b085<br>Mean: 139.0 ms<br>Median: 139.0 ms<br>Min: 132.05 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:40","Commit: cd2ebfc<br>Mean: 106.0 ms<br>Median: 106.0 ms<br>Min: 100.7 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:40","Commit: c6a98e3<br>Mean: 91.0 ms<br>Median: 91.0 ms<br>Min: 86.45 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:40","Commit: c165fbe<br>Mean: 75.0 ms<br>Median: 75.0 ms<br>Min: 71.25 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:41"],"timestamps":["2026-03-10T00:40:51.832","2026-03-10T00:40:52.472","2026-03-10T00:40:54.113","2026-03-10T00:40:59.866","2026-03-10T00:41:07.217"],"type":"scatter"}},"shootout/regex_dna":{"median":{"visible":"legendonly","name":"Median","line":{"width":1,"dash":"dot"},"y_raw":[95.0,94.0,106.0],"mode":"lines","x":["c3f5381","c0b95ac","bf3b44f"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Median: %{y:.3f} ms<extra></extra>","y":[95.0,94.0,106.0]},"min":{"visible":"legendonly","name":"Min","line":{"width":1,"dash":"dash"},"y_raw":[90.25,89.3,100.7],"mode":"lines","x":["c3f5381","c0b95ac","bf3b44f"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Min: %{y:.3f} ms<extra></extra>","y":[90.25,89.3,100.7]},"stats":{"baseline_mean":95.0,"latest_memory":0,"latest_commit":"bf3b44f","percent_change":11.58,"num_runs":3,"latest_allocs":0,"latest_mean":106.0,"latest_timestamp":"2026-03-10T00:41:10.428","trend":"slower"},"mean":{"mode":"lines+markers","x":["c3f5381","c0b95ac","bf3b44f"],"commit_hashes":["c3f5381","c0b95ac","bf3b44f"],"hoverinfo":"text","name":"Mean","y":[95.0,94.0,106.0],"line":{"width":2},"y_raw":[95.0,94.0,106.0],"marker":{"size":6},"hovertext":["Commit: c3f5381<br>Mean: 95.0 ms<br>Median: 95.0 ms<br>Min: 90.25 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:41","Commit: c0b95ac<br>Mean: 94.0 ms<br>Median: 94.0 ms<br>Min: 89.3 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:41","Commit: bf3b44f<br>Mean: 106.0 ms<br>Median: 106.0 ms<br>Min: 100.7 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:41"],"timestamps":["2026-03-10T00:41:04.882","2026-03-10T00:41:08.226","2026-03-10T00:41:10.428"],"type":"scatter"}},"shootout/revcomp":{"median":{"visible":"legendonly","name":"Median","line":{"width":1,"dash":"dot"},"y_raw":[98.0],"mode":"lines","x":["d13bdc0"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Median: %{y:.3f} ms<extra></extra>","y":[98.0]},"min":{"visible":"legendonly","name":"Min","line":{"width":1,"dash":"dash"},"y_raw":[93.1],"mode":"lines","x":["d13bdc0"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Min: %{y:.3f} ms<extra></extra>","y":[93.1]},"stats":{"baseline_mean":98.0,"latest_memory":0,"latest_commit":"d13bdc0","percent_change":0.0,"num_runs":1,"latest_allocs":0,"latest_mean":98.0,"latest_timestamp":"2026-03-10T00:40:50.051","trend":"stable"},"mean":{"mode":"lines+markers","x":["d13bdc0"],"commit_hashes":["d13bdc0"],"hoverinfo":"text","name":"Mean","y":[98.0],"line":{"width":2},"y_raw":[98.0],"marker":{"size":6},"hovertext":["Commit: d13bdc0<br>Mean: 98.0 ms<br>Median: 98.0 ms<br>Min: 93.1 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:40"],"timestamps":["2026-03-10T00:40:50.051"],"type":"scatter"}},"shootout/k_nucleotide":{"median":{"visible":"legendonly","name":"Median","line":{"width":1,"dash":"dot"},"y_raw":[93.0,81.0,92.0,105.0,106.0,105.0],"mode":"lines","x":["016630a","06b2bf2","d38fb12","d13bdc0","c9c9199","c299527"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Median: %{y:.3f} ms<extra></extra>","y":[93.0,81.0,92.0,105.0,106.0,105.0]},"min":{"visible":"legendonly","name":"Min","line":{"width":1,"dash":"dash"},"y_raw":[88.35,76.95,87.4,99.75,100.7,99.75],"mode":"lines","x":["016630a","06b2bf2","d38fb12","d13bdc0","c9c9199","c299527"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Min: %{y:.3f} ms<extra></extra>","y":[88.35,76.95,87.4,99.75,100.7,99.75]},"stats":{"baseline_mean":93.0,"latest_memory":0,"latest_commit":"c299527","percent_change":12.9,"num_runs":6,"latest_allocs":0,"latest_mean":105.0,"latest_timestamp":"2026-03-10T00:41:05.290","trend":"slower"},"mean":{"mode":"lines+markers","x":["016630a","06b2bf2","d38fb12","d13bdc0","c9c9199","c299527"],"commit_hashes":["016630a","06b2bf2","d38fb12","d13bdc0","c9c9199","c299527"],"hoverinfo":"text","name":"Mean","y":[93.0,81.0,92.0,105.0,106.0,105.0],"line":{"width":2},"y_raw":[93.0,81.0,92.0,105.0,106.0,105.0],"marker":{"size":6},"hovertext":["Commit: 016630a<br>Mean: 93.0 ms<br>Median: 93.0 ms<br>Min: 88.35 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 9 Mar 2026, 03:20","Commit: 06b2bf2<br>Mean: 81.0 ms<br>Median: 81.0 ms<br>Min: 76.95 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 9 Mar 2026, 03:20","Commit: d38fb12<br>Mean: 92.0 ms<br>Median: 92.0 ms<br>Min: 87.4 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:40","Commit: d13bdc0<br>Mean: 105.0 ms<br>Median: 105.0 ms<br>Min: 99.75 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:40","Commit: c9c9199<br>Mean: 106.0 ms<br>Median: 106.0 ms<br>Min: 100.7 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:40","Commit: c299527<br>Mean: 105.0 ms<br>Median: 105.0 ms<br>Min: 99.75 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:41"],"timestamps":["2026-03-09T03:20:30.409","2026-03-09T03:20:33.066","2026-03-10T00:40:46.198","2026-03-10T00:40:50.051","2026-03-10T00:40:57.644","2026-03-10T00:41:05.290"],"type":"scatter"}},"shootout/fannkuch":{"median":{"visible":"legendonly","name":"Median","line":{"width":1,"dash":"dot"},"y_raw":[107.0,92.0,90.0,106.0,110.00000000000001,93.0,93.0,109.00000000000001],"mode":"lines","x":["016630a","03de024","d27fe45","d13bdc0","cb532d5","c46c227","c13f74b","c0b95ac"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Median: %{y:.3f} ms<extra></extra>","y":[107.0,92.0,90.0,106.0,110.00000000000001,93.0,93.0,109.00000000000001]},"min":{"visible":"legendonly","name":"Min","line":{"width":1,"dash":"dash"},"y_raw":[101.65,87.4,85.5,100.7,104.50000000000001,88.35,88.35,103.55000000000001],"mode":"lines","x":["016630a","03de024","d27fe45","d13bdc0","cb532d5","c46c227","c13f74b","c0b95ac"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Min: %{y:.3f} ms<extra></extra>","y":[101.65,87.4,85.5,100.7,104.50000000000001,88.35,88.35,103.55000000000001]},"stats":{"baseline_mean":107.0,"latest_memory":0,"latest_commit":"c0b95ac","percent_change":1.87,"num_runs":8,"latest_allocs":0,"latest_mean":109.0,"latest_timestamp":"2026-03-10T00:41:08.226","trend":"stable"},"mean":{"mode":"lines+markers","x":["016630a","03de024","d27fe45","d13bdc0","cb532d5","c46c227","c13f74b","c0b95ac"],"commit_hashes":["016630a","03de024","d27fe45","d13bdc0","cb532d5","c46c227","c13f74b","c0b95ac"],"hoverinfo":"text","name":"Mean","y":[107.0,92.0,90.0,106.0,110.00000000000001,93.0,93.0,109.00000000000001],"line":{"width":2},"y_raw":[107.0,92.0,90.0,106.0,110.00000000000001,93.0,93.0,109.00000000000001],"marker":{"size":6},"hovertext":["Commit: 016630a<br>Mean: 107.0 ms<br>Median: 107.0 ms<br>Min: 101.65 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 9 Mar 2026, 03:20","Commit: 03de024<br>Mean: 92.0 ms<br>Median: 92.0 ms<br>Min: 87.4 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 9 Mar 2026, 03:20","Commit: d27fe45<br>Mean: 90.0 ms<br>Median: 90.0 ms<br>Min: 85.5 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:40","Commit: d13bdc0<br>Mean: 106.0 ms<br>Median: 106.0 ms<br>Min: 100.7 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:40","Commit: cb532d5<br>Mean: 110.0 ms<br>Median: 110.0 ms<br>Min: 104.5 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:40","Commit: c46c227<br>Mean: 93.0 ms<br>Median: 93.0 ms<br>Min: 88.35 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:41","Commit: c13f74b<br>Mean: 93.0 ms<br>Median: 93.0 ms<br>Min: 88.35 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:41","Commit: c0b95ac<br>Mean: 109.0 ms<br>Median: 109.0 ms<br>Min: 103.55 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:41"],"timestamps":["2026-03-09T03:20:30.409","2026-03-09T03:20:31.529","2026-03-10T00:40:47.111","2026-03-10T00:40:50.051","2026-03-10T00:40:56.029","2026-03-10T00:41:04.382","2026-03-10T00:41:07.423","2026-03-10T00:41:08.226"],"type":"scatter"}},"shootout/nbody_vec":{"median":{"visible":"legendonly","name":"Median","line":{"width":1,"dash":"dot"},"y_raw":[146.0,129.0,126.0,88.0,128.0],"mode":"lines","x":["d13bdc0","cd660ad","c13f74b","c11a4fd","c0b95ac"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Median: %{y:.3f} ms<extra></extra>","y":[146.0,129.0,126.0,88.0,128.0]},"min":{"visible":"legendonly","name":"Min","line":{"width":1,"dash":"dash"},"y_raw":[138.7,122.55,119.7,83.6,121.6],"mode":"lines","x":["d13bdc0","cd660ad","c13f74b","c11a4fd","c0b95ac"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Min: %{y:.3f} ms<extra></extra>","y":[138.7,122.55,119.7,83.6,121.6]},"stats":{"baseline_mean":146.0,"latest_memory":0,"latest_commit":"c0b95ac","percent_change":-12.33,"num_runs":5,"latest_allocs":0,"latest_mean":128.0,"latest_timestamp":"2026-03-10T00:41:08.226","trend":"faster"},"mean":{"mode":"lines+markers","x":["d13bdc0","cd660ad","c13f74b","c11a4fd","c0b95ac"],"commit_hashes":["d13bdc0","cd660ad","c13f74b","c11a4fd","c0b95ac"],"hoverinfo":"text","name":"Mean","y":[146.0,129.0,126.0,88.0,128.0],"line":{"width":2},"y_raw":[146.0,129.0,126.0,88.0,128.0],"marker":{"size":6},"hovertext":["Commit: d13bdc0<br>Mean: 146.0 ms<br>Median: 146.0 ms<br>Min: 138.7 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:40","Commit: cd660ad<br>Mean: 129.0 ms<br>Median: 129.0 ms<br>Min: 122.55 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:40","Commit: c13f74b<br>Mean: 126.0 ms<br>Median: 126.0 ms<br>Min: 119.7 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:41","Commit: c11a4fd<br>Mean: 88.0 ms<br>Median: 88.0 ms<br>Min: 83.6 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:41","Commit: c0b95ac<br>Mean: 128.0 ms<br>Median: 128.0 ms<br>Min: 121.6 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:41"],"timestamps":["2026-03-10T00:40:50.051","2026-03-10T00:40:53.667","2026-03-10T00:41:07.423","2026-03-10T00:41:07.608","2026-03-10T00:41:08.226"],"type":"scatter"}}};
-            const statsData = {"total_runs":140,"fastest":{"name":"enzyme/basics/make_zero/namedtuple","time":"31 ns"},"last_updated":"2 min ago","total_benchmarks":6969,"slowest":{"name":"nanosoldier/array/index/(sumlinear/1:100000)","time":"3715.50 s"}};
+            const benchmarksData = {"shootout/k_nucleotide":{"median":{"visible":"legendonly","name":"Median","line":{"width":1,"dash":"dot"},"y_raw":[93.0,81.0],"mode":"lines","x":["016630a","06b2bf2"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Median: %{y:.3f} ms<extra></extra>","y":[93.0,81.0]},"min":{"visible":"legendonly","name":"Min","line":{"width":1,"dash":"dash"},"y_raw":[88.35,76.95],"mode":"lines","x":["016630a","06b2bf2"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Min: %{y:.3f} ms<extra></extra>","y":[88.35,76.95]},"stats":{"baseline_mean":93.0,"latest_memory":0,"latest_commit":"06b2bf2","percent_change":-12.9,"num_runs":2,"latest_allocs":0,"latest_mean":81.0,"latest_timestamp":"2026-03-07T02:38:23.680","trend":"faster"},"mean":{"mode":"lines+markers","x":["016630a","06b2bf2"],"commit_hashes":["016630a","06b2bf2"],"hoverinfo":"text","name":"Mean","y":[93.0,81.0],"line":{"width":2},"y_raw":[93.0,81.0],"marker":{"size":6},"hovertext":["Commit: 016630a<br>Mean: 93.0 ms<br>Median: 93.0 ms<br>Min: 88.35 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 7 Mar 2026, 02:38","Commit: 06b2bf2<br>Mean: 81.0 ms<br>Median: 81.0 ms<br>Min: 76.95 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 7 Mar 2026, 02:38"],"timestamps":["2026-03-07T02:38:21.250","2026-03-07T02:38:23.680"],"type":"scatter"}},"shootout/fannkuch":{"median":{"visible":"legendonly","name":"Median","line":{"width":1,"dash":"dot"},"y_raw":[107.0,92.0],"mode":"lines","x":["016630a","03de024"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Median: %{y:.3f} ms<extra></extra>","y":[107.0,92.0]},"min":{"visible":"legendonly","name":"Min","line":{"width":1,"dash":"dash"},"y_raw":[101.65,87.4],"mode":"lines","x":["016630a","03de024"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Min: %{y:.3f} ms<extra></extra>","y":[101.65,87.4]},"stats":{"baseline_mean":107.0,"latest_memory":0,"latest_commit":"03de024","percent_change":-14.02,"num_runs":2,"latest_allocs":0,"latest_mean":92.0,"latest_timestamp":"2026-03-07T02:38:22.318","trend":"faster"},"mean":{"mode":"lines+markers","x":["016630a","03de024"],"commit_hashes":["016630a","03de024"],"hoverinfo":"text","name":"Mean","y":[107.0,92.0],"line":{"width":2},"y_raw":[107.0,92.0],"marker":{"size":6},"hovertext":["Commit: 016630a<br>Mean: 107.0 ms<br>Median: 107.0 ms<br>Min: 101.65 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 7 Mar 2026, 02:38","Commit: 03de024<br>Mean: 92.0 ms<br>Median: 92.0 ms<br>Min: 87.4 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 7 Mar 2026, 02:38"],"timestamps":["2026-03-07T02:38:21.250","2026-03-07T02:38:22.318"],"type":"scatter"}}};
+            const statsData = {"total_runs":64,"fastest":{"name":"enzyme/basics/make_zero/namedtuple","time":"31 ns"},"last_updated":"0 min ago","total_benchmarks":2069,"slowest":{"name":"nanosoldier/sparse/constructors/(IJV/10)","time":"359.0 ms"}};
             const repoUrl = 'https://github.com/hpsc-lab/BenchmarkExplorer.jl';
-            const commitBaseUrl = 'https://github.com/JuliaLang/julia';
+            const commitBaseUrl = 'https://github.com/hpsc-lab/BenchmarkExplorer.jl';
             let percentageMode = false;
             let darkMode = false;
             let trendFilter = 'all';
@@ -901,8 +902,8 @@
                     legend: { orientation: 'h', x: 0, y: -0.25, xanchor: 'left' },
                     margin: {l: 60, r: 20, t: 10, b: 90},
                     shapes: [],
-                    plot_bgcolor: darkMode ? '#1a1a1a' : '#ffffff',
-                    paper_bgcolor: darkMode ? '#1a1a1a' : '#ffffff',
+                    plot_bgcolor: darkMode ? '#2a2a2a' : '#ffffff',
+                    paper_bgcolor: darkMode ? '#2a2a2a' : '#ffffff',
                     font: {
                         color: darkMode ? '#e9e9e7' : '#191919',
                         family: "'JetBrains Mono', monospace"
@@ -1295,6 +1296,7 @@
                 this.classList.toggle('active');
                 localStorage.setItem('darkMode', darkMode);
                 updatePlotColors();
+                if (heatmapMode) renderBenchmarks(document.getElementById('search').value);
             });
 
             function updatePlotColors() {
@@ -1305,8 +1307,8 @@
                     if (plotDiv && plotDiv.data) {
                         Plotly.restyle(plotDiv, {'line.color': lineColor, 'marker.color': lineColor}, [0]);
                         Plotly.relayout(plotDiv, {
-                            'plot_bgcolor': darkMode ? '#1a1a1a' : '#ffffff',
-                            'paper_bgcolor': darkMode ? '#1a1a1a' : '#ffffff',
+                            'plot_bgcolor': darkMode ? '#2a2a2a' : '#ffffff',
+                            'paper_bgcolor': darkMode ? '#2a2a2a' : '#ffffff',
                             'font.color': darkMode ? '#e9e9e7' : '#191919'
                         });
                     }
@@ -1491,12 +1493,12 @@
                     const row = document.createElement('tr');
                     const cells = commits.map((h, i) => {
                         const v = vals[i];
-                        if (v === null) return `<td style="background:${darkMode?'#2a2a2a':'#f0f0ee'};width:38px"></td>`;
+                        if (v === null) return `<td style="background:${darkMode?'#383838':'#f0f0ee'};width:38px"></td>`;
                         const ratio = v / baseline;
                         const pct = ((ratio - 1) * 100).toFixed(0);
                         const sat = Math.min(Math.abs(ratio - 1) * 400, 80);
                         const hue = ratio <= 1 ? 140 : 0;
-                        const lt = darkMode ? (15 + sat * 0.4) : (96 - sat * 0.45);
+                        const lt = darkMode ? (25 + sat * 0.4) : (96 - sat * 0.45);
                         const textColor = darkMode ? `hsl(${hue},70%,${60 + sat * 0.3}%)` : `hsl(${hue},${Math.min(sat*2,100)}%,${Math.max(30, 40 - sat * 0.3)}%)`;
                         const bg = `hsl(${hue},${sat}%,${lt}%)`;
                         const label = Math.abs(+pct) > 3 ? (pct > 0 ? '+' : '') + pct + '%' : '';
