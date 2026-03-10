@@ -607,28 +607,28 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             }
 
             body.dark-mode {
-                background: #191919;
+                background: #2a2a2a;
                 color: #e9e9e7;
             }
 
             body.dark-mode .container {
-                background: #252525;
-                border-color: #383838;
+                background: #333;
+                border-color: #484848;
             }
 
             body.dark-mode header {
-                background: #000;
-                border-bottom-color: #383838;
+                background: #222;
+                border-bottom-color: #484848;
             }
 
             body.dark-mode .stats-panel {
-                background: #191919;
-                border-bottom-color: #383838;
+                background: #2a2a2a;
+                border-bottom-color: #484848;
             }
 
             body.dark-mode .stat-card {
-                background: #252525;
-                border-right-color: #383838;
+                background: #333;
+                border-right-color: #484848;
                 color: #e9e9e7;
             }
 
@@ -637,18 +637,18 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             }
 
             body.dark-mode .controls {
-                background: #252525;
-                border-bottom-color: #444;
+                background: #333;
+                border-bottom-color: #484848;
             }
 
             body.dark-mode .btn {
-                background: #252525;
+                background: #333;
                 color: #e9e9e7;
-                border-color: #383838;
+                border-color: #484848;
             }
 
             body.dark-mode .btn:hover {
-                background: #333;
+                background: #404040;
             }
 
             body.dark-mode .btn-primary, body.dark-mode .btn.active {
@@ -658,9 +658,9 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             }
 
             body.dark-mode .search-box {
-                background: #252525;
+                background: #333;
                 color: #e9e9e7;
-                border-color: #383838;
+                border-color: #484848;
             }
 
             body.dark-mode .search-box:focus {
@@ -668,11 +668,11 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             }
 
             body.dark-mode .benchmarks {
-                background: #252525;
+                background: #333;
             }
 
             body.dark-mode .benchmark-item {
-                border-color: #383838;
+                border-color: #484848;
             }
 
             body.dark-mode .benchmark-item:hover {
@@ -680,8 +680,8 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             }
 
             body.dark-mode .benchmark-header {
-                background: #191919;
-                border-bottom-color: #383838;
+                background: #2a2a2a;
+                border-bottom-color: #484848;
             }
 
             body.dark-mode .benchmark-name {
@@ -693,17 +693,17 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             }
 
             body.dark-mode .plot-container {
-                background: #252525;
+                background: #333;
             }
 
             body.dark-mode .tree-toggle {
-                background: #1a1a1a;
-                border-color: #444;
+                background: #2a2a2a;
+                border-color: #484848;
                 color: #e9e9e7;
             }
 
             body.dark-mode .tree-toggle:hover {
-                background: #222;
+                background: #383838;
             }
 
             body.dark-mode .toggle-icon {
@@ -765,9 +765,9 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
 
             mark.hl { background: #fff176; color: inherit; border-radius: 2px; padding: 0 1px; }
 
-            body.dark-mode .shortcuts-box { background: #252525; border-color: #444; color: #e9e9e7; }
-            body.dark-mode .shortcut-row { border-bottom-color: #383838; }
-            body.dark-mode kbd { background: #191919; border-color: #555; color: #e9e9e7; }
+            body.dark-mode .shortcuts-box { background: #333; border-color: #484848; color: #e9e9e7; }
+            body.dark-mode .shortcut-row { border-bottom-color: #484848; }
+            body.dark-mode kbd { background: #2a2a2a; border-color: #555; color: #e9e9e7; }
             body.dark-mode mark.hl { background: #856a00; color: #fff; }
             body.dark-mode .stat-key { color: #888; }
             body.dark-mode .trend-faster { background: #0d2b14; color: #5cc475; border-color: #1e5c2e; }
@@ -779,7 +779,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             body.dark-mode .comparison-table { color: #e9e9e7; }
             body.dark-mode .comparison-table th { border-bottom-color: #444; color: #aaa; }
             body.dark-mode .comparison-table td { border-bottom-color: #333; }
-            body.dark-mode .comparison-table tbody tr:hover { background: #1e1e1e; }
+            body.dark-mode .comparison-table tbody tr:hover { background: #2a2a2a; }
             body.dark-mode .heatmap-table { color: #e9e9e7; }
             body.dark-mode .heatmap-table th { border-bottom-color: #444; color: #aaa; }
             body.dark-mode .heatmap-table td { color: #e9e9e7; }
@@ -789,7 +789,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             body.dark-mode .anchor-btn:hover { background: #444; color: #e9e9e7; }
             body.dark-mode #render-progress-wrap { background: #333; }
             body.dark-mode #render-progress-bar { background: #e9e9e7; }
-            body.dark-mode #loading-overlay { background: #191919; color: #e9e9e7; }
+            body.dark-mode #loading-overlay { background: #2a2a2a; color: #e9e9e7; }
 
             #loading-overlay {
                 position: fixed;
@@ -925,6 +925,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             <div class="stats-panel" id="stats-panel"></div>
 
             <div class="controls">
+                <span style="font-weight:700;font-size:0.95em;margin-right:4px;flex-shrink:0;">$group_name</span>
                 <button class="btn btn-primary" id="btn-percentage">% Change</button>
                 <button class="btn btn-secondary" id="btn-dark">🌙 Dark</button>
                 <button class="btn btn-secondary" id="btn-compact">⊞ Compact</button>
@@ -1135,8 +1136,8 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                     legend: { orientation: 'h', x: 0, y: -0.25, xanchor: 'left' },
                     margin: {l: 60, r: 20, t: 10, b: 90},
                     shapes: [],
-                    plot_bgcolor: darkMode ? '#1a1a1a' : '#ffffff',
-                    paper_bgcolor: darkMode ? '#1a1a1a' : '#ffffff',
+                    plot_bgcolor: darkMode ? '#2a2a2a' : '#ffffff',
+                    paper_bgcolor: darkMode ? '#2a2a2a' : '#ffffff',
                     font: {
                         color: darkMode ? '#e9e9e7' : '#191919',
                         family: "'JetBrains Mono', monospace"
@@ -1529,6 +1530,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 this.classList.toggle('active');
                 localStorage.setItem('darkMode', darkMode);
                 updatePlotColors();
+                if (heatmapMode) renderBenchmarks(document.getElementById('search').value);
             });
 
             function updatePlotColors() {
@@ -1539,8 +1541,8 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                     if (plotDiv && plotDiv.data) {
                         Plotly.restyle(plotDiv, {'line.color': lineColor, 'marker.color': lineColor}, [0]);
                         Plotly.relayout(plotDiv, {
-                            'plot_bgcolor': darkMode ? '#1a1a1a' : '#ffffff',
-                            'paper_bgcolor': darkMode ? '#1a1a1a' : '#ffffff',
+                            'plot_bgcolor': darkMode ? '#2a2a2a' : '#ffffff',
+                            'paper_bgcolor': darkMode ? '#2a2a2a' : '#ffffff',
                             'font.color': darkMode ? '#e9e9e7' : '#191919'
                         });
                     }
@@ -1799,12 +1801,12 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                     const row = document.createElement('tr');
                     const cells = commits.map((h, i) => {
                         const v = vals[i];
-                        if (v === null) return \`<td style="background:\${darkMode?'#2a2a2a':'#f0f0ee'};width:38px"></td>\`;
+                        if (v === null) return \`<td style="background:\${darkMode?'#383838':'#f0f0ee'};width:38px"></td>\`;
                         const ratio = v / baseline;
                         const pct = ((ratio - 1) * 100).toFixed(0);
                         const sat = Math.min(Math.abs(ratio - 1) * 400, 80);
                         const hue = ratio <= 1 ? 140 : 0;
-                        const lt = darkMode ? (15 + sat * 0.4) : (96 - sat * 0.45);
+                        const lt = darkMode ? (25 + sat * 0.4) : (96 - sat * 0.45);
                         const textColor = darkMode ? \`hsl(\${hue},70%,\${60 + sat * 0.3}%)\` : \`hsl(\${hue},\${Math.min(sat*2,100)}%,\${Math.max(30, 40 - sat * 0.3)}%)\`;
                         const bg = \`hsl(\${hue},\${sat}%,\${lt}%)\`;
                         const label = Math.abs(+pct) > 3 ? (pct > 0 ? '+' : '') + pct + '%' : '';
