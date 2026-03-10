@@ -78,8 +78,6 @@ function get_benchmark_stats(history, benchmark_path)
     )
 end
 
-# ─── CSS ──────────────────────────────────────────────────────────────────────
-
 const DASHBOARD_CSS = """
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: 'JetBrains Mono', SFMono-Regular, Consolas, monospace;
@@ -242,8 +240,6 @@ details > .tree-children { border: 2px solid #191919; border-top: none;
 .dark .footer { border-top-color: #333; color: #555; }
 """
 
-# ─── Main dashboard ───────────────────────────────────────────────────────────
-
 function create_interactive_dashboard(data_dir="data"; port=8000, repo_url=REPO_URL)
     data = load_dashboard_data(data_dir)
 
@@ -257,7 +253,6 @@ function create_interactive_dashboard(data_dir="data"; port=8000, repo_url=REPO_
         compare_a       = Observable("")
         compare_b       = Observable("")
 
-        # ── collect all benchmarks ──────────────────────────────────────────
         all_benchmarks = Dict{String, Any}()
         for group_name in data.groups
             history = data.histories[group_name]
@@ -272,7 +267,6 @@ function create_interactive_dashboard(data_dir="data"; port=8000, repo_url=REPO_
             end
         end
 
-        # ── collect all commits (for compare selects) ───────────────────────
         commit_times = Dict{String,String}()
         for (path, bd) in all_benchmarks
             for (_, run) in bd.history[path]
@@ -283,7 +277,6 @@ function create_interactive_dashboard(data_dir="data"; port=8000, repo_url=REPO_
         end
         all_commits = sort(collect(keys(commit_times)), by = h -> get(commit_times, h, ""))
 
-        # ── pre-create all WGLMakie figures ─────────────────────────────────
         benchmark_figures = Dict{String,Figure}()
         benchmark_axes    = Dict{String,Axis}()
 
@@ -330,12 +323,10 @@ function create_interactive_dashboard(data_dir="data"; port=8000, repo_url=REPO_
             fig
         end
 
-        # Create all figures now
         for (path, bd) in sort(collect(all_benchmarks), by=first)
             make_figure(path, bd)
         end
 
-        # ── update all plots when state changes ─────────────────────────────
         function update_plots()
             for (path, bd) in all_benchmarks
                 haskey(benchmark_axes, path) || continue
@@ -374,7 +365,6 @@ function create_interactive_dashboard(data_dir="data"; port=8000, repo_url=REPO_
         on(percentage_mode) do _; update_plots(); end
         on(max_runs_obs)    do _; update_plots(); end
 
-        # ── stats panel ─────────────────────────────────────────────────────
         n_faster = count(bd -> bd.stats.trend == "faster", values(all_benchmarks))
         n_slower = count(bd -> bd.stats.trend == "slower", values(all_benchmarks))
         last_upd = isnothing(data.stats.last_run) ? "—" :
@@ -399,7 +389,6 @@ function create_interactive_dashboard(data_dir="data"; port=8000, repo_url=REPO_
             class="stats-panel"
         )
 
-        # ── build static benchmark items (with figures) ──────────────────────
         function build_benchmark_item(path, bd)
             stats  = bd.stats
             history = bd.history
@@ -443,13 +432,11 @@ function create_interactive_dashboard(data_dir="data"; port=8000, repo_url=REPO_
                 ),
                 DOM.div(fig, class="plot-container"),
                 class="benchmark-item trend-$(stats.trend)",
-                # data attributes for client-side JS filtering
                 Symbol("data-name")  => path,
                 Symbol("data-trend") => stats.trend,
             )
         end
 
-        # Group benchmarks by top-level prefix, build tree with <details>
         function build_tree_dom(benchmarks_sorted)
             groups = Dict{String, Vector}()
             for (path, bd) in benchmarks_sorted
@@ -487,7 +474,6 @@ function create_interactive_dashboard(data_dir="data"; port=8000, repo_url=REPO_
         all_sorted = sort(collect(all_benchmarks), by=first)
         benchmarks_dom = build_tree_dom(all_sorted)
 
-        # ── heatmap view (reactive) ──────────────────────────────────────────
         heatmap_dom = map(view_mode, dark_mode) do mode, dm
             mode != "heatmap" && return DOM.div(style="display:none")
             bg  = dm ? "#191919" : "#fff"
@@ -542,7 +528,6 @@ function create_interactive_dashboard(data_dir="data"; port=8000, repo_url=REPO_
             )
         end
 
-        # ── compare view (reactive) ──────────────────────────────────────────
         compare_dom = map(view_mode, compare_a, compare_b, dark_mode) do mode, ca, cb, dm
             mode != "compare" && return DOM.div(style="display:none")
             bg  = dm ? "#191919" : "#fff"
@@ -604,7 +589,6 @@ function create_interactive_dashboard(data_dir="data"; port=8000, repo_url=REPO_
             </div>"""), style="background:$bg")
         end
 
-        # ── JS for client-side search/filter/compact/view switching ──────────
         client_js = Bonito.JSCode("""
         (function() {
             function filterBenchmarks() {
@@ -632,7 +616,6 @@ function create_interactive_dashboard(data_dir="data"; port=8000, repo_url=REPO_
         })();
         """)
 
-        # ── controls ─────────────────────────────────────────────────────────
         pct_cls  = map(m -> m ? "btn active" : "btn",       percentage_mode)
         dark_cls = map(m -> m ? "btn active" : "btn",       dark_mode)
 
@@ -687,7 +670,6 @@ function create_interactive_dashboard(data_dir="data"; port=8000, repo_url=REPO_
             class="controls"
         )
 
-        # ── CSV export JS ─────────────────────────────────────────────────────
         csv_data   = JSON.json(data.histories)
         export_btn = DOM.button("↓ CSV",
             class   = "btn",
@@ -703,7 +685,6 @@ function create_interactive_dashboard(data_dir="data"; port=8000, repo_url=REPO_
                 a.download='benchmarks.csv'; a.click();
             }"""))
 
-        # ── outer wrapper class (dark) ────────────────────────────────────────
         outer_cls = map(dm -> dm ? "dark" : "", dark_mode)
 
         DOM.div(
