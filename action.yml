@@ -83,6 +83,10 @@ runs:
         git archive origin/${{ inputs.persist_to_branch }} ${{ inputs.persist_path }}by_group/${{ inputs.group_name }} | tar -x -C ${{ inputs.data_dir }} 2>/dev/null || true
         mkdir -p ${{ inputs.data_dir }}/by_hash
         git archive origin/${{ inputs.persist_to_branch }} ${{ inputs.persist_path }}by_hash | tar -x -C ${{ inputs.data_dir }} 2>/dev/null || true
+        if [ "${{ inputs.group_name }}" = "nanosoldier" ]; then
+          mkdir -p ${{ inputs.data_dir }}/nanosoldier_raw
+          git archive origin/${{ inputs.persist_to_branch }} ${{ inputs.persist_path }}nanosoldier_raw 2>/dev/null | tar -x -C ${{ inputs.data_dir }} || true
+        fi
 
     - name: Instantiate user project
       if: inputs.group_name != 'nanosoldier'
@@ -98,6 +102,7 @@ runs:
       env:
         BENCHMARK_GROUP: ${{ inputs.group_name }}
         GITHUB_SHA: ${{ github.sha }}
+        GITHUB_TOKEN: ${{ inputs.github_token }}
       run: |
         julia --color=yes --project=${{ inputs.benchmark_project }} \
           ${{ github.action_path }}/ci/run_benchmarks.jl \

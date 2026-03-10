@@ -314,48 +314,52 @@ function start_dashboard(data_dir="data"; port=8000)
 
         css = DOM.style("""
             * { box-sizing: border-box; margin: 0; padding: 0; }
-            body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
-            .dashboard { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; padding: 20px; }
-            .container { max-width: 1600px; margin: 0 auto; background: white; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); overflow: hidden; }
-            .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px; text-align: center; }
-            .header h1 { font-size: 2.5em; margin-bottom: 10px; }
-            .header p { font-size: 1.1em; opacity: 0.9; }
-            .stats-panel { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; padding: 30px; background: #f8f9fa; }
-            .stat-card { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; }
-            .stat-card .value { font-size: 2em; font-weight: bold; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-            .stat-card .label { color: #6c757d; font-size: 0.85em; text-transform: uppercase; }
-            .controls { padding: 20px 30px; background: white; border-bottom: 1px solid #e9ecef; display: flex; gap: 15px; flex-wrap: wrap; align-items: center; }
-            .control-group { display: flex; align-items: center; gap: 8px; background: #f8f9fa; padding: 10px 15px; border-radius: 8px; }
-            .control-group label { cursor: pointer; font-weight: 500; color: #495057; }
-            .benchmarks { padding: 30px; }
-            .benchmark-card { background: white; border: 2px solid #e9ecef; border-radius: 12px; margin-bottom: 25px; overflow: hidden; transition: all 0.3s; }
-            .benchmark-card:hover { border-color: #667eea; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15); }
-            .benchmark-header { background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
-            .benchmark-name { font-size: 1.2em; font-weight: bold; color: #2c3e50; display: flex; align-items: center; gap: 10px; }
-            .trend-badge { padding: 5px 12px; border-radius: 20px; font-size: 0.8em; font-weight: bold; }
-            .trend-faster { background: #d4edda; color: #155724; }
-            .trend-slower { background: #f8d7da; color: #721c24; }
-            .trend-stable { background: #d1ecf1; color: #0c5460; }
-            .benchmark-stats { display: flex; gap: 25px; flex-wrap: wrap; }
+            body { font-family: 'JetBrains Mono', SFMono-Regular, Consolas, monospace; }
+            .dashboard { background: #fff; color: #191919; min-height: 100vh; }
+            .container { max-width: 1400px; margin: 0 auto; }
+            .header { background: #fff; color: #191919; padding: 32px 40px 24px; border-bottom: 2px solid #191919; }
+            .header h1 { font-size: 1.4em; font-weight: 700; margin-bottom: 6px; }
+            .header p { font-size: 0.82em; color: #999; }
+            .stats-panel { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); background: #f7f6f3; border-bottom: 2px solid #191919; }
+            .stat-card { padding: 20px 24px; border-right: 1px solid #e9e9e7; text-align: center; }
+            .stat-card:last-child { border-right: none; }
+            .stat-card .value { font-size: 1.7em; font-weight: 700; color: #191919; }
+            .stat-card .label { color: #999; font-size: 0.72em; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 6px; }
+            .controls { padding: 12px 32px; background: #fff; border-bottom: 2px solid #191919; position: sticky; top: 0; z-index: 100; display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+            .control-group { display: flex; align-items: center; gap: 8px; }
+            .control-group label { cursor: pointer; font-size: 0.85em; font-weight: 600; color: #191919; }
+            .benchmarks { padding: 24px 32px; }
+            .benchmark-card { border: 2px solid #191919; border-radius: 10px; margin-bottom: 20px; overflow: hidden; transition: transform 0.15s, box-shadow 0.15s; }
+            .benchmark-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
+            .benchmark-header { background: #f7f6f3; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; border-bottom: 1px solid #e9e9e7; }
+            .benchmark-name { font-size: 0.95em; font-weight: 600; color: #191919; display: flex; align-items: center; gap: 10px; }
+            .trend-badge { padding: 3px 8px; border-radius: 3px; font-size: 0.75em; font-weight: 600; }
+            .trend-faster { background: #e6f4ea; color: #1e7e34; border: 1px solid #c3e6cb; }
+            .trend-slower { background: #fce8e8; color: #b91c1c; border: 1px solid #f5c6cb; }
+            .trend-stable { background: #f0f0f0; color: #555; border: 1px solid #ddd; }
+            .benchmark-stats { display: flex; gap: 24px; flex-wrap: wrap; }
             .stat { text-align: center; }
-            .stat-key { display: block; font-size: 0.75em; color: #6c757d; text-transform: uppercase; margin-bottom: 3px; }
-            .stat-val { font-weight: bold; color: #2c3e50; }
-            .stat-val a { color: #667eea; text-decoration: none; }
-            .stat-val a:hover { text-decoration: underline; }
-            .plot-container { padding: 15px; }
-            .footer { background: #2c3e50; color: white; text-align: center; padding: 20px; }
-            .footer a { color: #667eea; }
-            .dark .container { background: #2c3e50; }
-            .dark .stats-panel { background: #34495e; }
-            .dark .stat-card { background: #2c3e50; }
-            .dark .controls { background: #34495e; border-color: #4a5568; }
-            .dark .control-group { background: #2c3e50; }
-            .dark .control-group label { color: #ecf0f1; }
-            .dark .benchmarks { background: #2c3e50; }
-            .dark .benchmark-card { background: #34495e; border-color: #4a5568; }
-            .dark .benchmark-header { background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); }
-            .dark .benchmark-name { color: #ecf0f1; }
-            .dark .stat-val { color: #ecf0f1; }
+            .stat-key { display: block; font-size: 0.72em; color: #787774; text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 2px; }
+            .stat-val { font-weight: 700; color: #191919; font-size: 0.9em; }
+            .stat-val a { color: #191919; text-decoration: underline; }
+            .plot-container { padding: 12px 16px; }
+            .footer { text-align: center; padding: 20px; font-size: 0.75em; color: #aaa; border-top: 1px solid #e9e9e7; margin-top: 32px; }
+            .footer a { color: #666; text-decoration: none; }
+            .dark .dashboard { background: #191919; color: #e9e9e7; }
+            .dark .container { background: #191919; }
+            .dark .header { background: #191919; color: #e9e9e7; border-bottom-color: #383838; }
+            .dark .stats-panel { background: #252525; border-bottom-color: #383838; }
+            .dark .stat-card { border-right-color: #333; }
+            .dark .stat-card .value { color: #e9e9e7; }
+            .dark .controls { background: #252525; border-bottom-color: #383838; }
+            .dark .control-group label { color: #e9e9e7; }
+            .dark .benchmarks { background: #191919; }
+            .dark .benchmark-card { background: #252525; border-color: #383838; }
+            .dark .benchmark-header { background: #252525; border-bottom-color: #333; }
+            .dark .benchmark-name { color: #e9e9e7; }
+            .dark .stat-val { color: #e9e9e7; }
+            .dark .trend-faster { background: #0d2b14; color: #5cc475; border-color: #1e5c2e; }
+            .dark .trend-slower { background: #2b0d0d; color: #f07070; border-color: #5c1e1e; }
         """)
 
         stats_panel = DOM.div(
@@ -465,11 +469,11 @@ function start_dashboard(data_dir="data"; port=8000)
             css,
             DOM.div(
                 DOM.div(
-                    DOM.div(DOM.h1("📊 BenchmarkExplorer"), DOM.p("Interactive Dashboard • Click points for details"), class="header"),
+                    DOM.div(DOM.h1("BenchmarkExplorer"), DOM.p("Interactive Dashboard • Click points for details"), class="header"),
                     stats_panel,
                     controls,
                     DOM.div(benchmark_cards..., class="benchmarks"),
-                    DOM.div(DOM.p("Generated by ", DOM.a("BenchmarkExplorer.jl", href=REPO_URL, target="_blank"), " • Powered by Bonito.jl + WGLMakie.jl"), class="footer"),
+                    DOM.div(DOM.p("Generated by ", DOM.a("BenchmarkExplorer.jl", href=REPO_URL, target="_blank")), DOM.p("hpsc lab", style="margin-top:4px"), class="footer"),
                     class="container"
                 ),
                 class=dark_class
@@ -609,7 +613,6 @@ function start_dashboard(data_dir="data"; port=8000)
         return HTTP.Response(404, ["Content-Type" => "text/html"], "<h1>404 - Not Found</h1>")
     end)
 
-index.html:415 
     return server
 end
 

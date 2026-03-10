@@ -56,29 +56,55 @@ function generate_index_page(benchmarks_dir::String, output_file::String, repo_u
             font-family: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
             background: #fff;
             min-height: 100vh;
-            padding: 0;
             color: #191919;
+            transition: background 0.2s, color 0.2s;
         }
 
         .container {
-            width: 100%;
-            padding: 40px 48px;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 48px 32px;
+            text-align: center;
         }
 
+        .top-bar {
+            display: flex;
+            justify-content: flex-end;
+            padding: 12px 24px;
+            border-bottom: 1px solid #e9e9e7;
+        }
+
+        .btn-dark {
+            background: #fff;
+            border: 2px solid #191919;
+            border-radius: 8px;
+            padding: 6px 14px;
+            font-size: 0.8em;
+            font-family: inherit;
+            cursor: pointer;
+            font-weight: 600;
+            color: #191919;
+            transition: background 0.15s;
+        }
+
+        .btn-dark:hover { background: #f7f6f3; }
+        .btn-dark.active { background: #191919; color: #fff; }
+
         h1 {
-            font-size: 1.3em;
+            font-size: 1.4em;
             font-weight: 700;
             color: #191919;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
         }
 
         .meta {
             font-size: 0.78em;
             color: #999;
-            margin-bottom: 32px;
+            margin-bottom: 40px;
             display: flex;
             gap: 20px;
             flex-wrap: wrap;
+            justify-content: center;
         }
 
         .meta a { color: #666; text-decoration: none; }
@@ -89,6 +115,7 @@ function generate_index_page(benchmarks_dir::String, output_file::String, repo_u
             flex-wrap: wrap;
             justify-content: center;
             gap: 16px;
+            margin-bottom: 48px;
         }
 
         .group-card {
@@ -99,13 +126,15 @@ function generate_index_page(benchmarks_dir::String, output_file::String, repo_u
             text-decoration: none;
             color: inherit;
             display: block;
-            transition: box-shadow 0.15s;
-            flex: 0 1 260px;
-            min-width: 200px;
+            transition: box-shadow 0.15s, transform 0.15s;
+            flex: 0 1 240px;
+            min-width: 180px;
+            text-align: left;
         }
 
         .group-card:hover {
-            box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
         }
 
         .group-name {
@@ -139,11 +168,9 @@ function generate_index_page(benchmarks_dir::String, output_file::String, repo_u
             text-align: center;
             padding: 60px 20px;
             color: #999;
-            grid-column: 1 / -1;
         }
 
         footer {
-            margin-top: 48px;
             font-size: 0.72em;
             color: #bbb;
         }
@@ -151,13 +178,30 @@ function generate_index_page(benchmarks_dir::String, output_file::String, repo_u
         footer a { color: #999; text-decoration: none; }
         footer a:hover { text-decoration: underline; }
 
-        @media (max-width: 700px) {
-            .groups-grid { grid-template-columns: 1fr; }
-            body { padding: 24px 16px; }
+        body.dark-mode { background: #191919; color: #e9e9e7; }
+        body.dark-mode .top-bar { border-bottom-color: #333; }
+        body.dark-mode .btn-dark { background: #252525; color: #e9e9e7; border-color: #555; }
+        body.dark-mode .btn-dark:hover { background: #333; }
+        body.dark-mode .btn-dark.active { background: #e9e9e7; color: #191919; border-color: #e9e9e7; }
+        body.dark-mode h1 { color: #e9e9e7; }
+        body.dark-mode .meta a { color: #aaa; }
+        body.dark-mode .group-card { background: #252525; border-color: #383838; color: #e9e9e7; }
+        body.dark-mode .group-card:hover { box-shadow: 0 6px 18px rgba(0,0,0,0.4); border-color: #666; }
+        body.dark-mode .group-name { color: #aaa; }
+        body.dark-mode .group-count { color: #e9e9e7; }
+        body.dark-mode .group-updated { border-top-color: #333; }
+        body.dark-mode footer a { color: #666; }
+
+        @media (max-width: 600px) {
+            .container { padding: 32px 16px; }
+            .group-card { flex: 0 1 100%; }
         }
     </style>
 </head>
 <body>
+    <div class="top-bar">
+        <button class="btn-dark" id="btn-dark">Dark</button>
+    </div>
     <div class="container">
         <h1>Benchmark Dashboard</h1>
         <div class="meta">
@@ -194,8 +238,22 @@ function generate_index_page(benchmarks_dir::String, output_file::String, repo_u
 
         <footer>
             <p>Powered by <a href="https://github.com/$(split(repo_url, "github.com/")[end])" target="_blank">BenchmarkExplorer.jl</a></p>
+            <p style="margin-top:6px;">hpsc lab</p>
         </footer>
     </div>
+    <script>
+        const btn = document.getElementById('btn-dark');
+        function applyDark(on) {
+            document.body.classList.toggle('dark-mode', on);
+            btn.classList.toggle('active', on);
+        }
+        applyDark(localStorage.getItem('darkMode') === 'true');
+        btn.addEventListener('click', function() {
+            const on = !document.body.classList.contains('dark-mode');
+            applyDark(on);
+            localStorage.setItem('darkMode', on);
+        });
+    </script>
 </body>
 </html>
 """
