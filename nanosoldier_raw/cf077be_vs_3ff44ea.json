@@ -1,0 +1,36 @@
+{
+  "metadata": {
+    "head_hash": "cf077be",
+    "comparison": "cf077be_vs_3ff44ea",
+    "source": "NanosoldierReports",
+    "base_hash": "3ff44ea",
+    "imported_at": "2026-03-10T00:40:51.624",
+    "source_type": "report_md"
+  },
+  "benchmarks": {
+    "[\"io\", \"read\", \"read\"]": {
+      "time_ratio": 1.33,
+      "memory_ratio": 1.0
+    },
+    "[\"string\", \"==(::SubString, ::String)\", \"different\"]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"string\", \"repeat\", \"repeat str len 16\"]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"string\", \"==(::AbstractString, ::AbstractString)\", \"equal\"]": {
+      "time_ratio": 1.13,
+      "memory_ratio": 1.0
+    },
+    "[\"string\", \"==(::AbstractString, ::AbstractString)\", \"different\"]": {
+      "time_ratio": 1.35,
+      "memory_ratio": 1.0
+    },
+    "[\"string\", \"==(::AbstractString, ::AbstractString)\", \"different length\"]": {
+      "time_ratio": 1.13,
+      "memory_ratio": 1.0
+    }
+  }
+}

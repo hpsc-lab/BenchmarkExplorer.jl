@@ -1,0 +1,52 @@
+{
+  "metadata": {
+    "head_hash": "bdc205e",
+    "comparison": "bdc205e_vs_6bfc6ac",
+    "source": "NanosoldierReports",
+    "base_hash": "6bfc6ac",
+    "imported_at": "2026-03-10T00:41:11.361",
+    "source_type": "report_md"
+  },
+  "benchmarks": {
+    "[\"inference\", \"optimization\", \"sin(42)\"]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"many_invoke_calls\"]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"many_method_matches\"]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"println(::QuoteNode)\"]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"broadcasting\"]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"sin(42)\"]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"rand(Float64)\"]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"REPL.REPLCompletions.completions\"]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"domsort_ssa!\"]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"construct_ssa!\"]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    }
+  }
+}

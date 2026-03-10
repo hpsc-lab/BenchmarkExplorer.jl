@@ -1,0 +1,16 @@
+{
+  "metadata": {
+    "head_hash": "ce5dbf5",
+    "comparison": "ce5dbf5_vs_5e93c29",
+    "source": "NanosoldierReports",
+    "base_hash": "5e93c29",
+    "imported_at": "2026-03-10T00:40:52.251",
+    "source_type": "report_md"
+  },
+  "benchmarks": {
+    "[\"sparse\", \"matmul\", (\"A_mul_Bc!\", \"dense 20x200, sparse 2000x200 -> dense 20x2000\")]": {
+      "time_ratio": 1.35,
+      "memory_ratio": 1.0
+    }
+  }
+}

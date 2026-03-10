@@ -1,0 +1,676 @@
+{
+  "metadata": {
+    "head_hash": "c46c227",
+    "comparison": "c46c227_vs_e026aff",
+    "source": "NanosoldierReports",
+    "base_hash": "e026aff",
+    "imported_at": "2026-03-10T00:41:04.382",
+    "source_type": "report_md"
+  },
+  "benchmarks": {
+    "[\"find\", \"findall\", (\"ispos\", \"Vector{Int8}\")]": {
+      "time_ratio": 1.13,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"filter\", \"Float64\", 0)]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"A_mul_B\", \"sparse 500x500, dense 500x5 -> dense 500x5\")]": {
+      "time_ratio": 1.38,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"perf_sumskipmissing\", \"Union{Missing, Float64}\", 1)]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"setindex!\", (\"setindex!\", 1)]": {
+      "time_ratio": 1.18,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Linear\", \"auto_local_arrays\", \"Float32\", 4095)]": {
+      "time_ratio": 1.28,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_binaryop\", \"*\", \"Float64\", \"(false, true)\")]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"dates\", \"arithmetic\", (\"DateTime\", \"Day\")]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", (\"Vector{Bool}\", \"50-50\")]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Linear\", \"axpy!_aliased\", \"Float64\", 4095)]": {
+      "time_ratio": 1.22,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"many_local_vars\"]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"io\", \"serialization\", (\"serialize\", \"Matrix{Float64}\")]": {
+      "time_ratio": 1.36,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Linear\", \"axpy!_aliased\", \"Int32\", 4096)]": {
+      "time_ratio": 1.31,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"sum\", \"Union{Missing, ComplexF64}\", 1)]": {
+      "time_ratio": 1.57,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum3\", \"Float32\", 1)]": {
+      "time_ratio": 1.53,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"A_mul_B\", \"sparse 50x500, dense 500x5 -> dense 50x5\")]": {
+      "time_ratio": 1.46,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"allinference\", \"sin(42)\"]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"identity\", \"Int8\", 1)]": {
+      "time_ratio": 1.33,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Cartesian\", \"axpy!\", \"Int32\", 4, 63)]": {
+      "time_ratio": 1.21,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Linear\", \"axpy!_aliased\", \"Float32\", 4096)]": {
+      "time_ratio": 1.22,
+      "memory_ratio": 1.0
+    },
+    "[\"tuple\", \"reduction\", (\"minimum\", \"(8,)\")]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"collect\", \"all\", \"Int64\", 1)]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Linear\", \"auto_local_arrays\", \"Int32\", 4095)]": {
+      "time_ratio": 1.37,
+      "memory_ratio": 1.0
+    },
+    "[\"dates\", \"arithmetic\", (\"DateTime\", \"Minute\")]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"cat\", (\"catnd\", 500)]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"dates\", \"parse\", \"Date\"]": {
+      "time_ratio": 1.17,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", (\"ispos\", \"Vector{Int64}\")]": {
+      "time_ratio": 1.21,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Linear\", \"axpy!_aliased\", \"Int32\", 4095)]": {
+      "time_ratio": 1.32,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"abs\", \"ComplexF64\", 0)]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"io\", \"read\", \"readstring\"]": {
+      "time_ratio": 0.87,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", (\"> q0.99\", \"Vector{Float32}\")]": {
+      "time_ratio": 1.17,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"abs\", \"Bool\", 1)]": {
+      "time_ratio": 0.9,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findprev\", (\"ispos\", \"Vector{Float64}\")]": {
+      "time_ratio": 1.16,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"abs\", \"BigFloat\", 0)]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Linear\", \"auto_local_arrays\", \"Int32\", 4096)]": {
+      "time_ratio": 1.37,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"foldl\", \"foldl(+, filter(...); init = 0.0)\"]": {
+      "time_ratio": 2.03,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"accumulate\", (\"accumulate!\", \"Int\")]": {
+      "time_ratio": 1.31,
+      "memory_ratio": 1.0
+    },
+    "[\"micro\", \"parseint\"]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", (\"> q0.99\", \"Vector{Int8}\")]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"perf_sumskipmissing\", \"Union{Nothing, Int64}\", 0)]": {
+      "time_ratio": 0.83,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", \"sort forwards\"]": {
+      "time_ratio": 1.2,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"collect\", \"all\", \"BigFloat\", 1)]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Cartesian\", \"axpy!\", \"Int32\", 4, 31)]": {
+      "time_ratio": 1.21,
+      "memory_ratio": 1.0
+    },
+    "[\"random\", \"ranges\", (\"RangeGenerator\", \"UInt128\", \"1:1\")]": {
+      "time_ratio": 1.3,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_binaryop\", \"*\", \"Int8\", \"(true, true)\")]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"deletion\", (\"Set\", \"String\", \"filter!\")]": {
+      "time_ratio": 0.72,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", (\"ispos\", \"Vector{UInt64}\")]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Linear\", \"local_arrays\", \"Int32\", 4096)]": {
+      "time_ratio": 1.31,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"iterators\", \"zip(1:1)\"]": {
+      "time_ratio": 0.74,
+      "memory_ratio": 1.0
+    },
+    "[\"dates\", \"arithmetic\", (\"DateTime\", \"Hour\")]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"linalg\", \"small exp #29116\"]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"A_mul_Bt\", \"sparse 500x500, dense 5x500 -> dense 500x5\")]": {
+      "time_ratio": 1.46,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"abs\", \"BigFloat\", 0)]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"constructors\", (\"IJV\", 1000)]": {
+      "time_ratio": 1.11,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"cat\", (\"vcat\", 5)]": {
+      "time_ratio": 0.89,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"BitSet\", \"Int\", \"setdiff!\", \"BitSet\")]": {
+      "time_ratio": 0.67,
+      "memory_ratio": 1.0
+    },
+    "[\"dates\", \"arithmetic\", (\"DateTime\", \"Millisecond\")]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"abs\", \"ComplexF64\", 0)]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_countnothing\", \"Int8\", 1)]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"afoldl\", \"Complex{Float64}\"]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"micro\", \"printfd\"]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Linear\", \"axpy!_aliased\", \"Float32\", 4095)]": {
+      "time_ratio": 1.23,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"constructors\", (\"IJV\", 100)]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"abs\", \"Int8\", 1)]": {
+      "time_ratio": 1.29,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum3\", \"ComplexF64\", 1)]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"*\", \"Float32\", \"(true, true)\")]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"collect\", \"BigFloat\", 0)]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", (\"ispos\", \"Vector{UInt8}\")]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"CartesianPartition\", \"manual_example!\", \"Int32\", 2, 31)]": {
+      "time_ratio": 1.25,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Linear\", \"manual_example!_aliased\", \"Int64\", 4096)]": {
+      "time_ratio": 1.24,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"transpose\", (\"adjoint\", \"(20000, 20000)\")]": {
+      "time_ratio": 1.33,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_binaryop\", \"*\", \"Float32\", \"(true, true)\")]": {
+      "time_ratio": 1.17,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", \"sort! reverse\"]": {
+      "time_ratio": 1.3,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", (\"ispos\", \"Vector{Float32}\")]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Cartesian\", \"axpy!\", \"Int64\", 2, 63)]": {
+      "time_ratio": 1.26,
+      "memory_ratio": 1.0
+    },
+    "[\"shootout\", \"fannkuch\"]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_binaryop\", \"*\", \"Float64\", \"(true, true)\")]": {
+      "time_ratio": 1.13,
+      "memory_ratio": 1.0
+    },
+    "[\"broadcast\", \"dotop\", (\"Float64\", \"(1000, 1000)\", 2)]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"abs\", \"Float64\", 1)]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum\", \"ComplexF64\", 1)]": {
+      "time_ratio": 1.67,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum2\", \"Int8\", 0)]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"accumulate\", (\"cumsum!\", \"Int\")]": {
+      "time_ratio": 1.29,
+      "memory_ratio": 1.0
+    },
+    "[\"tuple\", \"reduction\", (\"sum\", \"(2,)\")]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum3\", \"Int8\", 0)]": {
+      "time_ratio": 1.49,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"abs\", \"Float32\", 1)]": {
+      "time_ratio": 0.79,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"foldl\", \"foldl(+, filter(...))\"]": {
+      "time_ratio": 1.74,
+      "memory_ratio": 1.0
+    },
+    "[\"dates\", \"arithmetic\", (\"Date\", \"Day\")]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"perf highdim generator\"]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"constructors\", (\"IJV\", 10)]": {
+      "time_ratio": 1.22,
+      "memory_ratio": 1.0
+    },
+    "[\"tuple\", \"linear algebra\", (\"matmat\", \"(4, 4)\", \"(4, 4)\")]": {
+      "time_ratio": 1.11,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum3\", \"Bool\", 0)]": {
+      "time_ratio": 1.19,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", (\"> q0.5\", \"Vector{Float32}\")]": {
+      "time_ratio": 1.13,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"transpose\", (\"adjoint\", \"(20000, 10000)\")]": {
+      "time_ratio": 4.1,
+      "memory_ratio": 1.0
+    },
+    "[\"broadcast\", \"mix_scalar_tuple\", (10, \"tup_tup\")]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Linear\", \"manual_example!_aliased\", \"Int64\", 4095)]": {
+      "time_ratio": 1.24,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"cat\", (\"vcat_setind\", 5)]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"constructors\", (\"SymTridiagonal\", 10)]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"afoldl\", \"Float64\"]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", (\"> q0.99\", \"Vector{Float64}\")]": {
+      "time_ratio": 1.17,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Linear\", \"local_arrays\", \"Float32\", 4096)]": {
+      "time_ratio": 1.28,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"identity\", \"Bool\", 1)]": {
+      "time_ratio": 1.39,
+      "memory_ratio": 1.0
+    },
+    "[\"dates\", \"arithmetic\", (\"DateTime\", \"Second\")]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum3\", \"Bool\", 1)]": {
+      "time_ratio": 1.94,
+      "memory_ratio": 1.0
+    },
+    "[\"dates\", \"accessor\", \"millisecond\"]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", (\"> q0.95\", \"Vector{UInt8}\")]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"tuple\", \"reduction\", (\"sum\", \"(8, 8)\")]": {
+      "time_ratio": 0.9,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", (\"> q0.8\", \"Vector{Float32}\")]": {
+      "time_ratio": 1.17,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"A_mul_Bt\", \"sparse 5x50, dense 50x50 -> dense 5x50\")]": {
+      "time_ratio": 1.43,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Linear\", \"local_arrays\", \"Float32\", 4095)]": {
+      "time_ratio": 1.28,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"sparse matvec\", \"non-adjoint\"]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"identity\", \"Int64\", 1)]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findprev\", (\"ispos\", \"Vector{UInt64}\")]": {
+      "time_ratio": 1.13,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"cat\", (\"catnd_setind\", 5)]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", (\"> q0.95\", \"Vector{Int8}\")]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", (\"> q0.5\", \"Vector{Float64}\")]": {
+      "time_ratio": 1.11,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", (\"> q0.95\", \"Vector{Float64}\")]": {
+      "time_ratio": 1.16,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", (\"> q0.99\", \"Vector{UInt8}\")]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"iterators\", \"zip(1:1000)\"]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_binaryop\", \"*\", \"ComplexF64\", \"(true, true)\")]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum2\", \"ComplexF64\", 1)]": {
+      "time_ratio": 1.67,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum3\", \"Float64\", 1)]": {
+      "time_ratio": 1.53,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"perf_sumskipmissing\", \"Union{Missing, Int8}\", 1)]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"abs\", \"BigFloat\", 1)]": {
+      "time_ratio": 1.23,
+      "memory_ratio": 1.0
+    },
+    "[\"tuple\", \"reduction\", (\"sum\", \"(4,)\")]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"bitshift\", (\"UInt\", \"UInt\")]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", (\"ispos\", \"Vector{Bool}\")]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"perf_sumskipmissing\", \"Union{Missing, BigFloat}\", 1)]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"sort\", \"Float32\", 0)]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"abs\", \"Float64\", 1)]": {
+      "time_ratio": 0.86,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"setindex!\", (\"setindex!\", 5)]": {
+      "time_ratio": 1.13,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Linear\", \"axpy!_aliased\", \"Int64\", 4095)]": {
+      "time_ratio": 1.27,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"*\", \"Float32\", \"(false, true)\")]": {
+      "time_ratio": 0.87,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"growth\", (\"push_multiple!\", 8)]": {
+      "time_ratio": 0.88,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"*\", \"Int64\", \"(true, true)\")]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Linear\", \"auto_local_arrays\", \"Float32\", 4096)]": {
+      "time_ratio": 1.28,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Cartesian\", \"axpy!\", \"Int32\", 3, 31)]": {
+      "time_ratio": 1.25,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Linear\", \"axpy!_aliased\", \"Int64\", 4096)]": {
+      "time_ratio": 1.3,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_binaryop\", \"*\", \"Bool\", \"(true, true)\")]": {
+      "time_ratio": 1.19,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Cartesian\", \"axpy!\", \"Float64\", 2, 31)]": {
+      "time_ratio": 1.22,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Linear\", \"local_arrays\", \"Int32\", 4095)]": {
+      "time_ratio": 1.31,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum3\", \"Int8\", 1)]": {
+      "time_ratio": 2.09,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"equality\", (\"==\", \"UnitRange{Int64}\")]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", (\"> q0.95\", \"Vector{Float32}\")]": {
+      "time_ratio": 1.16,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"A_mul_Bt\", \"sparse 50x500, dense 5x500 -> dense 50x5\")]": {
+      "time_ratio": 1.55,
+      "memory_ratio": 1.0
+    },
+    "[\"tuple\", \"misc\", \"11899\"]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findnext\", (\"ispos\", \"Vector{Int64}\")]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"abs\", \"Float32\", 0)]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", (\"> q0.8\", \"Vector{Float64}\")]": {
+      "time_ratio": 1.17,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"abs\", \"BigFloat\", 1)]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"identity\", \"BigFloat\", 1)]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"cat\", (\"hcat_setind\", 5)]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_countequals\", \"Int8\")]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Linear\", \"manual_example!_aliased\", \"Int32\", 4096)]": {
+      "time_ratio": 1.24,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"cat\", (\"hvcat_setind\", 5)]": {
+      "time_ratio": 0.9,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"allinference\", \"many_const_calls\"]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"string\", \"replace\"]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", (\"Vector{Bool}\", \"10-90\")]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"perf_sumskipmissing\", \"BigFloat\", 0)]": {
+      "time_ratio": 0.9,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"A_mul_Bt\", \"sparse 50x50, dense 50x50 -> dense 50x50\")]": {
+      "time_ratio": 1.41,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"*\", \"BigFloat\", \"(false, false)\")]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"sort\", \"Int8\", 0)]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Linear\", \"axpy!_aliased\", \"Float64\", 4096)]": {
+      "time_ratio": 1.22,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findprev\", (\"ispos\", \"Vector{UInt8}\")]": {
+      "time_ratio": 1.22,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"abs\", \"Bool\", 1)]": {
+      "time_ratio": 1.42,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Linear\", \"manual_example!_aliased\", \"Int32\", 4095)]": {
+      "time_ratio": 1.25,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"transpose\", (\"transpose\", \"(20000, 20000)\")]": {
+      "time_ratio": 0.32,
+      "memory_ratio": 1.0
+    }
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "metadata": {
+    "head_hash": "c64ec60",
+    "comparison": "c64ec60_vs_9118373",
+    "source": "NanosoldierReports",
+    "base_hash": "9118373",
+    "imported_at": "2026-03-10T00:41:00.818",
+    "source_type": "report_md"
+  },
+  "benchmarks": {
+    "[\"inference\", \"allinference\", \"broadcasting\"]": {
+      "time_ratio": 1.02,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"many_local_vars\"]": {
+      "time_ratio": 1.04,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"println(::QuoteNode)\"]": {
+      "time_ratio": 1.02,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"allinference\", \"abstract_call_gf_by_type\"]": {
+      "time_ratio": 1.02,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"Base.init_stdio(::Ptr{Cvoid})\"]": {
+      "time_ratio": 1.01,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"allinference\", \"REPL.REPLCompletions.completions\"]": {
+      "time_ratio": 1.01,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"allinference\", \"println(::QuoteNode)\"]": {
+      "time_ratio": 1.02,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"sin(42)\"]": {
+      "time_ratio": 1.03,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"allinference\", \"sin(42)\"]": {
+      "time_ratio": 1.03,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"allinference\", \"many_local_vars\"]": {
+      "time_ratio": 1.0,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"REPL.REPLCompletions.completions\"]": {
+      "time_ratio": 1.04,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"domsort_ssa!\"]": {
+      "time_ratio": 1.03,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"many_global_refs\"]": {
+      "time_ratio": 1.0,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"many_local_vars\"]": {
+      "time_ratio": 1.0,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"Base.init_stdio(::Ptr{Cvoid})\"]": {
+      "time_ratio": 1.04,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"sin(42)\"]": {
+      "time_ratio": 1.04,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"broadcasting\"]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"abstract_call_gf_by_type\"]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"REPL.REPLCompletions.completions\"]": {
+      "time_ratio": 1.01,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"domsort_ssa!\"]": {
+      "time_ratio": 1.16,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"many_const_calls\"]": {
+      "time_ratio": 1.01,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"construct_ssa!\"]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"allinference\", \"Base.init_stdio(::Ptr{Cvoid})\"]": {
+      "time_ratio": 1.01,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"allinference\", \"construct_ssa!\"]": {
+      "time_ratio": 1.03,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"allinference\", \"many_const_calls\"]": {
+      "time_ratio": 1.02,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"println(::QuoteNode)\"]": {
+      "time_ratio": 0.98,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"abstract_call_gf_by_type\"]": {
+      "time_ratio": 1.03,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"allinference\", \"domsort_ssa!\"]": {
+      "time_ratio": 1.04,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"allinference\", \"many_global_refs\"]": {
+      "time_ratio": 1.0,
+      "memory_ratio": 1.0
+    }
+  }
+}

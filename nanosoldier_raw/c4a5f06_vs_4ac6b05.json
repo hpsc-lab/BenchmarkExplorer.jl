@@ -1,0 +1,88 @@
+{
+  "metadata": {
+    "head_hash": "c4a5f06",
+    "comparison": "c4a5f06_vs_4ac6b05",
+    "source": "NanosoldierReports",
+    "base_hash": "4ac6b05",
+    "imported_at": "2026-03-10T00:41:03.954",
+    "source_type": "report_md"
+  },
+  "benchmarks": {
+    "[\"inference\", \"abstract interpretation\", \"Base.init_stdio(::Ptr{Cvoid})\"]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"many_method_matches\"]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"allinference\", \"println(::QuoteNode)\"]": {
+      "time_ratio": 0.99,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"allinference\", \"many_invoke_calls\"]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"sin(42)\"]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"REPL.REPLCompletions.completions\"]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"allinference\", \"many_local_vars\"]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"many_global_refs\"]": {
+      "time_ratio": 0.11,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"many_local_vars\"]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"sin(42)\"]": {
+      "time_ratio": 0.88,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"many_invoke_calls\"]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"broadcasting\"]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"rand(Float64)\"]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"REPL.REPLCompletions.completions\"]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"many_const_calls\"]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"many_opaque_closures\"]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"many_method_matches\"]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"many_invoke_calls\"]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"allinference\", \"many_global_refs\"]": {
+      "time_ratio": 0.21,
+      "memory_ratio": 1.0
+    }
+  }
+}

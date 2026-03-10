@@ -1,0 +1,128 @@
+{
+  "metadata": {
+    "head_hash": "ca3e8b6",
+    "comparison": "ca3e8b6_vs_902e8a7",
+    "source": "NanosoldierReports",
+    "base_hash": "902e8a7",
+    "imported_at": "2026-03-10T00:40:57.178",
+    "source_type": "report_md"
+  },
+  "benchmarks": {
+    "[\"inference\", \"allinference\", \"broadcasting\"]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"many_opaque_closures\"]": {
+      "time_ratio": 0.72,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"many_global_refs\"]": {
+      "time_ratio": 1.22,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"many_local_vars\"]": {
+      "time_ratio": 0.87,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"allinference\", \"abstract_call_gf_by_type\"]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"allinference\", \"REPL.REPLCompletions.completions\"]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"allinference\", \"many_invoke_calls\"]": {
+      "time_ratio": 0.89,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"allinference\", \"println(::QuoteNode)\"]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"allinference\", \"sin(42)\"]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"allinference\", \"many_local_vars\"]": {
+      "time_ratio": 1.0,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"REPL.REPLCompletions.completions\"]": {
+      "time_ratio": 1.01,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"construct_ssa!\"]": {
+      "time_ratio": 0.83,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"domsort_ssa!\"]": {
+      "time_ratio": 0.87,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"Base.init_stdio(::Ptr{Cvoid})\"]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"sin(42)\"]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"allinference\", \"rand(Float64)\"]": {
+      "time_ratio": 0.96,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"abstract_call_gf_by_type\"]": {
+      "time_ratio": 0.88,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"allinference\", \"Base.init_stdio(::Ptr{Cvoid})\"]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"allinference\", \"construct_ssa!\"]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"construct_ssa!\"]": {
+      "time_ratio": 1.02,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"allinference\", \"many_const_calls\"]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"broadcasting\"]": {
+      "time_ratio": 0.82,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"many_method_matches\"]": {
+      "time_ratio": 0.83,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"println(::QuoteNode)\"]": {
+      "time_ratio": 0.99,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"allinference\", \"many_method_matches\"]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"allinference\", \"domsort_ssa!\"]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"many_invoke_calls\"]": {
+      "time_ratio": 0.79,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"allinference\", \"many_global_refs\"]": {
+      "time_ratio": 1.02,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"rand(Float64)\"]": {
+      "time_ratio": 0.71,
+      "memory_ratio": 1.0
+    }
+  }
+}

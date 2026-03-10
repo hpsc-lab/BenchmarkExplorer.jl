@@ -1,0 +1,44 @@
+{
+  "metadata": {
+    "head_hash": "cafb20c",
+    "comparison": "cafb20c_vs_e7e8768",
+    "source": "NanosoldierReports",
+    "base_hash": "e7e8768",
+    "imported_at": "2026-03-10T00:40:56.267",
+    "source_type": "report_md"
+  },
+  "benchmarks": {
+    "[\"io\", \"read\", \"read\"]": {
+      "time_ratio": 0.97,
+      "memory_ratio": 1.0
+    },
+    "[\"string\", \"join\"]": {
+      "time_ratio": 1.48,
+      "memory_ratio": 1.0
+    },
+    "[\"string\", \"readuntil\", \"target length 1\"]": {
+      "time_ratio": 0.27,
+      "memory_ratio": 1.0
+    },
+    "[\"string\", \"repeat\", \"repeat str len 16\"]": {
+      "time_ratio": 1.46,
+      "memory_ratio": 1.0
+    },
+    "[\"string\", \"==(::SubString, ::String)\", \"different length\"]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"string\", \"readuntil\", \"target length 2\"]": {
+      "time_ratio": 0.26,
+      "memory_ratio": 1.0
+    },
+    "[\"string\", \"readuntil\", \"target length 1000\"]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"string\", \"readuntil\", \"target length 50000\"]": {
+      "time_ratio": 1.0,
+      "memory_ratio": 1.0
+    }
+  }
+}

@@ -1,0 +1,380 @@
+{
+  "metadata": {
+    "head_hash": "beabe81",
+    "comparison": "beabe81_vs_dc45d77",
+    "source": "NanosoldierReports",
+    "base_hash": "dc45d77",
+    "imported_at": "2026-03-10T00:41:10.982",
+    "source_type": "report_md"
+  },
+  "benchmarks": {
+    "[\"array\", \"convert\", (\"Complex{Float64}\", \"Int\")]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"dates\", \"arithmetic\", (\"DateTime\", \"Day\")]": {
+      "time_ratio": 1.11,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"At_mul_B\", \"dense 500x5, sparse 500x500 -> dense 5x500\")]": {
+      "time_ratio": 0.68,
+      "memory_ratio": 1.0
+    },
+    "[\"tuple\", \"linear algebra\", (\"matvec\", \"(8, 8)\", \"(8,)\")]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"tuple\", \"reduction\", (\"sum\", \"(16, 16)\")]": {
+      "time_ratio": 0.86,
+      "memory_ratio": 1.0
+    },
+    "[\"broadcast\", \"mix_scalar_tuple\", (5, \"tup_tup\")]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Linear\", \"sum_reduce\", \"Float64\", 4096)]": {
+      "time_ratio": 0.76,
+      "memory_ratio": 1.0
+    },
+    "[\"tuple\", \"reduction\", (\"minimum\", \"(8,)\")]": {
+      "time_ratio": 0.89,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"equality\", (\"isequal\", \"Vector{Int64} isequal Vector{Int64}\")]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_countequals\", \"Bool\")]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"dates\", \"arithmetic\", (\"DateTime\", \"Minute\")]": {
+      "time_ratio": 0.9,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"cat\", (\"catnd\", 5)]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"constructors\", (\"Diagonal\", 10)]": {
+      "time_ratio": 1.11,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findnext\", (\"ispos\", \"Vector{UInt64}\")]": {
+      "time_ratio": 1.11,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"A_mul_Bc\", \"sparse 50x500, dense 5x500 -> dense 50x5\")]": {
+      "time_ratio": 1.31,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"accumulate\", (\"cumsum!\", \"Float64\", \"dim1\")]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"tuple\", \"linear algebra\", (\"matvec\", \"(4, 4)\", \"(4,)\")]": {
+      "time_ratio": 0.81,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"bitshift\", (\"UInt32\", \"UInt32\")]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"broadcast\", \"mix_scalar_tuple\", (5, \"scal_tup\")]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"foldl\", \"foldl(+, filter(...); init = 0.0)\"]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"tuple\", \"linear algebra\", (\"matvec\", \"(16, 16)\", \"(16,)\")]": {
+      "time_ratio": 0.78,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"accumulate\", (\"cumsum!\", \"Float64\", \"dim2\")]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"allocation elision view\", \"no conditional\"]": {
+      "time_ratio": 1.52,
+      "memory_ratio": 1.0
+    },
+    "[\"tuple\", \"reduction\", (\"sum\", \"(2, 2)\")]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"broadcast\", \"mix_scalar_tuple\", (5, \"scal_tup_x3\")]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", (\"ispos\", \"Vector{UInt64}\")]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"dates\", \"conversion\", \"DateTime -> Date\"]": {
+      "time_ratio": 0.84,
+      "memory_ratio": 1.0
+    },
+    "[\"dates\", \"arithmetic\", (\"DateTime\", \"Hour\")]": {
+      "time_ratio": 0.9,
+      "memory_ratio": 1.0
+    },
+    "[\"dates\", \"arithmetic\", (\"DateTime\", \"Millisecond\")]": {
+      "time_ratio": 0.9,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"construct_ssa!\"]": {
+      "time_ratio": 0.96,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"23042\", \"ComplexF32\"]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"iterators\", \"zip(1:1000, 1:1000, 1:1000, 1:1000)\"]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findprev\", (\"ispos\", \"Vector{Int64}\")]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"problem\", \"chaosgame\", \"chaosgame\"]": {
+      "time_ratio": 0.82,
+      "memory_ratio": 1.0
+    },
+    "[\"tuple\", \"reduction\", (\"minimum\", \"(4,)\")]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"23042\", \"Float64\"]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"dates\", \"arithmetic\", (\"Date\", \"Day\")]": {
+      "time_ratio": 1.11,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"foldl\", \"foldl(+, filter(...))\"]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"constructors\", (\"IJV\", 10)]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"tuple\", \"linear algebra\", (\"matmat\", \"(4, 4)\", \"(4, 4)\")]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"tuple\", \"reduction\", (\"minimum\", \"(4, 4)\")]": {
+      "time_ratio": 0.86,
+      "memory_ratio": 1.0
+    },
+    "[\"tuple\", \"reduction\", (\"sumabs\", \"(4,)\")]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"string\", \"==(::AbstractString, ::AbstractString)\", \"different\"]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"*\", \"Int8\", \"(true, true)\")]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum\", \"Int8\", 0)]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum3\", \"Bool\", 0)]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"broadcast\", \"mix_scalar_tuple\", (10, \"tup_tup\")]": {
+      "time_ratio": 1.29,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"fastmath many args\"]": {
+      "time_ratio": 0.77,
+      "memory_ratio": 1.0
+    },
+    "[\"tuple\", \"reduction\", (\"sumabs\", \"(2, 2)\")]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"allocation elision view\", \"conditional\"]": {
+      "time_ratio": 1.52,
+      "memory_ratio": 1.0
+    },
+    "[\"dates\", \"arithmetic\", (\"DateTime\", \"Second\")]": {
+      "time_ratio": 0.9,
+      "memory_ratio": 1.0
+    },
+    "[\"dates\", \"accessor\", \"millisecond\"]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"bitshift\", (\"Int\", \"Int\")]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"equality\", (\"isequal\", \"UnitRange{Int64}\")]": {
+      "time_ratio": 1.22,
+      "memory_ratio": 1.0
+    },
+    "[\"tuple\", \"linear algebra\", (\"matmat\", \"(2, 2)\", \"(2, 2)\")]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"collect\", \"filter\", \"Int64\", 0)]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"micro\", \"fib\"]": {
+      "time_ratio": 1.14,
+      "memory_ratio": 1.0
+    },
+    "[\"tuple\", \"reduction\", (\"sum\", \"(16,)\")]": {
+      "time_ratio": 0.88,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"abstract_call_gf_by_type\"]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"rand(Float64)\"]": {
+      "time_ratio": 1.02,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", (\"> q0.95\", \"Vector{Int8}\")]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"equality\", (\"==\", \"Vector{Float64}\")]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"dates\", \"conversion\", \"Date -> DateTime\"]": {
+      "time_ratio": 0.9,
+      "memory_ratio": 1.0
+    },
+    "[\"random\", \"ranges\", (\"RangeGenerator\", \"UInt128\", \"1:18446744073709551615\")]": {
+      "time_ratio": 1.32,
+      "memory_ratio": 1.0
+    },
+    "[\"tuple\", \"reduction\", (\"sum\", \"(4,)\")]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"identity\", \"ComplexF64\", 1)]": {
+      "time_ratio": 0.79,
+      "memory_ratio": 1.0
+    },
+    "[\"tuple\", \"reduction\", (\"sum\", \"(4, 4)\")]": {
+      "time_ratio": 0.72,
+      "memory_ratio": 1.0
+    },
+    "[\"tuple\", \"reduction\", (\"minimum\", \"(2,)\")]": {
+      "time_ratio": 0.88,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"constructors\", (\"IV\", 100)]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"tuple\", \"linear algebra\", (\"matvec\", \"(2, 2)\", \"(2,)\")]": {
+      "time_ratio": 0.83,
+      "memory_ratio": 1.0
+    },
+    "[\"problem\", \"simplex\", \"simplex\"]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"println(::QuoteNode)\"]": {
+      "time_ratio": 0.98,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"constructors\", (\"SymTridiagonal\", 100)]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"sin(42)\"]": {
+      "time_ratio": 0.98,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"equality\", (\"==\", \"UnitRange{Int64}\")]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"constructors\", (\"Tridiagonal\", 100)]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"string\", \"==(::SubString, ::String)\", \"different length\"]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", (\"> q0.8\", \"Vector{Int8}\")]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"abs\", \"Int64\", 1)]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"perf_sumskipmissing\", \"Union{Missing, Int64}\", 1)]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"afoldl\", \"Int\"]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", (\"> q0.8\", \"Vector{Float64}\")]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", (\"> q0.5\", \"Vector{Int8}\")]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"string\", \"readuntil\", \"target length 1\"]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"domsort_ssa!\"]": {
+      "time_ratio": 0.97,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"cat\", (\"hvcat_setind\", 5)]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"tuple\", \"linear algebra\", (\"matmat\", \"(8, 8)\", \"(8, 8)\")]": {
+      "time_ratio": 0.89,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"perf_sumskipmissing\", \"Int8\", 0)]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"broadcast\", \"mix_scalar_tuple\", (3, \"scal_tup\")]": {
+      "time_ratio": 1.19,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"abstract_call_gf_by_type\"]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"At_mul_B\", \"dense 50x5, sparse 50x500 -> dense 5x500\")]": {
+      "time_ratio": 0.64,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"*\", \"Int8\", \"(false, true)\")]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    }
+  }
+}

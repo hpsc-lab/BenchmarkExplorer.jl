@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "head_hash": "ca1ea2d",
+    "comparison": "ca1ea2d_vs_1afa368",
+    "source": "NanosoldierReports",
+    "base_hash": "1afa368",
+    "imported_at": "2026-03-10T00:40:57.393",
+    "source_type": "report_md"
+  },
+  "benchmarks": {
+    "[\"inference\", \"optimization\", \"many_method_matches\"]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"many_method_matches\"]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"domsort_ssa!\"]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"allinference\", \"sin(42)\"]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"allinference\", \"domsort_ssa!\"]": {
+      "time_ratio": 1.02,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"domsort_ssa!\"]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"allinference\", \"many_const_calls\"]": {
+      "time_ratio": 1.04,
+      "memory_ratio": 1.0
+    }
+  }
+}

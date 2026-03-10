@@ -1,0 +1,384 @@
+{
+  "metadata": {
+    "head_hash": "d25d955",
+    "comparison": "d25d955_vs_78d9dd0",
+    "source": "NanosoldierReports",
+    "base_hash": "78d9dd0",
+    "imported_at": "2026-03-10T00:40:47.325",
+    "source_type": "report_md"
+  },
+  "benchmarks": {
+    "[\"array\", \"reverse\", \"rev_load_fast!\"]": {
+      "time_ratio": 1.28,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"sum\", \"Union{Missing, Float32}\", 1)]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"perf_sumskipmissing\", \"Union{Missing, Float64}\", 1)]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"setindex!\", (\"setindex!\", 1)]": {
+      "time_ratio": 1.22,
+      "memory_ratio": 1.0
+    },
+    "[\"broadcast\", \"typeargs\", (\"tuple\", 5)]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"rand(Float64)\"]": {
+      "time_ratio": 0.99,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"At_mul_B\", \"dense 500x5, sparse 500x500 -> dense 5x500\")]": {
+      "time_ratio": 0.61,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"reductions\", (\"perf_mapreduce\", \"Int64\")]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"io\", \"serialization\", (\"serialize\", \"Matrix{Float64}\")]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"broadcast\", \"mix_scalar_tuple\", (5, \"tup_tup\")]": {
+      "time_ratio": 4.42,
+      "memory_ratio": 1.0
+    },
+    "[\"random\", \"collections\", (\"rand\", \"ImplicitRNG\", \"small Vector\")]": {
+      "time_ratio": 1.43,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"equality\", (\"isequal\", \"Vector{Int64} isequal Vector{Int64}\")]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum2\", \"Float64\", 1)]": {
+      "time_ratio": 0.76,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum\", \"Float64\", 1)]": {
+      "time_ratio": 0.82,
+      "memory_ratio": 1.0
+    },
+    "[\"io\", \"read\", \"readstring\"]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", (\"> q0.99\", \"Vector{Float32}\")]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"broadcast\", \"dotop\", (\"Float64\", \"(1000000,)\", 2)]": {
+      "time_ratio": 0.88,
+      "memory_ratio": 1.0
+    },
+    "[\"tuple\", \"linear algebra\", (\"matvec\", \"(4, 4)\", \"(4,)\")]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"broadcast\", \"mix_scalar_tuple\", (5, \"scal_tup\")]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"reverse\", \"rev_loadmul_fast!\"]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"foldl\", \"foldl(+, filter(...); init = 0.0)\"]": {
+      "time_ratio": 0.32,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"reductions\", (\"sum\", \"Float64\")]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"rand(Float64)\"]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"abs\", \"Int64\", 0)]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"identity\", \"Bool\", 1)]": {
+      "time_ratio": 0.85,
+      "memory_ratio": 1.0
+    },
+    "[\"broadcast\", \"mix_scalar_tuple\", (5, \"scal_tup_x3\")]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", (\"ispos\", \"Vector{UInt64}\")]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"tuple\", \"reduction\", (\"sumabs\", \"(8,)\")]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"string\", \"repeat\", \"repeat str len 1\"]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"linalg\", \"small exp #29116\"]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"reductions\", (\"sumabs2\", \"Float64\")]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"equality\", (\"==\", \"Vector{Int64} == UnitRange{Int64}\")]": {
+      "time_ratio": 0.9,
+      "memory_ratio": 1.0
+    },
+    "[\"random\", \"ranges\", (\"rand\", \"ImplicitRNG\", \"Int\", \"1:1000\")]": {
+      "time_ratio": 1.42,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"abs\", \"Int8\", 1)]": {
+      "time_ratio": 0.79,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"reductions\", (\"sum\", \"Int64\")]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"perf_sumskipmissing\", \"Bool\", 0)]": {
+      "time_ratio": 1.11,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum2\", \"Float32\", 1)]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"sum\", \"Union{Missing, Float64}\", 1)]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"perf_sumskipmissing\", \"Union{Missing, Bool}\", 1)]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"abs\", \"Float32\", 1)]": {
+      "time_ratio": 1.11,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"reverse\", \"rev_load_slow!\"]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"reductions\", (\"mean\", \"Float64\")]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"tuple\", \"reduction\", (\"sum\", \"(2,)\")]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"abs\", \"Float32\", 1)]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"domsort_ssa!\"]": {
+      "time_ratio": 1.02,
+      "memory_ratio": 1.0
+    },
+    "[\"tuple\", \"linear algebra\", (\"matmat\", \"(4, 4)\", \"(4, 4)\")]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_simplecopy\", \"Int8\", 1)]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"*\", \"Int8\", \"(true, true)\")]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", (\"> q0.5\", \"Vector{Float32}\")]": {
+      "time_ratio": 0.9,
+      "memory_ratio": 1.0
+    },
+    "[\"random\", \"collections\", (\"rand\", \"ImplicitRNG\", \"large Vector\")]": {
+      "time_ratio": 1.44,
+      "memory_ratio": 1.0
+    },
+    "[\"broadcast\", \"mix_scalar_tuple\", (10, \"tup_tup\")]": {
+      "time_ratio": 0.84,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"sparse matvec\", \"adjoint\"]": {
+      "time_ratio": 0.87,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"identity\", \"Bool\", 1)]": {
+      "time_ratio": 0.83,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"collect\", \"all\", \"Bool\", 1)]": {
+      "time_ratio": 0.84,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", (\"> q0.95\", \"Vector{UInt8}\")]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"reverse\", \"rev_loadmul_slow!\"]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"BitSet\", \"Int\", \"==\", \"self\")]": {
+      "time_ratio": 5.12,
+      "memory_ratio": 1.0
+    },
+    "[\"tuple\", \"reduction\", (\"sum\", \"(8, 8)\")]": {
+      "time_ratio": 1.26,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"equality\", (\"isequal\", \"UnitRange{Int64}\")]": {
+      "time_ratio": 1.22,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_countequals\", \"BigInt\")]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"BitSet\", \"Int\", \"⊆\", \"Set\")]": {
+      "time_ratio": 2.1,
+      "memory_ratio": 1.0
+    },
+    "[\"tuple\", \"reduction\", (\"sum\", \"(16,)\")]": {
+      "time_ratio": 1.14,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"sparse matvec\", \"non-adjoint\"]": {
+      "time_ratio": 0.86,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", (\"> q0.5\", \"Vector{Float64}\")]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"reductions\", (\"sumabs\", \"Float64\")]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"dates\", \"query\", (\"firstdayofmonth\", \"DateTime\")]": {
+      "time_ratio": 1.58,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", (\"ispos\", \"Vector{Bool}\")]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"bitshift\", (\"UInt\", \"UInt\")]": {
+      "time_ratio": 0.85,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"BitSet\", \"Int\", \"⊆\", \"Vector\")]": {
+      "time_ratio": 2.0,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"CartesianPartition\", \"conditional_loop!\", \"Int32\", 2, 31)]": {
+      "time_ratio": 1.25,
+      "memory_ratio": 1.0
+    },
+    "[\"problem\", \"simplex\", \"simplex\"]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"println(::QuoteNode)\"]": {
+      "time_ratio": 0.99,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"constructors\", (\"SymTridiagonal\", 100)]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"sum\", \"Bool\", 0)]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"equality\", (\"==\", \"UnitRange{Int64}\")]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"dates\", \"parse\", (\"DateTime\", \"ISODateTimeFormat\")]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"collect\", \"Union{Nothing, BigFloat}\", 0)]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"abs\", \"Int64\", 1)]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findnext\", (\"ispos\", \"Vector{Int64}\")]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"queries & updates\", (\"BitSet\", \"Int\", \"length\")]": {
+      "time_ratio": 2.68,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", (\"> q0.5\", \"Vector{Int8}\")]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"domsort_ssa!\"]": {
+      "time_ratio": 1.0,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"perf_sumskipmissing\", \"Union{Missing, ComplexF64}\", 1)]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", (\"Vector{Bool}\", \"10-90\")]": {
+      "time_ratio": 1.11,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumlinear_view\", \"1:100000\")]": {
+      "time_ratio": 0.47,
+      "memory_ratio": 1.0
+    },
+    "[\"broadcast\", \"mix_scalar_tuple\", (3, \"scal_tup\")]": {
+      "time_ratio": 0.84,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findnext\", (\"ispos\", \"Vector{Int8}\")]": {
+      "time_ratio": 1.15,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"collect\", \"Union{Nothing, BigInt}\", 0)]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"perf_sumskipmissing\", \"Int8\", 0)]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"At_mul_B\", \"dense 50x5, sparse 50x500 -> dense 5x500\")]": {
+      "time_ratio": 0.6,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"abs\", \"Bool\", 1)]": {
+      "time_ratio": 1.21,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"*\", \"Int8\", \"(false, true)\")]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_simplecopy\", \"Bool\", 1)]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    }
+  }
+}

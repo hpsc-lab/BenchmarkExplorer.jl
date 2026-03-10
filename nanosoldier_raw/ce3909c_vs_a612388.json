@@ -1,0 +1,208 @@
+{
+  "metadata": {
+    "head_hash": "ce3909c",
+    "comparison": "ce3909c_vs_a612388",
+    "source": "NanosoldierReports",
+    "base_hash": "a612388",
+    "imported_at": "2026-03-10T00:40:52.680",
+    "source_type": "report_md"
+  },
+  "benchmarks": {
+    "[\"array\", \"reverse\", \"rev_load_fast!\"]": {
+      "time_ratio": 0.9,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"keys\", \"Union{Missing, BigFloat}\", 1)]": {
+      "time_ratio": 1.11,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"growth\", (\"push_single!\", 8)]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"reductions\", (\"perf_mapreduce\", \"Int64\")]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"sum\", \"Union{Missing, Bool}\", 1)]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum4\", \"Int8\", 0)]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", \"3d\"]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"equality\", (\"isequal\", \"Vector{Int64} isequal Vector{Int64}\")]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"cat\", (\"catnd\", 5)]": {
+      "time_ratio": 1.12,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"eachindex\", \"Union{Missing, BigFloat}\", 1)]": {
+      "time_ratio": 1.2,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"sort\", \"Union{Missing, Bool}\", 1)]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_binaryop\", \"*\", \"Bool\", \"(false, true)\")]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"many_method_matches\"]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", \"4d\"]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"many_method_matches\"]": {
+      "time_ratio": 1.01,
+      "memory_ratio": 1.0
+    },
+    "[\"linalg\", \"small exp #29116\"]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"reductions\", (\"sumabs2\", \"Float64\")]": {
+      "time_ratio": 0.9,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"comprehension\", (\"comprehension_collect\", \"Vector{Float64}\")]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"growth\", (\"push_single!\", 256)]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"broadcast\", \"dotop\", (\"Float64\", \"(1000, 1000)\", 2)]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"reverse\", \"rev_load_slow!\"]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"perf_sumskipmissing\", \"Union{Nothing, ComplexF64}\", 0)]": {
+      "time_ratio": 0.9,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"Base.init_stdio(::Ptr{Cvoid})\"]": {
+      "time_ratio": 1.0,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"allinference\", \"REPL.REPLCompletions.completions\"]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"constructors\", (\"Bidiagonal\", 10)]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"many_local_vars\"]": {
+      "time_ratio": 0.99,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"many_invoke_calls\"]": {
+      "time_ratio": 1.01,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"collect\", \"filter\", \"Int64\", 0)]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"cat\", (\"catnd_setind\", 5)]": {
+      "time_ratio": 1.5,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"rand(Float64)\"]": {
+      "time_ratio": 1.0,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"many_opaque_closures\"]": {
+      "time_ratio": 1.0,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"abs\", \"BigFloat\", 1)]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"growth\", (\"push_single!\", 2048)]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"broadcast\", \"typeargs\", (\"array\", 10)]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"many_invoke_calls\"]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"CartesianPartition\", \"axpy!\", \"Int32\", 3, 31)]": {
+      "time_ratio": 1.2,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"println(::QuoteNode)\"]": {
+      "time_ratio": 1.0,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"sin(42)\"]": {
+      "time_ratio": 0.98,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"equality\", (\"==\", \"UnitRange{Int64}\")]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"allinference\", \"many_local_vars\"]": {
+      "time_ratio": 0.98,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"constructors\", (\"Tridiagonal\", 100)]": {
+      "time_ratio": 0.83,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"broadcasting\"]": {
+      "time_ratio": 0.99,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"transpose\", (\"transpose\", \"(20000, 10000)\")]": {
+      "time_ratio": 1.94,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"REPL.REPLCompletions.completions\"]": {
+      "time_ratio": 1.0,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"many_const_calls\"]": {
+      "time_ratio": 0.98,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"reductions\", (\"perf_reduce\", \"Int64\")]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"allinference\", \"many_const_calls\"]": {
+      "time_ratio": 0.99,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"perf_sumskipmissing\", \"Union{Missing, ComplexF64}\", 1)]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"abs\", \"Bool\", 1)]": {
+      "time_ratio": 1.12,
+      "memory_ratio": 1.0
+    }
+  }
+}

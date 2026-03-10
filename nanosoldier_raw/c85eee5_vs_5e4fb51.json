@@ -1,0 +1,24 @@
+{
+  "metadata": {
+    "head_hash": "c85eee5",
+    "comparison": "c85eee5_vs_5e4fb51",
+    "source": "NanosoldierReports",
+    "base_hash": "5e4fb51",
+    "imported_at": "2026-03-10T00:40:58.856",
+    "source_type": "report_md"
+  },
+  "benchmarks": {
+    "[\"linalg\", \"arithmetic\", (\"+\", \"Matrix\", \"Matrix\", 256)]": {
+      "time_ratio": 3.25,
+      "memory_ratio": 1.0
+    },
+    "[\"linalg\", \"arithmetic\", (\"*\", \"typename(Bidiagonal)\", \"Vector\", 256)]": {
+      "time_ratio": 1.59,
+      "memory_ratio": 1.0
+    },
+    "[\"linalg\", \"arithmetic\", (\"*\", \"typename(Diagonal)\", \"typename(Diagonal)\", 1024)]": {
+      "time_ratio": 2.14,
+      "memory_ratio": 1.0
+    }
+  }
+}

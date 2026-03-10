@@ -1,0 +1,60 @@
+{
+  "metadata": {
+    "head_hash": "c33300d",
+    "comparison": "c33300d_vs_8ccf2d6",
+    "source": "NanosoldierReports",
+    "base_hash": "8ccf2d6",
+    "imported_at": "2026-03-10T00:41:05.062",
+    "source_type": "report_md"
+  },
+  "benchmarks": {
+    "[\"inference\", \"allinference\", \"abstract_call_gf_by_type\"]": {
+      "time_ratio": 0.97,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"domsort_ssa!\"]": {
+      "time_ratio": 1.02,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"REPL.REPLCompletions.completions\"]": {
+      "time_ratio": 0.89,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"construct_ssa!\"]": {
+      "time_ratio": 0.98,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"Base.init_stdio(::Ptr{Cvoid})\"]": {
+      "time_ratio": 0.97,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"sin(42)\"]": {
+      "time_ratio": 0.99,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"abstract_call_gf_by_type\"]": {
+      "time_ratio": 1.02,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"domsort_ssa!\"]": {
+      "time_ratio": 0.78,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"allinference\", \"construct_ssa!\"]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"construct_ssa!\"]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"abstract_call_gf_by_type\"]": {
+      "time_ratio": 0.98,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"allinference\", \"domsort_ssa!\"]": {
+      "time_ratio": 0.76,
+      "memory_ratio": 1.0
+    }
+  }
+}

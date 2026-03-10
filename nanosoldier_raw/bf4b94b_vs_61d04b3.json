@@ -1,0 +1,44 @@
+{
+  "metadata": {
+    "head_hash": "bf4b94b",
+    "comparison": "bf4b94b_vs_61d04b3",
+    "source": "NanosoldierReports",
+    "base_hash": "61d04b3",
+    "imported_at": "2026-03-10T00:41:10.233",
+    "source_type": "report_md"
+  },
+  "benchmarks": {
+    "[\"inference\", \"abstract interpretation\", \"Base.init_stdio(::Ptr{Cvoid})\"]": {
+      "time_ratio": 1.03,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"rand(Float64)\"]": {
+      "time_ratio": 0.97,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"REPL.REPLCompletions.completions\"]": {
+      "time_ratio": 1.01,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"allinference\", \"Base.init_stdio(::Ptr{Cvoid})\"]": {
+      "time_ratio": 1.02,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"allinference\", \"many_local_vars\"]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"println(::QuoteNode)\"]": {
+      "time_ratio": 1.0,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"many_global_refs\"]": {
+      "time_ratio": 1.02,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"many_local_vars\"]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    }
+  }
+}

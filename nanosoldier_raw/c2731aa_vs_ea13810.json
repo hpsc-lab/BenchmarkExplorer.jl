@@ -1,0 +1,28 @@
+{
+  "metadata": {
+    "head_hash": "c2731aa",
+    "comparison": "c2731aa_vs_ea13810",
+    "source": "NanosoldierReports",
+    "base_hash": "ea13810",
+    "imported_at": "2026-03-10T00:41:05.917",
+    "source_type": "report_md"
+  },
+  "benchmarks": {
+    "[\"inference\", \"abstract interpretation\", \"many_invoke_calls\"]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"println(::QuoteNode)\"]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"sin(42)\"]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"REPL.REPLCompletions.completions\"]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    }
+  }
+}

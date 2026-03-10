@@ -1,0 +1,228 @@
+{
+  "metadata": {
+    "head_hash": "c0c82a7",
+    "comparison": "c0c82a7_vs_b63ae3b",
+    "source": "NanosoldierReports",
+    "base_hash": "b63ae3b",
+    "imported_at": "2026-03-10T00:41:08.022",
+    "source_type": "report_md"
+  },
+  "benchmarks": {
+    "[\"union\", \"array\", (\"skipmissing\", \"sum\", \"Union{Missing, Float32}\", 1)]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"perf_sumskipmissing\", \"Union{Missing, Float64}\", 1)]": {
+      "time_ratio": 0.81,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"keys\", \"Union{Missing, BigFloat}\", 1)]": {
+      "time_ratio": 1.14,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"filter\", \"Union{Missing, BigInt}\", 1)]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"sum\", \"Union{Missing, Bool}\", 1)]": {
+      "time_ratio": 0.81,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"sum\", \"Union{Missing, ComplexF64}\", 1)]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum3\", \"Float32\", 1)]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"perf_sumskipmissing\", \"Union{Nothing, Int8}\", 0)]": {
+      "time_ratio": 1.27,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum2\", \"Float64\", 1)]": {
+      "time_ratio": 1.26,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"keys\", \"Union{Missing, BigInt}\", 1)]": {
+      "time_ratio": 1.13,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"keys\", \"Union{Nothing, BigInt}\", 0)]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"eachindex\", \"Union{Missing, BigFloat}\", 1)]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"abs\", \"Int8\", 1)]": {
+      "time_ratio": 1.23,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"perf_sumskipmissing\", \"Union{Nothing, Int64}\", 0)]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"identity\", \"Bool\", 1)]": {
+      "time_ratio": 0.85,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"keys\", \"Union{Nothing, BigFloat}\", 0)]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"collect\", \"Union{Missing, ComplexF64}\", 1)]": {
+      "time_ratio": 1.11,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"abs\", \"BigFloat\", 0)]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"identity\", \"Int8\", 1)]": {
+      "time_ratio": 1.12,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"eachindex\", \"Union{Nothing, BigFloat}\", 0)]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"collect\", \"Union{Missing, Int64}\", 1)]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"sum\", \"Int8\", 0)]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"sum\", \"Union{Missing, Float64}\", 1)]": {
+      "time_ratio": 0.88,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"collect\", \"Union{Missing, Bool}\", 1)]": {
+      "time_ratio": 1.11,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"perf_sumskipmissing\", \"Union{Missing, Bool}\", 1)]": {
+      "time_ratio": 0.82,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"collect\", \"all\", \"Int8\", 1)]": {
+      "time_ratio": 1.13,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"abs\", \"Float32\", 1)]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum3\", \"Bool\", 0)]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"collect\", \"Union{Missing, Float64}\", 1)]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_simplecopy\", \"Int8\", 1)]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"collect\", \"Union{Missing, BigFloat}\", 1)]": {
+      "time_ratio": 1.18,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"perf_sumskipmissing\", \"Union{Nothing, Bool}\", 0)]": {
+      "time_ratio": 1.13,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"collect\", \"all\", \"Bool\", 1)]": {
+      "time_ratio": 0.85,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"keys\", \"Union{Missing, Float64}\", 1)]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"collect\", \"Union{Missing, Float32}\", 1)]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"keys\", \"Union{Missing, Float32}\", 1)]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"*\", \"Bool\", \"(false, false)\")]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum\", \"Float32\", 1)]": {
+      "time_ratio": 0.83,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"eachindex\", \"Union{Nothing, BigInt}\", 0)]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"sum\", \"Union{Missing, Int8}\", 1)]": {
+      "time_ratio": 3.73,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"perf_sumskipmissing\", \"Union{Missing, Int8}\", 1)]": {
+      "time_ratio": 0.78,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"identity\", \"BigFloat\", 1)]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"collect\", \"Union{Missing, Int8}\", 1)]": {
+      "time_ratio": 1.11,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"collect\", \"Union{Missing, BigInt}\", 1)]": {
+      "time_ratio": 1.14,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"perf_sumskipmissing\", \"Union{Missing, Int64}\", 1)]": {
+      "time_ratio": 0.83,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_countequals\", \"Int8\")]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"perf_sumskipmissing\", \"Union{Missing, Float32}\", 1)]": {
+      "time_ratio": 0.85,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"sum\", \"Union{Missing, Int64}\", 1)]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"eachindex\", \"Union{Missing, BigInt}\", 1)]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"perf_sumskipmissing\", \"Union{Missing, ComplexF64}\", 1)]": {
+      "time_ratio": 0.84,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"eachindex\", \"Union{Missing, Bool}\", 1)]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"keys\", \"Union{Missing, Int64}\", 1)]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"abs\", \"Bool\", 1)]": {
+      "time_ratio": 0.83,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_simplecopy\", \"Bool\", 1)]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    }
+  }
+}
