@@ -150,6 +150,7 @@
         body.dark-mode .group-count { color: #e9e9e7; }
         body.dark-mode .group-updated { border-top-color: #333; }
         body.dark-mode footer a { color: #666; }
+        body.dark-mode #search { background: #252525; color: #e9e9e7; border-color: #555; }
 
         @media (max-width: 600px) {
             .container { padding: 32px 16px; }
@@ -164,28 +165,29 @@
     <div class="container">
         <h1>Benchmark Dashboard</h1>
         <div class="meta">
-            <span>2026-03-10 03:07:42 MarchTC</span>
-            <span>commit: <a href="https://github.com/hpsc-lab/BenchmarkExplorer.jl/commit/f81a51d8cc697598cc00b5e770c0f7d95f96d036" target="_blank">f81a51d</a></span>
+            <span>2026-03-10 23:23:43 MarchTC</span>
+            <span>commit: <a href="https://github.com/hpsc-lab/BenchmarkExplorer.jl/commit/f1041190009fc20227a5b3648181993ad8122499" target="_blank">f104119</a></span>
             <span><a href="https://github.com/hpsc-lab/BenchmarkExplorer.jl" target="_blank">GitHub</a></span>
         </div>
 
-        <div class="groups-grid">
+        <input type="text" id="search" placeholder="Search groups..." style="display:block;width:100%;max-width:400px;margin:0 auto 24px;padding:10px 16px;border:2px solid #191919;border-radius:8px;font-family:inherit;font-size:0.85em;background:#fff;color:#191919;outline:none;box-sizing:border-box;">
+        <div class="groups-grid" id="groups-grid">
                 <a href="enzyme.html" class="group-card">
                     <div class="group-name">enzyme</div>
                     <div class="group-count">7</div>
-                    <div class="group-runs">62 runs</div>
-                    <div class="group-updated">2026-03-10</div>
+                    <div class="group-runs">61 runs</div>
+                    <div class="group-updated">2026-03-07</div>
                 </a>
                 <a href="nanosoldier.html" class="group-card">
                     <div class="group-name">nanosoldier</div>
-                    <div class="group-count">3469</div>
-                    <div class="group-runs">140 runs</div>
-                    <div class="group-updated">2026-03-10</div>
+                    <div class="group-count">1019</div>
+                    <div class="group-runs">29 runs</div>
+                    <div class="group-updated">2026-03-07</div>
                 </a>
                 <a href="trixi.html" class="group-card">
                     <div class="group-name">trixi</div>
                     <div class="group-count">24</div>
-                    <div class="group-runs">65 runs</div>
+                    <div class="group-runs">64 runs</div>
                     <div class="group-updated">2026-03-10</div>
                 </a>
         </div>
@@ -206,6 +208,13 @@
             const on = !document.body.classList.contains('dark-mode');
             applyDark(on);
             localStorage.setItem('darkMode', on);
+        });
+        const searchEl = document.getElementById('search');
+        searchEl.addEventListener('input', function() {
+            const q = this.value.toLowerCase();
+            document.querySelectorAll('.group-card').forEach(card => {
+                card.style.display = card.querySelector('.group-name').textContent.toLowerCase().includes(q) ? '' : 'none';
+            });
         });
     </script>
 </body>
