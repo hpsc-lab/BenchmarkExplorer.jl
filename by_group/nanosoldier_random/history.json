@@ -1,6 +1,6 @@
 {
   "random/ranges/(RangeGenerator/UInt128/1:4294967297)": {
-    "39": {
+    "111": {
       "time_ratio": 1.29,
       "min_time_ns": 1.2255e8,
       "mean_time_ns": 1.29e8,
@@ -16,7 +16,39 @@
       "timestamp": "2026-03-10T00:41:10.019",
       "memory_bytes": 0
     },
-    "40": {
+    "38": {
+      "time_ratio": 1.81,
+      "min_time_ns": 1.7195e8,
+      "mean_time_ns": 1.81e8,
+      "std_time_ns": 0.0,
+      "base_hash": "9294132",
+      "median_time_ns": 1.81e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.9005e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b00614a",
+      "timestamp": "2026-03-10T23:30:19.395",
+      "memory_bytes": 0
+    },
+    "99": {
+      "time_ratio": 1.29,
+      "min_time_ns": 1.2255e8,
+      "mean_time_ns": 1.29e8,
+      "std_time_ns": 0.0,
+      "base_hash": "594d001",
+      "median_time_ns": 1.29e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.3545e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "bbdee0b",
+      "timestamp": "2026-03-10T23:29:57.600",
+      "memory_bytes": 0
+    },
+    "112": {
       "time_ratio": 1.29,
       "min_time_ns": 1.2255e8,
       "mean_time_ns": 1.29e8,
@@ -34,7 +66,7 @@
     }
   },
   "random/types/(\\rand!\\/\\MersenneTwister\\/\\ComplexF32\\)": {
-    "121": {
+    "193": {
       "time_ratio": 0.69,
       "min_time_ns": 6.555e7,
       "mean_time_ns": 6.9e7,
@@ -52,7 +84,7 @@
     }
   },
   "random/collections/(rand/ImplicitRNG/a:z)": {
-    "105": {
+    "177": {
       "time_ratio": 2.17,
       "min_time_ns": 2.0615e8,
       "mean_time_ns": 2.17e8,
@@ -67,10 +99,42 @@
       "commit_hash": "cd2ebfc",
       "timestamp": "2026-03-10T00:40:54.113",
       "memory_bytes": 0
+    },
+    "79": {
+      "time_ratio": 0.46,
+      "min_time_ns": 4.37e7,
+      "mean_time_ns": 4.6e7,
+      "std_time_ns": 0.0,
+      "base_hash": "61c6f33",
+      "median_time_ns": 4.6e7,
+      "source_type": "report_md",
+      "max_time_ns": 4.83e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b6bca19",
+      "timestamp": "2026-03-10T23:30:05.064",
+      "memory_bytes": 0
     }
   },
   "random/ranges/(RangeGenerator/UInt64/1:1)": {
-    "113": {
+    "99": {
+      "time_ratio": 1.63,
+      "min_time_ns": 1.5485e8,
+      "mean_time_ns": 1.63e8,
+      "std_time_ns": 0.0,
+      "base_hash": "594d001",
+      "median_time_ns": 1.63e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.7115e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "bbdee0b",
+      "timestamp": "2026-03-10T23:29:57.600",
+      "memory_bytes": 0
+    },
+    "185": {
       "time_ratio": 0.73,
       "min_time_ns": 6.935e7,
       "mean_time_ns": 7.3e7,
@@ -88,7 +152,7 @@
     }
   },
   "random/collections/(rand/ImplicitRNG/small BitSet)": {
-    "105": {
+    "177": {
       "time_ratio": 1.27,
       "min_time_ns": 1.2065e8,
       "mean_time_ns": 1.27e8,
@@ -106,7 +170,7 @@
     }
   },
   "random/collections/(rand!/ImplicitRNG/small Dict)": {
-    "105": {
+    "177": {
       "time_ratio": 1.56,
       "min_time_ns": 1.482e8,
       "mean_time_ns": 1.56e8,
@@ -121,10 +185,42 @@
       "commit_hash": "cd2ebfc",
       "timestamp": "2026-03-10T00:40:54.113",
       "memory_bytes": 0
+    },
+    "79": {
+      "time_ratio": 0.61,
+      "min_time_ns": 5.795e7,
+      "mean_time_ns": 6.1e7,
+      "std_time_ns": 0.0,
+      "base_hash": "61c6f33",
+      "median_time_ns": 6.1e7,
+      "source_type": "report_md",
+      "max_time_ns": 6.405e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b6bca19",
+      "timestamp": "2026-03-10T23:30:05.064",
+      "memory_bytes": 0
     }
   },
   "random/types/(rand/MersenneTwister/Int16)": {
-    "67": {
+    "72": {
+      "time_ratio": 1.33,
+      "min_time_ns": 1.2635e8,
+      "mean_time_ns": 1.33e8,
+      "std_time_ns": 0.0,
+      "base_hash": "2cf1f34",
+      "median_time_ns": 1.33e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.3965e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b4c79e7",
+      "timestamp": "2026-03-10T23:30:07.325",
+      "memory_bytes": 0
+    },
+    "139": {
       "time_ratio": 1.27,
       "min_time_ns": 1.2065e8,
       "mean_time_ns": 1.27e8,
@@ -139,10 +235,26 @@
       "commit_hash": "c4fe739",
       "timestamp": "2026-03-10T00:41:03.344",
       "memory_bytes": 0
+    },
+    "84": {
+      "time_ratio": 1.27,
+      "min_time_ns": 1.2065e8,
+      "mean_time_ns": 1.27e8,
+      "std_time_ns": 0.0,
+      "base_hash": "7dc132c",
+      "median_time_ns": 1.27e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.3335e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b7ff634",
+      "timestamp": "2026-03-10T23:30:03.073",
+      "memory_bytes": 0
     }
   },
   "random/types/(rand!/MersenneTwister/Complex{UInt8})": {
-    "125": {
+    "197": {
       "time_ratio": 1.33,
       "min_time_ns": 1.2635e8,
       "mean_time_ns": 1.33e8,
@@ -160,7 +272,7 @@
     }
   },
   "random/types/(randexp/ImplicitRNG/ImplicitFloat64)": {
-    "134": {
+    "206": {
       "time_ratio": 1.31,
       "min_time_ns": 1.2445e8,
       "mean_time_ns": 1.31e8,
@@ -178,7 +290,23 @@
     }
   },
   "random/ranges/(RangeGenerator/UInt64/1:4294967297)": {
-    "113": {
+    "99": {
+      "time_ratio": 1.63,
+      "min_time_ns": 1.5485e8,
+      "mean_time_ns": 1.63e8,
+      "std_time_ns": 0.0,
+      "base_hash": "594d001",
+      "median_time_ns": 1.63e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.7115e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "bbdee0b",
+      "timestamp": "2026-03-10T23:29:57.600",
+      "memory_bytes": 0
+    },
+    "185": {
       "time_ratio": 0.72,
       "min_time_ns": 6.84e7,
       "mean_time_ns": 7.2e7,
@@ -196,7 +324,7 @@
     }
   },
   "random/ranges/(\\rand\\/\\MersenneTwister\\/\\Int128\\/\\RangeGenerator(1:4294967297)\\)": {
-    "34": {
+    "106": {
       "time_ratio": 1.3,
       "min_time_ns": 1.235e8,
       "mean_time_ns": 1.3e8,
@@ -214,7 +342,7 @@
     }
   },
   "random/ranges/(rand/MersenneTwister/Int128/RangeGenerator(1:4294967295))": {
-    "130": {
+    "202": {
       "time_ratio": 0.6,
       "min_time_ns": 5.7e7,
       "mean_time_ns": 6.0e7,
@@ -231,8 +359,26 @@
       "memory_bytes": 0
     }
   },
+  "random/ranges/(RangeGenerator/Int128/1:1)": {
+    "48": {
+      "time_ratio": 0.71,
+      "min_time_ns": 6.745e7,
+      "mean_time_ns": 7.1e7,
+      "std_time_ns": 0.0,
+      "base_hash": "aa17702",
+      "median_time_ns": 7.1e7,
+      "source_type": "report_md",
+      "max_time_ns": 7.455e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b16a231",
+      "timestamp": "2026-03-10T23:30:16.214",
+      "memory_bytes": 0
+    }
+  },
   "random/types/(rand/MersenneTwister/Float64)": {
-    "70": {
+    "142": {
       "time_ratio": 1.32,
       "min_time_ns": 1.254e8,
       "mean_time_ns": 1.32e8,
@@ -250,7 +396,23 @@
     }
   },
   "random/types/(rand/MersenneTwister/Complex{UInt128})": {
-    "125": {
+    "198": {
+      "time_ratio": 1.82,
+      "min_time_ns": 1.729e8,
+      "mean_time_ns": 1.82e8,
+      "std_time_ns": 0.0,
+      "base_hash": "aafae8a",
+      "median_time_ns": 1.82e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.911e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "d192ec8",
+      "timestamp": "2026-03-10T00:40:49.835",
+      "memory_bytes": 0
+    },
+    "197": {
       "time_ratio": 1.74,
       "min_time_ns": 1.653e8,
       "mean_time_ns": 1.74e8,
@@ -266,25 +428,25 @@
       "timestamp": "2026-03-10T00:40:50.051",
       "memory_bytes": 0
     },
-    "126": {
-      "time_ratio": 1.82,
-      "min_time_ns": 1.729e8,
-      "mean_time_ns": 1.82e8,
+    "67": {
+      "time_ratio": 0.54,
+      "min_time_ns": 5.13e7,
+      "mean_time_ns": 5.4e7,
       "std_time_ns": 0.0,
-      "base_hash": "aafae8a",
-      "median_time_ns": 1.82e8,
+      "base_hash": "907264b",
+      "median_time_ns": 5.4e7,
       "source_type": "report_md",
-      "max_time_ns": 1.911e8,
+      "max_time_ns": 5.67e7,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "d192ec8",
-      "timestamp": "2026-03-10T00:40:49.835",
+      "commit_hash": "b46df09",
+      "timestamp": "2026-03-10T23:30:08.960",
       "memory_bytes": 0
     }
   },
   "random/collections/(rand/ImplicitRNG/large Set)": {
-    "105": {
+    "177": {
       "time_ratio": 1.37,
       "min_time_ns": 1.3015e8,
       "mean_time_ns": 1.37e8,
@@ -299,10 +461,42 @@
       "commit_hash": "cd2ebfc",
       "timestamp": "2026-03-10T00:40:54.113",
       "memory_bytes": 0
+    },
+    "79": {
+      "time_ratio": 0.68,
+      "min_time_ns": 6.46e7,
+      "mean_time_ns": 6.8e7,
+      "std_time_ns": 0.0,
+      "base_hash": "61c6f33",
+      "median_time_ns": 6.8e7,
+      "source_type": "report_md",
+      "max_time_ns": 7.14e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b6bca19",
+      "timestamp": "2026-03-10T23:30:05.064",
+      "memory_bytes": 0
     }
   },
   "random/collections/(rand!/RandomDevice/large String)": {
-    "125": {
+    "46": {
+      "time_ratio": 1.0,
+      "min_time_ns": 9.5e7,
+      "mean_time_ns": 1.0e8,
+      "std_time_ns": 0.0,
+      "base_hash": "20a5fa7",
+      "median_time_ns": 1.0e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.05e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b146a70",
+      "timestamp": "2026-03-10T23:30:16.871",
+      "memory_bytes": 0
+    },
+    "197": {
       "time_ratio": 1.03,
       "min_time_ns": 9.785e7,
       "mean_time_ns": 1.03e8,
@@ -320,7 +514,23 @@
     }
   },
   "random/ranges/(RangeGenerator/Int64/1:4294967295)": {
-    "113": {
+    "99": {
+      "time_ratio": 1.63,
+      "min_time_ns": 1.5485e8,
+      "mean_time_ns": 1.63e8,
+      "std_time_ns": 0.0,
+      "base_hash": "594d001",
+      "median_time_ns": 1.63e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.7115e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "bbdee0b",
+      "timestamp": "2026-03-10T23:29:57.600",
+      "memory_bytes": 0
+    },
+    "185": {
       "time_ratio": 0.72,
       "min_time_ns": 6.84e7,
       "mean_time_ns": 7.2e7,
@@ -338,7 +548,7 @@
     }
   },
   "random/types/(rand/MersenneTwister/ComplexF64)": {
-    "125": {
+    "197": {
       "time_ratio": 1.32,
       "min_time_ns": 1.254e8,
       "mean_time_ns": 1.32e8,
@@ -356,7 +566,7 @@
     }
   },
   "random/ranges/(\\rand\\/\\MersenneTwister\\/\\Bool\\/\\RangeGenerator(true:true)\\)": {
-    "34": {
+    "106": {
       "time_ratio": 1.29,
       "min_time_ns": 1.2255e8,
       "mean_time_ns": 1.29e8,
@@ -374,23 +584,7 @@
     }
   },
   "random/collections/(rand!/ImplicitRNG/small BitSet)": {
-    "125": {
-      "time_ratio": 1.49,
-      "min_time_ns": 1.4155e8,
-      "mean_time_ns": 1.49e8,
-      "std_time_ns": 0.0,
-      "base_hash": "0a82b71",
-      "median_time_ns": 1.49e8,
-      "source_type": "report_md",
-      "max_time_ns": 1.5645e8,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "d13bdc0",
-      "timestamp": "2026-03-10T00:40:50.051",
-      "memory_bytes": 0
-    },
-    "105": {
+    "177": {
       "time_ratio": 1.92,
       "min_time_ns": 1.824e8,
       "mean_time_ns": 1.92e8,
@@ -405,10 +599,42 @@
       "commit_hash": "cd2ebfc",
       "timestamp": "2026-03-10T00:40:54.113",
       "memory_bytes": 0
+    },
+    "79": {
+      "time_ratio": 0.52,
+      "min_time_ns": 4.94e7,
+      "mean_time_ns": 5.2e7,
+      "std_time_ns": 0.0,
+      "base_hash": "61c6f33",
+      "median_time_ns": 5.2e7,
+      "source_type": "report_md",
+      "max_time_ns": 5.46e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b6bca19",
+      "timestamp": "2026-03-10T23:30:05.064",
+      "memory_bytes": 0
+    },
+    "197": {
+      "time_ratio": 1.49,
+      "min_time_ns": 1.4155e8,
+      "mean_time_ns": 1.49e8,
+      "std_time_ns": 0.0,
+      "base_hash": "0a82b71",
+      "median_time_ns": 1.49e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.5645e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "d13bdc0",
+      "timestamp": "2026-03-10T00:40:50.051",
+      "memory_bytes": 0
     }
   },
   "random/types/(randn/RandomDevice/Float64)": {
-    "67": {
+    "139": {
       "time_ratio": 1.25,
       "min_time_ns": 1.1875e8,
       "mean_time_ns": 1.25e8,
@@ -426,23 +652,7 @@
     }
   },
   "random/collections/(rand!/ImplicitRNG/small Vector)": {
-    "52": {
-      "time_ratio": 1.63,
-      "min_time_ns": 1.5485e8,
-      "mean_time_ns": 1.63e8,
-      "std_time_ns": 0.0,
-      "base_hash": "1b600f0",
-      "median_time_ns": 1.63e8,
-      "source_type": "report_md",
-      "max_time_ns": 1.7115e8,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "c1a287e",
-      "timestamp": "2026-03-10T00:41:06.619",
-      "memory_bytes": 0
-    },
-    "105": {
+    "177": {
       "time_ratio": 2.32,
       "min_time_ns": 2.2039999999999997e8,
       "mean_time_ns": 2.3199999999999997e8,
@@ -457,10 +667,42 @@
       "commit_hash": "cd2ebfc",
       "timestamp": "2026-03-10T00:40:54.113",
       "memory_bytes": 0
+    },
+    "79": {
+      "time_ratio": 0.43,
+      "min_time_ns": 4.085e7,
+      "mean_time_ns": 4.3e7,
+      "std_time_ns": 0.0,
+      "base_hash": "61c6f33",
+      "median_time_ns": 4.3e7,
+      "source_type": "report_md",
+      "max_time_ns": 4.515e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b6bca19",
+      "timestamp": "2026-03-10T23:30:05.064",
+      "memory_bytes": 0
+    },
+    "124": {
+      "time_ratio": 1.63,
+      "min_time_ns": 1.5485e8,
+      "mean_time_ns": 1.63e8,
+      "std_time_ns": 0.0,
+      "base_hash": "1b600f0",
+      "median_time_ns": 1.63e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.7115e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "c1a287e",
+      "timestamp": "2026-03-10T00:41:06.619",
+      "memory_bytes": 0
     }
   },
   "random/types/(randn/MersenneTwister/Float32)": {
-    "125": {
+    "197": {
       "time_ratio": 1.38,
       "min_time_ns": 1.311e8,
       "mean_time_ns": 1.38e8,
@@ -478,7 +720,23 @@
     }
   },
   "random/ranges/(rand/ImplicitRNG/Int/1:1000)": {
-    "133": {
+    "177": {
+      "time_ratio": 2.57,
+      "min_time_ns": 2.4414999999999997e8,
+      "mean_time_ns": 2.5699999999999997e8,
+      "std_time_ns": 0.0,
+      "base_hash": "1b600f0",
+      "median_time_ns": 2.5699999999999997e8,
+      "source_type": "report_md",
+      "max_time_ns": 2.6985e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "cd2ebfc",
+      "timestamp": "2026-03-10T00:40:54.113",
+      "memory_bytes": 0
+    },
+    "205": {
       "time_ratio": 1.42,
       "min_time_ns": 1.349e8,
       "mean_time_ns": 1.42e8,
@@ -494,7 +752,23 @@
       "timestamp": "2026-03-10T00:40:47.325",
       "memory_bytes": 0
     },
-    "63": {
+    "79": {
+      "time_ratio": 0.47,
+      "min_time_ns": 4.465e7,
+      "mean_time_ns": 4.7e7,
+      "std_time_ns": 0.0,
+      "base_hash": "61c6f33",
+      "median_time_ns": 4.7e7,
+      "source_type": "report_md",
+      "max_time_ns": 4.935e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b6bca19",
+      "timestamp": "2026-03-10T23:30:05.064",
+      "memory_bytes": 0
+    },
+    "135": {
       "time_ratio": 0.75,
       "min_time_ns": 7.125e7,
       "mean_time_ns": 7.5e7,
@@ -509,26 +783,42 @@
       "commit_hash": "c4a5dd9",
       "timestamp": "2026-03-10T00:41:04.168",
       "memory_bytes": 0
-    },
-    "105": {
-      "time_ratio": 2.57,
-      "min_time_ns": 2.4414999999999997e8,
-      "mean_time_ns": 2.5699999999999997e8,
+    }
+  },
+  "random/collections/(rand!/ImplicitRNG/large Vector)": {
+    "177": {
+      "time_ratio": 2.31,
+      "min_time_ns": 2.1945e8,
+      "mean_time_ns": 2.31e8,
       "std_time_ns": 0.0,
       "base_hash": "1b600f0",
-      "median_time_ns": 2.5699999999999997e8,
+      "median_time_ns": 2.31e8,
       "source_type": "report_md",
-      "max_time_ns": 2.6985e8,
+      "max_time_ns": 2.4255e8,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
       "commit_hash": "cd2ebfc",
       "timestamp": "2026-03-10T00:40:54.113",
       "memory_bytes": 0
-    }
-  },
-  "random/collections/(rand!/ImplicitRNG/large Vector)": {
-    "52": {
+    },
+    "79": {
+      "time_ratio": 0.45,
+      "min_time_ns": 4.275e7,
+      "mean_time_ns": 4.5e7,
+      "std_time_ns": 0.0,
+      "base_hash": "61c6f33",
+      "median_time_ns": 4.5e7,
+      "source_type": "report_md",
+      "max_time_ns": 4.725e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b6bca19",
+      "timestamp": "2026-03-10T23:30:05.064",
+      "memory_bytes": 0
+    },
+    "124": {
       "time_ratio": 1.62,
       "min_time_ns": 1.539e8,
       "mean_time_ns": 1.62e8,
@@ -544,25 +834,41 @@
       "timestamp": "2026-03-10T00:41:06.619",
       "memory_bytes": 0
     },
-    "105": {
-      "time_ratio": 2.31,
-      "min_time_ns": 2.1945e8,
-      "mean_time_ns": 2.31e8,
+    "41": {
+      "time_ratio": 1.25,
+      "min_time_ns": 1.1875e8,
+      "mean_time_ns": 1.25e8,
       "std_time_ns": 0.0,
-      "base_hash": "1b600f0",
-      "median_time_ns": 2.31e8,
+      "base_hash": "1e2758e",
+      "median_time_ns": 1.25e8,
       "source_type": "report_md",
-      "max_time_ns": 2.4255e8,
+      "max_time_ns": 1.3125e8,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "cd2ebfc",
-      "timestamp": "2026-03-10T00:40:54.113",
+      "commit_hash": "b0772ee",
+      "timestamp": "2026-03-10T23:30:18.437",
+      "memory_bytes": 0
+    },
+    "90": {
+      "time_ratio": 1.3,
+      "min_time_ns": 1.235e8,
+      "mean_time_ns": 1.3e8,
+      "std_time_ns": 0.0,
+      "base_hash": "a14cc38",
+      "median_time_ns": 1.3e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.365e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b9ce885",
+      "timestamp": "2026-03-10T23:30:00.792",
       "memory_bytes": 0
     }
   },
   "random/types/(rand!/MersenneTwister/ComplexF16)": {
-    "125": {
+    "197": {
       "time_ratio": 1.39,
       "min_time_ns": 1.3205e8,
       "mean_time_ns": 1.39e8,
@@ -580,7 +886,7 @@
     }
   },
   "random/types/(randn!/ImplicitRNG/Float64)": {
-    "97": {
+    "169": {
       "time_ratio": 1.28,
       "min_time_ns": 1.216e8,
       "mean_time_ns": 1.28e8,
@@ -598,7 +904,7 @@
     }
   },
   "random/types/(randn/RandomDevice/ImplicitFloat64)": {
-    "67": {
+    "139": {
       "time_ratio": 1.26,
       "min_time_ns": 1.197e8,
       "mean_time_ns": 1.26e8,
@@ -616,7 +922,7 @@
     }
   },
   "random/types/(rand/ImplicitRNG/Int64)": {
-    "63": {
+    "135": {
       "time_ratio": 0.74,
       "min_time_ns": 7.03e7,
       "mean_time_ns": 7.4e7,
@@ -634,7 +940,7 @@
     }
   },
   "random/ranges/(\\RangeGenerator\\/\\UInt128\\/\\1:18446744073709551616\\)": {
-    "34": {
+    "106": {
       "time_ratio": 1.28,
       "min_time_ns": 1.216e8,
       "mean_time_ns": 1.28e8,
@@ -652,7 +958,7 @@
     }
   },
   "random/collections/(rand/ImplicitRNG/large String)": {
-    "105": {
+    "177": {
       "time_ratio": 1.57,
       "min_time_ns": 1.4915e8,
       "mean_time_ns": 1.57e8,
@@ -667,26 +973,58 @@
       "commit_hash": "cd2ebfc",
       "timestamp": "2026-03-10T00:40:54.113",
       "memory_bytes": 0
-    }
-  },
-  "random/collections/(rand!/ImplicitRNG/large String)": {
-    "125": {
-      "time_ratio": 1.02,
-      "min_time_ns": 9.69e7,
-      "mean_time_ns": 1.02e8,
+    },
+    "79": {
+      "time_ratio": 0.69,
+      "min_time_ns": 6.555e7,
+      "mean_time_ns": 6.9e7,
       "std_time_ns": 0.0,
-      "base_hash": "0a82b71",
-      "median_time_ns": 1.02e8,
+      "base_hash": "61c6f33",
+      "median_time_ns": 6.9e7,
       "source_type": "report_md",
-      "max_time_ns": 1.071e8,
+      "max_time_ns": 7.245e7,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "d13bdc0",
-      "timestamp": "2026-03-10T00:40:50.051",
+      "commit_hash": "b6bca19",
+      "timestamp": "2026-03-10T23:30:05.064",
       "memory_bytes": 0
     },
-    "105": {
+    "41": {
+      "time_ratio": 1.35,
+      "min_time_ns": 1.2825e8,
+      "mean_time_ns": 1.35e8,
+      "std_time_ns": 0.0,
+      "base_hash": "1e2758e",
+      "median_time_ns": 1.35e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.4175e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b0772ee",
+      "timestamp": "2026-03-10T23:30:18.437",
+      "memory_bytes": 0
+    },
+    "90": {
+      "time_ratio": 1.25,
+      "min_time_ns": 1.1875e8,
+      "mean_time_ns": 1.25e8,
+      "std_time_ns": 0.0,
+      "base_hash": "a14cc38",
+      "median_time_ns": 1.25e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.3125e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b9ce885",
+      "timestamp": "2026-03-10T23:30:00.792",
+      "memory_bytes": 0
+    }
+  },
+  "random/collections/(rand!/ImplicitRNG/large String)": {
+    "177": {
       "time_ratio": 1.72,
       "min_time_ns": 1.634e8,
       "mean_time_ns": 1.72e8,
@@ -702,7 +1040,55 @@
       "timestamp": "2026-03-10T00:40:54.113",
       "memory_bytes": 0
     },
-    "97": {
+    "46": {
+      "time_ratio": 1.06,
+      "min_time_ns": 1.007e8,
+      "mean_time_ns": 1.06e8,
+      "std_time_ns": 0.0,
+      "base_hash": "20a5fa7",
+      "median_time_ns": 1.06e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.113e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b146a70",
+      "timestamp": "2026-03-10T23:30:16.871",
+      "memory_bytes": 0
+    },
+    "79": {
+      "time_ratio": 0.57,
+      "min_time_ns": 5.414999999999999e7,
+      "mean_time_ns": 5.699999999999999e7,
+      "std_time_ns": 0.0,
+      "base_hash": "61c6f33",
+      "median_time_ns": 5.699999999999999e7,
+      "source_type": "report_md",
+      "max_time_ns": 5.984999999999999e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b6bca19",
+      "timestamp": "2026-03-10T23:30:05.064",
+      "memory_bytes": 0
+    },
+    "197": {
+      "time_ratio": 1.02,
+      "min_time_ns": 9.69e7,
+      "mean_time_ns": 1.02e8,
+      "std_time_ns": 0.0,
+      "base_hash": "0a82b71",
+      "median_time_ns": 1.02e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.071e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "d13bdc0",
+      "timestamp": "2026-03-10T00:40:50.051",
+      "memory_bytes": 0
+    },
+    "169": {
       "time_ratio": 0.69,
       "min_time_ns": 6.555e7,
       "mean_time_ns": 6.9e7,
@@ -720,7 +1106,7 @@
     }
   },
   "random/collections/(rand/ImplicitRNG/small Dict)": {
-    "105": {
+    "177": {
       "time_ratio": 1.63,
       "min_time_ns": 1.5485e8,
       "mean_time_ns": 1.63e8,
@@ -735,10 +1121,44 @@
       "commit_hash": "cd2ebfc",
       "timestamp": "2026-03-10T00:40:54.113",
       "memory_bytes": 0
+    },
+    "79": {
+      "time_ratio": 0.64,
+      "min_time_ns": 6.08e7,
+      "mean_time_ns": 6.4e7,
+      "std_time_ns": 0.0,
+      "base_hash": "61c6f33",
+      "median_time_ns": 6.4e7,
+      "source_type": "report_md",
+      "max_time_ns": 6.72e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b6bca19",
+      "timestamp": "2026-03-10T23:30:05.064",
+      "memory_bytes": 0
+    }
+  },
+  "random/types/(rand!/MersenneTwister/Complex{Int64})": {
+    "46": {
+      "time_ratio": 0.38,
+      "min_time_ns": 3.61e7,
+      "mean_time_ns": 3.8e7,
+      "std_time_ns": 0.0,
+      "base_hash": "20a5fa7",
+      "median_time_ns": 3.8e7,
+      "source_type": "report_md",
+      "max_time_ns": 3.99e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b146a70",
+      "timestamp": "2026-03-10T23:30:16.871",
+      "memory_bytes": 0
     }
   },
   "random/types/(rand!/MersenneTwister/Float32)": {
-    "107": {
+    "179": {
       "time_ratio": 1.75,
       "min_time_ns": 1.6625e8,
       "mean_time_ns": 1.75e8,
@@ -756,7 +1176,7 @@
     }
   },
   "random/ranges/(rand/MersenneTwister/UInt128/RangeGenerator(1:170141183460469231731687303715884105728))": {
-    "130": {
+    "202": {
       "time_ratio": 0.66,
       "min_time_ns": 6.27e7,
       "mean_time_ns": 6.6e7,
@@ -774,7 +1194,7 @@
     }
   },
   "random/ranges/(RangeGenerator/BigInt/1:18446744073709551616)": {
-    "126": {
+    "198": {
       "time_ratio": 0.68,
       "min_time_ns": 6.46e7,
       "mean_time_ns": 6.8e7,
@@ -792,7 +1212,7 @@
     }
   },
   "random/ranges/(rand/MersenneTwister/Int128/RangeGenerator(1:1))": {
-    "130": {
+    "202": {
       "time_ratio": 0.6,
       "min_time_ns": 5.7e7,
       "mean_time_ns": 6.0e7,
@@ -810,23 +1230,23 @@
     }
   },
   "random/collections/(rand/ImplicitRNG/small Vector)": {
-    "134": {
-      "time_ratio": 1.29,
-      "min_time_ns": 1.2255e8,
-      "mean_time_ns": 1.29e8,
+    "177": {
+      "time_ratio": 2.44,
+      "min_time_ns": 2.318e8,
+      "mean_time_ns": 2.44e8,
       "std_time_ns": 0.0,
-      "base_hash": "4931faa",
-      "median_time_ns": 1.29e8,
+      "base_hash": "1b600f0",
+      "median_time_ns": 2.44e8,
       "source_type": "report_md",
-      "max_time_ns": 1.3545e8,
+      "max_time_ns": 2.562e8,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "d27fe45",
-      "timestamp": "2026-03-10T00:40:47.111",
+      "commit_hash": "cd2ebfc",
+      "timestamp": "2026-03-10T00:40:54.113",
       "memory_bytes": 0
     },
-    "133": {
+    "205": {
       "time_ratio": 1.43,
       "min_time_ns": 1.3585e8,
       "mean_time_ns": 1.43e8,
@@ -842,25 +1262,41 @@
       "timestamp": "2026-03-10T00:40:47.325",
       "memory_bytes": 0
     },
-    "105": {
-      "time_ratio": 2.44,
-      "min_time_ns": 2.318e8,
-      "mean_time_ns": 2.44e8,
+    "79": {
+      "time_ratio": 0.49,
+      "min_time_ns": 4.655e7,
+      "mean_time_ns": 4.9e7,
       "std_time_ns": 0.0,
-      "base_hash": "1b600f0",
-      "median_time_ns": 2.44e8,
+      "base_hash": "61c6f33",
+      "median_time_ns": 4.9e7,
       "source_type": "report_md",
-      "max_time_ns": 2.562e8,
+      "max_time_ns": 5.145e7,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "cd2ebfc",
-      "timestamp": "2026-03-10T00:40:54.113",
+      "commit_hash": "b6bca19",
+      "timestamp": "2026-03-10T23:30:05.064",
+      "memory_bytes": 0
+    },
+    "206": {
+      "time_ratio": 1.29,
+      "min_time_ns": 1.2255e8,
+      "mean_time_ns": 1.29e8,
+      "std_time_ns": 0.0,
+      "base_hash": "4931faa",
+      "median_time_ns": 1.29e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.3545e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "d27fe45",
+      "timestamp": "2026-03-10T00:40:47.111",
       "memory_bytes": 0
     }
   },
   "random/ranges/(rand!/ImplicitRNG/Int/1:1000)": {
-    "105": {
+    "177": {
       "time_ratio": 2.27,
       "min_time_ns": 2.1565e8,
       "mean_time_ns": 2.27e8,
@@ -875,26 +1311,26 @@
       "commit_hash": "cd2ebfc",
       "timestamp": "2026-03-10T00:40:54.113",
       "memory_bytes": 0
-    }
-  },
-  "random/collections/(rand!/ImplicitRNG/large BitSet)": {
-    "125": {
-      "time_ratio": 1.5,
-      "min_time_ns": 1.425e8,
-      "mean_time_ns": 1.5e8,
+    },
+    "79": {
+      "time_ratio": 0.46,
+      "min_time_ns": 4.37e7,
+      "mean_time_ns": 4.6e7,
       "std_time_ns": 0.0,
-      "base_hash": "0a82b71",
-      "median_time_ns": 1.5e8,
+      "base_hash": "61c6f33",
+      "median_time_ns": 4.6e7,
       "source_type": "report_md",
-      "max_time_ns": 1.575e8,
+      "max_time_ns": 4.83e7,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "d13bdc0",
-      "timestamp": "2026-03-10T00:40:50.051",
+      "commit_hash": "b6bca19",
+      "timestamp": "2026-03-10T23:30:05.064",
       "memory_bytes": 0
-    },
-    "105": {
+    }
+  },
+  "random/collections/(rand!/ImplicitRNG/large BitSet)": {
+    "177": {
       "time_ratio": 1.92,
       "min_time_ns": 1.824e8,
       "mean_time_ns": 1.92e8,
@@ -909,10 +1345,42 @@
       "commit_hash": "cd2ebfc",
       "timestamp": "2026-03-10T00:40:54.113",
       "memory_bytes": 0
+    },
+    "79": {
+      "time_ratio": 0.52,
+      "min_time_ns": 4.94e7,
+      "mean_time_ns": 5.2e7,
+      "std_time_ns": 0.0,
+      "base_hash": "61c6f33",
+      "median_time_ns": 5.2e7,
+      "source_type": "report_md",
+      "max_time_ns": 5.46e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b6bca19",
+      "timestamp": "2026-03-10T23:30:05.064",
+      "memory_bytes": 0
+    },
+    "197": {
+      "time_ratio": 1.5,
+      "min_time_ns": 1.425e8,
+      "mean_time_ns": 1.5e8,
+      "std_time_ns": 0.0,
+      "base_hash": "0a82b71",
+      "median_time_ns": 1.5e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.575e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "d13bdc0",
+      "timestamp": "2026-03-10T00:40:50.051",
+      "memory_bytes": 0
     }
   },
   "random/ranges/(rand/MersenneTwister/UInt128/RangeGenerator(1:4294967295))": {
-    "130": {
+    "202": {
       "time_ratio": 0.6,
       "min_time_ns": 5.7e7,
       "mean_time_ns": 6.0e7,
@@ -930,7 +1398,7 @@
     }
   },
   "random/ranges/(rand/MersenneTwister/Int/1:1000)": {
-    "134": {
+    "206": {
       "time_ratio": 1.32,
       "min_time_ns": 1.254e8,
       "mean_time_ns": 1.32e8,
@@ -948,23 +1416,7 @@
     }
   },
   "random/sequences/(randsubseq!/MersenneTwister/0.8)": {
-    "125": {
-      "time_ratio": 0.59,
-      "min_time_ns": 5.605e7,
-      "mean_time_ns": 5.9e7,
-      "std_time_ns": 0.0,
-      "base_hash": "0a82b71",
-      "median_time_ns": 5.9e7,
-      "source_type": "report_md",
-      "max_time_ns": 6.195e7,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "d13bdc0",
-      "timestamp": "2026-03-10T00:40:50.051",
-      "memory_bytes": 0
-    },
-    "105": {
+    "177": {
       "time_ratio": 1.68,
       "min_time_ns": 1.596e8,
       "mean_time_ns": 1.68e8,
@@ -979,10 +1431,74 @@
       "commit_hash": "cd2ebfc",
       "timestamp": "2026-03-10T00:40:54.113",
       "memory_bytes": 0
+    },
+    "46": {
+      "time_ratio": 0.57,
+      "min_time_ns": 5.414999999999999e7,
+      "mean_time_ns": 5.699999999999999e7,
+      "std_time_ns": 0.0,
+      "base_hash": "20a5fa7",
+      "median_time_ns": 5.699999999999999e7,
+      "source_type": "report_md",
+      "max_time_ns": 5.984999999999999e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b146a70",
+      "timestamp": "2026-03-10T23:30:16.871",
+      "memory_bytes": 0
+    },
+    "93": {
+      "time_ratio": 1.58,
+      "min_time_ns": 1.501e8,
+      "mean_time_ns": 1.58e8,
+      "std_time_ns": 0.0,
+      "base_hash": "3bf9d17",
+      "median_time_ns": 1.58e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.659e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "bae2d8d",
+      "timestamp": "2026-03-10T23:29:59.543",
+      "memory_bytes": 0
+    },
+    "197": {
+      "time_ratio": 0.59,
+      "min_time_ns": 5.605e7,
+      "mean_time_ns": 5.9e7,
+      "std_time_ns": 0.0,
+      "base_hash": "0a82b71",
+      "median_time_ns": 5.9e7,
+      "source_type": "report_md",
+      "max_time_ns": 6.195e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "d13bdc0",
+      "timestamp": "2026-03-10T00:40:50.051",
+      "memory_bytes": 0
     }
   },
   "random/ranges/(RangeGenerator/UInt128/1:18446744073709551615)": {
-    "35": {
+    "59": {
+      "time_ratio": 0.74,
+      "min_time_ns": 7.03e7,
+      "mean_time_ns": 7.4e7,
+      "std_time_ns": 0.0,
+      "base_hash": "9b7d88b",
+      "median_time_ns": 7.4e7,
+      "source_type": "report_md",
+      "max_time_ns": 7.77e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b378d19",
+      "timestamp": "2026-03-10T23:30:12.231",
+      "memory_bytes": 0
+    },
+    "107": {
       "time_ratio": 1.32,
       "min_time_ns": 1.254e8,
       "mean_time_ns": 1.32e8,
@@ -1000,23 +1516,23 @@
     }
   },
   "random/types/(rand!/MersenneTwister/ComplexF32)": {
-    "106": {
-      "time_ratio": 1.34,
-      "min_time_ns": 1.2730000000000001e8,
-      "mean_time_ns": 1.3400000000000001e8,
+    "79": {
+      "time_ratio": 1.33,
+      "min_time_ns": 1.2635e8,
+      "mean_time_ns": 1.33e8,
       "std_time_ns": 0.0,
-      "base_hash": "7c45ff0",
-      "median_time_ns": 1.3400000000000001e8,
+      "base_hash": "61c6f33",
+      "median_time_ns": 1.33e8,
       "source_type": "report_md",
-      "max_time_ns": 1.4070000000000003e8,
+      "max_time_ns": 1.3965e8,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "cd5b8fb",
-      "timestamp": "2026-03-10T00:40:53.913",
+      "commit_hash": "b6bca19",
+      "timestamp": "2026-03-10T23:30:05.064",
       "memory_bytes": 0
     },
-    "125": {
+    "197": {
       "time_ratio": 1.32,
       "min_time_ns": 1.254e8,
       "mean_time_ns": 1.32e8,
@@ -1032,7 +1548,7 @@
       "timestamp": "2026-03-10T00:40:50.051",
       "memory_bytes": 0
     },
-    "132": {
+    "204": {
       "time_ratio": 0.73,
       "min_time_ns": 6.935e7,
       "mean_time_ns": 7.3e7,
@@ -1047,10 +1563,26 @@
       "commit_hash": "d22c304",
       "timestamp": "2026-03-10T00:40:47.554",
       "memory_bytes": 0
+    },
+    "178": {
+      "time_ratio": 1.34,
+      "min_time_ns": 1.2730000000000001e8,
+      "mean_time_ns": 1.3400000000000001e8,
+      "std_time_ns": 0.0,
+      "base_hash": "7c45ff0",
+      "median_time_ns": 1.3400000000000001e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.4070000000000003e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "cd5b8fb",
+      "timestamp": "2026-03-10T00:40:53.913",
+      "memory_bytes": 0
     }
   },
   "random/collections/(rand!/ImplicitRNG/small Set)": {
-    "105": {
+    "177": {
       "time_ratio": 1.64,
       "min_time_ns": 1.558e8,
       "mean_time_ns": 1.64e8,
@@ -1065,10 +1597,58 @@
       "commit_hash": "cd2ebfc",
       "timestamp": "2026-03-10T00:40:54.113",
       "memory_bytes": 0
+    },
+    "79": {
+      "time_ratio": 0.62,
+      "min_time_ns": 5.89e7,
+      "mean_time_ns": 6.2e7,
+      "std_time_ns": 0.0,
+      "base_hash": "61c6f33",
+      "median_time_ns": 6.2e7,
+      "source_type": "report_md",
+      "max_time_ns": 6.51e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b6bca19",
+      "timestamp": "2026-03-10T23:30:05.064",
+      "memory_bytes": 0
     }
   },
   "random/types/(rand/MersenneTwister/Int8)": {
-    "134": {
+    "36": {
+      "time_ratio": 1.27,
+      "min_time_ns": 1.2065e8,
+      "mean_time_ns": 1.27e8,
+      "std_time_ns": 0.0,
+      "base_hash": "3d2c9b7",
+      "median_time_ns": 1.27e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.3335e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "afca0b4",
+      "timestamp": "2026-03-10T23:30:20.015",
+      "memory_bytes": 0
+    },
+    "204": {
+      "time_ratio": 1.33,
+      "min_time_ns": 1.2635e8,
+      "mean_time_ns": 1.33e8,
+      "std_time_ns": 0.0,
+      "base_hash": "e3adc39",
+      "median_time_ns": 1.33e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.3965e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "d22c304",
+      "timestamp": "2026-03-10T00:40:47.554",
+      "memory_bytes": 0
+    },
+    "206": {
       "time_ratio": 1.33,
       "min_time_ns": 1.2635e8,
       "mean_time_ns": 1.33e8,
@@ -1084,7 +1664,7 @@
       "timestamp": "2026-03-10T00:40:47.111",
       "memory_bytes": 0
     },
-    "67": {
+    "139": {
       "time_ratio": 1.27,
       "min_time_ns": 1.2065e8,
       "mean_time_ns": 1.27e8,
@@ -1099,26 +1679,10 @@
       "commit_hash": "c4fe739",
       "timestamp": "2026-03-10T00:41:03.344",
       "memory_bytes": 0
-    },
-    "132": {
-      "time_ratio": 1.33,
-      "min_time_ns": 1.2635e8,
-      "mean_time_ns": 1.33e8,
-      "std_time_ns": 0.0,
-      "base_hash": "e3adc39",
-      "median_time_ns": 1.33e8,
-      "source_type": "report_md",
-      "max_time_ns": 1.3965e8,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "d22c304",
-      "timestamp": "2026-03-10T00:40:47.554",
-      "memory_bytes": 0
     }
   },
   "random/types/(rand!/MersenneTwister/Complex{UInt32})": {
-    "125": {
+    "197": {
       "time_ratio": 1.27,
       "min_time_ns": 1.2065e8,
       "mean_time_ns": 1.27e8,
@@ -1136,7 +1700,7 @@
     }
   },
   "random/ranges/(rand/MersenneTwister/BigInt/RangeGenerator(1:18446744073709551615))": {
-    "105": {
+    "177": {
       "time_ratio": 1.26,
       "min_time_ns": 1.197e8,
       "mean_time_ns": 1.26e8,
@@ -1154,7 +1718,7 @@
     }
   },
   "random/ranges/(RangeGenerator/UInt128/1:1)": {
-    "62": {
+    "134": {
       "time_ratio": 1.3,
       "min_time_ns": 1.235e8,
       "mean_time_ns": 1.3e8,
@@ -1170,7 +1734,7 @@
       "timestamp": "2026-03-10T00:41:04.382",
       "memory_bytes": 0
     },
-    "52": {
+    "124": {
       "time_ratio": 1.25,
       "min_time_ns": 1.1875e8,
       "mean_time_ns": 1.25e8,
@@ -1185,10 +1749,26 @@
       "commit_hash": "c1a287e",
       "timestamp": "2026-03-10T00:41:06.619",
       "memory_bytes": 0
+    },
+    "77": {
+      "time_ratio": 1.26,
+      "min_time_ns": 1.197e8,
+      "mean_time_ns": 1.26e8,
+      "std_time_ns": 0.0,
+      "base_hash": "4462257",
+      "median_time_ns": 1.26e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.323e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b64b578",
+      "timestamp": "2026-03-10T23:30:05.672",
+      "memory_bytes": 0
     }
   },
   "random/collections/(rand!/MersenneTwister/large Dict)": {
-    "125": {
+    "197": {
       "time_ratio": 1.25,
       "min_time_ns": 1.1875e8,
       "mean_time_ns": 1.25e8,
@@ -1206,7 +1786,23 @@
     }
   },
   "random/ranges/(RangeGenerator/UInt16/1:1)": {
-    "113": {
+    "174": {
+      "time_ratio": 1.27,
+      "min_time_ns": 1.2065e8,
+      "mean_time_ns": 1.27e8,
+      "std_time_ns": 0.0,
+      "base_hash": "3ed49fd",
+      "median_time_ns": 1.27e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.3335e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "cccbb61",
+      "timestamp": "2026-03-10T00:40:54.764",
+      "memory_bytes": 0
+    },
+    "185": {
       "time_ratio": 0.67,
       "min_time_ns": 6.365000000000001e7,
       "mean_time_ns": 6.700000000000001e7,
@@ -1222,25 +1818,41 @@
       "timestamp": "2026-03-10T00:40:52.472",
       "memory_bytes": 0
     },
-    "102": {
-      "time_ratio": 1.27,
-      "min_time_ns": 1.2065e8,
-      "mean_time_ns": 1.27e8,
+    "74": {
+      "time_ratio": 1.25,
+      "min_time_ns": 1.1875e8,
+      "mean_time_ns": 1.25e8,
       "std_time_ns": 0.0,
-      "base_hash": "3ed49fd",
-      "median_time_ns": 1.27e8,
+      "base_hash": "1eee6ef",
+      "median_time_ns": 1.25e8,
       "source_type": "report_md",
-      "max_time_ns": 1.3335e8,
+      "max_time_ns": 1.3125e8,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "cccbb61",
-      "timestamp": "2026-03-10T00:40:54.764",
+      "commit_hash": "b4f3421",
+      "timestamp": "2026-03-10T23:30:06.688",
+      "memory_bytes": 0
+    },
+    "41": {
+      "time_ratio": 1.26,
+      "min_time_ns": 1.197e8,
+      "mean_time_ns": 1.26e8,
+      "std_time_ns": 0.0,
+      "base_hash": "1e2758e",
+      "median_time_ns": 1.26e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.323e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b0772ee",
+      "timestamp": "2026-03-10T23:30:18.437",
       "memory_bytes": 0
     }
   },
   "random/types/(rand!/MersenneTwister/Complex{UInt128})": {
-    "125": {
+    "197": {
       "time_ratio": 1.72,
       "min_time_ns": 1.634e8,
       "mean_time_ns": 1.72e8,
@@ -1258,7 +1870,7 @@
     }
   },
   "random/types/(randn!/MersenneTwister/Float32)": {
-    "125": {
+    "197": {
       "time_ratio": 1.35,
       "min_time_ns": 1.2825e8,
       "mean_time_ns": 1.35e8,
@@ -1276,7 +1888,7 @@
     }
   },
   "random/collections/(rand!/MersenneTwister/small BitSet)": {
-    "125": {
+    "197": {
       "time_ratio": 1.37,
       "min_time_ns": 1.3015e8,
       "mean_time_ns": 1.37e8,
@@ -1293,8 +1905,26 @@
       "memory_bytes": 0
     }
   },
+  "random/types/(rand/MersenneTwister/UInt32)": {
+    "84": {
+      "time_ratio": 1.27,
+      "min_time_ns": 1.2065e8,
+      "mean_time_ns": 1.27e8,
+      "std_time_ns": 0.0,
+      "base_hash": "7dc132c",
+      "median_time_ns": 1.27e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.3335e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b7ff634",
+      "timestamp": "2026-03-10T23:30:03.073",
+      "memory_bytes": 0
+    }
+  },
   "random/collections/(rand!/MersenneTwister/large BitSet)": {
-    "125": {
+    "197": {
       "time_ratio": 1.42,
       "min_time_ns": 1.349e8,
       "mean_time_ns": 1.42e8,
@@ -1312,7 +1942,7 @@
     }
   },
   "random/ranges/(rand/MersenneTwister/BigInt/RangeGenerator(1:4294967297))": {
-    "105": {
+    "177": {
       "time_ratio": 1.27,
       "min_time_ns": 1.2065e8,
       "mean_time_ns": 1.27e8,
@@ -1328,7 +1958,7 @@
       "timestamp": "2026-03-10T00:40:54.113",
       "memory_bytes": 0
     },
-    "94": {
+    "166": {
       "time_ratio": 1.26,
       "min_time_ns": 1.197e8,
       "mean_time_ns": 1.26e8,
@@ -1346,7 +1976,7 @@
     }
   },
   "random/ranges/(RangeGenerator/UInt128/1:4294967295)": {
-    "39": {
+    "111": {
       "time_ratio": 1.29,
       "min_time_ns": 1.2255e8,
       "mean_time_ns": 1.29e8,
@@ -1362,7 +1992,23 @@
       "timestamp": "2026-03-10T00:41:10.019",
       "memory_bytes": 0
     },
-    "40": {
+    "99": {
+      "time_ratio": 1.29,
+      "min_time_ns": 1.2255e8,
+      "mean_time_ns": 1.29e8,
+      "std_time_ns": 0.0,
+      "base_hash": "594d001",
+      "median_time_ns": 1.29e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.3545e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "bbdee0b",
+      "timestamp": "2026-03-10T23:29:57.600",
+      "memory_bytes": 0
+    },
+    "112": {
       "time_ratio": 1.29,
       "min_time_ns": 1.2255e8,
       "mean_time_ns": 1.29e8,
@@ -1378,7 +2024,7 @@
       "timestamp": "2026-03-10T00:41:09.639",
       "memory_bytes": 0
     },
-    "91": {
+    "163": {
       "time_ratio": 1.26,
       "min_time_ns": 1.197e8,
       "mean_time_ns": 1.26e8,
@@ -1395,8 +2041,26 @@
       "memory_bytes": 0
     }
   },
+  "random/types/(rand/MersenneTwister/Float16)": {
+    "32": {
+      "time_ratio": 1.36,
+      "min_time_ns": 1.292e8,
+      "mean_time_ns": 1.36e8,
+      "std_time_ns": 0.0,
+      "base_hash": "13ae079",
+      "median_time_ns": 1.36e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.428e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "aebcebc",
+      "timestamp": "2026-03-10T23:30:21.284",
+      "memory_bytes": 0
+    }
+  },
   "random/collections/(rand/ImplicitRNG/large Dict)": {
-    "105": {
+    "177": {
       "time_ratio": 1.39,
       "min_time_ns": 1.3205e8,
       "mean_time_ns": 1.39e8,
@@ -1413,8 +2077,42 @@
       "memory_bytes": 0
     }
   },
-  "random/ranges/(RangeGenerator/Int128/1:4294967295)": {
+  "random/types/(\\rand!\\/\\MersenneTwister\\/\\Complex{Int32}\\)": {
     "39": {
+      "time_ratio": 1.29,
+      "min_time_ns": 1.2255e8,
+      "mean_time_ns": 1.29e8,
+      "std_time_ns": 0.0,
+      "base_hash": "5e7aaa6",
+      "median_time_ns": 1.29e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.3545e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b0154e3",
+      "timestamp": "2026-03-10T23:30:19.065",
+      "memory_bytes": 0
+    },
+    "87": {
+      "time_ratio": 1.28,
+      "min_time_ns": 1.216e8,
+      "mean_time_ns": 1.28e8,
+      "std_time_ns": 0.0,
+      "base_hash": "b39d697",
+      "median_time_ns": 1.28e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.344e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b97eb35",
+      "timestamp": "2026-03-10T23:30:01.752",
+      "memory_bytes": 0
+    }
+  },
+  "random/ranges/(RangeGenerator/Int128/1:4294967295)": {
+    "111": {
       "time_ratio": 1.29,
       "min_time_ns": 1.2255e8,
       "mean_time_ns": 1.29e8,
@@ -1430,7 +2128,23 @@
       "timestamp": "2026-03-10T00:41:10.019",
       "memory_bytes": 0
     },
-    "40": {
+    "99": {
+      "time_ratio": 1.29,
+      "min_time_ns": 1.2255e8,
+      "mean_time_ns": 1.29e8,
+      "std_time_ns": 0.0,
+      "base_hash": "594d001",
+      "median_time_ns": 1.29e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.3545e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "bbdee0b",
+      "timestamp": "2026-03-10T23:29:57.600",
+      "memory_bytes": 0
+    },
+    "112": {
       "time_ratio": 1.29,
       "min_time_ns": 1.2255e8,
       "mean_time_ns": 1.29e8,
@@ -1448,7 +2162,7 @@
     }
   },
   "random/types/(rand/MersenneTwister/Complex{UInt32})": {
-    "125": {
+    "197": {
       "time_ratio": 1.26,
       "min_time_ns": 1.197e8,
       "mean_time_ns": 1.26e8,
@@ -1466,7 +2180,7 @@
     }
   },
   "random/types/(rand!/MersenneTwister/Complex{Int32})": {
-    "125": {
+    "197": {
       "time_ratio": 1.29,
       "min_time_ns": 1.2255e8,
       "mean_time_ns": 1.29e8,
@@ -1484,7 +2198,7 @@
     }
   },
   "random/types/(rand/MersenneTwister/Complex{Int32})": {
-    "125": {
+    "197": {
       "time_ratio": 1.26,
       "min_time_ns": 1.197e8,
       "mean_time_ns": 1.26e8,
@@ -1501,8 +2215,44 @@
       "memory_bytes": 0
     }
   },
+  "random/types/(rand/MersenneTwister/Complex{Int64})": {
+    "46": {
+      "time_ratio": 0.55,
+      "min_time_ns": 5.225000000000001e7,
+      "mean_time_ns": 5.500000000000001e7,
+      "std_time_ns": 0.0,
+      "base_hash": "20a5fa7",
+      "median_time_ns": 5.500000000000001e7,
+      "source_type": "report_md",
+      "max_time_ns": 5.775000000000001e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b146a70",
+      "timestamp": "2026-03-10T23:30:16.871",
+      "memory_bytes": 0
+    }
+  },
+  "random/randstring/(randstring/MersenneTwister/collect(UInt8/\\qwerty\\)": {
+    "93": {
+      "time_ratio": 1.26,
+      "min_time_ns": 1.197e8,
+      "mean_time_ns": 1.26e8,
+      "std_time_ns": 0.0,
+      "base_hash": "3bf9d17",
+      "median_time_ns": 1.26e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.323e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "bae2d8d",
+      "timestamp": "2026-03-10T23:29:59.543",
+      "memory_bytes": 0
+    }
+  },
   "random/types/(\\rand\\/\\MersenneTwister\\/\\Complex{Int32}\\)": {
-    "34": {
+    "106": {
       "time_ratio": 1.27,
       "min_time_ns": 1.2065e8,
       "mean_time_ns": 1.27e8,
@@ -1537,6 +2287,22 @@
       "memory_bytes": 0
     },
     "67": {
+      "time_ratio": 1.32,
+      "min_time_ns": 1.254e8,
+      "mean_time_ns": 1.32e8,
+      "std_time_ns": 0.0,
+      "base_hash": "907264b",
+      "median_time_ns": 1.32e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.386e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b46df09",
+      "timestamp": "2026-03-10T23:30:08.960",
+      "memory_bytes": 0
+    },
+    "139": {
       "time_ratio": 1.27,
       "min_time_ns": 1.2065e8,
       "mean_time_ns": 1.27e8,
@@ -1554,7 +2320,7 @@
     }
   },
   "random/collections/(\\rand\\/\\MersenneTwister\\/\\large BitSet\\)": {
-    "34": {
+    "106": {
       "time_ratio": 1.33,
       "min_time_ns": 1.2635e8,
       "mean_time_ns": 1.33e8,
@@ -1572,23 +2338,7 @@
     }
   },
   "random/collections/(rand/MersenneTwister/a:z)": {
-    "106": {
-      "time_ratio": 0.72,
-      "min_time_ns": 6.84e7,
-      "mean_time_ns": 7.2e7,
-      "std_time_ns": 0.0,
-      "base_hash": "7c45ff0",
-      "median_time_ns": 7.2e7,
-      "source_type": "report_md",
-      "max_time_ns": 7.56e7,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "cd5b8fb",
-      "timestamp": "2026-03-10T00:40:53.913",
-      "memory_bytes": 0
-    },
-    "105": {
+    "177": {
       "time_ratio": 1.76,
       "min_time_ns": 1.672e8,
       "mean_time_ns": 1.76e8,
@@ -1603,26 +2353,42 @@
       "commit_hash": "cd2ebfc",
       "timestamp": "2026-03-10T00:40:54.113",
       "memory_bytes": 0
-    }
-  },
-  "random/collections/(rand!/ImplicitRNG/large Set)": {
-    "102": {
-      "time_ratio": 1.26,
-      "min_time_ns": 1.197e8,
-      "mean_time_ns": 1.26e8,
+    },
+    "79": {
+      "time_ratio": 0.64,
+      "min_time_ns": 6.08e7,
+      "mean_time_ns": 6.4e7,
       "std_time_ns": 0.0,
-      "base_hash": "3ed49fd",
-      "median_time_ns": 1.26e8,
+      "base_hash": "61c6f33",
+      "median_time_ns": 6.4e7,
       "source_type": "report_md",
-      "max_time_ns": 1.323e8,
+      "max_time_ns": 6.72e7,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "cccbb61",
-      "timestamp": "2026-03-10T00:40:54.764",
+      "commit_hash": "b6bca19",
+      "timestamp": "2026-03-10T23:30:05.064",
       "memory_bytes": 0
     },
-    "105": {
+    "178": {
+      "time_ratio": 0.72,
+      "min_time_ns": 6.84e7,
+      "mean_time_ns": 7.2e7,
+      "std_time_ns": 0.0,
+      "base_hash": "7c45ff0",
+      "median_time_ns": 7.2e7,
+      "source_type": "report_md",
+      "max_time_ns": 7.56e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "cd5b8fb",
+      "timestamp": "2026-03-10T00:40:53.913",
+      "memory_bytes": 0
+    }
+  },
+  "random/collections/(rand!/ImplicitRNG/large Set)": {
+    "177": {
       "time_ratio": 1.43,
       "min_time_ns": 1.3585e8,
       "mean_time_ns": 1.43e8,
@@ -1637,10 +2403,58 @@
       "commit_hash": "cd2ebfc",
       "timestamp": "2026-03-10T00:40:54.113",
       "memory_bytes": 0
+    },
+    "79": {
+      "time_ratio": 0.7,
+      "min_time_ns": 6.65e7,
+      "mean_time_ns": 7.0e7,
+      "std_time_ns": 0.0,
+      "base_hash": "61c6f33",
+      "median_time_ns": 7.0e7,
+      "source_type": "report_md",
+      "max_time_ns": 7.35e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b6bca19",
+      "timestamp": "2026-03-10T23:30:05.064",
+      "memory_bytes": 0
+    },
+    "174": {
+      "time_ratio": 1.26,
+      "min_time_ns": 1.197e8,
+      "mean_time_ns": 1.26e8,
+      "std_time_ns": 0.0,
+      "base_hash": "3ed49fd",
+      "median_time_ns": 1.26e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.323e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "cccbb61",
+      "timestamp": "2026-03-10T00:40:54.764",
+      "memory_bytes": 0
     }
   },
   "random/types/(rand/MersenneTwister/Int32)": {
-    "107": {
+    "36": {
+      "time_ratio": 1.27,
+      "min_time_ns": 1.2065e8,
+      "mean_time_ns": 1.27e8,
+      "std_time_ns": 0.0,
+      "base_hash": "3d2c9b7",
+      "median_time_ns": 1.27e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.3335e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "afca0b4",
+      "timestamp": "2026-03-10T23:30:20.015",
+      "memory_bytes": 0
+    },
+    "179": {
       "time_ratio": 1.34,
       "min_time_ns": 1.2730000000000001e8,
       "mean_time_ns": 1.3400000000000001e8,
@@ -1658,7 +2472,7 @@
     }
   },
   "random/collections/(\\rand\\/\\MersenneTwister\\/\\small Set\\)": {
-    "34": {
+    "106": {
       "time_ratio": 1.45,
       "min_time_ns": 1.3775e8,
       "mean_time_ns": 1.45e8,
@@ -1676,7 +2490,23 @@
     }
   },
   "random/types/(rand/MersenneTwister/Float32)": {
-    "134": {
+    "32": {
+      "time_ratio": 1.27,
+      "min_time_ns": 1.2065e8,
+      "mean_time_ns": 1.27e8,
+      "std_time_ns": 0.0,
+      "base_hash": "13ae079",
+      "median_time_ns": 1.27e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.3335e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "aebcebc",
+      "timestamp": "2026-03-10T23:30:21.284",
+      "memory_bytes": 0
+    },
+    "206": {
       "time_ratio": 1.32,
       "min_time_ns": 1.254e8,
       "mean_time_ns": 1.32e8,
@@ -1693,8 +2523,42 @@
       "memory_bytes": 0
     }
   },
+  "random/types/(rand!/MersenneTwister/Complex{UInt64})": {
+    "46": {
+      "time_ratio": 0.38,
+      "min_time_ns": 3.61e7,
+      "mean_time_ns": 3.8e7,
+      "std_time_ns": 0.0,
+      "base_hash": "20a5fa7",
+      "median_time_ns": 3.8e7,
+      "source_type": "report_md",
+      "max_time_ns": 3.99e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b146a70",
+      "timestamp": "2026-03-10T23:30:16.871",
+      "memory_bytes": 0
+    }
+  },
   "random/ranges/(RangeGenerator/Int64/1:1)": {
-    "113": {
+    "99": {
+      "time_ratio": 1.63,
+      "min_time_ns": 1.5485e8,
+      "mean_time_ns": 1.63e8,
+      "std_time_ns": 0.0,
+      "base_hash": "594d001",
+      "median_time_ns": 1.63e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.7115e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "bbdee0b",
+      "timestamp": "2026-03-10T23:29:57.600",
+      "memory_bytes": 0
+    },
+    "185": {
       "time_ratio": 0.72,
       "min_time_ns": 6.84e7,
       "mean_time_ns": 7.2e7,
@@ -1711,8 +2575,26 @@
       "memory_bytes": 0
     }
   },
+  "random/ranges/(\\RangeGenerator\\/\\Int32\\/\\1:1\\)": {
+    "64": {
+      "time_ratio": 1.27,
+      "min_time_ns": 1.2065e8,
+      "mean_time_ns": 1.27e8,
+      "std_time_ns": 0.0,
+      "base_hash": "502c039",
+      "median_time_ns": 1.27e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.3335e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b421eca",
+      "timestamp": "2026-03-10T23:30:10.268",
+      "memory_bytes": 0
+    }
+  },
   "random/ranges/(RangeGenerator/Int32/1:1)": {
-    "39": {
+    "111": {
       "time_ratio": 1.34,
       "min_time_ns": 1.2730000000000001e8,
       "mean_time_ns": 1.3400000000000001e8,
@@ -1728,7 +2610,23 @@
       "timestamp": "2026-03-10T00:41:10.019",
       "memory_bytes": 0
     },
-    "40": {
+    "99": {
+      "time_ratio": 1.34,
+      "min_time_ns": 1.2730000000000001e8,
+      "mean_time_ns": 1.3400000000000001e8,
+      "std_time_ns": 0.0,
+      "base_hash": "594d001",
+      "median_time_ns": 1.3400000000000001e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.4070000000000003e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "bbdee0b",
+      "timestamp": "2026-03-10T23:29:57.600",
+      "memory_bytes": 0
+    },
+    "112": {
       "time_ratio": 1.34,
       "min_time_ns": 1.2730000000000001e8,
       "mean_time_ns": 1.3400000000000001e8,
@@ -1744,7 +2642,7 @@
       "timestamp": "2026-03-10T00:41:09.639",
       "memory_bytes": 0
     },
-    "113": {
+    "185": {
       "time_ratio": 0.72,
       "min_time_ns": 6.84e7,
       "mean_time_ns": 7.2e7,
@@ -1762,7 +2660,7 @@
     }
   },
   "random/ranges/(RangeGenerator/Int8/1:1)": {
-    "39": {
+    "111": {
       "time_ratio": 1.39,
       "min_time_ns": 1.3205e8,
       "mean_time_ns": 1.39e8,
@@ -1778,7 +2676,23 @@
       "timestamp": "2026-03-10T00:41:10.019",
       "memory_bytes": 0
     },
-    "40": {
+    "99": {
+      "time_ratio": 1.26,
+      "min_time_ns": 1.197e8,
+      "mean_time_ns": 1.26e8,
+      "std_time_ns": 0.0,
+      "base_hash": "594d001",
+      "median_time_ns": 1.26e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.323e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "bbdee0b",
+      "timestamp": "2026-03-10T23:29:57.600",
+      "memory_bytes": 0
+    },
+    "112": {
       "time_ratio": 1.39,
       "min_time_ns": 1.3205e8,
       "mean_time_ns": 1.39e8,
@@ -1794,7 +2708,7 @@
       "timestamp": "2026-03-10T00:41:09.639",
       "memory_bytes": 0
     },
-    "113": {
+    "185": {
       "time_ratio": 0.68,
       "min_time_ns": 6.46e7,
       "mean_time_ns": 6.8e7,
@@ -1809,10 +2723,26 @@
       "commit_hash": "ce4b085",
       "timestamp": "2026-03-10T00:40:52.472",
       "memory_bytes": 0
+    },
+    "41": {
+      "time_ratio": 1.28,
+      "min_time_ns": 1.216e8,
+      "mean_time_ns": 1.28e8,
+      "std_time_ns": 0.0,
+      "base_hash": "1e2758e",
+      "median_time_ns": 1.28e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.344e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b0772ee",
+      "timestamp": "2026-03-10T23:30:18.437",
+      "memory_bytes": 0
     }
   },
   "random/ranges/(rand/MersenneTwister/Int128/RangeGenerator(1:18446744073709551615))": {
-    "130": {
+    "202": {
       "time_ratio": 0.64,
       "min_time_ns": 6.08e7,
       "mean_time_ns": 6.4e7,
@@ -1830,6 +2760,54 @@
     }
   },
   "random/collections/(rand!/ImplicitRNG/a:z)": {
+    "177": {
+      "time_ratio": 2.48,
+      "min_time_ns": 2.356e8,
+      "mean_time_ns": 2.48e8,
+      "std_time_ns": 0.0,
+      "base_hash": "1b600f0",
+      "median_time_ns": 2.48e8,
+      "source_type": "report_md",
+      "max_time_ns": 2.604e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "cd2ebfc",
+      "timestamp": "2026-03-10T00:40:54.113",
+      "memory_bytes": 0
+    },
+    "79": {
+      "time_ratio": 0.38,
+      "min_time_ns": 3.61e7,
+      "mean_time_ns": 3.8e7,
+      "std_time_ns": 0.0,
+      "base_hash": "61c6f33",
+      "median_time_ns": 3.8e7,
+      "source_type": "report_md",
+      "max_time_ns": 3.99e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b6bca19",
+      "timestamp": "2026-03-10T23:30:05.064",
+      "memory_bytes": 0
+    },
+    "124": {
+      "time_ratio": 1.48,
+      "min_time_ns": 1.406e8,
+      "mean_time_ns": 1.48e8,
+      "std_time_ns": 0.0,
+      "base_hash": "1b600f0",
+      "median_time_ns": 1.48e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.554e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "c1a287e",
+      "timestamp": "2026-03-10T00:41:06.619",
+      "memory_bytes": 0
+    },
     "20": {
       "time_ratio": 0.65,
       "min_time_ns": 6.175e7,
@@ -1846,7 +2824,7 @@
       "timestamp": "2026-03-09T03:20:31.529",
       "memory_bytes": 0
     },
-    "70": {
+    "142": {
       "time_ratio": 1.31,
       "min_time_ns": 1.2445e8,
       "mean_time_ns": 1.31e8,
@@ -1861,42 +2839,10 @@
       "commit_hash": "c52a188",
       "timestamp": "2026-03-10T00:41:02.749",
       "memory_bytes": 0
-    },
-    "52": {
-      "time_ratio": 1.48,
-      "min_time_ns": 1.406e8,
-      "mean_time_ns": 1.48e8,
-      "std_time_ns": 0.0,
-      "base_hash": "1b600f0",
-      "median_time_ns": 1.48e8,
-      "source_type": "report_md",
-      "max_time_ns": 1.554e8,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "c1a287e",
-      "timestamp": "2026-03-10T00:41:06.619",
-      "memory_bytes": 0
-    },
-    "105": {
-      "time_ratio": 2.48,
-      "min_time_ns": 2.356e8,
-      "mean_time_ns": 2.48e8,
-      "std_time_ns": 0.0,
-      "base_hash": "1b600f0",
-      "median_time_ns": 2.48e8,
-      "source_type": "report_md",
-      "max_time_ns": 2.604e8,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "cd2ebfc",
-      "timestamp": "2026-03-10T00:40:54.113",
-      "memory_bytes": 0
     }
   },
   "random/types/(rand!/MersenneTwister/Complex{Int8})": {
-    "125": {
+    "197": {
       "time_ratio": 1.3,
       "min_time_ns": 1.235e8,
       "mean_time_ns": 1.3e8,
@@ -1914,7 +2860,7 @@
     }
   },
   "random/types/(randexp/ImplicitRNG/Float64)": {
-    "134": {
+    "206": {
       "time_ratio": 1.3,
       "min_time_ns": 1.235e8,
       "mean_time_ns": 1.3e8,
@@ -1932,7 +2878,7 @@
     }
   },
   "random/ranges/(rand/MersenneTwister/UInt128/RangeGenerator(1:18446744073709551616))": {
-    "130": {
+    "202": {
       "time_ratio": 0.64,
       "min_time_ns": 6.08e7,
       "mean_time_ns": 6.4e7,
@@ -1950,7 +2896,7 @@
     }
   },
   "random/types/(rand/MersenneTwister/UInt16)": {
-    "67": {
+    "139": {
       "time_ratio": 1.27,
       "min_time_ns": 1.2065e8,
       "mean_time_ns": 1.27e8,
@@ -1967,8 +2913,26 @@
       "memory_bytes": 0
     }
   },
+  "random/types/(rand/MersenneTwister/Complex{UInt64})": {
+    "46": {
+      "time_ratio": 0.59,
+      "min_time_ns": 5.605e7,
+      "mean_time_ns": 5.9e7,
+      "std_time_ns": 0.0,
+      "base_hash": "20a5fa7",
+      "median_time_ns": 5.9e7,
+      "source_type": "report_md",
+      "max_time_ns": 6.195e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b146a70",
+      "timestamp": "2026-03-10T23:30:16.871",
+      "memory_bytes": 0
+    }
+  },
   "random/types/(rand/ImplicitRNG/Float64)": {
-    "63": {
+    "135": {
       "time_ratio": 0.68,
       "min_time_ns": 6.46e7,
       "mean_time_ns": 6.8e7,
@@ -1985,8 +2949,42 @@
       "memory_bytes": 0
     }
   },
+  "random/types/(rand!/MersenneTwister/Float16)": {
+    "59": {
+      "time_ratio": 0.34,
+      "min_time_ns": 3.23e7,
+      "mean_time_ns": 3.4e7,
+      "std_time_ns": 0.0,
+      "base_hash": "9b7d88b",
+      "median_time_ns": 3.4e7,
+      "source_type": "report_md",
+      "max_time_ns": 3.57e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b378d19",
+      "timestamp": "2026-03-10T23:30:12.231",
+      "memory_bytes": 0
+    },
+    "50": {
+      "time_ratio": 0.34,
+      "min_time_ns": 3.23e7,
+      "mean_time_ns": 3.4e7,
+      "std_time_ns": 0.0,
+      "base_hash": "960870e",
+      "median_time_ns": 3.4e7,
+      "source_type": "report_md",
+      "max_time_ns": 3.57e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b2adc93",
+      "timestamp": "2026-03-10T23:30:15.314",
+      "memory_bytes": 0
+    }
+  },
   "random/ranges/(RangeGenerator/UInt32/1:1)": {
-    "113": {
+    "185": {
       "time_ratio": 0.72,
       "min_time_ns": 6.84e7,
       "mean_time_ns": 7.2e7,
@@ -2004,23 +3002,7 @@
     }
   },
   "random/collections/(rand!/ImplicitRNG/small String)": {
-    "52": {
-      "time_ratio": 1.32,
-      "min_time_ns": 1.254e8,
-      "mean_time_ns": 1.32e8,
-      "std_time_ns": 0.0,
-      "base_hash": "1b600f0",
-      "median_time_ns": 1.32e8,
-      "source_type": "report_md",
-      "max_time_ns": 1.386e8,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "c1a287e",
-      "timestamp": "2026-03-10T00:41:06.619",
-      "memory_bytes": 0
-    },
-    "105": {
+    "177": {
       "time_ratio": 2.18,
       "min_time_ns": 2.0710000000000003e8,
       "mean_time_ns": 2.1800000000000003e8,
@@ -2036,7 +3018,39 @@
       "timestamp": "2026-03-10T00:40:54.113",
       "memory_bytes": 0
     },
-    "97": {
+    "79": {
+      "time_ratio": 0.43,
+      "min_time_ns": 4.085e7,
+      "mean_time_ns": 4.3e7,
+      "std_time_ns": 0.0,
+      "base_hash": "61c6f33",
+      "median_time_ns": 4.3e7,
+      "source_type": "report_md",
+      "max_time_ns": 4.515e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b6bca19",
+      "timestamp": "2026-03-10T23:30:05.064",
+      "memory_bytes": 0
+    },
+    "124": {
+      "time_ratio": 1.32,
+      "min_time_ns": 1.254e8,
+      "mean_time_ns": 1.32e8,
+      "std_time_ns": 0.0,
+      "base_hash": "1b600f0",
+      "median_time_ns": 1.32e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.386e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "c1a287e",
+      "timestamp": "2026-03-10T00:41:06.619",
+      "memory_bytes": 0
+    },
+    "169": {
       "time_ratio": 0.63,
       "min_time_ns": 5.985e7,
       "mean_time_ns": 6.3e7,
@@ -2054,7 +3068,7 @@
     }
   },
   "random/collections/(rand/ImplicitRNG/small String)": {
-    "105": {
+    "177": {
       "time_ratio": 1.34,
       "min_time_ns": 1.2730000000000001e8,
       "mean_time_ns": 1.3400000000000001e8,
@@ -2069,28 +3083,58 @@
       "commit_hash": "cd2ebfc",
       "timestamp": "2026-03-10T00:40:54.113",
       "memory_bytes": 0
-    }
-  },
-  "random/ranges/(RangeGenerator/UInt128/1:170141183460469231731687303715884105728)": {
-    "39": {
-      "time_ratio": 1.29,
-      "min_time_ns": 1.2255e8,
-      "mean_time_ns": 1.29e8,
+    },
+    "79": {
+      "time_ratio": 0.74,
+      "min_time_ns": 7.03e7,
+      "mean_time_ns": 7.4e7,
       "std_time_ns": 0.0,
-      "base_hash": "2ebe577",
-      "median_time_ns": 1.29e8,
+      "base_hash": "61c6f33",
+      "median_time_ns": 7.4e7,
       "source_type": "report_md",
-      "max_time_ns": 1.3545e8,
+      "max_time_ns": 7.77e7,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "bf5f420",
-      "timestamp": "2026-03-10T00:41:10.019",
+      "commit_hash": "b6bca19",
+      "timestamp": "2026-03-10T23:30:05.064",
+      "memory_bytes": 0
+    },
+    "41": {
+      "time_ratio": 1.33,
+      "min_time_ns": 1.2635e8,
+      "mean_time_ns": 1.33e8,
+      "std_time_ns": 0.0,
+      "base_hash": "1e2758e",
+      "median_time_ns": 1.33e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.3965e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b0772ee",
+      "timestamp": "2026-03-10T23:30:18.437",
+      "memory_bytes": 0
+    },
+    "90": {
+      "time_ratio": 1.26,
+      "min_time_ns": 1.197e8,
+      "mean_time_ns": 1.26e8,
+      "std_time_ns": 0.0,
+      "base_hash": "a14cc38",
+      "median_time_ns": 1.26e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.323e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b9ce885",
+      "timestamp": "2026-03-10T23:30:00.792",
       "memory_bytes": 0
     }
   },
-  "random/ranges/(RangeGenerator/Int128/1:4294967297)": {
-    "39": {
+  "random/ranges/(RangeGenerator/UInt128/1:170141183460469231731687303715884105728)": {
+    "111": {
       "time_ratio": 1.29,
       "min_time_ns": 1.2255e8,
       "mean_time_ns": 1.29e8,
@@ -2106,7 +3150,41 @@
       "timestamp": "2026-03-10T00:41:10.019",
       "memory_bytes": 0
     },
-    "40": {
+    "99": {
+      "time_ratio": 1.29,
+      "min_time_ns": 1.2255e8,
+      "mean_time_ns": 1.29e8,
+      "std_time_ns": 0.0,
+      "base_hash": "594d001",
+      "median_time_ns": 1.29e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.3545e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "bbdee0b",
+      "timestamp": "2026-03-10T23:29:57.600",
+      "memory_bytes": 0
+    }
+  },
+  "random/ranges/(RangeGenerator/Int128/1:4294967297)": {
+    "111": {
+      "time_ratio": 1.29,
+      "min_time_ns": 1.2255e8,
+      "mean_time_ns": 1.29e8,
+      "std_time_ns": 0.0,
+      "base_hash": "2ebe577",
+      "median_time_ns": 1.29e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.3545e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "bf5f420",
+      "timestamp": "2026-03-10T00:41:10.019",
+      "memory_bytes": 0
+    },
+    "112": {
       "time_ratio": 1.29,
       "min_time_ns": 1.2255e8,
       "mean_time_ns": 1.29e8,
@@ -2124,7 +3202,7 @@
     }
   },
   "random/types/(rand!/MersenneTwister/ComplexF64)": {
-    "125": {
+    "197": {
       "time_ratio": 1.37,
       "min_time_ns": 1.3015e8,
       "mean_time_ns": 1.37e8,
@@ -2142,23 +3220,7 @@
     }
   },
   "random/types/(randn/ImplicitRNG/Float64)": {
-    "63": {
-      "time_ratio": 0.72,
-      "min_time_ns": 6.84e7,
-      "mean_time_ns": 7.2e7,
-      "std_time_ns": 0.0,
-      "base_hash": "51bb968",
-      "median_time_ns": 7.2e7,
-      "source_type": "report_md",
-      "max_time_ns": 7.56e7,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "c4a5dd9",
-      "timestamp": "2026-03-10T00:41:04.168",
-      "memory_bytes": 0
-    },
-    "105": {
+    "177": {
       "time_ratio": 1.71,
       "min_time_ns": 1.6245e8,
       "mean_time_ns": 1.71e8,
@@ -2173,10 +3235,58 @@
       "commit_hash": "cd2ebfc",
       "timestamp": "2026-03-10T00:40:54.113",
       "memory_bytes": 0
+    },
+    "79": {
+      "time_ratio": 0.41,
+      "min_time_ns": 3.895e7,
+      "mean_time_ns": 4.1e7,
+      "std_time_ns": 0.0,
+      "base_hash": "61c6f33",
+      "median_time_ns": 4.1e7,
+      "source_type": "report_md",
+      "max_time_ns": 4.305e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b6bca19",
+      "timestamp": "2026-03-10T23:30:05.064",
+      "memory_bytes": 0
+    },
+    "135": {
+      "time_ratio": 0.72,
+      "min_time_ns": 6.84e7,
+      "mean_time_ns": 7.2e7,
+      "std_time_ns": 0.0,
+      "base_hash": "51bb968",
+      "median_time_ns": 7.2e7,
+      "source_type": "report_md",
+      "max_time_ns": 7.56e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "c4a5dd9",
+      "timestamp": "2026-03-10T00:41:04.168",
+      "memory_bytes": 0
     }
   },
   "random/collections/(rand/ImplicitRNG/large Vector)": {
-    "133": {
+    "177": {
+      "time_ratio": 2.43,
+      "min_time_ns": 2.3085000000000003e8,
+      "mean_time_ns": 2.4300000000000003e8,
+      "std_time_ns": 0.0,
+      "base_hash": "1b600f0",
+      "median_time_ns": 2.4300000000000003e8,
+      "source_type": "report_md",
+      "max_time_ns": 2.5515000000000003e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "cd2ebfc",
+      "timestamp": "2026-03-10T00:40:54.113",
+      "memory_bytes": 0
+    },
+    "205": {
       "time_ratio": 1.44,
       "min_time_ns": 1.368e8,
       "mean_time_ns": 1.44e8,
@@ -2192,25 +3302,25 @@
       "timestamp": "2026-03-10T00:40:47.325",
       "memory_bytes": 0
     },
-    "105": {
-      "time_ratio": 2.43,
-      "min_time_ns": 2.3085000000000003e8,
-      "mean_time_ns": 2.4300000000000003e8,
+    "79": {
+      "time_ratio": 0.48,
+      "min_time_ns": 4.56e7,
+      "mean_time_ns": 4.8e7,
       "std_time_ns": 0.0,
-      "base_hash": "1b600f0",
-      "median_time_ns": 2.4300000000000003e8,
+      "base_hash": "61c6f33",
+      "median_time_ns": 4.8e7,
       "source_type": "report_md",
-      "max_time_ns": 2.5515000000000003e8,
+      "max_time_ns": 5.04e7,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "cd2ebfc",
-      "timestamp": "2026-03-10T00:40:54.113",
+      "commit_hash": "b6bca19",
+      "timestamp": "2026-03-10T23:30:05.064",
       "memory_bytes": 0
     }
   },
   "random/types/(randn/ImplicitRNG/ImplicitFloat64)": {
-    "63": {
+    "135": {
       "time_ratio": 0.73,
       "min_time_ns": 6.935e7,
       "mean_time_ns": 7.3e7,
@@ -2228,7 +3338,7 @@
     }
   },
   "random/types/(rand!/MersenneTwister/Complex{UInt16})": {
-    "125": {
+    "197": {
       "time_ratio": 1.33,
       "min_time_ns": 1.2635e8,
       "mean_time_ns": 1.33e8,
@@ -2246,7 +3356,7 @@
     }
   },
   "random/types/(\\rand!\\/\\MersenneTwister\\/\\Complex{UInt32}\\)": {
-    "121": {
+    "193": {
       "time_ratio": 1.29,
       "min_time_ns": 1.2255e8,
       "mean_time_ns": 1.29e8,
@@ -2264,23 +3374,23 @@
     }
   },
   "random/types/(rand/MersenneTwister/UInt8)": {
-    "67": {
+    "48": {
       "time_ratio": 1.27,
       "min_time_ns": 1.2065e8,
       "mean_time_ns": 1.27e8,
       "std_time_ns": 0.0,
-      "base_hash": "1a7355b",
+      "base_hash": "aa17702",
       "median_time_ns": 1.27e8,
       "source_type": "report_md",
       "max_time_ns": 1.3335e8,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "c4fe739",
-      "timestamp": "2026-03-10T00:41:03.344",
+      "commit_hash": "b16a231",
+      "timestamp": "2026-03-10T23:30:16.214",
       "memory_bytes": 0
     },
-    "107": {
+    "179": {
       "time_ratio": 1.38,
       "min_time_ns": 1.311e8,
       "mean_time_ns": 1.38e8,
@@ -2295,10 +3405,44 @@
       "commit_hash": "cd660ad",
       "timestamp": "2026-03-10T00:40:53.667",
       "memory_bytes": 0
+    },
+    "139": {
+      "time_ratio": 1.27,
+      "min_time_ns": 1.2065e8,
+      "mean_time_ns": 1.27e8,
+      "std_time_ns": 0.0,
+      "base_hash": "1a7355b",
+      "median_time_ns": 1.27e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.3335e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "c4fe739",
+      "timestamp": "2026-03-10T00:41:03.344",
+      "memory_bytes": 0
+    }
+  },
+  "random/types/(rand/MersenneTwister/UInt64)": {
+    "84": {
+      "time_ratio": 1.29,
+      "min_time_ns": 1.2255e8,
+      "mean_time_ns": 1.29e8,
+      "std_time_ns": 0.0,
+      "base_hash": "7dc132c",
+      "median_time_ns": 1.29e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.3545e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b7ff634",
+      "timestamp": "2026-03-10T23:30:03.073",
+      "memory_bytes": 0
     }
   },
   "random/ranges/(RangeGenerator/BigInt/1:170141183460469231731687303715884105728)": {
-    "126": {
+    "198": {
       "time_ratio": 0.68,
       "min_time_ns": 6.46e7,
       "mean_time_ns": 6.8e7,
@@ -2316,7 +3460,23 @@
     }
   },
   "random/types/(rand/MersenneTwister/Complex{Int128})": {
-    "125": {
+    "198": {
+      "time_ratio": 1.82,
+      "min_time_ns": 1.729e8,
+      "mean_time_ns": 1.82e8,
+      "std_time_ns": 0.0,
+      "base_hash": "aafae8a",
+      "median_time_ns": 1.82e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.911e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "d192ec8",
+      "timestamp": "2026-03-10T00:40:49.835",
+      "memory_bytes": 0
+    },
+    "197": {
       "time_ratio": 1.62,
       "min_time_ns": 1.539e8,
       "mean_time_ns": 1.62e8,
@@ -2332,25 +3492,41 @@
       "timestamp": "2026-03-10T00:40:50.051",
       "memory_bytes": 0
     },
-    "126": {
-      "time_ratio": 1.82,
-      "min_time_ns": 1.729e8,
-      "mean_time_ns": 1.82e8,
+    "67": {
+      "time_ratio": 0.54,
+      "min_time_ns": 5.13e7,
+      "mean_time_ns": 5.4e7,
       "std_time_ns": 0.0,
-      "base_hash": "aafae8a",
-      "median_time_ns": 1.82e8,
+      "base_hash": "907264b",
+      "median_time_ns": 5.4e7,
       "source_type": "report_md",
-      "max_time_ns": 1.911e8,
+      "max_time_ns": 5.67e7,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "d192ec8",
-      "timestamp": "2026-03-10T00:40:49.835",
+      "commit_hash": "b46df09",
+      "timestamp": "2026-03-10T23:30:08.960",
       "memory_bytes": 0
     }
   },
   "random/ranges/(RangeGenerator/Int64/1:4294967297)": {
-    "113": {
+    "99": {
+      "time_ratio": 1.63,
+      "min_time_ns": 1.5485e8,
+      "mean_time_ns": 1.63e8,
+      "std_time_ns": 0.0,
+      "base_hash": "594d001",
+      "median_time_ns": 1.63e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.7115e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "bbdee0b",
+      "timestamp": "2026-03-10T23:29:57.600",
+      "memory_bytes": 0
+    },
+    "185": {
       "time_ratio": 0.72,
       "min_time_ns": 6.84e7,
       "mean_time_ns": 7.2e7,
@@ -2368,23 +3544,7 @@
     }
   },
   "random/collections/(rand/ImplicitRNG/small Set)": {
-    "102": {
-      "time_ratio": 1.25,
-      "min_time_ns": 1.1875e8,
-      "mean_time_ns": 1.25e8,
-      "std_time_ns": 0.0,
-      "base_hash": "3ed49fd",
-      "median_time_ns": 1.25e8,
-      "source_type": "report_md",
-      "max_time_ns": 1.3125e8,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "cccbb61",
-      "timestamp": "2026-03-10T00:40:54.764",
-      "memory_bytes": 0
-    },
-    "105": {
+    "177": {
       "time_ratio": 1.65,
       "min_time_ns": 1.5675e8,
       "mean_time_ns": 1.65e8,
@@ -2399,10 +3559,42 @@
       "commit_hash": "cd2ebfc",
       "timestamp": "2026-03-10T00:40:54.113",
       "memory_bytes": 0
+    },
+    "79": {
+      "time_ratio": 0.57,
+      "min_time_ns": 5.414999999999999e7,
+      "mean_time_ns": 5.699999999999999e7,
+      "std_time_ns": 0.0,
+      "base_hash": "61c6f33",
+      "median_time_ns": 5.699999999999999e7,
+      "source_type": "report_md",
+      "max_time_ns": 5.984999999999999e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b6bca19",
+      "timestamp": "2026-03-10T23:30:05.064",
+      "memory_bytes": 0
+    },
+    "174": {
+      "time_ratio": 1.25,
+      "min_time_ns": 1.1875e8,
+      "mean_time_ns": 1.25e8,
+      "std_time_ns": 0.0,
+      "base_hash": "3ed49fd",
+      "median_time_ns": 1.25e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.3125e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "cccbb61",
+      "timestamp": "2026-03-10T00:40:54.764",
+      "memory_bytes": 0
     }
   },
   "random/types/(rand!/MersenneTwister/Complex{Int16})": {
-    "125": {
+    "197": {
       "time_ratio": 1.37,
       "min_time_ns": 1.3015e8,
       "mean_time_ns": 1.37e8,
@@ -2420,7 +3612,7 @@
     }
   },
   "random/ranges/(RangeGenerator/UInt32/1:4294967295)": {
-    "113": {
+    "185": {
       "time_ratio": 0.72,
       "min_time_ns": 6.84e7,
       "mean_time_ns": 7.2e7,
@@ -2438,7 +3630,7 @@
     }
   },
   "random/ranges/(rand/MersenneTwister/BigInt/RangeGenerator(1:1))": {
-    "105": {
+    "177": {
       "time_ratio": 1.39,
       "min_time_ns": 1.3205e8,
       "mean_time_ns": 1.39e8,
@@ -2456,7 +3648,23 @@
     }
   },
   "random/ranges/(RangeGenerator/UInt64/1:18446744073709551615)": {
-    "113": {
+    "99": {
+      "time_ratio": 1.63,
+      "min_time_ns": 1.5485e8,
+      "mean_time_ns": 1.63e8,
+      "std_time_ns": 0.0,
+      "base_hash": "594d001",
+      "median_time_ns": 1.63e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.7115e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "bbdee0b",
+      "timestamp": "2026-03-10T23:29:57.600",
+      "memory_bytes": 0
+    },
+    "185": {
       "time_ratio": 0.73,
       "min_time_ns": 6.935e7,
       "mean_time_ns": 7.3e7,
@@ -2474,7 +3682,7 @@
     }
   },
   "random/types/(rand/MersenneTwister/Int64)": {
-    "67": {
+    "139": {
       "time_ratio": 1.29,
       "min_time_ns": 1.2255e8,
       "mean_time_ns": 1.29e8,
@@ -2489,26 +3697,26 @@
       "commit_hash": "c4fe739",
       "timestamp": "2026-03-10T00:41:03.344",
       "memory_bytes": 0
-    }
-  },
-  "random/collections/(rand!/ImplicitRNG/large Dict)": {
-    "125": {
-      "time_ratio": 1.29,
-      "min_time_ns": 1.2255e8,
-      "mean_time_ns": 1.29e8,
+    },
+    "84": {
+      "time_ratio": 1.36,
+      "min_time_ns": 1.292e8,
+      "mean_time_ns": 1.36e8,
       "std_time_ns": 0.0,
-      "base_hash": "0a82b71",
-      "median_time_ns": 1.29e8,
+      "base_hash": "7dc132c",
+      "median_time_ns": 1.36e8,
       "source_type": "report_md",
-      "max_time_ns": 1.3545e8,
+      "max_time_ns": 1.428e8,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "d13bdc0",
-      "timestamp": "2026-03-10T00:40:50.051",
+      "commit_hash": "b7ff634",
+      "timestamp": "2026-03-10T23:30:03.073",
       "memory_bytes": 0
-    },
-    "105": {
+    }
+  },
+  "random/collections/(rand!/ImplicitRNG/large Dict)": {
+    "177": {
       "time_ratio": 1.38,
       "min_time_ns": 1.311e8,
       "mean_time_ns": 1.38e8,
@@ -2523,10 +3731,42 @@
       "commit_hash": "cd2ebfc",
       "timestamp": "2026-03-10T00:40:54.113",
       "memory_bytes": 0
+    },
+    "79": {
+      "time_ratio": 0.72,
+      "min_time_ns": 6.84e7,
+      "mean_time_ns": 7.2e7,
+      "std_time_ns": 0.0,
+      "base_hash": "61c6f33",
+      "median_time_ns": 7.2e7,
+      "source_type": "report_md",
+      "max_time_ns": 7.56e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b6bca19",
+      "timestamp": "2026-03-10T23:30:05.064",
+      "memory_bytes": 0
+    },
+    "197": {
+      "time_ratio": 1.29,
+      "min_time_ns": 1.2255e8,
+      "mean_time_ns": 1.29e8,
+      "std_time_ns": 0.0,
+      "base_hash": "0a82b71",
+      "median_time_ns": 1.29e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.3545e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "d13bdc0",
+      "timestamp": "2026-03-10T00:40:50.051",
+      "memory_bytes": 0
     }
   },
   "random/ranges/(rand/MersenneTwister/BigInt/RangeGenerator(1:18446744073709551616))": {
-    "105": {
+    "177": {
       "time_ratio": 1.35,
       "min_time_ns": 1.2825e8,
       "mean_time_ns": 1.35e8,
@@ -2541,10 +3781,26 @@
       "commit_hash": "cd2ebfc",
       "timestamp": "2026-03-10T00:40:54.113",
       "memory_bytes": 0
+    },
+    "81": {
+      "time_ratio": 0.71,
+      "min_time_ns": 6.745e7,
+      "mean_time_ns": 7.1e7,
+      "std_time_ns": 0.0,
+      "base_hash": "ae798cd",
+      "median_time_ns": 7.1e7,
+      "source_type": "report_md",
+      "max_time_ns": 7.455e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b6fee9a",
+      "timestamp": "2026-03-10T23:30:04.423",
+      "memory_bytes": 0
     }
   },
   "random/ranges/(RangeGenerator/Int16/1:1)": {
-    "39": {
+    "111": {
       "time_ratio": 1.32,
       "min_time_ns": 1.254e8,
       "mean_time_ns": 1.32e8,
@@ -2560,7 +3816,39 @@
       "timestamp": "2026-03-10T00:41:10.019",
       "memory_bytes": 0
     },
-    "113": {
+    "174": {
+      "time_ratio": 1.26,
+      "min_time_ns": 1.197e8,
+      "mean_time_ns": 1.26e8,
+      "std_time_ns": 0.0,
+      "base_hash": "3ed49fd",
+      "median_time_ns": 1.26e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.323e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "cccbb61",
+      "timestamp": "2026-03-10T00:40:54.764",
+      "memory_bytes": 0
+    },
+    "99": {
+      "time_ratio": 1.39,
+      "min_time_ns": 1.3205e8,
+      "mean_time_ns": 1.39e8,
+      "std_time_ns": 0.0,
+      "base_hash": "594d001",
+      "median_time_ns": 1.39e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.4595e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "bbdee0b",
+      "timestamp": "2026-03-10T23:29:57.600",
+      "memory_bytes": 0
+    },
+    "185": {
       "time_ratio": 0.67,
       "min_time_ns": 6.365000000000001e7,
       "mean_time_ns": 6.700000000000001e7,
@@ -2576,25 +3864,41 @@
       "timestamp": "2026-03-10T00:40:52.472",
       "memory_bytes": 0
     },
-    "102": {
+    "41": {
       "time_ratio": 1.26,
       "min_time_ns": 1.197e8,
       "mean_time_ns": 1.26e8,
       "std_time_ns": 0.0,
-      "base_hash": "3ed49fd",
+      "base_hash": "1e2758e",
       "median_time_ns": 1.26e8,
       "source_type": "report_md",
       "max_time_ns": 1.323e8,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "cccbb61",
-      "timestamp": "2026-03-10T00:40:54.764",
+      "commit_hash": "b0772ee",
+      "timestamp": "2026-03-10T23:30:18.437",
       "memory_bytes": 0
     }
   },
   "random/randstring/(randstring/MersenneTwister/\\qwèrtï\\/100)": {
-    "125": {
+    "46": {
+      "time_ratio": 0.98,
+      "min_time_ns": 9.31e7,
+      "mean_time_ns": 9.8e7,
+      "std_time_ns": 0.0,
+      "base_hash": "20a5fa7",
+      "median_time_ns": 9.8e7,
+      "source_type": "report_md",
+      "max_time_ns": 1.029e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b146a70",
+      "timestamp": "2026-03-10T23:30:16.871",
+      "memory_bytes": 0
+    },
+    "197": {
       "time_ratio": 0.98,
       "min_time_ns": 9.31e7,
       "mean_time_ns": 9.8e7,
@@ -2612,7 +3916,7 @@
     }
   },
   "random/collections/(rand/ImplicitRNG/large BitSet)": {
-    "105": {
+    "177": {
       "time_ratio": 1.31,
       "min_time_ns": 1.2445e8,
       "mean_time_ns": 1.31e8,
@@ -2630,7 +3934,7 @@
     }
   },
   "random/types/(rand/ImplicitRNG/ImplicitFloat64)": {
-    "63": {
+    "135": {
       "time_ratio": 0.68,
       "min_time_ns": 6.46e7,
       "mean_time_ns": 6.8e7,
@@ -2648,7 +3952,7 @@
     }
   },
   "random/ranges/(rand/MersenneTwister/UInt128/RangeGenerator(1:1))": {
-    "130": {
+    "202": {
       "time_ratio": 0.6,
       "min_time_ns": 5.7e7,
       "mean_time_ns": 6.0e7,
@@ -2666,7 +3970,7 @@
     }
   },
   "random/ranges/(rand/MersenneTwister/BigInt/RangeGenerator(1:4294967295))": {
-    "105": {
+    "177": {
       "time_ratio": 1.26,
       "min_time_ns": 1.197e8,
       "mean_time_ns": 1.26e8,
@@ -2682,7 +3986,7 @@
       "timestamp": "2026-03-10T00:40:54.113",
       "memory_bytes": 0
     },
-    "94": {
+    "166": {
       "time_ratio": 1.34,
       "min_time_ns": 1.2730000000000001e8,
       "mean_time_ns": 1.3400000000000001e8,
@@ -2700,7 +4004,7 @@
     }
   },
   "random/ranges/(\\RangeGenerator\\/\\BigInt\\/\\1:18446744073709551615\\)": {
-    "34": {
+    "106": {
       "time_ratio": 1.28,
       "min_time_ns": 1.216e8,
       "mean_time_ns": 1.28e8,
@@ -2718,7 +4022,7 @@
     }
   },
   "random/types/(rand!/MersenneTwister/Complex{Int128})": {
-    "125": {
+    "197": {
       "time_ratio": 1.68,
       "min_time_ns": 1.596e8,
       "mean_time_ns": 1.68e8,
@@ -2736,7 +4040,7 @@
     }
   },
   "random/ranges/(RangeGenerator/Int128/1:18446744073709551616)": {
-    "39": {
+    "111": {
       "time_ratio": 1.29,
       "min_time_ns": 1.2255e8,
       "mean_time_ns": 1.29e8,
@@ -2752,7 +4056,23 @@
       "timestamp": "2026-03-10T00:41:10.019",
       "memory_bytes": 0
     },
-    "40": {
+    "99": {
+      "time_ratio": 1.29,
+      "min_time_ns": 1.2255e8,
+      "mean_time_ns": 1.29e8,
+      "std_time_ns": 0.0,
+      "base_hash": "594d001",
+      "median_time_ns": 1.29e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.3545e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "bbdee0b",
+      "timestamp": "2026-03-10T23:29:57.600",
+      "memory_bytes": 0
+    },
+    "112": {
       "time_ratio": 1.29,
       "min_time_ns": 1.2255e8,
       "mean_time_ns": 1.29e8,
@@ -2769,8 +4089,44 @@
       "memory_bytes": 0
     }
   },
+  "random/ranges/(RangeGenerator/UInt64/1:4294967295)": {
+    "99": {
+      "time_ratio": 1.63,
+      "min_time_ns": 1.5485e8,
+      "mean_time_ns": 1.63e8,
+      "std_time_ns": 0.0,
+      "base_hash": "594d001",
+      "median_time_ns": 1.63e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.7115e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "bbdee0b",
+      "timestamp": "2026-03-10T23:29:57.600",
+      "memory_bytes": 0
+    }
+  },
+  "random/randstring/(randstring/MersenneTwister)": {
+    "93": {
+      "time_ratio": 1.27,
+      "min_time_ns": 1.2065e8,
+      "mean_time_ns": 1.27e8,
+      "std_time_ns": 0.0,
+      "base_hash": "3bf9d17",
+      "median_time_ns": 1.27e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.3335e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "bae2d8d",
+      "timestamp": "2026-03-10T23:29:59.543",
+      "memory_bytes": 0
+    }
+  },
   "random/ranges/(rand/MersenneTwister/UInt128/RangeGenerator(1:18446744073709551615))": {
-    "130": {
+    "202": {
       "time_ratio": 0.64,
       "min_time_ns": 6.08e7,
       "mean_time_ns": 6.4e7,
@@ -2788,7 +4144,7 @@
     }
   },
   "random/ranges/(RangeGenerator/UInt8/1:1)": {
-    "39": {
+    "111": {
       "time_ratio": 1.27,
       "min_time_ns": 1.2065e8,
       "mean_time_ns": 1.27e8,
@@ -2804,7 +4160,23 @@
       "timestamp": "2026-03-10T00:41:10.019",
       "memory_bytes": 0
     },
-    "40": {
+    "99": {
+      "time_ratio": 1.26,
+      "min_time_ns": 1.197e8,
+      "mean_time_ns": 1.26e8,
+      "std_time_ns": 0.0,
+      "base_hash": "594d001",
+      "median_time_ns": 1.26e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.323e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "bbdee0b",
+      "timestamp": "2026-03-10T23:29:57.600",
+      "memory_bytes": 0
+    },
+    "112": {
       "time_ratio": 1.26,
       "min_time_ns": 1.197e8,
       "mean_time_ns": 1.26e8,
@@ -2820,7 +4192,7 @@
       "timestamp": "2026-03-10T00:41:09.639",
       "memory_bytes": 0
     },
-    "113": {
+    "185": {
       "time_ratio": 0.68,
       "min_time_ns": 6.46e7,
       "mean_time_ns": 6.8e7,
@@ -2838,7 +4210,23 @@
     }
   },
   "random/collections/(rand!/MersenneTwister/large String)": {
-    "125": {
+    "46": {
+      "time_ratio": 1.04,
+      "min_time_ns": 9.88e7,
+      "mean_time_ns": 1.04e8,
+      "std_time_ns": 0.0,
+      "base_hash": "20a5fa7",
+      "median_time_ns": 1.04e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.092e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b146a70",
+      "timestamp": "2026-03-10T23:30:16.871",
+      "memory_bytes": 0
+    },
+    "197": {
       "time_ratio": 1.03,
       "min_time_ns": 9.785e7,
       "mean_time_ns": 1.03e8,
@@ -2856,7 +4244,7 @@
     }
   },
   "random/ranges/(rand/MersenneTwister/Int128/RangeGenerator(1:18446744073709551616))": {
-    "130": {
+    "202": {
       "time_ratio": 0.64,
       "min_time_ns": 6.08e7,
       "mean_time_ns": 6.4e7,
@@ -2874,7 +4262,7 @@
     }
   },
   "random/ranges/(\\rand\\/\\MersenneTwister\\/\\Int128\\/\\RangeGenerator(1:1)\\)": {
-    "34": {
+    "106": {
       "time_ratio": 1.3,
       "min_time_ns": 1.235e8,
       "mean_time_ns": 1.3e8,

@@ -1,6 +1,38 @@
 {
   "sort/mergesort/(sort! forwards/ascending)": {
-    "134": {
+    "79": {
+      "time_ratio": 1.33,
+      "min_time_ns": 1.2635e8,
+      "mean_time_ns": 1.33e8,
+      "std_time_ns": 0.0,
+      "base_hash": "61c6f33",
+      "median_time_ns": 1.33e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.3965e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b6bca19",
+      "timestamp": "2026-03-10T23:30:05.064",
+      "memory_bytes": 0
+    },
+    "67": {
+      "time_ratio": 1.4,
+      "min_time_ns": 1.33e8,
+      "mean_time_ns": 1.4e8,
+      "std_time_ns": 0.0,
+      "base_hash": "907264b",
+      "median_time_ns": 1.4e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.47e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b46df09",
+      "timestamp": "2026-03-10T23:30:08.960",
+      "memory_bytes": 0
+    },
+    "206": {
       "time_ratio": 1.32,
       "min_time_ns": 1.254e8,
       "mean_time_ns": 1.32e8,
@@ -16,23 +48,7 @@
       "timestamp": "2026-03-10T00:40:47.111",
       "memory_bytes": 0
     },
-    "107": {
-      "time_ratio": 1.39,
-      "min_time_ns": 1.3205e8,
-      "mean_time_ns": 1.39e8,
-      "std_time_ns": 0.0,
-      "base_hash": "d6c092d",
-      "median_time_ns": 1.39e8,
-      "source_type": "report_md",
-      "max_time_ns": 1.4595e8,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "cd660ad",
-      "timestamp": "2026-03-10T00:40:53.667",
-      "memory_bytes": 0
-    },
-    "97": {
+    "169": {
       "time_ratio": 1.31,
       "min_time_ns": 1.2445e8,
       "mean_time_ns": 1.31e8,
@@ -47,9 +63,41 @@
       "commit_hash": "cb532d5",
       "timestamp": "2026-03-10T00:40:56.029",
       "memory_bytes": 0
+    },
+    "179": {
+      "time_ratio": 1.39,
+      "min_time_ns": 1.3205e8,
+      "mean_time_ns": 1.39e8,
+      "std_time_ns": 0.0,
+      "base_hash": "d6c092d",
+      "median_time_ns": 1.39e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.4595e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "cd660ad",
+      "timestamp": "2026-03-10T00:40:53.667",
+      "memory_bytes": 0
     }
   },
   "sort/length = 3/sort(rand(2n/2n/n); dims=3)": {
+    "75": {
+      "time_ratio": 0.8,
+      "min_time_ns": 7.6e7,
+      "mean_time_ns": 8.0e7,
+      "std_time_ns": 0.0,
+      "base_hash": "e3f90c4",
+      "median_time_ns": 8.0e7,
+      "source_type": "report_md",
+      "max_time_ns": 8.4e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b57a57a",
+      "timestamp": "2026-03-10T23:30:06.385",
+      "memory_bytes": 0
+    },
     "7": {
       "time_ratio": 1.64,
       "min_time_ns": 1.558e8,
@@ -68,7 +116,23 @@
     }
   },
   "sort/length = 10/descending": {
-    "102": {
+    "40": {
+      "time_ratio": 0.7,
+      "min_time_ns": 6.65e7,
+      "mean_time_ns": 7.0e7,
+      "std_time_ns": 0.0,
+      "base_hash": "c767032",
+      "median_time_ns": 7.0e7,
+      "source_type": "report_md",
+      "max_time_ns": 7.35e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b01e7a7",
+      "timestamp": "2026-03-10T23:30:18.767",
+      "memory_bytes": 0
+    },
+    "174": {
       "time_ratio": 1.82,
       "min_time_ns": 1.729e8,
       "mean_time_ns": 1.82e8,
@@ -86,7 +150,7 @@
     }
   },
   "sort/length = 3/sort!(fill(missing/length)/rev=true)": {
-    "91": {
+    "163": {
       "time_ratio": 1.22,
       "min_time_ns": 1.159e8,
       "mean_time_ns": 1.22e8,
@@ -104,7 +168,7 @@
     }
   },
   "sort/issorted/(reverse/random)": {
-    "125": {
+    "197": {
       "time_ratio": 0.25,
       "min_time_ns": 2.375e7,
       "mean_time_ns": 2.5e7,
@@ -119,39 +183,55 @@
       "commit_hash": "d13bdc0",
       "timestamp": "2026-03-10T00:40:50.051",
       "memory_bytes": 0
+    },
+    "89": {
+      "time_ratio": 1.76,
+      "min_time_ns": 1.672e8,
+      "mean_time_ns": 1.76e8,
+      "std_time_ns": 0.0,
+      "base_hash": "7723134",
+      "median_time_ns": 1.76e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.848e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b9b271f",
+      "timestamp": "2026-03-10T23:30:01.104",
+      "memory_bytes": 0
     }
   },
   "sort/mergesort/(sort! forwards/ones)": {
-    "132": {
-      "time_ratio": 1.33,
-      "min_time_ns": 1.2635e8,
-      "mean_time_ns": 1.33e8,
+    "177": {
+      "time_ratio": 1.34,
+      "min_time_ns": 1.2730000000000001e8,
+      "mean_time_ns": 1.3400000000000001e8,
       "std_time_ns": 0.0,
-      "base_hash": "e3adc39",
-      "median_time_ns": 1.33e8,
+      "base_hash": "1b600f0",
+      "median_time_ns": 1.3400000000000001e8,
       "source_type": "report_md",
-      "max_time_ns": 1.3965e8,
+      "max_time_ns": 1.4070000000000003e8,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "d22c304",
-      "timestamp": "2026-03-10T00:40:47.554",
+      "commit_hash": "cd2ebfc",
+      "timestamp": "2026-03-10T00:40:54.113",
       "memory_bytes": 0
     },
-    "81": {
-      "time_ratio": 1.48,
-      "min_time_ns": 1.406e8,
-      "mean_time_ns": 1.48e8,
+    "79": {
+      "time_ratio": 1.36,
+      "min_time_ns": 1.292e8,
+      "mean_time_ns": 1.36e8,
       "std_time_ns": 0.0,
-      "base_hash": "cae3571",
-      "median_time_ns": 1.48e8,
+      "base_hash": "61c6f33",
+      "median_time_ns": 1.36e8,
       "source_type": "report_md",
-      "max_time_ns": 1.554e8,
+      "max_time_ns": 1.428e8,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "c6a023a",
-      "timestamp": "2026-03-10T00:41:00.062",
+      "commit_hash": "b6bca19",
+      "timestamp": "2026-03-10T23:30:05.064",
       "memory_bytes": 0
     },
     "20": {
@@ -170,20 +250,36 @@
       "timestamp": "2026-03-09T03:20:31.529",
       "memory_bytes": 0
     },
-    "107": {
-      "time_ratio": 1.37,
-      "min_time_ns": 1.3015e8,
-      "mean_time_ns": 1.37e8,
+    "204": {
+      "time_ratio": 1.33,
+      "min_time_ns": 1.2635e8,
+      "mean_time_ns": 1.33e8,
       "std_time_ns": 0.0,
-      "base_hash": "d6c092d",
-      "median_time_ns": 1.37e8,
+      "base_hash": "e3adc39",
+      "median_time_ns": 1.33e8,
       "source_type": "report_md",
-      "max_time_ns": 1.4385e8,
+      "max_time_ns": 1.3965e8,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "cd660ad",
-      "timestamp": "2026-03-10T00:40:53.667",
+      "commit_hash": "d22c304",
+      "timestamp": "2026-03-10T00:40:47.554",
+      "memory_bytes": 0
+    },
+    "122": {
+      "time_ratio": 1.31,
+      "min_time_ns": 1.2445e8,
+      "mean_time_ns": 1.31e8,
+      "std_time_ns": 0.0,
+      "base_hash": "9117b4d",
+      "median_time_ns": 1.31e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.3755e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "c13f74b",
+      "timestamp": "2026-03-10T00:41:07.423",
       "memory_bytes": 0
     },
     "22": {
@@ -202,39 +298,7 @@
       "timestamp": "2026-03-09T03:20:31.698",
       "memory_bytes": 0
     },
-    "50": {
-      "time_ratio": 1.31,
-      "min_time_ns": 1.2445e8,
-      "mean_time_ns": 1.31e8,
-      "std_time_ns": 0.0,
-      "base_hash": "9117b4d",
-      "median_time_ns": 1.31e8,
-      "source_type": "report_md",
-      "max_time_ns": 1.3755e8,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "c13f74b",
-      "timestamp": "2026-03-10T00:41:07.423",
-      "memory_bytes": 0
-    },
-    "105": {
-      "time_ratio": 1.34,
-      "min_time_ns": 1.2730000000000001e8,
-      "mean_time_ns": 1.3400000000000001e8,
-      "std_time_ns": 0.0,
-      "base_hash": "1b600f0",
-      "median_time_ns": 1.3400000000000001e8,
-      "source_type": "report_md",
-      "max_time_ns": 1.4070000000000003e8,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "cd2ebfc",
-      "timestamp": "2026-03-10T00:40:54.113",
-      "memory_bytes": 0
-    },
-    "97": {
+    "169": {
       "time_ratio": 0.69,
       "min_time_ns": 6.555e7,
       "mean_time_ns": 6.9e7,
@@ -249,9 +313,75 @@
       "commit_hash": "cb532d5",
       "timestamp": "2026-03-10T00:40:56.029",
       "memory_bytes": 0
+    },
+    "179": {
+      "time_ratio": 1.37,
+      "min_time_ns": 1.3015e8,
+      "mean_time_ns": 1.37e8,
+      "std_time_ns": 0.0,
+      "base_hash": "d6c092d",
+      "median_time_ns": 1.37e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.4385e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "cd660ad",
+      "timestamp": "2026-03-10T00:40:53.667",
+      "memory_bytes": 0
+    },
+    "153": {
+      "time_ratio": 1.48,
+      "min_time_ns": 1.406e8,
+      "mean_time_ns": 1.48e8,
+      "std_time_ns": 0.0,
+      "base_hash": "cae3571",
+      "median_time_ns": 1.48e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.554e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "c6a023a",
+      "timestamp": "2026-03-10T00:41:00.062",
+      "memory_bytes": 0
+    }
+  },
+  "sort/issorted/(\\forwards\\/\\ones\\)": {
+    "64": {
+      "time_ratio": 1.31,
+      "min_time_ns": 1.2445e8,
+      "mean_time_ns": 1.31e8,
+      "std_time_ns": 0.0,
+      "base_hash": "502c039",
+      "median_time_ns": 1.31e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.3755e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b421eca",
+      "timestamp": "2026-03-10T23:30:10.268",
+      "memory_bytes": 0
     }
   },
   "sort/length = 3/sort(rand(2n/2n/n); dims=2)": {
+    "75": {
+      "time_ratio": 0.79,
+      "min_time_ns": 7.505e7,
+      "mean_time_ns": 7.9e7,
+      "std_time_ns": 0.0,
+      "base_hash": "e3f90c4",
+      "median_time_ns": 7.9e7,
+      "source_type": "report_md",
+      "max_time_ns": 8.295e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b57a57a",
+      "timestamp": "2026-03-10T23:30:06.385",
+      "memory_bytes": 0
+    },
     "7": {
       "time_ratio": 1.55,
       "min_time_ns": 1.4725e8,
@@ -288,7 +418,7 @@
     }
   },
   "sort/length = 3/sort!(rand(2n/2n/n); dims=1)": {
-    "49": {
+    "121": {
       "time_ratio": 1.21,
       "min_time_ns": 1.1495e8,
       "mean_time_ns": 1.21e8,
@@ -306,7 +436,7 @@
     }
   },
   "sort/insertionsort/(sortperm! forwards/ones)": {
-    "32": {
+    "104": {
       "time_ratio": 0.87,
       "min_time_ns": 8.265e7,
       "mean_time_ns": 8.7e7,
@@ -338,22 +468,6 @@
       "timestamp": "2026-03-09T03:20:31.615",
       "memory_bytes": 0
     },
-    "31": {
-      "time_ratio": 0.99,
-      "min_time_ns": 9.405e7,
-      "mean_time_ns": 9.9e7,
-      "std_time_ns": 0.0,
-      "base_hash": "12e679c",
-      "median_time_ns": 9.9e7,
-      "source_type": "report_md",
-      "max_time_ns": 1.0395e8,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "bd36d0a",
-      "timestamp": "2026-03-10T00:41:11.920",
-      "memory_bytes": 0
-    },
     "22": {
       "time_ratio": 0.62,
       "min_time_ns": 5.89e7,
@@ -368,6 +482,40 @@
       "samples": 1,
       "commit_hash": "0425751",
       "timestamp": "2026-03-09T03:20:31.698",
+      "memory_bytes": 0
+    },
+    "103": {
+      "time_ratio": 0.99,
+      "min_time_ns": 9.405e7,
+      "mean_time_ns": 9.9e7,
+      "std_time_ns": 0.0,
+      "base_hash": "12e679c",
+      "median_time_ns": 9.9e7,
+      "source_type": "report_md",
+      "max_time_ns": 1.0395e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "bd36d0a",
+      "timestamp": "2026-03-10T00:41:11.920",
+      "memory_bytes": 0
+    }
+  },
+  "sort/length = 3/Int unions with missing": {
+    "73": {
+      "time_ratio": 0.73,
+      "min_time_ns": 6.935e7,
+      "mean_time_ns": 7.3e7,
+      "std_time_ns": 0.0,
+      "base_hash": "3a3af82",
+      "median_time_ns": 7.3e7,
+      "source_type": "report_md",
+      "max_time_ns": 7.665e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b4ce107",
+      "timestamp": "2026-03-10T23:30:07.045",
       "memory_bytes": 0
     }
   },
@@ -406,39 +554,7 @@
       "timestamp": "2026-03-09T03:20:32.716",
       "memory_bytes": 0
     },
-    "22": {
-      "time_ratio": 0.43,
-      "min_time_ns": 4.085e7,
-      "mean_time_ns": 4.3e7,
-      "std_time_ns": 0.0,
-      "base_hash": "8cdb17b",
-      "median_time_ns": 4.3e7,
-      "source_type": "unknown",
-      "max_time_ns": 4.515e7,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "0425751",
-      "timestamp": "2026-03-09T03:20:31.698",
-      "memory_bytes": 0
-    },
-    "50": {
-      "time_ratio": 1.51,
-      "min_time_ns": 1.4345e8,
-      "mean_time_ns": 1.51e8,
-      "std_time_ns": 0.0,
-      "base_hash": "9117b4d",
-      "median_time_ns": 1.51e8,
-      "source_type": "report_md",
-      "max_time_ns": 1.5855e8,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "c13f74b",
-      "timestamp": "2026-03-10T00:41:07.423",
-      "memory_bytes": 0
-    },
-    "105": {
+    "177": {
       "time_ratio": 0.66,
       "min_time_ns": 6.27e7,
       "mean_time_ns": 6.6e7,
@@ -454,7 +570,39 @@
       "timestamp": "2026-03-10T00:40:54.113",
       "memory_bytes": 0
     },
-    "132": {
+    "79": {
+      "time_ratio": 0.67,
+      "min_time_ns": 6.365000000000001e7,
+      "mean_time_ns": 6.700000000000001e7,
+      "std_time_ns": 0.0,
+      "base_hash": "61c6f33",
+      "median_time_ns": 6.700000000000001e7,
+      "source_type": "report_md",
+      "max_time_ns": 7.035000000000001e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b6bca19",
+      "timestamp": "2026-03-10T23:30:05.064",
+      "memory_bytes": 0
+    },
+    "67": {
+      "time_ratio": 0.66,
+      "min_time_ns": 6.27e7,
+      "mean_time_ns": 6.6e7,
+      "std_time_ns": 0.0,
+      "base_hash": "907264b",
+      "median_time_ns": 6.6e7,
+      "source_type": "report_md",
+      "max_time_ns": 6.93e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b46df09",
+      "timestamp": "2026-03-10T23:30:08.960",
+      "memory_bytes": 0
+    },
+    "204": {
       "time_ratio": 1.51,
       "min_time_ns": 1.4345e8,
       "mean_time_ns": 1.51e8,
@@ -469,10 +617,42 @@
       "commit_hash": "d22c304",
       "timestamp": "2026-03-10T00:40:47.554",
       "memory_bytes": 0
+    },
+    "122": {
+      "time_ratio": 1.51,
+      "min_time_ns": 1.4345e8,
+      "mean_time_ns": 1.51e8,
+      "std_time_ns": 0.0,
+      "base_hash": "9117b4d",
+      "median_time_ns": 1.51e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.5855e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "c13f74b",
+      "timestamp": "2026-03-10T00:41:07.423",
+      "memory_bytes": 0
+    },
+    "22": {
+      "time_ratio": 0.43,
+      "min_time_ns": 4.085e7,
+      "mean_time_ns": 4.3e7,
+      "std_time_ns": 0.0,
+      "base_hash": "8cdb17b",
+      "median_time_ns": 4.3e7,
+      "source_type": "unknown",
+      "max_time_ns": 4.515e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "0425751",
+      "timestamp": "2026-03-09T03:20:31.698",
+      "memory_bytes": 0
     }
   },
   "sort/quicksort/(sortperm! reverse/descending)": {
-    "32": {
+    "104": {
       "time_ratio": 1.0,
       "min_time_ns": 9.5e7,
       "mean_time_ns": 1.0e8,
@@ -505,6 +685,40 @@
       "memory_bytes": 0
     }
   },
+  "sort/insertionsort/(\\sortperm! reverse\\/\\descending\\)": {
+    "87": {
+      "time_ratio": 1.5,
+      "min_time_ns": 1.425e8,
+      "mean_time_ns": 1.5e8,
+      "std_time_ns": 0.0,
+      "base_hash": "b39d697",
+      "median_time_ns": 1.5e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.575e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b97eb35",
+      "timestamp": "2026-03-10T23:30:01.752",
+      "memory_bytes": 0
+    },
+    "64": {
+      "time_ratio": 1.37,
+      "min_time_ns": 1.3015e8,
+      "mean_time_ns": 1.37e8,
+      "std_time_ns": 0.0,
+      "base_hash": "502c039",
+      "median_time_ns": 1.37e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.4385e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b421eca",
+      "timestamp": "2026-03-10T23:30:10.268",
+      "memory_bytes": 0
+    }
+  },
   "sort/insertionsort/(sort forwards/random)": {
     "24": {
       "time_ratio": 1.51,
@@ -522,39 +736,7 @@
       "timestamp": "2026-03-09T03:20:32.716",
       "memory_bytes": 0
     },
-    "22": {
-      "time_ratio": 0.43,
-      "min_time_ns": 4.085e7,
-      "mean_time_ns": 4.3e7,
-      "std_time_ns": 0.0,
-      "base_hash": "8cdb17b",
-      "median_time_ns": 4.3e7,
-      "source_type": "unknown",
-      "max_time_ns": 4.515e7,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "0425751",
-      "timestamp": "2026-03-09T03:20:31.698",
-      "memory_bytes": 0
-    },
-    "50": {
-      "time_ratio": 1.51,
-      "min_time_ns": 1.4345e8,
-      "mean_time_ns": 1.51e8,
-      "std_time_ns": 0.0,
-      "base_hash": "9117b4d",
-      "median_time_ns": 1.51e8,
-      "source_type": "report_md",
-      "max_time_ns": 1.5855e8,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "c13f74b",
-      "timestamp": "2026-03-10T00:41:07.423",
-      "memory_bytes": 0
-    },
-    "105": {
+    "177": {
       "time_ratio": 0.66,
       "min_time_ns": 6.27e7,
       "mean_time_ns": 6.6e7,
@@ -570,7 +752,39 @@
       "timestamp": "2026-03-10T00:40:54.113",
       "memory_bytes": 0
     },
-    "132": {
+    "79": {
+      "time_ratio": 0.66,
+      "min_time_ns": 6.27e7,
+      "mean_time_ns": 6.6e7,
+      "std_time_ns": 0.0,
+      "base_hash": "61c6f33",
+      "median_time_ns": 6.6e7,
+      "source_type": "report_md",
+      "max_time_ns": 6.93e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b6bca19",
+      "timestamp": "2026-03-10T23:30:05.064",
+      "memory_bytes": 0
+    },
+    "67": {
+      "time_ratio": 0.66,
+      "min_time_ns": 6.27e7,
+      "mean_time_ns": 6.6e7,
+      "std_time_ns": 0.0,
+      "base_hash": "907264b",
+      "median_time_ns": 6.6e7,
+      "source_type": "report_md",
+      "max_time_ns": 6.93e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b46df09",
+      "timestamp": "2026-03-10T23:30:08.960",
+      "memory_bytes": 0
+    },
+    "204": {
       "time_ratio": 1.51,
       "min_time_ns": 1.4345e8,
       "mean_time_ns": 1.51e8,
@@ -585,98 +799,16 @@
       "commit_hash": "d22c304",
       "timestamp": "2026-03-10T00:40:47.554",
       "memory_bytes": 0
-    }
-  },
-  "sort/insertionsort/(sort! reverse/ascending)": {
-    "24": {
-      "time_ratio": 1.5,
-      "min_time_ns": 1.425e8,
-      "mean_time_ns": 1.5e8,
-      "std_time_ns": 0.0,
-      "base_hash": "2c03f81",
-      "median_time_ns": 1.5e8,
-      "source_type": "unknown",
-      "max_time_ns": 1.575e8,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "04ea3c6",
-      "timestamp": "2026-03-09T03:20:32.716",
-      "memory_bytes": 0
     },
-    "97": {
-      "time_ratio": 0.67,
-      "min_time_ns": 6.365000000000001e7,
-      "mean_time_ns": 6.700000000000001e7,
-      "std_time_ns": 0.0,
-      "base_hash": "430e5e0",
-      "median_time_ns": 6.700000000000001e7,
-      "source_type": "report_md",
-      "max_time_ns": 7.035000000000001e7,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "cb532d5",
-      "timestamp": "2026-03-10T00:40:56.029",
-      "memory_bytes": 0
-    },
-    "81": {
-      "time_ratio": 1.5,
-      "min_time_ns": 1.425e8,
-      "mean_time_ns": 1.5e8,
-      "std_time_ns": 0.0,
-      "base_hash": "cae3571",
-      "median_time_ns": 1.5e8,
-      "source_type": "report_md",
-      "max_time_ns": 1.575e8,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "c6a023a",
-      "timestamp": "2026-03-10T00:41:00.062",
-      "memory_bytes": 0
-    },
-    "106": {
-      "time_ratio": 1.5,
-      "min_time_ns": 1.425e8,
-      "mean_time_ns": 1.5e8,
-      "std_time_ns": 0.0,
-      "base_hash": "7c45ff0",
-      "median_time_ns": 1.5e8,
-      "source_type": "report_md",
-      "max_time_ns": 1.575e8,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "cd5b8fb",
-      "timestamp": "2026-03-10T00:40:53.913",
-      "memory_bytes": 0
-    },
-    "70": {
-      "time_ratio": 0.67,
-      "min_time_ns": 6.365000000000001e7,
-      "mean_time_ns": 6.700000000000001e7,
-      "std_time_ns": 0.0,
-      "base_hash": "b9f2acc",
-      "median_time_ns": 6.700000000000001e7,
-      "source_type": "report_md",
-      "max_time_ns": 7.035000000000001e7,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "c52a188",
-      "timestamp": "2026-03-10T00:41:02.749",
-      "memory_bytes": 0
-    },
-    "50": {
-      "time_ratio": 0.67,
-      "min_time_ns": 6.365000000000001e7,
-      "mean_time_ns": 6.700000000000001e7,
+    "122": {
+      "time_ratio": 1.51,
+      "min_time_ns": 1.4345e8,
+      "mean_time_ns": 1.51e8,
       "std_time_ns": 0.0,
       "base_hash": "9117b4d",
-      "median_time_ns": 6.700000000000001e7,
+      "median_time_ns": 1.51e8,
       "source_type": "report_md",
-      "max_time_ns": 7.035000000000001e7,
+      "max_time_ns": 1.5855e8,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
@@ -684,84 +816,20 @@
       "timestamp": "2026-03-10T00:41:07.423",
       "memory_bytes": 0
     },
-    "52": {
-      "time_ratio": 1.5,
-      "min_time_ns": 1.425e8,
-      "mean_time_ns": 1.5e8,
+    "22": {
+      "time_ratio": 0.43,
+      "min_time_ns": 4.085e7,
+      "mean_time_ns": 4.3e7,
       "std_time_ns": 0.0,
-      "base_hash": "1b600f0",
-      "median_time_ns": 1.5e8,
-      "source_type": "report_md",
-      "max_time_ns": 1.575e8,
+      "base_hash": "8cdb17b",
+      "median_time_ns": 4.3e7,
+      "source_type": "unknown",
+      "max_time_ns": 4.515e7,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "c1a287e",
-      "timestamp": "2026-03-10T00:41:06.619",
-      "memory_bytes": 0
-    },
-    "46": {
-      "time_ratio": 0.67,
-      "min_time_ns": 6.365000000000001e7,
-      "mean_time_ns": 6.700000000000001e7,
-      "std_time_ns": 0.0,
-      "base_hash": "d6c092d",
-      "median_time_ns": 6.700000000000001e7,
-      "source_type": "report_md",
-      "max_time_ns": 7.035000000000001e7,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "c0b95ac",
-      "timestamp": "2026-03-10T00:41:08.226",
-      "memory_bytes": 0
-    },
-    "107": {
-      "time_ratio": 1.5,
-      "min_time_ns": 1.425e8,
-      "mean_time_ns": 1.5e8,
-      "std_time_ns": 0.0,
-      "base_hash": "d6c092d",
-      "median_time_ns": 1.5e8,
-      "source_type": "report_md",
-      "max_time_ns": 1.575e8,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "cd660ad",
-      "timestamp": "2026-03-10T00:40:53.667",
-      "memory_bytes": 0
-    },
-    "105": {
-      "time_ratio": 1.5,
-      "min_time_ns": 1.425e8,
-      "mean_time_ns": 1.5e8,
-      "std_time_ns": 0.0,
-      "base_hash": "1b600f0",
-      "median_time_ns": 1.5e8,
-      "source_type": "report_md",
-      "max_time_ns": 1.575e8,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "cd2ebfc",
-      "timestamp": "2026-03-10T00:40:54.113",
-      "memory_bytes": 0
-    },
-    "132": {
-      "time_ratio": 0.67,
-      "min_time_ns": 6.365000000000001e7,
-      "mean_time_ns": 6.700000000000001e7,
-      "std_time_ns": 0.0,
-      "base_hash": "e3adc39",
-      "median_time_ns": 6.700000000000001e7,
-      "source_type": "report_md",
-      "max_time_ns": 7.035000000000001e7,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "d22c304",
-      "timestamp": "2026-03-10T00:40:47.554",
+      "commit_hash": "0425751",
+      "timestamp": "2026-03-09T03:20:31.698",
       "memory_bytes": 0
     }
   },
@@ -783,8 +851,234 @@
       "memory_bytes": 0
     }
   },
+  "sort/insertionsort/(sort! reverse/ascending)": {
+    "24": {
+      "time_ratio": 1.5,
+      "min_time_ns": 1.425e8,
+      "mean_time_ns": 1.5e8,
+      "std_time_ns": 0.0,
+      "base_hash": "2c03f81",
+      "median_time_ns": 1.5e8,
+      "source_type": "unknown",
+      "max_time_ns": 1.575e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "04ea3c6",
+      "timestamp": "2026-03-09T03:20:32.716",
+      "memory_bytes": 0
+    },
+    "79": {
+      "time_ratio": 1.5,
+      "min_time_ns": 1.425e8,
+      "mean_time_ns": 1.5e8,
+      "std_time_ns": 0.0,
+      "base_hash": "61c6f33",
+      "median_time_ns": 1.5e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.575e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b6bca19",
+      "timestamp": "2026-03-10T23:30:05.064",
+      "memory_bytes": 0
+    },
+    "142": {
+      "time_ratio": 0.67,
+      "min_time_ns": 6.365000000000001e7,
+      "mean_time_ns": 6.700000000000001e7,
+      "std_time_ns": 0.0,
+      "base_hash": "b9f2acc",
+      "median_time_ns": 6.700000000000001e7,
+      "source_type": "report_md",
+      "max_time_ns": 7.035000000000001e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "c52a188",
+      "timestamp": "2026-03-10T00:41:02.749",
+      "memory_bytes": 0
+    },
+    "204": {
+      "time_ratio": 0.67,
+      "min_time_ns": 6.365000000000001e7,
+      "mean_time_ns": 6.700000000000001e7,
+      "std_time_ns": 0.0,
+      "base_hash": "e3adc39",
+      "median_time_ns": 6.700000000000001e7,
+      "source_type": "report_md",
+      "max_time_ns": 7.035000000000001e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "d22c304",
+      "timestamp": "2026-03-10T00:40:47.554",
+      "memory_bytes": 0
+    },
+    "178": {
+      "time_ratio": 1.5,
+      "min_time_ns": 1.425e8,
+      "mean_time_ns": 1.5e8,
+      "std_time_ns": 0.0,
+      "base_hash": "7c45ff0",
+      "median_time_ns": 1.5e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.575e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "cd5b8fb",
+      "timestamp": "2026-03-10T00:40:53.913",
+      "memory_bytes": 0
+    },
+    "124": {
+      "time_ratio": 1.5,
+      "min_time_ns": 1.425e8,
+      "mean_time_ns": 1.5e8,
+      "std_time_ns": 0.0,
+      "base_hash": "1b600f0",
+      "median_time_ns": 1.5e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.575e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "c1a287e",
+      "timestamp": "2026-03-10T00:41:06.619",
+      "memory_bytes": 0
+    },
+    "118": {
+      "time_ratio": 0.67,
+      "min_time_ns": 6.365000000000001e7,
+      "mean_time_ns": 6.700000000000001e7,
+      "std_time_ns": 0.0,
+      "base_hash": "d6c092d",
+      "median_time_ns": 6.700000000000001e7,
+      "source_type": "report_md",
+      "max_time_ns": 7.035000000000001e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "c0b95ac",
+      "timestamp": "2026-03-10T00:41:08.226",
+      "memory_bytes": 0
+    },
+    "122": {
+      "time_ratio": 0.67,
+      "min_time_ns": 6.365000000000001e7,
+      "mean_time_ns": 6.700000000000001e7,
+      "std_time_ns": 0.0,
+      "base_hash": "9117b4d",
+      "median_time_ns": 6.700000000000001e7,
+      "source_type": "report_md",
+      "max_time_ns": 7.035000000000001e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "c13f74b",
+      "timestamp": "2026-03-10T00:41:07.423",
+      "memory_bytes": 0
+    },
+    "52": {
+      "time_ratio": 1.5,
+      "min_time_ns": 1.425e8,
+      "mean_time_ns": 1.5e8,
+      "std_time_ns": 0.0,
+      "base_hash": "e3b9290",
+      "median_time_ns": 1.5e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.575e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b2f4cd0",
+      "timestamp": "2026-03-10T23:30:14.653",
+      "memory_bytes": 0
+    },
+    "72": {
+      "time_ratio": 0.67,
+      "min_time_ns": 6.365000000000001e7,
+      "mean_time_ns": 6.700000000000001e7,
+      "std_time_ns": 0.0,
+      "base_hash": "2cf1f34",
+      "median_time_ns": 6.700000000000001e7,
+      "source_type": "report_md",
+      "max_time_ns": 7.035000000000001e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b4c79e7",
+      "timestamp": "2026-03-10T23:30:07.325",
+      "memory_bytes": 0
+    },
+    "169": {
+      "time_ratio": 0.67,
+      "min_time_ns": 6.365000000000001e7,
+      "mean_time_ns": 6.700000000000001e7,
+      "std_time_ns": 0.0,
+      "base_hash": "430e5e0",
+      "median_time_ns": 6.700000000000001e7,
+      "source_type": "report_md",
+      "max_time_ns": 7.035000000000001e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "cb532d5",
+      "timestamp": "2026-03-10T00:40:56.029",
+      "memory_bytes": 0
+    },
+    "177": {
+      "time_ratio": 1.5,
+      "min_time_ns": 1.425e8,
+      "mean_time_ns": 1.5e8,
+      "std_time_ns": 0.0,
+      "base_hash": "1b600f0",
+      "median_time_ns": 1.5e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.575e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "cd2ebfc",
+      "timestamp": "2026-03-10T00:40:54.113",
+      "memory_bytes": 0
+    },
+    "179": {
+      "time_ratio": 1.5,
+      "min_time_ns": 1.425e8,
+      "mean_time_ns": 1.5e8,
+      "std_time_ns": 0.0,
+      "base_hash": "d6c092d",
+      "median_time_ns": 1.5e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.575e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "cd660ad",
+      "timestamp": "2026-03-10T00:40:53.667",
+      "memory_bytes": 0
+    },
+    "153": {
+      "time_ratio": 1.5,
+      "min_time_ns": 1.425e8,
+      "mean_time_ns": 1.5e8,
+      "std_time_ns": 0.0,
+      "base_hash": "cae3571",
+      "median_time_ns": 1.5e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.575e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "c6a023a",
+      "timestamp": "2026-03-10T00:41:00.062",
+      "memory_bytes": 0
+    }
+  },
   "sort/insertionsort/(\\sort forwards\\/\\descending\\)": {
-    "121": {
+    "193": {
       "time_ratio": 1.3,
       "min_time_ns": 1.235e8,
       "mean_time_ns": 1.3e8,
@@ -802,7 +1096,7 @@
     }
   },
   "sort/mergesort/(sort reverse/descending)": {
-    "132": {
+    "204": {
       "time_ratio": 1.33,
       "min_time_ns": 1.2635e8,
       "mean_time_ns": 1.33e8,
@@ -819,8 +1113,26 @@
       "memory_bytes": 0
     }
   },
+  "sort/insertionsort/(\\sortperm! forwards\\/\\ascending\\)": {
+    "64": {
+      "time_ratio": 1.51,
+      "min_time_ns": 1.4345e8,
+      "mean_time_ns": 1.51e8,
+      "std_time_ns": 0.0,
+      "base_hash": "502c039",
+      "median_time_ns": 1.51e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.5855e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b421eca",
+      "timestamp": "2026-03-10T23:30:10.268",
+      "memory_bytes": 0
+    }
+  },
   "sort/insertionsort/(sortperm! forwards/descending)": {
-    "32": {
+    "104": {
       "time_ratio": 1.0,
       "min_time_ns": 9.5e7,
       "mean_time_ns": 1.0e8,
@@ -852,7 +1164,7 @@
       "timestamp": "2026-03-09T03:20:31.615",
       "memory_bytes": 0
     },
-    "31": {
+    "103": {
       "time_ratio": 1.0,
       "min_time_ns": 9.5e7,
       "mean_time_ns": 1.0e8,
@@ -869,8 +1181,44 @@
       "memory_bytes": 0
     }
   },
+  "sort/issues/Float16": {
+    "85": {
+      "time_ratio": 0.78,
+      "min_time_ns": 7.41e7,
+      "mean_time_ns": 7.8e7,
+      "std_time_ns": 0.0,
+      "base_hash": "a62a74e",
+      "median_time_ns": 7.8e7,
+      "source_type": "report_md",
+      "max_time_ns": 8.19e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b822f62",
+      "timestamp": "2026-03-10T23:30:02.752",
+      "memory_bytes": 0
+    }
+  },
+  "sort/insertionsort/(\\sort! reverse\\/\\ascending\\)": {
+    "87": {
+      "time_ratio": 1.5,
+      "min_time_ns": 1.425e8,
+      "mean_time_ns": 1.5e8,
+      "std_time_ns": 0.0,
+      "base_hash": "b39d697",
+      "median_time_ns": 1.5e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.575e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b97eb35",
+      "timestamp": "2026-03-10T23:30:01.752",
+      "memory_bytes": 0
+    }
+  },
   "sort/length = 10/Float64 unions with missing": {
-    "102": {
+    "174": {
       "time_ratio": 1.24,
       "min_time_ns": 1.178e8,
       "mean_time_ns": 1.24e8,
@@ -888,55 +1236,7 @@
     }
   },
   "sort/issorted/(reverse/ones)": {
-    "46": {
-      "time_ratio": 1.32,
-      "min_time_ns": 1.254e8,
-      "mean_time_ns": 1.32e8,
-      "std_time_ns": 0.0,
-      "base_hash": "d6c092d",
-      "median_time_ns": 1.32e8,
-      "source_type": "report_md",
-      "max_time_ns": 1.386e8,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "c0b95ac",
-      "timestamp": "2026-03-10T00:41:08.226",
-      "memory_bytes": 0
-    },
-    "107": {
-      "time_ratio": 1.33,
-      "min_time_ns": 1.2635e8,
-      "mean_time_ns": 1.33e8,
-      "std_time_ns": 0.0,
-      "base_hash": "d6c092d",
-      "median_time_ns": 1.33e8,
-      "source_type": "report_md",
-      "max_time_ns": 1.3965e8,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "cd660ad",
-      "timestamp": "2026-03-10T00:40:53.667",
-      "memory_bytes": 0
-    },
-    "52": {
-      "time_ratio": 1.32,
-      "min_time_ns": 1.254e8,
-      "mean_time_ns": 1.32e8,
-      "std_time_ns": 0.0,
-      "base_hash": "1b600f0",
-      "median_time_ns": 1.32e8,
-      "source_type": "report_md",
-      "max_time_ns": 1.386e8,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "c1a287e",
-      "timestamp": "2026-03-10T00:41:06.619",
-      "memory_bytes": 0
-    },
-    "105": {
+    "177": {
       "time_ratio": 1.32,
       "min_time_ns": 1.254e8,
       "mean_time_ns": 1.32e8,
@@ -952,7 +1252,39 @@
       "timestamp": "2026-03-10T00:40:54.113",
       "memory_bytes": 0
     },
-    "97": {
+    "124": {
+      "time_ratio": 1.32,
+      "min_time_ns": 1.254e8,
+      "mean_time_ns": 1.32e8,
+      "std_time_ns": 0.0,
+      "base_hash": "1b600f0",
+      "median_time_ns": 1.32e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.386e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "c1a287e",
+      "timestamp": "2026-03-10T00:41:06.619",
+      "memory_bytes": 0
+    },
+    "118": {
+      "time_ratio": 1.32,
+      "min_time_ns": 1.254e8,
+      "mean_time_ns": 1.32e8,
+      "std_time_ns": 0.0,
+      "base_hash": "d6c092d",
+      "median_time_ns": 1.32e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.386e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "c0b95ac",
+      "timestamp": "2026-03-10T00:41:08.226",
+      "memory_bytes": 0
+    },
+    "169": {
       "time_ratio": 1.32,
       "min_time_ns": 1.254e8,
       "mean_time_ns": 1.32e8,
@@ -967,10 +1299,78 @@
       "commit_hash": "cb532d5",
       "timestamp": "2026-03-10T00:40:56.029",
       "memory_bytes": 0
+    },
+    "179": {
+      "time_ratio": 1.33,
+      "min_time_ns": 1.2635e8,
+      "mean_time_ns": 1.33e8,
+      "std_time_ns": 0.0,
+      "base_hash": "d6c092d",
+      "median_time_ns": 1.33e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.3965e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "cd660ad",
+      "timestamp": "2026-03-10T00:40:53.667",
+      "memory_bytes": 0
+    }
+  },
+  "sort/insertionsort/(\\sortperm forwards\\/\\ascending\\)": {
+    "64": {
+      "time_ratio": 1.37,
+      "min_time_ns": 1.3015e8,
+      "mean_time_ns": 1.37e8,
+      "std_time_ns": 0.0,
+      "base_hash": "502c039",
+      "median_time_ns": 1.37e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.4385e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b421eca",
+      "timestamp": "2026-03-10T23:30:10.268",
+      "memory_bytes": 0
+    }
+  },
+  "sort/insertionsort/(\\sort! reverse\\/\\random\\)": {
+    "39": {
+      "time_ratio": 1.51,
+      "min_time_ns": 1.4345e8,
+      "mean_time_ns": 1.51e8,
+      "std_time_ns": 0.0,
+      "base_hash": "5e7aaa6",
+      "median_time_ns": 1.51e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.5855e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b0154e3",
+      "timestamp": "2026-03-10T23:30:19.065",
+      "memory_bytes": 0
+    },
+    "87": {
+      "time_ratio": 0.66,
+      "min_time_ns": 6.27e7,
+      "mean_time_ns": 6.6e7,
+      "std_time_ns": 0.0,
+      "base_hash": "b39d697",
+      "median_time_ns": 6.6e7,
+      "source_type": "report_md",
+      "max_time_ns": 6.93e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b97eb35",
+      "timestamp": "2026-03-10T23:30:01.752",
+      "memory_bytes": 0
     }
   },
   "sort/issorted/(forwards/descending)": {
-    "125": {
+    "197": {
       "time_ratio": 1.49,
       "min_time_ns": 1.4155e8,
       "mean_time_ns": 1.49e8,
@@ -986,7 +1386,7 @@
       "timestamp": "2026-03-10T00:40:50.051",
       "memory_bytes": 0
     },
-    "91": {
+    "163": {
       "time_ratio": 0.77,
       "min_time_ns": 7.315e7,
       "mean_time_ns": 7.7e7,
@@ -1040,7 +1440,7 @@
     }
   },
   "sort/quicksort/(sortperm! reverse/ones)": {
-    "32": {
+    "104": {
       "time_ratio": 0.98,
       "min_time_ns": 9.31e7,
       "mean_time_ns": 9.8e7,
@@ -1070,6 +1470,22 @@
       "samples": 1,
       "commit_hash": "0425751",
       "timestamp": "2026-03-09T03:20:31.615",
+      "memory_bytes": 0
+    },
+    "79": {
+      "time_ratio": 1.31,
+      "min_time_ns": 1.2445e8,
+      "mean_time_ns": 1.31e8,
+      "std_time_ns": 0.0,
+      "base_hash": "61c6f33",
+      "median_time_ns": 1.31e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.3755e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b6bca19",
+      "timestamp": "2026-03-10T23:30:05.064",
       "memory_bytes": 0
     },
     "22": {
@@ -1108,7 +1524,23 @@
     }
   },
   "sort/quicksort/(sort forwards/ones)": {
-    "125": {
+    "46": {
+      "time_ratio": 1.42,
+      "min_time_ns": 1.349e8,
+      "mean_time_ns": 1.42e8,
+      "std_time_ns": 0.0,
+      "base_hash": "20a5fa7",
+      "median_time_ns": 1.42e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.491e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b146a70",
+      "timestamp": "2026-03-10T23:30:16.871",
+      "memory_bytes": 0
+    },
+    "197": {
       "time_ratio": 1.4,
       "min_time_ns": 1.33e8,
       "mean_time_ns": 1.4e8,
@@ -1142,7 +1574,7 @@
     }
   },
   "sort/insertionsort/(sortperm reverse/descending)": {
-    "134": {
+    "206": {
       "time_ratio": 1.39,
       "min_time_ns": 1.3205e8,
       "mean_time_ns": 1.39e8,
@@ -1156,6 +1588,22 @@
       "samples": 1,
       "commit_hash": "d27fe45",
       "timestamp": "2026-03-10T00:40:47.111",
+      "memory_bytes": 0
+    },
+    "97": {
+      "time_ratio": 1.31,
+      "min_time_ns": 1.2445e8,
+      "mean_time_ns": 1.31e8,
+      "std_time_ns": 0.0,
+      "base_hash": "ef67353",
+      "median_time_ns": 1.31e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.3755e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "bb6afd0",
+      "timestamp": "2026-03-10T23:29:58.226",
       "memory_bytes": 0
     }
   },
@@ -1177,8 +1625,26 @@
       "memory_bytes": 0
     }
   },
+  "sort/length = 100/descending": {
+    "47": {
+      "time_ratio": 0.77,
+      "min_time_ns": 7.315e7,
+      "mean_time_ns": 7.7e7,
+      "std_time_ns": 0.0,
+      "base_hash": "ac54799",
+      "median_time_ns": 7.7e7,
+      "source_type": "report_md",
+      "max_time_ns": 8.085e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b15100f",
+      "timestamp": "2026-03-10T23:30:16.538",
+      "memory_bytes": 0
+    }
+  },
   "sort/length = 10/sort!(rand(Int/length))": {
-    "102": {
+    "174": {
       "time_ratio": 1.25,
       "min_time_ns": 1.1875e8,
       "mean_time_ns": 1.25e8,
@@ -1196,20 +1662,20 @@
     }
   },
   "sort/mergesort/(sort forwards/ones)": {
-    "81": {
-      "time_ratio": 1.43,
-      "min_time_ns": 1.3585e8,
-      "mean_time_ns": 1.43e8,
+    "177": {
+      "time_ratio": 1.31,
+      "min_time_ns": 1.2445e8,
+      "mean_time_ns": 1.31e8,
       "std_time_ns": 0.0,
-      "base_hash": "cae3571",
-      "median_time_ns": 1.43e8,
+      "base_hash": "1b600f0",
+      "median_time_ns": 1.31e8,
       "source_type": "report_md",
-      "max_time_ns": 1.5015e8,
+      "max_time_ns": 1.3755e8,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "c6a023a",
-      "timestamp": "2026-03-10T00:41:00.062",
+      "commit_hash": "cd2ebfc",
+      "timestamp": "2026-03-10T00:40:54.113",
       "memory_bytes": 0
     },
     "20": {
@@ -1228,7 +1694,7 @@
       "timestamp": "2026-03-09T03:20:31.529",
       "memory_bytes": 0
     },
-    "107": {
+    "179": {
       "time_ratio": 1.33,
       "min_time_ns": 1.2635e8,
       "mean_time_ns": 1.33e8,
@@ -1244,20 +1710,20 @@
       "timestamp": "2026-03-10T00:40:53.667",
       "memory_bytes": 0
     },
-    "105": {
-      "time_ratio": 1.31,
-      "min_time_ns": 1.2445e8,
-      "mean_time_ns": 1.31e8,
+    "153": {
+      "time_ratio": 1.43,
+      "min_time_ns": 1.3585e8,
+      "mean_time_ns": 1.43e8,
       "std_time_ns": 0.0,
-      "base_hash": "1b600f0",
-      "median_time_ns": 1.31e8,
+      "base_hash": "cae3571",
+      "median_time_ns": 1.43e8,
       "source_type": "report_md",
-      "max_time_ns": 1.3755e8,
+      "max_time_ns": 1.5015e8,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "cd2ebfc",
-      "timestamp": "2026-03-10T00:40:54.113",
+      "commit_hash": "c6a023a",
+      "timestamp": "2026-03-10T00:41:00.062",
       "memory_bytes": 0
     }
   },
@@ -1278,7 +1744,7 @@
       "timestamp": "2026-03-09T03:20:32.716",
       "memory_bytes": 0
     },
-    "105": {
+    "177": {
       "time_ratio": 1.3,
       "min_time_ns": 1.235e8,
       "mean_time_ns": 1.3e8,
@@ -1292,6 +1758,40 @@
       "samples": 1,
       "commit_hash": "cd2ebfc",
       "timestamp": "2026-03-10T00:40:54.113",
+      "memory_bytes": 0
+    }
+  },
+  "sort/insertionsort/(\\sort! forwards\\/\\random\\)": {
+    "39": {
+      "time_ratio": 1.51,
+      "min_time_ns": 1.4345e8,
+      "mean_time_ns": 1.51e8,
+      "std_time_ns": 0.0,
+      "base_hash": "5e7aaa6",
+      "median_time_ns": 1.51e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.5855e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b0154e3",
+      "timestamp": "2026-03-10T23:30:19.065",
+      "memory_bytes": 0
+    },
+    "87": {
+      "time_ratio": 0.66,
+      "min_time_ns": 6.27e7,
+      "mean_time_ns": 6.6e7,
+      "std_time_ns": 0.0,
+      "base_hash": "b39d697",
+      "median_time_ns": 6.6e7,
+      "source_type": "report_md",
+      "max_time_ns": 6.93e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b97eb35",
+      "timestamp": "2026-03-10T23:30:01.752",
       "memory_bytes": 0
     }
   },
@@ -1314,7 +1814,7 @@
     }
   },
   "sort/length = 30/sort!(fill(missing/length)/rev=true)": {
-    "91": {
+    "163": {
       "time_ratio": 1.43,
       "min_time_ns": 1.3585e8,
       "mean_time_ns": 1.43e8,
@@ -1350,7 +1850,7 @@
     }
   },
   "sort/insertionsort/sort forwards": {
-    "62": {
+    "134": {
       "time_ratio": 1.2,
       "min_time_ns": 1.14e8,
       "mean_time_ns": 1.2e8,
@@ -1365,10 +1865,42 @@
       "commit_hash": "c46c227",
       "timestamp": "2026-03-10T00:41:04.382",
       "memory_bytes": 0
+    },
+    "75": {
+      "time_ratio": 1.21,
+      "min_time_ns": 1.1495e8,
+      "mean_time_ns": 1.21e8,
+      "std_time_ns": 0.0,
+      "base_hash": "e3f90c4",
+      "median_time_ns": 1.21e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.2705e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b57a57a",
+      "timestamp": "2026-03-10T23:30:06.385",
+      "memory_bytes": 0
     }
   },
   "sort/quicksort/(sort reverse/ones)": {
-    "125": {
+    "46": {
+      "time_ratio": 1.42,
+      "min_time_ns": 1.349e8,
+      "mean_time_ns": 1.42e8,
+      "std_time_ns": 0.0,
+      "base_hash": "20a5fa7",
+      "median_time_ns": 1.42e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.491e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b146a70",
+      "timestamp": "2026-03-10T23:30:16.871",
+      "memory_bytes": 0
+    },
+    "197": {
       "time_ratio": 1.41,
       "min_time_ns": 1.3395e8,
       "mean_time_ns": 1.41e8,
@@ -1401,56 +1933,44 @@
       "memory_bytes": 0
     }
   },
+  "sort/issorted/(forwards/random)": {
+    "72": {
+      "time_ratio": 1.4,
+      "min_time_ns": 1.33e8,
+      "mean_time_ns": 1.4e8,
+      "std_time_ns": 0.0,
+      "base_hash": "2cf1f34",
+      "median_time_ns": 1.4e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.47e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b4c79e7",
+      "timestamp": "2026-03-10T23:30:07.325",
+      "memory_bytes": 0
+    }
+  },
+  "sort/length = 3/mixed eltype with by order": {
+    "73": {
+      "time_ratio": 0.76,
+      "min_time_ns": 7.22e7,
+      "mean_time_ns": 7.6e7,
+      "std_time_ns": 0.0,
+      "base_hash": "3a3af82",
+      "median_time_ns": 7.6e7,
+      "source_type": "report_md",
+      "max_time_ns": 7.98e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b4ce107",
+      "timestamp": "2026-03-10T23:30:07.045",
+      "memory_bytes": 0
+    }
+  },
   "sort/issorted/(forwards/ones)": {
-    "46": {
-      "time_ratio": 1.33,
-      "min_time_ns": 1.2635e8,
-      "mean_time_ns": 1.33e8,
-      "std_time_ns": 0.0,
-      "base_hash": "d6c092d",
-      "median_time_ns": 1.33e8,
-      "source_type": "report_md",
-      "max_time_ns": 1.3965e8,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "c0b95ac",
-      "timestamp": "2026-03-10T00:41:08.226",
-      "memory_bytes": 0
-    },
-    "107": {
-      "time_ratio": 1.32,
-      "min_time_ns": 1.254e8,
-      "mean_time_ns": 1.32e8,
-      "std_time_ns": 0.0,
-      "base_hash": "d6c092d",
-      "median_time_ns": 1.32e8,
-      "source_type": "report_md",
-      "max_time_ns": 1.386e8,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "cd660ad",
-      "timestamp": "2026-03-10T00:40:53.667",
-      "memory_bytes": 0
-    },
-    "52": {
-      "time_ratio": 1.33,
-      "min_time_ns": 1.2635e8,
-      "mean_time_ns": 1.33e8,
-      "std_time_ns": 0.0,
-      "base_hash": "1b600f0",
-      "median_time_ns": 1.33e8,
-      "source_type": "report_md",
-      "max_time_ns": 1.3965e8,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "c1a287e",
-      "timestamp": "2026-03-10T00:41:06.619",
-      "memory_bytes": 0
-    },
-    "105": {
+    "177": {
       "time_ratio": 1.33,
       "min_time_ns": 1.2635e8,
       "mean_time_ns": 1.33e8,
@@ -1466,7 +1986,39 @@
       "timestamp": "2026-03-10T00:40:54.113",
       "memory_bytes": 0
     },
-    "97": {
+    "124": {
+      "time_ratio": 1.33,
+      "min_time_ns": 1.2635e8,
+      "mean_time_ns": 1.33e8,
+      "std_time_ns": 0.0,
+      "base_hash": "1b600f0",
+      "median_time_ns": 1.33e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.3965e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "c1a287e",
+      "timestamp": "2026-03-10T00:41:06.619",
+      "memory_bytes": 0
+    },
+    "118": {
+      "time_ratio": 1.33,
+      "min_time_ns": 1.2635e8,
+      "mean_time_ns": 1.33e8,
+      "std_time_ns": 0.0,
+      "base_hash": "d6c092d",
+      "median_time_ns": 1.33e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.3965e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "c0b95ac",
+      "timestamp": "2026-03-10T00:41:08.226",
+      "memory_bytes": 0
+    },
+    "169": {
       "time_ratio": 1.32,
       "min_time_ns": 1.254e8,
       "mean_time_ns": 1.32e8,
@@ -1481,10 +2033,26 @@
       "commit_hash": "cb532d5",
       "timestamp": "2026-03-10T00:40:56.029",
       "memory_bytes": 0
+    },
+    "179": {
+      "time_ratio": 1.32,
+      "min_time_ns": 1.254e8,
+      "mean_time_ns": 1.32e8,
+      "std_time_ns": 0.0,
+      "base_hash": "d6c092d",
+      "median_time_ns": 1.32e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.386e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "cd660ad",
+      "timestamp": "2026-03-10T00:40:53.667",
+      "memory_bytes": 0
     }
   },
   "sort/quicksort/(sortperm! forwards/descending)": {
-    "32": {
+    "104": {
       "time_ratio": 1.0,
       "min_time_ns": 9.5e7,
       "mean_time_ns": 1.0e8,
@@ -1516,7 +2084,7 @@
       "timestamp": "2026-03-09T03:20:31.615",
       "memory_bytes": 0
     },
-    "31": {
+    "103": {
       "time_ratio": 1.0,
       "min_time_ns": 9.5e7,
       "mean_time_ns": 1.0e8,
@@ -1550,23 +2118,23 @@
       "timestamp": "2026-03-09T03:20:32.716",
       "memory_bytes": 0
     },
-    "81": {
-      "time_ratio": 0.66,
-      "min_time_ns": 6.27e7,
-      "mean_time_ns": 6.6e7,
+    "177": {
+      "time_ratio": 1.51,
+      "min_time_ns": 1.4345e8,
+      "mean_time_ns": 1.51e8,
       "std_time_ns": 0.0,
-      "base_hash": "cae3571",
-      "median_time_ns": 6.6e7,
+      "base_hash": "1b600f0",
+      "median_time_ns": 1.51e8,
       "source_type": "report_md",
-      "max_time_ns": 6.93e7,
+      "max_time_ns": 1.5855e8,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "c6a023a",
-      "timestamp": "2026-03-10T00:41:00.062",
+      "commit_hash": "cd2ebfc",
+      "timestamp": "2026-03-10T00:40:54.113",
       "memory_bytes": 0
     },
-    "70": {
+    "142": {
       "time_ratio": 1.51,
       "min_time_ns": 1.4345e8,
       "mean_time_ns": 1.51e8,
@@ -1580,6 +2148,22 @@
       "samples": 1,
       "commit_hash": "c52a188",
       "timestamp": "2026-03-10T00:41:02.749",
+      "memory_bytes": 0
+    },
+    "122": {
+      "time_ratio": 0.66,
+      "min_time_ns": 6.27e7,
+      "mean_time_ns": 6.6e7,
+      "std_time_ns": 0.0,
+      "base_hash": "9117b4d",
+      "median_time_ns": 6.6e7,
+      "source_type": "report_md",
+      "max_time_ns": 6.93e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "c13f74b",
+      "timestamp": "2026-03-10T00:41:07.423",
       "memory_bytes": 0
     },
     "22": {
@@ -1598,7 +2182,7 @@
       "timestamp": "2026-03-09T03:20:31.698",
       "memory_bytes": 0
     },
-    "107": {
+    "179": {
       "time_ratio": 1.5,
       "min_time_ns": 1.425e8,
       "mean_time_ns": 1.5e8,
@@ -1614,36 +2198,36 @@
       "timestamp": "2026-03-10T00:40:53.667",
       "memory_bytes": 0
     },
-    "50": {
-      "time_ratio": 0.66,
-      "min_time_ns": 6.27e7,
-      "mean_time_ns": 6.6e7,
-      "std_time_ns": 0.0,
-      "base_hash": "9117b4d",
-      "median_time_ns": 6.6e7,
-      "source_type": "report_md",
-      "max_time_ns": 6.93e7,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "c13f74b",
-      "timestamp": "2026-03-10T00:41:07.423",
-      "memory_bytes": 0
-    },
-    "105": {
+    "52": {
       "time_ratio": 1.51,
       "min_time_ns": 1.4345e8,
       "mean_time_ns": 1.51e8,
       "std_time_ns": 0.0,
-      "base_hash": "1b600f0",
+      "base_hash": "e3b9290",
       "median_time_ns": 1.51e8,
       "source_type": "report_md",
       "max_time_ns": 1.5855e8,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "cd2ebfc",
-      "timestamp": "2026-03-10T00:40:54.113",
+      "commit_hash": "b2f4cd0",
+      "timestamp": "2026-03-10T23:30:14.653",
+      "memory_bytes": 0
+    },
+    "153": {
+      "time_ratio": 0.66,
+      "min_time_ns": 6.27e7,
+      "mean_time_ns": 6.6e7,
+      "std_time_ns": 0.0,
+      "base_hash": "cae3571",
+      "median_time_ns": 6.6e7,
+      "source_type": "report_md",
+      "max_time_ns": 6.93e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "c6a023a",
+      "timestamp": "2026-03-10T00:41:00.062",
       "memory_bytes": 0
     }
   },
@@ -1664,7 +2248,7 @@
       "timestamp": "2026-03-09T03:20:32.716",
       "memory_bytes": 0
     },
-    "105": {
+    "177": {
       "time_ratio": 1.3,
       "min_time_ns": 1.235e8,
       "mean_time_ns": 1.3e8,
@@ -1682,7 +2266,7 @@
     }
   },
   "sort/quicksort/(sortperm! reverse/random)": {
-    "32": {
+    "104": {
       "time_ratio": 1.0,
       "min_time_ns": 9.5e7,
       "mean_time_ns": 1.0e8,
@@ -1750,7 +2334,7 @@
     }
   },
   "sort/insertionsort/(sortperm! reverse/ascending)": {
-    "32": {
+    "104": {
       "time_ratio": 1.0,
       "min_time_ns": 9.5e7,
       "mean_time_ns": 1.0e8,
@@ -1784,23 +2368,23 @@
     }
   },
   "sort/mergesort/(sort forwards/ascending)": {
-    "107": {
-      "time_ratio": 1.34,
-      "min_time_ns": 1.2730000000000001e8,
-      "mean_time_ns": 1.3400000000000001e8,
+    "67": {
+      "time_ratio": 1.35,
+      "min_time_ns": 1.2825e8,
+      "mean_time_ns": 1.35e8,
       "std_time_ns": 0.0,
-      "base_hash": "d6c092d",
-      "median_time_ns": 1.3400000000000001e8,
+      "base_hash": "907264b",
+      "median_time_ns": 1.35e8,
       "source_type": "report_md",
-      "max_time_ns": 1.4070000000000003e8,
+      "max_time_ns": 1.4175e8,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "cd660ad",
-      "timestamp": "2026-03-10T00:40:53.667",
+      "commit_hash": "b46df09",
+      "timestamp": "2026-03-10T23:30:08.960",
       "memory_bytes": 0
     },
-    "97": {
+    "169": {
       "time_ratio": 1.3,
       "min_time_ns": 1.235e8,
       "mean_time_ns": 1.3e8,
@@ -1815,87 +2399,39 @@
       "commit_hash": "cb532d5",
       "timestamp": "2026-03-10T00:40:56.029",
       "memory_bytes": 0
-    }
-  },
-  "sort/insertionsort/(sortperm! reverse/descending)": {
-    "32": {
-      "time_ratio": 1.01,
-      "min_time_ns": 9.595e7,
-      "mean_time_ns": 1.01e8,
+    },
+    "179": {
+      "time_ratio": 1.34,
+      "min_time_ns": 1.2730000000000001e8,
+      "mean_time_ns": 1.3400000000000001e8,
       "std_time_ns": 0.0,
-      "base_hash": "61c0b41",
-      "median_time_ns": 1.01e8,
+      "base_hash": "d6c092d",
+      "median_time_ns": 1.3400000000000001e8,
       "source_type": "report_md",
-      "max_time_ns": 1.0605e8,
+      "max_time_ns": 1.4070000000000003e8,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "bd36d0a",
-      "timestamp": "2026-03-10T00:41:11.731",
+      "commit_hash": "cd660ad",
+      "timestamp": "2026-03-10T00:40:53.667",
       "memory_bytes": 0
-    },
-    "51": {
+    }
+  },
+  "sort/insertionsort/(sortperm! reverse/descending)": {
+    "79": {
       "time_ratio": 1.37,
       "min_time_ns": 1.3015e8,
       "mean_time_ns": 1.37e8,
       "std_time_ns": 0.0,
-      "base_hash": "7d6dfe1",
+      "base_hash": "61c6f33",
       "median_time_ns": 1.37e8,
       "source_type": "report_md",
       "max_time_ns": 1.4385e8,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "c165fbe",
-      "timestamp": "2026-03-10T00:41:07.217",
-      "memory_bytes": 0
-    },
-    "105": {
-      "time_ratio": 1.38,
-      "min_time_ns": 1.311e8,
-      "mean_time_ns": 1.38e8,
-      "std_time_ns": 0.0,
-      "base_hash": "1b600f0",
-      "median_time_ns": 1.38e8,
-      "source_type": "report_md",
-      "max_time_ns": 1.449e8,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "cd2ebfc",
-      "timestamp": "2026-03-10T00:40:54.113",
-      "memory_bytes": 0
-    },
-    "21": {
-      "time_ratio": 1.01,
-      "min_time_ns": 9.595e7,
-      "mean_time_ns": 1.01e8,
-      "std_time_ns": 0.0,
-      "base_hash": "61c0b41",
-      "median_time_ns": 1.01e8,
-      "source_type": "unknown",
-      "max_time_ns": 1.0605e8,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "0425751",
-      "timestamp": "2026-03-09T03:20:31.615",
-      "memory_bytes": 0
-    },
-    "132": {
-      "time_ratio": 0.66,
-      "min_time_ns": 6.27e7,
-      "mean_time_ns": 6.6e7,
-      "std_time_ns": 0.0,
-      "base_hash": "e3adc39",
-      "median_time_ns": 6.6e7,
-      "source_type": "report_md",
-      "max_time_ns": 6.93e7,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "d22c304",
-      "timestamp": "2026-03-10T00:40:47.554",
+      "commit_hash": "b6bca19",
+      "timestamp": "2026-03-10T23:30:05.064",
       "memory_bytes": 0
     },
     "20": {
@@ -1914,39 +2450,39 @@
       "timestamp": "2026-03-09T03:20:31.529",
       "memory_bytes": 0
     },
-    "134": {
-      "time_ratio": 1.52,
-      "min_time_ns": 1.444e8,
-      "mean_time_ns": 1.52e8,
-      "std_time_ns": 0.0,
-      "base_hash": "4931faa",
-      "median_time_ns": 1.52e8,
-      "source_type": "report_md",
-      "max_time_ns": 1.596e8,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "d27fe45",
-      "timestamp": "2026-03-10T00:40:47.111",
-      "memory_bytes": 0
-    },
-    "50": {
+    "204": {
       "time_ratio": 0.66,
       "min_time_ns": 6.27e7,
       "mean_time_ns": 6.6e7,
       "std_time_ns": 0.0,
-      "base_hash": "9117b4d",
+      "base_hash": "e3adc39",
       "median_time_ns": 6.6e7,
       "source_type": "report_md",
       "max_time_ns": 6.93e7,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "c13f74b",
-      "timestamp": "2026-03-10T00:41:07.423",
+      "commit_hash": "d22c304",
+      "timestamp": "2026-03-10T00:40:47.554",
       "memory_bytes": 0
     },
-    "52": {
+    "104": {
+      "time_ratio": 1.01,
+      "min_time_ns": 9.595e7,
+      "mean_time_ns": 1.01e8,
+      "std_time_ns": 0.0,
+      "base_hash": "61c0b41",
+      "median_time_ns": 1.01e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.0605e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "bd36d0a",
+      "timestamp": "2026-03-10T00:41:11.731",
+      "memory_bytes": 0
+    },
+    "124": {
       "time_ratio": 1.37,
       "min_time_ns": 1.3015e8,
       "mean_time_ns": 1.37e8,
@@ -1962,7 +2498,71 @@
       "timestamp": "2026-03-10T00:41:06.619",
       "memory_bytes": 0
     },
-    "97": {
+    "206": {
+      "time_ratio": 1.52,
+      "min_time_ns": 1.444e8,
+      "mean_time_ns": 1.52e8,
+      "std_time_ns": 0.0,
+      "base_hash": "4931faa",
+      "median_time_ns": 1.52e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.596e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "d27fe45",
+      "timestamp": "2026-03-10T00:40:47.111",
+      "memory_bytes": 0
+    },
+    "122": {
+      "time_ratio": 0.66,
+      "min_time_ns": 6.27e7,
+      "mean_time_ns": 6.6e7,
+      "std_time_ns": 0.0,
+      "base_hash": "9117b4d",
+      "median_time_ns": 6.6e7,
+      "source_type": "report_md",
+      "max_time_ns": 6.93e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "c13f74b",
+      "timestamp": "2026-03-10T00:41:07.423",
+      "memory_bytes": 0
+    },
+    "21": {
+      "time_ratio": 1.01,
+      "min_time_ns": 9.595e7,
+      "mean_time_ns": 1.01e8,
+      "std_time_ns": 0.0,
+      "base_hash": "61c0b41",
+      "median_time_ns": 1.01e8,
+      "source_type": "unknown",
+      "max_time_ns": 1.0605e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "0425751",
+      "timestamp": "2026-03-09T03:20:31.615",
+      "memory_bytes": 0
+    },
+    "72": {
+      "time_ratio": 0.67,
+      "min_time_ns": 6.365000000000001e7,
+      "mean_time_ns": 6.700000000000001e7,
+      "std_time_ns": 0.0,
+      "base_hash": "2cf1f34",
+      "median_time_ns": 6.700000000000001e7,
+      "source_type": "report_md",
+      "max_time_ns": 7.035000000000001e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b4c79e7",
+      "timestamp": "2026-03-10T23:30:07.325",
+      "memory_bytes": 0
+    },
+    "169": {
       "time_ratio": 0.66,
       "min_time_ns": 6.27e7,
       "mean_time_ns": 6.6e7,
@@ -1976,6 +2576,54 @@
       "samples": 1,
       "commit_hash": "cb532d5",
       "timestamp": "2026-03-10T00:40:56.029",
+      "memory_bytes": 0
+    },
+    "123": {
+      "time_ratio": 1.37,
+      "min_time_ns": 1.3015e8,
+      "mean_time_ns": 1.37e8,
+      "std_time_ns": 0.0,
+      "base_hash": "7d6dfe1",
+      "median_time_ns": 1.37e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.4385e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "c165fbe",
+      "timestamp": "2026-03-10T00:41:07.217",
+      "memory_bytes": 0
+    },
+    "177": {
+      "time_ratio": 1.38,
+      "min_time_ns": 1.311e8,
+      "mean_time_ns": 1.38e8,
+      "std_time_ns": 0.0,
+      "base_hash": "1b600f0",
+      "median_time_ns": 1.38e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.449e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "cd2ebfc",
+      "timestamp": "2026-03-10T00:40:54.113",
+      "memory_bytes": 0
+    },
+    "97": {
+      "time_ratio": 1.38,
+      "min_time_ns": 1.311e8,
+      "mean_time_ns": 1.38e8,
+      "std_time_ns": 0.0,
+      "base_hash": "ef67353",
+      "median_time_ns": 1.38e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.449e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "bb6afd0",
+      "timestamp": "2026-03-10T23:29:58.226",
       "memory_bytes": 0
     }
   },
@@ -1998,7 +2646,7 @@
     }
   },
   "sort/mergesort/(sortperm! reverse/descending)": {
-    "51": {
+    "123": {
       "time_ratio": 1.31,
       "min_time_ns": 1.2445e8,
       "mean_time_ns": 1.31e8,
@@ -2016,7 +2664,7 @@
     }
   },
   "sort/length = 1000/Int unions with missing": {
-    "91": {
+    "163": {
       "time_ratio": 1.22,
       "min_time_ns": 1.159e8,
       "mean_time_ns": 1.22e8,
@@ -2030,6 +2678,40 @@
       "samples": 1,
       "commit_hash": "c9c9199",
       "timestamp": "2026-03-10T00:40:57.644",
+      "memory_bytes": 0
+    }
+  },
+  "sort/insertionsort/(\\sort reverse\\/\\random\\)": {
+    "39": {
+      "time_ratio": 1.51,
+      "min_time_ns": 1.4345e8,
+      "mean_time_ns": 1.51e8,
+      "std_time_ns": 0.0,
+      "base_hash": "5e7aaa6",
+      "median_time_ns": 1.51e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.5855e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b0154e3",
+      "timestamp": "2026-03-10T23:30:19.065",
+      "memory_bytes": 0
+    },
+    "87": {
+      "time_ratio": 0.66,
+      "min_time_ns": 6.27e7,
+      "mean_time_ns": 6.6e7,
+      "std_time_ns": 0.0,
+      "base_hash": "b39d697",
+      "median_time_ns": 6.6e7,
+      "source_type": "report_md",
+      "max_time_ns": 6.93e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b97eb35",
+      "timestamp": "2026-03-10T23:30:01.752",
       "memory_bytes": 0
     }
   },
@@ -2051,41 +2733,25 @@
       "memory_bytes": 0
     }
   },
-  "sort/quicksort/(sort! forwards/random)": {
-    "22": {
-      "time_ratio": 0.69,
-      "min_time_ns": 6.555e7,
-      "mean_time_ns": 6.9e7,
+  "sort/length = 30/descending": {
+    "75": {
+      "time_ratio": 0.72,
+      "min_time_ns": 6.84e7,
+      "mean_time_ns": 7.2e7,
       "std_time_ns": 0.0,
-      "base_hash": "8cdb17b",
-      "median_time_ns": 6.9e7,
-      "source_type": "unknown",
-      "max_time_ns": 7.245e7,
+      "base_hash": "e3f90c4",
+      "median_time_ns": 7.2e7,
+      "source_type": "report_md",
+      "max_time_ns": 7.56e7,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "0425751",
-      "timestamp": "2026-03-09T03:20:31.698",
+      "commit_hash": "b57a57a",
+      "timestamp": "2026-03-10T23:30:06.385",
       "memory_bytes": 0
     }
   },
   "sort/insertionsort/(sortperm reverse/ones)": {
-    "107": {
-      "time_ratio": 1.35,
-      "min_time_ns": 1.2825e8,
-      "mean_time_ns": 1.35e8,
-      "std_time_ns": 0.0,
-      "base_hash": "d6c092d",
-      "median_time_ns": 1.35e8,
-      "source_type": "report_md",
-      "max_time_ns": 1.4175e8,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "cd660ad",
-      "timestamp": "2026-03-10T00:40:53.667",
-      "memory_bytes": 0
-    },
     "22": {
       "time_ratio": 0.66,
       "min_time_ns": 6.27e7,
@@ -2101,10 +2767,26 @@
       "commit_hash": "0425751",
       "timestamp": "2026-03-09T03:20:31.698",
       "memory_bytes": 0
+    },
+    "179": {
+      "time_ratio": 1.35,
+      "min_time_ns": 1.2825e8,
+      "mean_time_ns": 1.35e8,
+      "std_time_ns": 0.0,
+      "base_hash": "d6c092d",
+      "median_time_ns": 1.35e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.4175e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "cd660ad",
+      "timestamp": "2026-03-10T00:40:53.667",
+      "memory_bytes": 0
     }
   },
   "sort/insertionsort/(sortperm! reverse/random)": {
-    "32": {
+    "104": {
       "time_ratio": 1.0,
       "min_time_ns": 9.5e7,
       "mean_time_ns": 1.0e8,
@@ -2154,7 +2836,39 @@
     }
   },
   "sort/issues/partialsort!(rand(10_000)/1:3/rev=true)": {
-    "49": {
+    "38": {
+      "time_ratio": 0.98,
+      "min_time_ns": 9.31e7,
+      "mean_time_ns": 9.8e7,
+      "std_time_ns": 0.0,
+      "base_hash": "9294132",
+      "median_time_ns": 9.8e7,
+      "source_type": "report_md",
+      "max_time_ns": 1.029e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b00614a",
+      "timestamp": "2026-03-10T23:30:19.395",
+      "memory_bytes": 0
+    },
+    "174": {
+      "time_ratio": 1.01,
+      "min_time_ns": 9.595e7,
+      "mean_time_ns": 1.01e8,
+      "std_time_ns": 0.0,
+      "base_hash": "3ed49fd",
+      "median_time_ns": 1.01e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.0605e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "cccbb61",
+      "timestamp": "2026-03-10T00:40:54.764",
+      "memory_bytes": 0
+    },
+    "121": {
       "time_ratio": 1.0,
       "min_time_ns": 9.5e7,
       "mean_time_ns": 1.0e8,
@@ -2170,36 +2884,20 @@
       "timestamp": "2026-03-10T00:41:07.608",
       "memory_bytes": 0
     },
-    "101": {
-      "time_ratio": 1.0,
-      "min_time_ns": 9.5e7,
-      "mean_time_ns": 1.0e8,
+    "85": {
+      "time_ratio": 0.98,
+      "min_time_ns": 9.31e7,
+      "mean_time_ns": 9.8e7,
       "std_time_ns": 0.0,
-      "base_hash": "2a24b8f",
-      "median_time_ns": 1.0e8,
+      "base_hash": "a62a74e",
+      "median_time_ns": 9.8e7,
       "source_type": "report_md",
-      "max_time_ns": 1.05e8,
+      "max_time_ns": 1.029e8,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "cc771a4",
-      "timestamp": "2026-03-10T00:40:54.980",
-      "memory_bytes": 0
-    },
-    "91": {
-      "time_ratio": 0.99,
-      "min_time_ns": 9.405e7,
-      "mean_time_ns": 9.9e7,
-      "std_time_ns": 0.0,
-      "base_hash": "af36919",
-      "median_time_ns": 9.9e7,
-      "source_type": "report_md",
-      "max_time_ns": 1.0395e8,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "c9c9199",
-      "timestamp": "2026-03-10T00:40:57.644",
+      "commit_hash": "b822f62",
+      "timestamp": "2026-03-10T23:30:02.752",
       "memory_bytes": 0
     },
     "7": {
@@ -2218,23 +2916,71 @@
       "timestamp": "2026-03-09T03:20:30.409",
       "memory_bytes": 0
     },
-    "102": {
-      "time_ratio": 1.01,
-      "min_time_ns": 9.595e7,
-      "mean_time_ns": 1.01e8,
+    "163": {
+      "time_ratio": 0.99,
+      "min_time_ns": 9.405e7,
+      "mean_time_ns": 9.9e7,
       "std_time_ns": 0.0,
-      "base_hash": "3ed49fd",
-      "median_time_ns": 1.01e8,
+      "base_hash": "af36919",
+      "median_time_ns": 9.9e7,
       "source_type": "report_md",
-      "max_time_ns": 1.0605e8,
+      "max_time_ns": 1.0395e8,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "cccbb61",
-      "timestamp": "2026-03-10T00:40:54.764",
+      "commit_hash": "c9c9199",
+      "timestamp": "2026-03-10T00:40:57.644",
       "memory_bytes": 0
     },
-    "82": {
+    "173": {
+      "time_ratio": 1.0,
+      "min_time_ns": 9.5e7,
+      "mean_time_ns": 1.0e8,
+      "std_time_ns": 0.0,
+      "base_hash": "2a24b8f",
+      "median_time_ns": 1.0e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.05e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "cc771a4",
+      "timestamp": "2026-03-10T00:40:54.980",
+      "memory_bytes": 0
+    },
+    "41": {
+      "time_ratio": 1.02,
+      "min_time_ns": 9.69e7,
+      "mean_time_ns": 1.02e8,
+      "std_time_ns": 0.0,
+      "base_hash": "1e2758e",
+      "median_time_ns": 1.02e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.071e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b0772ee",
+      "timestamp": "2026-03-10T23:30:18.437",
+      "memory_bytes": 0
+    },
+    "100": {
+      "time_ratio": 1.0,
+      "min_time_ns": 9.5e7,
+      "mean_time_ns": 1.0e8,
+      "std_time_ns": 0.0,
+      "base_hash": "6f04ee0",
+      "median_time_ns": 1.0e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.05e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "bc12b12",
+      "timestamp": "2026-03-10T23:29:57.276",
+      "memory_bytes": 0
+    },
+    "154": {
       "time_ratio": 1.0,
       "min_time_ns": 9.5e7,
       "mean_time_ns": 1.0e8,
@@ -2251,8 +2997,26 @@
       "memory_bytes": 0
     }
   },
+  "sort/quicksort/(sort! forwards/random)": {
+    "22": {
+      "time_ratio": 0.69,
+      "min_time_ns": 6.555e7,
+      "mean_time_ns": 6.9e7,
+      "std_time_ns": 0.0,
+      "base_hash": "8cdb17b",
+      "median_time_ns": 6.9e7,
+      "source_type": "unknown",
+      "max_time_ns": 7.245e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "0425751",
+      "timestamp": "2026-03-09T03:20:31.698",
+      "memory_bytes": 0
+    }
+  },
   "sort/insertionsort/(sortperm! forwards/random)": {
-    "32": {
+    "104": {
       "time_ratio": 1.0,
       "min_time_ns": 9.5e7,
       "mean_time_ns": 1.0e8,
@@ -2284,22 +3048,6 @@
       "timestamp": "2026-03-09T03:20:31.615",
       "memory_bytes": 0
     },
-    "31": {
-      "time_ratio": 1.0,
-      "min_time_ns": 9.5e7,
-      "mean_time_ns": 1.0e8,
-      "std_time_ns": 0.0,
-      "base_hash": "12e679c",
-      "median_time_ns": 1.0e8,
-      "source_type": "report_md",
-      "max_time_ns": 1.05e8,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "bd36d0a",
-      "timestamp": "2026-03-10T00:41:11.920",
-      "memory_bytes": 0
-    },
     "22": {
       "time_ratio": 0.26,
       "min_time_ns": 2.47e7,
@@ -2315,10 +3063,26 @@
       "commit_hash": "0425751",
       "timestamp": "2026-03-09T03:20:31.698",
       "memory_bytes": 0
+    },
+    "103": {
+      "time_ratio": 1.0,
+      "min_time_ns": 9.5e7,
+      "mean_time_ns": 1.0e8,
+      "std_time_ns": 0.0,
+      "base_hash": "12e679c",
+      "median_time_ns": 1.0e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.05e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "bd36d0a",
+      "timestamp": "2026-03-10T00:41:11.920",
+      "memory_bytes": 0
     }
   },
   "sort/length = 1000/sort!(fill(missing/length))": {
-    "102": {
+    "174": {
       "time_ratio": 1.51,
       "min_time_ns": 1.4345e8,
       "mean_time_ns": 1.51e8,
@@ -2354,7 +3118,7 @@
     }
   },
   "sort/quicksort/(sortperm! forwards/ascending)": {
-    "32": {
+    "104": {
       "time_ratio": 1.0,
       "min_time_ns": 9.5e7,
       "mean_time_ns": 1.0e8,
@@ -2386,7 +3150,7 @@
       "timestamp": "2026-03-09T03:20:31.615",
       "memory_bytes": 0
     },
-    "31": {
+    "103": {
       "time_ratio": 1.0,
       "min_time_ns": 9.5e7,
       "mean_time_ns": 1.0e8,
@@ -2404,7 +3168,7 @@
     }
   },
   "sort/quicksort/(sortperm! forwards/ones)": {
-    "32": {
+    "104": {
       "time_ratio": 0.98,
       "min_time_ns": 9.31e7,
       "mean_time_ns": 9.8e7,
@@ -2436,22 +3200,6 @@
       "timestamp": "2026-03-09T03:20:31.615",
       "memory_bytes": 0
     },
-    "31": {
-      "time_ratio": 1.0,
-      "min_time_ns": 9.5e7,
-      "mean_time_ns": 1.0e8,
-      "std_time_ns": 0.0,
-      "base_hash": "12e679c",
-      "median_time_ns": 1.0e8,
-      "source_type": "report_md",
-      "max_time_ns": 1.05e8,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "bd36d0a",
-      "timestamp": "2026-03-10T00:41:11.920",
-      "memory_bytes": 0
-    },
     "22": {
       "time_ratio": 0.54,
       "min_time_ns": 5.13e7,
@@ -2467,10 +3215,42 @@
       "commit_hash": "0425751",
       "timestamp": "2026-03-09T03:20:31.698",
       "memory_bytes": 0
+    },
+    "103": {
+      "time_ratio": 1.0,
+      "min_time_ns": 9.5e7,
+      "mean_time_ns": 1.0e8,
+      "std_time_ns": 0.0,
+      "base_hash": "12e679c",
+      "median_time_ns": 1.0e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.05e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "bd36d0a",
+      "timestamp": "2026-03-10T00:41:11.920",
+      "memory_bytes": 0
     }
   },
   "sort/quicksort/(sort! reverse/ones)": {
-    "125": {
+    "46": {
+      "time_ratio": 1.45,
+      "min_time_ns": 1.3775e8,
+      "mean_time_ns": 1.45e8,
+      "std_time_ns": 0.0,
+      "base_hash": "20a5fa7",
+      "median_time_ns": 1.45e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.5225e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b146a70",
+      "timestamp": "2026-03-10T23:30:16.871",
+      "memory_bytes": 0
+    },
+    "197": {
       "time_ratio": 1.43,
       "min_time_ns": 1.3585e8,
       "mean_time_ns": 1.43e8,
@@ -2502,7 +3282,7 @@
       "timestamp": "2026-03-09T03:20:31.698",
       "memory_bytes": 0
     },
-    "60": {
+    "132": {
       "time_ratio": 1.32,
       "min_time_ns": 1.254e8,
       "mean_time_ns": 1.32e8,
@@ -2520,36 +3300,20 @@
     }
   },
   "sort/insertionsort/(sortperm! forwards/ascending)": {
-    "32": {
-      "time_ratio": 0.98,
-      "min_time_ns": 9.31e7,
-      "mean_time_ns": 9.8e7,
+    "86": {
+      "time_ratio": 0.66,
+      "min_time_ns": 6.27e7,
+      "mean_time_ns": 6.6e7,
       "std_time_ns": 0.0,
-      "base_hash": "61c0b41",
-      "median_time_ns": 9.8e7,
+      "base_hash": "a7e4f6d",
+      "median_time_ns": 6.6e7,
       "source_type": "report_md",
-      "max_time_ns": 1.029e8,
+      "max_time_ns": 6.93e7,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "bd36d0a",
-      "timestamp": "2026-03-10T00:41:11.731",
-      "memory_bytes": 0
-    },
-    "51": {
-      "time_ratio": 1.38,
-      "min_time_ns": 1.311e8,
-      "mean_time_ns": 1.38e8,
-      "std_time_ns": 0.0,
-      "base_hash": "7d6dfe1",
-      "median_time_ns": 1.38e8,
-      "source_type": "report_md",
-      "max_time_ns": 1.449e8,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "c165fbe",
-      "timestamp": "2026-03-10T00:41:07.217",
+      "commit_hash": "b92fd65",
+      "timestamp": "2026-03-10T23:30:02.048",
       "memory_bytes": 0
     },
     "21": {
@@ -2568,12 +3332,28 @@
       "timestamp": "2026-03-09T03:20:31.615",
       "memory_bytes": 0
     },
-    "31": {
+    "79": {
+      "time_ratio": 1.5,
+      "min_time_ns": 1.425e8,
+      "mean_time_ns": 1.5e8,
+      "std_time_ns": 0.0,
+      "base_hash": "61c6f33",
+      "median_time_ns": 1.5e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.575e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b6bca19",
+      "timestamp": "2026-03-10T23:30:05.064",
+      "memory_bytes": 0
+    },
+    "104": {
       "time_ratio": 0.98,
       "min_time_ns": 9.31e7,
       "mean_time_ns": 9.8e7,
       "std_time_ns": 0.0,
-      "base_hash": "12e679c",
+      "base_hash": "61c0b41",
       "median_time_ns": 9.8e7,
       "source_type": "report_md",
       "max_time_ns": 1.029e8,
@@ -2581,10 +3361,10 @@
       "julia_version": "nightly",
       "samples": 1,
       "commit_hash": "bd36d0a",
-      "timestamp": "2026-03-10T00:41:11.920",
+      "timestamp": "2026-03-10T00:41:11.731",
       "memory_bytes": 0
     },
-    "132": {
+    "204": {
       "time_ratio": 0.66,
       "min_time_ns": 6.27e7,
       "mean_time_ns": 6.6e7,
@@ -2599,26 +3379,42 @@
       "commit_hash": "d22c304",
       "timestamp": "2026-03-10T00:40:47.554",
       "memory_bytes": 0
-    }
-  },
-  "sort/mergesort/(sortperm reverse/descending)": {
-    "52": {
-      "time_ratio": 1.31,
-      "min_time_ns": 1.2445e8,
-      "mean_time_ns": 1.31e8,
+    },
+    "123": {
+      "time_ratio": 1.38,
+      "min_time_ns": 1.311e8,
+      "mean_time_ns": 1.38e8,
       "std_time_ns": 0.0,
-      "base_hash": "1b600f0",
-      "median_time_ns": 1.31e8,
+      "base_hash": "7d6dfe1",
+      "median_time_ns": 1.38e8,
       "source_type": "report_md",
-      "max_time_ns": 1.3755e8,
+      "max_time_ns": 1.449e8,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "c1a287e",
-      "timestamp": "2026-03-10T00:41:06.619",
+      "commit_hash": "c165fbe",
+      "timestamp": "2026-03-10T00:41:07.217",
       "memory_bytes": 0
     },
-    "105": {
+    "103": {
+      "time_ratio": 0.98,
+      "min_time_ns": 9.31e7,
+      "mean_time_ns": 9.8e7,
+      "std_time_ns": 0.0,
+      "base_hash": "12e679c",
+      "median_time_ns": 9.8e7,
+      "source_type": "report_md",
+      "max_time_ns": 1.029e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "bd36d0a",
+      "timestamp": "2026-03-10T00:41:11.920",
+      "memory_bytes": 0
+    }
+  },
+  "sort/mergesort/(sortperm reverse/descending)": {
+    "177": {
       "time_ratio": 1.32,
       "min_time_ns": 1.254e8,
       "mean_time_ns": 1.32e8,
@@ -2632,6 +3428,22 @@
       "samples": 1,
       "commit_hash": "cd2ebfc",
       "timestamp": "2026-03-10T00:40:54.113",
+      "memory_bytes": 0
+    },
+    "124": {
+      "time_ratio": 1.31,
+      "min_time_ns": 1.2445e8,
+      "mean_time_ns": 1.31e8,
+      "std_time_ns": 0.0,
+      "base_hash": "1b600f0",
+      "median_time_ns": 1.31e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.3755e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "c1a287e",
+      "timestamp": "2026-03-10T00:41:06.619",
       "memory_bytes": 0
     }
   },
@@ -2688,55 +3500,23 @@
       "timestamp": "2026-03-09T03:20:32.716",
       "memory_bytes": 0
     },
-    "97": {
-      "time_ratio": 0.67,
-      "min_time_ns": 6.365000000000001e7,
-      "mean_time_ns": 6.700000000000001e7,
-      "std_time_ns": 0.0,
-      "base_hash": "430e5e0",
-      "median_time_ns": 6.700000000000001e7,
-      "source_type": "report_md",
-      "max_time_ns": 7.035000000000001e7,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "cb532d5",
-      "timestamp": "2026-03-10T00:40:56.029",
-      "memory_bytes": 0
-    },
-    "81": {
+    "79": {
       "time_ratio": 1.5,
       "min_time_ns": 1.425e8,
       "mean_time_ns": 1.5e8,
       "std_time_ns": 0.0,
-      "base_hash": "cae3571",
+      "base_hash": "61c6f33",
       "median_time_ns": 1.5e8,
       "source_type": "report_md",
       "max_time_ns": 1.575e8,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "c6a023a",
-      "timestamp": "2026-03-10T00:41:00.062",
+      "commit_hash": "b6bca19",
+      "timestamp": "2026-03-10T23:30:05.064",
       "memory_bytes": 0
     },
-    "106": {
-      "time_ratio": 1.5,
-      "min_time_ns": 1.425e8,
-      "mean_time_ns": 1.5e8,
-      "std_time_ns": 0.0,
-      "base_hash": "7c45ff0",
-      "median_time_ns": 1.5e8,
-      "source_type": "report_md",
-      "max_time_ns": 1.575e8,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "cd5b8fb",
-      "timestamp": "2026-03-10T00:40:53.913",
-      "memory_bytes": 0
-    },
-    "70": {
+    "142": {
       "time_ratio": 0.67,
       "min_time_ns": 6.365000000000001e7,
       "mean_time_ns": 6.700000000000001e7,
@@ -2752,7 +3532,71 @@
       "timestamp": "2026-03-10T00:41:02.749",
       "memory_bytes": 0
     },
-    "50": {
+    "204": {
+      "time_ratio": 0.67,
+      "min_time_ns": 6.365000000000001e7,
+      "mean_time_ns": 6.700000000000001e7,
+      "std_time_ns": 0.0,
+      "base_hash": "e3adc39",
+      "median_time_ns": 6.700000000000001e7,
+      "source_type": "report_md",
+      "max_time_ns": 7.035000000000001e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "d22c304",
+      "timestamp": "2026-03-10T00:40:47.554",
+      "memory_bytes": 0
+    },
+    "178": {
+      "time_ratio": 1.5,
+      "min_time_ns": 1.425e8,
+      "mean_time_ns": 1.5e8,
+      "std_time_ns": 0.0,
+      "base_hash": "7c45ff0",
+      "median_time_ns": 1.5e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.575e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "cd5b8fb",
+      "timestamp": "2026-03-10T00:40:53.913",
+      "memory_bytes": 0
+    },
+    "124": {
+      "time_ratio": 1.5,
+      "min_time_ns": 1.425e8,
+      "mean_time_ns": 1.5e8,
+      "std_time_ns": 0.0,
+      "base_hash": "1b600f0",
+      "median_time_ns": 1.5e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.575e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "c1a287e",
+      "timestamp": "2026-03-10T00:41:06.619",
+      "memory_bytes": 0
+    },
+    "118": {
+      "time_ratio": 0.67,
+      "min_time_ns": 6.365000000000001e7,
+      "mean_time_ns": 6.700000000000001e7,
+      "std_time_ns": 0.0,
+      "base_hash": "d6c092d",
+      "median_time_ns": 6.700000000000001e7,
+      "source_type": "report_md",
+      "max_time_ns": 7.035000000000001e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "c0b95ac",
+      "timestamp": "2026-03-10T00:41:08.226",
+      "memory_bytes": 0
+    },
+    "122": {
       "time_ratio": 0.67,
       "min_time_ns": 6.365000000000001e7,
       "mean_time_ns": 6.700000000000001e7,
@@ -2773,50 +3617,50 @@
       "min_time_ns": 1.425e8,
       "mean_time_ns": 1.5e8,
       "std_time_ns": 0.0,
-      "base_hash": "1b600f0",
+      "base_hash": "e3b9290",
       "median_time_ns": 1.5e8,
       "source_type": "report_md",
       "max_time_ns": 1.575e8,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "c1a287e",
-      "timestamp": "2026-03-10T00:41:06.619",
+      "commit_hash": "b2f4cd0",
+      "timestamp": "2026-03-10T23:30:14.653",
       "memory_bytes": 0
     },
-    "46": {
+    "72": {
       "time_ratio": 0.67,
       "min_time_ns": 6.365000000000001e7,
       "mean_time_ns": 6.700000000000001e7,
       "std_time_ns": 0.0,
-      "base_hash": "d6c092d",
+      "base_hash": "2cf1f34",
       "median_time_ns": 6.700000000000001e7,
       "source_type": "report_md",
       "max_time_ns": 7.035000000000001e7,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "c0b95ac",
-      "timestamp": "2026-03-10T00:41:08.226",
+      "commit_hash": "b4c79e7",
+      "timestamp": "2026-03-10T23:30:07.325",
       "memory_bytes": 0
     },
-    "107": {
-      "time_ratio": 1.5,
-      "min_time_ns": 1.425e8,
-      "mean_time_ns": 1.5e8,
+    "169": {
+      "time_ratio": 0.67,
+      "min_time_ns": 6.365000000000001e7,
+      "mean_time_ns": 6.700000000000001e7,
       "std_time_ns": 0.0,
-      "base_hash": "d6c092d",
-      "median_time_ns": 1.5e8,
+      "base_hash": "430e5e0",
+      "median_time_ns": 6.700000000000001e7,
       "source_type": "report_md",
-      "max_time_ns": 1.575e8,
+      "max_time_ns": 7.035000000000001e7,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "cd660ad",
-      "timestamp": "2026-03-10T00:40:53.667",
+      "commit_hash": "cb532d5",
+      "timestamp": "2026-03-10T00:40:56.029",
       "memory_bytes": 0
     },
-    "105": {
+    "177": {
       "time_ratio": 1.5,
       "min_time_ns": 1.425e8,
       "mean_time_ns": 1.5e8,
@@ -2832,20 +3676,36 @@
       "timestamp": "2026-03-10T00:40:54.113",
       "memory_bytes": 0
     },
-    "132": {
-      "time_ratio": 0.67,
-      "min_time_ns": 6.365000000000001e7,
-      "mean_time_ns": 6.700000000000001e7,
+    "179": {
+      "time_ratio": 1.5,
+      "min_time_ns": 1.425e8,
+      "mean_time_ns": 1.5e8,
       "std_time_ns": 0.0,
-      "base_hash": "e3adc39",
-      "median_time_ns": 6.700000000000001e7,
+      "base_hash": "d6c092d",
+      "median_time_ns": 1.5e8,
       "source_type": "report_md",
-      "max_time_ns": 7.035000000000001e7,
+      "max_time_ns": 1.575e8,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "d22c304",
-      "timestamp": "2026-03-10T00:40:47.554",
+      "commit_hash": "cd660ad",
+      "timestamp": "2026-03-10T00:40:53.667",
+      "memory_bytes": 0
+    },
+    "153": {
+      "time_ratio": 1.5,
+      "min_time_ns": 1.425e8,
+      "mean_time_ns": 1.5e8,
+      "std_time_ns": 0.0,
+      "base_hash": "cae3571",
+      "median_time_ns": 1.5e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.575e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "c6a023a",
+      "timestamp": "2026-03-10T00:41:00.062",
       "memory_bytes": 0
     }
   },
@@ -2867,8 +3727,26 @@
       "memory_bytes": 0
     }
   },
+  "sort/insertionsort/(\\sort! forwards\\/\\ascending\\)": {
+    "39": {
+      "time_ratio": 1.52,
+      "min_time_ns": 1.444e8,
+      "mean_time_ns": 1.52e8,
+      "std_time_ns": 0.0,
+      "base_hash": "5e7aaa6",
+      "median_time_ns": 1.52e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.596e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b0154e3",
+      "timestamp": "2026-03-10T23:30:19.065",
+      "memory_bytes": 0
+    }
+  },
   "sort/length = 1000/Float64 unions with missing": {
-    "91": {
+    "163": {
       "time_ratio": 1.25,
       "min_time_ns": 1.1875e8,
       "mean_time_ns": 1.25e8,
@@ -2886,6 +3764,22 @@
     }
   },
   "sort/insertionsort/sort! reverse": {
+    "134": {
+      "time_ratio": 1.3,
+      "min_time_ns": 1.235e8,
+      "mean_time_ns": 1.3e8,
+      "std_time_ns": 0.0,
+      "base_hash": "e026aff",
+      "median_time_ns": 1.3e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.365e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "c46c227",
+      "timestamp": "2026-03-10T00:41:04.382",
+      "memory_bytes": 0
+    },
     "7": {
       "time_ratio": 1.21,
       "min_time_ns": 1.1495e8,
@@ -2900,22 +3794,6 @@
       "samples": 1,
       "commit_hash": "016630a",
       "timestamp": "2026-03-09T03:20:30.409",
-      "memory_bytes": 0
-    },
-    "62": {
-      "time_ratio": 1.3,
-      "min_time_ns": 1.235e8,
-      "mean_time_ns": 1.3e8,
-      "std_time_ns": 0.0,
-      "base_hash": "e026aff",
-      "median_time_ns": 1.3e8,
-      "source_type": "report_md",
-      "max_time_ns": 1.365e8,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "c46c227",
-      "timestamp": "2026-03-10T00:41:04.382",
       "memory_bytes": 0
     }
   },
@@ -2955,103 +3833,55 @@
       "memory_bytes": 0
     }
   },
-  "sort/insertionsort/(\\sort! forwards\\/\\descending\\)": {
-    "121": {
-      "time_ratio": 1.3,
-      "min_time_ns": 1.235e8,
-      "mean_time_ns": 1.3e8,
+  "sort/length = 3/ascending": {
+    "47": {
+      "time_ratio": 0.79,
+      "min_time_ns": 7.505e7,
+      "mean_time_ns": 7.9e7,
       "std_time_ns": 0.0,
-      "base_hash": "c79309b",
-      "median_time_ns": 1.3e8,
+      "base_hash": "ac54799",
+      "median_time_ns": 7.9e7,
       "source_type": "report_md",
-      "max_time_ns": 1.365e8,
+      "max_time_ns": 8.295e7,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "d03508a",
-      "timestamp": "2026-03-10T00:40:50.823",
+      "commit_hash": "b15100f",
+      "timestamp": "2026-03-10T23:30:16.538",
       "memory_bytes": 0
     }
   },
   "sort/insertionsort/(sort! reverse/descending)": {
-    "105": {
+    "97": {
       "time_ratio": 0.67,
       "min_time_ns": 6.365000000000001e7,
       "mean_time_ns": 6.700000000000001e7,
       "std_time_ns": 0.0,
-      "base_hash": "1b600f0",
+      "base_hash": "ef67353",
       "median_time_ns": 6.700000000000001e7,
       "source_type": "report_md",
       "max_time_ns": 7.035000000000001e7,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "cd2ebfc",
-      "timestamp": "2026-03-10T00:40:54.113",
+      "commit_hash": "bb6afd0",
+      "timestamp": "2026-03-10T23:29:58.226",
       "memory_bytes": 0
     },
-    "51": {
-      "time_ratio": 0.66,
-      "min_time_ns": 6.27e7,
-      "mean_time_ns": 6.6e7,
+    "79": {
+      "time_ratio": 0.67,
+      "min_time_ns": 6.365000000000001e7,
+      "mean_time_ns": 6.700000000000001e7,
       "std_time_ns": 0.0,
-      "base_hash": "7d6dfe1",
-      "median_time_ns": 6.6e7,
+      "base_hash": "61c6f33",
+      "median_time_ns": 6.700000000000001e7,
       "source_type": "report_md",
-      "max_time_ns": 6.93e7,
+      "max_time_ns": 7.035000000000001e7,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "c165fbe",
-      "timestamp": "2026-03-10T00:41:07.217",
-      "memory_bytes": 0
-    },
-    "81": {
-      "time_ratio": 0.66,
-      "min_time_ns": 6.27e7,
-      "mean_time_ns": 6.6e7,
-      "std_time_ns": 0.0,
-      "base_hash": "cae3571",
-      "median_time_ns": 6.6e7,
-      "source_type": "report_md",
-      "max_time_ns": 6.93e7,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "c6a023a",
-      "timestamp": "2026-03-10T00:41:00.062",
-      "memory_bytes": 0
-    },
-    "132": {
-      "time_ratio": 1.5,
-      "min_time_ns": 1.425e8,
-      "mean_time_ns": 1.5e8,
-      "std_time_ns": 0.0,
-      "base_hash": "e3adc39",
-      "median_time_ns": 1.5e8,
-      "source_type": "report_md",
-      "max_time_ns": 1.575e8,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "d22c304",
-      "timestamp": "2026-03-10T00:40:47.554",
-      "memory_bytes": 0
-    },
-    "134": {
-      "time_ratio": 1.49,
-      "min_time_ns": 1.4155e8,
-      "mean_time_ns": 1.49e8,
-      "std_time_ns": 0.0,
-      "base_hash": "4931faa",
-      "median_time_ns": 1.49e8,
-      "source_type": "report_md",
-      "max_time_ns": 1.5645e8,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "d27fe45",
-      "timestamp": "2026-03-10T00:40:47.111",
+      "commit_hash": "b6bca19",
+      "timestamp": "2026-03-10T23:30:05.064",
       "memory_bytes": 0
     },
     "20": {
@@ -3070,23 +3900,23 @@
       "timestamp": "2026-03-09T03:20:31.529",
       "memory_bytes": 0
     },
-    "50": {
-      "time_ratio": 1.51,
-      "min_time_ns": 1.4345e8,
-      "mean_time_ns": 1.51e8,
+    "204": {
+      "time_ratio": 1.5,
+      "min_time_ns": 1.425e8,
+      "mean_time_ns": 1.5e8,
       "std_time_ns": 0.0,
-      "base_hash": "9117b4d",
-      "median_time_ns": 1.51e8,
+      "base_hash": "e3adc39",
+      "median_time_ns": 1.5e8,
       "source_type": "report_md",
-      "max_time_ns": 1.5855e8,
+      "max_time_ns": 1.575e8,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "c13f74b",
-      "timestamp": "2026-03-10T00:41:07.423",
+      "commit_hash": "d22c304",
+      "timestamp": "2026-03-10T00:40:47.554",
       "memory_bytes": 0
     },
-    "52": {
+    "124": {
       "time_ratio": 0.67,
       "min_time_ns": 6.365000000000001e7,
       "mean_time_ns": 6.700000000000001e7,
@@ -3102,7 +3932,71 @@
       "timestamp": "2026-03-10T00:41:06.619",
       "memory_bytes": 0
     },
-    "97": {
+    "67": {
+      "time_ratio": 1.5,
+      "min_time_ns": 1.425e8,
+      "mean_time_ns": 1.5e8,
+      "std_time_ns": 0.0,
+      "base_hash": "907264b",
+      "median_time_ns": 1.5e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.575e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b46df09",
+      "timestamp": "2026-03-10T23:30:08.960",
+      "memory_bytes": 0
+    },
+    "206": {
+      "time_ratio": 1.49,
+      "min_time_ns": 1.4155e8,
+      "mean_time_ns": 1.49e8,
+      "std_time_ns": 0.0,
+      "base_hash": "4931faa",
+      "median_time_ns": 1.49e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.5645e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "d27fe45",
+      "timestamp": "2026-03-10T00:40:47.111",
+      "memory_bytes": 0
+    },
+    "122": {
+      "time_ratio": 1.51,
+      "min_time_ns": 1.4345e8,
+      "mean_time_ns": 1.51e8,
+      "std_time_ns": 0.0,
+      "base_hash": "9117b4d",
+      "median_time_ns": 1.51e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.5855e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "c13f74b",
+      "timestamp": "2026-03-10T00:41:07.423",
+      "memory_bytes": 0
+    },
+    "72": {
+      "time_ratio": 1.52,
+      "min_time_ns": 1.444e8,
+      "mean_time_ns": 1.52e8,
+      "std_time_ns": 0.0,
+      "base_hash": "2cf1f34",
+      "median_time_ns": 1.52e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.596e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b4c79e7",
+      "timestamp": "2026-03-10T23:30:07.325",
+      "memory_bytes": 0
+    },
+    "169": {
       "time_ratio": 1.51,
       "min_time_ns": 1.4345e8,
       "mean_time_ns": 1.51e8,
@@ -3116,6 +4010,88 @@
       "samples": 1,
       "commit_hash": "cb532d5",
       "timestamp": "2026-03-10T00:40:56.029",
+      "memory_bytes": 0
+    },
+    "123": {
+      "time_ratio": 0.66,
+      "min_time_ns": 6.27e7,
+      "mean_time_ns": 6.6e7,
+      "std_time_ns": 0.0,
+      "base_hash": "7d6dfe1",
+      "median_time_ns": 6.6e7,
+      "source_type": "report_md",
+      "max_time_ns": 6.93e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "c165fbe",
+      "timestamp": "2026-03-10T00:41:07.217",
+      "memory_bytes": 0
+    },
+    "177": {
+      "time_ratio": 0.67,
+      "min_time_ns": 6.365000000000001e7,
+      "mean_time_ns": 6.700000000000001e7,
+      "std_time_ns": 0.0,
+      "base_hash": "1b600f0",
+      "median_time_ns": 6.700000000000001e7,
+      "source_type": "report_md",
+      "max_time_ns": 7.035000000000001e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "cd2ebfc",
+      "timestamp": "2026-03-10T00:40:54.113",
+      "memory_bytes": 0
+    },
+    "153": {
+      "time_ratio": 0.66,
+      "min_time_ns": 6.27e7,
+      "mean_time_ns": 6.6e7,
+      "std_time_ns": 0.0,
+      "base_hash": "cae3571",
+      "median_time_ns": 6.6e7,
+      "source_type": "report_md",
+      "max_time_ns": 6.93e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "c6a023a",
+      "timestamp": "2026-03-10T00:41:00.062",
+      "memory_bytes": 0
+    }
+  },
+  "sort/insertionsort/(\\sort forwards\\/\\random\\)": {
+    "39": {
+      "time_ratio": 1.51,
+      "min_time_ns": 1.4345e8,
+      "mean_time_ns": 1.51e8,
+      "std_time_ns": 0.0,
+      "base_hash": "5e7aaa6",
+      "median_time_ns": 1.51e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.5855e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b0154e3",
+      "timestamp": "2026-03-10T23:30:19.065",
+      "memory_bytes": 0
+    },
+    "87": {
+      "time_ratio": 0.66,
+      "min_time_ns": 6.27e7,
+      "mean_time_ns": 6.6e7,
+      "std_time_ns": 0.0,
+      "base_hash": "b39d697",
+      "median_time_ns": 6.6e7,
+      "source_type": "report_md",
+      "max_time_ns": 6.93e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b97eb35",
+      "timestamp": "2026-03-10T23:30:01.752",
       "memory_bytes": 0
     }
   },
@@ -3136,52 +4112,20 @@
       "timestamp": "2026-03-09T03:20:32.716",
       "memory_bytes": 0
     },
-    "134": {
-      "time_ratio": 1.51,
-      "min_time_ns": 1.4345e8,
-      "mean_time_ns": 1.51e8,
+    "79": {
+      "time_ratio": 1.49,
+      "min_time_ns": 1.4155e8,
+      "mean_time_ns": 1.49e8,
       "std_time_ns": 0.0,
-      "base_hash": "4931faa",
-      "median_time_ns": 1.51e8,
+      "base_hash": "61c6f33",
+      "median_time_ns": 1.49e8,
       "source_type": "report_md",
-      "max_time_ns": 1.5855e8,
+      "max_time_ns": 1.5645e8,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "d27fe45",
-      "timestamp": "2026-03-10T00:40:47.111",
-      "memory_bytes": 0
-    },
-    "46": {
-      "time_ratio": 0.66,
-      "min_time_ns": 6.27e7,
-      "mean_time_ns": 6.6e7,
-      "std_time_ns": 0.0,
-      "base_hash": "d6c092d",
-      "median_time_ns": 6.6e7,
-      "source_type": "report_md",
-      "max_time_ns": 6.93e7,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "c0b95ac",
-      "timestamp": "2026-03-10T00:41:08.226",
-      "memory_bytes": 0
-    },
-    "106": {
-      "time_ratio": 1.51,
-      "min_time_ns": 1.4345e8,
-      "mean_time_ns": 1.51e8,
-      "std_time_ns": 0.0,
-      "base_hash": "7c45ff0",
-      "median_time_ns": 1.51e8,
-      "source_type": "report_md",
-      "max_time_ns": 1.5855e8,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "cd5b8fb",
-      "timestamp": "2026-03-10T00:40:53.913",
+      "commit_hash": "b6bca19",
+      "timestamp": "2026-03-10T23:30:05.064",
       "memory_bytes": 0
     },
     "20": {
@@ -3200,6 +4144,22 @@
       "timestamp": "2026-03-09T03:20:31.529",
       "memory_bytes": 0
     },
+    "178": {
+      "time_ratio": 1.51,
+      "min_time_ns": 1.4345e8,
+      "mean_time_ns": 1.51e8,
+      "std_time_ns": 0.0,
+      "base_hash": "7c45ff0",
+      "median_time_ns": 1.51e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.5855e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "cd5b8fb",
+      "timestamp": "2026-03-10T00:40:53.913",
+      "memory_bytes": 0
+    },
     "27": {
       "time_ratio": 0.66,
       "min_time_ns": 6.27e7,
@@ -3216,23 +4176,71 @@
       "timestamp": "2026-03-09T03:20:33.066",
       "memory_bytes": 0
     },
-    "107": {
+    "61": {
       "time_ratio": 1.51,
       "min_time_ns": 1.4345e8,
       "mean_time_ns": 1.51e8,
       "std_time_ns": 0.0,
-      "base_hash": "d6c092d",
+      "base_hash": "d279aed",
       "median_time_ns": 1.51e8,
       "source_type": "report_md",
       "max_time_ns": 1.5855e8,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "cd660ad",
-      "timestamp": "2026-03-10T00:40:53.667",
+      "commit_hash": "b3aa91d",
+      "timestamp": "2026-03-10T23:30:11.264",
       "memory_bytes": 0
     },
-    "50": {
+    "67": {
+      "time_ratio": 1.5,
+      "min_time_ns": 1.425e8,
+      "mean_time_ns": 1.5e8,
+      "std_time_ns": 0.0,
+      "base_hash": "907264b",
+      "median_time_ns": 1.5e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.575e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b46df09",
+      "timestamp": "2026-03-10T23:30:08.960",
+      "memory_bytes": 0
+    },
+    "206": {
+      "time_ratio": 1.51,
+      "min_time_ns": 1.4345e8,
+      "mean_time_ns": 1.51e8,
+      "std_time_ns": 0.0,
+      "base_hash": "4931faa",
+      "median_time_ns": 1.51e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.5855e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "d27fe45",
+      "timestamp": "2026-03-10T00:40:47.111",
+      "memory_bytes": 0
+    },
+    "118": {
+      "time_ratio": 0.66,
+      "min_time_ns": 6.27e7,
+      "mean_time_ns": 6.6e7,
+      "std_time_ns": 0.0,
+      "base_hash": "d6c092d",
+      "median_time_ns": 6.6e7,
+      "source_type": "report_md",
+      "max_time_ns": 6.93e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "c0b95ac",
+      "timestamp": "2026-03-10T00:41:08.226",
+      "memory_bytes": 0
+    },
+    "122": {
       "time_ratio": 0.66,
       "min_time_ns": 6.27e7,
       "mean_time_ns": 6.6e7,
@@ -3248,7 +4256,23 @@
       "timestamp": "2026-03-10T00:41:07.423",
       "memory_bytes": 0
     },
-    "105": {
+    "72": {
+      "time_ratio": 1.5,
+      "min_time_ns": 1.425e8,
+      "mean_time_ns": 1.5e8,
+      "std_time_ns": 0.0,
+      "base_hash": "2cf1f34",
+      "median_time_ns": 1.5e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.575e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b4c79e7",
+      "timestamp": "2026-03-10T23:30:07.325",
+      "memory_bytes": 0
+    },
+    "177": {
       "time_ratio": 0.67,
       "min_time_ns": 6.365000000000001e7,
       "mean_time_ns": 6.700000000000001e7,
@@ -3263,23 +4287,55 @@
       "commit_hash": "cd2ebfc",
       "timestamp": "2026-03-10T00:40:54.113",
       "memory_bytes": 0
-    }
-  },
-  "sort/mergesort/(sort reverse/ones)": {
-    "81": {
-      "time_ratio": 0.69,
-      "min_time_ns": 6.555e7,
-      "mean_time_ns": 6.9e7,
+    },
+    "179": {
+      "time_ratio": 1.51,
+      "min_time_ns": 1.4345e8,
+      "mean_time_ns": 1.51e8,
       "std_time_ns": 0.0,
-      "base_hash": "cae3571",
-      "median_time_ns": 6.9e7,
+      "base_hash": "d6c092d",
+      "median_time_ns": 1.51e8,
       "source_type": "report_md",
-      "max_time_ns": 7.245e7,
+      "max_time_ns": 1.5855e8,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "c6a023a",
-      "timestamp": "2026-03-10T00:41:00.062",
+      "commit_hash": "cd660ad",
+      "timestamp": "2026-03-10T00:40:53.667",
+      "memory_bytes": 0
+    }
+  },
+  "sort/mergesort/(sort reverse/ones)": {
+    "79": {
+      "time_ratio": 0.68,
+      "min_time_ns": 6.46e7,
+      "mean_time_ns": 6.8e7,
+      "std_time_ns": 0.0,
+      "base_hash": "61c6f33",
+      "median_time_ns": 6.8e7,
+      "source_type": "report_md",
+      "max_time_ns": 7.14e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b6bca19",
+      "timestamp": "2026-03-10T23:30:05.064",
+      "memory_bytes": 0
+    },
+    "169": {
+      "time_ratio": 1.44,
+      "min_time_ns": 1.368e8,
+      "mean_time_ns": 1.44e8,
+      "std_time_ns": 0.0,
+      "base_hash": "430e5e0",
+      "median_time_ns": 1.44e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.512e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "cb532d5",
+      "timestamp": "2026-03-10T00:40:56.029",
       "memory_bytes": 0
     },
     "22": {
@@ -3298,20 +4354,38 @@
       "timestamp": "2026-03-09T03:20:31.698",
       "memory_bytes": 0
     },
-    "97": {
-      "time_ratio": 1.44,
-      "min_time_ns": 1.368e8,
-      "mean_time_ns": 1.44e8,
+    "153": {
+      "time_ratio": 0.69,
+      "min_time_ns": 6.555e7,
+      "mean_time_ns": 6.9e7,
       "std_time_ns": 0.0,
-      "base_hash": "430e5e0",
-      "median_time_ns": 1.44e8,
+      "base_hash": "cae3571",
+      "median_time_ns": 6.9e7,
       "source_type": "report_md",
-      "max_time_ns": 1.512e8,
+      "max_time_ns": 7.245e7,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "cb532d5",
-      "timestamp": "2026-03-10T00:40:56.029",
+      "commit_hash": "c6a023a",
+      "timestamp": "2026-03-10T00:41:00.062",
+      "memory_bytes": 0
+    }
+  },
+  "sort/insertionsort/(\\sort! forwards\\/\\descending\\)": {
+    "193": {
+      "time_ratio": 1.3,
+      "min_time_ns": 1.235e8,
+      "mean_time_ns": 1.3e8,
+      "std_time_ns": 0.0,
+      "base_hash": "c79309b",
+      "median_time_ns": 1.3e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.365e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "d03508a",
+      "timestamp": "2026-03-10T00:40:50.823",
       "memory_bytes": 0
     }
   },
@@ -3332,23 +4406,23 @@
       "timestamp": "2026-03-09T03:20:32.716",
       "memory_bytes": 0
     },
-    "81": {
-      "time_ratio": 0.67,
-      "min_time_ns": 6.365000000000001e7,
-      "mean_time_ns": 6.700000000000001e7,
+    "177": {
+      "time_ratio": 1.51,
+      "min_time_ns": 1.4345e8,
+      "mean_time_ns": 1.51e8,
       "std_time_ns": 0.0,
-      "base_hash": "cae3571",
-      "median_time_ns": 6.700000000000001e7,
+      "base_hash": "1b600f0",
+      "median_time_ns": 1.51e8,
       "source_type": "report_md",
-      "max_time_ns": 7.035000000000001e7,
+      "max_time_ns": 1.5855e8,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "c6a023a",
-      "timestamp": "2026-03-10T00:41:00.062",
+      "commit_hash": "cd2ebfc",
+      "timestamp": "2026-03-10T00:40:54.113",
       "memory_bytes": 0
     },
-    "70": {
+    "142": {
       "time_ratio": 1.51,
       "min_time_ns": 1.4345e8,
       "mean_time_ns": 1.51e8,
@@ -3362,6 +4436,22 @@
       "samples": 1,
       "commit_hash": "c52a188",
       "timestamp": "2026-03-10T00:41:02.749",
+      "memory_bytes": 0
+    },
+    "122": {
+      "time_ratio": 0.66,
+      "min_time_ns": 6.27e7,
+      "mean_time_ns": 6.6e7,
+      "std_time_ns": 0.0,
+      "base_hash": "9117b4d",
+      "median_time_ns": 6.6e7,
+      "source_type": "report_md",
+      "max_time_ns": 6.93e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "c13f74b",
+      "timestamp": "2026-03-10T00:41:07.423",
       "memory_bytes": 0
     },
     "22": {
@@ -3380,7 +4470,7 @@
       "timestamp": "2026-03-09T03:20:31.698",
       "memory_bytes": 0
     },
-    "107": {
+    "179": {
       "time_ratio": 1.51,
       "min_time_ns": 1.4345e8,
       "mean_time_ns": 1.51e8,
@@ -3396,36 +4486,88 @@
       "timestamp": "2026-03-10T00:40:53.667",
       "memory_bytes": 0
     },
-    "50": {
-      "time_ratio": 0.66,
-      "min_time_ns": 6.27e7,
-      "mean_time_ns": 6.6e7,
-      "std_time_ns": 0.0,
-      "base_hash": "9117b4d",
-      "median_time_ns": 6.6e7,
-      "source_type": "report_md",
-      "max_time_ns": 6.93e7,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "c13f74b",
-      "timestamp": "2026-03-10T00:41:07.423",
-      "memory_bytes": 0
-    },
-    "105": {
+    "52": {
       "time_ratio": 1.51,
       "min_time_ns": 1.4345e8,
       "mean_time_ns": 1.51e8,
       "std_time_ns": 0.0,
-      "base_hash": "1b600f0",
+      "base_hash": "e3b9290",
       "median_time_ns": 1.51e8,
       "source_type": "report_md",
       "max_time_ns": 1.5855e8,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "cd2ebfc",
-      "timestamp": "2026-03-10T00:40:54.113",
+      "commit_hash": "b2f4cd0",
+      "timestamp": "2026-03-10T23:30:14.653",
+      "memory_bytes": 0
+    },
+    "153": {
+      "time_ratio": 0.67,
+      "min_time_ns": 6.365000000000001e7,
+      "mean_time_ns": 6.700000000000001e7,
+      "std_time_ns": 0.0,
+      "base_hash": "cae3571",
+      "median_time_ns": 6.700000000000001e7,
+      "source_type": "report_md",
+      "max_time_ns": 7.035000000000001e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "c6a023a",
+      "timestamp": "2026-03-10T00:41:00.062",
+      "memory_bytes": 0
+    }
+  },
+  "sort/insertionsort/(sortperm forwards/ascending)": {
+    "79": {
+      "time_ratio": 1.36,
+      "min_time_ns": 1.292e8,
+      "mean_time_ns": 1.36e8,
+      "std_time_ns": 0.0,
+      "base_hash": "61c6f33",
+      "median_time_ns": 1.36e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.428e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b6bca19",
+      "timestamp": "2026-03-10T23:30:05.064",
+      "memory_bytes": 0
+    }
+  },
+  "sort/insertionsort/(\\sortperm reverse\\/\\descending\\)": {
+    "87": {
+      "time_ratio": 1.39,
+      "min_time_ns": 1.3205e8,
+      "mean_time_ns": 1.39e8,
+      "std_time_ns": 0.0,
+      "base_hash": "b39d697",
+      "median_time_ns": 1.39e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.4595e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b97eb35",
+      "timestamp": "2026-03-10T23:30:01.752",
+      "memory_bytes": 0
+    },
+    "64": {
+      "time_ratio": 1.32,
+      "min_time_ns": 1.254e8,
+      "mean_time_ns": 1.32e8,
+      "std_time_ns": 0.0,
+      "base_hash": "502c039",
+      "median_time_ns": 1.32e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.386e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b421eca",
+      "timestamp": "2026-03-10T23:30:10.268",
       "memory_bytes": 0
     }
   },
@@ -3448,7 +4590,7 @@
     }
   },
   "sort/quicksort/(sortperm! forwards/random)": {
-    "32": {
+    "104": {
       "time_ratio": 1.0,
       "min_time_ns": 9.5e7,
       "mean_time_ns": 1.0e8,
@@ -3480,22 +4622,6 @@
       "timestamp": "2026-03-09T03:20:31.615",
       "memory_bytes": 0
     },
-    "31": {
-      "time_ratio": 0.99,
-      "min_time_ns": 9.405e7,
-      "mean_time_ns": 9.9e7,
-      "std_time_ns": 0.0,
-      "base_hash": "12e679c",
-      "median_time_ns": 9.9e7,
-      "source_type": "report_md",
-      "max_time_ns": 1.0395e8,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "bd36d0a",
-      "timestamp": "2026-03-10T00:41:11.920",
-      "memory_bytes": 0
-    },
     "22": {
       "time_ratio": 0.67,
       "min_time_ns": 6.365000000000001e7,
@@ -3510,6 +4636,22 @@
       "samples": 1,
       "commit_hash": "0425751",
       "timestamp": "2026-03-09T03:20:31.698",
+      "memory_bytes": 0
+    },
+    "103": {
+      "time_ratio": 0.99,
+      "min_time_ns": 9.405e7,
+      "mean_time_ns": 9.9e7,
+      "std_time_ns": 0.0,
+      "base_hash": "12e679c",
+      "median_time_ns": 9.9e7,
+      "source_type": "report_md",
+      "max_time_ns": 1.0395e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "bd36d0a",
+      "timestamp": "2026-03-10T00:41:11.920",
       "memory_bytes": 0
     }
   },
@@ -3568,7 +4710,7 @@
     }
   },
   "sort/length = 10/ascending": {
-    "102": {
+    "174": {
       "time_ratio": 1.4,
       "min_time_ns": 1.33e8,
       "mean_time_ns": 1.4e8,
@@ -3586,7 +4728,23 @@
     }
   },
   "sort/insertionsort/(sortperm! reverse/ones)": {
-    "32": {
+    "177": {
+      "time_ratio": 0.7,
+      "min_time_ns": 6.65e7,
+      "mean_time_ns": 7.0e7,
+      "std_time_ns": 0.0,
+      "base_hash": "1b600f0",
+      "median_time_ns": 7.0e7,
+      "source_type": "report_md",
+      "max_time_ns": 7.35e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "cd2ebfc",
+      "timestamp": "2026-03-10T00:40:54.113",
+      "memory_bytes": 0
+    },
+    "104": {
       "time_ratio": 0.87,
       "min_time_ns": 8.265e7,
       "mean_time_ns": 8.7e7,
@@ -3616,22 +4774,6 @@
       "samples": 1,
       "commit_hash": "0425751",
       "timestamp": "2026-03-09T03:20:31.615",
-      "memory_bytes": 0
-    },
-    "107": {
-      "time_ratio": 1.43,
-      "min_time_ns": 1.3585e8,
-      "mean_time_ns": 1.43e8,
-      "std_time_ns": 0.0,
-      "base_hash": "d6c092d",
-      "median_time_ns": 1.43e8,
-      "source_type": "report_md",
-      "max_time_ns": 1.5015e8,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "cd660ad",
-      "timestamp": "2026-03-10T00:40:53.667",
       "memory_bytes": 0
     },
     "22": {
@@ -3650,25 +4792,25 @@
       "timestamp": "2026-03-09T03:20:31.698",
       "memory_bytes": 0
     },
-    "105": {
-      "time_ratio": 0.7,
-      "min_time_ns": 6.65e7,
-      "mean_time_ns": 7.0e7,
+    "179": {
+      "time_ratio": 1.43,
+      "min_time_ns": 1.3585e8,
+      "mean_time_ns": 1.43e8,
       "std_time_ns": 0.0,
-      "base_hash": "1b600f0",
-      "median_time_ns": 7.0e7,
+      "base_hash": "d6c092d",
+      "median_time_ns": 1.43e8,
       "source_type": "report_md",
-      "max_time_ns": 7.35e7,
+      "max_time_ns": 1.5015e8,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "cd2ebfc",
-      "timestamp": "2026-03-10T00:40:54.113",
+      "commit_hash": "cd660ad",
+      "timestamp": "2026-03-10T00:40:53.667",
       "memory_bytes": 0
     }
   },
   "sort/quicksort/(sortperm! reverse/ascending)": {
-    "32": {
+    "104": {
       "time_ratio": 1.0,
       "min_time_ns": 9.5e7,
       "mean_time_ns": 1.0e8,
@@ -3701,8 +4843,44 @@
       "memory_bytes": 0
     }
   },
+  "sort/insertionsort/(\\sort reverse\\/\\ascending\\)": {
+    "87": {
+      "time_ratio": 1.5,
+      "min_time_ns": 1.425e8,
+      "mean_time_ns": 1.5e8,
+      "std_time_ns": 0.0,
+      "base_hash": "b39d697",
+      "median_time_ns": 1.5e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.575e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b97eb35",
+      "timestamp": "2026-03-10T23:30:01.752",
+      "memory_bytes": 0
+    }
+  },
+  "sort/length = 30/sort!(fill(missing/length))": {
+    "41": {
+      "time_ratio": 0.7,
+      "min_time_ns": 6.65e7,
+      "mean_time_ns": 7.0e7,
+      "std_time_ns": 0.0,
+      "base_hash": "1e2758e",
+      "median_time_ns": 7.0e7,
+      "source_type": "report_md",
+      "max_time_ns": 7.35e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b0772ee",
+      "timestamp": "2026-03-10T23:30:18.437",
+      "memory_bytes": 0
+    }
+  },
   "sort/issorted/(reverse/ascending)": {
-    "125": {
+    "197": {
       "time_ratio": 0.2,
       "min_time_ns": 1.9e7,
       "mean_time_ns": 2.0e7,
@@ -3717,10 +4895,60 @@
       "commit_hash": "d13bdc0",
       "timestamp": "2026-03-10T00:40:50.051",
       "memory_bytes": 0
+    },
+    "89": {
+      "time_ratio": 1.85,
+      "min_time_ns": 1.7575e8,
+      "mean_time_ns": 1.85e8,
+      "std_time_ns": 0.0,
+      "base_hash": "7723134",
+      "median_time_ns": 1.85e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.9425e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b9b271f",
+      "timestamp": "2026-03-10T23:30:01.104",
+      "memory_bytes": 0
+    }
+  },
+  "sort/mergesort/(\\sort! forwards\\/\\ones\\)": {
+    "64": {
+      "time_ratio": 1.32,
+      "min_time_ns": 1.254e8,
+      "mean_time_ns": 1.32e8,
+      "std_time_ns": 0.0,
+      "base_hash": "502c039",
+      "median_time_ns": 1.32e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.386e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b421eca",
+      "timestamp": "2026-03-10T23:30:10.268",
+      "memory_bytes": 0
     }
   },
   "sort/quicksort/(sort! forwards/ones)": {
-    "125": {
+    "46": {
+      "time_ratio": 1.45,
+      "min_time_ns": 1.3775e8,
+      "mean_time_ns": 1.45e8,
+      "std_time_ns": 0.0,
+      "base_hash": "20a5fa7",
+      "median_time_ns": 1.45e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.5225e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b146a70",
+      "timestamp": "2026-03-10T23:30:16.871",
+      "memory_bytes": 0
+    },
+    "197": {
       "time_ratio": 1.42,
       "min_time_ns": 1.349e8,
       "mean_time_ns": 1.42e8,
@@ -3736,7 +4964,7 @@
       "timestamp": "2026-03-10T00:40:50.051",
       "memory_bytes": 0
     },
-    "70": {
+    "142": {
       "time_ratio": 1.31,
       "min_time_ns": 1.2445e8,
       "mean_time_ns": 1.31e8,
@@ -3770,23 +4998,7 @@
     }
   },
   "sort/mergesort/(sort! reverse/descending)": {
-    "46": {
-      "time_ratio": 1.34,
-      "min_time_ns": 1.2730000000000001e8,
-      "mean_time_ns": 1.3400000000000001e8,
-      "std_time_ns": 0.0,
-      "base_hash": "d6c092d",
-      "median_time_ns": 1.3400000000000001e8,
-      "source_type": "report_md",
-      "max_time_ns": 1.4070000000000003e8,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "c0b95ac",
-      "timestamp": "2026-03-10T00:41:08.226",
-      "memory_bytes": 0
-    },
-    "132": {
+    "204": {
       "time_ratio": 1.38,
       "min_time_ns": 1.311e8,
       "mean_time_ns": 1.38e8,
@@ -3801,10 +5013,26 @@
       "commit_hash": "d22c304",
       "timestamp": "2026-03-10T00:40:47.554",
       "memory_bytes": 0
+    },
+    "118": {
+      "time_ratio": 1.34,
+      "min_time_ns": 1.2730000000000001e8,
+      "mean_time_ns": 1.3400000000000001e8,
+      "std_time_ns": 0.0,
+      "base_hash": "d6c092d",
+      "median_time_ns": 1.3400000000000001e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.4070000000000003e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "c0b95ac",
+      "timestamp": "2026-03-10T00:41:08.226",
+      "memory_bytes": 0
     }
   },
   "sort/mergesort/(sortperm! forwards/ascending)": {
-    "51": {
+    "123": {
       "time_ratio": 1.31,
       "min_time_ns": 1.2445e8,
       "mean_time_ns": 1.31e8,
@@ -3821,21 +5049,89 @@
       "memory_bytes": 0
     }
   },
-  "sort/mergesort/(sort! reverse/ones)": {
-    "81": {
+  "sort/insertionsort/(\\sort! reverse\\/\\descending\\)": {
+    "87": {
+      "time_ratio": 0.67,
+      "min_time_ns": 6.365000000000001e7,
+      "mean_time_ns": 6.700000000000001e7,
+      "std_time_ns": 0.0,
+      "base_hash": "b39d697",
+      "median_time_ns": 6.700000000000001e7,
+      "source_type": "report_md",
+      "max_time_ns": 7.035000000000001e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b97eb35",
+      "timestamp": "2026-03-10T23:30:01.752",
+      "memory_bytes": 0
+    },
+    "64": {
       "time_ratio": 0.66,
       "min_time_ns": 6.27e7,
       "mean_time_ns": 6.6e7,
       "std_time_ns": 0.0,
-      "base_hash": "cae3571",
+      "base_hash": "502c039",
       "median_time_ns": 6.6e7,
       "source_type": "report_md",
       "max_time_ns": 6.93e7,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "c6a023a",
-      "timestamp": "2026-03-10T00:41:00.062",
+      "commit_hash": "b421eca",
+      "timestamp": "2026-03-10T23:30:10.268",
+      "memory_bytes": 0
+    }
+  },
+  "sort/length = 3/sortperm(rand(length))": {
+    "73": {
+      "time_ratio": 0.73,
+      "min_time_ns": 6.935e7,
+      "mean_time_ns": 7.3e7,
+      "std_time_ns": 0.0,
+      "base_hash": "3a3af82",
+      "median_time_ns": 7.3e7,
+      "source_type": "report_md",
+      "max_time_ns": 7.665e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b4ce107",
+      "timestamp": "2026-03-10T23:30:07.045",
+      "memory_bytes": 0
+    }
+  },
+  "sort/mergesort/(sort! reverse/ones)": {
+    "79": {
+      "time_ratio": 0.66,
+      "min_time_ns": 6.27e7,
+      "mean_time_ns": 6.6e7,
+      "std_time_ns": 0.0,
+      "base_hash": "61c6f33",
+      "median_time_ns": 6.6e7,
+      "source_type": "report_md",
+      "max_time_ns": 6.93e7,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b6bca19",
+      "timestamp": "2026-03-10T23:30:05.064",
+      "memory_bytes": 0
+    },
+    "169": {
+      "time_ratio": 1.49,
+      "min_time_ns": 1.4155e8,
+      "mean_time_ns": 1.49e8,
+      "std_time_ns": 0.0,
+      "base_hash": "430e5e0",
+      "median_time_ns": 1.49e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.5645e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "cb532d5",
+      "timestamp": "2026-03-10T00:40:56.029",
       "memory_bytes": 0
     },
     "22": {
@@ -3854,25 +5150,25 @@
       "timestamp": "2026-03-09T03:20:31.698",
       "memory_bytes": 0
     },
-    "97": {
-      "time_ratio": 1.49,
-      "min_time_ns": 1.4155e8,
-      "mean_time_ns": 1.49e8,
+    "153": {
+      "time_ratio": 0.66,
+      "min_time_ns": 6.27e7,
+      "mean_time_ns": 6.6e7,
       "std_time_ns": 0.0,
-      "base_hash": "430e5e0",
-      "median_time_ns": 1.49e8,
+      "base_hash": "cae3571",
+      "median_time_ns": 6.6e7,
       "source_type": "report_md",
-      "max_time_ns": 1.5645e8,
+      "max_time_ns": 6.93e7,
       "allocs": 0,
       "julia_version": "nightly",
       "samples": 1,
-      "commit_hash": "cb532d5",
-      "timestamp": "2026-03-10T00:40:56.029",
+      "commit_hash": "c6a023a",
+      "timestamp": "2026-03-10T00:41:00.062",
       "memory_bytes": 0
     }
   },
   "sort/length = 30/Float64 unions with missing": {
-    "91": {
+    "163": {
       "time_ratio": 1.22,
       "min_time_ns": 1.159e8,
       "mean_time_ns": 1.22e8,

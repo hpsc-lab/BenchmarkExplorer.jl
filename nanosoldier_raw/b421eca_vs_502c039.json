@@ -1,0 +1,872 @@
+{
+  "metadata": {
+    "head_hash": "b421eca",
+    "comparison": "b421eca_vs_502c039",
+    "source": "NanosoldierReports",
+    "base_hash": "502c039",
+    "imported_at": "2026-03-10T23:30:10.268",
+    "source_type": "report_md"
+  },
+  "benchmarks": {
+    "[\"broadcast\", \"sparse\", \"((10000000,), 2)\"]": {
+      "time_ratio": 0.81,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"sin\", \"(\\\"argument reduction (hard) abs(x) < 4π/4\\\", \\\"negative argument\\\", \\\"Float32\\\", \\\"sin_kernel\\\")\"]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"equality\", \"(\\\"==\\\", \\\"Vector{Int64} == Vector{Float32}\\\")\"]": {
+      "time_ratio": 0.77,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"sin\", \"(\\\"argument reduction (easy) abs(x) < 2.0^20π/4\\\", \\\"positive argument\\\", \\\"Float32\\\", \\\"sin_kernel\\\")\"]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"perf_sum\\\", BigInt, true)\"]": {
+      "time_ratio": 0.9,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"sinh\", \"(\\\"0 <= abs(x) < 2.0^-28\\\", \\\"positive argument\\\", \\\"Float64\\\")\"]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", \"(\\\"sumelt\\\", \\\"BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32, 2}\\\")\"]": {
+      "time_ratio": 1.53,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"perf_binaryop\\\", *, BigInt, (false, false))\"]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"collect\\\", \\\"filter\\\", Int8, false)\"]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", \"(\\\"sortperm! forwards\\\", \\\"ascending\\\")\"]": {
+      "time_ratio": 1.51,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"skipmissing\\\", collect, Bool, false)\"]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"issue 12165\", \"Float64\"]": {
+      "time_ratio": 1.26,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", \"(\\\"mul\\\", \\\"Complex{UInt64}\\\", \\\"Complex{BigInt}\\\")\"]": {
+      "time_ratio": 1.65,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", \"(\\\"Vector{Bool}\\\", \\\"90-10\\\")\"]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findprev\", \"(\\\"ispos\\\", \\\"Vector{Float64}\\\")\"]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"sin\", \"(\\\"argument reduction (easy) abs(x) < 2π/4\\\", \\\"negative argument\\\", \\\"Float32\\\", \\\"cos_kernel\\\")\"]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"broadcast\\\", identity, BigFloat, false)\"]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"collect\\\", \\\"all\\\", Bool, false)\"]": {
+      "time_ratio": 1.56,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", \"(\\\"sumelt_boundscheck\\\", \\\"100000:-1:1\\\")\"]": {
+      "time_ratio": 2.0,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"map\\\", identity, ComplexF64, true)\"]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"linalg\", \"arithmetic\", \"(\\\"+\\\", \\\"typename(LowerTriangular)\\\", \\\"typename(LowerTriangular)\\\", 256)\"]": {
+      "time_ratio": 4.57,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", \"(\\\"axpy!\\\", \\\"Float64\\\", 4096)\"]": {
+      "time_ratio": 1.24,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"iterators\", \"zip(1:1000, 1:1000, 1:1000, 1:1000)\"]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", \"(\\\"sumelt_boundscheck\\\", \\\"BaseBenchmarks.ArrayBenchmarks.ArrayLF{Int32, 2}\\\")\"]": {
+      "time_ratio": 1.79,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"perf_binaryop\\\", *, Bool, (false, false))\"]": {
+      "time_ratio": 0.9,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"mergesort\", \"(\\\"sort! forwards\\\", \\\"ones\\\")\"]": {
+      "time_ratio": 1.32,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"collect\\\", \\\"all\\\", Int64, true)\"]": {
+      "time_ratio": 0.85,
+      "memory_ratio": 1.0
+    },
+    "[\"linalg\", \"arithmetic\", \"(\\\"+\\\", \\\"Matrix\\\", \\\"Matrix\\\", 256)\"]": {
+      "time_ratio": 0.25,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"perf_binaryop\\\", *, Float32, (false, false))\"]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"issorted\", \"(\\\"forwards\\\", \\\"ones\\\")\"]": {
+      "time_ratio": 1.31,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"sort\\\", Union{Missing, Bool}, true)\"]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"comprehension\", \"(\\\"comprehension_iteration\\\", \\\"StepRangeLen{Float64, Base.TwicePrecision{Float64}, Base.TwicePrecision{Float64}}\\\")\"]": {
+      "time_ratio": 1.23,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"map\\\", identity, BigFloat, false)\"]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"skipmissing\\\", sum, Union{Nothing, BigInt}, false)\"]": {
+      "time_ratio": 0.88,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"comprehension\", \"(\\\"comprehension_collect\\\", \\\"StepRangeLen{Float64, Base.TwicePrecision{Float64}, Base.TwicePrecision{Float64}}\\\")\"]": {
+      "time_ratio": 2.47,
+      "memory_ratio": 1.0
+    },
+    "[\"linalg\", \"arithmetic\", \"(\\\"5-arg mul!\\\", 3)\"]": {
+      "time_ratio": 1.52,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findnext\", \"(\\\"ispos\\\", \\\"Vector{Bool}\\\")\"]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"convert\", \"(\\\"Complex{Float64}\\\", \\\"Int\\\")\"]": {
+      "time_ratio": 1.24,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findnext\", \"(\\\"ispos\\\", \\\"Vector{Float32}\\\")\"]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"map\\\", identity, Float32, true)\"]": {
+      "time_ratio": 0.89,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"sinh\", \"(\\\"0 <= abs(x) < 2.0^-28\\\", \\\"negative argument\\\", \\\"Float64\\\")\"]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"map\\\", *, Int64, (false, false))\"]": {
+      "time_ratio": 1.24,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"equality\", \"(\\\"isequal\\\", \\\"BitArray\\\")\"]": {
+      "time_ratio": 1.2,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"perf_binaryop\\\", *, BigInt, (true, true))\"]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"perf_countnothing\\\", Float64, true)\"]": {
+      "time_ratio": 0.58,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"skipmissing\\\", collect, Float32, false)\"]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"perf_countnothing\\\", Float32, true)\"]": {
+      "time_ratio": 1.51,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"sin\", \"(\\\"argument reduction (hard) abs(x) < 4π/4\\\", \\\"positive argument\\\", \\\"Float32\\\", \\\"sin_kernel\\\")\"]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"perf_sum3\\\", BigInt, false)\"]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"perf_sum4\\\", BigInt, false)\"]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"broadcast\", \"dotop\", \"(\\\"Float64\\\", (1000000,), 1)\"]": {
+      "time_ratio": 0.89,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"collect\\\", \\\"filter\\\", BigFloat, true)\"]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"perf_countnothing\\\", Int8, true)\"]": {
+      "time_ratio": 0.66,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"broadcast\\\", *, Int64, (true, true))\"]": {
+      "time_ratio": 1.15,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"perf_countnothing\\\", Bool, false)\"]": {
+      "time_ratio": 0.58,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"collect\\\", \\\"all\\\", BigFloat, false)\"]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"queries & updates\", \"(\\\"IdDict\\\", \\\"String\\\", \\\"push!\\\", \\\"new\\\")\"]": {
+      "time_ratio": 1.32,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"broadcast\\\", *, Bool, (false, false))\"]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"sin\", \"(\\\"argument reduction (hard) abs(x) < 2π/4\\\", \\\"negative argument\\\", \\\"Float32\\\", \\\"cos_kernel\\\")\"]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"collect\\\", \\\"filter\\\", Float32, true)\"]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"perf_sum4\\\", BigFloat, false)\"]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"map\\\", *, Int8, (false, true))\"]": {
+      "time_ratio": 1.31,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"skipmissing\\\", collect, BigFloat, false)\"]": {
+      "time_ratio": 0.88,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"perf_countequals\\\", \\\"Int64\\\")\"]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"sin\", \"(\\\"no reduction\\\", \\\"negative argument\\\", \\\"Float32\\\", \\\"sin_kernel\\\")\"]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"sin\", \"(\\\"argument reduction (easy) abs(x) < 8π/4\\\", \\\"negative argument\\\", \\\"Float64\\\", \\\"sin_kernel\\\")\"]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"growth\", \"(\\\"push_single!\\\", 256)\"]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"broadcast\\\", *, Float64, (true, true))\"]": {
+      "time_ratio": 0.88,
+      "memory_ratio": 1.0
+    },
+    "[\"linalg\", \"arithmetic\", \"(\\\"*\\\", \\\"typename(Diagonal)\\\", \\\"Vector\\\", 1024)\"]": {
+      "time_ratio": 3.17,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"perf_sum3\\\", BigInt, true)\"]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"repeat\", \"(200, 24, 1)\"]": {
+      "time_ratio": 0.82,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"skipmissing\\\", collect, Union{Nothing, Float64}, false)\"]": {
+      "time_ratio": 1.16,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"comprehension\", \"(\\\"comprehension_iteration\\\", \\\"Vector{Float64}\\\")\"]": {
+      "time_ratio": 1.41,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"map\\\", *, Float64, (true, true))\"]": {
+      "time_ratio": 0.88,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"skipmissing\\\", sum, Bool, false)\"]": {
+      "time_ratio": 0.67,
+      "memory_ratio": 1.0
+    },
+    "[\"dates\", \"string\", \"Date\"]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", \"(\\\"auto_axpy!\\\", \\\"Float64\\\", 4096)\"]": {
+      "time_ratio": 1.25,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"perf_sum3\\\", Int64, false)\"]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"collect\\\", \\\"filter\\\", Int8, true)\"]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"shootout\", \"fasta\"]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"perf_binaryop\\\", *, Bool, (false, true))\"]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"perf_countequals\\\", \\\"Bool\\\")\"]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", \"(\\\"Vector{Bool}\\\", \\\"50-50\\\")\"]": {
+      "time_ratio": 0.86,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"sin\", \"(\\\"argument reduction (easy) abs(x) < 3π/4\\\", \\\"negative argument\\\", \\\"Float64\\\", \\\"cos_kernel\\\")\"]": {
+      "time_ratio": 0.9,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"skipmissing\\\", collect, Union{Nothing, Int8}, false)\"]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"tuple\", \"reduction\", \"(\\\"sum\\\", (16, 16))\"]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"any/all\", \"(\\\"any\\\", \\\"Vector{Float64}\\\")\"]": {
+      "time_ratio": 0.78,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"constructors\", \"(\\\"SymTridiagonal\\\", 1000)\"]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findnext\", \"(\\\"ispos\\\", \\\"Vector{UInt8}\\\")\"]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"shootout\", \"binary_trees\"]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", \"(\\\"manual_example!\\\", \\\"Float64\\\", 4095)\"]": {
+      "time_ratio": 1.3,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"map\\\", *, BigInt, (false, true))\"]": {
+      "time_ratio": 0.9,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"skipmissing\\\", collect, Union{Nothing, Float32}, false)\"]": {
+      "time_ratio": 1.15,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"broadcast\\\", identity, ComplexF64, false)\"]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", \"(\\\"axpy!\\\", \\\"Float64\\\", 4095)\"]": {
+      "time_ratio": 1.45,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"broadcast\\\", *, Float32, (true, true))\"]": {
+      "time_ratio": 0.9,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"broadcast\\\", *, Int8, (true, true))\"]": {
+      "time_ratio": 0.85,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"sin\", \"(\\\"argument reduction (easy) abs(x) < 4π/4\\\", \\\"positive argument\\\", \\\"Float32\\\", \\\"sin_kernel\\\")\"]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", \"(\\\"manual_example!\\\", \\\"Float64\\\", 4096)\"]": {
+      "time_ratio": 1.32,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", \"(\\\"> q0.8\\\", \\\"Vector{UInt8}\\\")\"]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"skipmissing\\\", collect, Union{Nothing, Bool}, false)\"]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"issue 12165\", \"Float32\"]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"convert\", \"(\\\"Float64\\\", \\\"Int\\\")\"]": {
+      "time_ratio": 0.83,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"any/all\", \"(\\\"all\\\", \\\"Vector{Float32}\\\")\"]": {
+      "time_ratio": 0.78,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"iterators\", \"zip(1:1000, 1:1000)\"]": {
+      "time_ratio": 0.72,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", \"(\\\"> q0.8\\\", \\\"Vector{Int8}\\\")\"]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"perf_sum3\\\", Bool, false)\"]": {
+      "time_ratio": 1.33,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"sin\", \"(\\\"argument reduction (easy) abs(x) < 6π/4\\\", \\\"positive argument\\\", \\\"Float64\\\", \\\"cos_kernel\\\")\"]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"skipmissing\\\", sum, Union{Missing, Int8}, true)\"]": {
+      "time_ratio": 1.15,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"skipmissing\\\", collect, Union{Missing, Bool}, true)\"]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"asinh\", \"(\\\"2 <= abs(x) < 2^28\\\", \\\"positive argument\\\", \\\"Float32\\\")\"]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", \"(\\\"x one\\\", \\\"Float64\\\")\"]": {
+      "time_ratio": 0.83,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"collect\\\", \\\"filter\\\", Float64, false)\"]": {
+      "time_ratio": 1.16,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"perf_sum2\\\", BigInt, false)\"]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"collect\\\", \\\"all\\\", Float32, true)\"]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"any/all\", \"(\\\"any\\\", \\\"Vector{Float32}\\\")\"]": {
+      "time_ratio": 0.77,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findnext\", \"(\\\"ispos\\\", \\\"Vector{Int64}\\\")\"]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"broadcast\", \"fusion\", \"(\\\"Float64\\\", (1000000,), 1)\"]": {
+      "time_ratio": 1.12,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"any/all\", \"(\\\"any\\\", \\\"Vector{Float32} generator\\\")\"]": {
+      "time_ratio": 0.77,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"comprehension\", \"(\\\"collect\\\", \\\"StepRangeLen{Float64, Base.TwicePrecision{Float64}, Base.TwicePrecision{Float64}}\\\")\"]": {
+      "time_ratio": 2.48,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"sin\", \"(\\\"argument reduction (easy) abs(x) < 5π/4\\\", \\\"positive argument\\\", \\\"Float32\\\", \\\"sin_kernel\\\")\"]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"perf_binaryop\\\", *, Bool, (true, true))\"]": {
+      "time_ratio": 0.85,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", \"(\\\"Set\\\", \\\"Int\\\", \\\"union\\\", \\\"Set\\\")\"]": {
+      "time_ratio": 1.31,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"map\\\", identity, Int64, true)\"]": {
+      "time_ratio": 0.86,
+      "memory_ratio": 1.0
+    },
+    "[\"string\", \"repeat\", \"repeat str len 1\"]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"constructors\", \"(\\\"SymTridiagonal\\\", 100)\"]": {
+      "time_ratio": 0.89,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"perf_simplecopy\\\", BigInt, false)\"]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"equality\", \"(\\\"isequal\\\", \\\"Vector{Int64} isequal Vector{Float64}\\\")\"]": {
+      "time_ratio": 0.86,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"comprehension\", \"(\\\"comprehension_collect\\\", \\\"Vector{Float64}\\\")\"]": {
+      "time_ratio": 3.11,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findprev\", \"(\\\"ispos\\\", \\\"Vector{Bool}\\\")\"]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"skipmissing\\\", collect, Union{Nothing, BigFloat}, false)\"]": {
+      "time_ratio": 0.9,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", \"(\\\"sort! reverse\\\", \\\"descending\\\")\"]": {
+      "time_ratio": 0.66,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"broadcast\\\", abs, Int8, true)\"]": {
+      "time_ratio": 1.24,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"subarray\", \"(\\\"lucompletepivCopy!\\\", 1000)\"]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"broadcast\\\", abs, Float32, true)\"]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"string\", \"==(::AbstractString, ::AbstractString)\", \"different\"]": {
+      "time_ratio": 1.17,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", \"(\\\"> q0.99\\\", \\\"Vector{Float32}\\\")\"]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"sparse matvec\", \"adjoint\"]": {
+      "time_ratio": 1.29,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"broadcast\\\", *, Int8, (false, false))\"]": {
+      "time_ratio": 0.89,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"map\\\", *, Float64, (false, true))\"]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"broadcast\", \"fusion\", \"(\\\"Float64\\\", (1000000,), 2)\"]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"sparse matvec\", \"non-adjoint\"]": {
+      "time_ratio": 1.26,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"perf_sum\\\", BigInt, false)\"]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"map\\\", *, Int64, (true, true))\"]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", \"(\\\"sumelt\\\", \\\"BaseBenchmarks.ArrayBenchmarks.ArrayLSLS{Float32, 2}\\\")\"]": {
+      "time_ratio": 1.53,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"skipmissing\\\", sum, BigInt, false)\"]": {
+      "time_ratio": 0.9,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", \"(\\\"sumelt\\\", \\\"BaseBenchmarks.ArrayBenchmarks.ArrayLSLS{Int32, 2}\\\")\"]": {
+      "time_ratio": 1.85,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"collect\\\", \\\"all\\\", ComplexF64, true)\"]": {
+      "time_ratio": 1.11,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", \"(\\\"sortperm reverse\\\", \\\"descending\\\")\"]": {
+      "time_ratio": 1.32,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"fastmath\", \"(\\\"mul\\\", \\\"Complex{BigInt}\\\")\"]": {
+      "time_ratio": 1.47,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"perf_countnothing\\\", Int64, true)\"]": {
+      "time_ratio": 1.52,
+      "memory_ratio": 1.0
+    },
+    "[\"problem\", \"simplex\", \"simplex\"]": {
+      "time_ratio": 1.31,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"perf_countequals\\\", \\\"BigInt\\\")\"]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"broadcast\\\", identity, Float64, true)\"]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"broadcast\\\", identity, Int8, false)\"]": {
+      "time_ratio": 0.85,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"map\\\", *, Int8, (true, true))\"]": {
+      "time_ratio": 1.49,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"accumulate\", \"(\\\"accumulate!\\\", \\\"Int\\\")\"]": {
+      "time_ratio": 1.19,
+      "memory_ratio": 1.0
+    },
+    "[\"string\", \"readuntil\", \"target length 1\"]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"sin\", \"(\\\"argument reduction (easy) abs(x) < 4π/4\\\", \\\"negative argument\\\", \\\"Float32\\\", \\\"sin_kernel\\\")\"]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"perf_countnothing\\\", Float64, false)\"]": {
+      "time_ratio": 0.66,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findnext\", \"(\\\"ispos\\\", \\\"Vector{Int8}\\\")\"]": {
+      "time_ratio": 1.16,
+      "memory_ratio": 1.0
+    },
+    "[\"random\", \"ranges\", \"(\\\"RangeGenerator\\\", \\\"Int32\\\", \\\"1:1\\\")\"]": {
+      "time_ratio": 1.27,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"skipmissing\\\", collect, Union{Nothing, Int64}, false)\"]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"broadcast\\\", *, Int64, (false, false))\"]": {
+      "time_ratio": 0.9,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"growth\", \"(\\\"push_multiple!\\\", 2048)\"]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"string\", \"==(::SubString, ::String)\", \"different\"]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", \"(\\\"> q0.8\\\", \\\"Vector{Float64}\\\")\"]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", \"(\\\"> q0.8\\\", \\\"Vector{Bool}\\\")\"]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"broadcast\\\", *, Int8, (false, true))\"]": {
+      "time_ratio": 0.87,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", \"(\\\"> q0.95\\\", \\\"Vector{Float32}\\\")\"]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"collect\\\", \\\"filter\\\", Float64, true)\"]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"skipmissing\\\", sum, Union{Missing, Bool}, true)\"]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"problem\", \"laplacian\", \"laplace_iter_vec\"]": {
+      "time_ratio": 0.82,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"sin\", \"(\\\"argument reduction (easy) abs(x) < 5π/4\\\", \\\"negative argument\\\", \\\"Float32\\\", \\\"sin_kernel\\\")\"]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", \"(\\\"sortperm! reverse\\\", \\\"descending\\\")\"]": {
+      "time_ratio": 1.37,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", \"(\\\"sortperm forwards\\\", \\\"ascending\\\")\"]": {
+      "time_ratio": 1.37,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", \"(\\\"auto_axpy!\\\", \\\"Float64\\\", 4095)\"]": {
+      "time_ratio": 1.44,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"any/all\", \"(\\\"any\\\", \\\"Vector{Float64} generator\\\")\"]": {
+      "time_ratio": 1.28,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"collect\\\", \\\"filter\\\", Int64, true)\"]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"comprehension\", \"(\\\"collect\\\", \\\"Vector{Float64}\\\")\"]": {
+      "time_ratio": 3.38,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"perf_sum4\\\", Bool, true)\"]": {
+      "time_ratio": 0.89,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"sin\", \"(\\\"argument reduction (easy) abs(x) < 7π/4\\\", \\\"negative argument\\\", \\\"Float64\\\", \\\"sin_kernel\\\")\"]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"accumulate\", \"(\\\"cumsum!\\\", \\\"Float64\\\", \\\"dim1\\\")\"]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"accumulate\", \"(\\\"cumsum!\\\", \\\"Float64\\\", \\\"dim2\\\")\"]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"broadcast\\\", *, Float64, (false, true))\"]": {
+      "time_ratio": 0.9,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"allocation elision view\", \"no conditional\"]": {
+      "time_ratio": 1.11,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"sparse solves\", \"least squares (qr), matrix rhs\"]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", \"(\\\"x one\\\", \\\"Float32\\\")\"]": {
+      "time_ratio": 1.32,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"map\\\", *, Bool, (false, false))\"]": {
+      "time_ratio": 0.89,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"comprehension\", \"(\\\"comprehension_indexing\\\", \\\"Vector{Float64}\\\")\"]": {
+      "time_ratio": 1.4,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"any/all\", \"(\\\"all\\\", \\\"Vector{Float32} generator\\\")\"]": {
+      "time_ratio": 0.78,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"skipmissing\\\", sum, Union{Missing, BigInt}, true)\"]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findprev\", \"(\\\"Vector{Bool}\\\", \\\"50-50\\\")\"]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"constructors\", \"(\\\"Tridiagonal\\\", 100)\"]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"23042\", \"ComplexF32\"]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"broadcast\\\", *, Int64, (false, true))\"]": {
+      "time_ratio": 1.13,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findprev\", \"(\\\"ispos\\\", \\\"Vector{UInt8}\\\")\"]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"foldl\", \"foldl(+, filter(...))\"]": {
+      "time_ratio": 0.47,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"sin\", \"(\\\"argument reduction (easy) abs(x) < 3π/4\\\", \\\"negative argument\\\", \\\"Float32\\\", \\\"cos_kernel\\\")\"]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"equality\", \"(\\\"isequal\\\", \\\"Vector{Int64} isequal Vector{Float32}\\\")\"]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"any/all\", \"(\\\"all\\\", \\\"Vector{Float64} generator\\\")\"]": {
+      "time_ratio": 1.27,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"broadcast\\\", identity, BigInt, false)\"]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"perf_sum2\\\", BigInt, true)\"]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"map\\\", abs, Int8, true)\"]": {
+      "time_ratio": 1.22,
+      "memory_ratio": 1.0
+    },
+    "[\"string\", \"readuntil\", \"no backtracking\"]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"perf_countnothing\\\", Int64, false)\"]": {
+      "time_ratio": 1.14,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"sin\", \"(\\\"no reduction\\\", \\\"positive argument\\\", \\\"Float32\\\", \\\"sin_kernel\\\")\"]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"map\\\", *, Int8, (false, false))\"]": {
+      "time_ratio": 1.46,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", \"(\\\"Set\\\", \\\"Int\\\", \\\"union\\\", \\\"BitSet\\\")\"]": {
+      "time_ratio": 1.28,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"growth\", \"(\\\"push_multiple!\\\", 256)\"]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"map\\\", identity, Bool, false)\"]": {
+      "time_ratio": 1.57,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"any/all\", \"(\\\"all\\\", \\\"Vector{Float64}\\\")\"]": {
+      "time_ratio": 0.78,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"perf_sum3\\\", Int64, true)\"]": {
+      "time_ratio": 0.75,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"broadcast\\\", *, Float32, (false, true))\"]": {
+      "time_ratio": 0.88,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"equality\", \"(\\\"==\\\", \\\"Vector{Int64} == Vector{Float64}\\\")\"]": {
+      "time_ratio": 0.77,
+      "memory_ratio": 1.0
+    }
+  }
+}

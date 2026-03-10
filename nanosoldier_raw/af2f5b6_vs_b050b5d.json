@@ -1,0 +1,16 @@
+{
+  "metadata": {
+    "head_hash": "af2f5b6",
+    "comparison": "af2f5b6_vs_b050b5d",
+    "source": "NanosoldierReports",
+    "base_hash": "b050b5d",
+    "imported_at": "2026-03-10T23:30:20.958",
+    "source_type": "report_md"
+  },
+  "benchmarks": {
+    "[\"inference\", \"optimization\", \"println(::QuoteNode)\"]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    }
+  }
+}

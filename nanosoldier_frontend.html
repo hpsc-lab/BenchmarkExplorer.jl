@@ -147,7 +147,7 @@
             .benchmark-item {
                 border: 2px solid #191919;
                 border-radius: 10px;
-                margin-bottom: 20px;
+                margin-bottom: 32px;
                 overflow: hidden;
                 transition: transform 0.15s ease, box-shadow 0.15s ease;
                 animation: fadeSlideIn 0.25s ease both;
@@ -238,9 +238,10 @@
 
             .plot-container {
                 width: 100%;
-                min-height: 380px;
+                min-height: 500px;
                 background: #fff;
                 padding-top: 16px;
+                padding-bottom: 16px;
             }
 
             .benchmark-item.trend-faster { border-left: 5px solid #27ae60; }
@@ -557,6 +558,16 @@
             body.dark-mode #render-progress-bar { background: #e9e9e7; }
             body.dark-mode #loading-overlay { background: #2a2a2a; color: #e9e9e7; }
 
+            @media (max-width: 768px) {
+                .benchmarks { padding: 16px; }
+                .benchmark-header { padding: 12px 16px; flex-direction: column; align-items: flex-start; }
+                .benchmark-stats { gap: 12px; flex-wrap: wrap; }
+                .controls { padding: 10px 12px; gap: 6px; }
+                header { padding: 20px 16px; }
+                .heatmap-wrap { padding: 16px; }
+                .comparison-panel { padding: 0 16px 16px; }
+            }
+
             #loading-overlay {
                 position: fixed;
                 inset: 0;
@@ -685,12 +696,13 @@
         <div class="container">
             <header style="text-align: center;">
                 <h1>nanosoldier_frontend</h1>
-                <p>Commit: <a href="https://github.com/hpsc-lab/BenchmarkExplorer.jl/commit/f81a51d8cc697598cc00b5e770c0f7d95f96d036" target="_blank" style="color: #666; text-decoration: none;">f81a51d</a></p>
+                <p>Commit: <a href="https://github.com/hpsc-lab/BenchmarkExplorer.jl/commit/f1041190009fc20227a5b3648181993ad8122499" target="_blank" style="color: #666; text-decoration: none;">f104119</a></p>
             </header>
 
             <div class="stats-panel" id="stats-panel"></div>
 
             <div class="controls">
+                <a href="index.html" class="btn btn-secondary" style="text-decoration:none;flex-shrink:0;">← Back</a>
                 <span style="font-weight:700;font-size:0.95em;margin-right:4px;flex-shrink:0;">nanosoldier_frontend</span>
                 <button class="btn btn-primary" id="btn-percentage">% Change</button>
                 <button class="btn btn-secondary" id="btn-dark">🌙 Dark</button>
@@ -726,8 +738,8 @@
         </div>
 
         <script>
-            const benchmarksData = {"frontend/nestedscopes":{"median":{"visible":"legendonly","name":"Median","line":{"width":1,"dash":"dot"},"y_raw":[100.0],"mode":"lines","x":["d13bdc0"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Median: %{y:.3f} ms<extra></extra>","y":[100.0]},"min":{"visible":"legendonly","name":"Min","line":{"width":1,"dash":"dash"},"y_raw":[95.0],"mode":"lines","x":["d13bdc0"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Min: %{y:.3f} ms<extra></extra>","y":[95.0]},"stats":{"baseline_mean":100.0,"latest_memory":0,"latest_commit":"d13bdc0","percent_change":0.0,"num_runs":1,"latest_allocs":0,"latest_mean":100.0,"latest_timestamp":"2026-03-10T00:40:50.051","trend":"stable"},"mean":{"mode":"lines+markers","x":["d13bdc0"],"commit_hashes":["d13bdc0"],"hoverinfo":"text","name":"Mean","y":[100.0],"line":{"width":2},"y_raw":[100.0],"marker":{"size":6},"hovertext":["Commit: d13bdc0<br>Mean: 100.0 ms<br>Median: 100.0 ms<br>Min: 95.0 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:40"],"timestamps":["2026-03-10T00:40:50.051"],"type":"scatter"}}};
-            const statsData = {"total_runs":140,"fastest":{"name":"enzyme/basics/make_zero/namedtuple","time":"30 ns"},"last_updated":"3 min ago","total_benchmarks":6969,"slowest":{"name":"nanosoldier/array/index/(sumlinear/1:100000)","time":"3715.50 s"}};
+            const benchmarksData = {"frontend/nestedscopes":{"median":{"visible":"legendonly","name":"Median","line":{"width":1,"dash":"dot"},"y_raw":[100.0,101.0],"mode":"lines","x":["d13bdc0","b146a70"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Median: %{y:.3f} ms<extra></extra>","y":[100.0,101.0]},"min":{"visible":"legendonly","name":"Min","line":{"width":1,"dash":"dash"},"y_raw":[95.0,95.95],"mode":"lines","x":["d13bdc0","b146a70"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Min: %{y:.3f} ms<extra></extra>","y":[95.0,95.95]},"stats":{"baseline_mean":100.0,"latest_memory":0,"latest_commit":"b146a70","percent_change":1.0,"num_runs":2,"latest_allocs":0,"latest_mean":101.0,"latest_timestamp":"2026-03-10T23:30:16.871","trend":"stable","source_type":"report_md"},"mean":{"mode":"lines+markers","x":["d13bdc0","b146a70"],"commit_hashes":["d13bdc0","b146a70"],"hoverinfo":"text","name":"Mean","y":[100.0,101.0],"line":{"width":2},"y_raw":[100.0,101.0],"marker":{"size":6},"hovertext":["Commit: d13bdc0<br>Mean: 100.0 ms<br>Median: 100.0 ms<br>Min: 95.0 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:40","Commit: b146a70<br>Mean: 101.0 ms<br>Median: 101.0 ms<br>Min: 95.95 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 23:30"],"timestamps":["2026-03-10T00:40:50.051","2026-03-10T23:30:16.871"],"type":"scatter"}}};
+            const statsData = {"total_runs":212,"fastest":{"name":"enzyme/basics/make_zero/namedtuple","time":"31 ns"},"last_updated":"0 min ago","total_benchmarks":8173,"slowest":{"name":"nanosoldier/array/index/(sumlinear/1:100000)","time":"3715.50 s"}};
             const repoUrl = 'https://github.com/hpsc-lab/BenchmarkExplorer.jl';
             const commitBaseUrl = 'https://github.com/JuliaLang/julia';
             let percentageMode = false;
@@ -1083,6 +1095,7 @@
                         const plotId = 'plot-' + name.replace(/[^a-zA-Z0-9]/g, '-');
                         const anchorId = 'bench-' + name.replace(/[^a-zA-Z0-9]/g, '-');
                         item.id = anchorId;
+                        const ratioBadge = stats.source_type === 'report_md' ? '<span class="trend-badge trend-stable" style="font-size:0.7em;opacity:0.7">ratio</span>' : '';
                         const sparkSvg = sparklineSVG(data.mean.y_raw || data.mean.y, 80, 28);
                         const searchTerm = document.getElementById('search').value;
                         const highlightedKey = highlightText(key, searchTerm);
@@ -1096,6 +1109,7 @@
                                     <button class="anchor-btn" onclick="event.stopPropagation();navigator.clipboard.writeText(location.href.split('#')[0]+'#${anchorId}').catch(()=>{})" title="Copy link">#</button>
                                     <span>${highlightedKey}</span>
                                     ${trendBadge}
+                                    ${ratioBadge}
                                     ${sparkSvg}
                                 </div>
                                 <div class="benchmark-stats">
@@ -1105,7 +1119,7 @@
                                     </div>
                                     <div class="stat">
                                         <span class="stat-key">Commit</span>
-                                        <span class="stat-val"><a href="${commitBaseUrl}/commit/${stats.latest_commit}" target="_blank" style="color: #667eea; text-decoration: none;">${stats.latest_commit.substring(0, 7)}</a></span>
+                                        <span class="stat-val"><a href="${commitBaseUrl}/commit/${stats.latest_commit}" target="_blank" style="color: inherit; text-decoration: underline;">${stats.latest_commit.substring(0, 7)}</a></span>
                                     </div>
                                     <div class="stat">
                                         <span class="stat-key">Memory</span>
@@ -1546,12 +1560,15 @@
                     rows.sort((a, b) => b.change - a.change);
                     const shortA = compareCommitA.substring(0, 7);
                     const shortB = compareCommitB.substring(0, 7);
+                    const allCmpVals = rows.flatMap(r => [r.valA, r.valB]);
+                    const { label: cUnit, factor: cFactor } = autoUnit(allCmpVals);
+                    const fmtC = v => (v * cFactor).toFixed(3) + ' ' + cUnit;
                     tableHtml = `<table class="comparison-table">
                         <thead><tr><th>Benchmark</th><th>${shortA}</th><th>${shortB}</th><th>Change</th></tr></thead>
                         <tbody>${rows.map(r => {
                             const c = r.change < -5 ? '#27ae60' : r.change > 5 ? '#e74c3c' : '#787774';
                             const sign = r.change > 0 ? '+' : '';
-                            return `<tr><td style="font-family:monospace;font-size:0.85em">${r.name}</td><td>${r.valA.toFixed(3)} ms</td><td>${r.valB.toFixed(3)} ms</td><td style="color:${c};font-weight:600">${sign}${r.change.toFixed(1)}%</td></tr>`;
+                            return `<tr><td style="font-family:monospace;font-size:0.85em">${r.name}</td><td>${fmtC(r.valA)}</td><td>${fmtC(r.valB)}</td><td style="color:${c};font-weight:600">${sign}${r.change.toFixed(1)}%</td></tr>`;
                         }).join('')}</tbody></table>`;
                 } else if (compareCommitA && compareCommitB) {
                     tableHtml = '<p style="color:#999;padding:16px 0">Select two different commits to compare.</p>';

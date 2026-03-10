@@ -1,0 +1,16 @@
+{
+  "metadata": {
+    "head_hash": "afa0406",
+    "comparison": "afa0406_vs_3d787a7",
+    "source": "NanosoldierReports",
+    "base_hash": "3d787a7",
+    "imported_at": "2026-03-10T23:30:20.668",
+    "source_type": "report_md"
+  },
+  "benchmarks": {
+    "[\"collection\", \"set operations\", (\"BitSet\", \"Int\", \"==\", \"self\")]": {
+      "time_ratio": 0.73,
+      "memory_ratio": 1.0
+    }
+  }
+}
