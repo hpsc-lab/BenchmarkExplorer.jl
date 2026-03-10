@@ -12,7 +12,7 @@ if group_name == "nanosoldier"
     Pkg.instantiate()
     include(joinpath(action_path, "scripts/import_nanosoldier.jl"))
     nanosoldier_tmp = joinpath(data_dir, "nanosoldier_raw")
-    import_recent_comparisons(nanosoldier_tmp; limit=30)
+    import_recent_comparisons(nanosoldier_tmp; limit=50)
     convert_to_explorer_format(nanosoldier_tmp, data_dir, "nanosoldier")
 else
     benchmark_script_abs = !isempty(benchmark_script) ? abspath(benchmark_script) : ""

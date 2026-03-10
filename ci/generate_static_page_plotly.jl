@@ -201,7 +201,8 @@ function generate_static_page_plotly(data_dir::String, output_file::String, grou
                 "latest_memory" => get(latest_run, "memory_bytes", 0),
                 "latest_allocs" => get(latest_run, "allocs", 0),
                 "latest_timestamp" => get(latest_run, "timestamp", ""),
-                "latest_commit" => get(latest_run, "commit_hash", "unknown")
+                "latest_commit" => get(latest_run, "commit_hash", "unknown"),
+                "source_type"   => get(latest_run, "source_type", "absolute")
             )
         )
     end
@@ -381,7 +382,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             .benchmark-item {
                 border: 2px solid #191919;
                 border-radius: 10px;
-                margin-bottom: 20px;
+                margin-bottom: 32px;
                 overflow: hidden;
                 transition: transform 0.15s ease, box-shadow 0.15s ease;
                 animation: fadeSlideIn 0.25s ease both;
@@ -472,9 +473,10 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
 
             .plot-container {
                 width: 100%;
-                min-height: 380px;
+                min-height: 500px;
                 background: #fff;
                 padding-top: 16px;
+                padding-bottom: 16px;
             }
 
             .benchmark-item.trend-faster { border-left: 5px solid #27ae60; }
@@ -791,6 +793,16 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             body.dark-mode #render-progress-bar { background: #e9e9e7; }
             body.dark-mode #loading-overlay { background: #2a2a2a; color: #e9e9e7; }
 
+            @media (max-width: 768px) {
+                .benchmarks { padding: 16px; }
+                .benchmark-header { padding: 12px 16px; flex-direction: column; align-items: flex-start; }
+                .benchmark-stats { gap: 12px; flex-wrap: wrap; }
+                .controls { padding: 10px 12px; gap: 6px; }
+                header { padding: 20px 16px; }
+                .heatmap-wrap { padding: 16px; }
+                .comparison-panel { padding: 0 16px 16px; }
+            }
+
             #loading-overlay {
                 position: fixed;
                 inset: 0;
@@ -925,6 +937,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             <div class="stats-panel" id="stats-panel"></div>
 
             <div class="controls">
+                <a href="index.html" class="btn btn-secondary" style="text-decoration:none;flex-shrink:0;">← Back</a>
                 <span style="font-weight:700;font-size:0.95em;margin-right:4px;flex-shrink:0;">$group_name</span>
                 <button class="btn btn-primary" id="btn-percentage">% Change</button>
                 <button class="btn btn-secondary" id="btn-dark">🌙 Dark</button>
@@ -1317,6 +1330,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                         const plotId = 'plot-' + name.replace(/[^a-zA-Z0-9]/g, '-');
                         const anchorId = 'bench-' + name.replace(/[^a-zA-Z0-9]/g, '-');
                         item.id = anchorId;
+                        const ratioBadge = stats.source_type === 'report_md' ? '<span class="trend-badge trend-stable" style="font-size:0.7em;opacity:0.7">ratio</span>' : '';
                         const sparkSvg = sparklineSVG(data.mean.y_raw || data.mean.y, 80, 28);
                         const searchTerm = document.getElementById('search').value;
                         const highlightedKey = highlightText(key, searchTerm);
@@ -1330,6 +1344,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                                     <button class="anchor-btn" onclick="event.stopPropagation();navigator.clipboard.writeText(location.href.split('#')[0]+'#\${anchorId}').catch(()=>{})" title="Copy link">#</button>
                                     <span>\${highlightedKey}</span>
                                     \${trendBadge}
+                                    \${ratioBadge}
                                     \${sparkSvg}
                                 </div>
                                 <div class="benchmark-stats">
@@ -1339,7 +1354,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                                     </div>
                                     <div class="stat">
                                         <span class="stat-key">Commit</span>
-                                        <span class="stat-val"><a href="\${commitBaseUrl}/commit/\${stats.latest_commit}" target="_blank" style="color: #667eea; text-decoration: none;">\${stats.latest_commit.substring(0, 7)}</a></span>
+                                        <span class="stat-val"><a href="\${commitBaseUrl}/commit/\${stats.latest_commit}" target="_blank" style="color: inherit; text-decoration: underline;">\${stats.latest_commit.substring(0, 7)}</a></span>
                                     </div>
                                     <div class="stat">
                                         <span class="stat-key">Memory</span>
@@ -1854,12 +1869,15 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                     rows.sort((a, b) => b.change - a.change);
                     const shortA = compareCommitA.substring(0, 7);
                     const shortB = compareCommitB.substring(0, 7);
+                    const allCmpVals = rows.flatMap(r => [r.valA, r.valB]);
+                    const { label: cUnit, factor: cFactor } = autoUnit(allCmpVals);
+                    const fmtC = v => (v * cFactor).toFixed(3) + '\u00a0' + cUnit;
                     tableHtml = \`<table class="comparison-table">
                         <thead><tr><th>Benchmark</th><th>\${shortA}</th><th>\${shortB}</th><th>Change</th></tr></thead>
                         <tbody>\${rows.map(r => {
                             const c = r.change < -5 ? '#27ae60' : r.change > 5 ? '#e74c3c' : '#787774';
                             const sign = r.change > 0 ? '+' : '';
-                            return \`<tr><td style="font-family:monospace;font-size:0.85em">\${r.name}</td><td>\${r.valA.toFixed(3)} ms</td><td>\${r.valB.toFixed(3)} ms</td><td style="color:\${c};font-weight:600">\${sign}\${r.change.toFixed(1)}%</td></tr>\`;
+                            return \`<tr><td style="font-family:monospace;font-size:0.85em">\${r.name}</td><td>\${fmtC(r.valA)}</td><td>\${fmtC(r.valB)}</td><td style="color:\${c};font-weight:600">\${sign}\${r.change.toFixed(1)}%</td></tr>\`;
                         }).join('')}</tbody></table>\`;
                 } else if (compareCommitA && compareCommitB) {
                     tableHtml = '<p style="color:#999;padding:16px 0">Select two different commits to compare.</p>';
