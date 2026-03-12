@@ -36,7 +36,7 @@ function generate_index_page(benchmarks_dir::String, output_file::String, repo_u
         )
     end
 
-    current_time = Dates.format(now(UTC), "yyyy-mm-dd HH:MM:SS UTC")
+    current_time = Dates.format(now(UTC), "yyyy-mm-dd HH:MM:SS") * " UTC"
 
     html = """
 <!DOCTYPE html>
@@ -191,7 +191,8 @@ function generate_index_page(benchmarks_dir::String, output_file::String, repo_u
         body.dark-mode .group-count { color: #e9e9e7; }
         body.dark-mode .group-updated { border-top-color: #333; }
         body.dark-mode footer a { color: #666; }
-        body.dark-mode #search { background: #252525; color: #e9e9e7; border-color: #555; }
+        #search { border: 2px solid #191919; }
+        body.dark-mode #search { background: #252525; color: #e9e9e7; border-color: #e9e9e7; }
 
         @media (max-width: 600px) {
             .container { padding: 32px 16px; }
@@ -211,7 +212,7 @@ function generate_index_page(benchmarks_dir::String, output_file::String, repo_u
             <span><a href="$repo_url" target="_blank">GitHub</a></span>
         </div>
 
-        <input type="text" id="search" placeholder="Search groups..." style="display:block;width:100%;max-width:400px;margin:0 auto 24px;padding:10px 16px;border:2px solid #191919;border-radius:8px;font-family:inherit;font-size:0.85em;outline:none;box-sizing:border-box;background:inherit;color:inherit;">
+        <input type="text" id="search" placeholder="Search groups..." style="display:block;width:100%;max-width:400px;margin:0 auto 24px;padding:10px 16px;border-radius:8px;font-family:inherit;font-size:0.85em;outline:none;box-sizing:border-box;background:inherit;color:inherit;">
         <div class="groups-grid" id="groups-grid">
 """
 

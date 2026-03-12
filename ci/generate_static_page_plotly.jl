@@ -314,6 +314,9 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 flex: 1 1 130px;
             }
 
+            .stat-card-green { border-color:#27ae60; background:linear-gradient(160deg,#f4fff6,#fff); }
+            .stat-card-red   { border-color:#e74c3c; background:linear-gradient(160deg,#fff4f4,#fff); }
+
             .stat-card .value {
                 font-size: 2em;
                 font-weight: 700;
@@ -634,6 +637,8 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 border-color: #484848;
             }
 
+            body.dark-mode .top-bar { background: #2a2a2a; border-bottom-color: #444; }
+
             body.dark-mode header {
                 background: #333;
                 border-bottom-color: #484848;
@@ -664,6 +669,9 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             body.dark-mode .stat-card .value {
                 color: #e9e9e7;
             }
+
+            body.dark-mode .stat-card-green { border-color:#27ae60; background:linear-gradient(160deg,#0d2b14,#2a2a2a); }
+            body.dark-mode .stat-card-red   { border-color:#e74c3c; background:linear-gradient(160deg,#2b0d0d,#2a2a2a); }
 
             body.dark-mode .controls {
                 background: #333;
@@ -956,22 +964,21 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             </div>
             <div class="nyan-loading-text">loading benchmarks<span class="nyan-dots"></span></div>
         </div>
+        <div class="top-bar" style="display:flex;justify-content:space-between;align-items:center;padding:10px 24px;border-bottom:1px solid #e9e9e7;">
+            <a href="index.html" class="btn" style="text-decoration:none;flex-shrink:0;padding:6px 14px;font-size:0.8em;">← Back</a>
+            <button class="btn" id="btn-dark" style="font-size:0.8em;padding:6px 14px;">🌙 Dark</button>
+        </div>
         <div class="container">
             <header style="text-align: center;">
                 <h1>$group_name</h1>
                 <p>Commit: <a href="$repo_url/commit/$commit_sha" target="_blank" style="color: #666; text-decoration: none;">$commit_short</a></p>
-                $(isempty(subcategories) ? "" : """<div class="subcat-pills" style="margin-top:12px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center;">
-                    $(join(["<a href=\"$(cat).html\" class=\"subcat-pill\">$(replace(cat, group_name*"_" => ""))</a>" for cat in subcategories], "\n                    "))
-                </div>""")
             </header>
 
             <div class="stats-panel" id="stats-panel"></div>
 
             <div class="controls">
-                <a href="index.html" class="btn btn-secondary" style="text-decoration:none;flex-shrink:0;">← Back</a>
                 <span style="font-weight:700;font-size:0.95em;margin-right:4px;flex-shrink:0;">$group_name</span>
                 <button class="btn btn-primary" id="btn-percentage">% Change</button>
-                <button class="btn btn-secondary" id="btn-dark">🌙 Dark</button>
                 <button class="btn btn-secondary" id="btn-compact">⊞ Compact</button>
                 <button class="btn btn-secondary" id="btn-heatmap">⊟ Heatmap</button>
                 <button class="btn btn-secondary" id="btn-compare">⇄ Compare</button>
@@ -1005,6 +1012,8 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
 
         <script>
             const benchmarksData = $benchmarks_json;
+            const subcategories = $(JSON.json(subcategories));
+            const groupName = $(JSON.json(group_name));
             const statsData = $stats_json;
             const repoUrl = '$repo_url';
             const commitBaseUrl = '$commit_base_url';
@@ -1031,16 +1040,16 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                         <div class="value">\${statsData.total_runs}</div>
                         <div class="label">Total Runs</div>
                     </div>
-                    <div class="stat-card" style="border-color:#27ae60;background:linear-gradient(160deg,#f4fff6,#fff)">
+                    <div class="stat-card stat-card-green">
                         <div class="value" style="color:#27ae60">\${statsData.fastest.time}</div>
                         <div class="label">Fastest</div>
                     </div>
-                    <div class="stat-card" style="border-color:#e74c3c;background:linear-gradient(160deg,#fff4f4,#fff)">
+                    <div class="stat-card stat-card-red">
                         <div class="value" style="color:#e74c3c">\${statsData.slowest.time}</div>
                         <div class="label">Slowest</div>
                     </div>
                     \${nFaster > 0 || nSlower > 0 ? `
-                    <div class="stat-card" style="\${nSlower > nFaster ? 'border-color:#e74c3c;background:linear-gradient(160deg,#fff4f4,#fff)' : 'border-color:#27ae60;background:linear-gradient(160deg,#f4fff6,#fff)'}">
+                    <div class="stat-card \${nSlower > nFaster ? 'stat-card-red' : 'stat-card-green'}">
                         <div class="value" style="font-size:1.2em">
                             \${nFaster > 0 ? \`<span style="color:#27ae60">↓\${nFaster}</span>\` : ''}
                             \${nSlower > 0 ? \`<span style="color:#e74c3c;margin-left:6px">↑\${nSlower}</span>\` : ''}
@@ -1816,6 +1825,21 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             function renderHeatmap(filter = '') {
                 const container = document.getElementById('benchmarks-container');
                 container.innerHTML = '';
+
+                if (subcategories.length > 0) {
+                    const pillsDiv = document.createElement('div');
+                    pillsDiv.style.cssText = 'display:flex;flex-wrap:wrap;gap:8px;padding:16px 32px 0;';
+                    subcategories.forEach(cat => {
+                        const label = cat.replace(groupName + '_', '');
+                        const a = document.createElement('a');
+                        a.href = cat + '.html';
+                        a.className = 'subcat-pill';
+                        a.textContent = label;
+                        pillsDiv.appendChild(a);
+                    });
+                    container.appendChild(pillsDiv);
+                }
+
                 const benchmarks = Object.entries(benchmarksData)
                     .filter(([name, data]) => {
                         const matchesSearch = name.toLowerCase().includes(filter.toLowerCase());
