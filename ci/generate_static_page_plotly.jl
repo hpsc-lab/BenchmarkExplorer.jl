@@ -126,8 +126,18 @@ function generate_static_page_plotly(data_dir::String, output_file::String, grou
 
         commit_labels = [format_commit_hash(h) for h in agg.commit_hashes]
 
+        base_hash_by_commit = Dict{String,String}()
+        for rn in run_numbers
+            rd = runs[string(rn)]
+            h = get(rd, "commit_hash", "")
+            b = get(rd, "base_hash", "")
+            !isempty(h) && !isempty(b) && (base_hash_by_commit[h] = b)
+        end
+
         hover_texts_mean = [
             "Commit: $(agg.commit_hashes[i])<br>" *
+            (haskey(base_hash_by_commit, agg.commit_hashes[i]) ?
+                "vs: $(base_hash_by_commit[agg.commit_hashes[i]][1:min(7,end)])<br>" : "") *
             "Mean: $(round(agg.mean_vals[i], digits=3)) ms<br>" *
             (agg.mean_err[i] > 0 ? "Std: $(round(agg.mean_err[i], digits=3)) ms<br>" : "") *
             "Median: $(round(agg.median_vals[i], digits=3)) ms<br>" *
@@ -201,8 +211,10 @@ function generate_static_page_plotly(data_dir::String, output_file::String, grou
                 "latest_memory" => get(latest_run, "memory_bytes", 0),
                 "latest_allocs" => get(latest_run, "allocs", 0),
                 "latest_timestamp" => get(latest_run, "timestamp", ""),
-                "latest_commit" => get(latest_run, "commit_hash", "unknown"),
-                "source_type"   => get(latest_run, "source_type", "absolute")
+                "latest_commit"   => get(latest_run, "commit_hash", "unknown"),
+                "latest_base"     => get(latest_run, "base_hash",   ""),
+                "julia_version"   => get(latest_run, "julia_version", ""),
+                "source_type"     => get(latest_run, "source_type", "absolute")
             )
         )
     end
@@ -222,14 +234,18 @@ function generate_static_page_plotly(data_dir::String, output_file::String, grou
         "last_updated" => isnothing(data.stats.last_run) ? "Unknown" : format_time_ago(data.stats.last_run)
     ))
 
-    html = generate_html_template(benchmarks_json, stats_json, group_name, repo_url, commit_sha, all_runs_available, commit_base_url)
+    index_for_subcats = data.index
+    subcategories = sort([k for k in keys(get(index_for_subcats, "groups", Dict()))
+                          if startswith(k, group_name * "_")])
+
+    html = generate_html_template(benchmarks_json, stats_json, group_name, repo_url, commit_sha, all_runs_available, commit_base_url, subcategories)
 
     open(output_file, "w") do f
         write(f, html)
     end
 end
 
-function generate_html_template(benchmarks_json, stats_json, group_name, repo_url, commit_sha, all_runs_available, commit_base_url=repo_url)
+function generate_html_template(benchmarks_json, stats_json, group_name, repo_url, commit_sha, all_runs_available, commit_base_url=repo_url, subcategories=String[])
     commit_short = commit_sha[1:min(7, lastindex(commit_sha))]
 
     return """
@@ -619,9 +635,20 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             }
 
             body.dark-mode header {
-                background: #222;
+                background: #333;
                 border-bottom-color: #484848;
             }
+
+            body.dark-mode header h1 { color: #fff; }
+            body.dark-mode header p { color: #aaa; }
+
+            body.dark-mode footer {
+                background: #2a2a2a;
+                color: #888;
+                border-top-color: #444;
+            }
+
+            body.dark-mode footer a { color: #aaa; }
 
             body.dark-mode .stats-panel {
                 background: #2a2a2a;
@@ -661,7 +688,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
 
             body.dark-mode .search-box {
                 background: #333;
-                color: #e9e9e7;
+                color: #fff;
                 border-color: #484848;
             }
 
@@ -787,6 +814,10 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             body.dark-mode .heatmap-table td { color: #e9e9e7; }
             body.dark-mode .heatmap-name { color: #e9e9e7; }
             body.dark-mode .no-results { color: #aaa; }
+            .subcat-pill { font-size:0.75em;padding:4px 10px;border:1px solid #ccc;border-radius:6px;text-decoration:none;color:#555; }
+            .subcat-pill:hover { border-color:#999;color:#191919; }
+            body.dark-mode .subcat-pill { border-color:#555;color:#aaa; }
+            body.dark-mode .subcat-pill:hover { border-color:#aaa;color:#e9e9e7; }
             body.dark-mode .anchor-btn { background: #333; border-color: #555; color: #aaa; }
             body.dark-mode .anchor-btn:hover { background: #444; color: #e9e9e7; }
             body.dark-mode #render-progress-wrap { background: #333; }
@@ -925,13 +956,13 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             </div>
             <div class="nyan-loading-text">loading benchmarks<span class="nyan-dots"></span></div>
         </div>
-        <div style="padding: 8px 32px; font-size: 0.8em;">
-            <a href="index.html" style="color: #999; text-decoration: none;">← back</a>
-        </div>
         <div class="container">
             <header style="text-align: center;">
                 <h1>$group_name</h1>
                 <p>Commit: <a href="$repo_url/commit/$commit_sha" target="_blank" style="color: #666; text-decoration: none;">$commit_short</a></p>
+                $(isempty(subcategories) ? "" : """<div class="subcat-pills" style="margin-top:12px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center;">
+                    $(join(["<a href=\"$(cat).html\" class=\"subcat-pill\">$(replace(cat, group_name*"_" => ""))</a>" for cat in subcategories], "\n                    "))
+                </div>""")
             </header>
 
             <div class="stats-panel" id="stats-panel"></div>
@@ -1356,6 +1387,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                                         <span class="stat-key">Commit</span>
                                         <span class="stat-val"><a href="\${commitBaseUrl}/commit/\${stats.latest_commit}" target="_blank" style="color: inherit; text-decoration: underline;">\${stats.latest_commit.substring(0, 7)}</a></span>
                                     </div>
+                                    \${stats.julia_version ? \`<div class="stat"><span class="stat-key">Julia</span><span class="stat-val">\${stats.julia_version}</span></div>\` : ''}
                                     <div class="stat">
                                         <span class="stat-key">Memory</span>
                                         <span class="stat-val">\${formatBytes(stats.latest_memory)}</span>
@@ -1568,6 +1600,11 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 darkMode = true;
                 document.body.classList.add('dark-mode');
                 document.getElementById('btn-dark').classList.add('active');
+            }
+
+            if ('$group_name'.startsWith('nanosoldier') || '$group_name'.startsWith('ns_')) {
+                heatmapMode = true;
+                document.getElementById('btn-heatmap').classList.add('active');
             }
 
             document.getElementById('search').addEventListener('input', function(e) {
@@ -1883,7 +1920,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                     tableHtml = '<p style="color:#999;padding:16px 0">Select two different commits to compare.</p>';
                 }
 
-                panel.innerHTML = \`<div style="display:flex;gap:12px;align-items:center;margin-bottom:16px;flex-wrap:wrap;">
+                panel.innerHTML = \`<div style="display:flex;gap:12px;align-items:center;margin-bottom:16px;flex-wrap:wrap;margin-top:5px;">
                     <select id="cmp-a" class="search-box" style="flex:0;min-width:200px;"><option value="">Commit A...</option>\${optionsA}</select>
                     <span style="font-size:0.85em;color:#999">vs</span>
                     <select id="cmp-b" class="search-box" style="flex:0;min-width:200px;"><option value="">Commit B...</option>\${optionsB}</select>

@@ -211,7 +211,7 @@ function generate_index_page(benchmarks_dir::String, output_file::String, repo_u
             <span><a href="$repo_url" target="_blank">GitHub</a></span>
         </div>
 
-        <input type="text" id="search" placeholder="Search groups..." style="display:block;width:100%;max-width:400px;margin:0 auto 24px;padding:10px 16px;border:2px solid #191919;border-radius:8px;font-family:inherit;font-size:0.85em;background:#fff;color:#191919;outline:none;box-sizing:border-box;">
+        <input type="text" id="search" placeholder="Search groups..." style="display:block;width:100%;max-width:400px;margin:0 auto 24px;padding:10px 16px;border:2px solid #191919;border-radius:8px;font-family:inherit;font-size:0.85em;outline:none;box-sizing:border-box;background:inherit;color:inherit;">
         <div class="groups-grid" id="groups-grid">
 """
 

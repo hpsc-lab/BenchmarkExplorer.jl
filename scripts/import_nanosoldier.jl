@@ -1,5 +1,6 @@
 using JSON
 using Dates
+import Downloads
 
 const NANOSOLDIER_REPO = "https://api.github.com/repos/JuliaCI/NanosoldierReports/contents"
 const RAW_URL         = "https://raw.githubusercontent.com/JuliaCI/NanosoldierReports/master"
@@ -12,64 +13,86 @@ function gh_headers()
 end
 
 function fetch_json(url::String)
-    Dl  = Base.require(Base, :Downloads)
     buf = IOBuffer()
-    Dl.download(url, buf; headers=gh_headers())
+    Downloads.download(url, buf; headers=gh_headers())
     JSON.parse(String(take!(buf)))
 end
 
 function fetch_bytes(url::String)
-    Dl  = Base.require(Base, :Downloads)
     buf = IOBuffer()
-    Dl.download(url, buf; headers=gh_headers())
+    Downloads.download(url, buf; headers=gh_headers())
     take!(buf)
 end
 
-function _flatten!(node, prefix::String, acc::Dict)
-    node isa AbstractDict || return
-    if haskey(node, "times")
-        times = node["times"]
-        times isa Number && (times = [Float64(times)])
-        times = Float64.(times)
-        isempty(times) && return
-        n      = length(times)
-        mean_t = sum(times) / n
-        s      = sort(times)
-        med_t  = n % 2 == 1 ? s[n÷2+1] : (s[n÷2] + s[n÷2+1]) / 2.0
-        std_t  = n > 1 ? sqrt(sum((t - mean_t)^2 for t in times) / (n-1)) : 0.0
-        acc[prefix] = Dict(
-            "mean_time_ns"   => mean_t,
-            "min_time_ns"    => s[1],
-            "median_time_ns" => med_t,
-            "max_time_ns"    => s[end],
-            "std_time_ns"    => std_t,
-            "memory_bytes"   => Int(get(node, "memory", 0)),
-            "allocs"         => Int(get(node, "allocs", 0)),
-            "samples"        => n,
-        )
-    else
-        for (k, v) in node
-            k in ("params", "gctimes") && continue
-            new_prefix = isempty(prefix) ? k : "$prefix/$k"
-            _flatten!(v, new_prefix, acc)
+function _flatten_bg!(node, prefix::String, acc::Dict)
+    (node isa AbstractVector && length(node) == 2) || return
+    tag, payload = node[1], node[2]
+    if tag == "TrialEstimate"
+        payload isa AbstractDict && (acc[prefix] = payload)
+    elseif tag == "BenchmarkGroup"
+        payload isa AbstractDict || return
+        for (k, v) in get(payload, "data", Dict())
+            _flatten_bg!(v, isempty(prefix) ? k : "$prefix/$k", acc)
         end
     end
 end
 
-function try_fetch_primary(comparison_name::String)
-    url = "$RAW_URL/benchmark/by_hash/$comparison_name/primary.json.gz"
+function _parse_bg_file(path::String)
+    raw = JSON.parsefile(path)
+    meta = raw[1] isa AbstractDict ? raw[1] : Dict()
+    bgs  = raw[2] isa AbstractVector ? raw[2] : []
+    acc  = Dict{String,Any}()
+    for bg in bgs
+        _flatten_bg!(bg, "", acc)
+    end
+    meta, acc
+end
+
+function try_fetch_data_zst(comparison_name::String)
+    url = "$RAW_URL/benchmark/by_hash/$comparison_name/data.tar.zst"
     try
-        gz_path  = tempname() * ".gz"
-        Dl = Base.require(Base, :Downloads)
-        Dl.download(url, gz_path; headers=gh_headers())
-        json_str = read(pipeline(`gunzip -c $gz_path`), String)
-        rm(gz_path; force=true)
-        data = JSON.parse(json_str)
-        root = get(data, "benchmarks", data)
-        acc  = Dict{String,Dict}()
-        _flatten!(root, "", acc)
-        isempty(acc) ? nothing : acc
-    catch
+        zst_path = tempname() * ".tar.zst"
+        Downloads.download(url, zst_path; headers=gh_headers())
+        outdir = mktempdir()
+        run(pipeline(`tar --use-compress-program=zstd -xf $zst_path -C $outdir`, stderr=devnull))
+        rm(zst_path; force=true)
+
+        files = readdir(outdir; join=true)
+        pf = (tag) -> findfirst(f -> occursin("primary.$tag", basename(f)), files)
+        mean_idx = pf("mean")
+        mean_idx === nothing && return nothing
+
+        meta, mean_acc = _parse_bg_file(files[mean_idx])
+        isempty(mean_acc) && return nothing
+
+        _, median_acc = (idx = pf("median"); idx !== nothing ? _parse_bg_file(files[idx]) : (Dict(), Dict()))
+        _, min_acc    = (idx = pf("minimum"); idx !== nothing ? _parse_bg_file(files[idx]) : (Dict(), Dict()))
+        _, std_acc    = (idx = pf("std"); idx !== nothing ? _parse_bg_file(files[idx]) : (Dict(), Dict()))
+
+        julia_version = get(meta, "Julia", "nightly")
+
+        result = Dict{String,Dict}()
+        for (name, trial) in mean_acc
+            mean_t   = get(trial, "time",   0.0)
+            median_t = get(get(median_acc, name, Dict()), "time", mean_t)
+            min_t    = get(get(min_acc,    name, Dict()), "time", mean_t)
+            std_t    = get(get(std_acc,    name, Dict()), "time", 0.0)
+            result[name] = Dict(
+                "mean_time_ns"   => mean_t,
+                "median_time_ns" => median_t,
+                "min_time_ns"    => min_t,
+                "max_time_ns"    => mean_t,
+                "std_time_ns"    => std_t,
+                "memory_bytes"   => Int(get(trial, "memory", 0)),
+                "allocs"         => Int(get(trial, "allocs", 0)),
+                "samples"        => 1,
+            )
+        end
+
+        rm(outdir; force=true, recursive=true)
+        isempty(result) ? nothing : (result, julia_version)
+    catch e
+        @warn "data.tar.zst unavailable for $comparison_name" exception=e
         nothing
     end
 end
@@ -79,13 +102,13 @@ function parse_report_md(content::String)
     for line in split(content, "\n")
         m = match(r"^\|\s*`(\[.*?\])`\s*\|\s*~?([0-9]+\.[0-9]+)", line)
         if !isnothing(m)
-            results[m.captures[1]] = Dict("time_ratio"   => parse(Float64, m.captures[2]),
+            results[m.captures[1]] = Dict("time_ratio" => parse(Float64, m.captures[2]),
                                           "memory_ratio" => 1.0)
             continue
         end
         m = match(r"`(\[.*?\])`[:\s]+([0-9.]+)x", line)
         if !isnothing(m)
-            results[m.captures[1]] = Dict("time_ratio"   => parse(Float64, m.captures[2]),
+            results[m.captures[1]] = Dict("time_ratio" => parse(Float64, m.captures[2]),
                                           "memory_ratio" => 1.0)
         end
     end
@@ -105,17 +128,22 @@ function import_comparison(comparison_name::String, output_dir::String)
         @warn "Invalid comparison name: $comparison_name"
         return nothing
     end
-    head_hash, base_hash = parts[1], parts[2]
 
-    benchmarks  = try_fetch_primary(comparison_name)
-    source_type = "primary_json"
+    head_short, base_short = parts[1], parts[2]
+    benchmarks    = nothing
+    source_type   = "report_md"
+    julia_version = "nightly"
+    head_hash     = head_short
+    base_hash     = base_short
 
-    if isnothing(benchmarks)
+    zst = try_fetch_data_zst(comparison_name)
+    if !isnothing(zst)
+        benchmarks, julia_version = zst
+        source_type = "data_zst"
+    else
         try
-            content = String(fetch_bytes(
-                "$RAW_URL/benchmark/by_hash/$comparison_name/report.md"))
+            content     = String(fetch_bytes("$RAW_URL/benchmark/by_hash/$comparison_name/report.md"))
             benchmarks  = parse_report_md(content)
-            source_type = "report_md"
         catch e
             @warn "Failed to import $comparison_name" exception=e
             return nothing
@@ -123,20 +151,21 @@ function import_comparison(comparison_name::String, output_dir::String)
     end
 
     if isempty(benchmarks)
-        @warn "No results found in $comparison_name"
+        @warn "No results in $comparison_name"
         return nothing
     end
 
-    println("  $(length(benchmarks)) benchmarks via $source_type")
+    println("  $(length(benchmarks)) benchmarks via $source_type (Julia $julia_version)")
 
     output = Dict(
         "metadata" => Dict(
-            "comparison"  => comparison_name,
-            "head_hash"   => head_hash,
-            "base_hash"   => base_hash,
-            "source"      => "NanosoldierReports",
-            "source_type" => source_type,
-            "imported_at" => string(now()),
+            "comparison"    => comparison_name,
+            "head_hash"     => head_hash,
+            "base_hash"     => base_hash,
+            "source"        => "NanosoldierReports",
+            "source_type"   => source_type,
+            "julia_version" => julia_version,
+            "imported_at"   => string(now()),
         ),
         "benchmarks" => benchmarks,
     )
@@ -197,8 +226,9 @@ function convert_to_explorer_format(nanosoldier_dir::String, output_dir::String,
                                      group_name::String="nanosoldier")
     mkpath(output_dir)
     files = sort(filter(f -> endswith(f, ".json"), readdir(nanosoldier_dir)))
-    isempty(files) && (@warn "No comparison files found in $nanosoldier_dir"; return nothing)
+    isempty(files) && (@warn "No comparison files in $nanosoldier_dir"; return nothing)
 
+    seen_heads   = Dict{String,Int}()
     all_benchmarks = Dict{String,Dict}()
     run_metadata   = Dict[]
     run_number     = 1
@@ -208,11 +238,20 @@ function convert_to_explorer_format(nanosoldier_dir::String, output_dir::String,
         try
             data = JSON.parsefile(joinpath(nanosoldier_dir, file))
         catch e
-            @warn "Could not parse $file" exception=e
+            @warn "Cannot parse $file" exception=e
             continue
         end
 
         meta = get(data, "metadata", Dict())
+        head = get(meta, "head_hash", "")
+
+        if haskey(seen_heads, head) && !isempty(head)
+            println("  Skipping duplicate head_hash $(head[1:min(7,end)])")
+            continue
+        end
+        !isempty(head) && (seen_heads[head] = run_number)
+
+        jv = get(meta, "julia_version", "nightly")
 
         for (name, bench) in get(data, "benchmarks", Dict())
             clean = _clean_name(name)
@@ -220,10 +259,10 @@ function convert_to_explorer_format(nanosoldier_dir::String, output_dir::String,
             all_benchmarks[clean][string(run_number)] = merge(
                 _bench_to_explorer(bench),
                 Dict(
-                    "commit_hash"   => get(meta, "head_hash",   ""),
+                    "commit_hash"   => head,
                     "base_hash"     => get(meta, "base_hash",   ""),
                     "timestamp"     => get(meta, "imported_at", string(now())),
-                    "julia_version" => "nightly",
+                    "julia_version" => jv,
                     "source_type"   => get(meta, "source_type", "unknown"),
                 )
             )
@@ -232,15 +271,16 @@ function convert_to_explorer_format(nanosoldier_dir::String, output_dir::String,
         push!(run_metadata, Dict(
             "run_number"      => run_number,
             "timestamp"       => get(meta, "imported_at", string(now())),
-            "commit_hash"     => get(meta, "head_hash",   ""),
+            "commit_hash"     => head,
             "base_hash"       => get(meta, "base_hash",   ""),
+            "julia_version"   => jv,
             "benchmark_count" => length(get(data, "benchmarks", Dict())),
             "source_type"     => get(meta, "source_type", "unknown"),
         ))
         run_number += 1
     end
 
-    categories = Dict{String, Dict{String,Dict}}()
+    categories = Dict{String,Dict{String,Dict}}()
     for (name, runs) in all_benchmarks
         cat = split(name, "/")[1]
         haskey(categories, cat) || (categories[cat] = Dict())
@@ -268,11 +308,8 @@ function convert_to_explorer_format(nanosoldier_dir::String, output_dir::String,
 
     latest_file = joinpath(output_dir, "latest_100.json")
     latest_100  = if isfile(latest_file)
-        try
-            JSON.parsefile(latest_file)
-        catch
-            Dict("version" => "2.0", "cached_at" => string(now()), "groups" => Dict())
-        end
+        try JSON.parsefile(latest_file)
+        catch; Dict("version" => "2.0", "cached_at" => string(now()), "groups" => Dict()) end
     else
         Dict("version" => "2.0", "cached_at" => string(now()), "groups" => Dict())
     end
@@ -282,18 +319,15 @@ function convert_to_explorer_format(nanosoldier_dir::String, output_dir::String,
 
     index_path = joinpath(output_dir, "index.json")
     index = if isfile(index_path)
-        try
-            JSON.parsefile(index_path)
-        catch
-            Dict("version" => "2.0", "groups" => Dict(), "last_updated" => string(now()))
-        end
+        try JSON.parsefile(index_path)
+        catch; Dict("version" => "2.0", "groups" => Dict(), "last_updated" => string(now())) end
     else
         Dict("version" => "2.0", "groups" => Dict(), "last_updated" => string(now()))
     end
     haskey(index, "groups") || (index["groups"] = Dict())
 
     timestamps = [rm["timestamp"] for rm in run_metadata if !isempty(get(rm, "timestamp", ""))]
-    dates      = filter!(!isempty, [split(ts, "T")[1] for ts in timestamps])
+    dates = filter!(!isempty, [split(ts, "T")[1] for ts in timestamps])
 
     for (group_key, benches) in groups
         index["groups"][group_key] = Dict(
@@ -301,8 +335,9 @@ function convert_to_explorer_format(nanosoldier_dir::String, output_dir::String,
                 "run_number"      => rm["run_number"],
                 "timestamp"       => rm["timestamp"],
                 "date"            => length(rm["timestamp"]) >= 10 ? split(rm["timestamp"], "T")[1] : "",
-                "julia_version"   => "nightly",
+                "julia_version"   => get(rm, "julia_version", "nightly"),
                 "commit_hash"     => rm["commit_hash"],
+                "base_hash"       => get(rm, "base_hash", ""),
                 "benchmark_count" => get(rm, "benchmark_count", length(benches)),
                 "source_type"     => get(rm, "source_type", "unknown"),
                 "file_path"       => "by_group/$(group_key)/history.json",
@@ -316,7 +351,10 @@ function convert_to_explorer_format(nanosoldier_dir::String, output_dir::String,
     index["last_updated"] = string(now())
     open(index_path, "w") do f; JSON.print(f, index, 2) end
 
+    n_zst = count(rm -> get(rm, "source_type", "") == "data_zst", run_metadata)
+    n_md  = count(rm -> get(rm, "source_type", "") == "report_md", run_metadata)
     println("Converted: $(length(all_benchmarks)) benchmarks in $(length(categories)) categories")
+    println("  Real ns (data_zst): $n_zst  |  Ratio fallback (report_md): $n_md")
     latest_file
 end
 

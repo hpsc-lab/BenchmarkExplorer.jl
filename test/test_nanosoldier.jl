@@ -7,6 +7,62 @@
         @test isfile(script_path)
         @test isdefined(mod, :parse_report_md)
         @test isdefined(mod, :convert_to_explorer_format)
+        @test isdefined(mod, :_flatten_bg!)
+        @test isdefined(mod, :_parse_bg_file)
+    end
+
+    @testset "_flatten_bg! TrialEstimate leaf" begin
+        acc = Dict{String,Any}()
+        node = ["TrialEstimate", Dict("time" => 1234.5, "allocs" => 2, "memory" => 256, "gctime" => 0.0)]
+        Base.invokelatest(mod._flatten_bg!, node, "a/b", acc)
+        @test haskey(acc, "a/b")
+        @test acc["a/b"]["time"] == 1234.5
+        @test acc["a/b"]["allocs"] == 2
+    end
+
+    @testset "_flatten_bg! BenchmarkGroup nesting" begin
+        acc = Dict{String,Any}()
+        inner = ["TrialEstimate", Dict("time" => 500.0, "allocs" => 1, "memory" => 64, "gctime" => 0.0)]
+        node = ["BenchmarkGroup", Dict("data" => Dict("sin" => inner), "tags" => [])]
+        Base.invokelatest(mod._flatten_bg!, node, "math", acc)
+        @test haskey(acc, "math/sin")
+        @test acc["math/sin"]["time"] == 500.0
+    end
+
+    @testset "_flatten_bg! empty prefix" begin
+        acc = Dict{String,Any}()
+        inner = ["TrialEstimate", Dict("time" => 100.0, "allocs" => 0, "memory" => 0, "gctime" => 0.0)]
+        node = ["BenchmarkGroup", Dict("data" => Dict("cos" => inner), "tags" => [])]
+        Base.invokelatest(mod._flatten_bg!, node, "", acc)
+        @test haskey(acc, "cos")
+    end
+
+    @testset "_flatten_bg! ignores unknown tags" begin
+        acc = Dict{String,Any}()
+        Base.invokelatest(mod._flatten_bg!, ["Unknown", Dict()], "x", acc)
+        @test isempty(acc)
+    end
+
+    @testset "_flatten_bg! ignores non-vector" begin
+        acc = Dict{String,Any}()
+        Base.invokelatest(mod._flatten_bg!, Dict("foo" => "bar"), "x", acc)
+        @test isempty(acc)
+    end
+
+    @testset "_parse_bg_file" begin
+        mktempdir() do tmp
+            trial = ["TrialEstimate", Dict("time" => 12345.0, "allocs" => 3, "memory" => 1024, "gctime" => 0.0)]
+            bg = ["BenchmarkGroup", Dict("data" => Dict("foo" => trial), "tags" => [])]
+            meta = Dict("Julia" => "1.10.0", "BenchmarkTools" => "1.3.0")
+            data = [meta, [bg]]
+            path = joinpath(tmp, "primary.mean.json")
+            open(path, "w") do f; JSON.print(f, data) end
+
+            meta_out, acc = Base.invokelatest(mod._parse_bg_file, path)
+            @test meta_out["Julia"] == "1.10.0"
+            @test haskey(acc, "foo")
+            @test acc["foo"]["time"] == 12345.0
+        end
     end
 
     @testset "parse_report_md" begin
