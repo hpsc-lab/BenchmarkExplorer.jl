@@ -384,9 +384,20 @@
             }
 
             body.dark-mode header {
-                background: #222;
+                background: #333;
                 border-bottom-color: #484848;
             }
+
+            body.dark-mode header h1 { color: #fff; }
+            body.dark-mode header p { color: #aaa; }
+
+            body.dark-mode footer {
+                background: #2a2a2a;
+                color: #888;
+                border-top-color: #444;
+            }
+
+            body.dark-mode footer a { color: #aaa; }
 
             body.dark-mode .stats-panel {
                 background: #2a2a2a;
@@ -426,7 +437,7 @@
 
             body.dark-mode .search-box {
                 background: #333;
-                color: #e9e9e7;
+                color: #fff;
                 border-color: #484848;
             }
 
@@ -552,6 +563,10 @@
             body.dark-mode .heatmap-table td { color: #e9e9e7; }
             body.dark-mode .heatmap-name { color: #e9e9e7; }
             body.dark-mode .no-results { color: #aaa; }
+            .subcat-pill { font-size:0.75em;padding:4px 10px;border:1px solid #ccc;border-radius:6px;text-decoration:none;color:#555; }
+            .subcat-pill:hover { border-color:#999;color:#191919; }
+            body.dark-mode .subcat-pill { border-color:#555;color:#aaa; }
+            body.dark-mode .subcat-pill:hover { border-color:#aaa;color:#e9e9e7; }
             body.dark-mode .anchor-btn { background: #333; border-color: #555; color: #aaa; }
             body.dark-mode .anchor-btn:hover { background: #444; color: #e9e9e7; }
             body.dark-mode #render-progress-wrap { background: #333; }
@@ -690,13 +705,11 @@
             </div>
             <div class="nyan-loading-text">loading benchmarks<span class="nyan-dots"></span></div>
         </div>
-        <div style="padding: 8px 32px; font-size: 0.8em;">
-            <a href="index.html" style="color: #999; text-decoration: none;">← back</a>
-        </div>
         <div class="container">
             <header style="text-align: center;">
                 <h1>nanosoldier_frontend</h1>
-                <p>Commit: <a href="https://github.com/hpsc-lab/BenchmarkExplorer.jl/commit/f1041190009fc20227a5b3648181993ad8122499" target="_blank" style="color: #666; text-decoration: none;">f104119</a></p>
+                <p>Commit: <a href="https://github.com/hpsc-lab/BenchmarkExplorer.jl/commit/76b9fe550e727c84ad79adf8496c1e1195389740" target="_blank" style="color: #666; text-decoration: none;">76b9fe5</a></p>
+                
             </header>
 
             <div class="stats-panel" id="stats-panel"></div>
@@ -738,8 +751,8 @@
         </div>
 
         <script>
-            const benchmarksData = {"frontend/nestedscopes":{"median":{"visible":"legendonly","name":"Median","line":{"width":1,"dash":"dot"},"y_raw":[100.0,101.0],"mode":"lines","x":["d13bdc0","b146a70"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Median: %{y:.3f} ms<extra></extra>","y":[100.0,101.0]},"min":{"visible":"legendonly","name":"Min","line":{"width":1,"dash":"dash"},"y_raw":[95.0,95.95],"mode":"lines","x":["d13bdc0","b146a70"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Min: %{y:.3f} ms<extra></extra>","y":[95.0,95.95]},"stats":{"baseline_mean":100.0,"latest_memory":0,"latest_commit":"b146a70","percent_change":1.0,"num_runs":2,"latest_allocs":0,"latest_mean":101.0,"latest_timestamp":"2026-03-10T23:30:16.871","trend":"stable","source_type":"report_md"},"mean":{"mode":"lines+markers","x":["d13bdc0","b146a70"],"commit_hashes":["d13bdc0","b146a70"],"hoverinfo":"text","name":"Mean","y":[100.0,101.0],"line":{"width":2},"y_raw":[100.0,101.0],"marker":{"size":6},"hovertext":["Commit: d13bdc0<br>Mean: 100.0 ms<br>Median: 100.0 ms<br>Min: 95.0 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:40","Commit: b146a70<br>Mean: 101.0 ms<br>Median: 101.0 ms<br>Min: 95.95 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 23:30"],"timestamps":["2026-03-10T00:40:50.051","2026-03-10T23:30:16.871"],"type":"scatter"}}};
-            const statsData = {"total_runs":212,"fastest":{"name":"enzyme/basics/make_zero/namedtuple","time":"31 ns"},"last_updated":"3 min ago","total_benchmarks":8173,"slowest":{"name":"nanosoldier/array/index/(sumlinear/1:100000)","time":"3715.50 s"}};
+            const benchmarksData = {"frontend/nestedscopes":{"median":{"visible":"legendonly","name":"Median","line":{"width":1,"dash":"dot"},"y_raw":[100.0,101.0],"mode":"lines","x":["d13bdc0","b146a70"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Median: %{y:.3f} ms<extra></extra>","y":[100.0,101.0]},"min":{"visible":"legendonly","name":"Min","line":{"width":1,"dash":"dash"},"y_raw":[95.0,95.95],"mode":"lines","x":["d13bdc0","b146a70"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Min: %{y:.3f} ms<extra></extra>","y":[95.0,95.95]},"stats":{"latest_commit":"b146a70","num_runs":2,"latest_allocs":0,"source_type":"report_md","julia_version":"nightly","latest_memory":0,"latest_timestamp":"2026-03-10T23:30:16.871","trend":"stable","latest_base":"20a5fa7","baseline_mean":100.0,"percent_change":1.0,"latest_mean":101.0},"mean":{"mode":"lines+markers","x":["d13bdc0","b146a70"],"commit_hashes":["d13bdc0","b146a70"],"hoverinfo":"text","name":"Mean","y":[100.0,101.0],"line":{"width":2},"y_raw":[100.0,101.0],"marker":{"size":6},"hovertext":["Commit: d13bdc0<br>vs: 0a82b71<br>Mean: 100.0 ms<br>Median: 100.0 ms<br>Min: 95.0 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:40","Commit: b146a70<br>vs: 20a5fa7<br>Mean: 101.0 ms<br>Median: 101.0 ms<br>Min: 95.95 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 23:30"],"timestamps":["2026-03-10T00:40:50.051","2026-03-10T23:30:16.871"],"type":"scatter"}}};
+            const statsData = {"total_runs":214,"fastest":{"name":"enzyme/basics/make_zero/namedtuple","time":"29 ns"},"last_updated":"0 min ago","total_benchmarks":8155,"slowest":{"name":"nanosoldier/array/index/(sumlinear/1:100000)","time":"3715.50 s"}};
             const repoUrl = 'https://github.com/hpsc-lab/BenchmarkExplorer.jl';
             const commitBaseUrl = 'https://github.com/JuliaLang/julia';
             let percentageMode = false;
@@ -1121,6 +1134,7 @@
                                         <span class="stat-key">Commit</span>
                                         <span class="stat-val"><a href="${commitBaseUrl}/commit/${stats.latest_commit}" target="_blank" style="color: inherit; text-decoration: underline;">${stats.latest_commit.substring(0, 7)}</a></span>
                                     </div>
+                                    ${stats.julia_version ? `<div class="stat"><span class="stat-key">Julia</span><span class="stat-val">${stats.julia_version}</span></div>` : ''}
                                     <div class="stat">
                                         <span class="stat-key">Memory</span>
                                         <span class="stat-val">${formatBytes(stats.latest_memory)}</span>
@@ -1333,6 +1347,11 @@
                 darkMode = true;
                 document.body.classList.add('dark-mode');
                 document.getElementById('btn-dark').classList.add('active');
+            }
+
+            if ('nanosoldier_frontend'.startsWith('nanosoldier') || 'nanosoldier_frontend'.startsWith('ns_')) {
+                heatmapMode = true;
+                document.getElementById('btn-heatmap').classList.add('active');
             }
 
             document.getElementById('search').addEventListener('input', function(e) {
@@ -1574,7 +1593,7 @@
                     tableHtml = '<p style="color:#999;padding:16px 0">Select two different commits to compare.</p>';
                 }
 
-                panel.innerHTML = `<div style="display:flex;gap:12px;align-items:center;margin-bottom:16px;flex-wrap:wrap;">
+                panel.innerHTML = `<div style="display:flex;gap:12px;align-items:center;margin-bottom:16px;flex-wrap:wrap;margin-top:5px;">
                     <select id="cmp-a" class="search-box" style="flex:0;min-width:200px;"><option value="">Commit A...</option>${optionsA}</select>
                     <span style="font-size:0.85em;color:#999">vs</span>
                     <select id="cmp-b" class="search-box" style="flex:0;min-width:200px;"><option value="">Commit B...</option>${optionsB}</select>

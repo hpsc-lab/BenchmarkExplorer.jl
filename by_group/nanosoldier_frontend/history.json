@@ -1,22 +1,6 @@
 {
   "frontend/nestedscopes": {
-    "46": {
-      "time_ratio": 1.01,
-      "min_time_ns": 9.595e7,
-      "mean_time_ns": 1.01e8,
-      "std_time_ns": 0.0,
-      "base_hash": "20a5fa7",
-      "median_time_ns": 1.01e8,
-      "source_type": "report_md",
-      "max_time_ns": 1.0605e8,
-      "allocs": 0,
-      "julia_version": "nightly",
-      "samples": 1,
-      "commit_hash": "b146a70",
-      "timestamp": "2026-03-10T23:30:16.871",
-      "memory_bytes": 0
-    },
-    "197": {
+    "198": {
       "time_ratio": 1.0,
       "min_time_ns": 9.5e7,
       "mean_time_ns": 1.0e8,
@@ -30,6 +14,22 @@
       "samples": 1,
       "commit_hash": "d13bdc0",
       "timestamp": "2026-03-10T00:40:50.051",
+      "memory_bytes": 0
+    },
+    "45": {
+      "time_ratio": 1.01,
+      "min_time_ns": 9.595e7,
+      "mean_time_ns": 1.01e8,
+      "std_time_ns": 0.0,
+      "base_hash": "20a5fa7",
+      "median_time_ns": 1.01e8,
+      "source_type": "report_md",
+      "max_time_ns": 1.0605e8,
+      "allocs": 0,
+      "julia_version": "nightly",
+      "samples": 1,
+      "commit_hash": "b146a70",
+      "timestamp": "2026-03-10T23:30:16.871",
       "memory_bytes": 0
     }
   }
