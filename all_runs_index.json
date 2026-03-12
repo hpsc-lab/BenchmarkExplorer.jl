@@ -1556,10 +1556,10 @@
         {
           "julia_version": "1.11.9",
           "run": 64,
-          "commit_hash": "9766093722e77be51196907ea0e3e7d260a55f61",
+          "commit_hash": "76b9fe550e727c84ad79adf8496c1e1195389740",
           "benchmark_count": 24,
           "date": "2026-03-12",
-          "timestamp": "2026-03-12T10:24:29.988",
+          "timestamp": "2026-03-12T10:21:08.633",
           "url": "by_group/trixi/run_64.json"
         }
       ],
@@ -1792,7 +1792,7 @@
       "last_run_date": "2026-03-07"
     },
     "enzyme": {
-      "total_runs": 61,
+      "total_runs": 62,
       "first_run_date": "2026-01-09",
       "runs": [
         {
@@ -2343,9 +2343,18 @@
           "date": "2026-02-11",
           "timestamp": "2026-02-11T09:46:00.356",
           "url": "by_group/enzyme/run_61.json"
+        },
+        {
+          "julia_version": "1.11.9",
+          "run": 62,
+          "commit_hash": "76b9fe550e727c84ad79adf8496c1e1195389740",
+          "benchmark_count": 7,
+          "date": "2026-03-12",
+          "timestamp": "2026-03-12T10:27:03.572",
+          "url": "by_group/enzyme/run_62.json"
         }
       ],
-      "last_run_date": "2026-03-07"
+      "last_run_date": "2026-03-12"
     },
     "nanosoldier_collection": {
       "total_runs": 4,
@@ -2681,5 +2690,5 @@
     }
   },
   "version": "2.0",
-  "generated_at": "2026-03-12T10:24:45.910"
+  "generated_at": "2026-03-12T10:27:19.086"
 }
