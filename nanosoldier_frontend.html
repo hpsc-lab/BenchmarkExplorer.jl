@@ -63,6 +63,9 @@
                 flex: 1 1 130px;
             }
 
+            .stat-card-green { border-color:#27ae60; background:linear-gradient(160deg,#f4fff6,#fff); }
+            .stat-card-red   { border-color:#e74c3c; background:linear-gradient(160deg,#fff4f4,#fff); }
+
             .stat-card .value {
                 font-size: 2em;
                 font-weight: 700;
@@ -383,6 +386,8 @@
                 border-color: #484848;
             }
 
+            body.dark-mode .top-bar { background: #2a2a2a; border-bottom-color: #444; }
+
             body.dark-mode header {
                 background: #333;
                 border-bottom-color: #484848;
@@ -413,6 +418,9 @@
             body.dark-mode .stat-card .value {
                 color: #e9e9e7;
             }
+
+            body.dark-mode .stat-card-green { border-color:#27ae60; background:linear-gradient(160deg,#0d2b14,#2a2a2a); }
+            body.dark-mode .stat-card-red   { border-color:#e74c3c; background:linear-gradient(160deg,#2b0d0d,#2a2a2a); }
 
             body.dark-mode .controls {
                 background: #333;
@@ -705,20 +713,21 @@
             </div>
             <div class="nyan-loading-text">loading benchmarks<span class="nyan-dots"></span></div>
         </div>
+        <div class="top-bar" style="display:flex;justify-content:space-between;align-items:center;padding:10px 24px;border-bottom:1px solid #e9e9e7;">
+            <a href="index.html" class="btn" style="text-decoration:none;flex-shrink:0;padding:6px 14px;font-size:0.8em;">← Back</a>
+            <button class="btn" id="btn-dark" style="font-size:0.8em;padding:6px 14px;">🌙 Dark</button>
+        </div>
         <div class="container">
             <header style="text-align: center;">
                 <h1>nanosoldier_frontend</h1>
-                <p>Commit: <a href="https://github.com/hpsc-lab/BenchmarkExplorer.jl/commit/9766093722e77be51196907ea0e3e7d260a55f61" target="_blank" style="color: #666; text-decoration: none;">9766093</a></p>
-                
+                <p>Commit: <a href="https://github.com/hpsc-lab/BenchmarkExplorer.jl/commit/0b8dd93cc66465870759104d1b30c99a4accad75" target="_blank" style="color: #666; text-decoration: none;">0b8dd93</a></p>
             </header>
 
             <div class="stats-panel" id="stats-panel"></div>
 
             <div class="controls">
-                <a href="index.html" class="btn btn-secondary" style="text-decoration:none;flex-shrink:0;">← Back</a>
                 <span style="font-weight:700;font-size:0.95em;margin-right:4px;flex-shrink:0;">nanosoldier_frontend</span>
                 <button class="btn btn-primary" id="btn-percentage">% Change</button>
-                <button class="btn btn-secondary" id="btn-dark">🌙 Dark</button>
                 <button class="btn btn-secondary" id="btn-compact">⊞ Compact</button>
                 <button class="btn btn-secondary" id="btn-heatmap">⊟ Heatmap</button>
                 <button class="btn btn-secondary" id="btn-compare">⇄ Compare</button>
@@ -752,6 +761,8 @@
 
         <script>
             const benchmarksData = {"frontend/nestedscopes":{"median":{"visible":"legendonly","name":"Median","line":{"width":1,"dash":"dot"},"y_raw":[100.0,101.0],"mode":"lines","x":["d13bdc0","b146a70"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Median: %{y:.3f} ms<extra></extra>","y":[100.0,101.0]},"min":{"visible":"legendonly","name":"Min","line":{"width":1,"dash":"dash"},"y_raw":[95.0,95.95],"mode":"lines","x":["d13bdc0","b146a70"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Min: %{y:.3f} ms<extra></extra>","y":[95.0,95.95]},"stats":{"latest_commit":"b146a70","num_runs":2,"latest_allocs":0,"source_type":"report_md","julia_version":"nightly","latest_memory":0,"latest_timestamp":"2026-03-10T23:30:16.871","trend":"stable","latest_base":"20a5fa7","baseline_mean":100.0,"percent_change":1.0,"latest_mean":101.0},"mean":{"mode":"lines+markers","x":["d13bdc0","b146a70"],"commit_hashes":["d13bdc0","b146a70"],"hoverinfo":"text","name":"Mean","y":[100.0,101.0],"line":{"width":2},"y_raw":[100.0,101.0],"marker":{"size":6},"hovertext":["Commit: d13bdc0<br>vs: 0a82b71<br>Mean: 100.0 ms<br>Median: 100.0 ms<br>Min: 95.0 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:40","Commit: b146a70<br>vs: 20a5fa7<br>Mean: 101.0 ms<br>Median: 101.0 ms<br>Min: 95.95 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 23:30"],"timestamps":["2026-03-10T00:40:50.051","2026-03-10T23:30:16.871"],"type":"scatter"}}};
+            const subcategories = [];
+            const groupName = "nanosoldier_frontend";
             const statsData = {"total_runs":214,"fastest":{"name":"enzyme/basics/make_zero/namedtuple","time":"30 ns"},"last_updated":"2 min ago","total_benchmarks":8155,"slowest":{"name":"nanosoldier/array/index/(sumlinear/1:100000)","time":"3715.50 s"}};
             const repoUrl = 'https://github.com/hpsc-lab/BenchmarkExplorer.jl';
             const commitBaseUrl = 'https://github.com/JuliaLang/julia';
@@ -778,16 +789,16 @@
                         <div class="value">${statsData.total_runs}</div>
                         <div class="label">Total Runs</div>
                     </div>
-                    <div class="stat-card" style="border-color:#27ae60;background:linear-gradient(160deg,#f4fff6,#fff)">
+                    <div class="stat-card stat-card-green">
                         <div class="value" style="color:#27ae60">${statsData.fastest.time}</div>
                         <div class="label">Fastest</div>
                     </div>
-                    <div class="stat-card" style="border-color:#e74c3c;background:linear-gradient(160deg,#fff4f4,#fff)">
+                    <div class="stat-card stat-card-red">
                         <div class="value" style="color:#e74c3c">${statsData.slowest.time}</div>
                         <div class="label">Slowest</div>
                     </div>
                     ${nFaster > 0 || nSlower > 0 ? `
-                    <div class="stat-card" style="${nSlower > nFaster ? 'border-color:#e74c3c;background:linear-gradient(160deg,#fff4f4,#fff)' : 'border-color:#27ae60;background:linear-gradient(160deg,#f4fff6,#fff)'}">
+                    <div class="stat-card ${nSlower > nFaster ? 'stat-card-red' : 'stat-card-green'}">
                         <div class="value" style="font-size:1.2em">
                             ${nFaster > 0 ? `<span style="color:#27ae60">↓${nFaster}</span>` : ''}
                             ${nSlower > 0 ? `<span style="color:#e74c3c;margin-left:6px">↑${nSlower}</span>` : ''}
@@ -1489,6 +1500,21 @@
             function renderHeatmap(filter = '') {
                 const container = document.getElementById('benchmarks-container');
                 container.innerHTML = '';
+
+                if (subcategories.length > 0) {
+                    const pillsDiv = document.createElement('div');
+                    pillsDiv.style.cssText = 'display:flex;flex-wrap:wrap;gap:8px;padding:16px 32px 0;';
+                    subcategories.forEach(cat => {
+                        const label = cat.replace(groupName + '_', '');
+                        const a = document.createElement('a');
+                        a.href = cat + '.html';
+                        a.className = 'subcat-pill';
+                        a.textContent = label;
+                        pillsDiv.appendChild(a);
+                    });
+                    container.appendChild(pillsDiv);
+                }
+
                 const benchmarks = Object.entries(benchmarksData)
                     .filter(([name, data]) => {
                         const matchesSearch = name.toLowerCase().includes(filter.toLowerCase());
