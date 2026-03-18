@@ -2046,8 +2046,9 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 table.className = 'heatmap-table';
                 const headerRow = \`<thead><tr><th class="heatmap-name">Benchmark</th>\${commits.map((h, i) => {
                     const jv = commitJuliaMap[h] || '';
-                    const jshort = jv ? jv.replace(/^(\\d+\\.\\d+).*?(DEV\\.(\\d+))?.*\$/, (_, v, __, b) => b ? \`\${v}-d\${b}\` : v) : shortCommits[i];
-                    return \`<th style="writing-mode:vertical-rl;transform:rotate(180deg);font-weight:400;padding:4px 6px;font-size:0.72em;" title="\${jv || shortCommits[i]}">\${jshort}</th>\`;
+                    const jshort = jv ? jv.replace(/^(\\d+\\.\\d+).*?(DEV\\.(\\d+))?.*\$/, (_, v, __, b) => b ? \`\${v}-d\${b}\` : v) : '';
+                    const htitle = [shortCommits[i], jshort].filter(Boolean).join(' \u00b7 ');
+                    return \`<th style="writing-mode:vertical-rl;transform:rotate(180deg);font-weight:400;padding:4px 6px;font-size:0.72em;" title="\${htitle}">\${shortCommits[i]}</th>\`;
                 }).join('')}</tr></thead>\`;
                 table.innerHTML = headerRow;
 
