@@ -1,61 +1,24 @@
 # BenchmarkExplorer.jl
 
-Performance benchmarking and visualization toolkit for Julia projects with persistent history tracking and interactive dashboards.
+Performance benchmarking and visualization toolkit for Julia projects with persistent history tracking and static HTML dashboards.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Julia](https://img.shields.io/badge/Julia-1.10+-purple.svg)](https://julialang.org)
 
 ## Features
 
-- **Interactive Dashboards**: Real-time visualization with WGLMakie.jl and Bonito.jl
-- **Persistent History**: Track performance across commits with incremental storage
-- **GitHub Integration**: Automated CI workflows with GitHub Actions
-- **Multiple Storage Formats**: Organized by date, group, and commit hash
-- **Static HTML Pages**: Shareable benchmark reports via GitHub Pages
-- **Progressive Loading**: Fast startup with on-demand historical data access
+- **Static HTML Dashboard**: Interactive benchmark pages deployed to GitHub Pages via Plotly.js
+- **Heatmap View**: Visual regression detection across commits with color-coded cells
+- **Persistent History**: Incremental storage across CI runs, organized by group
+- **GitHub Actions Integration**: Drop-in composite action for any Julia project
+- **NanosoldierReports Integration**: Automatically imports Julia CI benchmark data from [NanosoldierReports](https://github.com/JuliaCI/NanosoldierReports)
+- **Dark Mode**: Persists across pages via localStorage
 - **CSV Export**: Export benchmark data for external analysis
+- **URL State**: Shareable links preserve view, filter, and selected benchmark
 
 ## Quick Start
 
-### Installation
-
-```julia
-using Pkg
-Pkg.add(url="https://github.com/hpsc-lab/BenchmarkExplorer.jl")
-```
-
-### Running Benchmarks
-
-```julia
-using BenchmarkExplorer
-using BenchmarkTools
-
-suite = BenchmarkGroup()
-suite["example"] = @benchmarkable sin(1.0)
-
-results = run(suite)
-save_benchmark_results(results, "myproject"; data_dir="data", commit_hash="abc123")
-```
-
-### Starting Dashboard
-
-**Interactive Mode** (Bonito + WGLMakie - full features):
-```bash
-julia dashboard_interactive.jl
-```
-
-**Classic Mode** (original dashboard):
-```bash
-julia dashboard.jl
-```
-
-Open http://localhost:8000 in your browser.
-
-> **New:** Interactive mode uses unified architecture with shared core for both local and static deployments.
-
-## CI Integration
-
-### GitHub Actions
+### Using as a GitHub Action
 
 Add to `.github/workflows/benchmarks.yml`:
 
@@ -78,88 +41,102 @@ jobs:
         with:
           benchmark_script: 'benchmarks/benchmarks.jl'
           group_name: 'myproject'
-          julia_version: '1.10'
+          julia_version: '1.11'
           persist_to_branch: 'gh-pages'
           github_token: ${{ secrets.GITHUB_TOKEN }}
 ```
 
-### GitHub Pages
+Your benchmark script must define a `SUITE` variable of type `BenchmarkGroup`:
+
+```julia
+using BenchmarkTools
+
+const SUITE = BenchmarkGroup()
+SUITE["sin"] = @benchmarkable sin(1.0)
+SUITE["cos"] = @benchmarkable cos(1.0)
+```
+
+### GitHub Pages Setup
 
 1. Enable GitHub Pages in repository settings
-2. Source: `gh-pages` branch, root directory
-3. View results at: `https://username.github.io/repository/`
+2. Source: `gh-pages` branch, `benchmarks/` directory
+3. Results appear at `https://username.github.io/repository/`
 
-## Documentation
+### Action Inputs
 
-- **[Quick Start Guide](docs/QUICK_START.md)** - Get started in 5 minutes
-- **[External Setup](docs/EXTERNAL_SETUP.md)** - Use in your own repository
-- [Unified Architecture](docs/UNIFIED_ARCHITECTURE.md) - Dual-mode system
-- [Data Structure](docs/DATA_STRUCTURE.md) - Storage format specification
+| Input | Default | Description |
+|---|---|---|
+| `benchmark_script` | — | Path to Julia file defining `SUITE` |
+| `benchmark_project` | `@.` | `--project` flag for the benchmark script |
+| `group_name` | `trixi` | Benchmark group name (`trixi`, `enzyme`, `nanosoldier`, or custom) |
+| `julia_version` | `1.11` | Julia version |
+| `persist_to_branch` | `gh-pages` | Branch for storing history and HTML |
+| `persist_path` | `benchmarks/` | Path within the persist branch |
+| `commit_base_url` | repo URL | Base URL for commit links |
+| `github_token` | — | GitHub token (required) |
 
-## Data Organization
+## NanosoldierReports Integration
 
+Set `group_name: nanosoldier` to automatically fetch and visualize Julia's official CI benchmark data:
+
+```yaml
+- uses: hpsc-lab/BenchmarkExplorer.jl@main
+  with:
+    group_name: nanosoldier
+    github_token: ${{ secrets.GITHUB_TOKEN }}
 ```
-data/
-├── by_date/           # Benchmarks organized by date
-├── by_group/          # Per-group incremental runs
-├── by_hash/           # Lookup by git commit hash
-├── index.json         # Metadata index
-├── latest_100.json    # Recent runs cache
-└── all_runs_index.json # Complete history index
+
+This fetches comparison reports from [JuliaCI/NanosoldierReports](https://github.com/JuliaCI/NanosoldierReports), parses HEAD and BASE measurements from `data.tar.zst`, computes real time ratios, and organizes benchmarks by category (inference, array, broadcast, etc.).
+
+## Local Usage
+
+```julia
+using BenchmarkExplorer
+using BenchmarkTools
+
+suite = BenchmarkGroup()
+suite["example"] = @benchmarkable sin(1.0)
+
+results = run(suite)
+save_benchmark_results(results, "myproject"; data_dir="data", commit_hash="abc123")
 ```
 
-## Example Projects
-
-- [Trixi.jl Performance Tracker](https://github.com/vchuravy/trixi-performance-tracker)
-- [Enzyme.jl Benchmarks](benchmarks/enzyme)
-
-## Development
-
-See [DEVELOPMENT.md](DEVELOPMENT.md) for detailed architecture documentation.
-
-### Local Testing
+Start the interactive local dashboard:
 
 ```bash
-julia scripts/populate_history.jl
+julia dashboard_interactive.jl
+# or
 julia dashboard.jl
 ```
 
-## Contributing
+Open http://localhost:8000 in your browser.
 
-Contributions are welcome! Please:
+## Data Structure
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
+```
+data/
+├── by_group/
+│   ├── myproject/
+│   │   └── history.json     # Per-benchmark time series
+│   └── myproject_subcategory/
+│       └── history.json
+├── by_date/
+│   └── 2026-03/
+│       └── 18/
+│           └── myproject.json
+├── by_hash/
+│   └── abc1234.../
+│       └── myproject.json
+├── index.json               # Groups metadata
+└── latest_100.json          # Recent runs cache
+```
 
 ## License
 
-MIT License - see [LICENSE](LICENSE) file for details.
-
-## Citation
-
-If you use BenchmarkExplorer.jl in your research, please cite:
-
-```bibtex
-@software{benchmarkexplorer,
-  title = {BenchmarkExplorer.jl: Performance Tracking for Julia},
-  year = {2025},
-  url = {https://github.com/hpsc-lab/BenchmarkExplorer.jl}
-}
-```
+MIT License — see [LICENSE](LICENSE) for details.
 
 ## Acknowledgments
 
-Built with:
-- [BenchmarkTools.jl](https://github.com/JuliaCI/BenchmarkTools.jl) - Benchmarking framework
-- [Bonito.jl](https://github.com/SimonDanisch/Bonito.jl) - Web framework
-- [WGLMakie.jl](https://github.com/MakieOrg/Makie.jl) - Plotting library
-- [Trixi.jl](https://github.com/trixi-framework/Trixi.jl) - Example PDE solver
-- [Enzyme.jl](https://github.com/EnzymeAD/Enzyme.jl) - Automatic differentiation
-
-## Support
-
-- **Issues**: [GitHub Issues](https://github.com/hpsc-lab/BenchmarkExplorer.jl/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/hpsc-lab/BenchmarkExplorer.jl/discussions)
+- [BenchmarkTools.jl](https://github.com/JuliaCI/BenchmarkTools.jl)
+- [Plotly.js](https://plotly.com/javascript/)
+- [NanosoldierReports](https://github.com/JuliaCI/NanosoldierReports)
