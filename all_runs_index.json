@@ -983,7 +983,7 @@
       "last_run_date": "2026-03-07"
     },
     "trixi": {
-      "total_runs": 64,
+      "total_runs": 65,
       "first_run_date": "2026-01-09",
       "runs": [
         {
@@ -1561,6 +1561,15 @@
           "date": "2026-03-18",
           "timestamp": "2026-03-18T16:05:39.621",
           "url": "by_group/trixi/run_64.json"
+        },
+        {
+          "julia_version": "1.11.9",
+          "run": 65,
+          "commit_hash": "ba88026fe5ce4f22306293cee6cb01ac062a6761",
+          "benchmark_count": 24,
+          "date": "2026-03-18",
+          "timestamp": "2026-03-18T16:27:34.822",
+          "url": "by_group/trixi/run_65.json"
         }
       ],
       "last_run_date": "2026-03-18"
@@ -2690,5 +2699,5 @@
     }
   },
   "version": "2.0",
-  "generated_at": "2026-03-18T16:08:42.746"
+  "generated_at": "2026-03-18T16:27:51.363"
 }
