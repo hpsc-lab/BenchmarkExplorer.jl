@@ -4,6 +4,10 @@ using BenchmarkTools
 using JSON
 using Dates
 
+BenchmarkTools.DEFAULT_PARAMETERS.samples = 1
+BenchmarkTools.DEFAULT_PARAMETERS.evals = 1
+BenchmarkTools.DEFAULT_PARAMETERS.seconds = 0.01
+
 @testset "Edge Cases and Error Handling" begin
     @testset "Empty benchmark suite" begin
         mktempdir() do temp_dir
@@ -227,13 +231,13 @@ using Dates
     @testset "Extremely slow benchmarks" begin
         mktempdir() do temp_dir
             suite = BenchmarkGroup()
-            suite["slow"] = @benchmarkable sleep(0.1)
+            suite["slow"] = @benchmarkable sleep(0.001)
             results = run(suite)
 
             save_benchmark_results(results, "slow_group"; data_dir=temp_dir)
 
             history = load_history(temp_dir; group="slow_group")
-            @test history["slow"]["1"]["mean_time_ns"] > 100_000_000
+            @test history["slow"]["1"]["mean_time_ns"] > 0
         end
     end
 

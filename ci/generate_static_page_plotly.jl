@@ -126,31 +126,45 @@ function generate_static_page_plotly(data_dir::String, output_file::String, grou
 
         commit_labels = [format_commit_hash(h) for h in agg.commit_hashes]
 
-        base_hash_by_commit = Dict{String,String}()
+        base_hash_by_commit    = Dict{String,String}()
+        ratio_by_commit        = Dict{String,Float64}()
+        commit_message_by_hash = Dict{String,String}()
         for rn in run_numbers
             rd = runs[string(rn)]
             h = get(rd, "commit_hash", "")
             b = get(rd, "base_hash", "")
             !isempty(h) && !isempty(b) && (base_hash_by_commit[h] = b)
+            r = get(rd, "time_ratio", 0.0)
+            r > 0 && !haskey(ratio_by_commit, h) && (ratio_by_commit[h] = r)
+            m = get(rd, "commit_message", "")
+            !isempty(h) && !isempty(m) && !haskey(commit_message_by_hash, h) && (commit_message_by_hash[h] = m)
         end
 
         hover_texts_mean = [
-            "Commit: $(agg.commit_hashes[i])<br>" *
-            (haskey(base_hash_by_commit, agg.commit_hashes[i]) ?
-                "vs: $(base_hash_by_commit[agg.commit_hashes[i]][1:min(7,end)])<br>" : "") *
-            "Mean: $(round(agg.mean_vals[i], digits=3)) ms<br>" *
-            (agg.mean_err[i] > 0 ? "Std: $(round(agg.mean_err[i], digits=3)) ms<br>" : "") *
-            "Median: $(round(agg.median_vals[i], digits=3)) ms<br>" *
-            "Min: $(round(agg.min_vals[i], digits=3)) ms<br>" *
-            "Memory: $(format_memory(agg.memory[i]))<br>" *
-            "Allocs: $(agg.allocs[i])<br>" *
-            "Julia: $(agg.julia_versions[i])<br>" *
-            "Runs: $(agg.n_samples[i])<br>" *
-            "Date: $(format_date_nice(agg.timestamps[i]))"
+            let h = agg.commit_hashes[i]
+                r = get(ratio_by_commit, h, 0.0)
+                msg = get(commit_message_by_hash, h, "")
+                "Commit: $h<br>" *
+                (haskey(base_hash_by_commit, h) ?
+                    "vs: $(base_hash_by_commit[h][1:min(7,end)])<br>" : "") *
+                (r > 0 ? "Ratio: $(round(r, digits=3))x<br>" : "") *
+                "Mean: $(round(agg.mean_vals[i], digits=3)) ms<br>" *
+                (agg.mean_err[i] > 0 ? "Std: $(round(agg.mean_err[i], digits=3)) ms<br>" : "") *
+                "Median: $(round(agg.median_vals[i], digits=3)) ms<br>" *
+                "Min: $(round(agg.min_vals[i], digits=3)) ms<br>" *
+                "Memory: $(format_memory(agg.memory[i]))<br>" *
+                "Allocs: $(agg.allocs[i])<br>" *
+                "Julia: $(agg.julia_versions[i])<br>" *
+                "Runs: $(agg.n_samples[i])<br>" *
+                "Date: $(format_date_nice(agg.timestamps[i]))" *
+                (!isempty(msg) ? "<br>$(length(msg) > 60 ? msg[1:60] * "…" : msg)" : "")
+            end
             for i in 1:length(agg.mean_y)
         ]
 
         has_errors = any(e -> e > 0, agg.mean_err)
+
+        time_ratios_arr = [get(ratio_by_commit, h, 0.0) for h in agg.commit_hashes]
 
         mean_trace = Dict(
             "x" => commit_labels,
@@ -158,6 +172,10 @@ function generate_static_page_plotly(data_dir::String, output_file::String, grou
             "y_raw" => agg.mean_y,
             "timestamps" => agg.timestamps,
             "commit_hashes" => agg.commit_hashes,
+            "julia_versions" => agg.julia_versions,
+            "base_hashes"      => [get(base_hash_by_commit, h, "") for h in agg.commit_hashes],
+            "time_ratios"      => time_ratios_arr,
+            "commit_messages"  => [get(commit_message_by_hash, h, "") for h in agg.commit_hashes],
             "type" => "scatter",
             "mode" => "lines+markers",
             "name" => "Mean",
@@ -214,7 +232,9 @@ function generate_static_page_plotly(data_dir::String, output_file::String, grou
                 "latest_commit"   => get(latest_run, "commit_hash", "unknown"),
                 "latest_base"     => get(latest_run, "base_hash",   ""),
                 "julia_version"   => get(latest_run, "julia_version", ""),
-                "source_type"     => get(latest_run, "source_type", "absolute")
+                "source_type"     => get(latest_run, "source_type", "absolute"),
+                "latest_ratio"    => get(latest_run, "time_ratio", 0.0),
+                "latest_base_mean_ns" => get(latest_run, "base_mean_time_ns", 0.0),
             )
         )
     end
@@ -256,6 +276,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>$group_name - BenchmarkExplorer</title>
         <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -826,6 +847,8 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             .subcat-pill:hover { border-color:#999;color:#191919; }
             body.dark-mode .subcat-pill { border-color:#555;color:#aaa; }
             body.dark-mode .subcat-pill:hover { border-color:#aaa;color:#e9e9e7; }
+            .heatmap-slider { width: 140px; accent-color: #191919; cursor: pointer; }
+            body.dark-mode .heatmap-slider { accent-color: #e9e9e7; }
             body.dark-mode .anchor-btn { background: #333; border-color: #555; color: #aaa; }
             body.dark-mode .anchor-btn:hover { background: #444; color: #e9e9e7; }
             body.dark-mode #render-progress-wrap { background: #333; }
@@ -998,6 +1021,9 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                     <option value="slower">↑ Slower</option>
                     <option value="stable">→ Stable</option>
                 </select>
+                <select id="julia-filter" class="search-box" style="min-width: 150px; flex: 0;">
+                    <option value="all">All Julia</option>
+                </select>
                 <input type="text" id="search" class="search-box" placeholder="🔍 Search benchmarks...">
                 <div id="render-progress-wrap"><div id="render-progress-bar"></div></div>
             </div>
@@ -1020,7 +1046,28 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             let percentageMode = false;
             let darkMode = false;
             let trendFilter = 'all';
+            let juliaFilter = 'all';
             let maxRuns = null;
+            let heatmapCommitCount = 25;
+
+            const commitJuliaMap = {};
+            Object.values(benchmarksData).forEach(data => {
+                if (!data.mean.julia_versions) return;
+                data.mean.commit_hashes.forEach((h, i) => {
+                    if (!commitJuliaMap[h] && data.mean.julia_versions[i])
+                        commitJuliaMap[h] = data.mean.julia_versions[i];
+                });
+            });
+
+            (function populateJuliaFilter() {
+                const sel = document.getElementById('julia-filter');
+                const versions = [...new Set(Object.values(commitJuliaMap))].sort().reverse();
+                versions.forEach(v => {
+                    const opt = document.createElement('option');
+                    opt.value = v; opt.textContent = v;
+                    sel.appendChild(opt);
+                });
+            })();
             const renderedPlots = new Set();
             const hiddenPlots = new Set();
             const folderStates = new Map();
@@ -1060,6 +1107,15 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                         <div class="value" style="font-size: 1.2em;">\${statsData.last_updated}</div>
                         <div class="label">Last Updated</div>
                     </div>
+                    \${Object.keys(commitJuliaMap).length > 0 ? (() => {
+                        const latestCommit = Object.keys(commitJuliaMap).find(h =>
+                            Object.values(benchmarksData).some(d => d.mean.commit_hashes.includes(h) &&
+                                d.mean.timestamps[d.mean.commit_hashes.indexOf(h)] ===
+                                Math.max(...d.mean.timestamps.filter(Boolean))));
+                        const latestJulia = commitJuliaMap[Object.keys(commitJuliaMap)[0]] || '';
+                        const allVersions = [...new Set(Object.values(commitJuliaMap))].sort().reverse();
+                        return latestJulia ? \`<div class="stat-card"><div class="value" style="font-size:0.9em">\${allVersions[0]}</div><div class="label">Julia</div></div>\` : '';
+                    })() : ''}
                 `;
             }
 
@@ -1397,6 +1453,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                                         <span class="stat-val"><a href="\${commitBaseUrl}/commit/\${stats.latest_commit}" target="_blank" style="color: inherit; text-decoration: underline;">\${stats.latest_commit.substring(0, 7)}</a></span>
                                     </div>
                                     \${stats.julia_version ? \`<div class="stat"><span class="stat-key">Julia</span><span class="stat-val">\${stats.julia_version}</span></div>\` : ''}
+                                    \${stats.latest_base ? \`<div class="stat"><span class="stat-key">Base</span><span class="stat-val"><a href="\${commitBaseUrl}/commit/\${stats.latest_base}" target="_blank" style="color:inherit;text-decoration:underline">\${stats.latest_base.substring(0,7)}</a></span></div>\` : ''}
                                     <div class="stat">
                                         <span class="stat-key">Memory</span>
                                         <span class="stat-val">\${formatBytes(stats.latest_memory)}</span>
@@ -1490,9 +1547,21 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             let compareMode = false;
             let compareCommitA = null, compareCommitB = null;
 
+            function syncUrlState() {
+                const params = new URLSearchParams();
+                const q = document.getElementById('search').value;
+                if (q) params.set('q', q);
+                if (trendFilter !== 'all') params.set('trend', trendFilter);
+                if (juliaFilter !== 'all') params.set('julia', juliaFilter);
+                if (heatmapMode) params.set('view', 'heatmap');
+                if (compareMode) params.set('view', 'compare');
+                const str = params.toString();
+                history.replaceState(null, '', str ? '?' + str : window.location.pathname);
+            }
+
             function renderBenchmarks(filter = '') {
-                if (heatmapMode) { renderHeatmap(filter); return; }
-                if (compareMode) { renderComparisonPanel(); return; }
+                if (heatmapMode) { renderHeatmap(filter); syncUrlState(); return; }
+                if (compareMode) { renderComparisonPanel(); syncUrlState(); return; }
                 const container = document.getElementById('benchmarks-container');
                 container.innerHTML = '';
                 renderedPlots.clear();
@@ -1503,12 +1572,14 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                     .filter(([name, data]) => {
                         const matchesSearch = name.toLowerCase().includes(filter.toLowerCase());
                         const matchesTrend = trendFilter === 'all' || data.stats.trend === trendFilter;
-                        return matchesSearch && matchesTrend;
+                        const matchesJulia = juliaFilter === 'all' || commitJuliaMap[data.stats.latest_commit] === juliaFilter;
+                        return matchesSearch && matchesTrend && matchesJulia;
                     })
                     .sort(([a], [b]) => a.localeCompare(b));
 
                 if (filtered.length === 0) {
                     container.innerHTML = '<div class="no-results"><h2>No benchmarks found</h2><p>Try a different search term</p></div>';
+                    syncUrlState();
                     return;
                 }
 
@@ -1517,6 +1588,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 totalPlots = container.querySelectorAll('.plot-container').length;
                 updateProgress();
                 renderVisiblePlots();
+                syncUrlState();
             }
 
             function calcPercentFromPrev(values) {
@@ -1616,12 +1688,26 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 document.getElementById('btn-heatmap').classList.add('active');
             }
 
+            (function restoreUrlState() {
+                const params = new URLSearchParams(window.location.search);
+                if (params.get('q')) document.getElementById('search').value = params.get('q');
+                if (params.get('trend')) { trendFilter = params.get('trend'); document.getElementById('trend-filter').value = trendFilter; }
+                if (params.get('julia')) { juliaFilter = params.get('julia'); document.getElementById('julia-filter').value = juliaFilter; }
+                if (params.get('view') === 'heatmap') { heatmapMode = true; document.getElementById('btn-heatmap').classList.add('active'); }
+                if (params.get('view') === 'compare') { compareMode = true; document.getElementById('btn-compare').classList.add('active'); }
+            })();
+
             document.getElementById('search').addEventListener('input', function(e) {
                 renderBenchmarks(e.target.value);
             });
 
             document.getElementById('trend-filter').addEventListener('change', function(e) {
                 trendFilter = e.target.value;
+                renderBenchmarks(document.getElementById('search').value);
+            });
+
+            document.getElementById('julia-filter').addEventListener('change', function(e) {
+                juliaFilter = e.target.value;
                 renderBenchmarks(document.getElementById('search').value);
             });
 
@@ -1773,6 +1859,13 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 }
 
                 const commitLink = commit !== 'unknown' ? '<a href="' + commitBaseUrl + '/commit/' + commit + '" target="_blank" style="color:#191919;text-decoration:underline">' + commit + '</a>' : commit;
+                const baseHash = data.mean.base_hashes ? data.mean.base_hashes[idx] : '';
+                const nsReportUrl = commitBaseUrl.includes('JuliaLang') && commit !== 'unknown'
+                    ? 'https://github.com/JuliaCI/NanosoldierReports/tree/master/benchmark/by_hash/' + commit + '/report.md'
+                    : null;
+                const juliaTipVer = data.mean.julia_versions ? data.mean.julia_versions[idx] : '';
+                const commitMsg = data.mean.commit_messages ? data.mean.commit_messages[idx] : '';
+                const timeRatio = data.mean.time_ratios ? data.mean.time_ratios[idx] : 0;
 
                 const css = '*{margin:0;padding:0;box-sizing:border-box}' +
                     'body{font-family:"JetBrains Mono",SFMono-Regular,Consolas,monospace;background:#fff;color:#191919;padding:32px;max-width:680px;margin:0 auto}' +
@@ -1804,6 +1897,11 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                     '</div>' +
                     '<table>' +
                     '<tr><th>Commit</th><td>' + commitLink + '</td></tr>' +
+                    (baseHash ? '<tr><th>Base</th><td><a href="' + commitBaseUrl + '/commit/' + baseHash + '" target="_blank" style="color:#191919;text-decoration:underline">' + baseHash.substring(0,7) + '</a></td></tr>' : '') +
+                    (juliaTipVer ? '<tr><th>Julia</th><td>' + juliaTipVer + '</td></tr>' : '') +
+                    (timeRatio > 0 ? '<tr><th>Time ratio</th><td style="color:' + (timeRatio > 1.05 ? '#b91c1c' : timeRatio < 0.95 ? '#1e7e34' : '#191919') + '">' + timeRatio.toFixed(3) + 'x</td></tr>' : '') +
+                    (commitMsg ? '<tr><th>Message</th><td style="word-break:break-word">' + commitMsg.substring(0, 120) + (commitMsg.length > 120 ? '…' : '') + '</td></tr>' : '') +
+                    (nsReportUrl ? '<tr><th>Report</th><td><a href="' + nsReportUrl + '" target="_blank" style="color:#191919;text-decoration:underline">NanosoldierReports ↗</a></td></tr>' : '') +
                     '<tr><th>Date</th><td>' + formatDate(timestamp) + '</td></tr>' +
                     '<tr><th>Mean</th><td>' + fmt(meanVal) + '</td></tr>' +
                     '<tr><th>Median</th><td>' + fmt(medianVal) + '</td></tr>' +
@@ -1834,7 +1932,11 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                         const a = document.createElement('a');
                         a.href = cat + '.html';
                         a.className = 'subcat-pill';
-                        a.textContent = label;
+                        const prefix = cat.replace(groupName + '_', '') + '/';
+                        const cnt = Object.keys(benchmarksData).filter(n => n.startsWith(prefix)).length;
+                        const warn = Object.entries(benchmarksData).filter(([n, d]) =>
+                            n.startsWith(prefix) && d.stats.trend === 'slower').length;
+                        a.textContent = label + (cnt > 0 ? ' ' + cnt : '') + (warn > 0 ? ' \u26a0' + warn : '');
                         pillsDiv.appendChild(a);
                     });
                     container.appendChild(pillsDiv);
@@ -1848,32 +1950,122 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                     }).sort(([a], [b]) => a.localeCompare(b));
                 if (!benchmarks.length) { container.innerHTML = '<div class="no-results"><h2>No benchmarks</h2></div>'; return; }
 
-                const commitSet = new Map(); // hash → timestamp
+                const isNanoGroup = groupName.startsWith('nanosoldier') || groupName.startsWith('ns_');
+
+                const commitSet = new Map();
                 benchmarks.forEach(([, data]) => {
                     data.mean.commit_hashes.forEach((h, i) => {
                         if (!commitSet.has(h)) commitSet.set(h, data.mean.timestamps[i] || '');
                     });
                 });
-                const commits = [...commitSet.entries()]
+                let commits = [...commitSet.entries()]
                     .sort((a, b) => a[1].localeCompare(b[1]))
-                    .slice(-25).map(([h]) => h);
+                    .map(([h]) => h);
+                if (juliaFilter !== 'all')
+                    commits = commits.filter(h => commitJuliaMap[h] === juliaFilter);
+                commits = commits.slice(-heatmapCommitCount);
+
+                const sortedBenchmarks = [...benchmarks].sort(([nameA, dataA], [nameB, dataB]) => {
+                    const maxRatioFor = (data) => {
+                        const cmap = {};
+                        data.mean.commit_hashes.forEach((h, i) => { cmap[h] = data.mean.y[i]; });
+                        const vals = commits.map(h => cmap[h] ?? null).filter(v => v !== null);
+                        const isRatio = data.stats.source_type === 'report_md';
+                        const base = isNanoGroup && isRatio ? 100 : (vals[0] || 1);
+                        return vals.length ? Math.max(...vals.map(v => v / base)) : 0;
+                    };
+                    return maxRatioFor(dataB) - maxRatioFor(dataA);
+                });
+
                 const shortCommits = commits.map(h => h.substring(0, 7));
+
+                const sliderDiv = document.createElement('div');
+                sliderDiv.style.cssText = 'display:flex;align-items:center;gap:10px;padding:12px 32px 0;font-size:0.8em;';
+                const sliderLabel = document.createElement('span');
+                sliderLabel.textContent = 'Commits:';
+                const slider = document.createElement('input');
+                slider.type = 'range';
+                slider.className = 'heatmap-slider';
+                slider.id = 'heatmap-slider';
+                slider.min = '5';
+                slider.max = '100';
+                slider.value = String(heatmapCommitCount);
+                const sliderVal = document.createElement('span');
+                sliderVal.id = 'heatmap-slider-val';
+                sliderVal.textContent = String(heatmapCommitCount);
+                slider.addEventListener('input', function() {
+                    heatmapCommitCount = parseInt(this.value);
+                    sliderVal.textContent = String(heatmapCommitCount);
+                    renderHeatmap(document.getElementById('search').value);
+                });
+                const pngBtn = document.createElement('button');
+                pngBtn.className = 'btn';
+                pngBtn.textContent = '\uD83D\uDDBC PNG';
+                pngBtn.style.cssText = 'margin-left:8px;font-size:0.8em;padding:4px 10px;';
+                pngBtn.onclick = () => {
+                    const wrapEl = container.querySelector('.heatmap-wrap');
+                    if (!wrapEl || typeof html2canvas === 'undefined') return;
+                    html2canvas(wrapEl, { backgroundColor: darkMode ? '#333' : '#fff', scale: 2 }).then(canvas => {
+                        const a = document.createElement('a');
+                        a.download = groupName + '-heatmap.png';
+                        a.href = canvas.toDataURL('image/png');
+                        a.click();
+                    });
+                };
+                sliderDiv.appendChild(sliderLabel);
+                sliderDiv.appendChild(slider);
+                sliderDiv.appendChild(sliderVal);
+                sliderDiv.appendChild(pngBtn);
+                container.appendChild(sliderDiv);
+
+                const latestCommit = commits[commits.length - 1];
+                if (latestCommit) {
+                    let nReg = 0, nImp = 0;
+                    sortedBenchmarks.forEach(([name, data]) => {
+                        const cmap = {};
+                        data.mean.commit_hashes.forEach((h, i) => { cmap[h] = data.mean.y[i]; });
+                        const v = cmap[latestCommit];
+                        if (v === undefined) return;
+                        const isRatio = data.stats.source_type === 'report_md';
+                        const base = isNanoGroup && isRatio ? 100 : (Object.values(cmap)[0] || 1);
+                        const r = v / base;
+                        if (r > 1.1) nReg++;
+                        else if (r < 0.9) nImp++;
+                    });
+                    if (nReg > 0 || nImp > 0) {
+                        const summaryDiv = document.createElement('div');
+                        summaryDiv.style.cssText = 'padding:10px 32px;font-size:0.82em;display:flex;gap:16px;align-items:center;';
+                        summaryDiv.innerHTML = \`<span style="font-weight:600">Latest commit (\${latestCommit.substring(0,7)}):</span>\${nReg > 0 ? \`<span style="color:#e74c3c">\u26a0 \${nReg} regressions >10%</span>\` : ''}\${nImp > 0 ? \`<span style="color:#27ae60">\u2713 \${nImp} improvements >10%</span>\` : ''}\`;
+                        container.appendChild(summaryDiv);
+                    }
+                }
 
                 const wrap = document.createElement('div');
                 wrap.className = 'heatmap-wrap';
                 const table = document.createElement('table');
                 table.className = 'heatmap-table';
-                const headerRow = \`<thead><tr><th class="heatmap-name">Benchmark</th>\${shortCommits.map(c =>
-                    \`<th style="writing-mode:vertical-rl;transform:rotate(180deg);font-weight:400;padding:4px 6px;font-size:0.72em;">\${c}</th>\`).join('')}</tr></thead>\`;
+                const headerRow = \`<thead><tr><th class="heatmap-name">Benchmark</th>\${commits.map((h, i) => {
+                    const jv = commitJuliaMap[h] || '';
+                    const jshort = jv ? jv.replace(/^(\\d+\\.\\d+).*?(DEV\\.(\\d+))?.*\$/, (_, v, __, b) => b ? \`\${v}-d\${b}\` : v) : shortCommits[i];
+                    return \`<th style="writing-mode:vertical-rl;transform:rotate(180deg);font-weight:400;padding:4px 6px;font-size:0.72em;" title="\${jv || shortCommits[i]}">\${jshort}</th>\`;
+                }).join('')}</tr></thead>\`;
                 table.innerHTML = headerRow;
 
                 const tbody = document.createElement('tbody');
-                benchmarks.forEach(([name, data]) => {
+
+                function buildHeatmapRow(name, data) {
                     const commitMap = {};
                     data.mean.commit_hashes.forEach((h, i) => { commitMap[h] = data.mean.y[i]; });
                     const vals = commits.map(h => commitMap[h] !== undefined ? commitMap[h] : null);
-                    const baseline = vals.find(v => v !== null) || 1;
+                    const isRatioData = data.stats.source_type === 'report_md';
+                    const baseline = isNanoGroup && isRatioData ? 100 : (vals.find(v => v !== null) || 1);
                     const shortName = name.split('/').slice(-2).join('/');
+                    const recentCommits = commits.slice(-5);
+                    const persistentReg = recentCommits.filter(h => {
+                        const v = commitMap[h];
+                        if (v === undefined) return false;
+                        return v / baseline > 1.1;
+                    }).length >= 3;
                     const row = document.createElement('tr');
                     const cells = commits.map((h, i) => {
                         const v = vals[i];
@@ -1885,15 +2077,34 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                         const lt = darkMode ? (25 + sat * 0.4) : (96 - sat * 0.45);
                         const textColor = darkMode ? \`hsl(\${hue},70%,\${60 + sat * 0.3}%)\` : \`hsl(\${hue},\${Math.min(sat*2,100)}%,\${Math.max(30, 40 - sat * 0.3)}%)\`;
                         const bg = \`hsl(\${hue},\${sat}%,\${lt}%)\`;
-                        const label = Math.abs(+pct) > 3 ? (pct > 0 ? '+' : '') + pct + '%' : '';
-                        return \`<td style="background:\${bg};color:\${textColor};width:38px;cursor:pointer" title="\${name}\\n\${h.substring(0,7)}: \${v.toFixed(3)}ms (\${pct > 0 ? '+' : ''}\${pct}%)" onclick="scrollToPlot('\${name}')">\${label}</td>\`;
+                        const warn = ratio > 1.2 ? '\u26a0' : '';
+                        const label = isNanoGroup
+                            ? (Math.abs(ratio - 1) > 0.03 ? warn + ratio.toFixed(2) + 'x' : '')
+                            : (Math.abs(+pct) > 3 ? warn + (pct > 0 ? '+' : '') + pct + '%' : '');
+                        const juliaTip = commitJuliaMap[h] ? \`Julia: \${commitJuliaMap[h]}\\n\` : '';
+                        return \`<td style="background:\${bg};color:\${textColor};width:38px;cursor:pointer" title="\${name}\\n\${juliaTip}\${h.substring(0,7)}: \${isNanoGroup ? ratio.toFixed(3)+'x' : v.toFixed(3)+'ms'} (\${pct > 0 ? '+' : ''}\${pct}%)" onclick="scrollToPlot('\${name}')">\${label}</td>\`;
                     }).join('');
-                    row.innerHTML = \`<td class="heatmap-name" title="\${name}">\${shortName}</td>\${cells}\`;
-                    tbody.appendChild(row);
-                });
+                    row.innerHTML = \`<td class="heatmap-name" title="\${name}">\${persistentReg ? '\uD83D\uDD34 ' : ''}\${shortName}</td>\${cells}\`;
+                    return row;
+                }
+
                 table.appendChild(tbody);
                 wrap.appendChild(table);
                 container.appendChild(wrap);
+
+                const CHUNK_SIZE = 200;
+                let rowIndex = 0;
+                function renderNextChunk() {
+                    const end = Math.min(rowIndex + CHUNK_SIZE, sortedBenchmarks.length);
+                    for (let i = rowIndex; i < end; i++) {
+                        tbody.appendChild(buildHeatmapRow(sortedBenchmarks[i][0], sortedBenchmarks[i][1]));
+                    }
+                    rowIndex = end;
+                    if (rowIndex < sortedBenchmarks.length) {
+                        requestAnimationFrame(renderNextChunk);
+                    }
+                }
+                renderNextChunk();
             }
 
             function getAllCommits() {

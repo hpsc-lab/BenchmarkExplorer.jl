@@ -28,11 +28,26 @@ function generate_index_page(benchmarks_dir::String, output_file::String, repo_u
             0
         end
 
+        n_slower = 0
+        n_faster = 0
+        if haskey(latest_data, "groups") && haskey(latest_data["groups"], group_name)
+            for (_, bdata) in latest_data["groups"][group_name]
+                if bdata isa Dict
+                    pct = get(bdata, "percent_change", 0.0)
+                    if pct > 5; n_slower += 1
+                    elseif pct < -5; n_faster += 1
+                    end
+                end
+            end
+        end
+
         benchmark_groups[group_name] = Dict(
             "num_benchmarks" => num_benchmarks,
             "total_runs" => get(group_info, "total_runs", 0),
             "latest_update" => get(group_info, "last_run_date", ""),
-            "url" => "$(group_name).html"
+            "url" => "$(group_name).html",
+            "n_faster" => n_faster,
+            "n_slower" => n_slower
         )
     end
 
@@ -157,6 +172,8 @@ function generate_index_page(benchmarks_dir::String, output_file::String, repo_u
             margin-bottom: 16px;
         }
 
+        .group-trend { font-size: 0.85em; font-weight: 700; margin-bottom: 8px; }
+
         .group-updated {
             padding-top: 12px;
             border-top: 1px solid #e9e9e7;
@@ -225,11 +242,15 @@ function generate_index_page(benchmarks_dir::String, output_file::String, repo_u
 """
     else
         for (name, data) in sort(collect(benchmark_groups), by=x->x[1])
+            nf = data["n_faster"]
+            ns = data["n_slower"]
+            trend_html = (nf > 0 || ns > 0) ? """<div class="group-trend">$(nf > 0 ? "<span style='color:#27ae60'>↓$nf</span>" : "")$(ns > 0 ? " <span style='color:#e74c3c'>↑$ns</span>" : "")</div>""" : ""
             html *= """
                 <a href="$(data["url"])" class="group-card">
                     <div class="group-name">$name</div>
                     <div class="group-count">$(data["num_benchmarks"])</div>
                     <div class="group-runs">$(data["total_runs"]) runs</div>
+                    $trend_html
                     <div class="group-updated">$(data["latest_update"])</div>
                 </a>
 """

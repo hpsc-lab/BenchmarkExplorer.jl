@@ -148,6 +148,13 @@ jobs:
         with:
           version: '1.11'
 
+      - name: Cache Julia packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.julia
+          key: julia-${{ runner.os }}-${{ hashFiles('ci/Project.toml', 'ci/Manifest.toml') }}
+          restore-keys: julia-${{ runner.os }}-
+
       - name: Fetch all data from gh-pages
         run: |
           git fetch origin gh-pages || true

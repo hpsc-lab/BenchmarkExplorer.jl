@@ -69,28 +69,63 @@ function try_fetch_data_zst(comparison_name::String)
         _, min_acc    = (idx = pf("minimum"); idx !== nothing ? _parse_bg_file(files[idx]) : (Dict(), Dict()))
         _, std_acc    = (idx = pf("std"); idx !== nothing ? _parse_bg_file(files[idx]) : (Dict(), Dict()))
 
-        julia_version = get(meta, "Julia", "nightly")
+        ag = (tag) -> findfirst(f -> occursin("against.$tag", basename(f)), files)
+        _, against_mean_acc   = (idx = ag("mean");    idx !== nothing ? _parse_bg_file(files[idx]) : (Dict(), Dict()))
+        _, against_median_acc = (idx = ag("median");  idx !== nothing ? _parse_bg_file(files[idx]) : (Dict(), Dict()))
+        _, against_min_acc    = (idx = ag("minimum"); idx !== nothing ? _parse_bg_file(files[idx]) : (Dict(), Dict()))
+
+        julia_version       = get(meta, "Julia", "nightly")
+        benchmarktools_ver  = get(meta, "BenchmarkTools", "")
 
         result = Dict{String,Dict}()
         for (name, trial) in mean_acc
             mean_t   = get(trial, "time",   0.0)
+            gc_t     = get(trial, "gctime", 0.0)
+            mem      = Int(get(trial, "memory", 0))
+            alc      = Int(get(trial, "allocs", 0))
             median_t = get(get(median_acc, name, Dict()), "time", mean_t)
             min_t    = get(get(min_acc,    name, Dict()), "time", mean_t)
             std_t    = get(get(std_acc,    name, Dict()), "time", 0.0)
+
+            base_trial    = get(against_mean_acc, name, Dict())
+            base_mean_t   = get(base_trial, "time",   0.0)
+            base_gc_t     = get(base_trial, "gctime", 0.0)
+            base_mem      = Int(get(base_trial, "memory", 0))
+            base_alc      = Int(get(base_trial, "allocs", 0))
+            base_median_t = get(get(against_median_acc, name, Dict()), "time", 0.0)
+            base_min_t    = get(get(against_min_acc,    name, Dict()), "time", 0.0)
+
+            time_ratio    = base_mean_t   > 0 ? mean_t   / base_mean_t   : 0.0
+            median_ratio  = base_median_t > 0 ? median_t / base_median_t : 0.0
+            min_ratio     = base_min_t    > 0 ? min_t    / base_min_t    : 0.0
+            memory_ratio  = base_mem      > 0 ? mem / base_mem           : 0.0
+            allocs_ratio  = base_alc      > 0 ? alc / base_alc           : 0.0
+
             result[name] = Dict(
-                "mean_time_ns"   => mean_t,
-                "median_time_ns" => median_t,
-                "min_time_ns"    => min_t,
-                "max_time_ns"    => mean_t,
-                "std_time_ns"    => std_t,
-                "memory_bytes"   => Int(get(trial, "memory", 0)),
-                "allocs"         => Int(get(trial, "allocs", 0)),
-                "samples"        => 1,
+                "mean_time_ns"      => mean_t,
+                "median_time_ns"    => median_t,
+                "min_time_ns"       => min_t,
+                "std_time_ns"       => std_t,
+                "gctime_ns"         => gc_t,
+                "memory_bytes"      => mem,
+                "allocs"            => alc,
+                "samples"           => 1,
+                "base_mean_time_ns"   => base_mean_t,
+                "base_median_time_ns" => base_median_t,
+                "base_min_time_ns"    => base_min_t,
+                "base_gctime_ns"      => base_gc_t,
+                "base_memory_bytes"   => base_mem,
+                "base_allocs"         => base_alc,
+                "time_ratio"          => time_ratio,
+                "median_ratio"        => median_ratio,
+                "min_ratio"           => min_ratio,
+                "memory_ratio"        => memory_ratio,
+                "allocs_ratio"        => allocs_ratio,
             )
         end
 
         rm(outdir; force=true, recursive=true)
-        isempty(result) ? nothing : (result, julia_version)
+        isempty(result) ? nothing : (result, julia_version, benchmarktools_ver)
     catch e
         @warn "data.tar.zst unavailable for $comparison_name" exception=e
         nothing
@@ -136,9 +171,10 @@ function import_comparison(comparison_name::String, output_dir::String)
     head_hash     = head_short
     base_hash     = base_short
 
+    benchmarktools_ver = ""
     zst = try_fetch_data_zst(comparison_name)
     if !isnothing(zst)
-        benchmarks, julia_version = zst
+        benchmarks, julia_version, benchmarktools_ver = zst
         source_type = "data_zst"
     else
         try
@@ -155,17 +191,40 @@ function import_comparison(comparison_name::String, output_dir::String)
         return nothing
     end
 
-    println("  $(length(benchmarks)) benchmarks via $source_type (Julia $julia_version)")
+    commit_date    = ""
+    commit_message = ""
+    try
+        cdata = fetch_json("https://api.github.com/repos/JuliaLang/julia/commits/$head_hash")
+        if cdata isa AbstractDict
+            commit_date    = get(get(get(cdata, "commit", Dict()), "author", Dict()), "date", "")
+            full_msg       = get(get(cdata, "commit", Dict()), "message", "")
+            commit_message = first(split(full_msg, "\n"))
+        end
+    catch
+    end
+
+    regression_count  = count(b -> get(b, "time_ratio", 0.0) > 1.05,  values(benchmarks))
+    improvement_count = count(b -> 0 < get(b, "time_ratio", 0.0) < 0.95, values(benchmarks))
+    n_with_base       = count(b -> get(b, "base_mean_time_ns", 0.0) > 0, values(benchmarks))
+
+    println("  $(length(benchmarks)) benchmarks via $source_type (Julia $julia_version) regressions=$regression_count improvements=$improvement_count")
 
     output = Dict(
         "metadata" => Dict(
-            "comparison"    => comparison_name,
-            "head_hash"     => head_hash,
-            "base_hash"     => base_hash,
-            "source"        => "NanosoldierReports",
-            "source_type"   => source_type,
-            "julia_version" => julia_version,
-            "imported_at"   => string(now()),
+            "comparison"          => comparison_name,
+            "head_hash"           => head_hash,
+            "base_hash"           => base_hash,
+            "source"              => "NanosoldierReports",
+            "source_type"         => source_type,
+            "julia_version"       => julia_version,
+            "benchmarktools_ver"  => benchmarktools_ver,
+            "commit_date"         => commit_date,
+            "commit_message"      => commit_message,
+            "imported_at"         => string(now()),
+            "regression_count"    => regression_count,
+            "improvement_count"   => improvement_count,
+            "n_benchmarks"        => length(benchmarks),
+            "n_with_base_data"    => n_with_base,
         ),
         "benchmarks" => benchmarks,
     )
@@ -174,24 +233,41 @@ function import_comparison(comparison_name::String, output_dir::String)
     outfile
 end
 
-function list_benchmark_comparisons(limit::Int=100)
-    url     = "$NANOSOLDIER_REPO/benchmark/by_hash"
-    entries = fetch_json(url)
-    isa(entries, AbstractVector) || (@warn "Unexpected API response"; return String[])
-    dirs = [e["name"] for e in entries if get(e, "type", "") == "dir"]
-    reverse!(dirs)
-    dirs[1:min(limit, length(dirs))]
+function list_benchmark_comparisons(limit::Int=0)
+    all_dirs = String[]
+    page = 1
+    while true
+        url = "$NANOSOLDIER_REPO/benchmark/by_hash?per_page=100&page=$page"
+        entries = try
+            fetch_json(url)
+        catch e
+            @warn "Failed to fetch page $page" exception=e
+            break
+        end
+        isa(entries, AbstractVector) || break
+        dirs = [e["name"] for e in entries if get(e, "type", "") == "dir"]
+        isempty(dirs) && break
+        append!(all_dirs, dirs)
+        length(dirs) < 100 && break
+        page += 1
+    end
+    reverse!(all_dirs)
+    limit <= 0 ? all_dirs : all_dirs[1:min(limit, length(all_dirs))]
 end
 
-function import_recent_comparisons(output_dir::String; limit::Int=10)
+function import_recent_comparisons(output_dir::String; limit::Int=50)
     mkpath(output_dir)
-    candidates = list_benchmark_comparisons(limit * 4)
-    println("Found $(length(candidates)) candidates (want $limit)")
+    candidates = list_benchmark_comparisons(0)
+    println("Found $(length(candidates)) total comparisons (want $(limit <= 0 ? "all" : string(limit)))")
+
+    target = limit <= 0 ? length(candidates) : min(limit * 4, length(candidates))
+    candidates = candidates[1:target]
 
     imported = String[]
     for comp in candidates
         result = import_comparison(comp, output_dir)
         !isnothing(result) && push!(imported, result)
+        limit > 0 && length(imported) >= limit && break
     end
 
     println("\nProcessed $(length(imported)) comparisons")
@@ -205,15 +281,16 @@ function _bench_to_explorer(bench::Dict)
     ratio = get(bench, "time_ratio", 1.0)
     t     = BASELINE_NS * ratio
     Dict(
-        "mean_time_ns"   => t,
-        "min_time_ns"    => t * 0.95,
-        "median_time_ns" => t,
-        "max_time_ns"    => t * 1.05,
-        "std_time_ns"    => 0.0,
-        "memory_bytes"   => 0,
-        "allocs"         => 0,
-        "samples"        => 1,
-        "time_ratio"     => ratio,
+        "mean_time_ns"      => t,
+        "min_time_ns"       => t * 0.95,
+        "median_time_ns"    => t,
+        "max_time_ns"       => t * 1.05,
+        "std_time_ns"       => 0.0,
+        "memory_bytes"      => 0,
+        "allocs"            => 0,
+        "samples"           => 1,
+        "time_ratio"        => ratio,
+        "base_mean_time_ns" => BASELINE_NS,
     )
 end
 
@@ -253,29 +330,40 @@ function convert_to_explorer_format(nanosoldier_dir::String, output_dir::String,
 
         jv = get(meta, "julia_version", "nightly")
 
+        commit_date = get(meta, "commit_date", "")
+        ts = !isempty(commit_date) ? commit_date : get(meta, "imported_at", string(now()))
+
         for (name, bench) in get(data, "benchmarks", Dict())
             clean = _clean_name(name)
             haskey(all_benchmarks, clean) || (all_benchmarks[clean] = Dict())
             all_benchmarks[clean][string(run_number)] = merge(
                 _bench_to_explorer(bench),
                 Dict(
-                    "commit_hash"   => head,
-                    "base_hash"     => get(meta, "base_hash",   ""),
-                    "timestamp"     => get(meta, "imported_at", string(now())),
-                    "julia_version" => jv,
-                    "source_type"   => get(meta, "source_type", "unknown"),
+                    "commit_hash"        => head,
+                    "base_hash"          => get(meta, "base_hash",    ""),
+                    "timestamp"          => ts,
+                    "julia_version"      => jv,
+                    "source_type"        => get(meta, "source_type",  "unknown"),
+                    "commit_message"     => get(meta, "commit_message", ""),
+                    "benchmarktools_ver" => get(meta, "benchmarktools_ver", ""),
                 )
             )
         end
 
         push!(run_metadata, Dict(
-            "run_number"      => run_number,
-            "timestamp"       => get(meta, "imported_at", string(now())),
-            "commit_hash"     => head,
-            "base_hash"       => get(meta, "base_hash",   ""),
-            "julia_version"   => jv,
-            "benchmark_count" => length(get(data, "benchmarks", Dict())),
-            "source_type"     => get(meta, "source_type", "unknown"),
+            "run_number"         => run_number,
+            "timestamp"          => ts,
+            "commit_hash"        => head,
+            "base_hash"          => get(meta, "base_hash",   ""),
+            "julia_version"      => jv,
+            "benchmarktools_ver" => get(meta, "benchmarktools_ver", ""),
+            "commit_message"     => get(meta, "commit_message", ""),
+            "commit_date"        => get(meta, "commit_date", ""),
+            "benchmark_count"    => get(meta, "n_benchmarks", length(get(data, "benchmarks", Dict()))),
+            "n_with_base_data"   => get(meta, "n_with_base_data", 0),
+            "regression_count"   => get(meta, "regression_count",  0),
+            "improvement_count"  => get(meta, "improvement_count", 0),
+            "source_type"        => get(meta, "source_type", "unknown"),
         ))
         run_number += 1
     end
@@ -332,15 +420,21 @@ function convert_to_explorer_format(nanosoldier_dir::String, output_dir::String,
     for (group_key, benches) in groups
         index["groups"][group_key] = Dict(
             "runs"           => [Dict(
-                "run_number"      => rm["run_number"],
-                "timestamp"       => rm["timestamp"],
-                "date"            => length(rm["timestamp"]) >= 10 ? split(rm["timestamp"], "T")[1] : "",
-                "julia_version"   => get(rm, "julia_version", "nightly"),
-                "commit_hash"     => rm["commit_hash"],
-                "base_hash"       => get(rm, "base_hash", ""),
-                "benchmark_count" => get(rm, "benchmark_count", length(benches)),
-                "source_type"     => get(rm, "source_type", "unknown"),
-                "file_path"       => "by_group/$(group_key)/history.json",
+                "run_number"        => rm["run_number"],
+                "timestamp"         => rm["timestamp"],
+                "date"              => length(rm["timestamp"]) >= 10 ? split(rm["timestamp"], "T")[1] : "",
+                "julia_version"     => get(rm, "julia_version", "nightly"),
+                "commit_hash"       => rm["commit_hash"],
+                "base_hash"         => get(rm, "base_hash", ""),
+                "benchmark_count"   => get(rm, "benchmark_count", length(benches)),
+                "source_type"       => get(rm, "source_type", "unknown"),
+                "file_path"         => "by_group/$(group_key)/history.json",
+                "benchmarktools_ver"=> get(rm, "benchmarktools_ver", ""),
+                "commit_message"    => get(rm, "commit_message", ""),
+                "commit_date"       => get(rm, "commit_date", ""),
+                "n_with_base_data"  => get(rm, "n_with_base_data", 0),
+                "regression_count"  => get(rm, "regression_count", 0),
+                "improvement_count" => get(rm, "improvement_count", 0),
             ) for rm in run_metadata],
             "total_runs"     => length(run_metadata),
             "latest_run"     => length(run_metadata),
