@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>nanosoldier_micro - BenchmarkExplorer</title>
         <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -575,6 +576,8 @@
             .subcat-pill:hover { border-color:#999;color:#191919; }
             body.dark-mode .subcat-pill { border-color:#555;color:#aaa; }
             body.dark-mode .subcat-pill:hover { border-color:#aaa;color:#e9e9e7; }
+            .heatmap-slider { width: 140px; accent-color: #191919; cursor: pointer; }
+            body.dark-mode .heatmap-slider { accent-color: #e9e9e7; }
             body.dark-mode .anchor-btn { background: #333; border-color: #555; color: #aaa; }
             body.dark-mode .anchor-btn:hover { background: #444; color: #e9e9e7; }
             body.dark-mode #render-progress-wrap { background: #333; }
@@ -720,7 +723,7 @@
         <div class="container">
             <header style="text-align: center;">
                 <h1>nanosoldier_micro</h1>
-                <p>Commit: <a href="https://github.com/hpsc-lab/BenchmarkExplorer.jl/commit/0b8dd93cc66465870759104d1b30c99a4accad75" target="_blank" style="color: #666; text-decoration: none;">0b8dd93</a></p>
+                <p>Commit: <a href="https://github.com/hpsc-lab/BenchmarkExplorer.jl/commit/3e5ea194f5b1f2362d504bd92093252574e350b1" target="_blank" style="color: #666; text-decoration: none;">3e5ea19</a></p>
             </header>
 
             <div class="stats-panel" id="stats-panel"></div>
@@ -747,6 +750,9 @@
                     <option value="slower">â†‘ Slower</option>
                     <option value="stable">â†’ Stable</option>
                 </select>
+                <select id="julia-filter" class="search-box" style="min-width: 150px; flex: 0;">
+                    <option value="all">All Julia</option>
+                </select>
                 <input type="text" id="search" class="search-box" placeholder="ðŸ” Search benchmarks...">
                 <div id="render-progress-wrap"><div id="render-progress-bar"></div></div>
             </div>
@@ -760,16 +766,37 @@
         </div>
 
         <script>
-            const benchmarksData = {"micro/parseint":{"median":{"visible":"legendonly","name":"Median","line":{"width":1,"dash":"dot"},"y_raw":[109.00000000000001,105.0,106.0,89.0,94.0,93.0,108.0,92.0,89.0,95.0,112.99999999999999,93.0,93.0,109.00000000000001],"mode":"lines","x":["d13bdc0","d03508a","ce6fbae","cccbb61","ca57eb0","c46c227","c299527","c13f74b","c0b95ac","b46df09","b146a70","b0772ee","b0154e3","aebcebc"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Median: %{y:.3f} ms<extra></extra>","y":[109.00000000000001,105.0,106.0,89.0,94.0,93.0,108.0,92.0,89.0,95.0,112.99999999999999,93.0,93.0,109.00000000000001]},"min":{"visible":"legendonly","name":"Min","line":{"width":1,"dash":"dash"},"y_raw":[103.55000000000001,99.75,100.7,84.55,89.3,88.35,102.6,87.4,84.55,90.25,107.34999999999998,88.35,88.35,103.55000000000001],"mode":"lines","x":["d13bdc0","d03508a","ce6fbae","cccbb61","ca57eb0","c46c227","c299527","c13f74b","c0b95ac","b46df09","b146a70","b0772ee","b0154e3","aebcebc"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Min: %{y:.3f} ms<extra></extra>","y":[103.55000000000001,99.75,100.7,84.55,89.3,88.35,102.6,87.4,84.55,90.25,107.34999999999998,88.35,88.35,103.55000000000001]},"stats":{"latest_commit":"aebcebc","num_runs":14,"latest_allocs":0,"source_type":"report_md","julia_version":"nightly","latest_memory":0,"latest_timestamp":"2026-03-10T23:30:21.284","trend":"stable","latest_base":"13ae079","baseline_mean":109.0,"percent_change":0.0,"latest_mean":109.0},"mean":{"mode":"lines+markers","x":["d13bdc0","d03508a","ce6fbae","cccbb61","ca57eb0","c46c227","c299527","c13f74b","c0b95ac","b46df09","b146a70","b0772ee","b0154e3","aebcebc"],"commit_hashes":["d13bdc0","d03508a","ce6fbae","cccbb61","ca57eb0","c46c227","c299527","c13f74b","c0b95ac","b46df09","b146a70","b0772ee","b0154e3","aebcebc"],"hoverinfo":"text","name":"Mean","y":[109.00000000000001,105.0,106.0,89.0,94.0,93.0,108.0,92.0,89.0,95.0,112.99999999999999,93.0,93.0,109.00000000000001],"line":{"width":2},"y_raw":[109.00000000000001,105.0,106.0,89.0,94.0,93.0,108.0,92.0,89.0,95.0,112.99999999999999,93.0,93.0,109.00000000000001],"marker":{"size":6},"hovertext":["Commit: d13bdc0<br>vs: 0a82b71<br>Mean: 109.0 ms<br>Median: 109.0 ms<br>Min: 103.55 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:40","Commit: d03508a<br>vs: c79309b<br>Mean: 105.0 ms<br>Median: 105.0 ms<br>Min: 99.75 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:40","Commit: ce6fbae<br>vs: 52af407<br>Mean: 106.0 ms<br>Median: 106.0 ms<br>Min: 100.7 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:40","Commit: cccbb61<br>vs: 3ed49fd<br>Mean: 89.0 ms<br>Median: 89.0 ms<br>Min: 84.55 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:40","Commit: ca57eb0<br>vs: 1b686b2<br>Mean: 94.0 ms<br>Median: 94.0 ms<br>Min: 89.3 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:40","Commit: c46c227<br>vs: e026aff<br>Mean: 93.0 ms<br>Median: 93.0 ms<br>Min: 88.35 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:41","Commit: c299527<br>vs: 6c97a48<br>Mean: 108.0 ms<br>Median: 108.0 ms<br>Min: 102.6 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:41","Commit: c13f74b<br>vs: 9117b4d<br>Mean: 92.0 ms<br>Median: 92.0 ms<br>Min: 87.4 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:41","Commit: c0b95ac<br>vs: d6c092d<br>Mean: 89.0 ms<br>Median: 89.0 ms<br>Min: 84.55 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:41","Commit: b46df09<br>vs: 907264b<br>Mean: 95.0 ms<br>Median: 95.0 ms<br>Min: 90.25 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 23:30","Commit: b146a70<br>vs: 20a5fa7<br>Mean: 113.0 ms<br>Median: 113.0 ms<br>Min: 107.35 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 23:30","Commit: b0772ee<br>vs: 1e2758e<br>Mean: 93.0 ms<br>Median: 93.0 ms<br>Min: 88.35 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 23:30","Commit: b0154e3<br>vs: 5e7aaa6<br>Mean: 93.0 ms<br>Median: 93.0 ms<br>Min: 88.35 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 23:30","Commit: aebcebc<br>vs: 13ae079<br>Mean: 109.0 ms<br>Median: 109.0 ms<br>Min: 103.55 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 23:30"],"timestamps":["2026-03-10T00:40:50.051","2026-03-10T00:40:50.823","2026-03-10T00:40:51.832","2026-03-10T00:40:54.764","2026-03-10T00:40:56.972","2026-03-10T00:41:04.382","2026-03-10T00:41:05.290","2026-03-10T00:41:07.423","2026-03-10T00:41:08.226","2026-03-10T23:30:08.960","2026-03-10T23:30:16.871","2026-03-10T23:30:18.437","2026-03-10T23:30:19.065","2026-03-10T23:30:21.284"],"type":"scatter"}},"micro/mandel":{"median":{"visible":"legendonly","name":"Median","line":{"width":1,"dash":"dot"},"y_raw":[117.0,106.0,100.0,91.0,86.0,101.0,106.0],"mode":"lines","x":["06b2bf2","d27fe45","d13bdc0","c3f5381","b6bca19","b146a70","b00614a"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Median: %{y:.3f} ms<extra></extra>","y":[117.0,106.0,100.0,91.0,86.0,101.0,106.0]},"min":{"visible":"legendonly","name":"Min","line":{"width":1,"dash":"dash"},"y_raw":[111.15,100.7,95.0,86.45,81.7,95.95,100.7],"mode":"lines","x":["06b2bf2","d27fe45","d13bdc0","c3f5381","b6bca19","b146a70","b00614a"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Min: %{y:.3f} ms<extra></extra>","y":[111.15,100.7,95.0,86.45,81.7,95.95,100.7]},"stats":{"latest_commit":"b00614a","num_runs":7,"latest_allocs":0,"source_type":"report_md","julia_version":"nightly","latest_memory":0,"latest_timestamp":"2026-03-10T23:30:19.395","trend":"faster","latest_base":"9294132","baseline_mean":117.0,"percent_change":-9.4,"latest_mean":106.0},"mean":{"mode":"lines+markers","x":["06b2bf2","d27fe45","d13bdc0","c3f5381","b6bca19","b146a70","b00614a"],"commit_hashes":["06b2bf2","d27fe45","d13bdc0","c3f5381","b6bca19","b146a70","b00614a"],"hoverinfo":"text","name":"Mean","y":[117.0,106.0,100.0,91.0,86.0,101.0,106.0],"line":{"width":2},"y_raw":[117.0,106.0,100.0,91.0,86.0,101.0,106.0],"marker":{"size":6},"hovertext":["Commit: 06b2bf2<br>vs: 5e8d7ed<br>Mean: 117.0 ms<br>Median: 117.0 ms<br>Min: 111.15 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 9 Mar 2026, 03:20","Commit: d27fe45<br>vs: 4931faa<br>Mean: 106.0 ms<br>Median: 106.0 ms<br>Min: 100.7 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:40","Commit: d13bdc0<br>vs: 0a82b71<br>Mean: 100.0 ms<br>Median: 100.0 ms<br>Min: 95.0 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:40","Commit: c3f5381<br>vs: 50fcb03<br>Mean: 91.0 ms<br>Median: 91.0 ms<br>Min: 86.45 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:41","Commit: b6bca19<br>vs: 61c6f33<br>Mean: 86.0 ms<br>Median: 86.0 ms<br>Min: 81.7 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 23:30","Commit: b146a70<br>vs: 20a5fa7<br>Mean: 101.0 ms<br>Median: 101.0 ms<br>Min: 95.95 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 23:30","Commit: b00614a<br>vs: 9294132<br>Mean: 106.0 ms<br>Median: 106.0 ms<br>Min: 100.7 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 23:30"],"timestamps":["2026-03-09T03:20:33.066","2026-03-10T00:40:47.111","2026-03-10T00:40:50.051","2026-03-10T00:41:04.882","2026-03-10T23:30:05.064","2026-03-10T23:30:16.871","2026-03-10T23:30:19.395"],"type":"scatter"}},"micro/printfd":{"median":{"visible":"legendonly","name":"Median","line":{"width":1,"dash":"dot"},"y_raw":[106.0,90.0,114.99999999999999,106.0,82.0,94.0,89.0,86.0,75.0,117.0,109.00000000000001,111.00000000000001,87.0],"mode":"lines","x":["016630a","d2244b4","d13bdc0","cd280bb","c748312","c46c227","c13f74b","bd36d0a","b92fd65","b6bca19","b378d19","b146a70","b0772ee"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Median: %{y:.3f} ms<extra></extra>","y":[106.0,90.0,114.99999999999999,106.0,82.0,94.0,89.0,86.0,75.0,117.0,109.00000000000001,111.00000000000001,87.0]},"min":{"visible":"legendonly","name":"Min","line":{"width":1,"dash":"dash"},"y_raw":[100.7,85.5,109.24999999999999,100.7,77.9,89.3,84.55,81.7,71.25,111.15,103.55000000000001,105.45000000000002,82.65],"mode":"lines","x":["016630a","d2244b4","d13bdc0","cd280bb","c748312","c46c227","c13f74b","bd36d0a","b92fd65","b6bca19","b378d19","b146a70","b0772ee"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Min: %{y:.3f} ms<extra></extra>","y":[100.7,85.5,109.24999999999999,100.7,77.9,89.3,84.55,81.7,71.25,111.15,103.55000000000001,105.45000000000002,82.65]},"stats":{"latest_commit":"b0772ee","num_runs":13,"latest_allocs":0,"source_type":"report_md","julia_version":"nightly","latest_memory":0,"latest_timestamp":"2026-03-10T23:30:18.437","trend":"faster","latest_base":"1e2758e","baseline_mean":106.0,"percent_change":-17.92,"latest_mean":87.0},"mean":{"mode":"lines+markers","x":["016630a","d2244b4","d13bdc0","cd280bb","c748312","c46c227","c13f74b","bd36d0a","b92fd65","b6bca19","b378d19","b146a70","b0772ee"],"commit_hashes":["016630a","d2244b4","d13bdc0","cd280bb","c748312","c46c227","c13f74b","bd36d0a","b92fd65","b6bca19","b378d19","b146a70","b0772ee"],"hoverinfo":"text","name":"Mean","y":[106.0,90.0,114.99999999999999,106.0,82.0,94.0,89.0,86.0,75.0,117.0,109.00000000000001,111.00000000000001,87.0],"line":{"width":2},"y_raw":[106.0,90.0,114.99999999999999,106.0,82.0,94.0,89.0,86.0,75.0,117.0,109.00000000000001,111.00000000000001,87.0],"marker":{"size":6},"hovertext":["Commit: 016630a<br>vs: cc74d24<br>Mean: 106.0 ms<br>Median: 106.0 ms<br>Min: 100.7 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 9 Mar 2026, 03:20","Commit: d2244b4<br>vs: 9542577<br>Mean: 90.0 ms<br>Median: 90.0 ms<br>Min: 85.5 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:40","Commit: d13bdc0<br>vs: 0a82b71<br>Mean: 115.0 ms<br>Median: 115.0 ms<br>Min: 109.25 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:40","Commit: cd280bb<br>vs: f855e4c<br>Mean: 106.0 ms<br>Median: 106.0 ms<br>Min: 100.7 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:40","Commit: c748312<br>vs: b81a20c<br>Mean: 82.0 ms<br>Median: 82.0 ms<br>Min: 77.9 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:40","Commit: c46c227<br>vs: e026aff<br>Mean: 94.0 ms<br>Median: 94.0 ms<br>Min: 89.3 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:41","Commit: c13f74b<br>vs: 9117b4d<br>Mean: 89.0 ms<br>Median: 89.0 ms<br>Min: 84.55 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:41","Commit: bd36d0a<br>vs: 12e679c<br>Mean: 86.0 ms<br>Median: 86.0 ms<br>Min: 81.7 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:41","Commit: b92fd65<br>vs: a7e4f6d<br>Mean: 75.0 ms<br>Median: 75.0 ms<br>Min: 71.25 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 23:30","Commit: b6bca19<br>vs: 61c6f33<br>Mean: 117.0 ms<br>Median: 117.0 ms<br>Min: 111.15 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 23:30","Commit: b378d19<br>vs: 9b7d88b<br>Mean: 109.0 ms<br>Median: 109.0 ms<br>Min: 103.55 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 23:30","Commit: b146a70<br>vs: 20a5fa7<br>Mean: 111.0 ms<br>Median: 111.0 ms<br>Min: 105.45 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 23:30","Commit: b0772ee<br>vs: 1e2758e<br>Mean: 87.0 ms<br>Median: 87.0 ms<br>Min: 82.65 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 23:30"],"timestamps":["2026-03-09T03:20:30.409","2026-03-10T00:40:47.741","2026-03-10T00:40:50.051","2026-03-10T00:40:54.331","2026-03-10T00:40:59.299","2026-03-10T00:41:04.382","2026-03-10T00:41:07.423","2026-03-10T00:41:11.920","2026-03-10T23:30:02.048","2026-03-10T23:30:05.064","2026-03-10T23:30:12.231","2026-03-10T23:30:16.871","2026-03-10T23:30:18.437"],"type":"scatter"}},"micro/randmatstat":{"median":{"visible":"legendonly","name":"Median","line":{"width":1,"dash":"dot"},"y_raw":[100.0,108.0,106.0,93.0,102.0],"mode":"lines","x":["d13bdc0","c0b95ac","b97eb35","b4c79e7","b146a70"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Median: %{y:.3f} ms<extra></extra>","y":[100.0,108.0,106.0,93.0,102.0]},"min":{"visible":"legendonly","name":"Min","line":{"width":1,"dash":"dash"},"y_raw":[95.0,102.6,100.7,88.35,96.9],"mode":"lines","x":["d13bdc0","c0b95ac","b97eb35","b4c79e7","b146a70"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Min: %{y:.3f} ms<extra></extra>","y":[95.0,102.6,100.7,88.35,96.9]},"stats":{"latest_commit":"b146a70","num_runs":5,"latest_allocs":0,"source_type":"report_md","julia_version":"nightly","latest_memory":0,"latest_timestamp":"2026-03-10T23:30:16.871","trend":"stable","latest_base":"20a5fa7","baseline_mean":100.0,"percent_change":2.0,"latest_mean":102.0},"mean":{"mode":"lines+markers","x":["d13bdc0","c0b95ac","b97eb35","b4c79e7","b146a70"],"commit_hashes":["d13bdc0","c0b95ac","b97eb35","b4c79e7","b146a70"],"hoverinfo":"text","name":"Mean","y":[100.0,108.0,106.0,93.0,102.0],"line":{"width":2},"y_raw":[100.0,108.0,106.0,93.0,102.0],"marker":{"size":6},"hovertext":["Commit: d13bdc0<br>vs: 0a82b71<br>Mean: 100.0 ms<br>Median: 100.0 ms<br>Min: 95.0 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:40","Commit: c0b95ac<br>vs: d6c092d<br>Mean: 108.0 ms<br>Median: 108.0 ms<br>Min: 102.6 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:41","Commit: b97eb35<br>vs: b39d697<br>Mean: 106.0 ms<br>Median: 106.0 ms<br>Min: 100.7 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 23:30","Commit: b4c79e7<br>vs: 2cf1f34<br>Mean: 93.0 ms<br>Median: 93.0 ms<br>Min: 88.35 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 23:30","Commit: b146a70<br>vs: 20a5fa7<br>Mean: 102.0 ms<br>Median: 102.0 ms<br>Min: 96.9 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 23:30"],"timestamps":["2026-03-10T00:40:50.051","2026-03-10T00:41:08.226","2026-03-10T23:30:01.752","2026-03-10T23:30:07.325","2026-03-10T23:30:16.871"],"type":"scatter"}},"micro/fib":{"median":{"visible":"legendonly","name":"Median","line":{"width":1,"dash":"dot"},"y_raw":[87.0,106.0,108.0,92.0,89.0,93.0,111.00000000000001,109.00000000000001,90.0,112.00000000000001,91.0,109.00000000000001,114.99999999999999,90.0,92.0,106.0,112.99999999999999,110.00000000000001,113.99999999999999,111.00000000000001,92.0,92.0,112.99999999999999,111.00000000000001,112.00000000000001,89.0,114.99999999999999,93.0,87.0],"mode":"lines","x":["01d6fae","0425751","d27fe45","d22c304","d20506c","d13bdc0","d03508a","cd660ad","cd2ebfc","c6a98e3","c6a023a","c52a188","c4fe739","c3f5381","c13f74b","c11a4fd","c0b95ac","bf3b44f","beabe81","bb6afd0","b97eb35","b92fd65","b7ff634","b6bca19","b4ce107","b146a70","b093917","b0772ee","aebcebc"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Median: %{y:.3f} ms<extra></extra>","y":[87.0,106.0,108.0,92.0,89.0,93.0,111.00000000000001,109.00000000000001,90.0,112.00000000000001,91.0,109.00000000000001,114.99999999999999,90.0,92.0,106.0,112.99999999999999,110.00000000000001,113.99999999999999,111.00000000000001,92.0,92.0,112.99999999999999,111.00000000000001,112.00000000000001,89.0,114.99999999999999,93.0,87.0]},"min":{"visible":"legendonly","name":"Min","line":{"width":1,"dash":"dash"},"y_raw":[82.65,100.7,102.6,87.4,84.55,88.35,105.45000000000002,103.55000000000001,85.5,106.40000000000002,86.45,103.55000000000001,109.24999999999999,85.5,87.4,100.7,107.34999999999998,104.50000000000001,108.29999999999998,105.45000000000002,87.4,87.4,107.34999999999998,105.45000000000002,106.40000000000002,84.55,109.24999999999999,88.35,82.65],"mode":"lines","x":["01d6fae","0425751","d27fe45","d22c304","d20506c","d13bdc0","d03508a","cd660ad","cd2ebfc","c6a98e3","c6a023a","c52a188","c4fe739","c3f5381","c13f74b","c11a4fd","c0b95ac","bf3b44f","beabe81","bb6afd0","b97eb35","b92fd65","b7ff634","b6bca19","b4ce107","b146a70","b093917","b0772ee","aebcebc"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Min: %{y:.3f} ms<extra></extra>","y":[82.65,100.7,102.6,87.4,84.55,88.35,105.45000000000002,103.55000000000001,85.5,106.40000000000002,86.45,103.55000000000001,109.24999999999999,85.5,87.4,100.7,107.34999999999998,104.50000000000001,108.29999999999998,105.45000000000002,87.4,87.4,107.34999999999998,105.45000000000002,106.40000000000002,84.55,109.24999999999999,88.35,82.65]},"stats":{"latest_commit":"aebcebc","num_runs":29,"latest_allocs":0,"source_type":"report_md","julia_version":"nightly","latest_memory":0,"latest_timestamp":"2026-03-10T23:30:21.284","trend":"stable","latest_base":"13ae079","baseline_mean":87.0,"percent_change":0.0,"latest_mean":87.0},"mean":{"mode":"lines+markers","x":["01d6fae","0425751","d27fe45","d22c304","d20506c","d13bdc0","d03508a","cd660ad","cd2ebfc","c6a98e3","c6a023a","c52a188","c4fe739","c3f5381","c13f74b","c11a4fd","c0b95ac","bf3b44f","beabe81","bb6afd0","b97eb35","b92fd65","b7ff634","b6bca19","b4ce107","b146a70","b093917","b0772ee","aebcebc"],"commit_hashes":["01d6fae","0425751","d27fe45","d22c304","d20506c","d13bdc0","d03508a","cd660ad","cd2ebfc","c6a98e3","c6a023a","c52a188","c4fe739","c3f5381","c13f74b","c11a4fd","c0b95ac","bf3b44f","beabe81","bb6afd0","b97eb35","b92fd65","b7ff634","b6bca19","b4ce107","b146a70","b093917","b0772ee","aebcebc"],"hoverinfo":"text","name":"Mean","y":[87.0,106.0,108.0,92.0,89.0,93.0,111.00000000000001,109.00000000000001,90.0,112.00000000000001,91.0,109.00000000000001,114.99999999999999,90.0,92.0,106.0,112.99999999999999,110.00000000000001,113.99999999999999,111.00000000000001,92.0,92.0,112.99999999999999,111.00000000000001,112.00000000000001,89.0,114.99999999999999,93.0,87.0],"line":{"width":2},"y_raw":[87.0,106.0,108.0,92.0,89.0,93.0,111.00000000000001,109.00000000000001,90.0,112.00000000000001,91.0,109.00000000000001,114.99999999999999,90.0,92.0,106.0,112.99999999999999,110.00000000000001,113.99999999999999,111.00000000000001,92.0,92.0,112.99999999999999,111.00000000000001,112.00000000000001,89.0,114.99999999999999,93.0,87.0],"marker":{"size":6},"hovertext":["Commit: 01d6fae<br>vs: 6368fdc<br>Mean: 87.0 ms<br>Median: 87.0 ms<br>Min: 82.65 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 9 Mar 2026, 03:20","Commit: 0425751<br>vs: 61c0b41<br>Mean: 106.0 ms<br>Median: 106.0 ms<br>Min: 100.7 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 9 Mar 2026, 03:20","Commit: d27fe45<br>vs: 4931faa<br>Mean: 108.0 ms<br>Median: 108.0 ms<br>Min: 102.6 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:40","Commit: d22c304<br>vs: e3adc39<br>Mean: 92.0 ms<br>Median: 92.0 ms<br>Min: 87.4 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:40","Commit: d20506c<br>vs: 8944a22<br>Mean: 89.0 ms<br>Median: 89.0 ms<br>Min: 84.55 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:40","Commit: d13bdc0<br>vs: 0a82b71<br>Mean: 93.0 ms<br>Median: 93.0 ms<br>Min: 88.35 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:40","Commit: d03508a<br>vs: c79309b<br>Mean: 111.0 ms<br>Median: 111.0 ms<br>Min: 105.45 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:40","Commit: cd660ad<br>vs: d6c092d<br>Mean: 109.0 ms<br>Median: 109.0 ms<br>Min: 103.55 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:40","Commit: cd2ebfc<br>vs: 1b600f0<br>Mean: 90.0 ms<br>Median: 90.0 ms<br>Min: 85.5 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:40","Commit: c6a98e3<br>vs: 3a3af82<br>Mean: 112.0 ms<br>Median: 112.0 ms<br>Min: 106.4 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:40","Commit: c6a023a<br>vs: cae3571<br>Mean: 91.0 ms<br>Median: 91.0 ms<br>Min: 86.45 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:41","Commit: c52a188<br>vs: b9f2acc<br>Mean: 109.0 ms<br>Median: 109.0 ms<br>Min: 103.55 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:41","Commit: c4fe739<br>vs: 1a7355b<br>Mean: 115.0 ms<br>Median: 115.0 ms<br>Min: 109.25 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:41","Commit: c3f5381<br>vs: 50fcb03<br>Mean: 90.0 ms<br>Median: 90.0 ms<br>Min: 85.5 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:41","Commit: c13f74b<br>vs: 9117b4d<br>Mean: 92.0 ms<br>Median: 92.0 ms<br>Min: 87.4 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:41","Commit: c11a4fd<br>vs: 50ad4d9<br>Mean: 106.0 ms<br>Median: 106.0 ms<br>Min: 100.7 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:41","Commit: c0b95ac<br>vs: d6c092d<br>Mean: 113.0 ms<br>Median: 113.0 ms<br>Min: 107.35 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:41","Commit: bf3b44f<br>vs: 2893de7<br>Mean: 110.0 ms<br>Median: 110.0 ms<br>Min: 104.5 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:41","Commit: beabe81<br>vs: dc45d77<br>Mean: 114.0 ms<br>Median: 114.0 ms<br>Min: 108.3 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 00:41","Commit: bb6afd0<br>vs: ef67353<br>Mean: 111.0 ms<br>Median: 111.0 ms<br>Min: 105.45 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 23:29","Commit: b97eb35<br>vs: b39d697<br>Mean: 92.0 ms<br>Median: 92.0 ms<br>Min: 87.4 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 23:30","Commit: b92fd65<br>vs: a7e4f6d<br>Mean: 92.0 ms<br>Median: 92.0 ms<br>Min: 87.4 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 23:30","Commit: b7ff634<br>vs: 7dc132c<br>Mean: 113.0 ms<br>Median: 113.0 ms<br>Min: 107.35 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 23:30","Commit: b6bca19<br>vs: 61c6f33<br>Mean: 111.0 ms<br>Median: 111.0 ms<br>Min: 105.45 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 23:30","Commit: b4ce107<br>vs: 3a3af82<br>Mean: 112.0 ms<br>Median: 112.0 ms<br>Min: 106.4 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 23:30","Commit: b146a70<br>vs: 20a5fa7<br>Mean: 89.0 ms<br>Median: 89.0 ms<br>Min: 84.55 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 23:30","Commit: b093917<br>vs: 1aac07e<br>Mean: 115.0 ms<br>Median: 115.0 ms<br>Min: 109.25 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 23:30","Commit: b0772ee<br>vs: 1e2758e<br>Mean: 93.0 ms<br>Median: 93.0 ms<br>Min: 88.35 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 23:30","Commit: aebcebc<br>vs: 13ae079<br>Mean: 87.0 ms<br>Median: 87.0 ms<br>Min: 82.65 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 23:30"],"timestamps":["2026-03-09T03:20:30.743","2026-03-09T03:20:31.615","2026-03-10T00:40:47.111","2026-03-10T00:40:47.554","2026-03-10T00:40:47.943","2026-03-10T00:40:50.051","2026-03-10T00:40:50.823","2026-03-10T00:40:53.667","2026-03-10T00:40:54.113","2026-03-10T00:40:59.866","2026-03-10T00:41:00.062","2026-03-10T00:41:02.749","2026-03-10T00:41:03.344","2026-03-10T00:41:04.882","2026-03-10T00:41:07.423","2026-03-10T00:41:07.608","2026-03-10T00:41:08.226","2026-03-10T00:41:10.428","2026-03-10T00:41:10.982","2026-03-10T23:29:58.226","2026-03-10T23:30:01.752","2026-03-10T23:30:02.048","2026-03-10T23:30:03.073","2026-03-10T23:30:05.064","2026-03-10T23:30:07.045","2026-03-10T23:30:16.871","2026-03-10T23:30:18.101","2026-03-10T23:30:18.437","2026-03-10T23:30:21.284"],"type":"scatter"}},"micro/randmatmul":{"median":{"visible":"legendonly","name":"Median","line":{"width":1,"dash":"dot"},"y_raw":[106.0],"mode":"lines","x":["b97eb35"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Median: %{y:.3f} ms<extra></extra>","y":[106.0]},"min":{"visible":"legendonly","name":"Min","line":{"width":1,"dash":"dash"},"y_raw":[100.7],"mode":"lines","x":["b97eb35"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Min: %{y:.3f} ms<extra></extra>","y":[100.7]},"stats":{"latest_commit":"b97eb35","num_runs":1,"latest_allocs":0,"source_type":"report_md","julia_version":"nightly","latest_memory":0,"latest_timestamp":"2026-03-10T23:30:01.752","trend":"stable","latest_base":"b39d697","baseline_mean":106.0,"percent_change":0.0,"latest_mean":106.0},"mean":{"mode":"lines+markers","x":["b97eb35"],"commit_hashes":["b97eb35"],"hoverinfo":"text","name":"Mean","y":[106.0],"line":{"width":2},"y_raw":[106.0],"marker":{"size":6},"hovertext":["Commit: b97eb35<br>vs: b39d697<br>Mean: 106.0 ms<br>Median: 106.0 ms<br>Min: 100.7 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 10 Mar 2026, 23:30"],"timestamps":["2026-03-10T23:30:01.752"],"type":"scatter"}}};
+            const benchmarksData = {"micro/mandel":{"median":{"visible":"legendonly","name":"Median","line":{"width":1,"dash":"dot"},"y_raw":[117.0],"mode":"lines","x":["06b2bf2"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Median: %{y:.3f} ms<extra></extra>","y":[117.0]},"min":{"visible":"legendonly","name":"Min","line":{"width":1,"dash":"dash"},"y_raw":[111.15],"mode":"lines","x":["06b2bf2"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Min: %{y:.3f} ms<extra></extra>","y":[111.15]},"stats":{"latest_commit":"06b2bf2","num_runs":1,"latest_allocs":0,"source_type":"absolute","julia_version":"nightly","latest_memory":0,"latest_timestamp":"2026-03-07T02:38:23.680","trend":"stable","latest_base":"","latest_base_mean_ns":0.0,"latest_ratio":0.0,"baseline_mean":117.0,"percent_change":0.0,"latest_mean":117.0},"mean":{"mode":"lines+markers","x":["06b2bf2"],"commit_hashes":["06b2bf2"],"hoverinfo":"text","name":"Mean","julia_versions":["nightly"],"time_ratios":[0.0],"base_hashes":[""],"y":[117.0],"line":{"width":2},"y_raw":[117.0],"marker":{"size":6},"commit_messages":[""],"hovertext":["Commit: 06b2bf2<br>Mean: 117.0 ms<br>Median: 117.0 ms<br>Min: 111.15 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 7 Mar 2026, 02:38"],"timestamps":["2026-03-07T02:38:23.680"],"type":"scatter"}},"micro/printfd":{"median":{"visible":"legendonly","name":"Median","line":{"width":1,"dash":"dot"},"y_raw":[106.0],"mode":"lines","x":["016630a"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Median: %{y:.3f} ms<extra></extra>","y":[106.0]},"min":{"visible":"legendonly","name":"Min","line":{"width":1,"dash":"dash"},"y_raw":[100.7],"mode":"lines","x":["016630a"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Min: %{y:.3f} ms<extra></extra>","y":[100.7]},"stats":{"latest_commit":"016630a","num_runs":1,"latest_allocs":0,"source_type":"absolute","julia_version":"nightly","latest_memory":0,"latest_timestamp":"2026-03-07T02:38:21.250","trend":"stable","latest_base":"","latest_base_mean_ns":0.0,"latest_ratio":0.0,"baseline_mean":106.0,"percent_change":0.0,"latest_mean":106.0},"mean":{"mode":"lines+markers","x":["016630a"],"commit_hashes":["016630a"],"hoverinfo":"text","name":"Mean","julia_versions":["nightly"],"time_ratios":[0.0],"base_hashes":[""],"y":[106.0],"line":{"width":2},"y_raw":[106.0],"marker":{"size":6},"commit_messages":[""],"hovertext":["Commit: 016630a<br>Mean: 106.0 ms<br>Median: 106.0 ms<br>Min: 100.7 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 7 Mar 2026, 02:38"],"timestamps":["2026-03-07T02:38:21.250"],"type":"scatter"}},"micro/fib":{"median":{"visible":"legendonly","name":"Median","line":{"width":1,"dash":"dot"},"y_raw":[87.0,95.5],"mode":"lines","x":["01d6fae","0425751"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Median: %{y:.3f} ms<extra></extra>","y":[87.0,95.5]},"min":{"visible":"legendonly","name":"Min","line":{"width":1,"dash":"dash"},"y_raw":[82.65,90.725],"mode":"lines","x":["01d6fae","0425751"],"type":"scatter","hovertemplate":"Commit: %{x}<br>Min: %{y:.3f} ms<extra></extra>","y":[82.65,90.725]},"stats":{"latest_commit":"0425751","num_runs":3,"latest_allocs":0,"source_type":"absolute","julia_version":"nightly","latest_memory":0,"latest_timestamp":"2026-03-07T02:38:22.465","trend":"stable","latest_base":"","latest_base_mean_ns":0.0,"latest_ratio":0.0,"baseline_mean":87.0,"percent_change":-2.3,"latest_mean":85.0},"mean":{"mode":"lines+markers","x":["01d6fae","0425751"],"commit_hashes":["01d6fae","0425751"],"hoverinfo":"text","name":"Mean","error_y":{"visible":true,"array":[0.0,14.849242404917497],"thickness":1.5,"color":"rgba(102, 126, 234, 0.4)","width":4,"type":"data"},"julia_versions":["nightly","nightly"],"time_ratios":[0.0,0.0],"base_hashes":["",""],"y":[87.0,95.5],"line":{"width":2},"y_raw":[87.0,95.5],"marker":{"size":6},"commit_messages":["",""],"hovertext":["Commit: 01d6fae<br>Mean: 87.0 ms<br>Median: 87.0 ms<br>Min: 82.65 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 1<br>Date: 7 Mar 2026, 02:38","Commit: 0425751<br>Mean: 95.5 ms<br>Std: 14.849 ms<br>Median: 95.5 ms<br>Min: 90.725 ms<br>Memory: 0 B<br>Allocs: 0<br>Julia: nightly<br>Runs: 2<br>Date: 7 Mar 2026, 02:38"],"timestamps":["2026-03-07T02:38:21.649","2026-03-07T02:38:22.465"],"type":"scatter"}}};
             const subcategories = [];
             const groupName = "nanosoldier_micro";
-            const statsData = {"total_runs":214,"fastest":{"name":"enzyme/basics/make_zero/namedtuple","time":"31 ns"},"last_updated":"7 min ago","total_benchmarks":8155,"slowest":{"name":"nanosoldier/array/index/(sumlinear/1:100000)","time":"3715.50 s"}};
+            const statsData = {"total_runs":64,"fastest":{"name":"enzyme/basics/make_zero/namedtuple","time":"31 ns"},"last_updated":"0 min ago","total_benchmarks":2069,"slowest":{"name":"nanosoldier/sparse/constructors/(IJV/10)","time":"359.0 ms"}};
             const repoUrl = 'https://github.com/hpsc-lab/BenchmarkExplorer.jl';
-            const commitBaseUrl = 'https://github.com/JuliaLang/julia';
+            const commitBaseUrl = 'https://github.com/hpsc-lab/BenchmarkExplorer.jl';
             let percentageMode = false;
             let darkMode = false;
             let trendFilter = 'all';
+            let juliaFilter = 'all';
             let maxRuns = null;
+            let heatmapCommitCount = 25;
+
+            const commitJuliaMap = {};
+            Object.values(benchmarksData).forEach(data => {
+                if (!data.mean.julia_versions) return;
+                data.mean.commit_hashes.forEach((h, i) => {
+                    if (!commitJuliaMap[h] && data.mean.julia_versions[i])
+                        commitJuliaMap[h] = data.mean.julia_versions[i];
+                });
+            });
+
+            (function populateJuliaFilter() {
+                const sel = document.getElementById('julia-filter');
+                const versions = [...new Set(Object.values(commitJuliaMap))].sort().reverse();
+                versions.forEach(v => {
+                    const opt = document.createElement('option');
+                    opt.value = v; opt.textContent = v;
+                    sel.appendChild(opt);
+                });
+            })();
             const renderedPlots = new Set();
             const hiddenPlots = new Set();
             const folderStates = new Map();
@@ -809,6 +836,15 @@
                         <div class="value" style="font-size: 1.2em;">${statsData.last_updated}</div>
                         <div class="label">Last Updated</div>
                     </div>
+                    ${Object.keys(commitJuliaMap).length > 0 ? (() => {
+                        const latestCommit = Object.keys(commitJuliaMap).find(h =>
+                            Object.values(benchmarksData).some(d => d.mean.commit_hashes.includes(h) &&
+                                d.mean.timestamps[d.mean.commit_hashes.indexOf(h)] ===
+                                Math.max(...d.mean.timestamps.filter(Boolean))));
+                        const latestJulia = commitJuliaMap[Object.keys(commitJuliaMap)[0]] || '';
+                        const allVersions = [...new Set(Object.values(commitJuliaMap))].sort().reverse();
+                        return latestJulia ? `<div class="stat-card"><div class="value" style="font-size:0.9em">${allVersions[0]}</div><div class="label">Julia</div></div>` : '';
+                    })() : ''}
                 `;
             }
 
@@ -1146,6 +1182,7 @@
                                         <span class="stat-val"><a href="${commitBaseUrl}/commit/${stats.latest_commit}" target="_blank" style="color: inherit; text-decoration: underline;">${stats.latest_commit.substring(0, 7)}</a></span>
                                     </div>
                                     ${stats.julia_version ? `<div class="stat"><span class="stat-key">Julia</span><span class="stat-val">${stats.julia_version}</span></div>` : ''}
+                                    ${stats.latest_base ? `<div class="stat"><span class="stat-key">Base</span><span class="stat-val"><a href="${commitBaseUrl}/commit/${stats.latest_base}" target="_blank" style="color:inherit;text-decoration:underline">${stats.latest_base.substring(0,7)}</a></span></div>` : ''}
                                     <div class="stat">
                                         <span class="stat-key">Memory</span>
                                         <span class="stat-val">${formatBytes(stats.latest_memory)}</span>
@@ -1239,9 +1276,21 @@
             let compareMode = false;
             let compareCommitA = null, compareCommitB = null;
 
+            function syncUrlState() {
+                const params = new URLSearchParams();
+                const q = document.getElementById('search').value;
+                if (q) params.set('q', q);
+                if (trendFilter !== 'all') params.set('trend', trendFilter);
+                if (juliaFilter !== 'all') params.set('julia', juliaFilter);
+                if (heatmapMode) params.set('view', 'heatmap');
+                if (compareMode) params.set('view', 'compare');
+                const str = params.toString();
+                history.replaceState(null, '', str ? '?' + str : window.location.pathname);
+            }
+
             function renderBenchmarks(filter = '') {
-                if (heatmapMode) { renderHeatmap(filter); return; }
-                if (compareMode) { renderComparisonPanel(); return; }
+                if (heatmapMode) { renderHeatmap(filter); syncUrlState(); return; }
+                if (compareMode) { renderComparisonPanel(); syncUrlState(); return; }
                 const container = document.getElementById('benchmarks-container');
                 container.innerHTML = '';
                 renderedPlots.clear();
@@ -1252,12 +1301,14 @@
                     .filter(([name, data]) => {
                         const matchesSearch = name.toLowerCase().includes(filter.toLowerCase());
                         const matchesTrend = trendFilter === 'all' || data.stats.trend === trendFilter;
-                        return matchesSearch && matchesTrend;
+                        const matchesJulia = juliaFilter === 'all' || commitJuliaMap[data.stats.latest_commit] === juliaFilter;
+                        return matchesSearch && matchesTrend && matchesJulia;
                     })
                     .sort(([a], [b]) => a.localeCompare(b));
 
                 if (filtered.length === 0) {
                     container.innerHTML = '<div class="no-results"><h2>No benchmarks found</h2><p>Try a different search term</p></div>';
+                    syncUrlState();
                     return;
                 }
 
@@ -1266,6 +1317,7 @@
                 totalPlots = container.querySelectorAll('.plot-container').length;
                 updateProgress();
                 renderVisiblePlots();
+                syncUrlState();
             }
 
             function calcPercentFromPrev(values) {
@@ -1365,12 +1417,26 @@
                 document.getElementById('btn-heatmap').classList.add('active');
             }
 
+            (function restoreUrlState() {
+                const params = new URLSearchParams(window.location.search);
+                if (params.get('q')) document.getElementById('search').value = params.get('q');
+                if (params.get('trend')) { trendFilter = params.get('trend'); document.getElementById('trend-filter').value = trendFilter; }
+                if (params.get('julia')) { juliaFilter = params.get('julia'); document.getElementById('julia-filter').value = juliaFilter; }
+                if (params.get('view') === 'heatmap') { heatmapMode = true; document.getElementById('btn-heatmap').classList.add('active'); }
+                if (params.get('view') === 'compare') { compareMode = true; document.getElementById('btn-compare').classList.add('active'); }
+            })();
+
             document.getElementById('search').addEventListener('input', function(e) {
                 renderBenchmarks(e.target.value);
             });
 
             document.getElementById('trend-filter').addEventListener('change', function(e) {
                 trendFilter = e.target.value;
+                renderBenchmarks(document.getElementById('search').value);
+            });
+
+            document.getElementById('julia-filter').addEventListener('change', function(e) {
+                juliaFilter = e.target.value;
                 renderBenchmarks(document.getElementById('search').value);
             });
 
@@ -1448,6 +1514,13 @@
                 }
 
                 const commitLink = commit !== 'unknown' ? '<a href="' + commitBaseUrl + '/commit/' + commit + '" target="_blank" style="color:#191919;text-decoration:underline">' + commit + '</a>' : commit;
+                const baseHash = data.mean.base_hashes ? data.mean.base_hashes[idx] : '';
+                const nsReportUrl = commitBaseUrl.includes('JuliaLang') && commit !== 'unknown'
+                    ? 'https://github.com/JuliaCI/NanosoldierReports/tree/master/benchmark/by_hash/' + commit + '/report.md'
+                    : null;
+                const juliaTipVer = data.mean.julia_versions ? data.mean.julia_versions[idx] : '';
+                const commitMsg = data.mean.commit_messages ? data.mean.commit_messages[idx] : '';
+                const timeRatio = data.mean.time_ratios ? data.mean.time_ratios[idx] : 0;
 
                 const css = '*{margin:0;padding:0;box-sizing:border-box}' +
                     'body{font-family:"JetBrains Mono",SFMono-Regular,Consolas,monospace;background:#fff;color:#191919;padding:32px;max-width:680px;margin:0 auto}' +
@@ -1479,6 +1552,11 @@
                     '</div>' +
                     '<table>' +
                     '<tr><th>Commit</th><td>' + commitLink + '</td></tr>' +
+                    (baseHash ? '<tr><th>Base</th><td><a href="' + commitBaseUrl + '/commit/' + baseHash + '" target="_blank" style="color:#191919;text-decoration:underline">' + baseHash.substring(0,7) + '</a></td></tr>' : '') +
+                    (juliaTipVer ? '<tr><th>Julia</th><td>' + juliaTipVer + '</td></tr>' : '') +
+                    (timeRatio > 0 ? '<tr><th>Time ratio</th><td style="color:' + (timeRatio > 1.05 ? '#b91c1c' : timeRatio < 0.95 ? '#1e7e34' : '#191919') + '">' + timeRatio.toFixed(3) + 'x</td></tr>' : '') +
+                    (commitMsg ? '<tr><th>Message</th><td style="word-break:break-word">' + commitMsg.substring(0, 120) + (commitMsg.length > 120 ? 'â€¦' : '') + '</td></tr>' : '') +
+                    (nsReportUrl ? '<tr><th>Report</th><td><a href="' + nsReportUrl + '" target="_blank" style="color:#191919;text-decoration:underline">NanosoldierReports â†—</a></td></tr>' : '') +
                     '<tr><th>Date</th><td>' + formatDate(timestamp) + '</td></tr>' +
                     '<tr><th>Mean</th><td>' + fmt(meanVal) + '</td></tr>' +
                     '<tr><th>Median</th><td>' + fmt(medianVal) + '</td></tr>' +
@@ -1509,7 +1587,11 @@
                         const a = document.createElement('a');
                         a.href = cat + '.html';
                         a.className = 'subcat-pill';
-                        a.textContent = label;
+                        const prefix = cat.replace(groupName + '_', '') + '/';
+                        const cnt = Object.keys(benchmarksData).filter(n => n.startsWith(prefix)).length;
+                        const warn = Object.entries(benchmarksData).filter(([n, d]) =>
+                            n.startsWith(prefix) && d.stats.trend === 'slower').length;
+                        a.textContent = label + (cnt > 0 ? ' ' + cnt : '') + (warn > 0 ? ' âš ' + warn : '');
                         pillsDiv.appendChild(a);
                     });
                     container.appendChild(pillsDiv);
@@ -1523,32 +1605,122 @@
                     }).sort(([a], [b]) => a.localeCompare(b));
                 if (!benchmarks.length) { container.innerHTML = '<div class="no-results"><h2>No benchmarks</h2></div>'; return; }
 
-                const commitSet = new Map(); // hash â†’ timestamp
+                const isNanoGroup = groupName.startsWith('nanosoldier') || groupName.startsWith('ns_');
+
+                const commitSet = new Map();
                 benchmarks.forEach(([, data]) => {
                     data.mean.commit_hashes.forEach((h, i) => {
                         if (!commitSet.has(h)) commitSet.set(h, data.mean.timestamps[i] || '');
                     });
                 });
-                const commits = [...commitSet.entries()]
+                let commits = [...commitSet.entries()]
                     .sort((a, b) => a[1].localeCompare(b[1]))
-                    .slice(-25).map(([h]) => h);
+                    .map(([h]) => h);
+                if (juliaFilter !== 'all')
+                    commits = commits.filter(h => commitJuliaMap[h] === juliaFilter);
+                commits = commits.slice(-heatmapCommitCount);
+
+                const sortedBenchmarks = [...benchmarks].sort(([nameA, dataA], [nameB, dataB]) => {
+                    const maxRatioFor = (data) => {
+                        const cmap = {};
+                        data.mean.commit_hashes.forEach((h, i) => { cmap[h] = data.mean.y[i]; });
+                        const vals = commits.map(h => cmap[h] ?? null).filter(v => v !== null);
+                        const isRatio = data.stats.source_type === 'report_md';
+                        const base = isNanoGroup && isRatio ? 100 : (vals[0] || 1);
+                        return vals.length ? Math.max(...vals.map(v => v / base)) : 0;
+                    };
+                    return maxRatioFor(dataB) - maxRatioFor(dataA);
+                });
+
                 const shortCommits = commits.map(h => h.substring(0, 7));
+
+                const sliderDiv = document.createElement('div');
+                sliderDiv.style.cssText = 'display:flex;align-items:center;gap:10px;padding:12px 32px 0;font-size:0.8em;';
+                const sliderLabel = document.createElement('span');
+                sliderLabel.textContent = 'Commits:';
+                const slider = document.createElement('input');
+                slider.type = 'range';
+                slider.className = 'heatmap-slider';
+                slider.id = 'heatmap-slider';
+                slider.min = '5';
+                slider.max = '100';
+                slider.value = String(heatmapCommitCount);
+                const sliderVal = document.createElement('span');
+                sliderVal.id = 'heatmap-slider-val';
+                sliderVal.textContent = String(heatmapCommitCount);
+                slider.addEventListener('input', function() {
+                    heatmapCommitCount = parseInt(this.value);
+                    sliderVal.textContent = String(heatmapCommitCount);
+                    renderHeatmap(document.getElementById('search').value);
+                });
+                const pngBtn = document.createElement('button');
+                pngBtn.className = 'btn';
+                pngBtn.textContent = 'í ½í¶¼ PNG';
+                pngBtn.style.cssText = 'margin-left:8px;font-size:0.8em;padding:4px 10px;';
+                pngBtn.onclick = () => {
+                    const wrapEl = container.querySelector('.heatmap-wrap');
+                    if (!wrapEl || typeof html2canvas === 'undefined') return;
+                    html2canvas(wrapEl, { backgroundColor: darkMode ? '#333' : '#fff', scale: 2 }).then(canvas => {
+                        const a = document.createElement('a');
+                        a.download = groupName + '-heatmap.png';
+                        a.href = canvas.toDataURL('image/png');
+                        a.click();
+                    });
+                };
+                sliderDiv.appendChild(sliderLabel);
+                sliderDiv.appendChild(slider);
+                sliderDiv.appendChild(sliderVal);
+                sliderDiv.appendChild(pngBtn);
+                container.appendChild(sliderDiv);
+
+                const latestCommit = commits[commits.length - 1];
+                if (latestCommit) {
+                    let nReg = 0, nImp = 0;
+                    sortedBenchmarks.forEach(([name, data]) => {
+                        const cmap = {};
+                        data.mean.commit_hashes.forEach((h, i) => { cmap[h] = data.mean.y[i]; });
+                        const v = cmap[latestCommit];
+                        if (v === undefined) return;
+                        const isRatio = data.stats.source_type === 'report_md';
+                        const base = isNanoGroup && isRatio ? 100 : (Object.values(cmap)[0] || 1);
+                        const r = v / base;
+                        if (r > 1.1) nReg++;
+                        else if (r < 0.9) nImp++;
+                    });
+                    if (nReg > 0 || nImp > 0) {
+                        const summaryDiv = document.createElement('div');
+                        summaryDiv.style.cssText = 'padding:10px 32px;font-size:0.82em;display:flex;gap:16px;align-items:center;';
+                        summaryDiv.innerHTML = `<span style="font-weight:600">Latest commit (${latestCommit.substring(0,7)}):</span>${nReg > 0 ? `<span style="color:#e74c3c">âš  ${nReg} regressions >10%</span>` : ''}${nImp > 0 ? `<span style="color:#27ae60">âœ“ ${nImp} improvements >10%</span>` : ''}`;
+                        container.appendChild(summaryDiv);
+                    }
+                }
 
                 const wrap = document.createElement('div');
                 wrap.className = 'heatmap-wrap';
                 const table = document.createElement('table');
                 table.className = 'heatmap-table';
-                const headerRow = `<thead><tr><th class="heatmap-name">Benchmark</th>${shortCommits.map(c =>
-                    `<th style="writing-mode:vertical-rl;transform:rotate(180deg);font-weight:400;padding:4px 6px;font-size:0.72em;">${c}</th>`).join('')}</tr></thead>`;
+                const headerRow = `<thead><tr><th class="heatmap-name">Benchmark</th>${commits.map((h, i) => {
+                    const jv = commitJuliaMap[h] || '';
+                    const jshort = jv ? jv.replace(/^(\d+\.\d+).*?(DEV\.(\d+))?.*$/, (_, v, __, b) => b ? `${v}-d${b}` : v) : shortCommits[i];
+                    return `<th style="writing-mode:vertical-rl;transform:rotate(180deg);font-weight:400;padding:4px 6px;font-size:0.72em;" title="${jv || shortCommits[i]}">${jshort}</th>`;
+                }).join('')}</tr></thead>`;
                 table.innerHTML = headerRow;
 
                 const tbody = document.createElement('tbody');
-                benchmarks.forEach(([name, data]) => {
+
+                function buildHeatmapRow(name, data) {
                     const commitMap = {};
                     data.mean.commit_hashes.forEach((h, i) => { commitMap[h] = data.mean.y[i]; });
                     const vals = commits.map(h => commitMap[h] !== undefined ? commitMap[h] : null);
-                    const baseline = vals.find(v => v !== null) || 1;
+                    const isRatioData = data.stats.source_type === 'report_md';
+                    const baseline = isNanoGroup && isRatioData ? 100 : (vals.find(v => v !== null) || 1);
                     const shortName = name.split('/').slice(-2).join('/');
+                    const recentCommits = commits.slice(-5);
+                    const persistentReg = recentCommits.filter(h => {
+                        const v = commitMap[h];
+                        if (v === undefined) return false;
+                        return v / baseline > 1.1;
+                    }).length >= 3;
                     const row = document.createElement('tr');
                     const cells = commits.map((h, i) => {
                         const v = vals[i];
@@ -1560,15 +1732,34 @@
                         const lt = darkMode ? (25 + sat * 0.4) : (96 - sat * 0.45);
                         const textColor = darkMode ? `hsl(${hue},70%,${60 + sat * 0.3}%)` : `hsl(${hue},${Math.min(sat*2,100)}%,${Math.max(30, 40 - sat * 0.3)}%)`;
                         const bg = `hsl(${hue},${sat}%,${lt}%)`;
-                        const label = Math.abs(+pct) > 3 ? (pct > 0 ? '+' : '') + pct + '%' : '';
-                        return `<td style="background:${bg};color:${textColor};width:38px;cursor:pointer" title="${name}\n${h.substring(0,7)}: ${v.toFixed(3)}ms (${pct > 0 ? '+' : ''}${pct}%)" onclick="scrollToPlot('${name}')">${label}</td>`;
+                        const warn = ratio > 1.2 ? 'âš ' : '';
+                        const label = isNanoGroup
+                            ? (Math.abs(ratio - 1) > 0.03 ? warn + ratio.toFixed(2) + 'x' : '')
+                            : (Math.abs(+pct) > 3 ? warn + (pct > 0 ? '+' : '') + pct + '%' : '');
+                        const juliaTip = commitJuliaMap[h] ? `Julia: ${commitJuliaMap[h]}\n` : '';
+                        return `<td style="background:${bg};color:${textColor};width:38px;cursor:pointer" title="${name}\n${juliaTip}${h.substring(0,7)}: ${isNanoGroup ? ratio.toFixed(3)+'x' : v.toFixed(3)+'ms'} (${pct > 0 ? '+' : ''}${pct}%)" onclick="scrollToPlot('${name}')">${label}</td>`;
                     }).join('');
-                    row.innerHTML = `<td class="heatmap-name" title="${name}">${shortName}</td>${cells}`;
-                    tbody.appendChild(row);
-                });
+                    row.innerHTML = `<td class="heatmap-name" title="${name}">${persistentReg ? 'í ½í´´ ' : ''}${shortName}</td>${cells}`;
+                    return row;
+                }
+
                 table.appendChild(tbody);
                 wrap.appendChild(table);
                 container.appendChild(wrap);
+
+                const CHUNK_SIZE = 200;
+                let rowIndex = 0;
+                function renderNextChunk() {
+                    const end = Math.min(rowIndex + CHUNK_SIZE, sortedBenchmarks.length);
+                    for (let i = rowIndex; i < end; i++) {
+                        tbody.appendChild(buildHeatmapRow(sortedBenchmarks[i][0], sortedBenchmarks[i][1]));
+                    }
+                    rowIndex = end;
+                    if (rowIndex < sortedBenchmarks.length) {
+                        requestAnimationFrame(renderNextChunk);
+                    }
+                }
+                renderNextChunk();
             }
 
             function getAllCommits() {
