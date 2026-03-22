@@ -1,5 +1,6 @@
 using JSON
 using Dates
+using Statistics
 import Downloads
 
 const NANOSOLDIER_REPO = "https://api.github.com/repos/JuliaCI/NanosoldierReports/contents"
@@ -132,9 +133,25 @@ function try_fetch_data_zst(comparison_name::String)
     end
 end
 
+function _parse_time_to_ns(val::AbstractString, unit::AbstractString)::Float64
+    v = parse(Float64, val)
+    unit == "ns" ? v : unit == "μs" ? v * 1e3 : unit == "ms" ? v * 1e6 : v * 1e9
+end
+
 function parse_report_md(content::String)
     results = Dict{String,Any}()
     for line in split(content, "\n")
+        m = match(r"^\|\s*`(\[.*?\])`\s*\|\s*([0-9.]+)\s*(ns|μs|ms|s)\s*\|\s*([0-9.]+)\s*(ns|μs|ms|s)", line)
+        if !isnothing(m)
+            base_ns = _parse_time_to_ns(m.captures[2], m.captures[3])
+            head_ns = _parse_time_to_ns(m.captures[4], m.captures[5])
+            ratio = base_ns > 0 ? head_ns / base_ns : 1.0
+            results[m.captures[1]] = Dict(
+                "time_ratio" => ratio, "memory_ratio" => 1.0,
+                "mean_time_ns" => head_ns, "base_mean_time_ns" => base_ns,
+            )
+            continue
+        end
         m = match(r"^\|\s*`(\[.*?\])`\s*\|\s*~?([0-9]+\.[0-9]+)", line)
         if !isnothing(m)
             results[m.captures[1]] = Dict("time_ratio" => parse(Float64, m.captures[2]),
@@ -209,6 +226,8 @@ function import_comparison(comparison_name::String, output_dir::String)
 
     println("  $(length(benchmarks)) benchmarks via $source_type (Julia $julia_version) regressions=$regression_count improvements=$improvement_count")
 
+    report_url = "https://github.com/JuliaCI/NanosoldierReports/tree/master/benchmark/by_hash/$comparison_name"
+
     output = Dict(
         "metadata" => Dict(
             "comparison"          => comparison_name,
@@ -225,6 +244,7 @@ function import_comparison(comparison_name::String, output_dir::String)
             "improvement_count"   => improvement_count,
             "n_benchmarks"        => length(benchmarks),
             "n_with_base_data"    => n_with_base,
+            "report_url"          => report_url,
         ),
         "benchmarks" => benchmarks,
     )
@@ -263,14 +283,33 @@ function import_recent_comparisons(output_dir::String; limit::Int=50)
     target = limit <= 0 ? length(candidates) : min(limit * 4, length(candidates))
     candidates = candidates[1:target]
 
-    imported = String[]
-    for comp in candidates
-        result = import_comparison(comp, output_dir)
-        !isnothing(result) && push!(imported, result)
-        limit > 0 && length(imported) >= limit && break
+    new_candidates = filter(comp -> !isfile(joinpath(output_dir, "$comp.json")), candidates)
+    already_count = length(candidates) - length(new_candidates)
+    already_count > 0 && println("  $already_count already imported, skipping")
+
+    needed = limit <= 0 ? new_candidates : new_candidates[1:min(limit, length(new_candidates))]
+    if isempty(needed)
+        println("Nothing new to import")
+        return String[]
     end
 
-    println("\nProcessed $(length(imported)) comparisons")
+    println("Fetching $(length(needed)) comparisons (4 concurrent)...")
+    results = asyncmap(needed; ntasks=4) do comp
+        import_comparison(comp, output_dir)
+    end
+
+    imported = String[r for r in results if !isnothing(r)]
+    failures = [needed[i] for i in eachindex(needed) if isnothing(results[i])]
+
+    open(joinpath(output_dir, "failed_imports.json"), "w") do f
+        JSON.print(f, Dict(
+            "generated_at" => string(now()),
+            "count"        => length(failures),
+            "failures"     => failures,
+        ), 2)
+    end
+
+    println("\nImported $(length(imported)) comparisons, $(length(failures)) failed")
     imported
 end
 
@@ -346,6 +385,7 @@ function convert_to_explorer_format(nanosoldier_dir::String, output_dir::String,
                     "source_type"        => get(meta, "source_type",  "unknown"),
                     "commit_message"     => get(meta, "commit_message", ""),
                     "benchmarktools_ver" => get(meta, "benchmarktools_ver", ""),
+                    "report_url"         => get(meta, "report_url", ""),
                 )
             )
         end
@@ -364,8 +404,47 @@ function convert_to_explorer_format(nanosoldier_dir::String, output_dir::String,
             "regression_count"   => get(meta, "regression_count",  0),
             "improvement_count"  => get(meta, "improvement_count", 0),
             "source_type"        => get(meta, "source_type", "unknown"),
+            "report_url"         => get(meta, "report_url", ""),
         ))
         run_number += 1
+    end
+
+    for (_, runs) in all_benchmarks
+        real_times = Float64[v["mean_time_ns"] for (_, v) in runs
+                              if get(v, "source_type", "") == "data_zst" && get(v, "mean_time_ns", 0.0) > 0]
+        isempty(real_times) && continue
+        bench_base = median(real_times)
+        for (_, v) in runs
+            get(v, "source_type", "") == "report_md" || continue
+            ratio = get(v, "time_ratio", 1.0)
+            ratio <= 0 && continue
+            v["mean_time_ns"]      = bench_base * ratio
+            v["min_time_ns"]       = bench_base * ratio * 0.95
+            v["median_time_ns"]    = bench_base * ratio
+            v["max_time_ns"]       = bench_base * ratio * 1.05
+            v["base_mean_time_ns"] = bench_base
+        end
+    end
+
+    total_runs = length(run_metadata)
+    changes = Dict{String,String}()
+    for (name, runs) in all_benchmarks
+        rns = sort([parse(Int, k) for k in keys(runs)])
+        isempty(rns) && continue
+        if rns[1] > max(1, total_runs - 5)
+            changes[name] = "new"
+        elseif rns[end] < total_runs - 5
+            changes[name] = "removed"
+        end
+    end
+    open(joinpath(output_dir, "benchmark_changes.json"), "w") do f
+        JSON.print(f, Dict(
+            "generated_at"  => string(now()),
+            "total_runs"    => total_runs,
+            "new_count"     => count(v -> v == "new",     values(changes)),
+            "removed_count" => count(v -> v == "removed", values(changes)),
+            "changes"       => changes,
+        ), 2)
     end
 
     categories = Dict{String,Dict{String,Dict}}()

@@ -74,7 +74,7 @@ function aggregate_by_commit(plot_data_mean, plot_data_min, plot_data_median)
     )
 end
 
-function generate_static_page_plotly(data_dir::String, output_file::String, group_name::String, repo_url::String, commit_sha::String, commit_base_url::String=repo_url, regression_threshold::Float64=parse(Float64, get(ENV, "REGRESSION_THRESHOLD", "1.05")))
+function generate_static_page_plotly(data_dir::String, output_file::String, group_name::String, repo_url::String, commit_sha::String, commit_base_url::String=repo_url, regression_threshold::Float64=parse(Float64, get(ENV, "REGRESSION_THRESHOLD", "1.05")), heatmap_commits::Int=parse(Int, get(ENV, "HEATMAP_COMMITS", "25")))
     data = try
         load_dashboard_data(data_dir)
     catch e
@@ -254,12 +254,14 @@ function generate_static_page_plotly(data_dir::String, output_file::String, grou
             nb = get(rd, "n_with_base_data", 0)
             cm = get(rd, "commit_message", "")
             cd = get(rd, "commit_date", get(rd, "timestamp", ""))
+            ru = get(rd, "report_url", "")
             (rc > 0 || ic > 0 || nb > 0 || !isempty(cm)) && (commit_stats[h] = Dict(
                 "regression_count"  => rc,
                 "improvement_count" => ic,
                 "n_with_base_data"  => nb,
                 "commit_message"    => cm,
                 "commit_date"       => cd,
+                "report_url"        => ru,
             ))
         end
     end
@@ -284,7 +286,7 @@ function generate_static_page_plotly(data_dir::String, output_file::String, grou
     subcategories = sort([k for k in keys(get(index_for_subcats, "groups", Dict()))
                           if startswith(k, group_name * "_")])
 
-    html = generate_html_template(benchmarks_json, stats_json, commit_stats_json, group_name, repo_url, commit_sha, all_runs_available, commit_base_url, subcategories, regression_threshold)
+    html = generate_html_template(benchmarks_json, stats_json, commit_stats_json, group_name, repo_url, commit_sha, all_runs_available, commit_base_url, subcategories, regression_threshold, heatmap_commits)
 
     open(output_file, "w") do f
         write(f, html)
@@ -390,7 +392,7 @@ function generate_badge(path::String, regression_count::Int)
     open(path, "w") do f; write(f, svg) end
 end
 
-function generate_html_template(benchmarks_json, stats_json, commit_stats_json, group_name, repo_url, commit_sha, all_runs_available, commit_base_url=repo_url, subcategories=String[], regression_threshold=1.05)
+function generate_html_template(benchmarks_json, stats_json, commit_stats_json, group_name, repo_url, commit_sha, all_runs_available, commit_base_url=repo_url, subcategories=String[], regression_threshold=1.05, heatmap_commits=25)
     commit_short = commit_sha[1:min(7, lastindex(commit_sha))]
 
     return """
@@ -920,7 +922,7 @@ function generate_html_template(benchmarks_json, stats_json, commit_stats_json, 
 
             .heatmap-wrap { overflow-x: auto; padding: 24px 32px 32px; display: flex; justify-content: center; }
             .heatmap-table { border-collapse: separate; border-spacing: 2px; font-size: 0.72em; white-space: nowrap; }
-            .heatmap-table th { padding: 4px 8px; font-weight: 600; border-bottom: 2px solid #191919; font-size: 0.9em; color: #555; }
+            .heatmap-table th { padding: 4px 8px; font-weight: 600; border-bottom: 2px solid #191919; font-size: 0.9em; color: #555; position: sticky; top: 0; z-index: 10; background: #f7f6f3; }
             .heatmap-table td { height: 28px; min-width: 38px; text-align: center; font-size: 0.85em; transition: opacity 0.15s; border-radius: 3px; }
             .heatmap-table tr:hover td { opacity: 0.8; }
             .heatmap-name { padding: 4px 14px 4px 4px !important; text-align: left !important; max-width: 280px; overflow: hidden; text-overflow: ellipsis; font-family: monospace; font-size: 0.95em; }
@@ -971,7 +973,7 @@ function generate_html_template(benchmarks_json, stats_json, commit_stats_json, 
             body.dark-mode .comparison-table td { border-bottom-color: #333; }
             body.dark-mode .comparison-table tbody tr:hover { background: #2a2a2a; }
             body.dark-mode .heatmap-table { color: #e9e9e7; }
-            body.dark-mode .heatmap-table th { border-bottom-color: #444; color: #aaa; }
+            body.dark-mode .heatmap-table th { border-bottom-color: #444; color: #aaa; background: #191919; }
             body.dark-mode .heatmap-table td { color: #e9e9e7; }
             body.dark-mode .heatmap-name { color: #e9e9e7; }
             body.dark-mode .no-results { color: #aaa; }
@@ -1191,7 +1193,7 @@ function generate_html_template(benchmarks_json, stats_json, commit_stats_json, 
             let regressionsOnly = false;
             let timeGrouping = 'commit';
             let maxRuns = null;
-            let heatmapCommitCount = 25;
+            let heatmapCommitCount = $heatmap_commits;
 
             const commitJuliaMap = {};
             Object.values(benchmarksData).forEach(data => {
@@ -1309,14 +1311,56 @@ function generate_html_template(benchmarks_json, stats_json, commit_stats_json, 
 
                 const sliceN = (arr) => (!arr || maxRuns === null || arr.length <= maxRuns) ? arr : arr.slice(arr.length - maxRuns);
 
-                const { label: tUnit, factor: tFactor } = autoUnit(sliceN(data.mean.y));
+                const rawY = sliceN(data.mean.y);
+                const rawX = sliceN(data.mean.x);
+                const { label: tUnit, factor: tFactor } = autoUnit(rawY);
                 const lineColor = darkMode ? '#ffffff' : '#191919';
-
                 const scaleY = (arr) => arr.map(v => v * tFactor);
 
+                const maWindow = 5;
+                function rollingCalc(arr) {
+                    const means = arr.map((_, i) => {
+                        const s = Math.max(0, i - Math.floor(maWindow / 2));
+                        const e = Math.min(arr.length, s + maWindow);
+                        const sl = arr.slice(s, e);
+                        return sl.reduce((a, b) => a + b, 0) / sl.length;
+                    });
+                    const stds = arr.map((_, i) => {
+                        const s = Math.max(0, i - Math.floor(maWindow / 2));
+                        const e = Math.min(arr.length, s + maWindow);
+                        const sl = arr.slice(s, e);
+                        const m = means[i];
+                        return Math.sqrt(sl.reduce((a, b) => a + (b - m) ** 2, 0) / sl.length);
+                    });
+                    return { means, stds };
+                }
+                const { means: maY, stds: rstd } = rawY.length >= 3 ? rollingCalc(rawY) : { means: null, stds: null };
+
+                const traces = [];
+
+                if (data.mean.error_y && !percentageMode) {
+                    const errArr = sliceN(data.mean.error_y.array);
+                    const fillCol = darkMode ? 'rgba(255,255,255,0.07)' : 'rgba(0,0,0,0.05)';
+                    traces.push({
+                        x: rawX,
+                        y: rawY.map((v, i) => (v + (errArr[i] || 0)) * tFactor),
+                        type: 'scatter', mode: 'lines', name: '\u00b1\u03c3',
+                        line: {width: 0}, legendgroup: 'band',
+                        hoverinfo: 'skip', visible: true, showlegend: true
+                    });
+                    traces.push({
+                        x: rawX,
+                        y: rawY.map((v, i) => Math.max(0, v - (errArr[i] || 0)) * tFactor),
+                        type: 'scatter', mode: 'lines', name: '\u00b1\u03c3',
+                        fill: 'tonexty', fillcolor: fillCol,
+                        line: {width: 0}, legendgroup: 'band',
+                        hoverinfo: 'skip', visible: true, showlegend: false
+                    });
+                }
+
                 const meanTrace = {
-                    x: sliceN(data.mean.x),
-                    y: percentageMode ? toPercentage(sliceN(data.mean.y)) : scaleY(sliceN(data.mean.y)),
+                    x: rawX,
+                    y: percentageMode ? toPercentage(rawY) : scaleY(rawY),
                     type: 'scatter',
                     mode: 'lines+markers',
                     name: 'Mean',
@@ -1336,9 +1380,47 @@ function generate_html_template(benchmarks_json, stats_json, commit_stats_json, 
                         width: 4
                     };
                 }
+                traces.push(meanTrace);
 
-                const traces = [
-                    meanTrace,
+                if (maY && rawY.length >= 5) {
+                    traces.push({
+                        x: rawX,
+                        y: percentageMode ? toPercentage(maY) : maY.map(v => v * tFactor),
+                        type: 'scatter', mode: 'lines',
+                        name: 'Moving avg',
+                        line: {color: '#f59e0b', width: 2, dash: 'dot'},
+                        visible: 'legendonly',
+                        hovertemplate: percentageMode ?
+                            \`Commit: %{x}<br>MA: %{y:.2f}%<extra></extra>\` :
+                            \`Commit: %{x}<br>MA: %{y:.3f} \${tUnit}<extra></extra>\`
+                    });
+                }
+
+                const outlierOriginalIdx = [];
+                if (rstd && !percentageMode) {
+                    const hovTexts = sliceN(data.mean.hovertext) || [];
+                    const outlierX = [], outlierY = [], outlierHover = [];
+                    rawX.forEach((x, i) => {
+                        if (rstd[i] > 0 && Math.abs(rawY[i] - maY[i]) > 2 * rstd[i]) {
+                            outlierX.push(x);
+                            outlierY.push(rawY[i] * tFactor);
+                            outlierHover.push(hovTexts[i] || x);
+                            outlierOriginalIdx.push(i);
+                        }
+                    });
+                    if (outlierX.length > 0) {
+                        traces.push({
+                            x: outlierX, y: outlierY,
+                            type: 'scatter', mode: 'markers',
+                            name: 'Outlier',
+                            marker: {size: 10, color: '#ef4444', symbol: 'diamond'},
+                            hovertext: outlierHover, hoverinfo: 'text',
+                            customdata: outlierOriginalIdx
+                        });
+                    }
+                }
+
+                traces.push(
                     {
                         x: sliceN(data.min.x),
                         y: percentageMode ? toPercentage(sliceN(data.min.y)) : scaleY(sliceN(data.min.y)),
@@ -1363,9 +1445,30 @@ function generate_html_template(benchmarks_json, stats_json, commit_stats_json, 
                             \`Commit: %{x}<br>Median: %{y:.2f}%<extra></extra>\` :
                             \`Commit: %{x}<br>Median: %{y:.3f} \${tUnit}<extra></extra>\`
                     }
-                ];
+                );
 
                 const lastX = data.mean.x.length > 0 ? data.mean.x[data.mean.x.length - 1] : null;
+
+                const juliaShapes = [], juliaAnnotations = [];
+                if (data.mean.julia_versions) {
+                    for (let i = 1; i < rawX.length; i++) {
+                        const jvPrev = commitJuliaMap[rawX[i - 1]] || '';
+                        const jvCurr = commitJuliaMap[rawX[i]] || '';
+                        if (jvPrev && jvCurr && jvPrev !== jvCurr) {
+                            juliaShapes.push({
+                                type: 'line', x0: rawX[i], x1: rawX[i],
+                                xref: 'x', yref: 'paper', y0: 0, y1: 1,
+                                line: { color: '#8b5cf6', width: 1, dash: 'dot' }
+                            });
+                            juliaAnnotations.push({
+                                x: rawX[i], xref: 'x', yref: 'paper', y: 1.04,
+                                text: jvCurr.replace(/^(\\d+\\.\\d+).*?(DEV\\.(\\d+))?.*\$/, (_, v, __, b) => b ? v + '-d' + b : v),
+                                showarrow: false, font: { size: 8, color: '#8b5cf6' },
+                                xanchor: 'left'
+                            });
+                        }
+                    }
+                }
 
                 const layout = {
                     title: '',
@@ -1384,8 +1487,9 @@ function generate_html_template(benchmarks_json, stats_json, commit_stats_json, 
                     hovermode: 'closest',
                     showlegend: true,
                     legend: { orientation: 'h', x: 0, y: -0.25, xanchor: 'left' },
-                    margin: {l: 60, r: 20, t: 10, b: 90},
-                    shapes: [],
+                    margin: {l: 60, r: 20, t: juliaAnnotations.length > 0 ? 30 : 10, b: 90},
+                    shapes: juliaShapes,
+                    annotations: juliaAnnotations,
                     plot_bgcolor: darkMode ? '#2a2a2a' : '#ffffff',
                     paper_bgcolor: darkMode ? '#2a2a2a' : '#ffffff',
                     font: {
@@ -1418,7 +1522,7 @@ function generate_html_template(benchmarks_json, stats_json, commit_stats_json, 
                 plotDiv.on('plotly_click', function(clickData) {
                     if (!clickData || !clickData.points || clickData.points.length === 0) return;
                     const pt = clickData.points[0];
-                    const idx = pt.pointIndex;
+                    const idx = pt.data.customdata ? pt.data.customdata[pt.pointIndex] : pt.pointIndex;
                     showDetailPage(name, data, idx);
                 });
             }
@@ -2029,9 +2133,10 @@ function generate_html_template(benchmarks_json, stats_json, commit_stats_json, 
 
                 const commitLink = commit !== 'unknown' ? '<a href="' + commitBaseUrl + '/commit/' + commit + '" target="_blank" style="text-decoration:underline">' + commit + '</a>' : commit;
                 const baseHash = data.mean.base_hashes ? data.mean.base_hashes[idx] : '';
-                const nsReportUrl = commitBaseUrl.includes('JuliaLang') && commit !== 'unknown'
+                const nsReportUrl = (cs.report_url) ? cs.report_url
+                    : (commitBaseUrl.includes('JuliaLang') && commit !== 'unknown'
                     ? 'https://github.com/JuliaCI/NanosoldierReports/tree/master/benchmark/by_hash/' + commit + '/report.md'
-                    : null;
+                    : null);
                 const juliaTipVer = data.mean.julia_versions ? data.mean.julia_versions[idx] : '';
                 const commitMsg = data.mean.commit_messages ? data.mean.commit_messages[idx] : '';
                 const timeRatio = data.mean.time_ratios ? data.mean.time_ratios[idx] : 0;
@@ -2229,11 +2334,29 @@ function generate_html_template(benchmarks_json, stats_json, commit_stats_json, 
                     });
                     groupBtns.appendChild(b);
                 });
+                const csvBtn = document.createElement('button');
+                csvBtn.className = 'btn';
+                csvBtn.textContent = 'CSV';
+                csvBtn.style.cssText = 'margin-left:4px;font-size:0.8em;padding:4px 10px;';
+                csvBtn.onclick = () => {
+                    const rows = [['Benchmark', ...shortCommits]];
+                    sortedBenchmarks.forEach(([bname, bdata]) => {
+                        const cmap = {};
+                        bdata.mean.commit_hashes.forEach((h, i) => { cmap[h] = bdata.mean.y[i]; });
+                        rows.push([bname, ...commits.map(h => cmap[h] !== undefined ? cmap[h].toFixed(4) : '')]);
+                    });
+                    const csv = rows.map(r => r.map(v => '"' + String(v).replace(/"/g, '""') + '"').join(',')).join('\n');
+                    const a = document.createElement('a');
+                    a.download = groupName + '-heatmap.csv';
+                    a.href = 'data:text/csv;charset=utf-8,' + encodeURIComponent(csv);
+                    a.click();
+                };
                 sliderDiv.appendChild(sliderLabel);
                 sliderDiv.appendChild(slider);
                 sliderDiv.appendChild(sliderVal);
                 sliderDiv.appendChild(groupBtns);
                 sliderDiv.appendChild(pngBtn);
+                sliderDiv.appendChild(csvBtn);
                 container.appendChild(sliderDiv);
 
 
@@ -2316,7 +2439,31 @@ function generate_html_template(benchmarks_json, stats_json, commit_stats_json, 
 
                 table.appendChild(tbody);
                 wrap.appendChild(table);
+
+                const legendDiv = document.createElement('div');
+                legendDiv.style.cssText = 'display:flex;align-items:center;gap:10px;padding:10px 32px 0;font-size:0.75em;color:#787774;';
+                const gradBar = document.createElement('div');
+                const fasterCol = darkMode ? 'hsl(140,45%,30%)' : 'hsl(140,55%,84%)';
+                const neutralCol = darkMode ? '#383838' : '#f0f0ee';
+                const slowerCol = darkMode ? 'hsl(0,45%,30%)' : 'hsl(0,55%,84%)';
+                gradBar.style.cssText = \`width:180px;height:10px;border-radius:5px;background:linear-gradient(to right,\${fasterCol},\${neutralCol},\${slowerCol});\`;
+                const fasterLabel = document.createElement('span');
+                fasterLabel.textContent = 'Faster';
+                const slowerLabel = document.createElement('span');
+                slowerLabel.textContent = 'Slower';
+                legendDiv.appendChild(fasterLabel);
+                legendDiv.appendChild(gradBar);
+                legendDiv.appendChild(slowerLabel);
+                wrap.appendChild(legendDiv);
+
                 container.appendChild(wrap);
+
+                requestAnimationFrame(() => {
+                    const ctrlH = (document.querySelector('.controls') || {}).offsetHeight || 0;
+                    table.querySelectorAll('thead th').forEach(th => {
+                        th.style.top = ctrlH + 'px';
+                    });
+                });
 
                 const CHUNK_SIZE = 200;
                 let rowIndex = 0;

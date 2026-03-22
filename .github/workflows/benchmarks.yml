@@ -28,6 +28,9 @@ on:
       - 'action.yml'
       - '.github/workflows/benchmarks.yml'
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 permissions:
   contents: write
   pull-requests: write
@@ -171,6 +174,8 @@ jobs:
         shell: bash
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REGRESSION_THRESHOLD: '1.05'
+          HEATMAP_COMMITS: '25'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"

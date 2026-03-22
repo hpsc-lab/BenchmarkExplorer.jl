@@ -52,6 +52,11 @@ inputs:
     required: false
     default: '1.05'
 
+  heatmap_commits:
+    description: 'Max number of commits shown in the heatmap (default: 25)'
+    required: false
+    default: '25'
+
   github_token:
     description: 'GitHub token for pushing results'
     required: true
@@ -123,6 +128,9 @@ runs:
     - name: Generate HTML pages
       if: inputs.persist_to_branch != ''
       shell: bash
+      env:
+        REGRESSION_THRESHOLD: ${{ inputs.regression_threshold }}
+        HEATMAP_COMMITS: ${{ inputs.heatmap_commits }}
       run: |
         mkdir -p /tmp/benchmark_html
 
