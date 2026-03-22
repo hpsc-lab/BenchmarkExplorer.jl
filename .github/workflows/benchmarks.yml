@@ -221,6 +221,7 @@ jobs:
             "https://github.com/JuliaLang/julia"
           fi
 
+          rm -rf data
           git fetch origin gh-pages
           git checkout gh-pages
 
