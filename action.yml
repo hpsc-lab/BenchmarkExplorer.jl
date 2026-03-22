@@ -79,7 +79,7 @@ runs:
         version: ${{ inputs.julia_version }}
 
     - name: Cache Julia packages
-      uses: julia-actions/cache@v2
+      uses: julia-actions/cache@v3
 
     - name: Fetch existing data from persist branch
       if: inputs.persist_to_branch != ''
@@ -158,7 +158,7 @@ runs:
         julia --project=${{ github.action_path }} -e 'include("${{ github.action_path }}/src/HistoryManager.jl"); using .HistoryManager; generate_all_runs_index("${{ inputs.data_dir }}")'
 
     - name: Upload data artifact
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: benchmark-data-${{ inputs.group_name }}
         path: ${{ inputs.data_dir }}
