@@ -31,6 +31,10 @@ on:
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
+concurrency:
+  group: benchmarks
+  cancel-in-progress: false
+
 permissions:
   contents: write
   pull-requests: write
