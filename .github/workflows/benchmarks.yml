@@ -234,8 +234,7 @@ jobs:
           cp /tmp/data_hash.txt data_hash.txt 2>/dev/null || true
 
           git add -A
-          git commit -m "Rebuild data and update pages" || echo "No changes"
-          git push origin gh-pages
+          git commit -m "Rebuild data and update pages" && git push origin gh-pages || echo "No changes, skipping push"
 
           git checkout -f ${{ github.sha }}
 
