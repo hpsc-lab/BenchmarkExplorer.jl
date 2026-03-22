@@ -74,7 +74,7 @@ function aggregate_by_commit(plot_data_mean, plot_data_min, plot_data_median)
     )
 end
 
-function generate_static_page_plotly(data_dir::String, output_file::String, group_name::String, repo_url::String, commit_sha::String, commit_base_url::String=repo_url)
+function generate_static_page_plotly(data_dir::String, output_file::String, group_name::String, repo_url::String, commit_sha::String, commit_base_url::String=repo_url, regression_threshold::Float64=parse(Float64, get(ENV, "REGRESSION_THRESHOLD", "1.05")))
     data = try
         load_dashboard_data(data_dir)
     catch e
@@ -129,6 +129,7 @@ function generate_static_page_plotly(data_dir::String, output_file::String, grou
         base_hash_by_commit    = Dict{String,String}()
         ratio_by_commit        = Dict{String,Float64}()
         commit_message_by_hash = Dict{String,String}()
+        gctime_by_commit       = Dict{String,Float64}()
         for rn in run_numbers
             rd = runs[string(rn)]
             h = get(rd, "commit_hash", "")
@@ -138,6 +139,8 @@ function generate_static_page_plotly(data_dir::String, output_file::String, grou
             r > 0 && !haskey(ratio_by_commit, h) && (ratio_by_commit[h] = r)
             m = get(rd, "commit_message", "")
             !isempty(h) && !isempty(m) && !haskey(commit_message_by_hash, h) && (commit_message_by_hash[h] = m)
+            gc = get(rd, "gctime_ns", get(rd, "gc_time_ns", 0.0))
+            gc > 0 && !haskey(gctime_by_commit, h) && (gctime_by_commit[h] = gc)
         end
 
         hover_texts_mean = [
@@ -176,6 +179,7 @@ function generate_static_page_plotly(data_dir::String, output_file::String, grou
             "base_hashes"      => [get(base_hash_by_commit, h, "") for h in agg.commit_hashes],
             "time_ratios"      => time_ratios_arr,
             "commit_messages"  => [get(commit_message_by_hash, h, "") for h in agg.commit_hashes],
+            "gctime_ns"        => [get(gctime_by_commit, h, 0.0) for h in agg.commit_hashes],
             "type" => "scatter",
             "mode" => "lines+markers",
             "name" => "Mean",
@@ -239,7 +243,29 @@ function generate_static_page_plotly(data_dir::String, output_file::String, grou
         )
     end
 
+    commit_stats = Dict{String,Any}()
+    for (_, runs) in history
+        for (_, rd) in runs
+            h = get(rd, "commit_hash", "")
+            isempty(h) && continue
+            haskey(commit_stats, h) && continue
+            rc = get(rd, "regression_count", 0)
+            ic = get(rd, "improvement_count", 0)
+            nb = get(rd, "n_with_base_data", 0)
+            cm = get(rd, "commit_message", "")
+            cd = get(rd, "commit_date", get(rd, "timestamp", ""))
+            (rc > 0 || ic > 0 || nb > 0 || !isempty(cm)) && (commit_stats[h] = Dict(
+                "regression_count"  => rc,
+                "improvement_count" => ic,
+                "n_with_base_data"  => nb,
+                "commit_message"    => cm,
+                "commit_date"       => cd,
+            ))
+        end
+    end
+
     benchmarks_json = JSON.json(benchmark_traces)
+    commit_stats_json = JSON.json(commit_stats)
     stats_json = JSON.json(Dict(
         "total_benchmarks" => data.stats.total_benchmarks,
         "total_runs" => data.stats.total_runs,
@@ -258,14 +284,113 @@ function generate_static_page_plotly(data_dir::String, output_file::String, grou
     subcategories = sort([k for k in keys(get(index_for_subcats, "groups", Dict()))
                           if startswith(k, group_name * "_")])
 
-    html = generate_html_template(benchmarks_json, stats_json, group_name, repo_url, commit_sha, all_runs_available, commit_base_url, subcategories)
+    html = generate_html_template(benchmarks_json, stats_json, commit_stats_json, group_name, repo_url, commit_sha, all_runs_available, commit_base_url, subcategories, regression_threshold)
 
     open(output_file, "w") do f
         write(f, html)
     end
+
+    badge_path = joinpath(dirname(output_file), group_name * "-badge.svg")
+    latest_reg = 0
+    latest_ts = ""
+    for v in values(commit_stats)
+        ts = get(v, "commit_date", "")
+        if ts > latest_ts
+            latest_ts = ts
+            latest_reg = get(v, "regression_count", 0)
+        end
+    end
+    generate_badge(badge_path, latest_reg)
+
+    alerts_path = joinpath(dirname(output_file), group_name * "-alerts.json")
+    generate_alerts(alerts_path, benchmark_traces, group_name, regression_threshold)
+
+    grafana_path = joinpath(dirname(output_file), group_name * "-grafana.json")
+    generate_grafana_export(grafana_path, benchmark_traces, group_name)
 end
 
-function generate_html_template(benchmarks_json, stats_json, group_name, repo_url, commit_sha, all_runs_available, commit_base_url=repo_url, subcategories=String[])
+function generate_alerts(path::String, benchmark_traces::Dict, group_name::String, threshold::Float64)
+    alerts = []
+    for (name, traces) in benchmark_traces
+        stats = get(traces, "stats", Dict())
+        ratio = get(stats, "latest_ratio", 0.0)
+        ratio <= 0 && continue
+        ratio > threshold || continue
+        push!(alerts, Dict(
+            "benchmark"  => name,
+            "group"      => group_name,
+            "ratio"      => ratio,
+            "trend"      => get(stats, "trend", ""),
+            "latest_mean_ms" => get(stats, "latest_mean", 0.0),
+            "commit"     => get(stats, "latest_commit", ""),
+            "timestamp"  => get(stats, "latest_timestamp", ""),
+        ))
+    end
+    sort!(alerts, by=a -> -get(a, "ratio", 0.0))
+    open(path, "w") do f
+        JSON.print(f, Dict(
+            "group"      => group_name,
+            "threshold"  => threshold,
+            "generated"  => string(now()),
+            "count"      => length(alerts),
+            "alerts"     => alerts,
+        ), 2)
+    end
+end
+
+function generate_grafana_export(path::String, benchmark_traces::Dict, group_name::String)
+    targets = []
+    for (name, traces) in benchmark_traces
+        mean_t = get(traces, "mean", Dict())
+        ys = get(mean_t, "y_raw", get(mean_t, "y", Float64[]))
+        tss = get(mean_t, "timestamps", String[])
+        length(ys) == 0 && continue
+        datapoints = []
+        for i in eachindex(ys)
+            ts_ms = try
+                Int(round(datetime2unix(DateTime(tss[i][1:min(19,end)], "yyyy-mm-ddTHH:MM:SS")) * 1000))
+            catch
+                i * 86400000
+            end
+            push!(datapoints, [ys[i], ts_ms])
+        end
+        push!(targets, Dict(
+            "target" => name,
+            "datapoints" => datapoints,
+            "tags" => Dict("group" => group_name),
+        ))
+    end
+    open(path, "w") do f
+        JSON.print(f, targets, 2)
+    end
+end
+
+function generate_badge(path::String, regression_count::Int)
+    label = "regressions"
+    value = regression_count == 0 ? "0" : string(regression_count)
+    color = regression_count == 0 ? "#4c1" : regression_count < 5 ? "#fe7d37" : "#e05d44"
+    lw = 90
+    vw = max(30, length(value) * 8 + 10)
+    tw = lw + vw
+    svg = """<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="$tw" height="20" role="img">
+  <linearGradient id="s" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient>
+  <clipPath id="r"><rect width="$tw" height="20" rx="3" fill="#fff"/></clipPath>
+  <g clip-path="url(#r)">
+    <rect width="$lw" height="20" fill="#555"/>
+    <rect x="$lw" width="$vw" height="20" fill="$color"/>
+    <rect width="$tw" height="20" fill="url(#s)"/>
+  </g>
+  <g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110">
+    <text x="$(lw÷2*10+1)" y="150" fill="#010101" fill-opacity=".3" transform="scale(.1)" textLength="$(lw*10-20)" lengthAdjust="spacing">$label</text>
+    <text x="$(lw÷2*10+1)" y="140" transform="scale(.1)" textLength="$(lw*10-20)" lengthAdjust="spacing">$label</text>
+    <text x="$((lw + vw÷2)*10+1)" y="150" fill="#010101" fill-opacity=".3" transform="scale(.1)" textLength="$(vw*10-20)" lengthAdjust="spacing">$value</text>
+    <text x="$((lw + vw÷2)*10+1)" y="140" transform="scale(.1)" textLength="$(vw*10-20)" lengthAdjust="spacing">$value</text>
+  </g>
+</svg>"""
+    open(path, "w") do f; write(f, svg) end
+end
+
+function generate_html_template(benchmarks_json, stats_json, commit_stats_json, group_name, repo_url, commit_sha, all_runs_available, commit_base_url=repo_url, subcategories=String[], regression_threshold=1.05)
     commit_short = commit_sha[1:min(7, lastindex(commit_sha))]
 
     return """
@@ -333,12 +458,19 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 padding: 12px 20px;
                 text-align: center;
                 flex: 1 1 130px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
             }
 
             .stat-card-green { border-color:#27ae60; background:linear-gradient(160deg,#f4fff6,#fff); }
             .stat-card-red   { border-color:#e74c3c; background:linear-gradient(160deg,#fff4f4,#fff); }
 
             .stat-card .value {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 font-size: 2em;
                 font-weight: 700;
                 color: #191919;
@@ -1024,6 +1156,12 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 <select id="julia-filter" class="search-box" style="min-width: 150px; flex: 0;">
                     <option value="all">All Julia</option>
                 </select>
+                <select id="source-filter" class="search-box" style="min-width: 150px; flex: 0;">
+                    <option value="all">All Sources</option>
+                    <option value="data_zst">Real data</option>
+                    <option value="report_md">Ratio only</option>
+                </select>
+                <button class="btn btn-secondary" id="btn-regressions">⚠ Regressions</button>
                 <input type="text" id="search" class="search-box" placeholder="🔍 Search benchmarks...">
                 <div id="render-progress-wrap"><div id="render-progress-bar"></div></div>
             </div>
@@ -1041,12 +1179,17 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
             const subcategories = $(JSON.json(subcategories));
             const groupName = $(JSON.json(group_name));
             const statsData = $stats_json;
+            const commitStats = $commit_stats_json;
+            const REGRESSION_THRESHOLD = $regression_threshold;
             const repoUrl = '$repo_url';
             const commitBaseUrl = '$commit_base_url';
             let percentageMode = false;
             let darkMode = false;
             let trendFilter = 'all';
             let juliaFilter = 'all';
+            let sourceFilter = 'all';
+            let regressionsOnly = false;
+            let timeGrouping = 'commit';
             let maxRuns = null;
             let heatmapCommitCount = 25;
 
@@ -1112,9 +1255,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                             Object.values(benchmarksData).some(d => d.mean.commit_hashes.includes(h) &&
                                 d.mean.timestamps[d.mean.commit_hashes.indexOf(h)] ===
                                 Math.max(...d.mean.timestamps.filter(Boolean))));
-                        const latestJulia = commitJuliaMap[Object.keys(commitJuliaMap)[0]] || '';
-                        const allVersions = [...new Set(Object.values(commitJuliaMap))].sort().reverse();
-                        return latestJulia ? \`<div class="stat-card"><div class="value" style="font-size:0.9em">\${allVersions[0]}</div><div class="label">Julia</div></div>\` : '';
+                        return '';
                     })() : ''}
                 `;
             }
@@ -1352,13 +1493,24 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 if (heatmapMode) {
                     heatmapMode = false;
                     document.getElementById('btn-heatmap').classList.remove('active');
-                    renderBenchmarks();
+                    document.getElementById('search').value = '';
+                    renderBenchmarks('');
                 }
                 setTimeout(() => {
                     const id = 'bench-' + name.replace(/[^a-zA-Z0-9]/g, '-');
                     const el = document.getElementById(id);
-                    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }, 150);
+                    if (!el) return;
+                    const plotCont = el.querySelector('.plot-container');
+                    if (plotCont && plotCont.style.display === 'none') {
+                        plotCont.style.display = '';
+                        hiddenPlots.delete(name);
+                        const bname = plotCont.dataset.benchmarkName;
+                        if (bname && benchmarksData[bname] && !renderedPlots.has(plotCont.id)) {
+                            renderSinglePlot(bname, benchmarksData[bname], plotCont.id);
+                        }
+                    }
+                    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 200);
             }
 
             function sparklineSVG(values, w, h) {
@@ -1553,6 +1705,8 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 if (q) params.set('q', q);
                 if (trendFilter !== 'all') params.set('trend', trendFilter);
                 if (juliaFilter !== 'all') params.set('julia', juliaFilter);
+                if (sourceFilter !== 'all') params.set('source', sourceFilter);
+                if (regressionsOnly) params.set('reg', '1');
                 if (heatmapMode) params.set('view', 'heatmap');
                 if (compareMode) params.set('view', 'compare');
                 const str = params.toString();
@@ -1573,7 +1727,9 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                         const matchesSearch = name.toLowerCase().includes(filter.toLowerCase());
                         const matchesTrend = trendFilter === 'all' || data.stats.trend === trendFilter;
                         const matchesJulia = juliaFilter === 'all' || commitJuliaMap[data.stats.latest_commit] === juliaFilter;
-                        return matchesSearch && matchesTrend && matchesJulia;
+                        const matchesSource = sourceFilter === 'all' || data.stats.source_type === sourceFilter;
+                        const matchesReg = !regressionsOnly || data.stats.trend === 'slower' || (data.stats.latest_ratio > 0 && data.stats.latest_ratio > REGRESSION_THRESHOLD);
+                        return matchesSearch && matchesTrend && matchesJulia && matchesSource && matchesReg;
                     })
                     .sort(([a], [b]) => a.localeCompare(b));
 
@@ -1693,6 +1849,8 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 if (params.get('q')) document.getElementById('search').value = params.get('q');
                 if (params.get('trend')) { trendFilter = params.get('trend'); document.getElementById('trend-filter').value = trendFilter; }
                 if (params.get('julia')) { juliaFilter = params.get('julia'); document.getElementById('julia-filter').value = juliaFilter; }
+                if (params.get('source')) { sourceFilter = params.get('source'); document.getElementById('source-filter').value = sourceFilter; }
+                if (params.get('reg') === '1') { regressionsOnly = true; document.getElementById('btn-regressions').classList.add('active'); }
                 if (params.get('view') === 'heatmap') { heatmapMode = true; document.getElementById('btn-heatmap').classList.add('active'); }
                 if (params.get('view') === 'compare') { compareMode = true; document.getElementById('btn-compare').classList.add('active'); }
             })();
@@ -1708,6 +1866,17 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
 
             document.getElementById('julia-filter').addEventListener('change', function(e) {
                 juliaFilter = e.target.value;
+                renderBenchmarks(document.getElementById('search').value);
+            });
+
+            document.getElementById('source-filter').addEventListener('change', function(e) {
+                sourceFilter = e.target.value;
+                renderBenchmarks(document.getElementById('search').value);
+            });
+
+            document.getElementById('btn-regressions').addEventListener('click', function() {
+                regressionsOnly = !regressionsOnly;
+                this.classList.toggle('active');
                 renderBenchmarks(document.getElementById('search').value);
             });
 
@@ -1858,7 +2027,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                     }
                 }
 
-                const commitLink = commit !== 'unknown' ? '<a href="' + commitBaseUrl + '/commit/' + commit + '" target="_blank" style="color:#191919;text-decoration:underline">' + commit + '</a>' : commit;
+                const commitLink = commit !== 'unknown' ? '<a href="' + commitBaseUrl + '/commit/' + commit + '" target="_blank" style="text-decoration:underline">' + commit + '</a>' : commit;
                 const baseHash = data.mean.base_hashes ? data.mean.base_hashes[idx] : '';
                 const nsReportUrl = commitBaseUrl.includes('JuliaLang') && commit !== 'unknown'
                     ? 'https://github.com/JuliaCI/NanosoldierReports/tree/master/benchmark/by_hash/' + commit + '/report.md'
@@ -1866,27 +2035,38 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 const juliaTipVer = data.mean.julia_versions ? data.mean.julia_versions[idx] : '';
                 const commitMsg = data.mean.commit_messages ? data.mean.commit_messages[idx] : '';
                 const timeRatio = data.mean.time_ratios ? data.mean.time_ratios[idx] : 0;
+                const gctimeNs = data.mean.gctime_ns ? data.mean.gctime_ns[idx] : 0;
+                const cs = commitStats[commit] || {};
 
+                const bg = darkMode ? '#191919' : '#fff';
+                const fg = darkMode ? '#e9e9e7' : '#191919';
+                const border = darkMode ? '#444' : '#191919';
+                const borderMem = darkMode ? '#555' : '#ccc';
+                const rowBorder = darkMode ? '#333' : '#e9e9e7';
+                const subColor = darkMode ? '#888' : '#999';
+                const linkColor = darkMode ? '#e9e9e7' : '#191919';
                 const css = '*{margin:0;padding:0;box-sizing:border-box}' +
-                    'body{font-family:"JetBrains Mono",SFMono-Regular,Consolas,monospace;background:#fff;color:#191919;padding:32px;max-width:680px;margin:0 auto}' +
+                    'body{font-family:"JetBrains Mono",SFMono-Regular,Consolas,monospace;background:' + bg + ';color:' + fg + ';padding:32px;max-width:680px;margin:0 auto}' +
                     'h1{font-size:1em;font-weight:700;margin-bottom:6px;word-break:break-all}' +
-                    '.sub{font-size:0.78em;color:#999;margin-bottom:24px}' +
+                    '.sub{font-size:0.78em;color:' + subColor + ';margin-bottom:24px}' +
                     '.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}' +
-                    '.card{border:2px solid #191919;border-radius:10px;padding:16px;text-align:center}' +
-                    '.card.mem{border-color:#ccc}' +
-                    '.clabel{font-size:0.72em;color:#999;text-transform:uppercase;letter-spacing:0.4px;margin-bottom:6px}' +
+                    '.card{border:2px solid ' + border + ';border-radius:10px;padding:16px;text-align:center}' +
+                    '.card.mem{border-color:' + borderMem + '}' +
+                    '.clabel{font-size:0.72em;color:' + subColor + ';text-transform:uppercase;letter-spacing:0.4px;margin-bottom:6px}' +
                     '.cval{font-size:1.3em;font-weight:700}' +
                     'table{width:100%;border-collapse:collapse;font-size:0.82em}' +
-                    'th,td{padding:9px 12px;text-align:left;border-bottom:1px solid #e9e9e7}' +
-                    'th{color:#999;font-weight:400;width:130px}' +
+                    'th,td{padding:9px 12px;text-align:left;border-bottom:1px solid ' + rowBorder + '}' +
+                    'th{color:' + subColor + ';font-weight:400;width:130px}' +
                     'td{font-weight:600}' +
-                    'button{margin-top:24px;padding:8px 20px;background:#191919;color:#fff;border:none;border-radius:8px;font-family:inherit;font-size:0.85em;font-weight:600;cursor:pointer}' +
-                    'button:hover{background:#333}';
+                    'a{color:' + linkColor + '}' +
+                    'button{margin-top:24px;padding:8px 20px;background:' + fg + ';color:' + bg + ';border:none;border-radius:8px;font-family:inherit;font-size:0.85em;font-weight:600;cursor:pointer}' +
+                    'button:hover{opacity:0.8}';
 
                 const html = '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>' + benchName + '</title><style>' + css + '</style></head><body>' +
                     '<h1>' + benchName + '</h1>' +
                     '<div class="sub">commit\u00a0' + commitShort + '\u00a0&bull;\u00a0' + formatDate(timestamp) + '</div>' +
                     changeHtml +
+                    (cs.regression_count > 0 || cs.improvement_count > 0 ? '<div style="display:flex;gap:16px;padding:12px 0;margin-bottom:12px;border-bottom:1px solid #e9e9e7;font-size:0.82em;">' + (cs.regression_count > 0 ? '<span style="color:#b91c1c;font-weight:600">⚠ ' + cs.regression_count + ' regressions in this commit</span>' : '') + (cs.improvement_count > 0 ? '<span style="color:#1e7e34;font-weight:600">✓ ' + cs.improvement_count + ' improvements</span>' : '') + (cs.n_with_base_data > 0 ? '<span style="color:#999">' + cs.n_with_base_data + ' with base data</span>' : '') + '</div>' : '') +
                     '<div class="grid">' +
                     '<div class="card"><div class="clabel">Mean</div><div class="cval">' + fmt(meanVal) + '</div></div>' +
                     '<div class="card"><div class="clabel">Median</div><div class="cval">' + fmt(medianVal) + '</div></div>' +
@@ -1894,12 +2074,13 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                     (errVal > 0 ? '<div class="card"><div class="clabel">Std Dev</div><div class="cval">' + fmt(errVal) + '</div></div>' : '') +
                     '<div class="card mem"><div class="clabel">Memory</div><div class="cval">' + formatBytes(memory) + '</div></div>' +
                     '<div class="card mem"><div class="clabel">Allocs</div><div class="cval">' + allocs + '</div></div>' +
+                    (gctimeNs > 0 ? '<div class="card mem"><div class="clabel">GC time</div><div class="cval">' + fmt(gctimeNs / 1e6) + '</div></div>' : '') +
                     '</div>' +
                     '<table>' +
                     '<tr><th>Commit</th><td>' + commitLink + '</td></tr>' +
-                    (baseHash ? '<tr><th>Base</th><td><a href="' + commitBaseUrl + '/commit/' + baseHash + '" target="_blank" style="color:#191919;text-decoration:underline">' + baseHash.substring(0,7) + '</a></td></tr>' : '') +
+                    (baseHash ? '<tr><th>Base</th><td><a href="' + commitBaseUrl + '/commit/' + baseHash + '" target="_blank" style="text-decoration:underline">' + baseHash.substring(0,7) + '</a></td></tr>' : '') +
                     (juliaTipVer ? '<tr><th>Julia</th><td>' + juliaTipVer + '</td></tr>' : '') +
-                    (timeRatio > 0 ? '<tr><th>Time ratio</th><td style="color:' + (timeRatio > 1.05 ? '#b91c1c' : timeRatio < 0.95 ? '#1e7e34' : '#191919') + '">' + timeRatio.toFixed(3) + 'x</td></tr>' : '') +
+                    (timeRatio > 0 ? '<tr><th>Time ratio</th><td style="color:' + (timeRatio > REGRESSION_THRESHOLD ? '#b91c1c' : timeRatio < (2 - REGRESSION_THRESHOLD) ? '#1e7e34' : '#191919') + '">' + timeRatio.toFixed(3) + 'x</td></tr>' : '') +
                     (commitMsg ? '<tr><th>Message</th><td style="word-break:break-word">' + commitMsg.substring(0, 120) + (commitMsg.length > 120 ? '…' : '') + '</td></tr>' : '') +
                     (nsReportUrl ? '<tr><th>Report</th><td><a href="' + nsReportUrl + '" target="_blank" style="color:#191919;text-decoration:underline">NanosoldierReports ↗</a></td></tr>' : '') +
                     '<tr><th>Date</th><td>' + formatDate(timestamp) + '</td></tr>' +
@@ -1936,7 +2117,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                         const cnt = Object.keys(benchmarksData).filter(n => n.startsWith(prefix)).length;
                         const warn = Object.entries(benchmarksData).filter(([n, d]) =>
                             n.startsWith(prefix) && d.stats.trend === 'slower').length;
-                        a.textContent = label + (cnt > 0 ? ' ' + cnt : '') + (warn > 0 ? ' \u26a0' + warn : '');
+                        a.textContent = label + (cnt > 0 ? ' ' + cnt : '') + (warn > 0 ? ' !' + warn : '');
                         pillsDiv.appendChild(a);
                     });
                     container.appendChild(pillsDiv);
@@ -1946,7 +2127,9 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                     .filter(([name, data]) => {
                         const matchesSearch = name.toLowerCase().includes(filter.toLowerCase());
                         const matchesTrend = trendFilter === 'all' || data.stats.trend === trendFilter;
-                        return matchesSearch && matchesTrend;
+                        const matchesSource = sourceFilter === 'all' || data.stats.source_type === sourceFilter;
+                        const matchesReg = !regressionsOnly || data.stats.trend === 'slower' || (data.stats.latest_ratio > 0 && data.stats.latest_ratio > 1.05);
+                        return matchesSearch && matchesTrend && matchesSource && matchesReg;
                     }).sort(([a], [b]) => a.localeCompare(b));
                 if (!benchmarks.length) { container.innerHTML = '<div class="no-results"><h2>No benchmarks</h2></div>'; return; }
 
@@ -1964,6 +2147,27 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 if (juliaFilter !== 'all')
                     commits = commits.filter(h => commitJuliaMap[h] === juliaFilter);
                 commits = commits.slice(-heatmapCommitCount);
+
+                if (timeGrouping !== 'commit') {
+                    const periodKey = h => {
+                        const ts = commitSet.get(h) || '';
+                        const d = new Date(ts);
+                        if (isNaN(d)) return ts.substring(0, 10);
+                        if (timeGrouping === 'day') return d.toISOString().substring(0, 10);
+                        if (timeGrouping === 'week') {
+                            const mon = new Date(d); mon.setDate(d.getDate() - d.getDay() + 1);
+                            return mon.toISOString().substring(0, 10);
+                        }
+                        return d.toISOString().substring(0, 7);
+                    };
+                    const grouped = new Map();
+                    commits.forEach(h => {
+                        const k = periodKey(h);
+                        if (!grouped.has(k)) grouped.set(k, []);
+                        grouped.get(k).push(h);
+                    });
+                    commits = [...grouped.values()].map(hs => hs[hs.length - 1]);
+                }
 
                 const sortedBenchmarks = [...benchmarks].sort(([nameA, dataA], [nameB, dataB]) => {
                     const maxRatioFor = (data) => {
@@ -2000,7 +2204,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                 });
                 const pngBtn = document.createElement('button');
                 pngBtn.className = 'btn';
-                pngBtn.textContent = '\uD83D\uDDBC PNG';
+                pngBtn.textContent = 'PNG';
                 pngBtn.style.cssText = 'margin-left:8px;font-size:0.8em;padding:4px 10px;';
                 pngBtn.onclick = () => {
                     const wrapEl = container.querySelector('.heatmap-wrap');
@@ -2012,45 +2216,66 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                         a.click();
                     });
                 };
+                const groupBtns = document.createElement('div');
+                groupBtns.style.cssText = 'display:flex;gap:0;border:2px solid #191919;border-radius:8px;overflow:hidden;margin-left:12px;flex-shrink:0;';
+                ['commit','day','week','month'].forEach(g => {
+                    const b = document.createElement('button');
+                    b.className = 'btn' + (timeGrouping === g ? ' active' : '');
+                    b.textContent = g.charAt(0).toUpperCase() + g.slice(1);
+                    b.style.cssText = 'border:none;border-radius:0;padding:4px 8px;font-size:0.78em;' + (g !== 'commit' ? 'border-left:1px solid #ccc;' : '');
+                    b.addEventListener('click', () => {
+                        timeGrouping = g;
+                        renderHeatmap(document.getElementById('search').value);
+                    });
+                    groupBtns.appendChild(b);
+                });
                 sliderDiv.appendChild(sliderLabel);
                 sliderDiv.appendChild(slider);
                 sliderDiv.appendChild(sliderVal);
+                sliderDiv.appendChild(groupBtns);
                 sliderDiv.appendChild(pngBtn);
                 container.appendChild(sliderDiv);
 
-                const latestCommit = commits[commits.length - 1];
-                if (latestCommit) {
-                    let nReg = 0, nImp = 0;
-                    sortedBenchmarks.forEach(([name, data]) => {
-                        const cmap = {};
-                        data.mean.commit_hashes.forEach((h, i) => { cmap[h] = data.mean.y[i]; });
-                        const v = cmap[latestCommit];
-                        if (v === undefined) return;
-                        const isRatio = data.stats.source_type === 'report_md';
-                        const base = isNanoGroup && isRatio ? 100 : (Object.values(cmap)[0] || 1);
-                        const r = v / base;
-                        if (r > 1.1) nReg++;
-                        else if (r < 0.9) nImp++;
-                    });
-                    if (nReg > 0 || nImp > 0) {
-                        const summaryDiv = document.createElement('div');
-                        summaryDiv.style.cssText = 'padding:10px 32px;font-size:0.82em;display:flex;gap:16px;align-items:center;';
-                        summaryDiv.innerHTML = \`<span style="font-weight:600">Latest commit (\${latestCommit.substring(0,7)}):</span>\${nReg > 0 ? \`<span style="color:#e74c3c">\u26a0 \${nReg} regressions >10%</span>\` : ''}\${nImp > 0 ? \`<span style="color:#27ae60">\u2713 \${nImp} improvements >10%</span>\` : ''}\`;
-                        container.appendChild(summaryDiv);
-                    }
-                }
 
                 const wrap = document.createElement('div');
                 wrap.className = 'heatmap-wrap';
                 const table = document.createElement('table');
                 table.className = 'heatmap-table';
+                let activeCommitPanel = null;
+                function showCommitPanel(h) {
+                    if (activeCommitPanel) { activeCommitPanel.remove(); activeCommitPanel = null; }
+                    const panelRows = sortedBenchmarks.map(([name, data]) => {
+                        const cmap = {};
+                        data.mean.commit_hashes.forEach((ch, ci) => { cmap[ch] = data.mean.y[ci]; });
+                        const v = cmap[h];
+                        if (v === undefined) return null;
+                        const isRatio = data.stats.source_type === 'report_md';
+                        const base = isNanoGroup && isRatio ? 100 : (Object.values(cmap)[0] || 1);
+                        return { name, ratio: v / base };
+                    }).filter(Boolean).sort((a, b) => b.ratio - a.ratio);
+                    const panel = document.createElement('div');
+                    panel.style.cssText = 'padding:12px 32px;font-size:0.8em;border-top:1px solid #e9e9e7;max-height:300px;overflow-y:auto;';
+                    const jv = commitJuliaMap[h] || '';
+                    panel.innerHTML = \`<div style="font-weight:700;margin-bottom:8px;">\${h.substring(0,7)}\${jv ? ' \u00b7 ' + jv : ''}<button onclick="this.closest('div').parentElement.remove()" style="margin-left:12px;background:none;border:none;cursor:pointer;font-size:1em;">\u2715</button></div>\` +
+                        panelRows.slice(0, 60).map(r => {
+                            const pct = ((r.ratio - 1) * 100).toFixed(1);
+                            const col = r.ratio > REGRESSION_THRESHOLD ? '#b91c1c' : r.ratio < (2 - REGRESSION_THRESHOLD) ? '#1e7e34' : '#555';
+                            return \`<div style="display:flex;justify-content:space-between;padding:2px 0;border-bottom:1px solid #f0f0ee;cursor:pointer;" onclick="scrollToPlot('\${r.name}')"><span style="flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="\${r.name}">\${r.name.split('/').slice(-2).join('/')}</span><span style="color:\${col};font-weight:600;margin-left:12px;flex-shrink:0;">\${pct > 0 ? '+' : ''}\${pct}%</span></div>\`;
+                        }).join('');
+                    wrap.insertAdjacentElement('beforebegin', panel);
+                    activeCommitPanel = panel;
+                }
+
                 const headerRow = \`<thead><tr><th class="heatmap-name">Benchmark</th>\${commits.map((h, i) => {
                     const jv = commitJuliaMap[h] || '';
                     const jshort = jv ? jv.replace(/^(\\d+\\.\\d+).*?(DEV\\.(\\d+))?.*\$/, (_, v, __, b) => b ? \`\${v}-d\${b}\` : v) : '';
                     const htitle = [shortCommits[i], jshort].filter(Boolean).join(' \u00b7 ');
-                    return \`<th style="writing-mode:vertical-rl;transform:rotate(180deg);font-weight:400;padding:4px 6px;font-size:0.72em;" title="\${htitle}">\${shortCommits[i]}</th>\`;
+                    return \`<th style="writing-mode:vertical-rl;transform:rotate(180deg);font-weight:400;padding:4px 6px;font-size:0.72em;cursor:pointer;" title="\${htitle}" data-commit="\${h}">\${shortCommits[i]}</th>\`;
                 }).join('')}</tr></thead>\`;
                 table.innerHTML = headerRow;
+                table.querySelectorAll('thead th[data-commit]').forEach(th => {
+                    th.addEventListener('click', () => showCommitPanel(th.dataset.commit));
+                });
 
                 const tbody = document.createElement('tbody');
 
@@ -2065,7 +2290,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                     const persistentReg = recentCommits.filter(h => {
                         const v = commitMap[h];
                         if (v === undefined) return false;
-                        return v / baseline > 1.1;
+                        return v / baseline > REGRESSION_THRESHOLD;
                     }).length >= 3;
                     const row = document.createElement('tr');
                     const cells = commits.map((h, i) => {
@@ -2078,7 +2303,7 @@ function generate_html_template(benchmarks_json, stats_json, group_name, repo_ur
                         const lt = darkMode ? (25 + sat * 0.4) : (96 - sat * 0.45);
                         const textColor = darkMode ? \`hsl(\${hue},70%,\${60 + sat * 0.3}%)\` : \`hsl(\${hue},\${Math.min(sat*2,100)}%,\${Math.max(30, 40 - sat * 0.3)}%)\`;
                         const bg = \`hsl(\${hue},\${sat}%,\${lt}%)\`;
-                        const warn = ratio > 1.2 ? '\u26a0' : '';
+                        const warn = ratio > (REGRESSION_THRESHOLD + 0.15) ? '\u26a0' : '';
                         const label = isNanoGroup
                             ? (Math.abs(ratio - 1) > 0.03 ? warn + ratio.toFixed(2) + 'x' : '')
                             : (Math.abs(+pct) > 3 ? warn + (pct > 0 ? '+' : '') + pct + '%' : '');

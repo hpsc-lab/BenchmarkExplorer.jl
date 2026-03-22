@@ -5,6 +5,12 @@ Performance benchmarking and visualization toolkit for Julia projects with persi
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Julia](https://img.shields.io/badge/Julia-1.10+-purple.svg)](https://julialang.org)
 
+The CI action automatically generates a regression badge you can embed in your README:
+
+```markdown
+![regressions](https://your-org.github.io/your-repo/benchmarks/nanosoldier-badge.svg)
+```
+
 ## Features
 
 - **Static HTML Dashboard**: Interactive benchmark pages deployed to GitHub Pages via Plotly.js

@@ -47,6 +47,11 @@ inputs:
     required: false
     default: ''
 
+  regression_threshold:
+    description: 'Ratio threshold above which a benchmark is considered a regression (default: 1.05)'
+    required: false
+    default: '1.05'
+
   github_token:
     description: 'GitHub token for pushing results'
     required: true
@@ -103,6 +108,7 @@ runs:
         BENCHMARK_GROUP: ${{ inputs.group_name }}
         GITHUB_SHA: ${{ github.sha }}
         GITHUB_TOKEN: ${{ inputs.github_token }}
+        REGRESSION_THRESHOLD: ${{ inputs.regression_threshold }}
       run: |
         julia --color=yes --project=${{ inputs.benchmark_project }} \
           ${{ github.action_path }}/ci/run_benchmarks.jl \

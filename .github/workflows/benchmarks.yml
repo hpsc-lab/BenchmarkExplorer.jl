@@ -30,6 +30,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   check-changes:
@@ -85,13 +86,12 @@ jobs:
           data_dir: 'data'
           group_name: 'trixi'
           julia_version: '1.11'
-          persist_to_branch: 'gh-pages'
-          persist_path: ''
+          persist_to_branch: ''
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
   benchmark-enzyme:
     runs-on: ubuntu-latest
-    needs: [check-changes, benchmark-trixi]
+    needs: check-changes
     if: needs.check-changes.outputs.should_run == 'true'
 
     steps:
@@ -106,13 +106,12 @@ jobs:
           data_dir: 'data'
           group_name: 'enzyme'
           julia_version: '1.11'
-          persist_to_branch: 'gh-pages'
-          persist_path: ''
+          persist_to_branch: ''
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
   benchmark-nanosoldier:
     runs-on: ubuntu-latest
-    needs: [check-changes, benchmark-enzyme]
+    needs: check-changes
     if: needs.check-changes.outputs.should_run == 'true'
 
     steps:
@@ -127,8 +126,7 @@ jobs:
           data_dir: 'data'
           group_name: 'nanosoldier'
           julia_version: '1.11'
-          persist_to_branch: 'gh-pages'
-          persist_path: ''
+          persist_to_branch: ''
           commit_base_url: 'https://github.com/JuliaLang/julia'
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -155,11 +153,19 @@ jobs:
           key: julia-${{ runner.os }}-${{ hashFiles('ci/Project.toml', 'ci/Manifest.toml') }}
           restore-keys: julia-${{ runner.os }}-
 
-      - name: Fetch all data from gh-pages
+      - name: Download benchmark artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: benchmark-data-*
+          merge-multiple: true
+          path: data
+
+      - name: Fetch existing data from gh-pages
         run: |
           git fetch origin gh-pages || true
           mkdir -p data
           git archive origin/gh-pages -- by_group 2>/dev/null | tar -x -C data || true
+          git archive origin/gh-pages -- nanosoldier_raw 2>/dev/null | tar -x -C data || true
 
       - name: Rebuild and publish
         shell: bash
@@ -170,11 +176,25 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
           julia --project=ci -e 'using Pkg; Pkg.Registry.add("General"); Pkg.instantiate()'
+
+          DATA_HASH=$(find data/by_group -name "*.json" 2>/dev/null | sort | xargs sha256sum 2>/dev/null | sha256sum | cut -d' ' -f1 || echo "")
+          PREV_HASH=$(git show origin/gh-pages:data_hash.txt 2>/dev/null || echo "")
+          if [ "$DATA_HASH" = "$PREV_HASH" ] && [ -n "$DATA_HASH" ]; then
+            echo "Data unchanged, skipping HTML generation"
+            echo "SKIP_HTML=true" >> $GITHUB_ENV
+          else
+            echo "$DATA_HASH" > /tmp/data_hash.txt
+            echo "SKIP_HTML=false" >> $GITHUB_ENV
+          fi
+
           julia --project=ci ci/rebuild_data.jl data
           julia --project=ci ci/generate_index_page.jl data /tmp/index.html \
             "${{ github.server_url }}/${{ github.repository }}" "${{ github.sha }}"
 
           mkdir -p /tmp/benchmark_html
+          if [ "$SKIP_HTML" = "true" ]; then
+            echo "Skipping HTML generation"
+          else
           julia --project=ci -e '
             include(ARGS[1])
             using JSON
@@ -190,6 +210,7 @@ jobs:
           ' -- ci/generate_static_page_plotly.jl data /tmp/benchmark_html \
             "${{ github.server_url }}/${{ github.repository }}" "${{ github.sha }}" \
             "https://github.com/JuliaLang/julia"
+          fi
 
           git fetch origin gh-pages
           git checkout gh-pages
@@ -197,9 +218,41 @@ jobs:
           cp -r data/index.json data/latest_100.json .
           cp /tmp/index.html index.html
           cp /tmp/benchmark_html/*.html . 2>/dev/null || true
+          cp /tmp/benchmark_html/*-badge.svg . 2>/dev/null || true
+          cp /tmp/benchmark_html/*-grafana.json . 2>/dev/null || true
+          cp /tmp/benchmark_html/*-alerts.json . 2>/dev/null || true
+          cp /tmp/data_hash.txt data_hash.txt 2>/dev/null || true
 
           git add -A
           git commit -m "Rebuild data and update pages" || echo "No changes"
           git push origin gh-pages
 
           git checkout -f ${{ github.sha }}
+
+      - name: Comment on PR with regression summary
+        if: github.event_name == 'pull_request'
+        shell: bash
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          REG_COUNT=$(julia --project=ci -e '
+            using JSON
+            data = isfile("data/latest_100.json") ? JSON.parsefile("data/latest_100.json") : Dict()
+            total = 0
+            for (g, gdata) in get(data, "groups", Dict())
+              for (_, bench) in get(gdata, "benchmarks", Dict())
+                r = get(bench, "time_ratio", 0.0)
+                r > 1.05 && (total += 1)
+              end
+            end
+            println(total)
+          ' 2>/dev/null || echo "0")
+
+          BODY="### Benchmark Results
+
+          **Regressions (ratio > 1.05):** ${REG_COUNT}
+
+          [View full results](https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/) · Generated by BenchmarkExplorer.jl"
+
+          gh pr comment ${{ github.event.pull_request.number }} --body "$BODY" \
+            --repo ${{ github.repository }} 2>/dev/null || true
