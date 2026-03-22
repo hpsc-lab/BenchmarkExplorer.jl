@@ -1,0 +1,16 @@
+{
+  "metadata": {
+    "head_hash": "d1dfeb6",
+    "comparison": "d1dfeb6_vs_21529a9",
+    "source": "NanosoldierReports",
+    "base_hash": "21529a9",
+    "imported_at": "2026-03-10T00:40:48.347",
+    "source_type": "report_md"
+  },
+  "benchmarks": {
+    "[\"inference\", \"allinference\", \"Base.init_stdio(::Ptr{Cvoid})\"]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "threshold": 1.05,
+  "count": 1,
+  "group": "nanosoldier_alloc",
+  "generated": "2026-03-22T15:56:04.485",
+  "alerts": [
+    {
+      "latest_mean_ms": 114.0,
+      "commit": "aebcebc",
+      "ratio": 1.14,
+      "timestamp": "2026-03-10T23:30:21.284",
+      "benchmark": "alloc/structs",
+      "group": "nanosoldier_alloc",
+      "trend": "stable"
+    }
+  ]
+}

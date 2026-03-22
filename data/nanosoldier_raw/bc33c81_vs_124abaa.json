@@ -1,0 +1,23 @@
+{
+  "metadata": {
+    "head_hash": "bc33c81",
+    "comparison": "bc33c81_vs_124abaa",
+    "julia_version": "1.10.0-DEV.905",
+    "source": "NanosoldierReports",
+    "base_hash": "124abaa",
+    "imported_at": "2026-03-12T10:35:21.700",
+    "source_type": "data_zst"
+  },
+  "benchmarks": {
+    "problem/json/parse_json": {
+      "max_time_ns": 1.2102562926474158e6,
+      "allocs": 20516,
+      "min_time_ns": 1.116583e6,
+      "mean_time_ns": 1.2102562926474158e6,
+      "samples": 1,
+      "std_time_ns": 1.8078187985901725e6,
+      "median_time_ns": 1.147804e6,
+      "memory_bytes": 552704
+    }
+  }
+}

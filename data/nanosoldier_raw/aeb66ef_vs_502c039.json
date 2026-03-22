@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "head_hash": "aeb66ef",
+    "comparison": "aeb66ef_vs_502c039",
+    "source": "NanosoldierReports",
+    "base_hash": "502c039",
+    "imported_at": "2026-03-10T23:30:21.561",
+    "source_type": "report_md"
+  },
+  "benchmarks": {
+    "[\"union\", \"array\", \"(\\\"broadcast\\\", identity, Int64, true)\"]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"broadcast\", \"mix_scalar_tuple\", \"(10, \\\"tup_tup\\\")\"]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"broadcast\\\", abs, BigFloat, false)\"]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"broadcast\\\", identity, ComplexF64, false)\"]": {
+      "time_ratio": 1.11,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"broadcast\\\", identity, BigFloat, false)\"]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"broadcast\", \"mix_scalar_tuple\", \"(5, \\\"scal_tup_x3\\\")\"]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"broadcast\\\", identity, Float32, true)\"]": {
+      "time_ratio": 1.12,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"broadcast\\\", *, BigInt, (false, false))\"]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"broadcast\\\", *, Bool, (false, true))\"]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"broadcast\\\", identity, BigInt, false)\"]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"broadcast\\\", abs, Float64, false)\"]": {
+      "time_ratio": 1.23,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"broadcast\\\", *, Int64, (false, false))\"]": {
+      "time_ratio": 0.85,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"broadcast\\\", abs, Bool, true)\"]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"broadcast\\\", *, Int64, (false, true))\"]": {
+      "time_ratio": 1.13,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"broadcast\\\", *, Bool, (true, true))\"]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", \"(\\\"broadcast\\\", *, Int64, (true, true))\"]": {
+      "time_ratio": 1.15,
+      "memory_ratio": 1.0
+    }
+  }
+}

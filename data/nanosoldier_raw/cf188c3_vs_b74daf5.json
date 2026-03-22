@@ -1,0 +1,2492 @@
+{
+  "metadata": {
+    "head_hash": "cf188c3",
+    "comparison": "cf188c3_vs_b74daf5",
+    "source": "NanosoldierReports",
+    "base_hash": "b74daf5",
+    "imported_at": "2026-03-10T00:40:51.209",
+    "source_type": "report_md"
+  },
+  "benchmarks": {
+    "[\"array\", \"growth\", (\"push_single!\", 8)]": {
+      "time_ratio": 0.66,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"A_mul_Bc\", \"dense 50x50, sparse 50x50 -> dense 50x50\")]": {
+      "time_ratio": 1.3,
+      "memory_ratio": 1.0
+    },
+    "[\"linalg\", \"arithmetic\", (\"-\", \"typename(Diagonal)\", \"typename(Diagonal)\", 256)]": {
+      "time_ratio": 1.23,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_simplecopy\", \"Float32\", 0)]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"growth\", (\"append!\", 8)]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"A_mul_B\", \"sparse 50x500, dense 500x5 -> dense 50x5\")]": {
+      "time_ratio": 1.17,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumcartesian\", \"Matrix{Int32}\")]": {
+      "time_ratio": 6.27,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum3\", \"BigInt\", 0)]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"index\", (\"spmat\", \"row\", \"logical\", 100)]": {
+      "time_ratio": 0.84,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"CartesianPartition\", \"conditional_loop!\", \"Int64\", 2, 32)]": {
+      "time_ratio": 0.71,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"equality\", (\"isequal\", \"Vector{Int64} isequal Vector{Int64}\")]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", \"5d\"]": {
+      "time_ratio": 1.49,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"Ac_mul_B!\", \"dense 200x200, sparse 200x20 -> dense 200x20\")]": {
+      "time_ratio": 1.35,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"eachindex\", \"Float64\", 0)]": {
+      "time_ratio": 0.36,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"any/all\", (\"any\", \"Vector{Int16}\")]": {
+      "time_ratio": 0.81,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"constructors\", (\"Diagonal\", 10)]": {
+      "time_ratio": 0.84,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"index\", (\"spmat\", \"splogical\", 100)]": {
+      "time_ratio": 0.77,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_simplecopy\", \"BigFloat\", 0)]": {
+      "time_ratio": 1.2,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"keys\", \"Union{Nothing, BigInt}\", 0)]": {
+      "time_ratio": 0.35,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"collect\", \"filter\", \"Float32\", 0)]": {
+      "time_ratio": 0.4,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumeach\", \"BaseBenchmarks.ArrayBenchmarks.ArrayLSLS{Int32, 2}\")]": {
+      "time_ratio": 6.25,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Cartesian\", \"conditional_loop!\", \"Int32\", 3, 63)]": {
+      "time_ratio": 1.27,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"A_mul_Bc\", \"dense 50x5, sparse 50x5 -> dense 50x50\")]": {
+      "time_ratio": 1.32,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"collect\", \"filter\", \"Float32\", 1)]": {
+      "time_ratio": 0.29,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumlogical_view\", \"SubArray{Int32, 2, Matrix{Int32}, Tuple{Base.Slice{Base.OneTo{Int64}}, Base.Slice{Base.OneTo{Int64}}}, true}\")]": {
+      "time_ratio": 1.02,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumlinear_view\", \"Array{Float64, 3}\")]": {
+      "time_ratio": 0.04,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"BitSet\", \"Int\", \"union\")]": {
+      "time_ratio": 0.89,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumcolon\", \"Matrix{Float64}\")]": {
+      "time_ratio": 1.16,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_simplecopy\", \"Bool\", 0)]": {
+      "time_ratio": 1.22,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumrange\", \"SubArray{Float32, 2, BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32, 3}, Tuple{Int64, Base.Slice{Base.OneTo{Int64}}, Base.Slice{Base.OneTo{Int64}}}, false}\")]": {
+      "time_ratio": 0.75,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumlogical_view\", \"SubArray{Float32, 2, Matrix{Float32}, Tuple{UnitRange{Int64}, UnitRange{Int64}}, false}\")]": {
+      "time_ratio": 1.01,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumvector_view\", \"SubArray{Float32, 2, Base.ReshapedArray{Float32, 2, SubArray{Float32, 3, Array{Float32, 3}, Tuple{Base.Slice{Base.OneTo{Int64}}, Base.Slice{Base.OneTo{Int64}}, Base.Slice{Base.OneTo{Int64}}}, true}, Tuple{}}, Tuple{Base.Slice{Base.OneTo{Int64}}, UnitRange{Int64}}, true}\")]": {
+      "time_ratio": 5.39,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"abs\", \"Int64\", 0)]": {
+      "time_ratio": 1.15,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumrange\", \"SubArray{Int32, 2, Matrix{Int32}, Tuple{UnitRange{Int64}, UnitRange{Int64}}, false}\")]": {
+      "time_ratio": 0.71,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"collect\", \"Int64\", 0)]": {
+      "time_ratio": 0.39,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumlogical_view\", \"SubArray{Float32, 2, Array{Float32, 3}, Tuple{Int64, Base.Slice{Base.OneTo{Int64}}, Base.Slice{Base.OneTo{Int64}}}, true}\")]": {
+      "time_ratio": 0.99,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumlogical_view\", \"BaseBenchmarks.ArrayBenchmarks.ArrayLSLS{Int32, 2}\")]": {
+      "time_ratio": 0.97,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumvector_view\", \"Matrix{Int32}\")]": {
+      "time_ratio": 3.78,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"subarray\", (\"lucompletepivSub!\", 500)]": {
+      "time_ratio": 1.42,
+      "memory_ratio": 1.0
+    },
+    "[\"broadcast\", \"typeargs\", (\"array\", 3)]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_binaryop\", \"*\", \"Float64\", \"(false, false)\")]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"broadcast\", \"dotop\", (\"Float64\", \"(1000000,)\", 1)]": {
+      "time_ratio": 0.89,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumvector_view\", \"Matrix{Float64}\")]": {
+      "time_ratio": 3.89,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumlogical\", \"Matrix{Int64}\")]": {
+      "time_ratio": 0.99,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"A_mul_Bc\", \"sparse 5x50, dense 50x50 -> dense 5x50\")]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumrange\", \"Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}, 2, Int32, Matrix{Int32}, false}\")]": {
+      "time_ratio": 0.6,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumrange\", \"SubArray{Float32, 2, Matrix{Float32}, Tuple{Base.Slice{Base.OneTo{Int64}}, Base.Slice{Base.OneTo{Int64}}}, true}\")]": {
+      "time_ratio": 0.71,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_simplecopy\", \"Float32\", 1)]": {
+      "time_ratio": 1.24,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"cat\", (\"vcat\", 5)]": {
+      "time_ratio": 1.0,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumcolon\", \"SubArray{Int32, 2, Matrix{Int32}, Tuple{Base.Slice{Base.OneTo{Int64}}, Base.Slice{Base.OneTo{Int64}}}, true}\")]": {
+      "time_ratio": 0.71,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"keys\", \"Float32\", 0)]": {
+      "time_ratio": 0.36,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"A_mul_Bc\", \"dense 5x50, sparse 500x50 -> dense 5x500\")]": {
+      "time_ratio": 1.34,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"*\", \"Int64\", \"(false, false)\")]": {
+      "time_ratio": 1.21,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumvector_view\", \"Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}, 2, Int32, Matrix{Int32}, false}\")]": {
+      "time_ratio": 1.51,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"constructors\", (\"Bidiagonal\", 100)]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"At_mul_B\", \"sparse 500x50, dense 500x5 -> dense 50x5\")]": {
+      "time_ratio": 0.96,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"A_mul_Bc\", \"dense 50x50, sparse 5x50 -> dense 50x5\")]": {
+      "time_ratio": 1.33,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumcolon\", \"SubArray{Int32, 2, Matrix{Int32}, Tuple{UnitRange{Int64}, UnitRange{Int64}}, false}\")]": {
+      "time_ratio": 0.66,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"growth\", (\"push_single!\", 256)]": {
+      "time_ratio": 0.68,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_binaryop\", \"*\", \"Float32\", \"(true, true)\")]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"mapr_access\", \"Base.ReinterpretArray{Float32, 2, Int32, Matrix{Int32}, false}\")]": {
+      "time_ratio": 2.42,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Vector\", \"Int\", \"union\", \"BitSet\", \"BitSet\")]": {
+      "time_ratio": 0.86,
+      "memory_ratio": 1.0
+    },
+    "[\"linalg\", \"arithmetic\", (\"+\", \"typename(Bidiagonal)\", \"typename(Bidiagonal)\", 256)]": {
+      "time_ratio": 1.21,
+      "memory_ratio": 1.0
+    },
+    "[\"linalg\", \"arithmetic\", (\"\\\\\", \"typename(UpperTriangular)\", \"Vector\", 256)]": {
+      "time_ratio": 1.02,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"abs\", \"Float64\", 1)]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"broadcast\", \"typeargs\", (\"array\", 5)]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"identity\", \"BigInt\", 0)]": {
+      "time_ratio": 1.23,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_binaryop\", \"*\", \"Float32\", \"(false, true)\")]": {
+      "time_ratio": 1.13,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"eachindex\", \"Union{Nothing, Float32}\", 0)]": {
+      "time_ratio": 0.36,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"accumulate\", (\"cumsum!\", \"Int\")]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"perf_sumskipmissing\", \"Union{Nothing, ComplexF64}\", 0)]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"eachindex\", \"Union{Missing, Int64}\", 1)]": {
+      "time_ratio": 0.42,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumrange\", \"Matrix{Int32}\")]": {
+      "time_ratio": 0.62,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumcolon\", \"BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32, 2}\")]": {
+      "time_ratio": 0.7,
+      "memory_ratio": 1.0
+    },
+    "[\"linalg\", \"arithmetic\", (\"\\\\\", \"typename(LowerTriangular)\", \"Vector\", 256)]": {
+      "time_ratio": 1.01,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumlogical_view\", \"SubArray{Int32, 2, Array{Int32, 3}, Tuple{Int64, Base.Slice{Base.OneTo{Int64}}, Base.Slice{Base.OneTo{Int64}}}, true}\")]": {
+      "time_ratio": 1.01,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"*\", \"Int8\", \"(true, true)\")]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"keys\", \"BigFloat\", 0)]": {
+      "time_ratio": 0.37,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"*\", \"ComplexF64\", \"(true, true)\")]": {
+      "time_ratio": 1.16,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumeach_view\", \"Matrix{Float32}\")]": {
+      "time_ratio": 0.04,
+      "memory_ratio": 1.0
+    },
+    "[\"linalg\", \"arithmetic\", (\"+\", \"typename(SymTridiagonal)\", \"typename(SymTridiagonal)\", 256)]": {
+      "time_ratio": 1.11,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"cat\", (\"vcat_setind\", 5)]": {
+      "time_ratio": 1.01,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumcartesian\", \"Matrix{Int64}\")]": {
+      "time_ratio": 3.29,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"collect\", \"Union{Missing, BigFloat}\", 1)]": {
+      "time_ratio": 0.61,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"keys\", \"Union{Missing, Float64}\", 1)]": {
+      "time_ratio": 0.42,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"A_mul_Bt\", \"dense 5x500, sparse 50x500 -> dense 5x50\")]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_countequals\", \"BigInt\")]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"subarray\", (\"lucompletepivSub!\", 250)]": {
+      "time_ratio": 1.41,
+      "memory_ratio": 1.0
+    },
+    "[\"linalg\", \"arithmetic\", (\"*\", \"typename(Diagonal)\", \"Vector\", 256)]": {
+      "time_ratio": 1.27,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"collect\", \"filter\", \"Int64\", 0)]": {
+      "time_ratio": 0.43,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"constructors\", (\"Tridiagonal\", 10)]": {
+      "time_ratio": 0.85,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_binaryop\", \"*\", \"ComplexF64\", \"(true, true)\")]": {
+      "time_ratio": 1.12,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"eachindex\", \"Union{Missing, Float64}\", 1)]": {
+      "time_ratio": 0.41,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"cat\", (\"catnd_setind\", 5)]": {
+      "time_ratio": 0.89,
+      "memory_ratio": 1.0
+    },
+    "[\"linalg\", \"arithmetic\", (\"\\\\\", \"typename(Diagonal)\", \"Vector\", 256)]": {
+      "time_ratio": 1.14,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Linear\", \"loop_fields!\", \"Float64\", \"BaseBenchmarks.SIMDBenchmarks.ImmutableFields\", 4095)]": {
+      "time_ratio": 2.5,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"eachindex\", \"Union{Nothing, BigInt}\", 0)]": {
+      "time_ratio": 0.37,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumlogical_view\", \"SubArray{Float32, 2, BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32, 3}, Tuple{Int64, Base.Slice{Base.OneTo{Int64}}, Base.Slice{Base.OneTo{Int64}}}, false}\")]": {
+      "time_ratio": 0.97,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"filter\", \"Union{Nothing, Bool}\", 0)]": {
+      "time_ratio": 0.63,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"*\", \"Float64\", \"(false, false)\")]": {
+      "time_ratio": 1.16,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"eachindex\", \"Int64\", 0)]": {
+      "time_ratio": 0.36,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"index\", (\"spvec\", \"logical\", 1000)]": {
+      "time_ratio": 1.0,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"*\", \"Float32\", \"(false, true)\")]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"collect\", \"filter\", \"Float64\", 1)]": {
+      "time_ratio": 9.03,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"sort\", \"Union{Nothing, Bool}\", 0)]": {
+      "time_ratio": 1.4,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"convert\", (\"Float64\", \"Int\")]": {
+      "time_ratio": 2.46,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"bool\", \"bitarray_bool_load!\"]": {
+      "time_ratio": 1.4,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"mapr_access\", \"SubArray{Float32, 2, BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32, 3}, Tuple{Int64, Base.Slice{Base.OneTo{Int64}}, Base.Slice{Base.OneTo{Int64}}}, false}\")]": {
+      "time_ratio": 7.97,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"equality\", (\"isequal\", \"Vector{Bool}\")]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"growth\", (\"push_multiple!\", 8)]": {
+      "time_ratio": 0.41,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumcartesian\", \"BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32, 2}\")]": {
+      "time_ratio": 6.26,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"collect\", \"filter\", \"Int64\", 1)]": {
+      "time_ratio": 0.33,
+      "memory_ratio": 1.0
+    },
+    "[\"broadcast\", \"sparse\", (\"(1000, 1000)\", 2)]": {
+      "time_ratio": 1.48,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_binaryop\", \"*\", \"ComplexF64\", \"(false, false)\")]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"collect\", \"Union{Missing, BigInt}\", 1)]": {
+      "time_ratio": 0.61,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"collect\", \"Union{Nothing, Int8}\", 0)]": {
+      "time_ratio": 0.23,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Cartesian\", \"conditional_loop!\", \"Int32\", 2, 31)]": {
+      "time_ratio": 0.77,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"mapr_access\", \"BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32, 2}\")]": {
+      "time_ratio": 3.13,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"BitSet\", \"Int\", \"union\", \"Vector\", \"Vector\")]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"mapr_access\", \"BaseBenchmarks.ArrayBenchmarks.ArrayLSLS{Int32, 2}\")]": {
+      "time_ratio": 3.13,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"collect\", \"all\", \"Bool\", 0)]": {
+      "time_ratio": 1.13,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"any/all\", (\"all\", \"Vector{Int64} generator\")]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumlogical_view\", \"Matrix{Float32}\")]": {
+      "time_ratio": 0.99,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"*\", \"Bool\", \"(false, false)\")]": {
+      "time_ratio": 1.22,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"*\", \"Float32\", \"(false, false)\")]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"sum\", \"Union{Nothing, Int64}\", 0)]": {
+      "time_ratio": 1.19,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumcolon\", \"SubArray{Int32, 2, BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32, 2}, Tuple{Base.Slice{Base.OneTo{Int64}}, Base.Slice{Base.OneTo{Int64}}}, false}\")]": {
+      "time_ratio": 0.71,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumrange\", \"Matrix{Int64}\")]": {
+      "time_ratio": 1.11,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"growth\", (\"prerend!\", 8)]": {
+      "time_ratio": 0.81,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"mapr_access\", \"SubArray{Int32, 2, Matrix{Int32}, Tuple{Base.Slice{Base.OneTo{Int64}}, Base.Slice{Base.OneTo{Int64}}}, true}\")]": {
+      "time_ratio": 4.01,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum3\", \"Int64\", 0)]": {
+      "time_ratio": 1.11,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"cat\", (\"hcat_setind\", 5)]": {
+      "time_ratio": 1.04,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_binaryop\", \"*\", \"Bool\", \"(false, false)\")]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_binaryop\", \"*\", \"Int8\", \"(false, true)\")]": {
+      "time_ratio": 1.15,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"At_mul_B\", \"dense 500x5, sparse 500x50 -> dense 5x50\")]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"eachindex\", \"Union{Nothing, Int64}\", 0)]": {
+      "time_ratio": 0.36,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"perf_sumskipmissing\", \"Union{Missing, Float32}\", 1)]": {
+      "time_ratio": 0.82,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"mapr_access\", \"SubArray{Int32, 2, BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32, 2}, Tuple{Base.Slice{Base.OneTo{Int64}}, Base.Slice{Base.OneTo{Int64}}}, false}\")]": {
+      "time_ratio": 3.82,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"sort\", \"Union{Nothing, Int8}\", 0)]": {
+      "time_ratio": 1.41,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_simplecopy\", \"BigInt\", 0)]": {
+      "time_ratio": 1.14,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_simplecopy\", \"Int64\", 1)]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"linalg\", \"arithmetic\", (\"\\\\\", \"typename(Diagonal)\", \"typename(Diagonal)\", 256)]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"abs\", \"Bool\", 1)]": {
+      "time_ratio": 1.15,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumeach_view\", \"Matrix{Float64}\")]": {
+      "time_ratio": 0.04,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumlinear_view\", \"Matrix{Float64}\")]": {
+      "time_ratio": 0.04,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"index\", (\"spmat\", \"row\", \"OneTo\", 100)]": {
+      "time_ratio": 0.86,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"*\", \"Int8\", \"(false, true)\")]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_simplecopy\", \"Bool\", 1)]": {
+      "time_ratio": 1.33,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumcolon\", \"Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Float32}, 2, Float32, Matrix{Float32}, false}\")]": {
+      "time_ratio": 0.62,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"perf_sumskipmissing\", \"Union{Nothing, BigInt}\", 0)]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"sort\", \"Union{Nothing, BigFloat}\", 0)]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"equality\", (\"==\", \"Vector{Int64} == Vector{Int16}\")]": {
+      "time_ratio": 0.88,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumvector_view\", \"SubArray{Int32, 2, Array{Int32, 3}, Tuple{Int64, Base.Slice{Base.OneTo{Int64}}, Base.Slice{Base.OneTo{Int64}}}, true}\")]": {
+      "time_ratio": 3.29,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"setindex!\", (\"setindex!\", 1)]": {
+      "time_ratio": 1.16,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"identity\", \"Float32\", 0)]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumcolon\", \"SubArray{Float32, 2, Matrix{Float32}, Tuple{UnitRange{Int64}, UnitRange{Int64}}, false}\")]": {
+      "time_ratio": 0.62,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"mapr_access\", \"Matrix{Int64}\")]": {
+      "time_ratio": 4.17,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"collect\", \"filter\", \"Bool\", 1)]": {
+      "time_ratio": 0.29,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"collect\", \"BigInt\", 0)]": {
+      "time_ratio": 0.55,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_binaryop\", \"*\", \"Int64\", \"(false, true)\")]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"index\", (\"spmat\", \"row\", \"OneTo\", 10)]": {
+      "time_ratio": 0.69,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"accumulate\", (\"cumsum\", \"Float64\")]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", \"3d\"]": {
+      "time_ratio": 1.59,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"identity\", \"Int8\", 1)]": {
+      "time_ratio": 1.21,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_simplecopy\", \"Int8\", 0)]": {
+      "time_ratio": 1.21,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"collect\", \"filter\", \"BigFloat\", 1)]": {
+      "time_ratio": 0.63,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"CartesianPartition\", \"manual_example!\", \"Int64\", 3, 32)]": {
+      "time_ratio": 0.72,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"identity\", \"Int8\", 0)]": {
+      "time_ratio": 0.85,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"eachindex\", \"Int8\", 0)]": {
+      "time_ratio": 0.36,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"A_mul_B\", \"dense 50x50, sparse 50x5 -> dense 50x5\")]": {
+      "time_ratio": 0.72,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"*\", \"Float64\", \"(false, true)\")]": {
+      "time_ratio": 1.15,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"At_mul_B\", \"dense 50x50, sparse 50x5 -> dense 50x5\")]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"A_mul_Bc\", \"sparse 50x500, dense 5x500 -> dense 50x5\")]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"abs\", \"Bool\", 1)]": {
+      "time_ratio": 1.19,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Vector\", \"Int\", \"union\", \"Set\", \"Set\")]": {
+      "time_ratio": 0.87,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"eachindex\", \"Union{Missing, BigFloat}\", 1)]": {
+      "time_ratio": 0.4,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"collect\", \"Int8\", 0)]": {
+      "time_ratio": 0.26,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"collect\", \"all\", \"BigFloat\", 0)]": {
+      "time_ratio": 1.21,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"*\", \"Int64\", \"(false, true)\")]": {
+      "time_ratio": 1.24,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"index\", (\"spmat\", \"col\", \"array\", 100)]": {
+      "time_ratio": 0.99,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"filter\", \"Union{Nothing, BigInt}\", 0)]": {
+      "time_ratio": 0.88,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"any/all\", (\"any\", \"Vector{Bool}\")]": {
+      "time_ratio": 0.81,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumcolon\", \"Base.ReinterpretArray{Float32, 2, Int32, Matrix{Int32}, false}\")]": {
+      "time_ratio": 0.7,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"collect\", \"Union{Nothing, Float64}\", 0)]": {
+      "time_ratio": 0.35,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"keys\", \"Float64\", 0)]": {
+      "time_ratio": 0.37,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"filter\", \"Union{Nothing, Int8}\", 0)]": {
+      "time_ratio": 0.59,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumrange\", \"BaseBenchmarks.ArrayBenchmarks.ArrayLSLS{Float32, 2}\")]": {
+      "time_ratio": 0.69,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"keys\", \"Union{Nothing, BigFloat}\", 0)]": {
+      "time_ratio": 0.37,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumcolon\", \"Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}, 2, Int64, Matrix{Int64}, false}\")]": {
+      "time_ratio": 1.11,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumrange\", \"Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Float32}, 2, Float32, Matrix{Float32}, false}\")]": {
+      "time_ratio": 0.6,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"constructors\", (\"Diagonal\", 1000)]": {
+      "time_ratio": 1.11,
+      "memory_ratio": 1.0
+    },
+    "[\"linalg\", \"factorization\", (\"lu\", \"typename(Tridiagonal)\", 256)]": {
+      "time_ratio": 1.16,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"eachindex\", \"Union{Missing, Int8}\", 1)]": {
+      "time_ratio": 0.41,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumcartesian\", \"BaseBenchmarks.ArrayBenchmarks.ArrayLSLS{Int32, 2}\")]": {
+      "time_ratio": 6.26,
+      "memory_ratio": 1.0
+    },
+    "[\"linalg\", \"arithmetic\", (\"*\", \"typename(UpperTriangular)\", \"Vector\", 256)]": {
+      "time_ratio": 1.02,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"collect\", \"all\", \"Int8\", 0)]": {
+      "time_ratio": 1.13,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"filter\", \"Union{Missing, Float32}\", 1)]": {
+      "time_ratio": 0.67,
+      "memory_ratio": 1.0
+    },
+    "[\"linalg\", \"small exp #29116\"]": {
+      "time_ratio": 1.02,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumrange\", \"Matrix{Float32}\")]": {
+      "time_ratio": 0.63,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"reductions\", (\"sumabs2\", \"Float64\")]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Linear\", \"loop_fields!\", \"Int32\", \"BaseBenchmarks.SIMDBenchmarks.ImmutableFields\", 4095)]": {
+      "time_ratio": 3.6,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"constructors\", (\"IJV\", 1000)]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_binaryop\", \"*\", \"Int64\", \"(false, false)\")]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"collect\", \"filter\", \"Int8\", 0)]": {
+      "time_ratio": 0.36,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"collect\", \"Union{Missing, Int64}\", 1)]": {
+      "time_ratio": 0.45,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"eachindex\", \"Union{Nothing, BigFloat}\", 0)]": {
+      "time_ratio": 0.38,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum2\", \"BigInt\", 0)]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"mapr_access\", \"BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32, 2}\")]": {
+      "time_ratio": 5.51,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumrange\", \"BaseBenchmarks.ArrayBenchmarks.ArrayLSLS{Int32, 2}\")]": {
+      "time_ratio": 0.72,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"collect\", \"BigFloat\", 0)]": {
+      "time_ratio": 0.55,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"filter\", \"Union{Nothing, Float32}\", 0)]": {
+      "time_ratio": 0.61,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"A_mul_Bc\", \"dense 500x5, sparse 5x5 -> dense 500x5\")]": {
+      "time_ratio": 1.4,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"collect\", \"Union{Nothing, ComplexF64}\", 0)]": {
+      "time_ratio": 0.52,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"keys\", \"Int8\", 0)]": {
+      "time_ratio": 0.36,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumvector_view\", \"Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}, 2, Int64, Matrix{Int64}, false}\")]": {
+      "time_ratio": 1.51,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"identity\", \"Bool\", 0)]": {
+      "time_ratio": 1.13,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"collect\", \"Union{Missing, Bool}\", 1)]": {
+      "time_ratio": 0.39,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"A_mul_Bc!\", \"dense 200x200, sparse 20x200 -> dense 200x20\")]": {
+      "time_ratio": 1.46,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"BitSet\", \"Int\", \"union\", \"BitSet\", \"BitSet\")]": {
+      "time_ratio": 1.11,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"filter\", \"Union{Nothing, Int64}\", 0)]": {
+      "time_ratio": 0.61,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"keys\", \"Union{Missing, Int8}\", 1)]": {
+      "time_ratio": 0.41,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"growth\", (\"push_multiple!\", 2048)]": {
+      "time_ratio": 0.32,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"Ac_mul_B\", \"sparse 500x50, dense 500x5 -> dense 50x5\")]": {
+      "time_ratio": 0.98,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumcolon\", \"BaseBenchmarks.ArrayBenchmarks.ArrayLSLS{Float32, 2}\")]": {
+      "time_ratio": 0.7,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumeach_view\", \"Matrix{Int32}\")]": {
+      "time_ratio": 0.02,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumcolon\", \"Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}, 2, Int32, Matrix{Int32}, false}\")]": {
+      "time_ratio": 0.6,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"collect\", \"filter\", \"Float64\", 0)]": {
+      "time_ratio": 14.47,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"bool\", \"bitarray_true_load!\"]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"filter\", \"Union{Missing, Int8}\", 1)]": {
+      "time_ratio": 0.74,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumlogical_view\", \"Matrix{Int32}\")]": {
+      "time_ratio": 1.0,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumrange\", \"SubArray{Float32, 2, BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32, 2}, Tuple{Base.Slice{Base.OneTo{Int64}}, Base.Slice{Base.OneTo{Int64}}}, false}\")]": {
+      "time_ratio": 0.7,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"equality\", (\"isequal\", \"Vector{Float64}\")]": {
+      "time_ratio": 1.17,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"eachindex\", \"Float32\", 0)]": {
+      "time_ratio": 0.37,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumrange\", \"Matrix{Float64}\")]": {
+      "time_ratio": 1.12,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"accumulate\", (\"accumulate\", \"Int\")]": {
+      "time_ratio": 1.16,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumcolon\", \"BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32, 2}\")]": {
+      "time_ratio": 0.71,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"index\", (\"spmat\", \"row\", \"logical\", 10)]": {
+      "time_ratio": 0.73,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"At_mul_Bt!\", \"dense 400x40, sparse 4000x400 -> dense 40x4000\")]": {
+      "time_ratio": 0.69,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", \"7d\"]": {
+      "time_ratio": 1.71,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_binaryop\", \"*\", \"ComplexF64\", \"(false, true)\")]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"collect\", \"Union{Nothing, Bool}\", 0)]": {
+      "time_ratio": 0.23,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"keys\", \"Union{Missing, Float32}\", 1)]": {
+      "time_ratio": 0.42,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"sort\", \"Union{Missing, Int8}\", 1)]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Linear\", \"loop_fields!\", \"Float64\", \"BaseBenchmarks.SIMDBenchmarks.MutableFields\", 4095)]": {
+      "time_ratio": 2.49,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"*\", \"Bool\", \"(false, false)\")]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"BitSet\", \"Int\", \"union\", \"Set\")]": {
+      "time_ratio": 0.9,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"A_mul_Bc!\", \"dense 200x200, sparse 200x200 -> dense 200x200\")]": {
+      "time_ratio": 1.45,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"keys\", \"Union{Nothing, Int64}\", 0)]": {
+      "time_ratio": 0.37,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"growth\", (\"push_single!\", 2048)]": {
+      "time_ratio": 0.62,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"mapr_access\", \"SubArray{Float32, 2, BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32, 2}, Tuple{Base.Slice{Base.OneTo{Int64}}, Base.Slice{Base.OneTo{Int64}}}, false}\")]": {
+      "time_ratio": 6.27,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"subarray\", (\"lucompletepivSub!\", 100)]": {
+      "time_ratio": 1.38,
+      "memory_ratio": 1.0
+    },
+    "[\"linalg\", \"arithmetic\", (\"+\", \"typename(Tridiagonal)\", \"typename(Tridiagonal)\", 256)]": {
+      "time_ratio": 1.31,
+      "memory_ratio": 1.0
+    },
+    "[\"linalg\", \"arithmetic\", (\"*\", \"typename(LowerTriangular)\", \"Vector\", 256)]": {
+      "time_ratio": 1.02,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"growth\", (\"prerend!\", 256)]": {
+      "time_ratio": 0.49,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Vector\", \"Int\", \"union\", \"Vector\")]": {
+      "time_ratio": 0.86,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumelt_boundscheck\", \"SubArray{Int32, 2, Base.ReshapedArray{Int32, 2, SubArray{Int32, 3, Array{Int32, 3}, Tuple{Base.Slice{Base.OneTo{Int64}}, Base.Slice{Base.OneTo{Int64}}, Base.Slice{Base.OneTo{Int64}}}, true}, Tuple{}}, Tuple{Base.Slice{Base.OneTo{Int64}}, UnitRange{Int64}}, true}\")]": {
+      "time_ratio": 7.36,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"CartesianPartition\", \"conditional_loop!\", \"Int32\", 2, 64)]": {
+      "time_ratio": 0.69,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"A_mul_Bc!\", \"dense 200x20, sparse 200x20 -> dense 200x200\")]": {
+      "time_ratio": 1.47,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"*\", \"Float64\", \"(false, true)\")]": {
+      "time_ratio": 1.31,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"collect\", \"filter\", \"BigInt\", 0)]": {
+      "time_ratio": 0.65,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum\", \"BigInt\", 0)]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumlogical\", \"Matrix{Float64}\")]": {
+      "time_ratio": 0.98,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumrange\", \"BaseBenchmarks.ArrayBenchmarks.ArrayLF{Float32, 2}\")]": {
+      "time_ratio": 0.69,
+      "memory_ratio": 1.0
+    },
+    "[\"problem\", \"laplacian\", \"laplace_iter_devec\"]": {
+      "time_ratio": 1.79,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"*\", \"Float32\", \"(false, true)\")]": {
+      "time_ratio": 1.2,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"collect\", \"Union{Missing, Int8}\", 1)]": {
+      "time_ratio": 0.39,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"filter\", \"Union{Missing, Bool}\", 1)]": {
+      "time_ratio": 0.74,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"keys\", \"ComplexF64\", 0)]": {
+      "time_ratio": 0.36,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"any/all\", (\"all\", \"Vector{Int16}\")]": {
+      "time_ratio": 0.81,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Linear\", \"loop_fields!\", \"Float32\", \"BaseBenchmarks.SIMDBenchmarks.MutableFields\", 4096)]": {
+      "time_ratio": 3.86,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumrange\", \"Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}, 2, Int64, Matrix{Int64}, false}\")]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"cat\", (\"catnd_setind\", 500)]": {
+      "time_ratio": 0.82,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"constructors\", (\"SymTridiagonal\", 100)]": {
+      "time_ratio": 1.38,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum3\", \"Int8\", 1)]": {
+      "time_ratio": 1.33,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"collect\", \"ComplexF64\", 0)]": {
+      "time_ratio": 0.55,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"equality\", (\"isequal\", \"Vector{Int64} isequal Vector{Int16}\")]": {
+      "time_ratio": 0.88,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"equality\", (\"isequal\", \"Vector{Float32}\")]": {
+      "time_ratio": 1.16,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"filter\", \"Union{Missing, Float64}\", 1)]": {
+      "time_ratio": 0.72,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"any/all\", (\"any\", \"Vector{Int64}\")]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumcolon\", \"Matrix{Int32}\")]": {
+      "time_ratio": 0.64,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"constructors\", (\"Tridiagonal\", 100)]": {
+      "time_ratio": 1.47,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"BitSet\", \"Int\", \"union\", \"Vector\")]": {
+      "time_ratio": 1.01,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"Ac_mul_B\", \"dense 500x5, sparse 500x50 -> dense 5x50\")]": {
+      "time_ratio": 1.32,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"collect\", \"Union{Nothing, BigFloat}\", 0)]": {
+      "time_ratio": 0.67,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"sort\", \"Union{Nothing, Float64}\", 0)]": {
+      "time_ratio": 1.11,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"Ac_mul_B!\", \"dense 20x20, sparse 20x2000 -> dense 20x2000\")]": {
+      "time_ratio": 1.56,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumeach_view\", \"Matrix{Int64}\")]": {
+      "time_ratio": 0.02,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"perf_sumskipmissing\", \"Union{Missing, Int64}\", 1)]": {
+      "time_ratio": 0.73,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumcolon\", \"SubArray{Int32, 2, BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32, 3}, Tuple{Int64, Base.Slice{Base.OneTo{Int64}}, Base.Slice{Base.OneTo{Int64}}}, false}\")]": {
+      "time_ratio": 0.76,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumcolon\", \"BaseBenchmarks.ArrayBenchmarks.ArrayLSLS{Int32, 2}\")]": {
+      "time_ratio": 0.72,
+      "memory_ratio": 1.0
+    },
+    "[\"linalg\", \"arithmetic\", (\"*\", \"typename(Diagonal)\", \"typename(Diagonal)\", 256)]": {
+      "time_ratio": 1.18,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumcolon\", \"BaseBenchmarks.ArrayBenchmarks.ArrayLF{Int32, 2}\")]": {
+      "time_ratio": 0.7,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumlogical_view\", \"Matrix{Int64}\")]": {
+      "time_ratio": 1.01,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Vector\", \"Int\", \"union\", \"BitSet\")]": {
+      "time_ratio": 0.87,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"mapr_access\", \"Matrix{Float64}\")]": {
+      "time_ratio": 5.4,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"abs\", \"Int64\", 0)]": {
+      "time_ratio": 1.11,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"sort\", \"Int8\", 0)]": {
+      "time_ratio": 1.02,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"A_mul_Bc!\", \"dense 2000x20, sparse 20x20 -> dense 2000x20\")]": {
+      "time_ratio": 1.47,
+      "memory_ratio": 1.0
+    },
+    "[\"broadcast\", \"fusion\", (\"Float64\", \"(1000, 1000)\", 3)]": {
+      "time_ratio": 1.79,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"identity\", \"Bool\", 0)]": {
+      "time_ratio": 1.01,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"accumulate\", (\"accumulate\", \"Float64\")]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"Ac_mul_B!\", \"dense 20x2000, sparse 20x20 -> dense 2000x20\")]": {
+      "time_ratio": 1.37,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"keys\", \"Bool\", 0)]": {
+      "time_ratio": 0.36,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"cat\", \"4467\"]": {
+      "time_ratio": 0.87,
+      "memory_ratio": 1.0
+    },
+    "[\"linalg\", \"arithmetic\", (\"*\", \"Matrix\", \"Vector\", 256)]": {
+      "time_ratio": 1.02,
+      "memory_ratio": 1.0
+    },
+    "[\"linalg\", \"arithmetic\", (\"\\\\\", \"typename(Bidiagonal)\", \"Vector\", 256)]": {
+      "time_ratio": 1.04,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumrange\", \"SubArray{Float32, 2, Matrix{Float32}, Tuple{UnitRange{Int64}, UnitRange{Int64}}, false}\")]": {
+      "time_ratio": 0.69,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"filter\", \"Float64\", 0)]": {
+      "time_ratio": 0.64,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"convert\", (\"Complex{Float64}\", \"Int\")]": {
+      "time_ratio": 1.53,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Linear\", \"loop_fields!\", \"Int64\", \"BaseBenchmarks.SIMDBenchmarks.MutableFields\", 4096)]": {
+      "time_ratio": 1.56,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"*\", \"ComplexF64\", \"(false, true)\")]": {
+      "time_ratio": 1.15,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"perf_sumskipmissing\", \"Union{Missing, Float64}\", 1)]": {
+      "time_ratio": 0.85,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"CartesianPartition\", \"conditional_loop!\", \"Int32\", 3, 31)]": {
+      "time_ratio": 1.49,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"keys\", \"Union{Missing, BigFloat}\", 1)]": {
+      "time_ratio": 0.4,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"accumulate\", (\"cumsum\", \"Int\")]": {
+      "time_ratio": 1.19,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_simplecopy\", \"Float64\", 1)]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumrange\", \"Base.ReinterpretArray{Float32, 2, Int32, Matrix{Int32}, false}\")]": {
+      "time_ratio": 0.7,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"keys\", \"Union{Missing, Bool}\", 1)]": {
+      "time_ratio": 0.41,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"filter\", \"Union{Missing, BigInt}\", 1)]": {
+      "time_ratio": 0.81,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"sum\", \"Union{Missing, Bool}\", 1)]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"equality\", (\"==\", \"Vector{Int64} == Vector{Float32}\")]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"collect\", \"Union{Nothing, Float32}\", 0)]": {
+      "time_ratio": 0.3,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"filter\", \"Float32\", 0)]": {
+      "time_ratio": 0.64,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"sort\", \"Union{Nothing, Int64}\", 0)]": {
+      "time_ratio": 1.32,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"perf_sumskipmissing\", \"Union{Nothing, Int8}\", 0)]": {
+      "time_ratio": 1.25,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Linear\", \"loop_fields!\", \"Float32\", \"BaseBenchmarks.SIMDBenchmarks.ImmutableFields\", 4096)]": {
+      "time_ratio": 3.67,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"index\", (\"spmat\", \"row\", \"range\", 1000)]": {
+      "time_ratio": 1.01,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"any/all\", (\"all\", \"Vector{Int16} generator\")]": {
+      "time_ratio": 0.81,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"setindex!\", (\"setindex!\", 3)]": {
+      "time_ratio": 1.15,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"At_mul_Bt\", \"sparse 500x50, dense 5x500 -> dense 50x5\")]": {
+      "time_ratio": 1.01,
+      "memory_ratio": 1.0
+    },
+    "[\"io\", \"array_limit\", (\"display\", \"Matrix{Float64}(100000000, 1)\")]": {
+      "time_ratio": 1.04,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"index\", (\"spvec\", \"range\", 10000)]": {
+      "time_ratio": 0.96,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"subarray\", (\"lucompletepivCopy!\", 100)]": {
+      "time_ratio": 1.33,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"index\", (\"spmat\", \"splogical\", 10)]": {
+      "time_ratio": 0.56,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Vector\", \"Int\", \"union\", \"Set\")]": {
+      "time_ratio": 0.87,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"setindex!\", (\"setindex!\", 4)]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumlogical_view\", \"SubArray{Float32, 2, Matrix{Float32}, Tuple{Base.Slice{Base.OneTo{Int64}}, Base.Slice{Base.OneTo{Int64}}}, true}\")]": {
+      "time_ratio": 0.99,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"index\", (\"spmat\", \"array\", 10)]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"index\", (\"spmat\", \"row\", \"range\", 100)]": {
+      "time_ratio": 0.85,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Linear\", \"loop_fields!\", \"Int64\", \"BaseBenchmarks.SIMDBenchmarks.ImmutableFields\", 4095)]": {
+      "time_ratio": 1.54,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"sparse solves\", \"least squares (default), vector rhs\"]": {
+      "time_ratio": 1.0,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"eachindex\", \"Union{Nothing, ComplexF64}\", 0)]": {
+      "time_ratio": 0.36,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Linear\", \"loop_fields!\", \"Int32\", \"BaseBenchmarks.SIMDBenchmarks.ImmutableFields\", 4096)]": {
+      "time_ratio": 3.46,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"eachindex\", \"Union{Missing, ComplexF64}\", 1)]": {
+      "time_ratio": 0.41,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"equality\", (\"isequal\", \"Vector{Int64}\")]": {
+      "time_ratio": 0.88,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"identity\", \"Int64\", 0)]": {
+      "time_ratio": 1.12,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumlogical_view\", \"BaseBenchmarks.ArrayBenchmarks.ArrayLF{Float32, 2}\")]": {
+      "time_ratio": 0.99,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumlogical_view\", \"BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32, 2}\")]": {
+      "time_ratio": 0.98,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Set\", \"Int\", \"union\")]": {
+      "time_ratio": 1.19,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumrange\", \"BaseBenchmarks.ArrayBenchmarks.ArrayLF{Int32, 2}\")]": {
+      "time_ratio": 0.7,
+      "memory_ratio": 1.0
+    },
+    "[\"linalg\", \"arithmetic\", (\"-\", \"Vector\", \"Vector\", 256)]": {
+      "time_ratio": 1.29,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"Ac_mul_B\", \"sparse 50x5, dense 50x50 -> dense 5x50\")]": {
+      "time_ratio": 0.97,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"subarray\", (\"lucompletepivSub!\", 1000)]": {
+      "time_ratio": 1.42,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"*\", \"Float64\", \"(true, true)\")]": {
+      "time_ratio": 1.3,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"collect\", \"Float32\", 0)]": {
+      "time_ratio": 0.32,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"constructors\", (\"Bidiagonal\", 1000)]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"eachindex\", \"Bool\", 0)]": {
+      "time_ratio": 0.36,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", \"4d\"]": {
+      "time_ratio": 1.47,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"perf_sumskipmissing\", \"Union{Nothing, Int64}\", 0)]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumlogical_view\", \"BitMatrix\")]": {
+      "time_ratio": 0.99,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", \"6d\"]": {
+      "time_ratio": 1.65,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumlogical_view\", \"Base.ReinterpretArray{Float32, 2, Int32, Matrix{Int32}, false}\")]": {
+      "time_ratio": 1.0,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"index\", (\"spvec\", \"range\", 100000)]": {
+      "time_ratio": 1.36,
+      "memory_ratio": 1.0
+    },
+    "[\"linalg\", \"arithmetic\", (\"-\", \"typename(SymTridiagonal)\", \"typename(SymTridiagonal)\", 256)]": {
+      "time_ratio": 1.25,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"*\", \"Float64\", \"(true, true)\")]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumlinear_view\", \"BitMatrix\")]": {
+      "time_ratio": 0.33,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"A_mul_Bc\", \"dense 5x500, sparse 500x500 -> dense 5x500\")]": {
+      "time_ratio": 1.33,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"Ac_mul_B!\", \"dense 200x20, sparse 200x2000 -> dense 20x2000\")]": {
+      "time_ratio": 1.51,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"abs\", \"Float64\", 0)]": {
+      "time_ratio": 1.13,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"subarray\", (\"lucompletepivCopy!\", 1000)]": {
+      "time_ratio": 1.31,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"eachindex\", \"Union{Nothing, Bool}\", 0)]": {
+      "time_ratio": 0.37,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"sort\", \"BigFloat\", 0)]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumcolon\", \"Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Float32}, 2, Float64, Matrix{Float64}, false}\")]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Linear\", \"loop_fields!\", \"Float32\", \"BaseBenchmarks.SIMDBenchmarks.MutableFields\", 4095)]": {
+      "time_ratio": 3.6,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumvector_view\", \"BitMatrix\")]": {
+      "time_ratio": 1.7,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"julia\", (\"parse\", \"array\")]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"sort\", \"Union{Nothing, Float32}\", 0)]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumcolon\", \"SubArray{Float32, 2, BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32, 3}, Tuple{Int64, Base.Slice{Base.OneTo{Int64}}, Base.Slice{Base.OneTo{Int64}}}, false}\")]": {
+      "time_ratio": 0.75,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"constructors\", (\"IJV\", 100)]": {
+      "time_ratio": 0.99,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumvector_view\", \"Matrix{Float32}\")]": {
+      "time_ratio": 3.91,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"any/all\", (\"all\", \"Vector{Bool}\")]": {
+      "time_ratio": 0.81,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"*\", \"Int64\", \"(true, true)\")]": {
+      "time_ratio": 1.16,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"index\", (\"spmat\", \"row\", \"array\", 10)]": {
+      "time_ratio": 0.74,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"*\", \"Float32\", \"(true, true)\")]": {
+      "time_ratio": 1.17,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumrange\", \"SubArray{Int32, 2, Matrix{Int32}, Tuple{Base.Slice{Base.OneTo{Int64}}, Base.Slice{Base.OneTo{Int64}}}, true}\")]": {
+      "time_ratio": 0.71,
+      "memory_ratio": 1.0
+    },
+    "[\"io\", \"array_limit\", (\"display\", \"Matrix{Float64}(10000, 10000)\")]": {
+      "time_ratio": 1.03,
+      "memory_ratio": 1.0
+    },
+    "[\"linalg\", \"arithmetic\", (\"*\", \"typename(Bidiagonal)\", \"Vector\", 256)]": {
+      "time_ratio": 1.17,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"keys\", \"Union{Nothing, Float32}\", 0)]": {
+      "time_ratio": 0.36,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"A_mul_Bt\", \"dense 50x50, sparse 5x50 -> dense 50x5\")]": {
+      "time_ratio": 0.8,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"index\", (\"spmat\", \"row\", \"OneTo\", 1000)]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"broadcast\", \"dotop\", (\"Float64\", \"(1000, 1000)\", 2)]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"filter\", \"Int64\", 0)]": {
+      "time_ratio": 0.62,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum\", \"BigFloat\", 0)]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"abs\", \"Float32\", 1)]": {
+      "time_ratio": 0.8,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumvector_view\", \"SubArray{Float32, 2, Matrix{Float32}, Tuple{Base.Slice{Base.OneTo{Int64}}, Base.Slice{Base.OneTo{Int64}}}, true}\")]": {
+      "time_ratio": 4.03,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumrange\", \"SubArray{Int32, 2, BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32, 3}, Tuple{Int64, Base.Slice{Base.OneTo{Int64}}, Base.Slice{Base.OneTo{Int64}}}, false}\")]": {
+      "time_ratio": 0.76,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"filter\", \"Union{Nothing, Float64}\", 0)]": {
+      "time_ratio": 0.64,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"eachindex\", \"BigInt\", 0)]": {
+      "time_ratio": 0.37,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Linear\", \"loop_fields!\", \"Float64\", \"BaseBenchmarks.SIMDBenchmarks.ImmutableFields\", 4096)]": {
+      "time_ratio": 2.37,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_simplecopy\", \"Int8\", 1)]": {
+      "time_ratio": 1.32,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumlogical_view\", \"Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Float32}, 2, Float64, Matrix{Float64}, false}\")]": {
+      "time_ratio": 1.0,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"A_mul_Bc\", \"dense 5x500, sparse 50x500 -> dense 5x50\")]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"collect\", \"all\", \"Float64\", 1)]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumlogical_view\", \"BaseBenchmarks.ArrayBenchmarks.ArrayLSLS{Float32, 2}\")]": {
+      "time_ratio": 1.0,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"perf_sumskipmissing\", \"Union{Nothing, Bool}\", 0)]": {
+      "time_ratio": 1.14,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"sparse matvec\", \"adjoint\"]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"collect\", \"filter\", \"ComplexF64\", 0)]": {
+      "time_ratio": 0.52,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumlogical_view\", \"BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32, 2}\")]": {
+      "time_ratio": 0.99,
+      "memory_ratio": 1.0
+    },
+    "[\"linalg\", \"arithmetic\", (\"-\", \"typename(Tridiagonal)\", \"typename(Tridiagonal)\", 256)]": {
+      "time_ratio": 1.36,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"sparse solves\", \"least squares (default), matrix rhs\"]": {
+      "time_ratio": 1.0,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"*\", \"Bool\", \"(true, true)\")]": {
+      "time_ratio": 1.21,
+      "memory_ratio": 1.0
+    },
+    "[\"linalg\", \"arithmetic\", (\"/\", \"typename(Diagonal)\", \"typename(Diagonal)\", 256)]": {
+      "time_ratio": 1.12,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumlinear_view\", \"Matrix{Int64}\")]": {
+      "time_ratio": 0.02,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"identity\", \"BigFloat\", 0)]": {
+      "time_ratio": 1.21,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"equality\", (\"isequal\", \"UnitRange{Int64}\")]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"mapr_access\", \"SubArray{Int32, 2, BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32, 3}, Tuple{Int64, Base.Slice{Base.OneTo{Int64}}, Base.Slice{Base.OneTo{Int64}}}, false}\")]": {
+      "time_ratio": 3.73,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"A_mul_Bt\", \"sparse 5x50, dense 50x50 -> dense 5x50\")]": {
+      "time_ratio": 1.14,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"sum\", \"Union{Missing, BigInt}\", 1)]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"*\", \"Int8\", \"(true, true)\")]": {
+      "time_ratio": 1.17,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"mapr_access\", \"SubArray{Int32, 2, Array{Int32, 3}, Tuple{Int64, Base.Slice{Base.OneTo{Int64}}, Base.Slice{Base.OneTo{Int64}}}, true}\")]": {
+      "time_ratio": 3.73,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"growth\", (\"push_multiple!\", 256)]": {
+      "time_ratio": 0.37,
+      "memory_ratio": 1.0
+    },
+    "[\"linalg\", \"arithmetic\", (\"*\", \"typename(Tridiagonal)\", \"Vector\", 256)]": {
+      "time_ratio": 1.19,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"sparse matvec\", \"non-adjoint\"]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum4\", \"Float32\", 0)]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumcolon\", \"SubArray{Float32, 2, BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32, 2}, Tuple{Base.Slice{Base.OneTo{Int64}}, Base.Slice{Base.OneTo{Int64}}}, false}\")]": {
+      "time_ratio": 0.7,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumlinear_view\", \"Matrix{Float32}\")]": {
+      "time_ratio": 0.04,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"equality\", (\"==\", \"Vector{Float64}\")]": {
+      "time_ratio": 1.11,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"identity\", \"Int64\", 1)]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumelt_boundscheck\", \"BaseBenchmarks.ArrayBenchmarks.ArrayLF{Int32, 2}\")]": {
+      "time_ratio": 0.25,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumvector_view\", \"SubArray{Int32, 2, Base.ReshapedArray{Int32, 2, SubArray{Int32, 3, Array{Int32, 3}, Tuple{Base.Slice{Base.OneTo{Int64}}, Base.Slice{Base.OneTo{Int64}}, Base.Slice{Base.OneTo{Int64}}}, true}, Tuple{}}, Tuple{Base.Slice{Base.OneTo{Int64}}, UnitRange{Int64}}, true}\")]": {
+      "time_ratio": 7.35,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum3\", \"Float64\", 1)]": {
+      "time_ratio": 1.27,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"Ac_mul_B!\", \"dense 200x200, sparse 200x200 -> dense 200x200\")]": {
+      "time_ratio": 1.37,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"sum\", \"BigInt\", 0)]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"io\", \"array_limit\", (\"display\", \"Vector{Float64}(100000000,)\")]": {
+      "time_ratio": 1.03,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumcolon\", \"Matrix{Float32}\")]": {
+      "time_ratio": 0.61,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"identity\", \"Float64\", 1)]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumcolon\", \"SubArray{Float32, 2, Matrix{Float32}, Tuple{Base.Slice{Base.OneTo{Int64}}, Base.Slice{Base.OneTo{Int64}}}, true}\")]": {
+      "time_ratio": 0.7,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"BitSet\", \"Int\", \"union\", \"Set\", \"Set\")]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"identity\", \"BigFloat\", 1)]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"mapr_access\", \"BaseBenchmarks.ArrayBenchmarks.ArrayLSLS{Float32, 2}\")]": {
+      "time_ratio": 5.51,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumrange\", \"SubArray{Int32, 2, BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32, 2}, Tuple{Base.Slice{Base.OneTo{Int64}}, Base.Slice{Base.OneTo{Int64}}}, false}\")]": {
+      "time_ratio": 0.71,
+      "memory_ratio": 1.0
+    },
+    "[\"broadcast\", \"typeargs\", (\"array\", 10)]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"BitSet\", \"Int\", \"union\", \"BitSet\")]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"CartesianPartition\", \"conditional_loop!\", \"Int32\", 2, 31)]": {
+      "time_ratio": 0.75,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"A_mul_B\", \"sparse 5x50, dense 50x50 -> dense 5x50\")]": {
+      "time_ratio": 1.19,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"Ac_mul_B!\", \"dense 2000x20, sparse 2000x2000 -> dense 20x2000\")]": {
+      "time_ratio": 1.42,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"identity\", \"Int8\", 0)]": {
+      "time_ratio": 1.13,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"mapr_access\", \"BaseBenchmarks.ArrayBenchmarks.ArrayLF{Int32, 2}\")]": {
+      "time_ratio": 3.29,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"setindex!\", (\"setindex!\", 5)]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"subarray\", (\"lucompletepivCopy!\", 500)]": {
+      "time_ratio": 1.35,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"filter\", \"Union{Missing, Int64}\", 1)]": {
+      "time_ratio": 0.69,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"keys\", \"Union{Missing, ComplexF64}\", 1)]": {
+      "time_ratio": 0.45,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"constructors\", (\"IV\", 1000)]": {
+      "time_ratio": 1.03,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumrange\", \"SubArray{Float32, 2, Array{Float32, 3}, Tuple{Int64, Base.Slice{Base.OneTo{Int64}}, Base.Slice{Base.OneTo{Int64}}}, true}\")]": {
+      "time_ratio": 0.75,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumlogical_view\", \"Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}, 2, Int64, Matrix{Int64}, false}\")]": {
+      "time_ratio": 0.99,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumlogical_view\", \"Matrix{Float64}\")]": {
+      "time_ratio": 1.0,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"constructors\", (\"IV\", 10)]": {
+      "time_ratio": 0.56,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumrange\", \"SubArray{Int32, 2, Array{Int32, 3}, Tuple{Int64, Base.Slice{Base.OneTo{Int64}}, Base.Slice{Base.OneTo{Int64}}}, true}\")]": {
+      "time_ratio": 0.77,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"identity\", \"BigInt\", 0)]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"any/all\", (\"any\", \"Vector{Int16} generator\")]": {
+      "time_ratio": 0.81,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"equality\", (\"==\", \"Vector{Bool}\")]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"*\", \"Bool\", \"(false, true)\")]": {
+      "time_ratio": 1.18,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumlinear_view\", \"Matrix{Int32}\")]": {
+      "time_ratio": 0.02,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"*\", \"ComplexF64\", \"(true, true)\")]": {
+      "time_ratio": 1.12,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"eachindex\", \"Union{Missing, BigInt}\", 1)]": {
+      "time_ratio": 0.44,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"cat\", (\"hvcat_setind\", 5)]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"linalg\", \"arithmetic\", (\"\\\\\", \"typename(SymTridiagonal)\", \"Vector\", 256)]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"perf_sumskipmissing\", \"BigFloat\", 0)]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumrange\", \"Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Float32}, 2, Float64, Matrix{Float64}, false}\")]": {
+      "time_ratio": 1.03,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"collect\", \"Union{Nothing, BigInt}\", 0)]": {
+      "time_ratio": 0.6,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"keys\", \"Union{Missing, Int64}\", 1)]": {
+      "time_ratio": 0.43,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"eachindex\", \"Union{Nothing, Int8}\", 0)]": {
+      "time_ratio": 0.37,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumlogical_view\", \"SubArray{Int32, 2, BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32, 2}, Tuple{Base.Slice{Base.OneTo{Int64}}, Base.Slice{Base.OneTo{Int64}}}, false}\")]": {
+      "time_ratio": 0.97,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"eachindex\", \"ComplexF64\", 0)]": {
+      "time_ratio": 0.36,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"splatting\", (3, 3, 3)]": {
+      "time_ratio": 1.13,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumlogical\", \"Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}, 2, Int64, Matrix{Int64}, false}\")]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Linear\", \"loop_fields!\", \"Float32\", \"BaseBenchmarks.SIMDBenchmarks.ImmutableFields\", 4095)]": {
+      "time_ratio": 3.74,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"reverse\", \"rev_load_fast!\"]": {
+      "time_ratio": 0.84,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"any/all\", (\"all\", \"Vector{Int64}\")]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"collect\", \"filter\", \"Bool\", 0)]": {
+      "time_ratio": 0.37,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"equality\", (\"isequal\", \"Vector{Int64} isequal UnitRange{Int64}\")]": {
+      "time_ratio": 0.86,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumelt_boundscheck\", \"SubArray{Int32, 2, Matrix{Int32}, Tuple{Base.Slice{Base.OneTo{Int64}}, Base.Slice{Base.OneTo{Int64}}}, true}\")]": {
+      "time_ratio": 3.61,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"Ac_mul_B!\", \"dense 20x200, sparse 20x200 -> dense 200x200\")]": {
+      "time_ratio": 1.37,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"identity\", \"Int64\", 0)]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"collect\", \"filter\", \"Int8\", 1)]": {
+      "time_ratio": 0.28,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"eachindex\", \"BigFloat\", 0)]": {
+      "time_ratio": 0.37,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"collect\", \"Union{Nothing, Int64}\", 0)]": {
+      "time_ratio": 0.37,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"keys\", \"Union{Nothing, Int8}\", 0)]": {
+      "time_ratio": 0.36,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Linear\", \"loop_fields!\", \"Int32\", \"BaseBenchmarks.SIMDBenchmarks.MutableFields\", 4096)]": {
+      "time_ratio": 3.54,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"mapr_access\", \"Matrix{Float32}\")]": {
+      "time_ratio": 5.52,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"mapr_access\", \"BaseBenchmarks.ArrayBenchmarks.ArrayLF{Float32, 2}\")]": {
+      "time_ratio": 4.85,
+      "memory_ratio": 1.0
+    },
+    "[\"linalg\", \"arithmetic\", (\"*\", \"typename(SymTridiagonal)\", \"Vector\", 256)]": {
+      "time_ratio": 1.18,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"collect\", \"filter\", \"BigInt\", 1)]": {
+      "time_ratio": 0.62,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"At_mul_Bt\", \"dense 500x5, sparse 50x500 -> dense 5x50\")]": {
+      "time_ratio": 0.97,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_simplecopy\", \"BigInt\", 1)]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"Ac_mul_Bc\", \"dense 500x5, sparse 50x500 -> dense 5x50\")]": {
+      "time_ratio": 0.97,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"keys\", \"Int64\", 0)]": {
+      "time_ratio": 0.36,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"cat\", (\"catnd\", 5)]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"collect\", \"filter\", \"BigFloat\", 0)]": {
+      "time_ratio": 0.68,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumcartesian\", \"BaseBenchmarks.ArrayBenchmarks.ArrayLF{Int32, 2}\")]": {
+      "time_ratio": 6.27,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Vector\", \"Int\", \"union\", \"Vector\", \"Vector\")]": {
+      "time_ratio": 0.87,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"*\", \"Int8\", \"(false, true)\")]": {
+      "time_ratio": 1.27,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"keys\", \"Union{Missing, BigInt}\", 1)]": {
+      "time_ratio": 0.43,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"keys\", \"Union{Nothing, ComplexF64}\", 0)]": {
+      "time_ratio": 0.37,
+      "memory_ratio": 1.0
+    },
+    "[\"broadcast\", \"dotop\", (\"Float64\", \"(1000000,)\", 2)]": {
+      "time_ratio": 0.89,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"sort\", \"Union{Missing, Bool}\", 1)]": {
+      "time_ratio": 1.16,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"constructors\", (\"Diagonal\", 100)]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumlogical\", \"Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Float32}, 2, Float64, Matrix{Float64}, false}\")]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"identity\", \"Float64\", 1)]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumeach_view\", \"BitMatrix\")]": {
+      "time_ratio": 0.33,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"cat\", (\"hvcat\", 5)]": {
+      "time_ratio": 1.01,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Linear\", \"loop_fields!\", \"Int64\", \"BaseBenchmarks.SIMDBenchmarks.MutableFields\", 4095)]": {
+      "time_ratio": 1.54,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"Ac_mul_B\", \"dense 50x50, sparse 50x5 -> dense 50x5\")]": {
+      "time_ratio": 1.32,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"Ac_mul_B!\", \"dense 2000x20, sparse 2000x200 -> dense 20x200\")]": {
+      "time_ratio": 1.36,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"sparse solves\", \"least squares (qr), matrix rhs\"]": {
+      "time_ratio": 1.0,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"*\", \"ComplexF64\", \"(false, true)\")]": {
+      "time_ratio": 1.13,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumlogical_view\", \"SubArray{Int32, 2, Matrix{Int32}, Tuple{UnitRange{Int64}, UnitRange{Int64}}, false}\")]": {
+      "time_ratio": 1.0,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"filter\", \"BigInt\", 0)]": {
+      "time_ratio": 0.79,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumvector_view\", \"SubArray{Int32, 2, Matrix{Int32}, Tuple{Base.Slice{Base.OneTo{Int64}}, Base.Slice{Base.OneTo{Int64}}}, true}\")]": {
+      "time_ratio": 3.85,
+      "memory_ratio": 1.0
+    },
+    "[\"linalg\", \"arithmetic\", (\"+\", \"Vector\", \"Vector\", 256)]": {
+      "time_ratio": 1.27,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"any/all\", (\"any\", \"Vector{Int64} generator\")]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"collect\", \"Union{Missing, ComplexF64}\", 1)]": {
+      "time_ratio": 0.5,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"equality\", (\"==\", \"Vector{Int64} == UnitRange{Int64}\")]": {
+      "time_ratio": 0.86,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"identity\", \"Float64\", 0)]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"sparse solves\", \"least squares (qr), vector rhs\"]": {
+      "time_ratio": 1.0,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"At_mul_B\", \"sparse 50x5, dense 50x50 -> dense 5x50\")]": {
+      "time_ratio": 1.04,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"*\", \"Float64\", \"(false, false)\")]": {
+      "time_ratio": 1.21,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"abs\", \"Int8\", 1)]": {
+      "time_ratio": 1.14,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"sum\", \"BigFloat\", 0)]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"collect\", \"Float64\", 0)]": {
+      "time_ratio": 0.37,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Cartesian\", \"manual_example!\", \"Int64\", 3, 32)]": {
+      "time_ratio": 0.66,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"abs\", \"Bool\", 0)]": {
+      "time_ratio": 1.13,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumvector_view\", \"SubArray{Float32, 2, Array{Float32, 3}, Tuple{Int64, Base.Slice{Base.OneTo{Int64}}, Base.Slice{Base.OneTo{Int64}}}, true}\")]": {
+      "time_ratio": 3.71,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"perf_sumskipmissing\", \"Union{Missing, Bool}\", 1)]": {
+      "time_ratio": 0.77,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"abs\", \"Float32\", 1)]": {
+      "time_ratio": 1.24,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"identity\", \"BigFloat\", 0)]": {
+      "time_ratio": 1.3,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"filter\", \"Int8\", 0)]": {
+      "time_ratio": 0.63,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"mapr_access\", \"Matrix{Int32}\")]": {
+      "time_ratio": 4.06,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumvector_view\", \"Matrix{Int64}\")]": {
+      "time_ratio": 3.52,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"*\", \"ComplexF64\", \"(false, false)\")]": {
+      "time_ratio": 1.15,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"identity\", \"Float32\", 1)]": {
+      "time_ratio": 0.87,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumlogical_view\", \"SubArray{Int32, 2, BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32, 3}, Tuple{Int64, Base.Slice{Base.OneTo{Int64}}, Base.Slice{Base.OneTo{Int64}}}, false}\")]": {
+      "time_ratio": 0.97,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"index\", (\"spmat\", \"row\", \"array\", 1000)]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"constructors\", (\"IJV\", 10)]": {
+      "time_ratio": 0.52,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"mapr_access\", \"SubArray{Float32, 2, Matrix{Float32}, Tuple{Base.Slice{Base.OneTo{Int64}}, Base.Slice{Base.OneTo{Int64}}}, true}\")]": {
+      "time_ratio": 6.55,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"collect\", \"filter\", \"ComplexF64\", 1)]": {
+      "time_ratio": 0.42,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumrange\", \"BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32, 2}\")]": {
+      "time_ratio": 0.72,
+      "memory_ratio": 1.0
+    },
+    "[\"linalg\", \"arithmetic\", (\"-\", \"typename(Bidiagonal)\", \"typename(Bidiagonal)\", 256)]": {
+      "time_ratio": 1.21,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum\", \"Int8\", 0)]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"collect\", \"Union{Missing, Float64}\", 1)]": {
+      "time_ratio": 0.45,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"keys\", \"BigInt\", 0)]": {
+      "time_ratio": 0.37,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"constructors\", (\"SymTridiagonal\", 10)]": {
+      "time_ratio": 0.85,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"index\", (\"spmat\", \"row\", \"array\", 100)]": {
+      "time_ratio": 0.87,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"identity\", \"Float32\", 1)]": {
+      "time_ratio": 1.29,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"mapr_access\", \"SubArray{Int32, 2, Matrix{Int32}, Tuple{UnitRange{Int64}, UnitRange{Int64}}, false}\")]": {
+      "time_ratio": 4.03,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"identity\", \"Bool\", 1)]": {
+      "time_ratio": 1.14,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"identity\", \"Float64\", 0)]": {
+      "time_ratio": 1.12,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"abs\", \"Bool\", 0)]": {
+      "time_ratio": 1.01,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"Ac_mul_Bc\", \"sparse 500x50, dense 5x500 -> dense 50x5\")]": {
+      "time_ratio": 1.02,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"At_mul_Bt\", \"dense 50x50, sparse 5x50 -> dense 50x5\")]": {
+      "time_ratio": 0.77,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"collect\", \"Union{Missing, Float32}\", 1)]": {
+      "time_ratio": 0.42,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumlogical_view\", \"BaseBenchmarks.ArrayBenchmarks.ArrayLF{Int32, 2}\")]": {
+      "time_ratio": 0.99,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"At_mul_Bt\", \"sparse 50x5, dense 50x50 -> dense 5x50\")]": {
+      "time_ratio": 1.01,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"constructors\", (\"Bidiagonal\", 10)]": {
+      "time_ratio": 0.8,
+      "memory_ratio": 1.0
+    },
+    "[\"linalg\", \"arithmetic\", (\"\\\\\", \"typename(Tridiagonal)\", \"Vector\", 256)]": {
+      "time_ratio": 1.14,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", \"2d\"]": {
+      "time_ratio": 1.17,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Linear\", \"loop_fields!\", \"Float64\", \"BaseBenchmarks.SIMDBenchmarks.MutableFields\", 4096)]": {
+      "time_ratio": 2.47,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"collect\", \"all\", \"Int64\", 0)]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"abs\", \"ComplexF64\", 1)]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Linear\", \"loop_fields!\", \"Int32\", \"BaseBenchmarks.SIMDBenchmarks.MutableFields\", 4095)]": {
+      "time_ratio": 3.43,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumeach_view\", \"Array{Float64, 3}\")]": {
+      "time_ratio": 0.04,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"index\", (\"spmat\", \"row\", \"range\", 10)]": {
+      "time_ratio": 0.71,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"sum\", \"Union{Missing, Int8}\", 1)]": {
+      "time_ratio": 0.9,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"Ac_mul_Bc\", \"sparse 50x5, dense 50x50 -> dense 5x50\")]": {
+      "time_ratio": 1.01,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"collect\", \"all\", \"Float64\", 0)]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"reductions\", (\"sumabs\", \"Float64\")]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"perf_sumskipmissing\", \"Union{Missing, Int8}\", 1)]": {
+      "time_ratio": 0.72,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"*\", \"Int8\", \"(false, false)\")]": {
+      "time_ratio": 1.22,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"mapr_access\", \"SubArray{Float32, 2, Array{Float32, 3}, Tuple{Int64, Base.Slice{Base.OneTo{Int64}}, Base.Slice{Base.OneTo{Int64}}}, true}\")]": {
+      "time_ratio": 7.97,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"collect\", \"all\", \"Float32\", 1)]": {
+      "time_ratio": 0.87,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumrange\", \"BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32, 2}\")]": {
+      "time_ratio": 0.7,
+      "memory_ratio": 1.0
+    },
+    "[\"linalg\", \"arithmetic\", (\"+\", \"typename(Diagonal)\", \"typename(Diagonal)\", 256)]": {
+      "time_ratio": 1.18,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"abs\", \"Int8\", 0)]": {
+      "time_ratio": 1.14,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"cat\", (\"hcat\", 5)]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"equality\", (\"isequal\", \"Vector{Int16}\")]": {
+      "time_ratio": 0.88,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Vector\", \"Int\", \"union\")]": {
+      "time_ratio": 0.86,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"constructors\", (\"IV\", 100)]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"subarray\", (\"lucompletepivCopy!\", 250)]": {
+      "time_ratio": 1.34,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"abs\", \"Float64\", 1)]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"eachindex\", \"Union{Nothing, Float64}\", 0)]": {
+      "time_ratio": 0.36,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"any/all\", (\"any\", \"BitArray\")]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"abs\", \"Int8\", 0)]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumcolon\", \"SubArray{Float32, 2, Array{Float32, 3}, Tuple{Int64, Base.Slice{Base.OneTo{Int64}}, Base.Slice{Base.OneTo{Int64}}}, true}\")]": {
+      "time_ratio": 0.75,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumcolon\", \"Matrix{Int64}\")]": {
+      "time_ratio": 1.18,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"A_mul_B\", \"dense 5x500, sparse 500x50 -> dense 5x50\")]": {
+      "time_ratio": 1.03,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"*\", \"Int64\", \"(false, false)\")]": {
+      "time_ratio": 1.15,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"eachindex\", \"Union{Missing, Float32}\", 1)]": {
+      "time_ratio": 0.41,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"keys\", \"Union{Nothing, Float64}\", 0)]": {
+      "time_ratio": 0.36,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"equality\", (\"==\", \"UnitRange{Int64}\")]": {
+      "time_ratio": 1.19,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"At_mul_B!\", \"sparse 400x4000, dense 400x40 -> dense 4000x40\")]": {
+      "time_ratio": 1.54,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Linear\", \"loop_fields!\", \"Int64\", \"BaseBenchmarks.SIMDBenchmarks.ImmutableFields\", 4096)]": {
+      "time_ratio": 1.5,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"growth\", (\"prerend!\", 2048)]": {
+      "time_ratio": 0.82,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"A_mul_Bt\", \"sparse 50x500, dense 5x500 -> dense 50x5\")]": {
+      "time_ratio": 1.12,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumcolon\", \"SubArray{Int32, 2, Array{Int32, 3}, Tuple{Int64, Base.Slice{Base.OneTo{Int64}}, Base.Slice{Base.OneTo{Int64}}}, true}\")]": {
+      "time_ratio": 0.77,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"abs\", \"Int64\", 1)]": {
+      "time_ratio": 1.23,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumeach\", \"BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32, 2}\")]": {
+      "time_ratio": 6.27,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"index\", (\"spmat\", \"col\", \"logical\", 1000)]": {
+      "time_ratio": 1.01,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"A_mul_Bc\", \"dense 5x5, sparse 500x5 -> dense 5x500\")]": {
+      "time_ratio": 1.34,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"collect\", \"all\", \"BigInt\", 0)]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"collect\", \"Bool\", 0)]": {
+      "time_ratio": 0.26,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"filter\", \"Bool\", 0)]": {
+      "time_ratio": 0.58,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"keys\", \"Union{Nothing, Bool}\", 0)]": {
+      "time_ratio": 0.37,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"matmul\", (\"Ac_mul_Bc\", \"dense 50x50, sparse 5x50 -> dense 50x5\")]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumcolon\", \"BaseBenchmarks.ArrayBenchmarks.ArrayLF{Float32, 2}\")]": {
+      "time_ratio": 0.74,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"mapr_access\", \"SubArray{Float32, 2, Matrix{Float32}, Tuple{UnitRange{Int64}, UnitRange{Int64}}, false}\")]": {
+      "time_ratio": 8.69,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumvector_view\", \"Base.ReinterpretArray{Float32, 2, Int32, Matrix{Int32}, false}\")]": {
+      "time_ratio": 4.15,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"eachindex\", \"Union{Missing, Bool}\", 1)]": {
+      "time_ratio": 0.41,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"perf_sumskipmissing\", \"Union{Missing, ComplexF64}\", 1)]": {
+      "time_ratio": 0.64,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumlogical_view\", \"SubArray{Float32, 2, BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32, 2}, Tuple{Base.Slice{Base.OneTo{Int64}}, Base.Slice{Base.OneTo{Int64}}}, false}\")]": {
+      "time_ratio": 0.98,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"CartesianPartition\", \"conditional_loop!\", \"Int64\", 3, 32)]": {
+      "time_ratio": 1.24,
+      "memory_ratio": 1.0
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "metadata": {
+    "head_hash": "b44a95b",
+    "comparison": "b44a95b_vs_3220565",
+    "source": "NanosoldierReports",
+    "base_hash": "3220565",
+    "imported_at": "2026-03-10T23:30:09.607",
+    "source_type": "report_md"
+  },
+  "benchmarks": {
+    "[\"inference\", \"abstract interpretation\", \"many_invoke_calls\"]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"many_method_matches\"]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"broadcasting\"]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"sin(42)\"]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"rand(Float64)\"]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"allinference\", \"many_opaque_closures\"]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    }
+  }
+}

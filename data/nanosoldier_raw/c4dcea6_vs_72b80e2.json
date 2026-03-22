@@ -1,0 +1,68 @@
+{
+  "metadata": {
+    "head_hash": "c4dcea6",
+    "comparison": "c4dcea6_vs_72b80e2",
+    "source": "NanosoldierReports",
+    "base_hash": "72b80e2",
+    "imported_at": "2026-03-10T00:41:03.563",
+    "source_type": "report_md"
+  },
+  "benchmarks": {
+    "[\"broadcast\", \"mix_scalar_tuple\", (5, \"scal_tup_x3\")]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"*\", \"Int8\", \"(true, true)\")]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"broadcast\", \"mix_scalar_tuple\", (10, \"tup_tup\")]": {
+      "time_ratio": 1.19,
+      "memory_ratio": 1.0
+    },
+    "[\"broadcast\", \"mix_scalar_tuple\", (5, \"tup_tup\")]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"identity\", \"Bool\", 1)]": {
+      "time_ratio": 1.2,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"identity\", \"Int8\", 1)]": {
+      "time_ratio": 0.83,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"abs\", \"Int64\", 1)]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"abs\", \"Int8\", 1)]": {
+      "time_ratio": 1.26,
+      "memory_ratio": 1.0
+    },
+    "[\"broadcast\", \"mix_scalar_tuple\", (3, \"scal_tup\")]": {
+      "time_ratio": 1.2,
+      "memory_ratio": 1.0
+    },
+    "[\"broadcast\", \"mix_scalar_tuple\", (5, \"scal_tup\")]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"abs\", \"Float32\", 1)]": {
+      "time_ratio": 1.11,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"abs\", \"Bool\", 1)]": {
+      "time_ratio": 0.83,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"queries & updates\", (\"Dict\", \"String\", \"in\", \"true\")]": {
+      "time_ratio": 1.37,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"*\", \"Int8\", \"(false, true)\")]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    }
+  }
+}

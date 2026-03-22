@@ -1,0 +1,6330 @@
+[
+  {
+    "target": "sparse/matmul/(\\A_mul_Bt!\\/\\dense 4000x40/sparse 40x40 -> dense 4000x40\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        44.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(At_mul_B/dense 5x5/sparse 5x500 -> dense 5x500)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        175.0,
+        1.77302643e12
+      ],
+      [
+        57.99999999999999,
+        1.773026431e12
+      ],
+      [
+        173.0,
+        1.773103247e12
+      ],
+      [
+        181.0,
+        1.773103253e12
+      ],
+      [
+        140.0,
+        1.773103256e12
+      ],
+      [
+        56.99999999999999,
+        1.77310326e12
+      ],
+      [
+        164.0,
+        1.773103263e12
+      ],
+      [
+        138.0,
+        1.773103263e12
+      ],
+      [
+        56.99999999999999,
+        1.773103264e12
+      ],
+      [
+        56.00000000000001,
+        1.773103267e12
+      ],
+      [
+        170.0,
+        1.773185407e12
+      ],
+      [
+        57.99999999999999,
+        1.773185411e12
+      ],
+      [
+        64.0,
+        1.773185412e12
+      ],
+      [
+        70.0,
+        1.773185415e12
+      ],
+      [
+        141.0,
+        1.773185418e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(Ac_mul_Bc/dense 50x50/sparse 50x50 -> dense 50x50)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        137.0,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(At_mul_Bt!/dense 400x40/sparse 4000x400 -> dense 40x4000)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        68.0,
+        1.77310325e12
+      ],
+      [
+        69.0,
+        1.773103251e12
+      ],
+      [
+        69.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/index/(spmat/col/logical/1000)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        99.0,
+        1.77310325e12
+      ],
+      [
+        101.0,
+        1.773103251e12
+      ],
+      [
+        109.00000000000001,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/constructors/(IJV/1000)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        93.0,
+        1.77302643e12
+      ],
+      [
+        108.0,
+        1.773026433e12
+      ],
+      [
+        105.0,
+        1.773103247e12
+      ],
+      [
+        94.0,
+        1.773103247e12
+      ],
+      [
+        107.0,
+        1.77310325e12
+      ],
+      [
+        106.0,
+        1.773103251e12
+      ],
+      [
+        93.0,
+        1.773103252e12
+      ],
+      [
+        94.0,
+        1.773103253e12
+      ],
+      [
+        93.0,
+        1.773103253e12
+      ],
+      [
+        95.0,
+        1.773103254e12
+      ],
+      [
+        110.00000000000001,
+        1.77310326e12
+      ],
+      [
+        91.0,
+        1.773103261e12
+      ],
+      [
+        111.00000000000001,
+        1.773103264e12
+      ],
+      [
+        108.0,
+        1.773103264e12
+      ],
+      [
+        108.0,
+        1.773103267e12
+      ],
+      [
+        86.0,
+        1.773103268e12
+      ],
+      [
+        108.0,
+        1.77310327e12
+      ],
+      [
+        92.0,
+        1.773185398e12
+      ],
+      [
+        106.0,
+        1.773185399e12
+      ],
+      [
+        105.0,
+        1.773185402e12
+      ],
+      [
+        119.0,
+        1.773185405e12
+      ],
+      [
+        94.0,
+        1.773185406e12
+      ],
+      [
+        105.0,
+        1.773185407e12
+      ],
+      [
+        93.0,
+        1.773185408e12
+      ],
+      [
+        107.0,
+        1.773185413e12
+      ],
+      [
+        106.0,
+        1.773185415e12
+      ],
+      [
+        111.00000000000001,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_Bc/sparse 50x5/dense 50x5 -> dense 50x50)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        153.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/index/(spmat/row/OneTo/1000)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        83.0,
+        1.77310325e12
+      ],
+      [
+        92.0,
+        1.773103251e12
+      ],
+      [
+        98.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/index/(spmat/logical/10)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        195.0,
+        1.773026431e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_B/sparse 500x500/dense 500x5 -> dense 500x5)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        138.0,
+        1.773103264e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/constructors/(\\SymTridiagonal\\/100)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        88.0,
+        1.773185401e12
+      ],
+      [
+        89.0,
+        1.77318541e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/sparse matvec/non-adjoint",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        122.0,
+        1.77302643e12
+      ],
+      [
+        133.0,
+        1.773026431e12
+      ],
+      [
+        86.0,
+        1.773103247e12
+      ],
+      [
+        92.0,
+        1.773103247e12
+      ],
+      [
+        111.00000000000001,
+        1.77310325e12
+      ],
+      [
+        79.0,
+        1.773103251e12
+      ],
+      [
+        92.0,
+        1.773103251e12
+      ],
+      [
+        115.99999999999999,
+        1.773103251e12
+      ],
+      [
+        106.0,
+        1.773103252e12
+      ],
+      [
+        92.0,
+        1.773103253e12
+      ],
+      [
+        125.0,
+        1.773103256e12
+      ],
+      [
+        92.0,
+        1.773103264e12
+      ],
+      [
+        80.0,
+        1.773103264e12
+      ],
+      [
+        134.00000000000003,
+        1.773103267e12
+      ],
+      [
+        107.0,
+        1.773103268e12
+      ],
+      [
+        120.0,
+        1.773103271e12
+      ],
+      [
+        82.0,
+        1.773185402e12
+      ],
+      [
+        124.0,
+        1.773185405e12
+      ],
+      [
+        93.0,
+        1.773185407e12
+      ],
+      [
+        126.0,
+        1.773185408e12
+      ],
+      [
+        126.0,
+        1.77318541e12
+      ],
+      [
+        126.0,
+        1.773185412e12
+      ],
+      [
+        120.0,
+        1.773185413e12
+      ],
+      [
+        108.0,
+        1.773185415e12
+      ],
+      [
+        111.00000000000001,
+        1.773185416e12
+      ],
+      [
+        79.0,
+        1.773185419e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/constructors/(SymTridiagonal/1000)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        94.0,
+        1.77302643e12
+      ],
+      [
+        108.0,
+        1.773026433e12
+      ],
+      [
+        108.0,
+        1.773103247e12
+      ],
+      [
+        90.0,
+        1.773103247e12
+      ],
+      [
+        85.0,
+        1.773103253e12
+      ],
+      [
+        94.0,
+        1.773103253e12
+      ],
+      [
+        92.0,
+        1.773103256e12
+      ],
+      [
+        109.00000000000001,
+        1.77310326e12
+      ],
+      [
+        107.0,
+        1.773103264e12
+      ],
+      [
+        93.0,
+        1.773103266e12
+      ],
+      [
+        107.0,
+        1.773103267e12
+      ],
+      [
+        111.00000000000001,
+        1.77310327e12
+      ],
+      [
+        110.00000000000001,
+        1.773185399e12
+      ],
+      [
+        110.00000000000001,
+        1.773185402e12
+      ],
+      [
+        106.0,
+        1.773185413e12
+      ],
+      [
+        109.00000000000001,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\A_mul_B!\\/\\dense 40x400/sparse 400x4000 -> dense 40x4000\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        23.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/index/(spmat/row/array/100)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        87.0,
+        1.77310325e12
+      ],
+      [
+        87.0,
+        1.773103251e12
+      ],
+      [
+        87.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_Bc/dense 500x5/sparse 5x5 -> dense 500x5)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        139.0,
+        1.77310325e12
+      ],
+      [
+        140.0,
+        1.773103251e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\A_mul_Bc\\/\\sparse 500x500/dense 5x500 -> dense 500x5\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        139.0,
+        1.77310325e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/index/(spmat/row/range/100)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        83.0,
+        1.77310325e12
+      ],
+      [
+        85.0,
+        1.773103251e12
+      ],
+      [
+        84.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/sparse solves/square system (ldlt)/matrix rhs",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        94.0,
+        1.77302643e12
+      ],
+      [
+        86.0,
+        1.773026431e12
+      ],
+      [
+        112.00000000000001,
+        1.773103247e12
+      ],
+      [
+        106.0,
+        1.773103247e12
+      ],
+      [
+        93.0,
+        1.773103248e12
+      ],
+      [
+        106.0,
+        1.773103249e12
+      ],
+      [
+        107.0,
+        1.77310325e12
+      ],
+      [
+        94.0,
+        1.773103251e12
+      ],
+      [
+        89.0,
+        1.773103253e12
+      ],
+      [
+        95.0,
+        1.773103254e12
+      ],
+      [
+        90.0,
+        1.77310326e12
+      ],
+      [
+        113.99999999999999,
+        1.773103263e12
+      ],
+      [
+        113.99999999999999,
+        1.773103263e12
+      ],
+      [
+        110.00000000000001,
+        1.773103264e12
+      ],
+      [
+        91.0,
+        1.773103267e12
+      ],
+      [
+        94.0,
+        1.773103267e12
+      ],
+      [
+        105.0,
+        1.773185399e12
+      ],
+      [
+        94.0,
+        1.773185401e12
+      ],
+      [
+        95.0,
+        1.773185402e12
+      ],
+      [
+        106.0,
+        1.773185406e12
+      ],
+      [
+        108.0,
+        1.773185412e12
+      ],
+      [
+        107.0,
+        1.773185414e12
+      ],
+      [
+        112.00000000000001,
+        1.773185415e12
+      ],
+      [
+        87.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_Bt/sparse 50x5/dense 50x5 -> dense 50x50)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        163.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(Ac_mul_Bc/sparse 5x50/dense 50x5 -> dense 50x50)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        131.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\At_mul_Bt!\\/\\sparse 400x4000/dense 40x400 -> dense 4000x40\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        145.0,
+        1.77310325e12
+      ],
+      [
+        145.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(Ac_mul_Bc!/sparse 20x2000/dense 20x20 -> dense 2000x20)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        142.0,
+        1.773185412e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/constructors/(Diagonal/10)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        92.0,
+        1.77302643e12
+      ],
+      [
+        94.0,
+        1.77302643e12
+      ],
+      [
+        310.0,
+        1.773026431e12
+      ],
+      [
+        88.0,
+        1.77310325e12
+      ],
+      [
+        84.0,
+        1.773103251e12
+      ],
+      [
+        107.0,
+        1.773103254e12
+      ],
+      [
+        91.0,
+        1.773103256e12
+      ],
+      [
+        106.0,
+        1.773103262e12
+      ],
+      [
+        109.00000000000001,
+        1.773103264e12
+      ],
+      [
+        106.0,
+        1.773103267e12
+      ],
+      [
+        111.00000000000001,
+        1.77310327e12
+      ],
+      [
+        106.0,
+        1.773185398e12
+      ],
+      [
+        107.0,
+        1.773185402e12
+      ],
+      [
+        95.0,
+        1.773185406e12
+      ],
+      [
+        106.0,
+        1.773185415e12
+      ],
+      [
+        94.0,
+        1.773185416e12
+      ],
+      [
+        89.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/index/(spmat/row/array/10)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        73.0,
+        1.77310325e12
+      ],
+      [
+        74.0,
+        1.773103251e12
+      ],
+      [
+        71.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/index/(spmat/row/logical/100)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        87.0,
+        1.77310325e12
+      ],
+      [
+        84.0,
+        1.773103251e12
+      ],
+      [
+        88.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/index/(\\spmat\\/\\row\\/\\logical\\/1000)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        67.00000000000001,
+        1.773185419e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(Ac_mul_B/sparse 50x5/dense 50x50 -> dense 5x50)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        100.0,
+        1.77310325e12
+      ],
+      [
+        97.0,
+        1.773103251e12
+      ],
+      [
+        99.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_Bc/dense 5x5/sparse 500x5 -> dense 5x500)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        131.0,
+        1.77310325e12
+      ],
+      [
+        134.00000000000003,
+        1.773103251e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\A_mul_Bc\\/\\sparse 50x500/dense 5x500 -> dense 50x5\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        144.0,
+        1.77310325e12
+      ],
+      [
+        69.0,
+        1.773185419e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\A_mul_B!\\/\\dense 400x40/sparse 40x400 -> dense 400x400\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        13.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\At_mul_Bt!\\/\\dense 4000x40/sparse 4000x4000 -> dense 40x4000\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        177.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\A_mul_Bt!\\/\\dense 40x4000/sparse 4000x4000 -> dense 40x4000\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        37.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\At_mul_B\\/\\dense 5x50/sparse 5x50 -> dense 50x50\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        61.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/constructors/(\\Diagonal\\/100)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        128.0,
+        1.77310325e12
+      ],
+      [
+        90.0,
+        1.773185401e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/transpose/(transpose/(20000/20000))",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        65.0,
+        1.773103257e12
+      ],
+      [
+        32.0,
+        1.773103264e12
+      ],
+      [
+        1595.0,
+        1.773185419e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(At_mul_Bt/sparse 500x50/dense 5x500 -> dense 50x5)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        99.0,
+        1.77310325e12
+      ],
+      [
+        101.0,
+        1.773103251e12
+      ],
+      [
+        99.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(Ac_mul_Bc/sparse 50x5/dense 50x50 -> dense 5x50)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        101.0,
+        1.77310325e12
+      ],
+      [
+        101.0,
+        1.773103251e12
+      ],
+      [
+        104.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/index/(spvec/range/100000)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        120.0,
+        1.77310325e12
+      ],
+      [
+        136.0,
+        1.773103251e12
+      ],
+      [
+        129.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/constructors/(Bidiagonal/1000)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        92.0,
+        1.77302643e12
+      ],
+      [
+        114.99999999999999,
+        1.773026433e12
+      ],
+      [
+        111.00000000000001,
+        1.773103247e12
+      ],
+      [
+        83.0,
+        1.773103247e12
+      ],
+      [
+        110.00000000000001,
+        1.773103251e12
+      ],
+      [
+        91.0,
+        1.773103253e12
+      ],
+      [
+        87.0,
+        1.773103253e12
+      ],
+      [
+        91.0,
+        1.773103253e12
+      ],
+      [
+        105.0,
+        1.773103259e12
+      ],
+      [
+        109.00000000000001,
+        1.77310326e12
+      ],
+      [
+        107.0,
+        1.773103264e12
+      ],
+      [
+        110.00000000000001,
+        1.773103267e12
+      ],
+      [
+        110.00000000000001,
+        1.77310327e12
+      ],
+      [
+        112.99999999999999,
+        1.773185399e12
+      ],
+      [
+        114.99999999999999,
+        1.773185402e12
+      ],
+      [
+        112.00000000000001,
+        1.773185407e12
+      ],
+      [
+        115.99999999999999,
+        1.773185413e12
+      ],
+      [
+        108.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/constructors/(\\Tridiagonal\\/100)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        94.0,
+        1.773185401e12
+      ],
+      [
+        93.0,
+        1.77318541e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(Ac_mul_B!/dense 2000x20/sparse 2000x200 -> dense 20x200)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        136.0,
+        1.77310325e12
+      ],
+      [
+        136.0,
+        1.773103251e12
+      ],
+      [
+        146.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/index/(spvec/array/1000)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        134.00000000000003,
+        1.773103247e12
+      ],
+      [
+        133.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_Bc!/sparse 200x2000/dense 20x2000 -> dense 200x20)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        130.0,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_Bc/sparse 500x50/dense 5x50 -> dense 500x5)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        163.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_Bc/dense 5x500/sparse 500x500 -> dense 5x500)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        133.0,
+        1.773103251e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(Ac_mul_B/dense 500x5/sparse 500x50 -> dense 5x50)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        126.0,
+        1.77310325e12
+      ],
+      [
+        132.0,
+        1.773103251e12
+      ],
+      [
+        126.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/constructors/(IJV/10)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        359.0,
+        1.773026431e12
+      ],
+      [
+        93.0,
+        1.773103247e12
+      ],
+      [
+        106.0,
+        1.773103249e12
+      ],
+      [
+        59.0,
+        1.77310325e12
+      ],
+      [
+        92.0,
+        1.773103251e12
+      ],
+      [
+        52.0,
+        1.773103251e12
+      ],
+      [
+        94.0,
+        1.773103254e12
+      ],
+      [
+        91.0,
+        1.773103259e12
+      ],
+      [
+        94.0,
+        1.773103259e12
+      ],
+      [
+        94.0,
+        1.773103259e12
+      ],
+      [
+        122.0,
+        1.773103264e12
+      ],
+      [
+        108.0,
+        1.77310327e12
+      ],
+      [
+        113.99999999999999,
+        1.773185402e12
+      ],
+      [
+        107.0,
+        1.773185405e12
+      ],
+      [
+        92.0,
+        1.773185407e12
+      ],
+      [
+        93.0,
+        1.773185415e12
+      ],
+      [
+        91.0,
+        1.773185416e12
+      ],
+      [
+        112.00000000000001,
+        1.773185416e12
+      ],
+      [
+        63.0,
+        1.773185416e12
+      ],
+      [
+        112.00000000000001,
+        1.773185418e12
+      ],
+      [
+        112.99999999999999,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_Bc!/dense 200x200/sparse 200x200 -> dense 200x200)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        145.0,
+        1.77310325e12
+      ],
+      [
+        145.0,
+        1.773103251e12
+      ],
+      [
+        135.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/index/(spmat/row/OneTo/100)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        80.0,
+        1.77310325e12
+      ],
+      [
+        86.0,
+        1.773103251e12
+      ],
+      [
+        80.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\Ac_mul_Bc!\\/\\dense 200x20/sparse 2000x200 -> dense 20x2000\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        130.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\Ac_mul_Bc!\\/\\dense 200x200/sparse 20x200 -> dense 200x20\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        235.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/transpose/(transpose/(600/600))",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        160.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\At_mul_B!\\/\\dense 400x400/sparse 400x400 -> dense 400x400\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        131.0,
+        1.773185419e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_Bc/dense 50x50/sparse 50x50 -> dense 50x50)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        130.0,
+        1.773103251e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/constructors/(\\Bidiagonal\\/100)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        124.0,
+        1.77310325e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(Ac_mul_B/dense 5x5/sparse 5x500 -> dense 5x500)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        138.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\Ac_mul_Bc!\\/\\dense 2000x20/sparse 2000x2000 -> dense 20x2000\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        157.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/index/(spmat/row/logical/10)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        76.0,
+        1.77310325e12
+      ],
+      [
+        73.0,
+        1.773103251e12
+      ],
+      [
+        75.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\At_mul_B\\/\\dense 5x5/sparse 5x500 -> dense 5x500\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        57.99999999999999,
+        1.77310325e12
+      ],
+      [
+        172.0,
+        1.773185419e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\A_mul_B!\\/\\dense 400x400/sparse 400x400 -> dense 400x400\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        17.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_Bt/dense 5x500/sparse 50x500 -> dense 5x50)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        91.0,
+        1.77310325e12
+      ],
+      [
+        92.0,
+        1.773103251e12
+      ],
+      [
+        92.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/index/(spmat/splogical/10)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        54.0,
+        1.77310325e12
+      ],
+      [
+        56.00000000000001,
+        1.773103251e12
+      ],
+      [
+        49.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\A_mul_B\\/\\dense 5x500/sparse 500x50 -> dense 5x50\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        55.00000000000001,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/index/(spvec/integer/100000)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        140.0,
+        1.773103246e12
+      ],
+      [
+        66.0,
+        1.773103247e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(At_mul_B/dense 50x50/sparse 50x50 -> dense 50x50)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        56.99999999999999,
+        1.773185412e12
+      ],
+      [
+        57.99999999999999,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\Ac_mul_Bc!\\/\\dense 2000x20/sparse 200x2000 -> dense 20x200\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        286.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(At_mul_B!/dense 40x400/sparse 40x400 -> dense 400x400)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        136.0,
+        1.77302643e12
+      ],
+      [
+        135.0,
+        1.773103247e12
+      ],
+      [
+        153.0,
+        1.773103253e12
+      ],
+      [
+        133.0,
+        1.773103263e12
+      ],
+      [
+        136.0,
+        1.773185407e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\A_mul_B\\/\\dense 5x5/sparse 5x500 -> dense 5x500\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        50.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(Ac_mul_B!/dense 200x200/sparse 200x200 -> dense 200x200)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        137.0,
+        1.77310325e12
+      ],
+      [
+        137.0,
+        1.773103251e12
+      ],
+      [
+        151.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_B!/sparse 40x40/dense 40x4000 -> dense 40x4000)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        130.0,
+        1.773103253e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/sparse solves/square system (lu)/vector rhs",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        95.0,
+        1.773103251e12
+      ],
+      [
+        111.00000000000001,
+        1.773103254e12
+      ],
+      [
+        91.0,
+        1.773185401e12
+      ],
+      [
+        92.0,
+        1.773185407e12
+      ],
+      [
+        107.0,
+        1.773185413e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_Bc/dense 5x500/sparse 50x500 -> dense 5x50)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        106.0,
+        1.77310325e12
+      ],
+      [
+        110.00000000000001,
+        1.773103251e12
+      ],
+      [
+        104.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\A_mul_Bt\\/\\dense 50x50/sparse 5x50 -> dense 50x5\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        49.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(At_mul_Bt/sparse 50x50/dense 50x50 -> dense 50x50)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        137.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\At_mul_B!\\/\\sparse 400x4000/dense 400x40 -> dense 4000x40\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        65.0,
+        1.77310325e12
+      ],
+      [
+        204.0,
+        1.773103271e12
+      ],
+      [
+        155.0,
+        1.773185419e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\A_mul_B!\\/\\dense 4000x40/sparse 40x40 -> dense 4000x40\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        27.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\A_mul_Bt!\\/\\dense 40x40/sparse 4000x40 -> dense 40x4000\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        44.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\A_mul_Bt!\\/\\dense 40x4000/sparse 400x4000 -> dense 40x400\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        46.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(Ac_mul_Bc/dense 500x5/sparse 50x500 -> dense 5x50)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        92.0,
+        1.77310325e12
+      ],
+      [
+        97.0,
+        1.773103251e12
+      ],
+      [
+        92.0,
+        1.773185416e12
+      ],
+      [
+        177.0,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(Ac_mul_Bc!/dense 200x20/sparse 2000x200 -> dense 20x2000)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        134.00000000000003,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_B/sparse 500x50/dense 50x5 -> dense 500x5)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        172.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\At_mul_B\\/\\sparse 500x500/dense 500x5 -> dense 500x5\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        148.0,
+        1.77310325e12
+      ],
+      [
+        69.0,
+        1.773185419e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/sparse solves/square system (default)/matrix rhs",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        130.0,
+        1.77302643e12
+      ],
+      [
+        105.0,
+        1.773103268e12
+      ],
+      [
+        93.0,
+        1.773185401e12
+      ],
+      [
+        94.0,
+        1.773185407e12
+      ],
+      [
+        106.0,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\A_mul_B!\\/\\dense 40x40/sparse 40x4000 -> dense 40x4000\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        21.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_B/dense 50x50/sparse 50x50 -> dense 50x50)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        136.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(Ac_mul_Bc/dense 5x50/sparse 50x5 -> dense 50x50)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        139.0,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/constructors/(\\Diagonal\\/10)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        91.0,
+        1.773185401e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(Ac_mul_Bc!/dense 20x200/sparse 200x20 -> dense 200x200)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        151.0,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\At_mul_Bt\\/\\dense 500x5/sparse 50x500 -> dense 5x50\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        211.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/constructors/(IV/1000)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        65.0,
+        1.77302643e12
+      ],
+      [
+        100.0,
+        1.77310325e12
+      ],
+      [
+        103.0,
+        1.773103251e12
+      ],
+      [
+        112.99999999999999,
+        1.773103263e12
+      ],
+      [
+        80.0,
+        1.773103264e12
+      ],
+      [
+        90.0,
+        1.773103268e12
+      ],
+      [
+        89.0,
+        1.773185398e12
+      ],
+      [
+        88.0,
+        1.773185402e12
+      ],
+      [
+        117.0,
+        1.773185408e12
+      ],
+      [
+        111.00000000000001,
+        1.773185409e12
+      ],
+      [
+        152.0,
+        1.773185411e12
+      ],
+      [
+        105.0,
+        1.773185412e12
+      ],
+      [
+        102.0,
+        1.773185416e12
+      ],
+      [
+        109.00000000000001,
+        1.773185418e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_Bt/sparse 50x500/dense 5x500 -> dense 50x5)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        66.0,
+        1.77302643e12
+      ],
+      [
+        63.0,
+        1.773026431e12
+      ],
+      [
+        160.0,
+        1.773103247e12
+      ],
+      [
+        157.0,
+        1.773103247e12
+      ],
+      [
+        112.00000000000001,
+        1.77310325e12
+      ],
+      [
+        112.00000000000001,
+        1.773103251e12
+      ],
+      [
+        65.0,
+        1.773103253e12
+      ],
+      [
+        170.0,
+        1.77310326e12
+      ],
+      [
+        164.0,
+        1.773103263e12
+      ],
+      [
+        155.0,
+        1.773103264e12
+      ],
+      [
+        173.0,
+        1.773103264e12
+      ],
+      [
+        143.0,
+        1.773103265e12
+      ],
+      [
+        61.0,
+        1.773103268e12
+      ],
+      [
+        134.00000000000003,
+        1.773185401e12
+      ],
+      [
+        172.0,
+        1.773185405e12
+      ],
+      [
+        62.0,
+        1.773185407e12
+      ],
+      [
+        152.0,
+        1.773185411e12
+      ],
+      [
+        112.00000000000001,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(Ac_mul_Bc!/dense 20x20/sparse 2000x20 -> dense 20x2000)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        135.0,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/constructors/(Tridiagonal/1000)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        91.0,
+        1.77302643e12
+      ],
+      [
+        110.00000000000001,
+        1.773026433e12
+      ],
+      [
+        109.00000000000001,
+        1.773103247e12
+      ],
+      [
+        93.0,
+        1.773103247e12
+      ],
+      [
+        92.0,
+        1.773103253e12
+      ],
+      [
+        84.0,
+        1.773103253e12
+      ],
+      [
+        109.00000000000001,
+        1.77310326e12
+      ],
+      [
+        120.0,
+        1.773103264e12
+      ],
+      [
+        111.00000000000001,
+        1.77310327e12
+      ],
+      [
+        109.00000000000001,
+        1.773185402e12
+      ],
+      [
+        106.0,
+        1.773185407e12
+      ],
+      [
+        110.00000000000001,
+        1.773185413e12
+      ],
+      [
+        108.0,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_Bt/sparse 50x50/dense 50x50 -> dense 50x50)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        141.0,
+        1.773103264e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/sparse solves/square system (lu)/matrix rhs",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        109.00000000000001,
+        1.773103254e12
+      ],
+      [
+        90.0,
+        1.773185401e12
+      ],
+      [
+        94.0,
+        1.773185405e12
+      ],
+      [
+        92.0,
+        1.773185407e12
+      ],
+      [
+        107.0,
+        1.773185413e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_Bc/dense 50x50/sparse 5x50 -> dense 50x5)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        130.0,
+        1.77310325e12
+      ],
+      [
+        133.0,
+        1.773103251e12
+      ],
+      [
+        125.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\Ac_mul_Bc\\/\\dense 5x500/sparse 5x5 -> dense 500x5\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        142.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/sparse solves/least squares (default)/matrix rhs",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        99.0,
+        1.77310325e12
+      ],
+      [
+        100.0,
+        1.773103251e12
+      ],
+      [
+        92.0,
+        1.773185401e12
+      ],
+      [
+        95.0,
+        1.773185407e12
+      ],
+      [
+        100.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(Ac_mul_Bc!/dense 2000x20/sparse 200x2000 -> dense 20x200)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        140.0,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\A_mul_B\\/\\dense 5x50/sparse 50x500 -> dense 5x500\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        53.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(Ac_mul_B/sparse 500x500/dense 500x5 -> dense 500x5)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        70.0,
+        1.77302643e12
+      ],
+      [
+        64.0,
+        1.773026431e12
+      ],
+      [
+        142.0,
+        1.773103247e12
+      ],
+      [
+        155.0,
+        1.773185405e12
+      ],
+      [
+        130.0,
+        1.773185411e12
+      ],
+      [
+        148.0,
+        1.773185412e12
+      ],
+      [
+        148.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/sparse solves/square system (default)/vector rhs",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        128.0,
+        1.77302643e12
+      ],
+      [
+        93.0,
+        1.773185401e12
+      ],
+      [
+        94.0,
+        1.773185407e12
+      ],
+      [
+        107.0,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(At_mul_Bt!/sparse 40x400/dense 400x40 -> dense 400x400)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        131.0,
+        1.773103253e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\At_mul_Bt!\\/\\dense 400x40/sparse 4000x400 -> dense 40x4000\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        168.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_Bc!/sparse 2000x20/dense 20x20 -> dense 2000x20)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        146.0,
+        1.773103253e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_Bc!/dense 20x200/sparse 2000x200 -> dense 20x2000)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        135.0,
+        1.773103252e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(Ac_mul_B/sparse 5x50/dense 5x50 -> dense 50x50)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        139.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\A_mul_B!\\/\\dense 400x400/sparse 400x40 -> dense 400x40\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        18.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(Ac_mul_Bc/sparse 500x50/dense 5x500 -> dense 50x5)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        101.0,
+        1.77310325e12
+      ],
+      [
+        102.0,
+        1.773103251e12
+      ],
+      [
+        102.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(Ac_mul_B!/sparse 200x200/dense 200x200 -> dense 200x200)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        130.0,
+        1.773103247e12
+      ],
+      [
+        130.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/constructors/(\\SymTridiagonal\\/10)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        90.0,
+        1.773185401e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/transpose/(transpose/(600/400))",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        140.0,
+        1.773103261e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\At_mul_Bt\\/\\dense 500x5/sparse 500x500 -> dense 5x500\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        154.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\Ac_mul_Bc\\/\\dense 500x5/sparse 50x500 -> dense 5x50\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        202.99999999999997,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(At_mul_B/sparse 50x5/dense 50x50 -> dense 5x50)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        104.0,
+        1.77310325e12
+      ],
+      [
+        104.0,
+        1.773103251e12
+      ],
+      [
+        103.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/index/(spmat/integer/100)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        52.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/sparse solves/least squares (qr)/matrix rhs",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        100.0,
+        1.77310325e12
+      ],
+      [
+        100.0,
+        1.773103251e12
+      ],
+      [
+        92.0,
+        1.773185401e12
+      ],
+      [
+        94.0,
+        1.773185407e12
+      ],
+      [
+        105.0,
+        1.77318541e12
+      ],
+      [
+        100.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/constructors/(Diagonal/1000)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        89.0,
+        1.77302643e12
+      ],
+      [
+        113.99999999999999,
+        1.773026433e12
+      ],
+      [
+        105.0,
+        1.773103246e12
+      ],
+      [
+        114.99999999999999,
+        1.773103247e12
+      ],
+      [
+        87.0,
+        1.773103247e12
+      ],
+      [
+        94.0,
+        1.773103247e12
+      ],
+      [
+        107.0,
+        1.773103249e12
+      ],
+      [
+        111.00000000000001,
+        1.773103251e12
+      ],
+      [
+        106.0,
+        1.773103251e12
+      ],
+      [
+        89.0,
+        1.773103253e12
+      ],
+      [
+        88.0,
+        1.773103253e12
+      ],
+      [
+        117.0,
+        1.77310326e12
+      ],
+      [
+        92.0,
+        1.773103261e12
+      ],
+      [
+        109.00000000000001,
+        1.773103264e12
+      ],
+      [
+        115.99999999999999,
+        1.773103264e12
+      ],
+      [
+        113.99999999999999,
+        1.773103267e12
+      ],
+      [
+        95.0,
+        1.773103267e12
+      ],
+      [
+        87.0,
+        1.773103268e12
+      ],
+      [
+        113.99999999999999,
+        1.77310327e12
+      ],
+      [
+        112.99999999999999,
+        1.773185399e12
+      ],
+      [
+        106.0,
+        1.773185401e12
+      ],
+      [
+        95.0,
+        1.773185404e12
+      ],
+      [
+        77.0,
+        1.773185405e12
+      ],
+      [
+        112.99999999999999,
+        1.773185407e12
+      ],
+      [
+        112.99999999999999,
+        1.773185413e12
+      ],
+      [
+        91.0,
+        1.773185415e12
+      ],
+      [
+        113.99999999999999,
+        1.773185416e12
+      ],
+      [
+        106.0,
+        1.773185418e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/constructors/(\\Diagonal\\/1000)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        114.99999999999999,
+        1.77310325e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(At_mul_Bt/dense 500x5/sparse 50x500 -> dense 5x50)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        97.0,
+        1.77310325e12
+      ],
+      [
+        97.0,
+        1.773103251e12
+      ],
+      [
+        99.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/index/(spvec/range/10000)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        98.0,
+        1.77310325e12
+      ],
+      [
+        96.0,
+        1.773103251e12
+      ],
+      [
+        136.0,
+        1.77310327e12
+      ],
+      [
+        94.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\Ac_mul_Bc!\\/\\dense 20x20/sparse 2000x20 -> dense 20x2000\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        144.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(At_mul_B/dense 50x5/sparse 50x500 -> dense 5x500)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        198.0,
+        1.77302643e12
+      ],
+      [
+        51.0,
+        1.773026431e12
+      ],
+      [
+        60.0,
+        1.773103247e12
+      ],
+      [
+        198.0,
+        1.773103247e12
+      ],
+      [
+        63.0,
+        1.773103249e12
+      ],
+      [
+        216.0,
+        1.773103253e12
+      ],
+      [
+        155.0,
+        1.773103256e12
+      ],
+      [
+        50.0,
+        1.77310326e12
+      ],
+      [
+        181.0,
+        1.773103263e12
+      ],
+      [
+        168.0,
+        1.773103263e12
+      ],
+      [
+        50.0,
+        1.773103264e12
+      ],
+      [
+        50.0,
+        1.773103267e12
+      ],
+      [
+        64.0,
+        1.77310327e12
+      ],
+      [
+        185.0,
+        1.773185407e12
+      ],
+      [
+        50.0,
+        1.773185411e12
+      ],
+      [
+        57.99999999999999,
+        1.773185412e12
+      ],
+      [
+        65.0,
+        1.773185415e12
+      ],
+      [
+        157.0,
+        1.773185418e12
+      ],
+      [
+        62.0,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(Ac_mul_B/dense 50x5/sparse 50x500 -> dense 5x500)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        69.0,
+        1.773026431e12
+      ],
+      [
+        131.0,
+        1.773103256e12
+      ],
+      [
+        153.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\At_mul_Bt!\\/\\dense 40x4000/sparse 40x40 -> dense 4000x40\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        66.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_Bc/sparse 50x500/dense 5x500 -> dense 50x5)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        64.0,
+        1.77302643e12
+      ],
+      [
+        65.0,
+        1.773026431e12
+      ],
+      [
+        158.0,
+        1.773103247e12
+      ],
+      [
+        133.0,
+        1.773103249e12
+      ],
+      [
+        108.0,
+        1.77310325e12
+      ],
+      [
+        168.0,
+        1.773103251e12
+      ],
+      [
+        109.00000000000001,
+        1.773103251e12
+      ],
+      [
+        66.0,
+        1.773103253e12
+      ],
+      [
+        170.0,
+        1.77310326e12
+      ],
+      [
+        167.0,
+        1.773103264e12
+      ],
+      [
+        62.0,
+        1.773103267e12
+      ],
+      [
+        62.0,
+        1.773103268e12
+      ],
+      [
+        131.0,
+        1.77310327e12
+      ],
+      [
+        65.0,
+        1.773185402e12
+      ],
+      [
+        60.0,
+        1.773185407e12
+      ],
+      [
+        153.0,
+        1.773185411e12
+      ],
+      [
+        109.00000000000001,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_B/dense 500x5/sparse 5x5 -> dense 500x5)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        152.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(At_mul_B!/dense 40x4000/sparse 40x40 -> dense 4000x40)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        135.0,
+        1.773103253e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\A_mul_Bt\\/\\sparse 50x500/dense 5x500 -> dense 50x5\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        163.0,
+        1.77310325e12
+      ],
+      [
+        62.0,
+        1.773185419e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(Ac_mul_Bc/dense 50x5/sparse 500x50 -> dense 5x500)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        134.00000000000003,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/constructors/(\\IV\\/1000)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        93.0,
+        1.773185401e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/constructors/(Bidiagonal/100)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        157.0,
+        1.773026431e12
+      ],
+      [
+        93.0,
+        1.773103247e12
+      ],
+      [
+        92.0,
+        1.77310325e12
+      ],
+      [
+        92.0,
+        1.773103251e12
+      ],
+      [
+        106.0,
+        1.773103253e12
+      ],
+      [
+        94.0,
+        1.773103253e12
+      ],
+      [
+        105.0,
+        1.773103264e12
+      ],
+      [
+        106.0,
+        1.77310327e12
+      ],
+      [
+        110.00000000000001,
+        1.773185415e12
+      ],
+      [
+        94.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(Ac_mul_Bc/dense 500x5/sparse 500x500 -> dense 5x500)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        171.0,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_Bc!/dense 200x200/sparse 20x200 -> dense 200x20)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        146.0,
+        1.77310325e12
+      ],
+      [
+        146.0,
+        1.773103251e12
+      ],
+      [
+        136.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(Ac_mul_Bc/sparse 500x500/dense 5x500 -> dense 500x5)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        132.0,
+        1.773103251e12
+      ],
+      [
+        153.0,
+        1.773103253e12
+      ],
+      [
+        61.0,
+        1.773103253e12
+      ],
+      [
+        65.0,
+        1.773185411e12
+      ],
+      [
+        130.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/sparse solves/least squares (qr)/vector rhs",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        100.0,
+        1.77310325e12
+      ],
+      [
+        100.0,
+        1.773103251e12
+      ],
+      [
+        92.0,
+        1.773185401e12
+      ],
+      [
+        95.0,
+        1.773185407e12
+      ],
+      [
+        100.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_Bc!/sparse 20x200/dense 200x200 -> dense 20x200)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        130.0,
+        1.773185411e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/constructors/(SymTridiagonal/100)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        90.0,
+        1.77302643e12
+      ],
+      [
+        94.0,
+        1.77302643e12
+      ],
+      [
+        126.0,
+        1.773026431e12
+      ],
+      [
+        94.0,
+        1.773103247e12
+      ],
+      [
+        91.0,
+        1.773103249e12
+      ],
+      [
+        107.0,
+        1.773103249e12
+      ],
+      [
+        128.0,
+        1.77310325e12
+      ],
+      [
+        138.0,
+        1.773103251e12
+      ],
+      [
+        107.0,
+        1.773103253e12
+      ],
+      [
+        108.0,
+        1.773103253e12
+      ],
+      [
+        106.0,
+        1.773103253e12
+      ],
+      [
+        106.0,
+        1.773103254e12
+      ],
+      [
+        90.0,
+        1.773103259e12
+      ],
+      [
+        93.0,
+        1.773103261e12
+      ],
+      [
+        112.00000000000001,
+        1.773103263e12
+      ],
+      [
+        109.00000000000001,
+        1.773103264e12
+      ],
+      [
+        105.0,
+        1.773103267e12
+      ],
+      [
+        92.0,
+        1.77310327e12
+      ],
+      [
+        94.0,
+        1.773185407e12
+      ],
+      [
+        112.99999999999999,
+        1.773185409e12
+      ],
+      [
+        109.00000000000001,
+        1.773185412e12
+      ],
+      [
+        135.0,
+        1.773185416e12
+      ],
+      [
+        93.0,
+        1.773185418e12
+      ],
+      [
+        111.00000000000001,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/constructors/(\\IV\\/10)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        106.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_Bt!/sparse 40x40/dense 4000x40 -> dense 40x4000)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        137.0,
+        1.773103253e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_B!/sparse 400x400/dense 400x400 -> dense 400x400)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        131.0,
+        1.773103253e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(At_mul_Bt/dense 50x50/sparse 5x50 -> dense 50x5)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        77.0,
+        1.77310325e12
+      ],
+      [
+        77.0,
+        1.773103251e12
+      ],
+      [
+        79.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\A_mul_Bt\\/\\sparse 500x500/dense 5x500 -> dense 500x5\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        152.0,
+        1.77310325e12
+      ],
+      [
+        67.00000000000001,
+        1.773185419e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_Bt/sparse 500x500/dense 5x500 -> dense 500x5)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        69.0,
+        1.773026431e12
+      ],
+      [
+        147.0,
+        1.773103247e12
+      ],
+      [
+        143.0,
+        1.773103247e12
+      ],
+      [
+        147.0,
+        1.77310326e12
+      ],
+      [
+        138.0,
+        1.773103263e12
+      ],
+      [
+        146.0,
+        1.773103264e12
+      ],
+      [
+        150.0,
+        1.773103264e12
+      ],
+      [
+        138.0,
+        1.773103265e12
+      ],
+      [
+        66.0,
+        1.773103268e12
+      ],
+      [
+        165.0,
+        1.773185405e12
+      ],
+      [
+        65.0,
+        1.773185407e12
+      ],
+      [
+        136.0,
+        1.773185411e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\A_mul_Bt\\/\\dense 50x50/sparse 50x50 -> dense 50x50\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        38.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/constructors/(IV/100)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        91.0,
+        1.77310325e12
+      ],
+      [
+        91.0,
+        1.773103251e12
+      ],
+      [
+        106.0,
+        1.773103253e12
+      ],
+      [
+        105.0,
+        1.773103254e12
+      ],
+      [
+        107.0,
+        1.77310326e12
+      ],
+      [
+        91.0,
+        1.773103265e12
+      ],
+      [
+        93.0,
+        1.77310327e12
+      ],
+      [
+        106.0,
+        1.773185405e12
+      ],
+      [
+        94.0,
+        1.773185413e12
+      ],
+      [
+        108.0,
+        1.773185416e12
+      ],
+      [
+        87.0,
+        1.773185416e12
+      ],
+      [
+        94.0,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(Ac_mul_B/sparse 5x500/dense 5x5 -> dense 500x5)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        138.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_Bc!/sparse 2000x200/dense 20x200 -> dense 2000x20)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        136.0,
+        1.773103247e12
+      ],
+      [
+        135.0,
+        1.773103251e12
+      ],
+      [
+        130.0,
+        1.77310326e12
+      ],
+      [
+        131.0,
+        1.773185411e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_Bt/sparse 5x50/dense 50x50 -> dense 5x50)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        113.99999999999999,
+        1.77310325e12
+      ],
+      [
+        113.99999999999999,
+        1.773103251e12
+      ],
+      [
+        143.0,
+        1.773103264e12
+      ],
+      [
+        113.99999999999999,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/index/(spvec/integer/10000)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        169.0,
+        1.773185403e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\A_mul_B\\/\\dense 5x500/sparse 500x500 -> dense 5x500\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        53.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_B/dense 50x5/sparse 5x50 -> dense 50x50)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        137.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_Bc/sparse 500x5/dense 5x5 -> dense 500x5)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        165.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\Ac_mul_Bc\\/\\dense 50x50/sparse 50x50 -> dense 50x50\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        142.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\At_mul_Bt!\\/\\dense 400x400/sparse 400x400 -> dense 400x400\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        149.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(Ac_mul_B!/dense 20x200/sparse 20x200 -> dense 200x200)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        136.0,
+        1.77310325e12
+      ],
+      [
+        137.0,
+        1.773103251e12
+      ],
+      [
+        149.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(At_mul_Bt/sparse 5x500/dense 5x5 -> dense 500x5)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        134.00000000000003,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(Ac_mul_Bc!/dense 20x2000/sparse 20x20 -> dense 2000x20)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        132.0,
+        1.773185406e12
+      ],
+      [
+        153.0,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(At_mul_B!/sparse 400x400/dense 400x400 -> dense 400x400)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        134.00000000000003,
+        1.773103268e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\A_mul_Bt!\\/\\dense 40x400/sparse 4000x400 -> dense 40x4000\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        36.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(Ac_mul_B/dense 50x50/sparse 50x50 -> dense 50x50)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        69.0,
+        1.773026431e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(Ac_mul_B/dense 500x5/sparse 500x500 -> dense 5x500)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        151.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_Bt/dense 50x5/sparse 50x5 -> dense 50x50)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        141.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(Ac_mul_B!/dense 20x2000/sparse 20x20 -> dense 2000x20)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        134.00000000000003,
+        1.77310325e12
+      ],
+      [
+        137.0,
+        1.773103251e12
+      ],
+      [
+        135.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_B/sparse 50x5/dense 5x50 -> dense 50x50)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        165.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\A_mul_Bt!\\/\\dense 400x400/sparse 400x400 -> dense 400x400\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        36.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/index/(spmat/splogical/100)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        68.0,
+        1.77310325e12
+      ],
+      [
+        77.0,
+        1.773103251e12
+      ],
+      [
+        65.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/index/(spmat/row/range/10)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        70.0,
+        1.77310325e12
+      ],
+      [
+        71.0,
+        1.773103251e12
+      ],
+      [
+        70.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(At_mul_B/dense 500x5/sparse 500x50 -> dense 5x50)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        106.0,
+        1.77310325e12
+      ],
+      [
+        107.0,
+        1.773103251e12
+      ],
+      [
+        62.0,
+        1.773185412e12
+      ],
+      [
+        60.0,
+        1.773185415e12
+      ],
+      [
+        108.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(At_mul_B/dense 50x50/sparse 50x5 -> dense 50x5)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        107.0,
+        1.77310325e12
+      ],
+      [
+        108.0,
+        1.773103251e12
+      ],
+      [
+        108.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\A_mul_Bt!\\/\\dense 400x40/sparse 400x40 -> dense 400x400\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        37.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/constructors/(Tridiagonal/10)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        285.0,
+        1.773026431e12
+      ],
+      [
+        105.0,
+        1.773103246e12
+      ],
+      [
+        110.00000000000001,
+        1.773103248e12
+      ],
+      [
+        95.0,
+        1.773103249e12
+      ],
+      [
+        107.0,
+        1.773103249e12
+      ],
+      [
+        83.0,
+        1.77310325e12
+      ],
+      [
+        85.0,
+        1.773103251e12
+      ],
+      [
+        121.0,
+        1.77310326e12
+      ],
+      [
+        105.0,
+        1.773185403e12
+      ],
+      [
+        87.0,
+        1.773185406e12
+      ],
+      [
+        92.0,
+        1.773185406e12
+      ],
+      [
+        106.0,
+        1.773185409e12
+      ],
+      [
+        94.0,
+        1.773185416e12
+      ],
+      [
+        105.0,
+        1.773185418e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\At_mul_B!\\/\\dense 40x400/sparse 40x400 -> dense 400x400\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        134.00000000000003,
+        1.773185419e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\At_mul_Bt!\\/\\dense 400x400/sparse 40x400 -> dense 400x40\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        200.99999999999997,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/constructors/(\\Bidiagonal\\/1000)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        110.00000000000001,
+        1.77310325e12
+      ],
+      [
+        93.0,
+        1.773185401e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/sparse solves/square system (ldlt)/vector rhs",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        90.0,
+        1.773026431e12
+      ],
+      [
+        92.0,
+        1.773103247e12
+      ],
+      [
+        112.00000000000001,
+        1.773103247e12
+      ],
+      [
+        94.0,
+        1.773103248e12
+      ],
+      [
+        94.0,
+        1.773103251e12
+      ],
+      [
+        89.0,
+        1.773103253e12
+      ],
+      [
+        90.0,
+        1.77310326e12
+      ],
+      [
+        114.99999999999999,
+        1.773103263e12
+      ],
+      [
+        110.00000000000001,
+        1.773103263e12
+      ],
+      [
+        93.0,
+        1.773103264e12
+      ],
+      [
+        89.0,
+        1.773103267e12
+      ],
+      [
+        95.0,
+        1.773103267e12
+      ],
+      [
+        107.0,
+        1.773103268e12
+      ],
+      [
+        90.0,
+        1.773185401e12
+      ],
+      [
+        106.0,
+        1.773185406e12
+      ],
+      [
+        93.0,
+        1.773185408e12
+      ],
+      [
+        108.0,
+        1.773185412e12
+      ],
+      [
+        106.0,
+        1.773185414e12
+      ],
+      [
+        112.00000000000001,
+        1.773185415e12
+      ],
+      [
+        110.00000000000001,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_B/sparse 5x50/dense 50x50 -> dense 5x50)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        119.0,
+        1.77310325e12
+      ],
+      [
+        119.0,
+        1.773103251e12
+      ],
+      [
+        119.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/index/(spmat/array/10)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        122.0,
+        1.773026431e12
+      ],
+      [
+        98.0,
+        1.77310325e12
+      ],
+      [
+        94.0,
+        1.773103251e12
+      ],
+      [
+        83.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(Ac_mul_B!/dense 20x20/sparse 20x2000 -> dense 20x2000)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        147.0,
+        1.77310325e12
+      ],
+      [
+        156.0,
+        1.773103251e12
+      ],
+      [
+        159.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\Ac_mul_Bc\\/\\dense 50x50/sparse 5x50 -> dense 50x5\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        306.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\At_mul_Bt!\\/\\dense 4000x40/sparse 400x4000 -> dense 40x400\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        372.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/index/(spmat/integer/1000)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        54.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\At_mul_B\\/\\dense 500x5/sparse 500x50 -> dense 5x50\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        66.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/constructors/(IJV/100)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        143.0,
+        1.773026431e12
+      ],
+      [
+        106.0,
+        1.773103246e12
+      ],
+      [
+        106.0,
+        1.773103247e12
+      ],
+      [
+        96.0,
+        1.77310325e12
+      ],
+      [
+        94.0,
+        1.773103251e12
+      ],
+      [
+        99.0,
+        1.773103251e12
+      ],
+      [
+        106.0,
+        1.773103253e12
+      ],
+      [
+        107.0,
+        1.77310326e12
+      ],
+      [
+        109.00000000000001,
+        1.773103264e12
+      ],
+      [
+        106.0,
+        1.773103267e12
+      ],
+      [
+        88.0,
+        1.773103268e12
+      ],
+      [
+        107.0,
+        1.77310327e12
+      ],
+      [
+        107.0,
+        1.773185399e12
+      ],
+      [
+        110.00000000000001,
+        1.773185405e12
+      ],
+      [
+        92.0,
+        1.773185408e12
+      ],
+      [
+        107.0,
+        1.773185413e12
+      ],
+      [
+        97.0,
+        1.773185416e12
+      ],
+      [
+        93.0,
+        1.773185418e12
+      ],
+      [
+        106.0,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/constructors/(IV/10)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        94.0,
+        1.77302643e12
+      ],
+      [
+        110.00000000000001,
+        1.773103246e12
+      ],
+      [
+        95.0,
+        1.773103248e12
+      ],
+      [
+        106.0,
+        1.773103249e12
+      ],
+      [
+        55.00000000000001,
+        1.77310325e12
+      ],
+      [
+        56.00000000000001,
+        1.773103251e12
+      ],
+      [
+        93.0,
+        1.773103252e12
+      ],
+      [
+        106.0,
+        1.773103252e12
+      ],
+      [
+        127.0,
+        1.773103254e12
+      ],
+      [
+        93.0,
+        1.773103257e12
+      ],
+      [
+        87.0,
+        1.773103259e12
+      ],
+      [
+        107.0,
+        1.773103262e12
+      ],
+      [
+        93.0,
+        1.773103263e12
+      ],
+      [
+        92.0,
+        1.773103265e12
+      ],
+      [
+        106.0,
+        1.773103267e12
+      ],
+      [
+        94.0,
+        1.7731854e12
+      ],
+      [
+        94.0,
+        1.773185401e12
+      ],
+      [
+        91.0,
+        1.773185403e12
+      ],
+      [
+        95.0,
+        1.773185415e12
+      ],
+      [
+        57.99999999999999,
+        1.773185416e12
+      ],
+      [
+        106.0,
+        1.773185418e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/constructors/(Bidiagonal/10)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        298.0,
+        1.773026431e12
+      ],
+      [
+        77.0,
+        1.77310325e12
+      ],
+      [
+        80.0,
+        1.773103251e12
+      ],
+      [
+        93.0,
+        1.773103254e12
+      ],
+      [
+        109.00000000000001,
+        1.773103267e12
+      ],
+      [
+        109.00000000000001,
+        1.773185405e12
+      ],
+      [
+        108.0,
+        1.773185415e12
+      ],
+      [
+        83.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_Bt/dense 50x50/sparse 50x50 -> dense 50x50)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        157.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_Bt/dense 500x5/sparse 5x5 -> dense 500x5)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        166.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(At_mul_Bt/sparse 500x500/dense 5x500 -> dense 500x5)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        139.0,
+        1.77310326e12
+      ],
+      [
+        131.0,
+        1.773103263e12
+      ],
+      [
+        151.0,
+        1.773103264e12
+      ],
+      [
+        140.0,
+        1.773103267e12
+      ],
+      [
+        134.00000000000003,
+        1.773103268e12
+      ],
+      [
+        138.0,
+        1.773185411e12
+      ],
+      [
+        136.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\At_mul_B\\/\\dense 500x5/sparse 500x500 -> dense 5x500\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        55.00000000000001,
+        1.77310325e12
+      ],
+      [
+        173.0,
+        1.773185419e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/constructors/(\\Tridiagonal\\/1000)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        95.0,
+        1.773185401e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\A_mul_B!\\/\\dense 40x4000/sparse 4000x400 -> dense 40x400\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        26.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/index/(\\spmat\\/\\col\\/\\logical\\/1000)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        66.0,
+        1.773185419e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/constructors/(Diagonal/100)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        94.0,
+        1.77302643e12
+      ],
+      [
+        93.0,
+        1.77302643e12
+      ],
+      [
+        161.0,
+        1.773026431e12
+      ],
+      [
+        117.0,
+        1.773026433e12
+      ],
+      [
+        112.00000000000001,
+        1.773103247e12
+      ],
+      [
+        92.0,
+        1.773103247e12
+      ],
+      [
+        112.99999999999999,
+        1.77310325e12
+      ],
+      [
+        105.0,
+        1.773103251e12
+      ],
+      [
+        107.0,
+        1.773103251e12
+      ],
+      [
+        92.0,
+        1.773103252e12
+      ],
+      [
+        94.0,
+        1.773103253e12
+      ],
+      [
+        110.00000000000001,
+        1.773103254e12
+      ],
+      [
+        112.99999999999999,
+        1.77310326e12
+      ],
+      [
+        90.0,
+        1.773103261e12
+      ],
+      [
+        110.00000000000001,
+        1.773103262e12
+      ],
+      [
+        106.0,
+        1.773103264e12
+      ],
+      [
+        109.00000000000001,
+        1.773103267e12
+      ],
+      [
+        94.0,
+        1.773103267e12
+      ],
+      [
+        111.00000000000001,
+        1.77310327e12
+      ],
+      [
+        107.0,
+        1.773185399e12
+      ],
+      [
+        154.0,
+        1.773185405e12
+      ],
+      [
+        110.00000000000001,
+        1.773185407e12
+      ],
+      [
+        93.0,
+        1.773185411e12
+      ],
+      [
+        118.0,
+        1.773185413e12
+      ],
+      [
+        107.0,
+        1.773185416e12
+      ],
+      [
+        93.0,
+        1.773185416e12
+      ],
+      [
+        111.00000000000001,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/constructors/(\\Bidiagonal\\/10)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        92.0,
+        1.773185401e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(Ac_mul_Bc/dense 50x50/sparse 5x50 -> dense 50x5)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        105.0,
+        1.77310325e12
+      ],
+      [
+        110.00000000000001,
+        1.773103251e12
+      ],
+      [
+        100.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\A_mul_B\\/\\dense 500x5/sparse 5x5 -> dense 500x5\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        23.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\A_mul_B\\/\\dense 50x50/sparse 50x50 -> dense 50x50\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        20.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\A_mul_B!\\/\\dense 40x4000/sparse 4000x4000 -> dense 40x4000\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        23.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/transpose/(transpose/(20000/10000))",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        141.0,
+        1.773185402e12
+      ],
+      [
+        66.0,
+        1.773185402e12
+      ],
+      [
+        1050.0,
+        1.773185419e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(Ac_mul_Bc/sparse 5x500/dense 5x5 -> dense 500x5)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        140.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/index/(spmat/col/logical/10)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        218.00000000000003,
+        1.773026431e12
+      ],
+      [
+        131.0,
+        1.773103254e12
+      ],
+      [
+        67.00000000000001,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/sparse matvec/adjoint",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        117.0,
+        1.77302643e12
+      ],
+      [
+        127.0,
+        1.773026431e12
+      ],
+      [
+        87.0,
+        1.773026431e12
+      ],
+      [
+        87.0,
+        1.773103247e12
+      ],
+      [
+        112.00000000000001,
+        1.77310325e12
+      ],
+      [
+        83.0,
+        1.773103251e12
+      ],
+      [
+        92.0,
+        1.773103251e12
+      ],
+      [
+        113.99999999999999,
+        1.773103251e12
+      ],
+      [
+        107.0,
+        1.773103252e12
+      ],
+      [
+        94.0,
+        1.773103253e12
+      ],
+      [
+        131.0,
+        1.773103256e12
+      ],
+      [
+        94.0,
+        1.77310326e12
+      ],
+      [
+        80.0,
+        1.773103264e12
+      ],
+      [
+        123.0,
+        1.773103267e12
+      ],
+      [
+        112.00000000000001,
+        1.773103271e12
+      ],
+      [
+        82.0,
+        1.773185401e12
+      ],
+      [
+        82.0,
+        1.773185402e12
+      ],
+      [
+        105.0,
+        1.773185404e12
+      ],
+      [
+        133.0,
+        1.773185405e12
+      ],
+      [
+        80.0,
+        1.773185407e12
+      ],
+      [
+        122.0,
+        1.773185408e12
+      ],
+      [
+        129.0,
+        1.77318541e12
+      ],
+      [
+        121.0,
+        1.773185412e12
+      ],
+      [
+        126.0,
+        1.773185413e12
+      ],
+      [
+        94.0,
+        1.773185414e12
+      ],
+      [
+        112.00000000000001,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/constructors/(Tridiagonal/100)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        95.0,
+        1.77302643e12
+      ],
+      [
+        89.0,
+        1.77302643e12
+      ],
+      [
+        80.0,
+        1.77302643e12
+      ],
+      [
+        123.0,
+        1.773026431e12
+      ],
+      [
+        109.00000000000001,
+        1.773103246e12
+      ],
+      [
+        94.0,
+        1.773103248e12
+      ],
+      [
+        126.0,
+        1.77310325e12
+      ],
+      [
+        147.0,
+        1.773103251e12
+      ],
+      [
+        106.0,
+        1.773103251e12
+      ],
+      [
+        106.0,
+        1.773103252e12
+      ],
+      [
+        118.0,
+        1.773103262e12
+      ],
+      [
+        114.99999999999999,
+        1.773103263e12
+      ],
+      [
+        105.0,
+        1.773103264e12
+      ],
+      [
+        132.0,
+        1.773103265e12
+      ],
+      [
+        94.0,
+        1.77310327e12
+      ],
+      [
+        94.0,
+        1.773185403e12
+      ],
+      [
+        109.00000000000001,
+        1.773185408e12
+      ],
+      [
+        109.00000000000001,
+        1.773185409e12
+      ],
+      [
+        111.00000000000001,
+        1.773185414e12
+      ],
+      [
+        91.0,
+        1.773185415e12
+      ],
+      [
+        131.0,
+        1.773185416e12
+      ],
+      [
+        88.0,
+        1.773185418e12
+      ],
+      [
+        109.00000000000001,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\A_mul_Bt\\/\\dense 50x5/sparse 50x5 -> dense 50x50\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        38.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/sparse solves/least squares (default)/vector rhs",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        99.0,
+        1.77310325e12
+      ],
+      [
+        100.0,
+        1.773103251e12
+      ],
+      [
+        92.0,
+        1.773185401e12
+      ],
+      [
+        94.0,
+        1.773185407e12
+      ],
+      [
+        100.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\At_mul_Bt\\/\\dense 5x500/sparse 5x5 -> dense 500x5\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        159.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/index/(spmat/col/array/1000)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        70.0,
+        1.773026431e12
+      ],
+      [
+        137.0,
+        1.773103247e12
+      ],
+      [
+        130.0,
+        1.773103263e12
+      ],
+      [
+        130.0,
+        1.773103267e12
+      ],
+      [
+        135.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_Bc!/dense 2000x20/sparse 20x20 -> dense 2000x20)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        147.0,
+        1.77310325e12
+      ],
+      [
+        147.0,
+        1.773103251e12
+      ],
+      [
+        150.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\At_mul_Bt!\\/\\dense 40x40/sparse 4000x40 -> dense 40x4000\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        191.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_B/sparse 50x500/dense 500x5 -> dense 50x5)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        118.0,
+        1.77310325e12
+      ],
+      [
+        117.0,
+        1.773103251e12
+      ],
+      [
+        130.0,
+        1.773103251e12
+      ],
+      [
+        146.0,
+        1.773103264e12
+      ],
+      [
+        69.0,
+        1.773185403e12
+      ],
+      [
+        136.0,
+        1.773185416e12
+      ],
+      [
+        118.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\At_mul_Bt\\/\\dense 50x50/sparse 50x50 -> dense 50x50\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        131.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(Ac_mul_B/sparse 500x50/dense 500x5 -> dense 50x5)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        96.0,
+        1.77310325e12
+      ],
+      [
+        98.0,
+        1.773103251e12
+      ],
+      [
+        100.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(Ac_mul_Bc!/dense 2000x20/sparse 2000x2000 -> dense 20x2000)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        134.00000000000003,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/index/(spmat/row/range/1000)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        92.0,
+        1.77310325e12
+      ],
+      [
+        101.0,
+        1.773103251e12
+      ],
+      [
+        86.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/constructors/(\\IJV\\/100)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        106.0,
+        1.773103271e12
+      ],
+      [
+        109.00000000000001,
+        1.773185401e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(Ac_mul_B!/dense 2000x20/sparse 2000x2000 -> dense 20x2000)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        138.0,
+        1.77310325e12
+      ],
+      [
+        142.0,
+        1.773103251e12
+      ],
+      [
+        145.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/index/(spmat/integer/10)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        50.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/index/(spmat/col/logical/100)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        169.0,
+        1.773026431e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/transpose/(adjoint/(20000/20000))",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        326.0,
+        1.773103257e12
+      ],
+      [
+        133.0,
+        1.773103264e12
+      ],
+      [
+        172.0,
+        1.773185419e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_Bc/dense 50x5/sparse 50x5 -> dense 50x50)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        132.0,
+        1.773103251e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\A_mul_B\\/\\dense 50x50/sparse 50x5 -> dense 50x5\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        34.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(Ac_mul_B!/dense 200x20/sparse 200x2000 -> dense 20x2000)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        143.0,
+        1.77310325e12
+      ],
+      [
+        151.0,
+        1.773103251e12
+      ],
+      [
+        154.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(At_mul_B/sparse 500x50/dense 500x5 -> dense 50x5)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        96.0,
+        1.77310325e12
+      ],
+      [
+        96.0,
+        1.773103251e12
+      ],
+      [
+        95.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(At_mul_B/sparse 500x500/dense 500x5 -> dense 500x5)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        151.0,
+        1.77302643e12
+      ],
+      [
+        146.0,
+        1.773026431e12
+      ],
+      [
+        65.0,
+        1.773103247e12
+      ],
+      [
+        66.0,
+        1.77310326e12
+      ],
+      [
+        66.0,
+        1.773103264e12
+      ],
+      [
+        153.0,
+        1.773103268e12
+      ],
+      [
+        68.0,
+        1.773185407e12
+      ],
+      [
+        67.00000000000001,
+        1.773185411e12
+      ],
+      [
+        134.00000000000003,
+        1.773185412e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/index/(spvec/logical/10000)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        41.0,
+        1.773103259e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/constructors/(\\Tridiagonal\\/10)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        90.0,
+        1.773185401e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(Ac_mul_B/dense 50x50/sparse 50x5 -> dense 50x5)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        129.0,
+        1.77310325e12
+      ],
+      [
+        132.0,
+        1.773103251e12
+      ],
+      [
+        126.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_Bc!/dense 200x20/sparse 200x20 -> dense 200x200)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        147.0,
+        1.77310325e12
+      ],
+      [
+        147.0,
+        1.773103251e12
+      ],
+      [
+        137.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_Bt/sparse 500x50/dense 5x50 -> dense 500x5)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        170.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(At_mul_B!/dense 4000x40/sparse 4000x400 -> dense 40x400)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        146.0,
+        1.773103253e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/index/(spmat/range/10)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        256.0,
+        1.773026431e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\At_mul_Bt\\/\\dense 50x50/sparse 5x50 -> dense 50x5\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        366.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_B/dense 5x500/sparse 500x50 -> dense 5x50)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        102.0,
+        1.77310325e12
+      ],
+      [
+        103.0,
+        1.773103251e12
+      ],
+      [
+        102.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(Ac_mul_B/sparse 50x500/dense 50x5 -> dense 500x5)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        142.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\At_mul_B\\/\\dense 50x50/sparse 50x50 -> dense 50x50\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        64.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/index/(spmat/row/array/1000)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        107.0,
+        1.77310325e12
+      ],
+      [
+        95.0,
+        1.773103251e12
+      ],
+      [
+        101.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/index/(spvec/logical/100000)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        37.0,
+        1.773103259e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(At_mul_Bt!/sparse 400x4000/dense 40x400 -> dense 4000x40)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        142.0,
+        1.77302643e12
+      ],
+      [
+        157.0,
+        1.77302643e12
+      ],
+      [
+        142.0,
+        1.773103247e12
+      ],
+      [
+        196.0,
+        1.773103253e12
+      ],
+      [
+        185.0,
+        1.773103253e12
+      ],
+      [
+        67.00000000000001,
+        1.77310326e12
+      ],
+      [
+        64.0,
+        1.773103263e12
+      ],
+      [
+        68.0,
+        1.773103264e12
+      ],
+      [
+        64.0,
+        1.773185405e12
+      ],
+      [
+        62.0,
+        1.773185411e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\A_mul_Bt!\\/\\dense 400x400/sparse 40x400 -> dense 400x40\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        32.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(Ac_mul_B/sparse 50x50/dense 50x50 -> dense 50x50)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        65.0,
+        1.773026431e12
+      ],
+      [
+        144.0,
+        1.773185412e12
+      ],
+      [
+        148.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\Ac_mul_Bc!\\/\\dense 200x200/sparse 200x200 -> dense 200x200\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        138.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_Bc/sparse 500x500/dense 5x500 -> dense 500x5)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        143.0,
+        1.773103247e12
+      ],
+      [
+        145.0,
+        1.773103251e12
+      ],
+      [
+        159.0,
+        1.77310326e12
+      ],
+      [
+        156.0,
+        1.773103264e12
+      ],
+      [
+        69.0,
+        1.773103267e12
+      ],
+      [
+        69.0,
+        1.773103268e12
+      ],
+      [
+        63.0,
+        1.773185407e12
+      ],
+      [
+        140.0,
+        1.773185411e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(At_mul_B!/sparse 400x4000/dense 400x40 -> dense 4000x40)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        69.0,
+        1.77302643e12
+      ],
+      [
+        59.0,
+        1.773026431e12
+      ],
+      [
+        66.0,
+        1.773026431e12
+      ],
+      [
+        147.0,
+        1.773103247e12
+      ],
+      [
+        144.0,
+        1.77310325e12
+      ],
+      [
+        154.0,
+        1.773103251e12
+      ],
+      [
+        144.0,
+        1.77310326e12
+      ],
+      [
+        152.0,
+        1.773103263e12
+      ],
+      [
+        146.0,
+        1.773103264e12
+      ],
+      [
+        143.0,
+        1.773185405e12
+      ],
+      [
+        153.0,
+        1.773185407e12
+      ],
+      [
+        156.0,
+        1.773185411e12
+      ],
+      [
+        160.0,
+        1.773185416e12
+      ],
+      [
+        69.0,
+        1.773185419e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(Ac_mul_Bc!/sparse 200x2000/dense 20x200 -> dense 2000x20)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        223.0,
+        1.773103253e12
+      ],
+      [
+        44.0,
+        1.773185405e12
+      ],
+      [
+        45.0,
+        1.773185411e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/constructors/(SymTridiagonal/10)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        273.0,
+        1.773026431e12
+      ],
+      [
+        107.0,
+        1.773103249e12
+      ],
+      [
+        82.0,
+        1.77310325e12
+      ],
+      [
+        85.0,
+        1.773103251e12
+      ],
+      [
+        95.0,
+        1.773103259e12
+      ],
+      [
+        105.0,
+        1.773103262e12
+      ],
+      [
+        95.0,
+        1.773103264e12
+      ],
+      [
+        106.0,
+        1.773185405e12
+      ],
+      [
+        87.0,
+        1.773185406e12
+      ],
+      [
+        93.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(At_mul_B/dense 500x5/sparse 500x500 -> dense 5x500)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        183.0,
+        1.77302643e12
+      ],
+      [
+        54.0,
+        1.773026431e12
+      ],
+      [
+        61.0,
+        1.773103247e12
+      ],
+      [
+        184.0,
+        1.773103247e12
+      ],
+      [
+        69.0,
+        1.773103249e12
+      ],
+      [
+        200.99999999999997,
+        1.773103253e12
+      ],
+      [
+        148.0,
+        1.773103256e12
+      ],
+      [
+        54.0,
+        1.77310326e12
+      ],
+      [
+        172.0,
+        1.773103263e12
+      ],
+      [
+        166.0,
+        1.773103263e12
+      ],
+      [
+        55.00000000000001,
+        1.773103264e12
+      ],
+      [
+        54.0,
+        1.773103267e12
+      ],
+      [
+        68.0,
+        1.77310327e12
+      ],
+      [
+        180.0,
+        1.773185407e12
+      ],
+      [
+        54.0,
+        1.773185411e12
+      ],
+      [
+        57.99999999999999,
+        1.773185412e12
+      ],
+      [
+        63.0,
+        1.773185415e12
+      ],
+      [
+        147.0,
+        1.773185418e12
+      ],
+      [
+        62.0,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(At_mul_Bt/sparse 50x5/dense 50x50 -> dense 5x50)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        101.0,
+        1.77310325e12
+      ],
+      [
+        101.0,
+        1.773103251e12
+      ],
+      [
+        102.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(At_mul_B!/dense 400x400/sparse 400x400 -> dense 400x400)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        135.0,
+        1.77302643e12
+      ],
+      [
+        135.0,
+        1.773103247e12
+      ],
+      [
+        153.0,
+        1.773103253e12
+      ],
+      [
+        133.0,
+        1.773103263e12
+      ],
+      [
+        132.0,
+        1.773185407e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/index/(spvec/logical/1000)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        123.0,
+        1.773026431e12
+      ],
+      [
+        102.0,
+        1.77310325e12
+      ],
+      [
+        100.0,
+        1.773103251e12
+      ],
+      [
+        97.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(At_mul_B/dense 5x50/sparse 5x50 -> dense 50x50)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        61.0,
+        1.773185412e12
+      ],
+      [
+        62.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\A_mul_Bt\\/\\dense 500x5/sparse 5x5 -> dense 500x5\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        31.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\At_mul_B\\/\\dense 50x5/sparse 50x500 -> dense 5x500\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        54.0,
+        1.77310325e12
+      ],
+      [
+        182.0,
+        1.773185419e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_Bc/sparse 5x50/dense 50x50 -> dense 5x50)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        109.00000000000001,
+        1.77310325e12
+      ],
+      [
+        109.00000000000001,
+        1.773103251e12
+      ],
+      [
+        109.00000000000001,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/constructors/(\\IJV\\/1000)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        94.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\At_mul_Bt!\\/\\dense 40x400/sparse 400x40 -> dense 400x400\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        134.00000000000003,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/index/(spmat/col/array/10)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        148.0,
+        1.773026431e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/transpose/(adjoint/(20000/10000))",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        54.0,
+        1.773103254e12
+      ],
+      [
+        409.99999999999994,
+        1.773103264e12
+      ],
+      [
+        446.0,
+        1.773185419e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(\\A_mul_B\\/\\dense 50x5/sparse 5x50 -> dense 50x50\\)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        20.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(Ac_mul_Bc/sparse 50x50/dense 50x50 -> dense 50x50)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        67.00000000000001,
+        1.773103253e12
+      ],
+      [
+        137.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_Bc/dense 5x50/sparse 500x50 -> dense 5x500)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        134.00000000000003,
+        1.77310325e12
+      ],
+      [
+        134.00000000000003,
+        1.773103251e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/index/(\\spvec\\/\\logical\\/1000)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        55.00000000000001,
+        1.773185419e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/index/(spmat/col/array/100)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        100.0,
+        1.77310325e12
+      ],
+      [
+        99.0,
+        1.773103251e12
+      ],
+      [
+        132.0,
+        1.77310326e12
+      ],
+      [
+        135.0,
+        1.773185413e12
+      ],
+      [
+        98.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/index/(spmat/OneTo/10)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        252.0,
+        1.773026431e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_B/dense 50x50/sparse 50x5 -> dense 50x5)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        68.0,
+        1.77310325e12
+      ],
+      [
+        72.0,
+        1.773103251e12
+      ],
+      [
+        72.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_Bt/sparse 500x5/dense 5x5 -> dense 500x5)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        168.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_Bt/dense 50x50/sparse 5x50 -> dense 50x5)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        72.0,
+        1.77310325e12
+      ],
+      [
+        80.0,
+        1.773103251e12
+      ],
+      [
+        80.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(A_mul_B/sparse 500x5/dense 5x5 -> dense 500x5)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        165.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/transpose/(adjoint/(600/600))",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        65.0,
+        1.773103257e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/constructors/(\\SymTridiagonal\\/1000)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        110.00000000000001,
+        1.77310325e12
+      ],
+      [
+        108.0,
+        1.773103271e12
+      ],
+      [
+        86.0,
+        1.773185401e12
+      ],
+      [
+        106.0,
+        1.77318541e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/matmul/(Ac_mul_B!/dense 200x200/sparse 200x20 -> dense 200x20)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        136.0,
+        1.77310325e12
+      ],
+      [
+        135.0,
+        1.773103251e12
+      ],
+      [
+        134.00000000000003,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "sparse/index/(spmat/row/OneTo/10)",
+    "tags": {
+      "group": "nanosoldier_sparse"
+    },
+    "datapoints": [
+      [
+        68.0,
+        1.77310325e12
+      ],
+      [
+        69.0,
+        1.773103251e12
+      ],
+      [
+        61.0,
+        1.773185416e12
+      ]
+    ]
+  }
+]

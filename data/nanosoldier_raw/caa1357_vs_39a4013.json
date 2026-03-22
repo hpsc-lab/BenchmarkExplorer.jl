@@ -1,0 +1,16 @@
+{
+  "metadata": {
+    "head_hash": "caa1357",
+    "comparison": "caa1357_vs_39a4013",
+    "source": "NanosoldierReports",
+    "base_hash": "39a4013",
+    "imported_at": "2026-03-10T00:40:56.665",
+    "source_type": "report_md"
+  },
+  "benchmarks": {
+    "[\"inference\", \"optimization\", \"many_local_vars\"]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    }
+  }
+}

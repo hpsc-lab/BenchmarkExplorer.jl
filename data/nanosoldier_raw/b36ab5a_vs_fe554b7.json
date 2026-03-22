@@ -1,0 +1,20 @@
+{
+  "metadata": {
+    "head_hash": "b36ab5a",
+    "comparison": "b36ab5a_vs_fe554b7",
+    "source": "NanosoldierReports",
+    "base_hash": "fe554b7",
+    "imported_at": "2026-03-10T23:30:12.546",
+    "source_type": "report_md"
+  },
+  "benchmarks": {
+    "[\"linalg\", \"arithmetic\", (\"5-arg mul!\", 2)]": {
+      "time_ratio": 0.37,
+      "memory_ratio": 1.0
+    },
+    "[\"linalg\", \"arithmetic\", (\"5-arg mul!\", 3)]": {
+      "time_ratio": 0.42,
+      "memory_ratio": 1.0
+    }
+  }
+}

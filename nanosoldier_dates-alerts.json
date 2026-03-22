@@ -1,0 +1,269 @@
+{
+  "threshold": 1.05,
+  "count": 29,
+  "group": "nanosoldier_dates",
+  "generated": "2026-03-22T15:56:06.737",
+  "alerts": [
+    {
+      "latest_mean_ms": 1478.0,
+      "commit": "cd660ad",
+      "ratio": 14.78,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "dates/query/(lastdayofmonth/DateTime)",
+      "group": "nanosoldier_dates",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 1478.0,
+      "commit": "cd660ad",
+      "ratio": 14.78,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "dates/query/(dayofweekofmonth/DateTime)",
+      "group": "nanosoldier_dates",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 1470.0,
+      "commit": "cd660ad",
+      "ratio": 14.7,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "dates/query/(lastdayofmonth/Date)",
+      "group": "nanosoldier_dates",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 1465.0,
+      "commit": "cd660ad",
+      "ratio": 14.65,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "dates/query/(dayofweek/Date)",
+      "group": "nanosoldier_dates",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 1461.0,
+      "commit": "cd660ad",
+      "ratio": 14.61,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "dates/accessor/day",
+      "group": "nanosoldier_dates",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 1457.0,
+      "commit": "cd660ad",
+      "ratio": 14.57,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "dates/query/(firstdayofweek/Date)",
+      "group": "nanosoldier_dates",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 1457.0,
+      "commit": "cd660ad",
+      "ratio": 14.57,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "dates/query/(isleapyear/DateTime)",
+      "group": "nanosoldier_dates",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 1426.0,
+      "commit": "cd660ad",
+      "ratio": 14.26,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "dates/query/(lastdayofweek/Date)",
+      "group": "nanosoldier_dates",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 1422.0,
+      "commit": "cd660ad",
+      "ratio": 14.22,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "dates/query/(dayofweekofmonth/Date)",
+      "group": "nanosoldier_dates",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 1417.0,
+      "commit": "cd660ad",
+      "ratio": 14.17,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "dates/query/(dayofyear/DateTime)",
+      "group": "nanosoldier_dates",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 1417.0,
+      "commit": "cd660ad",
+      "ratio": 14.17,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "dates/query/(isleapyear/Date)",
+      "group": "nanosoldier_dates",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 1417.0,
+      "commit": "cd660ad",
+      "ratio": 14.17,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "dates/query/(firstdayofmonth/DateTime)",
+      "group": "nanosoldier_dates",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 1417.0,
+      "commit": "cd660ad",
+      "ratio": 14.17,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "dates/query/(dayofweek/DateTime)",
+      "group": "nanosoldier_dates",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 1413.0,
+      "commit": "cd660ad",
+      "ratio": 14.13,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "dates/query/(firstdayofmonth/Date)",
+      "group": "nanosoldier_dates",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 1409.0,
+      "commit": "cd660ad",
+      "ratio": 14.09,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "dates/query/(lastdayofweek/DateTime)",
+      "group": "nanosoldier_dates",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 166.0,
+      "commit": "aebcebc",
+      "ratio": 1.66,
+      "timestamp": "2026-03-10T23:30:21.284",
+      "benchmark": "dates/parse/(DateTime/RFC1123Format/Mixedcase)",
+      "group": "nanosoldier_dates",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 138.0,
+      "commit": "b6bca19",
+      "ratio": 1.38,
+      "timestamp": "2026-03-10T23:30:05.064",
+      "benchmark": "dates/construction/DateTime",
+      "group": "nanosoldier_dates",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 138.0,
+      "commit": "b6bca19",
+      "ratio": 1.38,
+      "timestamp": "2026-03-10T23:30:05.064",
+      "benchmark": "dates/construction/Date",
+      "group": "nanosoldier_dates",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 132.0,
+      "commit": "cd280bb",
+      "ratio": 1.32,
+      "timestamp": "2026-03-10T00:40:54.331",
+      "benchmark": "dates/query/(dayofyear/Date)",
+      "group": "nanosoldier_dates",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 131.0,
+      "commit": "c299527",
+      "ratio": 1.31,
+      "timestamp": "2026-03-10T00:41:05.290",
+      "benchmark": "dates/query/(firstdayofweek/DateTime)",
+      "group": "nanosoldier_dates",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 111.0,
+      "commit": "afca0b4",
+      "ratio": 1.11,
+      "timestamp": "2026-03-10T23:30:20.015",
+      "benchmark": "dates/arithmetic/(DateTime/Second)",
+      "group": "nanosoldier_dates",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 110.0,
+      "commit": "b146a70",
+      "ratio": 1.1,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "dates/parse/(Date/DateFormat)",
+      "group": "nanosoldier_dates",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 110.0,
+      "commit": "b00614a",
+      "ratio": 1.1,
+      "timestamp": "2026-03-10T23:30:19.395",
+      "benchmark": "dates/arithmetic/(Date/Day)",
+      "group": "nanosoldier_dates",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 109.0,
+      "commit": "b00614a",
+      "ratio": 1.09,
+      "timestamp": "2026-03-10T23:30:19.395",
+      "benchmark": "dates/parse/(DateTime/RFC1123Format/Titlecase)",
+      "group": "nanosoldier_dates",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 107.0,
+      "commit": "afca0b4",
+      "ratio": 1.07,
+      "timestamp": "2026-03-10T23:30:20.015",
+      "benchmark": "dates/arithmetic/(Date/Month)",
+      "group": "nanosoldier_dates",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 106.0,
+      "commit": "b2adc93",
+      "ratio": 1.06,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "dates/arithmetic/(Date/Year)",
+      "group": "nanosoldier_dates",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 106.0,
+      "commit": "aebcebc",
+      "ratio": 1.06,
+      "timestamp": "2026-03-10T23:30:21.284",
+      "benchmark": "dates/string/DateTime",
+      "group": "nanosoldier_dates",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 106.0,
+      "commit": "b00614a",
+      "ratio": 1.06,
+      "timestamp": "2026-03-10T23:30:19.395",
+      "benchmark": "dates/parse/(DateTime/RFC1123Format/Lowercase)",
+      "group": "nanosoldier_dates",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 106.0,
+      "commit": "aebcebc",
+      "ratio": 1.06,
+      "timestamp": "2026-03-10T23:30:21.284",
+      "benchmark": "dates/parse/(DateTime/ISODateTimeFormat)",
+      "group": "nanosoldier_dates",
+      "trend": "slower"
+    }
+  ]
+}

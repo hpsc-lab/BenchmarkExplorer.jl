@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "head_hash": "c0f9666",
+    "comparison": "c0f9666_vs_3ff44ea",
+    "source": "NanosoldierReports",
+    "base_hash": "3ff44ea",
+    "imported_at": "2026-03-10T00:41:07.836",
+    "source_type": "report_md"
+  },
+  "benchmarks": {
+    "[\"string\", \"repeat\", \"repeat str len 16\"]": {
+      "time_ratio": 1.17,
+      "memory_ratio": 1.0
+    },
+    "[\"string\", \"==(::AbstractString, ::AbstractString)\", \"equal\"]": {
+      "time_ratio": 1.29,
+      "memory_ratio": 1.0
+    },
+    "[\"string\", \"==(::AbstractString, ::AbstractString)\", \"different\"]": {
+      "time_ratio": 1.36,
+      "memory_ratio": 1.0
+    },
+    "[\"problem\", \"spellcheck\", \"spellcheck\"]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"io\", \"serialization\", (\"serialize\", \"Matrix{Float64}\")]": {
+      "time_ratio": 1.24,
+      "memory_ratio": 1.0
+    },
+    "[\"string\", \"==(::AbstractString, ::AbstractString)\", \"different length\"]": {
+      "time_ratio": 1.28,
+      "memory_ratio": 1.0
+    },
+    "[\"string\", \"findfirst\", \"Char\"]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    }
+  }
+}

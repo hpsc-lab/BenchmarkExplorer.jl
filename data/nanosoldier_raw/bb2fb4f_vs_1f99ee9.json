@@ -1,0 +1,56 @@
+{
+  "metadata": {
+    "head_hash": "bb2fb4f",
+    "comparison": "bb2fb4f_vs_1f99ee9",
+    "source": "NanosoldierReports",
+    "base_hash": "1f99ee9",
+    "imported_at": "2026-03-10T23:29:58.855",
+    "source_type": "report_md"
+  },
+  "benchmarks": {
+    "[\"tuple\", \"reduction\", (\"minimum\", \"(2,)\")]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"tuple\", \"linear algebra\", (\"matvec\", \"(2, 2)\", \"(2,)\")]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"tuple\", \"linear algebra\", (\"matvec\", \"(8, 8)\", \"(8,)\")]": {
+      "time_ratio": 1.13,
+      "memory_ratio": 1.0
+    },
+    "[\"tuple\", \"linear algebra\", (\"matmat\", \"(16, 16)\", \"(16, 16)\")]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"broadcast\", \"typeargs\", (\"tuple\", 10)]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"tuple\", \"reduction\", (\"sum\", \"(16,)\")]": {
+      "time_ratio": 0.84,
+      "memory_ratio": 1.0
+    },
+    "[\"tuple\", \"misc\", \"longtuple\"]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"tuple\", \"linear algebra\", (\"matmat\", \"(8, 8)\", \"(8, 8)\")]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"tuple\", \"linear algebra\", (\"matvec\", \"(16, 16)\", \"(16,)\")]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"tuple\", \"reduction\", (\"sum\", \"(2, 2)\")]": {
+      "time_ratio": 1.4,
+      "memory_ratio": 1.0
+    },
+    "[\"tuple\", \"reduction\", (\"sum\", \"(4, 4)\")]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    }
+  }
+}

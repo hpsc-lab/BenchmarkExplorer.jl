@@ -1,0 +1,1410 @@
+[
+  {
+    "target": "linalg/arithmetic/(\\5-arg mul!\\/3)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        152.0,
+        1.77318541e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(*/Matrix/Vector/256)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        101.0,
+        1.77310325e12
+      ],
+      [
+        102.0,
+        1.773103251e12
+      ],
+      [
+        101.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(-/typename(SymTridiagonal)/typename(SymTridiagonal)/1024)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        158.0,
+        1.773185412e12
+      ],
+      [
+        177.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(-/typename(SymTridiagonal)/typename(SymTridiagonal)/256)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        111.00000000000001,
+        1.77310325e12
+      ],
+      [
+        125.0,
+        1.773103251e12
+      ],
+      [
+        90.0,
+        1.773103265e12
+      ],
+      [
+        118.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(cumsum!/Int64/256)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        202.0,
+        1.773103247e12
+      ],
+      [
+        231.0,
+        1.773103253e12
+      ],
+      [
+        183.0,
+        1.773103267e12
+      ],
+      [
+        285.0,
+        1.773103268e12
+      ],
+      [
+        182.0,
+        1.773185408e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(+/typename(LowerTriangular)/typename(LowerTriangular)/1024)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        222.00000000000003,
+        1.773185403e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(5-arg mul!/3)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        43.0,
+        1.773185412e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(-/typename(Bidiagonal)/typename(Bidiagonal)/256)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        118.0,
+        1.77310325e12
+      ],
+      [
+        121.0,
+        1.773103251e12
+      ],
+      [
+        94.0,
+        1.773103265e12
+      ],
+      [
+        115.99999999999999,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(*/typename(SymTridiagonal)/typename(SymTridiagonal)/1024)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        430.0,
+        1.773103248e12
+      ],
+      [
+        24.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(*/typename(SymTridiagonal)/Vector/256)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        124.0,
+        1.77310325e12
+      ],
+      [
+        118.0,
+        1.773103251e12
+      ],
+      [
+        128.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(*/typename(UpperTriangular)/Vector/256)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        101.0,
+        1.77310325e12
+      ],
+      [
+        102.0,
+        1.773103251e12
+      ],
+      [
+        102.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(cumsum!/Float64/256)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        148.0,
+        1.773103247e12
+      ],
+      [
+        150.0,
+        1.773103253e12
+      ],
+      [
+        150.0,
+        1.773103267e12
+      ],
+      [
+        150.0,
+        1.773103268e12
+      ],
+      [
+        146.0,
+        1.773185408e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(\\\\/typename(LowerTriangular)/Vector/256)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        102.0,
+        1.77310325e12
+      ],
+      [
+        101.0,
+        1.773103251e12
+      ],
+      [
+        102.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(\\+\\/\\typename(Bidiagonal)\\/\\typename(Bidiagonal)\\/1024)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        301.0,
+        1.77310325e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(-/typename(UpperTriangular)/typename(UpperTriangular)/256)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        159.0,
+        1.773185412e12
+      ],
+      [
+        155.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(+/typename(Diagonal)/typename(Diagonal)/256)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        130.0,
+        1.77310325e12
+      ],
+      [
+        118.0,
+        1.773103251e12
+      ],
+      [
+        104.0,
+        1.773103265e12
+      ],
+      [
+        162.0,
+        1.773185401e12
+      ],
+      [
+        130.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(3-arg mul!/2)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        150.0,
+        1.773103252e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(*/typename(LowerTriangular)/Vector/256)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        104.0,
+        1.77310325e12
+      ],
+      [
+        102.0,
+        1.773103251e12
+      ],
+      [
+        101.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/blas/scal!",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        330.0,
+        1.773103253e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(5-arg mul!/2)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        39.0,
+        1.773185412e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(*/typename(Diagonal)/Vector/256)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        132.0,
+        1.77310325e12
+      ],
+      [
+        127.0,
+        1.773103251e12
+      ],
+      [
+        136.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(\\+\\/\\typename(LowerTriangular)\\/\\typename(LowerTriangular)\\/256)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        451.0,
+        1.773185401e12
+      ],
+      [
+        457.0,
+        1.77318541e12
+      ],
+      [
+        23.0,
+        1.773185419e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/blas/axpy!",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        325.0,
+        1.773103253e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(mul!/Matrix{Float32}/Matrix{Float64}/Matrix{Float64}/1024)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        49.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(\\*\\/\\typename(Diagonal)\\/\\Vector\\/1024)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        317.0,
+        1.77318541e12
+      ],
+      [
+        32.0,
+        1.773185419e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(\\+\\/\\Matrix\\/\\Matrix\\/256)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        23.0,
+        1.77310325e12
+      ],
+      [
+        24.0,
+        1.773185401e12
+      ],
+      [
+        25.0,
+        1.77318541e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(//typename(Diagonal)/typename(Diagonal)/256)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        110.00000000000001,
+        1.77310325e12
+      ],
+      [
+        112.00000000000001,
+        1.773103251e12
+      ],
+      [
+        111.00000000000001,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(-/typename(Diagonal)/typename(Diagonal)/256)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        128.0,
+        1.77310325e12
+      ],
+      [
+        123.0,
+        1.773103251e12
+      ],
+      [
+        94.0,
+        1.773103265e12
+      ],
+      [
+        158.0,
+        1.773185401e12
+      ],
+      [
+        151.0,
+        1.773185415e12
+      ],
+      [
+        109.00000000000001,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(-/typename(LowerTriangular)/typename(LowerTriangular)/256)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        160.0,
+        1.773185412e12
+      ],
+      [
+        153.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(+/typename(Bidiagonal)/typename(Bidiagonal)/256)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        131.0,
+        1.77310325e12
+      ],
+      [
+        121.0,
+        1.773103251e12
+      ],
+      [
+        100.0,
+        1.773103265e12
+      ],
+      [
+        118.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(+/Matrix/Matrix/256)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        325.0,
+        1.773103258e12
+      ],
+      [
+        155.0,
+        1.773185412e12
+      ],
+      [
+        152.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(mul!/Matrix{Float32}/Matrix{Float64}/Matrix{Float64}/256)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        37.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/factorization/(\\eigen\\/\\typename(Diagonal)\\/256)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        211.0,
+        1.773103271e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(\\\\/typename(Tridiagonal)/Vector/256)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        117.0,
+        1.77310325e12
+      ],
+      [
+        113.99999999999999,
+        1.773103251e12
+      ],
+      [
+        120.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(-/Matrix/Matrix/1024)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        229.99999999999997,
+        1.773103248e12
+      ],
+      [
+        46.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(*/typename(Tridiagonal)/Vector/256)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        114.99999999999999,
+        1.77310325e12
+      ],
+      [
+        119.0,
+        1.773103251e12
+      ],
+      [
+        120.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(+/typename(LowerTriangular)/typename(LowerTriangular)/256)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        155.0,
+        1.773185412e12
+      ],
+      [
+        155.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(+/typename(SymTridiagonal)/typename(SymTridiagonal)/256)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        112.00000000000001,
+        1.77310325e12
+      ],
+      [
+        111.00000000000001,
+        1.773103251e12
+      ],
+      [
+        96.0,
+        1.773103265e12
+      ],
+      [
+        123.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(cumsum!/Int32/1024)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        210.0,
+        1.773103247e12
+      ],
+      [
+        289.0,
+        1.773103253e12
+      ],
+      [
+        199.0,
+        1.773103267e12
+      ],
+      [
+        200.0,
+        1.773103268e12
+      ],
+      [
+        195.0,
+        1.773185408e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(\\\\/typename(UpperTriangular)/Vector/256)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        101.0,
+        1.77310325e12
+      ],
+      [
+        102.0,
+        1.773103251e12
+      ],
+      [
+        102.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(\\-\\/\\Matrix\\/\\Matrix\\/1024)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        390.0,
+        1.77310325e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/small exp #29116",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        109.00000000000001,
+        1.77302643e12
+      ],
+      [
+        95.0,
+        1.77302643e12
+      ],
+      [
+        109.00000000000001,
+        1.773026433e12
+      ],
+      [
+        105.0,
+        1.773103246e12
+      ],
+      [
+        94.0,
+        1.773103247e12
+      ],
+      [
+        91.0,
+        1.773103247e12
+      ],
+      [
+        106.0,
+        1.773103247e12
+      ],
+      [
+        107.0,
+        1.77310325e12
+      ],
+      [
+        102.0,
+        1.773103251e12
+      ],
+      [
+        105.0,
+        1.773103253e12
+      ],
+      [
+        105.0,
+        1.773103254e12
+      ],
+      [
+        95.0,
+        1.773103256e12
+      ],
+      [
+        92.0,
+        1.773103256e12
+      ],
+      [
+        109.00000000000001,
+        1.773103259e12
+      ],
+      [
+        94.0,
+        1.773103262e12
+      ],
+      [
+        93.0,
+        1.773103263e12
+      ],
+      [
+        126.0,
+        1.773103263e12
+      ],
+      [
+        95.0,
+        1.773103264e12
+      ],
+      [
+        94.0,
+        1.773103264e12
+      ],
+      [
+        93.0,
+        1.773103267e12
+      ],
+      [
+        94.0,
+        1.773103267e12
+      ],
+      [
+        108.0,
+        1.7731854e12
+      ],
+      [
+        107.0,
+        1.773185402e12
+      ],
+      [
+        82.0,
+        1.773185402e12
+      ],
+      [
+        112.99999999999999,
+        1.773185405e12
+      ],
+      [
+        93.0,
+        1.773185405e12
+      ],
+      [
+        110.00000000000001,
+        1.773185406e12
+      ],
+      [
+        99.0,
+        1.773185408e12
+      ],
+      [
+        93.0,
+        1.773185412e12
+      ],
+      [
+        105.0,
+        1.773185416e12
+      ],
+      [
+        89.0,
+        1.773185418e12
+      ],
+      [
+        112.00000000000001,
+        1.773185418e12
+      ],
+      [
+        106.0,
+        1.773185419e12
+      ],
+      [
+        83.0,
+        1.773185419e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(\\\\/typename(Diagonal)/typename(Diagonal)/256)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        110.00000000000001,
+        1.77310325e12
+      ],
+      [
+        105.0,
+        1.773103251e12
+      ],
+      [
+        104.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(\\\\/typename(Diagonal)/Vector/256)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        111.00000000000001,
+        1.77310325e12
+      ],
+      [
+        113.99999999999999,
+        1.773103251e12
+      ],
+      [
+        109.00000000000001,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(cumsum!/Float64/1024)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        151.0,
+        1.773103247e12
+      ],
+      [
+        148.0,
+        1.773103253e12
+      ],
+      [
+        154.0,
+        1.773103267e12
+      ],
+      [
+        152.0,
+        1.773103268e12
+      ],
+      [
+        151.0,
+        1.773185408e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(cumsum!/Float32/256)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        153.0,
+        1.773103247e12
+      ],
+      [
+        157.0,
+        1.773103253e12
+      ],
+      [
+        147.0,
+        1.773103267e12
+      ],
+      [
+        147.0,
+        1.773103268e12
+      ],
+      [
+        145.0,
+        1.773185408e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(*/typename(Diagonal)/typename(Diagonal)/256)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        127.0,
+        1.77310325e12
+      ],
+      [
+        118.0,
+        1.773103251e12
+      ],
+      [
+        163.0,
+        1.773185401e12
+      ],
+      [
+        137.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(\\\\/HermitianSparseWithNonZeroPivots/Vector/1024)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        308.0,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(+/Vector/Vector/256)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        137.0,
+        1.77310325e12
+      ],
+      [
+        127.0,
+        1.773103251e12
+      ],
+      [
+        98.0,
+        1.773103265e12
+      ],
+      [
+        127.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(\\\\/HermitianSparseWithNonZeroPivots/Vector/256)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        343.0,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(-/typename(Tridiagonal)/typename(Tridiagonal)/256)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        135.0,
+        1.77310325e12
+      ],
+      [
+        136.0,
+        1.773103251e12
+      ],
+      [
+        96.0,
+        1.773103265e12
+      ],
+      [
+        138.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(*/typename(Diagonal)/typename(Diagonal)/1024)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        214.0,
+        1.773103258e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(\\\\/typename(SymTridiagonal)/Vector/256)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        106.0,
+        1.77310325e12
+      ],
+      [
+        107.0,
+        1.773103251e12
+      ],
+      [
+        106.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(-/Vector/Vector/256)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        132.0,
+        1.77310325e12
+      ],
+      [
+        129.0,
+        1.773103251e12
+      ],
+      [
+        97.0,
+        1.773103265e12
+      ],
+      [
+        129.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(*/typename(Bidiagonal)/Vector/256)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        121.0,
+        1.77310325e12
+      ],
+      [
+        117.0,
+        1.773103251e12
+      ],
+      [
+        159.0,
+        1.773103258e12
+      ],
+      [
+        127.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/factorization/(eigen/typename(Diagonal)/256)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        167.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(+/typename(SymTridiagonal)/typename(SymTridiagonal)/1024)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        152.0,
+        1.773185412e12
+      ],
+      [
+        155.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(-/Matrix/Matrix/256)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        155.0,
+        1.773185412e12
+      ],
+      [
+        155.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/blas/her!",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        557.0,
+        1.7731854e12
+      ],
+      [
+        186.0,
+        1.773185402e12
+      ],
+      [
+        18.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(+/typename(Tridiagonal)/typename(Tridiagonal)/256)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        141.0,
+        1.77310325e12
+      ],
+      [
+        131.0,
+        1.773103251e12
+      ],
+      [
+        86.0,
+        1.773103265e12
+      ],
+      [
+        144.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(cumsum!/Int32/256)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        197.0,
+        1.773103247e12
+      ],
+      [
+        263.0,
+        1.773103253e12
+      ],
+      [
+        187.0,
+        1.773103267e12
+      ],
+      [
+        183.0,
+        1.773103268e12
+      ],
+      [
+        187.0,
+        1.773185408e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(cumsum!/Int64/1024)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        200.0,
+        1.773103247e12
+      ],
+      [
+        258.0,
+        1.773103253e12
+      ],
+      [
+        159.0,
+        1.773103262e12
+      ],
+      [
+        195.0,
+        1.773103267e12
+      ],
+      [
+        312.0,
+        1.773103268e12
+      ],
+      [
+        158.0,
+        1.773185399e12
+      ],
+      [
+        195.0,
+        1.773185408e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(\\\\/typename(Bidiagonal)/Vector/256)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        106.0,
+        1.77310325e12
+      ],
+      [
+        104.0,
+        1.773103251e12
+      ],
+      [
+        103.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/factorization/(lu/typename(Tridiagonal)/256)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        112.00000000000001,
+        1.77310325e12
+      ],
+      [
+        115.99999999999999,
+        1.773103251e12
+      ],
+      [
+        120.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(+/typename(UpperTriangular)/typename(UpperTriangular)/256)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        158.0,
+        1.773185412e12
+      ],
+      [
+        152.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "linalg/arithmetic/(cumsum!/Float32/1024)",
+    "tags": {
+      "group": "nanosoldier_linalg"
+    },
+    "datapoints": [
+      [
+        153.0,
+        1.773103247e12
+      ],
+      [
+        156.0,
+        1.773103253e12
+      ],
+      [
+        151.0,
+        1.773103267e12
+      ],
+      [
+        152.0,
+        1.773103268e12
+      ],
+      [
+        150.0,
+        1.773185408e12
+      ]
+    ]
+  }
+]

@@ -1,0 +1,1106 @@
+{
+  "threshold": 1.05,
+  "count": 122,
+  "group": "nanosoldier_collection",
+  "generated": "2026-03-22T15:56:15.564",
+  "alerts": [
+    {
+      "latest_mean_ms": 779.0,
+      "commit": "b146a70",
+      "ratio": 7.79,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "collection/deletion/(Vector/Any/filter!)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 552.0,
+      "commit": "b146a70",
+      "ratio": 5.52,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "collection/deletion/(Vector/Any/filter)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 377.0,
+      "commit": "c3f5381",
+      "ratio": 3.77,
+      "timestamp": "2026-03-10T00:41:04.882",
+      "benchmark": "collection/queries & updates/(Dict/String/getindex)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 315.0,
+      "commit": "cccbb61",
+      "ratio": 3.15,
+      "timestamp": "2026-03-10T00:40:54.764",
+      "benchmark": "collection/queries & updates/(BitSet/Int/push!/overwrite)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 283.0,
+      "commit": "cccbb61",
+      "ratio": 2.83,
+      "timestamp": "2026-03-10T00:40:54.764",
+      "benchmark": "collection/queries & updates/(BitSet/Int/push!/new)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 274.0,
+      "commit": "b0772ee",
+      "ratio": 2.74,
+      "timestamp": "2026-03-10T23:30:18.437",
+      "benchmark": "collection/set operations/(BitSet/Int/symdiff!/Vector)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 270.0,
+      "commit": "c6a98e3",
+      "ratio": 2.7,
+      "timestamp": "2026-03-10T00:40:59.866",
+      "benchmark": "collection/initialization/(Set/Int/loop/sizehint!)",
+      "group": "nanosoldier_collection",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 256.0,
+      "commit": "c3f5381",
+      "ratio": 2.56,
+      "timestamp": "2026-03-10T00:41:04.882",
+      "benchmark": "collection/queries & updates/(Dict/String/in/false)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 232.0,
+      "commit": "bae2d8d",
+      "ratio": 2.32,
+      "timestamp": "2026-03-10T23:29:59.543",
+      "benchmark": "collection/queries & updates/(IdDict/Int/first)",
+      "group": "nanosoldier_collection",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 215.0,
+      "commit": "bae2d8d",
+      "ratio": 2.15,
+      "timestamp": "2026-03-10T23:29:59.543",
+      "benchmark": "collection/iteration/(IdDict/Any/iterate)",
+      "group": "nanosoldier_collection",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 208.0,
+      "commit": "bae2d8d",
+      "ratio": 2.08,
+      "timestamp": "2026-03-10T23:29:59.543",
+      "benchmark": "collection/iteration/(IdDict/Any/iterate second)",
+      "group": "nanosoldier_collection",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 208.0,
+      "commit": "bae2d8d",
+      "ratio": 2.08,
+      "timestamp": "2026-03-10T23:29:59.543",
+      "benchmark": "collection/iteration/(IdDict/Int/iterate second)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 206.0,
+      "commit": "b146a70",
+      "ratio": 2.06,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "collection/deletion/(Vector/Int/filter)",
+      "group": "nanosoldier_collection",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 194.0,
+      "commit": "bae2d8d",
+      "ratio": 1.94,
+      "timestamp": "2026-03-10T23:29:59.543",
+      "benchmark": "collection/iteration/(IdDict/String/iterate second)",
+      "group": "nanosoldier_collection",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 191.0,
+      "commit": "cccbb61",
+      "ratio": 1.91,
+      "timestamp": "2026-03-10T00:40:54.764",
+      "benchmark": "collection/queries & updates/(Dict/Any/getindex)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 188.0,
+      "commit": "bae2d8d",
+      "ratio": 1.88,
+      "timestamp": "2026-03-10T23:29:59.543",
+      "benchmark": "collection/iteration/(Vector/String/iterate second)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 184.0,
+      "commit": "b0772ee",
+      "ratio": 1.84,
+      "timestamp": "2026-03-10T23:30:18.437",
+      "benchmark": "collection/queries & updates/(Dict/Any/in/false)",
+      "group": "nanosoldier_collection",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 181.0,
+      "commit": "b9b271f",
+      "ratio": 1.81,
+      "timestamp": "2026-03-10T23:30:01.104",
+      "benchmark": "collection/deletion/(Set/Any/pop!)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 179.0,
+      "commit": "b146a70",
+      "ratio": 1.79,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "collection/queries & updates/(Vector/Any/getindex)",
+      "group": "nanosoldier_collection",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 177.0,
+      "commit": "bae2d8d",
+      "ratio": 1.77,
+      "timestamp": "2026-03-10T23:29:59.543",
+      "benchmark": "collection/deletion/(IdDict/Int/filter!)",
+      "group": "nanosoldier_collection",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 176.0,
+      "commit": "bae2d8d",
+      "ratio": 1.76,
+      "timestamp": "2026-03-10T23:29:59.543",
+      "benchmark": "collection/iteration/(Set/String/iterate second)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 176.0,
+      "commit": "bae2d8d",
+      "ratio": 1.76,
+      "timestamp": "2026-03-10T23:29:59.543",
+      "benchmark": "collection/iteration/(Set/String/iterate)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 175.0,
+      "commit": "bae2d8d",
+      "ratio": 1.75,
+      "timestamp": "2026-03-10T23:29:59.543",
+      "benchmark": "collection/iteration/(Dict/Any/iterate second)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 175.0,
+      "commit": "bae2d8d",
+      "ratio": 1.75,
+      "timestamp": "2026-03-10T23:29:59.543",
+      "benchmark": "collection/iteration/(Vector/String/iterate)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 171.0,
+      "commit": "b0772ee",
+      "ratio": 1.71,
+      "timestamp": "2026-03-10T23:30:18.437",
+      "benchmark": "collection/set operations/(BitSet/Int/intersect!/BitSet)",
+      "group": "nanosoldier_collection",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 166.0,
+      "commit": "b01e7a7",
+      "ratio": 1.66,
+      "timestamp": "2026-03-10T23:30:18.767",
+      "benchmark": "collection/set operations/(empty/Int/</BitSet)",
+      "group": "nanosoldier_collection",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 165.0,
+      "commit": "bae2d8d",
+      "ratio": 1.65,
+      "timestamp": "2026-03-10T23:29:59.543",
+      "benchmark": "collection/deletion/(Vector/String/pop!)",
+      "group": "nanosoldier_collection",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 162.0,
+      "commit": "bae2d8d",
+      "ratio": 1.62,
+      "timestamp": "2026-03-10T23:29:59.543",
+      "benchmark": "collection/set operations/(BitSet/Int/intersect!/big)",
+      "group": "nanosoldier_collection",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 161.0,
+      "commit": "b0772ee",
+      "ratio": 1.61,
+      "timestamp": "2026-03-10T23:30:18.437",
+      "benchmark": "collection/set operations/(BitSet/Int/setdiff!/BitSet)",
+      "group": "nanosoldier_collection",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 158.0,
+      "commit": "b6bca19",
+      "ratio": 1.58,
+      "timestamp": "2026-03-10T23:30:05.064",
+      "benchmark": "collection/initialization/(Dict/Any/iterator)",
+      "group": "nanosoldier_collection",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 157.0,
+      "commit": "bae2d8d",
+      "ratio": 1.57,
+      "timestamp": "2026-03-10T23:29:59.543",
+      "benchmark": "collection/iteration/(Dict/String/iterate second)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 154.0,
+      "commit": "b146a70",
+      "ratio": 1.54,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "collection/iteration/(Dict/Int/iterate second)",
+      "group": "nanosoldier_collection",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 154.0,
+      "commit": "d13bdc0",
+      "ratio": 1.54,
+      "timestamp": "2026-03-10T00:40:50.051",
+      "benchmark": "collection/set operations/(empty/Int/⊆/BitSet)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 154.0,
+      "commit": "c52a188",
+      "ratio": 1.54,
+      "timestamp": "2026-03-10T00:41:02.749",
+      "benchmark": "collection/deletion/(BitSet/Int/pop!)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 152.0,
+      "commit": "c11a4fd",
+      "ratio": 1.52,
+      "timestamp": "2026-03-10T00:41:07.608",
+      "benchmark": "collection/deletion/(Set/String/filter!)",
+      "group": "nanosoldier_collection",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 151.0,
+      "commit": "bae2d8d",
+      "ratio": 1.51,
+      "timestamp": "2026-03-10T23:29:59.543",
+      "benchmark": "collection/iteration/(Dict/String/iterate)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 151.0,
+      "commit": "016630a",
+      "ratio": 1.51,
+      "timestamp": "2026-03-09T03:20:30.409",
+      "benchmark": "collection/queries & updates/(IdDict/String/push!/overwrite)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 151.0,
+      "commit": "bae2d8d",
+      "ratio": 1.51,
+      "timestamp": "2026-03-10T23:29:59.543",
+      "benchmark": "collection/iteration/(Dict/Any/iterate)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 150.0,
+      "commit": "b146a70",
+      "ratio": 1.5,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "collection/deletion/(Vector/String/filter)",
+      "group": "nanosoldier_collection",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 150.0,
+      "commit": "b9b271f",
+      "ratio": 1.5,
+      "timestamp": "2026-03-10T23:30:01.104",
+      "benchmark": "collection/deletion/(Dict/Any/pop!)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 150.0,
+      "commit": "b146a70",
+      "ratio": 1.5,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "collection/deletion/(Vector/Any/pop!)",
+      "group": "nanosoldier_collection",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 149.0,
+      "commit": "bae2d8d",
+      "ratio": 1.49,
+      "timestamp": "2026-03-10T23:29:59.543",
+      "benchmark": "collection/deletion/(Vector/Int/pop!)",
+      "group": "nanosoldier_collection",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 148.0,
+      "commit": "b9b271f",
+      "ratio": 1.48,
+      "timestamp": "2026-03-10T23:30:01.104",
+      "benchmark": "collection/queries & updates/(Set/Any/pop!/unspecified)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 148.0,
+      "commit": "bae2d8d",
+      "ratio": 1.48,
+      "timestamp": "2026-03-10T23:29:59.543",
+      "benchmark": "collection/initialization/(Vector/Any/loop/sizehint!)",
+      "group": "nanosoldier_collection",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 148.0,
+      "commit": "b6fee9a",
+      "ratio": 1.48,
+      "timestamp": "2026-03-10T23:30:04.423",
+      "benchmark": "collection/iteration/(Set/Int/iterate)",
+      "group": "nanosoldier_collection",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 145.0,
+      "commit": "bae2d8d",
+      "ratio": 1.45,
+      "timestamp": "2026-03-10T23:29:59.543",
+      "benchmark": "collection/initialization/(Vector/Any/loop)",
+      "group": "nanosoldier_collection",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 145.0,
+      "commit": "b46df09",
+      "ratio": 1.45,
+      "timestamp": "2026-03-10T23:30:08.960",
+      "benchmark": "collection/set operations/(BitSet/Int/⊆/self)",
+      "group": "nanosoldier_collection",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 143.0,
+      "commit": "bae2d8d",
+      "ratio": 1.43,
+      "timestamp": "2026-03-10T23:29:59.543",
+      "benchmark": "collection/deletion/(IdDict/Any/filter!)",
+      "group": "nanosoldier_collection",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 143.0,
+      "commit": "b6bca19",
+      "ratio": 1.43,
+      "timestamp": "2026-03-10T23:30:05.064",
+      "benchmark": "collection/queries & updates/(IdDict/Int/in/true)",
+      "group": "nanosoldier_collection",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 141.0,
+      "commit": "016630a",
+      "ratio": 1.41,
+      "timestamp": "2026-03-09T03:20:30.409",
+      "benchmark": "collection/queries & updates/(IdDict/String/setindex!/overwrite)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 141.0,
+      "commit": "b9ce885",
+      "ratio": 1.41,
+      "timestamp": "2026-03-10T23:30:00.792",
+      "benchmark": "collection/queries & updates/(Dict/Any/setindex!/overwrite)",
+      "group": "nanosoldier_collection",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 141.0,
+      "commit": "b146a70",
+      "ratio": 1.41,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "collection/initialization/(Vector/String/iterator)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 139.0,
+      "commit": "d27fe45",
+      "ratio": 1.39,
+      "timestamp": "2026-03-10T00:40:47.111",
+      "benchmark": "collection/queries & updates/(BitSet/Int/in/true)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 139.0,
+      "commit": "b0772ee",
+      "ratio": 1.39,
+      "timestamp": "2026-03-10T23:30:18.437",
+      "benchmark": "collection/queries & updates/(Set/Int/first)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 138.0,
+      "commit": "b146a70",
+      "ratio": 1.38,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "collection/iteration/(Dict/Int/iterate)",
+      "group": "nanosoldier_collection",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 137.0,
+      "commit": "bae2d8d",
+      "ratio": 1.37,
+      "timestamp": "2026-03-10T23:29:59.543",
+      "benchmark": "collection/queries & updates/(Vector/Any/setindex!)",
+      "group": "nanosoldier_collection",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 137.0,
+      "commit": "d13bdc0",
+      "ratio": 1.37,
+      "timestamp": "2026-03-10T00:40:50.051",
+      "benchmark": "collection/initialization/(Vector/Int/iterator)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 137.0,
+      "commit": "b093917",
+      "ratio": 1.37,
+      "timestamp": "2026-03-10T23:30:18.101",
+      "benchmark": "collection/queries & updates/(Vector/String/getindex)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 137.0,
+      "commit": "bae2d8d",
+      "ratio": 1.37,
+      "timestamp": "2026-03-10T23:29:59.543",
+      "benchmark": "collection/queries & updates/(IdDict/Any/in/true)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 136.0,
+      "commit": "b146a70",
+      "ratio": 1.36,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "collection/queries & updates/(Dict/Int/first)",
+      "group": "nanosoldier_collection",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 136.0,
+      "commit": "016630a",
+      "ratio": 1.36,
+      "timestamp": "2026-03-09T03:20:30.409",
+      "benchmark": "collection/queries & updates/(IdDict/String/pop!/specified)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 135.0,
+      "commit": "d13bdc0",
+      "ratio": 1.35,
+      "timestamp": "2026-03-10T00:40:50.051",
+      "benchmark": "collection/set operations/(BitSet/Int/intersect!/small)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 135.0,
+      "commit": "c0b95ac",
+      "ratio": 1.35,
+      "timestamp": "2026-03-10T00:41:08.226",
+      "benchmark": "collection/deletion/(Dict/Int/pop!)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 134.0,
+      "commit": "cd2ebfc",
+      "ratio": 1.34,
+      "timestamp": "2026-03-10T00:40:54.113",
+      "benchmark": "collection/queries & updates/(Set/String/in/false)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 134.0,
+      "commit": "b97eb35",
+      "ratio": 1.34,
+      "timestamp": "2026-03-10T23:30:01.752",
+      "benchmark": "collection/queries & updates/(\\Dict\\/\\Int\\/\\push!\\/\\new\\)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 134.0,
+      "commit": "bae2d8d",
+      "ratio": 1.34,
+      "timestamp": "2026-03-10T23:29:59.543",
+      "benchmark": "collection/queries & updates/(IdDict/String/in/false)",
+      "group": "nanosoldier_collection",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 134.0,
+      "commit": "bae2d8d",
+      "ratio": 1.34,
+      "timestamp": "2026-03-10T23:29:59.543",
+      "benchmark": "collection/queries & updates/(IdDict/Any/in/false)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 133.0,
+      "commit": "cd660ad",
+      "ratio": 1.33,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "collection/set operations/(empty/Int/</Set)",
+      "group": "nanosoldier_collection",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 133.0,
+      "commit": "b46df09",
+      "ratio": 1.33,
+      "timestamp": "2026-03-10T23:30:08.960",
+      "benchmark": "collection/queries & updates/(Vector/Int/in/false)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 132.0,
+      "commit": "b97eb35",
+      "ratio": 1.32,
+      "timestamp": "2026-03-10T23:30:01.752",
+      "benchmark": "collection/queries & updates/(\\Vector\\/\\String\\/\\in\\/\\false\\)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 132.0,
+      "commit": "bb6afd0",
+      "ratio": 1.32,
+      "timestamp": "2026-03-10T23:29:58.226",
+      "benchmark": "collection/set operations/(Set/Int/union/Set/Set)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 132.0,
+      "commit": "bae2d8d",
+      "ratio": 1.32,
+      "timestamp": "2026-03-10T23:29:59.543",
+      "benchmark": "collection/queries & updates/(IdDict/Int/getindex)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 132.0,
+      "commit": "b421eca",
+      "ratio": 1.32,
+      "timestamp": "2026-03-10T23:30:10.268",
+      "benchmark": "collection/queries & updates/(\\IdDict\\/\\String\\/\\push!\\/\\new\\)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 131.0,
+      "commit": "03de024",
+      "ratio": 1.31,
+      "timestamp": "2026-03-09T03:20:31.529",
+      "benchmark": "collection/set operations/(empty/Int/⊆/Set)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 131.0,
+      "commit": "b421eca",
+      "ratio": 1.31,
+      "timestamp": "2026-03-10T23:30:10.268",
+      "benchmark": "collection/set operations/(\\Set\\/\\Int\\/\\union\\/\\Set\\)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 131.0,
+      "commit": "b4c79e7",
+      "ratio": 1.31,
+      "timestamp": "2026-03-10T23:30:07.325",
+      "benchmark": "collection/set operations/(Set/Int/union/Set)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 130.0,
+      "commit": "b0772ee",
+      "ratio": 1.3,
+      "timestamp": "2026-03-10T23:30:18.437",
+      "benchmark": "collection/iteration/(IdDict/String/iterate)",
+      "group": "nanosoldier_collection",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 130.0,
+      "commit": "b15100f",
+      "ratio": 1.3,
+      "timestamp": "2026-03-10T23:30:16.538",
+      "benchmark": "collection/set operations/(Set/Int/==/Set)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 130.0,
+      "commit": "b0772ee",
+      "ratio": 1.3,
+      "timestamp": "2026-03-10T23:30:18.437",
+      "benchmark": "collection/set operations/(Set/Int/</Set)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 129.0,
+      "commit": "bb6afd0",
+      "ratio": 1.29,
+      "timestamp": "2026-03-10T23:29:58.226",
+      "benchmark": "collection/queries & updates/(Vector/Int/in/true)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 129.0,
+      "commit": "b01e7a7",
+      "ratio": 1.29,
+      "timestamp": "2026-03-10T23:30:18.767",
+      "benchmark": "collection/set operations/(BitSet/Int/union/BitSet)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 129.0,
+      "commit": "bb6afd0",
+      "ratio": 1.29,
+      "timestamp": "2026-03-10T23:29:58.226",
+      "benchmark": "collection/set operations/(Set/Int/union/Vector/Vector)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 129.0,
+      "commit": "016630a",
+      "ratio": 1.29,
+      "timestamp": "2026-03-09T03:20:30.409",
+      "benchmark": "collection/queries & updates/(Dict/String/push!/overwrite)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 129.0,
+      "commit": "bae2d8d",
+      "ratio": 1.29,
+      "timestamp": "2026-03-10T23:29:59.543",
+      "benchmark": "collection/queries & updates/(IdDict/Any/getindex)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 128.0,
+      "commit": "b4c79e7",
+      "ratio": 1.28,
+      "timestamp": "2026-03-10T23:30:07.325",
+      "benchmark": "collection/set operations/(Vector/Int/⊆/Vector)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 128.0,
+      "commit": "bae2d8d",
+      "ratio": 1.28,
+      "timestamp": "2026-03-10T23:29:59.543",
+      "benchmark": "collection/queries & updates/(IdDict/String/getindex)",
+      "group": "nanosoldier_collection",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 128.0,
+      "commit": "b6bca19",
+      "ratio": 1.28,
+      "timestamp": "2026-03-10T23:30:05.064",
+      "benchmark": "collection/set operations/(BitSet/Int/setdiff!/Set)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 128.0,
+      "commit": "b4c79e7",
+      "ratio": 1.28,
+      "timestamp": "2026-03-10T23:30:07.325",
+      "benchmark": "collection/set operations/(Set/Int/union/BitSet)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 128.0,
+      "commit": "b0772ee",
+      "ratio": 1.28,
+      "timestamp": "2026-03-10T23:30:18.437",
+      "benchmark": "collection/set operations/(BitSet/Int/⊆/Set)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 128.0,
+      "commit": "c0b95ac",
+      "ratio": 1.28,
+      "timestamp": "2026-03-10T00:41:08.226",
+      "benchmark": "collection/queries & updates/(Set/Any/push!/new)",
+      "group": "nanosoldier_collection",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 127.0,
+      "commit": "cd660ad",
+      "ratio": 1.27,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "collection/set operations/(BitSet/Int/union!/Vector)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 127.0,
+      "commit": "b0154e3",
+      "ratio": 1.27,
+      "timestamp": "2026-03-10T23:30:19.065",
+      "benchmark": "collection/set operations/(\\Set\\/\\Int\\/\\union\\/\\BitSet\\)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 127.0,
+      "commit": "bae2d8d",
+      "ratio": 1.27,
+      "timestamp": "2026-03-10T23:29:59.543",
+      "benchmark": "collection/queries & updates/(Vector/Any/in/true)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 127.0,
+      "commit": "bae2d8d",
+      "ratio": 1.27,
+      "timestamp": "2026-03-10T23:29:59.543",
+      "benchmark": "collection/queries & updates/(IdDict/Int/in/false)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 127.0,
+      "commit": "cd660ad",
+      "ratio": 1.27,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "collection/iteration/(Set/Int/iterate second)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 127.0,
+      "commit": "bb6afd0",
+      "ratio": 1.27,
+      "timestamp": "2026-03-10T23:29:58.226",
+      "benchmark": "collection/set operations/(Set/Int/union/BitSet/BitSet)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 127.0,
+      "commit": "bae2d8d",
+      "ratio": 1.27,
+      "timestamp": "2026-03-10T23:29:59.543",
+      "benchmark": "collection/queries & updates/(Vector/Any/in/false)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 126.0,
+      "commit": "b92fd65",
+      "ratio": 1.26,
+      "timestamp": "2026-03-10T23:30:02.048",
+      "benchmark": "collection/iteration/(IdDict/Int/iterate)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 126.0,
+      "commit": "b4c79e7",
+      "ratio": 1.26,
+      "timestamp": "2026-03-10T23:30:07.325",
+      "benchmark": "collection/set operations/(Set/Int/union/Vector)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 126.0,
+      "commit": "d27fe45",
+      "ratio": 1.26,
+      "timestamp": "2026-03-10T00:40:47.111",
+      "benchmark": "collection/set operations/(Set/Int/union!/Vector)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 126.0,
+      "commit": "bae2d8d",
+      "ratio": 1.26,
+      "timestamp": "2026-03-10T23:29:59.543",
+      "benchmark": "collection/queries & updates/(Dict/Any/in/true)",
+      "group": "nanosoldier_collection",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 126.0,
+      "commit": "b64b578",
+      "ratio": 1.26,
+      "timestamp": "2026-03-10T23:30:05.672",
+      "benchmark": "collection/queries & updates/(Dict/Any/pop!/unspecified)",
+      "group": "nanosoldier_collection",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 126.0,
+      "commit": "cd2ebfc",
+      "ratio": 1.26,
+      "timestamp": "2026-03-10T00:40:54.113",
+      "benchmark": "collection/queries & updates/(Set/String/pop!/specified)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 126.0,
+      "commit": "b97eb35",
+      "ratio": 1.26,
+      "timestamp": "2026-03-10T23:30:01.752",
+      "benchmark": "collection/deletion/(\\Vector\\/\\Any\\/\\filter\\)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 125.0,
+      "commit": "b146a70",
+      "ratio": 1.25,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "collection/deletion/(Vector/String/filter!)",
+      "group": "nanosoldier_collection",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 125.0,
+      "commit": "cd2ebfc",
+      "ratio": 1.25,
+      "timestamp": "2026-03-10T00:40:54.113",
+      "benchmark": "collection/set operations/(Vector/Int/setdiff/Set)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 124.0,
+      "commit": "b146a70",
+      "ratio": 1.24,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "collection/set operations/(Set/Int/symdiff)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 122.0,
+      "commit": "b146a70",
+      "ratio": 1.22,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "collection/set operations/(Set/Int/union)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 121.0,
+      "commit": "b146a70",
+      "ratio": 1.21,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "collection/set operations/(Set/Int/intersect)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 119.0,
+      "commit": "b146a70",
+      "ratio": 1.19,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "collection/initialization/(BitSet/Int/unsorted/iterator)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 115.0,
+      "commit": "b146a70",
+      "ratio": 1.15,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "collection/set operations/(Set/Int/setdiff/BitSet)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 114.0,
+      "commit": "b146a70",
+      "ratio": 1.14,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "collection/set operations/(Set/Int/setdiff/Set)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 113.0,
+      "commit": "b146a70",
+      "ratio": 1.13,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "collection/set operations/(Set/Int/setdiff/Vector)",
+      "group": "nanosoldier_collection",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 112.0,
+      "commit": "b146a70",
+      "ratio": 1.12,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "collection/set operations/(BitSet/Int/symdiff/BitSet)",
+      "group": "nanosoldier_collection",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 111.0,
+      "commit": "b146a70",
+      "ratio": 1.11,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "collection/set operations/(BitSet/Int/intersect/Vector)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 111.0,
+      "commit": "b146a70",
+      "ratio": 1.11,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "collection/set operations/(BitSet/Int/union/Vector)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 109.0,
+      "commit": "b146a70",
+      "ratio": 1.09,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "collection/initialization/(BitSet/Int/unsorted/loop)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 108.0,
+      "commit": "b146a70",
+      "ratio": 1.08,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "collection/deletion/(IdDict/Any/filter)",
+      "group": "nanosoldier_collection",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 108.0,
+      "commit": "b146a70",
+      "ratio": 1.08,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "collection/set operations/(Set/Int/symdiff/Set/Set)",
+      "group": "nanosoldier_collection",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 107.0,
+      "commit": "b146a70",
+      "ratio": 1.07,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "collection/deletion/(Set/Any/filter)",
+      "group": "nanosoldier_collection",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 107.0,
+      "commit": "b146a70",
+      "ratio": 1.07,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "collection/set operations/(BitSet/Int/union/BitSet/BitSet)",
+      "group": "nanosoldier_collection",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 106.0,
+      "commit": "b146a70",
+      "ratio": 1.06,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "collection/initialization/(Dict/Int/loop)",
+      "group": "nanosoldier_collection",
+      "trend": "stable"
+    }
+  ]
+}

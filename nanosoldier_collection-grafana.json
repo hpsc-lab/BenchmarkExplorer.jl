@@ -1,0 +1,5282 @@
+[
+  {
+    "target": "collection/queries & updates/(IdDict/String/in/true)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        160.0,
+        1.773103254e12
+      ],
+      [
+        132.0,
+        1.773185399e12
+      ],
+      [
+        73.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Set/Int/pop!/unspecified)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        134.00000000000003,
+        1.773103254e12
+      ],
+      [
+        71.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(BitSet/Int/intersect/Set)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        92.0,
+        1.77310325e12
+      ],
+      [
+        88.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/optimizations/(Set/abstract/Nothing)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        56.00000000000001,
+        1.77310325e12
+      ],
+      [
+        126.0,
+        1.773103254e12
+      ],
+      [
+        134.00000000000003,
+        1.773185399e12
+      ],
+      [
+        56.99999999999999,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/initialization/(BitSet/Int/sorted/iterator)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        99.0,
+        1.77310325e12
+      ],
+      [
+        138.0,
+        1.773103253e12
+      ],
+      [
+        100.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(BitSet/Int/symdiff/Vector)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        121.0,
+        1.77310325e12
+      ],
+      [
+        105.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(BitSet/Int/first)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        51.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/deletion/(Set/String/filter)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        84.0,
+        1.77310325e12
+      ],
+      [
+        82.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/deletion/(Vector/Int/filter!)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        103.0,
+        1.77310325e12
+      ],
+      [
+        101.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Set/Int/⊆/BitSet)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        178.0,
+        1.77302643e12
+      ],
+      [
+        174.0,
+        1.773103248e12
+      ],
+      [
+        158.0,
+        1.773103253e12
+      ],
+      [
+        135.0,
+        1.773103254e12
+      ],
+      [
+        165.0,
+        1.773185397e12
+      ],
+      [
+        73.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(BitSet/Int/union/Set/Set)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        97.0,
+        1.77310325e12
+      ],
+      [
+        92.0,
+        1.773103251e12
+      ],
+      [
+        88.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(IdDict/String/setindex!/overwrite)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        141.0,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/initialization/(Vector/String/loop/sizehint!)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        44.0,
+        1.77310325e12
+      ],
+      [
+        162.0,
+        1.773103254e12
+      ],
+      [
+        152.0,
+        1.773185399e12
+      ],
+      [
+        39.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Set/Int/symdiff/Set)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        89.0,
+        1.77310325e12
+      ],
+      [
+        131.0,
+        1.773103254e12
+      ],
+      [
+        103.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/initialization/(BitSet/Int/unsorted/iterator)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        114.99999999999999,
+        1.77310325e12
+      ],
+      [
+        145.0,
+        1.773103253e12
+      ],
+      [
+        119.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Dict/String/setindex!/new)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        64.0,
+        1.773185407e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Vector/Int/push!)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        63.0,
+        1.77310325e12
+      ],
+      [
+        181.0,
+        1.773103254e12
+      ],
+      [
+        157.0,
+        1.773185399e12
+      ],
+      [
+        133.0,
+        1.7731854e12
+      ],
+      [
+        59.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(BitSet/Int/⊆/BitSet)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        131.0,
+        1.773103247e12
+      ],
+      [
+        128.0,
+        1.77310325e12
+      ],
+      [
+        75.0,
+        1.773103252e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Vector/Any/pop!/unspecified)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        215.0,
+        1.773103254e12
+      ],
+      [
+        164.0,
+        1.773185399e12
+      ],
+      [
+        70.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/optimizations/(Dict/abstract/Int8)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        100.0,
+        1.77310325e12
+      ],
+      [
+        101.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/optimizations/(Set/abstract/Bool)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        99.0,
+        1.77310325e12
+      ],
+      [
+        99.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Set/Int/intersect/Set/Set)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        85.0,
+        1.77310325e12
+      ],
+      [
+        150.0,
+        1.773103254e12
+      ],
+      [
+        69.0,
+        1.773185405e12
+      ],
+      [
+        76.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Dict/String/push!/new)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        67.00000000000001,
+        1.773185407e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(BitSet/Int/symdiff/Vector/Vector)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        114.99999999999999,
+        1.77310325e12
+      ],
+      [
+        154.0,
+        1.773103252e12
+      ],
+      [
+        98.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/iteration/(IdDict/String/iterate second)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        204.99999999999997,
+        1.773103254e12
+      ],
+      [
+        78.0,
+        1.773103257e12
+      ],
+      [
+        194.0,
+        1.773185399e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/iteration/(Vector/String/iterate second)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        184.0,
+        1.773103254e12
+      ],
+      [
+        47.0,
+        1.773103257e12
+      ],
+      [
+        188.0,
+        1.773185399e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/optimizations/(Dict/concrete/Bool)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        101.0,
+        1.77310325e12
+      ],
+      [
+        101.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Vector/Int/⊆/Set)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        188.0,
+        1.773103254e12
+      ],
+      [
+        54.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Set/Int/symdiff/Vector/Vector)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        96.0,
+        1.77310325e12
+      ],
+      [
+        132.0,
+        1.773103254e12
+      ],
+      [
+        70.0,
+        1.773185401e12
+      ],
+      [
+        105.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/iteration/(Set/String/iterate second)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        172.0,
+        1.773103254e12
+      ],
+      [
+        54.0,
+        1.773103257e12
+      ],
+      [
+        176.0,
+        1.773185399e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/iteration/(Dict/Int/iterate second)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        146.0,
+        1.77310325e12
+      ],
+      [
+        154.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/deletion/(IdDict/Any/filter)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        114.99999999999999,
+        1.773103248e12
+      ],
+      [
+        108.0,
+        1.77310325e12
+      ],
+      [
+        119.0,
+        1.773185403e12
+      ],
+      [
+        108.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(BitSet/Int/union)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        103.0,
+        1.77310325e12
+      ],
+      [
+        89.0,
+        1.773103251e12
+      ],
+      [
+        88.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(BitSet/Int/intersect!/BitSet)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        135.0,
+        1.77310325e12
+      ],
+      [
+        171.0,
+        1.773185418e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/iteration/(Dict/String/iterate second)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        158.0,
+        1.773103254e12
+      ],
+      [
+        56.00000000000001,
+        1.773103257e12
+      ],
+      [
+        157.0,
+        1.773185399e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/deletion/(Vector/String/filter)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        130.0,
+        1.77310325e12
+      ],
+      [
+        150.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Set/Int/==/self)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        204.0,
+        1.773103254e12
+      ],
+      [
+        48.0,
+        1.773185405e12
+      ],
+      [
+        64.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(BitSet/Int/union!/Vector)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        127.0,
+        1.773103253e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/deletion/(IdDict/Int/filter!)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        202.0,
+        1.773103254e12
+      ],
+      [
+        177.0,
+        1.773185399e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(BitSet/Int/intersect/Vector/Vector)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        96.0,
+        1.77310325e12
+      ],
+      [
+        92.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Dict/Any/setindex!/overwrite)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        125.0,
+        1.773103254e12
+      ],
+      [
+        141.0,
+        1.7731854e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Set/String/in/false)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        134.00000000000003,
+        1.773103254e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Set/Int/in/false)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        233.0,
+        1.773103254e12
+      ],
+      [
+        46.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(BitSet/Int/setdiff/BitSet)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        102.0,
+        1.77310325e12
+      ],
+      [
+        94.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(BitSet/Int/symdiff!/small)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        127.0,
+        1.773103254e12
+      ],
+      [
+        55.00000000000001,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/deletion/(Set/Any/filter)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        132.0,
+        1.773103247e12
+      ],
+      [
+        112.00000000000001,
+        1.77310325e12
+      ],
+      [
+        107.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(BitSet/Int/intersect/BitSet)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        103.0,
+        1.77310325e12
+      ],
+      [
+        82.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/deletion/(Dict/Any/pop!)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        150.0,
+        1.773185401e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Set/Int/setdiff!/BitSet)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        199.0,
+        1.773103254e12
+      ],
+      [
+        49.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/optimizations/(IdDict/abstract/Nothing)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        98.0,
+        1.77310325e12
+      ],
+      [
+        133.0,
+        1.773103254e12
+      ],
+      [
+        127.0,
+        1.773185399e12
+      ],
+      [
+        71.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/optimizations/(Set/concrete/Nothing)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        249.00000000000003,
+        1.77302643e12
+      ],
+      [
+        66.0,
+        1.773103247e12
+      ],
+      [
+        73.0,
+        1.77310325e12
+      ],
+      [
+        73.0,
+        1.773103259e12
+      ],
+      [
+        195.0,
+        1.773103265e12
+      ],
+      [
+        63.0,
+        1.773103266e12
+      ],
+      [
+        148.0,
+        1.773185399e12
+      ],
+      [
+        127.0,
+        1.773185405e12
+      ],
+      [
+        57.99999999999999,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Dict/Int/setindex!/overwrite)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        189.0,
+        1.773103254e12
+      ],
+      [
+        56.00000000000001,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/deletion/(Vector/String/filter!)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        110.00000000000001,
+        1.77310325e12
+      ],
+      [
+        132.0,
+        1.773103253e12
+      ],
+      [
+        125.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Set/Int/union!/BitSet)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        177.0,
+        1.773103254e12
+      ],
+      [
+        60.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/optimizations/(Set/concrete/Bool)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        99.0,
+        1.77310325e12
+      ],
+      [
+        99.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Set/Int/⊆/self)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        215.0,
+        1.773103254e12
+      ],
+      [
+        48.0,
+        1.773185405e12
+      ],
+      [
+        66.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Vector/String/in/false)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        145.0,
+        1.773103247e12
+      ],
+      [
+        133.0,
+        1.773103253e12
+      ],
+      [
+        386.0,
+        1.773103254e12
+      ],
+      [
+        27.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(BitSet/Int/symdiff!/big)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        92.0,
+        1.77310325e12
+      ],
+      [
+        55.00000000000001,
+        1.773185402e12
+      ],
+      [
+        98.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(empty/Int/⊆/BitSet)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        154.0,
+        1.77310325e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(BitSet/Int/union/Set)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        95.0,
+        1.77310325e12
+      ],
+      [
+        90.0,
+        1.773103251e12
+      ],
+      [
+        89.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Vector/Int/intersect)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        90.0,
+        1.77310325e12
+      ],
+      [
+        148.0,
+        1.773103254e12
+      ],
+      [
+        90.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(BitSet/Int/setdiff!/BitSet)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        149.0,
+        1.773103254e12
+      ],
+      [
+        67.00000000000001,
+        1.773103264e12
+      ],
+      [
+        161.0,
+        1.773185418e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/initialization/(Dict/Any/iterator)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        171.0,
+        1.773103256e12
+      ],
+      [
+        158.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Vector/Int/intersect/BitSet/BitSet)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        74.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(\\Dict\\/\\Int\\/\\push!\\/\\new\\)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        134.00000000000003,
+        1.773185401e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(BitSet/Int/pop!/specified)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        250.99999999999997,
+        1.773103254e12
+      ],
+      [
+        42.0,
+        1.773185397e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/iteration/(IdDict/Any/iterate second)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        221.0,
+        1.773103254e12
+      ],
+      [
+        71.0,
+        1.773103257e12
+      ],
+      [
+        208.0,
+        1.773185399e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(BitSet/Int/intersect/Vector)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        111.00000000000001,
+        1.77310325e12
+      ],
+      [
+        129.0,
+        1.773103254e12
+      ],
+      [
+        69.0,
+        1.773103259e12
+      ],
+      [
+        111.00000000000001,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/initialization/(BitSet/Int/sorted/loop/sizehint!)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        98.0,
+        1.77310325e12
+      ],
+      [
+        96.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Set/Int/push!/new)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        127.0,
+        1.773103247e12
+      ],
+      [
+        179.0,
+        1.773103254e12
+      ],
+      [
+        61.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/initialization/(BitSet/Int/unsorted/loop/sizehint!)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        100.0,
+        1.77310325e12
+      ],
+      [
+        99.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(BitSet/Int/==/self)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        512.0,
+        1.773103247e12
+      ],
+      [
+        256.0,
+        1.77310325e12
+      ],
+      [
+        146.0,
+        1.773103254e12
+      ],
+      [
+        267.0,
+        1.773103257e12
+      ],
+      [
+        38.0,
+        1.773103261e12
+      ],
+      [
+        63.0,
+        1.773103264e12
+      ],
+      [
+        126.0,
+        1.773185398e12
+      ],
+      [
+        125.0,
+        1.773185399e12
+      ],
+      [
+        247.00000000000003,
+        1.773185401e12
+      ],
+      [
+        39.0,
+        1.773185406e12
+      ],
+      [
+        70.0,
+        1.773185412e12
+      ],
+      [
+        73.0,
+        1.77318542e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/initialization/(Vector/Any/iterator)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        66.0,
+        1.773185407e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/optimizations/(Dict/concrete/Nothing)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        96.0,
+        1.77310325e12
+      ],
+      [
+        168.0,
+        1.773103254e12
+      ],
+      [
+        181.0,
+        1.773185399e12
+      ],
+      [
+        96.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Set/Int/intersect/BitSet/BitSet)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        87.0,
+        1.77310325e12
+      ],
+      [
+        139.0,
+        1.773103254e12
+      ],
+      [
+        78.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(BitSet/Int/symdiff!/Vector)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        282.0,
+        1.773103254e12
+      ],
+      [
+        274.0,
+        1.773185418e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/iteration/(\\Set\\/\\Int\\/\\iterate second\\)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        67.00000000000001,
+        1.773185401e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/deletion/(Vector/Int/filter)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        269.0,
+        1.77310325e12
+      ],
+      [
+        206.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Vector/Any/getindex)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        72.0,
+        1.773103247e12
+      ],
+      [
+        181.0,
+        1.77310325e12
+      ],
+      [
+        139.0,
+        1.773185407e12
+      ],
+      [
+        179.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/deletion/(Vector/Int/pop!)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        133.0,
+        1.77310325e12
+      ],
+      [
+        191.0,
+        1.773103254e12
+      ],
+      [
+        149.0,
+        1.773185399e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(BitSet/Int/push!/new)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        283.0,
+        1.773103254e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(\\Set\\/\\Int\\/\\union\\/\\BitSet\\)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        128.0,
+        1.77318541e12
+      ],
+      [
+        127.0,
+        1.773185419e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Vector/Int/in/true)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        131.0,
+        1.773103247e12
+      ],
+      [
+        131.0,
+        1.773103256e12
+      ],
+      [
+        131.0,
+        1.773103262e12
+      ],
+      [
+        129.0,
+        1.773103267e12
+      ],
+      [
+        129.0,
+        1.773185398e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/deletion/(Vector/Any/pop!)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        184.0,
+        1.77310325e12
+      ],
+      [
+        209.0,
+        1.773103254e12
+      ],
+      [
+        175.0,
+        1.773185399e12
+      ],
+      [
+        150.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Set/Any/push!/overwrite)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        56.99999999999999,
+        1.773103266e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(BitSet/Int/intersect!/small)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        135.0,
+        1.77310325e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Vector/Any/in/true)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        133.0,
+        1.773103254e12
+      ],
+      [
+        127.0,
+        1.773185399e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(BitSet/Int/symdiff/BitSet/BitSet)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        130.0,
+        1.773026431e12
+      ],
+      [
+        37.0,
+        1.77310325e12
+      ],
+      [
+        172.0,
+        1.773103252e12
+      ],
+      [
+        46.0,
+        1.773103264e12
+      ],
+      [
+        125.0,
+        1.773185408e12
+      ],
+      [
+        28.999999999999996,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/initialization/(Vector/Int/loop/sizehint!)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        35.0,
+        1.77310325e12
+      ],
+      [
+        222.00000000000003,
+        1.773103254e12
+      ],
+      [
+        194.0,
+        1.773185399e12
+      ],
+      [
+        32.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/initialization/(Set/Int/loop)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        104.0,
+        1.77310325e12
+      ],
+      [
+        133.0,
+        1.773103254e12
+      ],
+      [
+        96.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(BitSet/Int/union/BitSet/BitSet)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        117.0,
+        1.77310325e12
+      ],
+      [
+        111.00000000000001,
+        1.773103251e12
+      ],
+      [
+        107.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/initialization/(Vector/Any/loop)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        169.0,
+        1.773103254e12
+      ],
+      [
+        145.0,
+        1.773185399e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Vector/Int/symdiff/Vector/Vector)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        97.0,
+        1.77310325e12
+      ],
+      [
+        90.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Set/Int/setdiff!/Set)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        183.0,
+        1.773103254e12
+      ],
+      [
+        55.00000000000001,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/optimizations/(IdDict/abstract/Bool)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        98.0,
+        1.77310325e12
+      ],
+      [
+        130.0,
+        1.773185399e12
+      ],
+      [
+        76.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(BitSet/Int/intersect)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        101.0,
+        1.77310325e12
+      ],
+      [
+        89.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/deletion/(IdDict/Any/filter!)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        129.0,
+        1.773103254e12
+      ],
+      [
+        143.0,
+        1.773185399e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Set/Any/pop!/unspecified)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        148.0,
+        1.773185401e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Vector/Int/⊆/Vector)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        125.0,
+        1.773103253e12
+      ],
+      [
+        127.0,
+        1.773103254e12
+      ],
+      [
+        73.0,
+        1.773103254e12
+      ],
+      [
+        142.0,
+        1.773103259e12
+      ],
+      [
+        137.0,
+        1.773103265e12
+      ],
+      [
+        127.0,
+        1.773103266e12
+      ],
+      [
+        127.0,
+        1.773185405e12
+      ],
+      [
+        128.0,
+        1.773185407e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(BitSet/Int/union!/BitSet)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        148.0,
+        1.77302643e12
+      ],
+      [
+        141.0,
+        1.773103253e12
+      ],
+      [
+        142.0,
+        1.773103256e12
+      ],
+      [
+        70.0,
+        1.773103262e12
+      ],
+      [
+        75.0,
+        1.7731854e12
+      ],
+      [
+        65.0,
+        1.773185403e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(IdDict/String/getindex)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        180.0,
+        1.77302643e12
+      ],
+      [
+        130.0,
+        1.773103262e12
+      ],
+      [
+        128.0,
+        1.773185399e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/initialization/(Set/Int/loop/sizehint!)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        128.0,
+        1.773103254e12
+      ],
+      [
+        270.0,
+        1.773103259e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Vector/Int/symdiff/BitSet/BitSet)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        99.0,
+        1.77310325e12
+      ],
+      [
+        93.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/iteration/(IdDict/Int/iterate)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        128.0,
+        1.77310325e12
+      ],
+      [
+        125.0,
+        1.773103251e12
+      ],
+      [
+        177.0,
+        1.773103254e12
+      ],
+      [
+        181.0,
+        1.773185399e12
+      ],
+      [
+        126.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Set/Int/intersect)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        124.0,
+        1.77310325e12
+      ],
+      [
+        121.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Vector/Int/union/Set/Set)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        89.0,
+        1.77310325e12
+      ],
+      [
+        87.0,
+        1.773103251e12
+      ],
+      [
+        149.0,
+        1.773103254e12
+      ],
+      [
+        90.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(BitSet/Int/union/Vector/Vector)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        109.00000000000001,
+        1.77310325e12
+      ],
+      [
+        106.0,
+        1.773103251e12
+      ],
+      [
+        103.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Set/Int/intersect/Set)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        81.0,
+        1.77310325e12
+      ],
+      [
+        147.0,
+        1.773103254e12
+      ],
+      [
+        70.0,
+        1.773185405e12
+      ],
+      [
+        78.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Vector/Int/pop!/unspecified)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        229.99999999999997,
+        1.773103254e12
+      ],
+      [
+        172.0,
+        1.773185399e12
+      ],
+      [
+        128.0,
+        1.7731854e12
+      ],
+      [
+        41.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Set/Int/symdiff/BitSet)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        90.0,
+        1.77310325e12
+      ],
+      [
+        134.00000000000003,
+        1.773103254e12
+      ],
+      [
+        73.0,
+        1.773185401e12
+      ],
+      [
+        104.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Set/Int/union!/Set)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        175.0,
+        1.773103254e12
+      ],
+      [
+        59.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Dict/Int/push!/new)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        178.0,
+        1.773103254e12
+      ],
+      [
+        51.0,
+        1.773103256e12
+      ],
+      [
+        54.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(BitSet/Int/⊆/self)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        127.0,
+        1.773103253e12
+      ],
+      [
+        129.0,
+        1.773103268e12
+      ],
+      [
+        145.0,
+        1.773185408e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(BitSet/Int/length)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        159.0,
+        1.773103246e12
+      ],
+      [
+        268.00000000000006,
+        1.773103247e12
+      ],
+      [
+        244.0,
+        1.77310325e12
+      ],
+      [
+        169.0,
+        1.773103253e12
+      ],
+      [
+        231.99999999999997,
+        1.773103257e12
+      ],
+      [
+        42.0,
+        1.773103261e12
+      ],
+      [
+        247.00000000000003,
+        1.773185401e12
+      ],
+      [
+        40.0,
+        1.773185406e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/iteration/(Set/String/iterate)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        173.0,
+        1.773103254e12
+      ],
+      [
+        53.0,
+        1.773103257e12
+      ],
+      [
+        176.0,
+        1.773185399e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/initialization/(Vector/Any/loop/sizehint!)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        176.0,
+        1.773103254e12
+      ],
+      [
+        148.0,
+        1.773185399e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/deletion/(Set/String/pop!)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        73.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/optimizations/(Vector/concrete/Nothing)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        130.0,
+        1.77302643e12
+      ],
+      [
+        64.0,
+        1.773103246e12
+      ],
+      [
+        67.00000000000001,
+        1.773103247e12
+      ],
+      [
+        118.0,
+        1.77310325e12
+      ],
+      [
+        56.99999999999999,
+        1.773103251e12
+      ],
+      [
+        75.0,
+        1.773185405e12
+      ],
+      [
+        75.0,
+        1.773185406e12
+      ],
+      [
+        97.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/deletion/(Vector/Any/filter)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        562.0,
+        1.77310325e12
+      ],
+      [
+        125.0,
+        1.773185408e12
+      ],
+      [
+        552.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(BitSet/Int/intersect/Set/Set)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        98.0,
+        1.77310325e12
+      ],
+      [
+        141.0,
+        1.773103254e12
+      ],
+      [
+        86.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Set/Int/symdiff)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        121.0,
+        1.77310325e12
+      ],
+      [
+        124.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/deletion/(BitSet/Int/pop!)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        154.0,
+        1.773103262e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Set/Int/symdiff/BitSet/BitSet)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        90.0,
+        1.77310325e12
+      ],
+      [
+        132.0,
+        1.773103254e12
+      ],
+      [
+        71.0,
+        1.773185401e12
+      ],
+      [
+        103.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Set/Int/symdiff/Vector)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        89.0,
+        1.77310325e12
+      ],
+      [
+        134.00000000000003,
+        1.773103254e12
+      ],
+      [
+        70.0,
+        1.773185401e12
+      ],
+      [
+        103.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(IdDict/Int/in/false)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        126.0,
+        1.773103254e12
+      ],
+      [
+        127.0,
+        1.773185399e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/initialization/(Dict/Int/loop)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        101.0,
+        1.77310325e12
+      ],
+      [
+        128.0,
+        1.773103254e12
+      ],
+      [
+        64.0,
+        1.773185405e12
+      ],
+      [
+        106.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Dict/Int/first)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        190.0,
+        1.773103249e12
+      ],
+      [
+        206.0,
+        1.77310325e12
+      ],
+      [
+        136.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(\\Vector\\/\\String\\/\\in\\/\\false\\)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        132.0,
+        1.773185401e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/initialization/(Vector/Int/loop)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        55.00000000000001,
+        1.77310325e12
+      ],
+      [
+        196.0,
+        1.773103254e12
+      ],
+      [
+        176.0,
+        1.773185399e12
+      ],
+      [
+        43.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Vector/String/pop!/unspecified)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        224.00000000000003,
+        1.773103254e12
+      ],
+      [
+        170.0,
+        1.773185399e12
+      ],
+      [
+        44.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/initialization/(Vector/String/loop)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        54.0,
+        1.77310325e12
+      ],
+      [
+        158.0,
+        1.773103254e12
+      ],
+      [
+        146.0,
+        1.773185399e12
+      ],
+      [
+        55.00000000000001,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Dict/Any/in/false)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        150.0,
+        1.773026433e12
+      ],
+      [
+        184.0,
+        1.773185418e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/initialization/(BitSet/Int/unsorted/loop)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        109.00000000000001,
+        1.77310325e12
+      ],
+      [
+        109.00000000000001,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/initialization/(Dict/String/loop/sizehint!)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        147.0,
+        1.77310325e12
+      ],
+      [
+        65.0,
+        1.773185407e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(BitSet/Int/union/BitSet)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        132.0,
+        1.773103247e12
+      ],
+      [
+        124.0,
+        1.77310325e12
+      ],
+      [
+        106.0,
+        1.773103251e12
+      ],
+      [
+        125.0,
+        1.773103254e12
+      ],
+      [
+        134.00000000000003,
+        1.773103254e12
+      ],
+      [
+        127.0,
+        1.773103259e12
+      ],
+      [
+        105.0,
+        1.773185416e12
+      ],
+      [
+        136.0,
+        1.773185418e12
+      ],
+      [
+        129.0,
+        1.773185418e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/iteration/(Set/Int/iterate second)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        128.0,
+        1.77310325e12
+      ],
+      [
+        127.0,
+        1.773103253e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Vector/Any/setindex!)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        129.0,
+        1.773103254e12
+      ],
+      [
+        137.0,
+        1.773185399e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(BitSet/Int/union!/big)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        92.0,
+        1.77310325e12
+      ],
+      [
+        65.0,
+        1.773185406e12
+      ],
+      [
+        99.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Set/Int/intersect/Vector/Vector)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        84.0,
+        1.77310325e12
+      ],
+      [
+        128.0,
+        1.773103254e12
+      ],
+      [
+        77.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Vector/Int/setdiff/Set)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        125.0,
+        1.773103254e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(BitSet/Int/setdiff/Vector)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        101.0,
+        1.77310325e12
+      ],
+      [
+        98.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Vector/Int/union)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        90.0,
+        1.77310325e12
+      ],
+      [
+        86.0,
+        1.773103251e12
+      ],
+      [
+        148.0,
+        1.773103254e12
+      ],
+      [
+        90.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Vector/Int/intersect/BitSet)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        72.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Vector/String/in/true)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        370.0,
+        1.773103254e12
+      ],
+      [
+        127.0,
+        1.773103259e12
+      ],
+      [
+        28.999999999999996,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/initialization/(IdDict/Int/iterator)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        86.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Dict/String/pop!/specified)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        224.00000000000003,
+        1.773103264e12
+      ],
+      [
+        72.0,
+        1.773185407e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(empty/Int/</BitSet)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        202.0,
+        1.773026433e12
+      ],
+      [
+        128.0,
+        1.773185401e12
+      ],
+      [
+        166.0,
+        1.773185418e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Set/Int/union/Vector/Vector)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        128.0,
+        1.773103247e12
+      ],
+      [
+        165.0,
+        1.773103254e12
+      ],
+      [
+        125.0,
+        1.77310326e12
+      ],
+      [
+        129.0,
+        1.773185398e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Dict/Int/push!/overwrite)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        176.0,
+        1.773103254e12
+      ],
+      [
+        52.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Vector/Int/symdiff)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        105.0,
+        1.77310325e12
+      ],
+      [
+        74.0,
+        1.773185405e12
+      ],
+      [
+        100.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Set/Int/intersect/BitSet)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        84.0,
+        1.77310325e12
+      ],
+      [
+        149.0,
+        1.773103254e12
+      ],
+      [
+        70.0,
+        1.773185405e12
+      ],
+      [
+        75.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(BitSet/Int/setdiff!/Set)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        127.0,
+        1.773026431e12
+      ],
+      [
+        127.0,
+        1.773103267e12
+      ],
+      [
+        126.0,
+        1.773103268e12
+      ],
+      [
+        128.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Vector/Int/union/BitSet/BitSet)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        88.0,
+        1.77310325e12
+      ],
+      [
+        86.0,
+        1.773103251e12
+      ],
+      [
+        149.0,
+        1.773103254e12
+      ],
+      [
+        91.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Vector/Int/intersect/Vector/Vector)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        106.0,
+        1.77310325e12
+      ],
+      [
+        93.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(BitSet/Int/intersect/BitSet/BitSet)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        104.0,
+        1.77310325e12
+      ],
+      [
+        134.00000000000003,
+        1.773185406e12
+      ],
+      [
+        96.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Set/String/in/true)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        145.0,
+        1.773103254e12
+      ],
+      [
+        71.0,
+        1.773103256e12
+      ],
+      [
+        67.00000000000001,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Set/Int/union/Vector)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        128.0,
+        1.773103247e12
+      ],
+      [
+        167.0,
+        1.773103254e12
+      ],
+      [
+        125.0,
+        1.77310326e12
+      ],
+      [
+        129.0,
+        1.773185398e12
+      ],
+      [
+        126.0,
+        1.773185407e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(BitSet/Int/symdiff/Set)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        108.0,
+        1.77310325e12
+      ],
+      [
+        97.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/deletion/(Dict/String/pop!)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        74.0,
+        1.773103259e12
+      ],
+      [
+        73.0,
+        1.773185416e12
+      ],
+      [
+        59.0,
+        1.773185418e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(IdDict/String/pop!/specified)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        136.0,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/deletion/(Vector/Any/filter!)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        777.0,
+        1.77310325e12
+      ],
+      [
+        51.0,
+        1.773103264e12
+      ],
+      [
+        59.0,
+        1.773103266e12
+      ],
+      [
+        73.0,
+        1.773103267e12
+      ],
+      [
+        74.0,
+        1.773185412e12
+      ],
+      [
+        779.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(BitSet/Int/in/true)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        139.0,
+        1.773103247e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Vector/Int/intersect/Vector)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        104.0,
+        1.77310325e12
+      ],
+      [
+        93.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(IdDict/Int/first)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        188.0,
+        1.773103254e12
+      ],
+      [
+        231.99999999999997,
+        1.773185399e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(BitSet/Int/union/Vector)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        112.00000000000001,
+        1.77310325e12
+      ],
+      [
+        101.0,
+        1.773103251e12
+      ],
+      [
+        111.00000000000001,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/optimizations/(Dict/abstract/Nothing)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        96.0,
+        1.77310325e12
+      ],
+      [
+        168.0,
+        1.773103254e12
+      ],
+      [
+        185.0,
+        1.773185399e12
+      ],
+      [
+        96.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/deletion/(Set/String/filter!)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        72.0,
+        1.773103264e12
+      ],
+      [
+        152.0,
+        1.773103267e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(BitSet/Int/symdiff/Set/Set)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        74.0,
+        1.77310325e12
+      ],
+      [
+        141.0,
+        1.773103252e12
+      ],
+      [
+        66.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/initialization/(Vector/Int/iterator)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        137.0,
+        1.77310325e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/iteration/(Dict/Any/iterate second)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        179.0,
+        1.773103254e12
+      ],
+      [
+        57.99999999999999,
+        1.773103257e12
+      ],
+      [
+        175.0,
+        1.773185399e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Vector/String/getindex)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        139.0,
+        1.773103253e12
+      ],
+      [
+        139.0,
+        1.773103268e12
+      ],
+      [
+        137.0,
+        1.773185418e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Set/Int/union!/Vector)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        126.0,
+        1.773103247e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Vector/Int/union/BitSet)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        88.0,
+        1.77310325e12
+      ],
+      [
+        87.0,
+        1.773103251e12
+      ],
+      [
+        149.0,
+        1.773103254e12
+      ],
+      [
+        89.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(IdDict/Int/pop!/specified)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        90.0,
+        1.773103257e12
+      ],
+      [
+        112.00000000000001,
+        1.773185405e12
+      ],
+      [
+        91.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Set/Int/union/BitSet/BitSet)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        127.0,
+        1.773103247e12
+      ],
+      [
+        165.0,
+        1.773103254e12
+      ],
+      [
+        127.0,
+        1.773185398e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/optimizations/(BitSet/UInt16)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        101.0,
+        1.77310325e12
+      ],
+      [
+        101.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/iteration/(Dict/String/iterate)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        154.0,
+        1.773103254e12
+      ],
+      [
+        60.0,
+        1.773103257e12
+      ],
+      [
+        151.0,
+        1.773185399e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/deletion/(Vector/String/pop!)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        125.0,
+        1.77310325e12
+      ],
+      [
+        229.99999999999997,
+        1.773103254e12
+      ],
+      [
+        165.0,
+        1.773185399e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Dict/String/push!/overwrite)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        129.0,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Set/Int/setdiff/Set)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        114.99999999999999,
+        1.77310325e12
+      ],
+      [
+        113.99999999999999,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Set/Int/setdiff!/Vector)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        191.0,
+        1.773103254e12
+      ],
+      [
+        49.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/initialization/(Vector/String/iterator)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        141.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(IdDict/String/in/false)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        126.0,
+        1.773103254e12
+      ],
+      [
+        134.00000000000003,
+        1.773185399e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Vector/Int/symdiff/Set/Set)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        98.0,
+        1.77310325e12
+      ],
+      [
+        93.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/initialization/(IdDict/Int/loop/sizehint!)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        82.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(IdDict/Int/in/true)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        134.00000000000003,
+        1.773103254e12
+      ],
+      [
+        79.0,
+        1.773103257e12
+      ],
+      [
+        137.0,
+        1.773185399e12
+      ],
+      [
+        143.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Set/Int/in/true)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        239.0,
+        1.773103254e12
+      ],
+      [
+        45.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/deletion/(Dict/Int/pop!)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        135.0,
+        1.773103268e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Set/Int/pop!/specified)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        174.0,
+        1.773103254e12
+      ],
+      [
+        62.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(BitSet/Int/setdiff/Set)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        95.0,
+        1.77310325e12
+      ],
+      [
+        85.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(BitSet/Int/symdiff)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        102.0,
+        1.77310325e12
+      ],
+      [
+        89.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Vector/Int/symdiff/Set)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        95.0,
+        1.77310325e12
+      ],
+      [
+        126.0,
+        1.773103254e12
+      ],
+      [
+        91.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Set/Int/setdiff/Vector)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        120.0,
+        1.77310325e12
+      ],
+      [
+        112.99999999999999,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Set/Int/union/BitSet)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        126.0,
+        1.773103247e12
+      ],
+      [
+        166.0,
+        1.773103254e12
+      ],
+      [
+        131.0,
+        1.773185398e12
+      ],
+      [
+        128.0,
+        1.773185407e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Vector/Int/symdiff/BitSet)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        96.0,
+        1.77310325e12
+      ],
+      [
+        126.0,
+        1.773103254e12
+      ],
+      [
+        91.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(IdDict/String/push!/overwrite)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        151.0,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(BitSet/Int/union!/small)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        127.0,
+        1.773103254e12
+      ],
+      [
+        66.0,
+        1.773185406e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Dict/Int/setindex!/new)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        183.0,
+        1.773103254e12
+      ],
+      [
+        55.00000000000001,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/optimizations/(IdDict/concrete/UInt16)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        87.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Vector/Int/union/Set)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        88.0,
+        1.77310325e12
+      ],
+      [
+        87.0,
+        1.773103251e12
+      ],
+      [
+        149.0,
+        1.773103254e12
+      ],
+      [
+        91.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/deletion/(IdDict/Int/filter)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        102.0,
+        1.77310325e12
+      ],
+      [
+        95.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(empty/Int/⊆/Set)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        131.0,
+        1.773026431e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Set/Int/union/Set/Set)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        129.0,
+        1.773103247e12
+      ],
+      [
+        170.0,
+        1.773103254e12
+      ],
+      [
+        125.0,
+        1.77310326e12
+      ],
+      [
+        125.0,
+        1.77310327e12
+      ],
+      [
+        132.0,
+        1.773185398e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(BitSet/Int/intersect!/big)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        152.0,
+        1.773103254e12
+      ],
+      [
+        162.0,
+        1.773185399e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Dict/String/getindex)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        377.0,
+        1.773103264e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Vector/Int/union/Vector)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        88.0,
+        1.77310325e12
+      ],
+      [
+        86.0,
+        1.773103251e12
+      ],
+      [
+        148.0,
+        1.773103254e12
+      ],
+      [
+        90.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Dict/String/in/false)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        256.0,
+        1.773103264e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/initialization/(Dict/String/iterator)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        66.0,
+        1.773185407e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Dict/Any/setindex!/new)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        56.00000000000001,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(empty/Int/</Set)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        69.0,
+        1.773103251e12
+      ],
+      [
+        133.0,
+        1.773103253e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Set/Int/union)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        120.0,
+        1.77310325e12
+      ],
+      [
+        125.0,
+        1.773103251e12
+      ],
+      [
+        119.0,
+        1.773103251e12
+      ],
+      [
+        122.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Vector/Any/push!)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        67.00000000000001,
+        1.77310325e12
+      ],
+      [
+        153.0,
+        1.773103254e12
+      ],
+      [
+        144.0,
+        1.773185399e12
+      ],
+      [
+        70.0,
+        1.773185416e12
+      ],
+      [
+        60.0,
+        1.773185418e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(IdDict/Int/getindex)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        129.0,
+        1.773103254e12
+      ],
+      [
+        132.0,
+        1.773185399e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Set/Int/intersect/Vector)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        86.0,
+        1.77310325e12
+      ],
+      [
+        153.0,
+        1.773103254e12
+      ],
+      [
+        70.0,
+        1.773185405e12
+      ],
+      [
+        75.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/optimizations/(Vector/abstract/Nothing)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        88.0,
+        1.77310325e12
+      ],
+      [
+        139.0,
+        1.773103254e12
+      ],
+      [
+        134.00000000000003,
+        1.773185399e12
+      ],
+      [
+        88.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/optimizations/(Dict/concrete/Int8)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        100.0,
+        1.77310325e12
+      ],
+      [
+        101.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/iteration/(IdDict/String/iterate)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        223.0,
+        1.773103254e12
+      ],
+      [
+        70.0,
+        1.773103257e12
+      ],
+      [
+        191.0,
+        1.773185399e12
+      ],
+      [
+        130.0,
+        1.773185418e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Set/Int/==/Set)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        130.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Set/Int/symdiff/Set/Set)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        92.0,
+        1.77310325e12
+      ],
+      [
+        132.0,
+        1.773103254e12
+      ],
+      [
+        69.0,
+        1.773185401e12
+      ],
+      [
+        108.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(\\Set\\/\\Int\\/\\union\\/\\Set\\)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        131.0,
+        1.77318541e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Dict/Any/getindex)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        191.0,
+        1.773103254e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(BitSet/Int/⊆/Vector)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        200.0,
+        1.773103247e12
+      ],
+      [
+        199.0,
+        1.77310325e12
+      ],
+      [
+        147.0,
+        1.773103253e12
+      ],
+      [
+        200.0,
+        1.773103257e12
+      ],
+      [
+        48.0,
+        1.773103261e12
+      ],
+      [
+        68.0,
+        1.773103264e12
+      ],
+      [
+        73.0,
+        1.773103265e12
+      ],
+      [
+        196.0,
+        1.773185401e12
+      ],
+      [
+        48.0,
+        1.773185406e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/optimizations/(Set/concrete/Int8)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        102.0,
+        1.77310325e12
+      ],
+      [
+        101.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Set/Int/</Set)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        130.0,
+        1.77302643e12
+      ],
+      [
+        133.0,
+        1.773103247e12
+      ],
+      [
+        130.0,
+        1.773103257e12
+      ],
+      [
+        130.0,
+        1.773103259e12
+      ],
+      [
+        130.0,
+        1.773185397e12
+      ],
+      [
+        130.0,
+        1.773185402e12
+      ],
+      [
+        130.0,
+        1.773185416e12
+      ],
+      [
+        130.0,
+        1.773185418e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Set/Int/first)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        144.0,
+        1.77310325e12
+      ],
+      [
+        69.0,
+        1.773185416e12
+      ],
+      [
+        139.0,
+        1.773185418e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(BitSet/Int/⊆/Set)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        129.0,
+        1.773026431e12
+      ],
+      [
+        210.0,
+        1.773103247e12
+      ],
+      [
+        204.99999999999997,
+        1.77310325e12
+      ],
+      [
+        166.0,
+        1.773103253e12
+      ],
+      [
+        194.0,
+        1.773103257e12
+      ],
+      [
+        50.0,
+        1.773103261e12
+      ],
+      [
+        66.0,
+        1.773103264e12
+      ],
+      [
+        210.0,
+        1.773185401e12
+      ],
+      [
+        49.0,
+        1.773185406e12
+      ],
+      [
+        147.0,
+        1.773185416e12
+      ],
+      [
+        128.0,
+        1.773185418e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/optimizations/(IdDict/concrete/Nothing)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        104.0,
+        1.77310325e12
+      ],
+      [
+        129.0,
+        1.773103254e12
+      ],
+      [
+        127.0,
+        1.773185399e12
+      ],
+      [
+        71.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/optimizations/(IdDict/abstract/Int8)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        107.0,
+        1.77310325e12
+      ],
+      [
+        89.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Dict/Int/pop!/specified)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        131.0,
+        1.773103254e12
+      ],
+      [
+        70.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(\\IdDict\\/\\String\\/\\push!\\/\\new\\)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        132.0,
+        1.77318541e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/initialization/(IdDict/Int/loop)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        86.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/iteration/(Dict/Int/iterate)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        127.0,
+        1.773103247e12
+      ],
+      [
+        173.0,
+        1.773103249e12
+      ],
+      [
+        155.0,
+        1.77310325e12
+      ],
+      [
+        138.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Dict/Any/in/true)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        180.0,
+        1.773103247e12
+      ],
+      [
+        126.0,
+        1.773185399e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/optimizations/(IdDict/abstract/UInt16)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        86.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Dict/String/in/true)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        134.00000000000003,
+        1.773103254e12
+      ],
+      [
+        137.0,
+        1.773103263e12
+      ],
+      [
+        352.0,
+        1.773103264e12
+      ],
+      [
+        69.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/optimizations/(Dict/abstract/Bool)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        101.0,
+        1.77310325e12
+      ],
+      [
+        101.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/deletion/(IdDict/String/filter)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        100.0,
+        1.77310325e12
+      ],
+      [
+        96.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/deletion/(Set/Int/filter!)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        142.0,
+        1.773026433e12
+      ],
+      [
+        139.0,
+        1.773103251e12
+      ],
+      [
+        53.0,
+        1.773103259e12
+      ],
+      [
+        194.0,
+        1.773103263e12
+      ],
+      [
+        175.0,
+        1.773103264e12
+      ],
+      [
+        53.0,
+        1.773103265e12
+      ],
+      [
+        133.0,
+        1.773103266e12
+      ],
+      [
+        139.0,
+        1.773103267e12
+      ],
+      [
+        130.0,
+        1.773103268e12
+      ],
+      [
+        145.0,
+        1.773185399e12
+      ],
+      [
+        73.0,
+        1.7731854e12
+      ],
+      [
+        50.0,
+        1.773185403e12
+      ],
+      [
+        54.0,
+        1.773185416e12
+      ],
+      [
+        146.0,
+        1.773185416e12
+      ],
+      [
+        179.0,
+        1.773185418e12
+      ],
+      [
+        202.99999999999997,
+        1.77318542e12
+      ],
+      [
+        49.0,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Set/Any/push!/new)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        56.00000000000001,
+        1.773103266e12
+      ],
+      [
+        128.0,
+        1.773103268e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Vector/Int/in/false)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        133.0,
+        1.773026433e12
+      ],
+      [
+        133.0,
+        1.773103247e12
+      ],
+      [
+        133.0,
+        1.773185408e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(IdDict/Any/in/true)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        134.00000000000003,
+        1.773103247e12
+      ],
+      [
+        125.0,
+        1.773103254e12
+      ],
+      [
+        137.0,
+        1.773185399e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/optimizations/(IdDict/concrete/Int8)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        112.00000000000001,
+        1.77310325e12
+      ],
+      [
+        88.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/iteration/(IdDict/Int/iterate second)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        212.0,
+        1.773103254e12
+      ],
+      [
+        208.0,
+        1.773185399e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Set/Int/⊆/Set)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        126.0,
+        1.773103247e12
+      ],
+      [
+        72.0,
+        1.773103252e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Vector/Int/symdiff/Vector)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        95.0,
+        1.77310325e12
+      ],
+      [
+        126.0,
+        1.773103254e12
+      ],
+      [
+        91.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Dict/String/pop!/unspecified)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        62.0,
+        1.773185407e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Set/Int/setdiff/BitSet)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        121.0,
+        1.77310325e12
+      ],
+      [
+        114.99999999999999,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(BitSet/Int/push!/overwrite)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        315.0,
+        1.773103254e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/optimizations/(Set/abstract/Int8)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        102.0,
+        1.77310325e12
+      ],
+      [
+        102.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/optimizations/(IdDict/concrete/Bool)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        103.0,
+        1.77310325e12
+      ],
+      [
+        130.0,
+        1.773185399e12
+      ],
+      [
+        76.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/iteration/(Set/Int/iterate)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        132.0,
+        1.773103253e12
+      ],
+      [
+        148.0,
+        1.773185404e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/iteration/(Dict/Any/iterate)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        153.0,
+        1.773103254e12
+      ],
+      [
+        60.0,
+        1.773103257e12
+      ],
+      [
+        151.0,
+        1.773185399e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(IdDict/Int/push!/overwrite)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        82.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/iteration/(IdDict/Any/iterate)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        229.99999999999997,
+        1.773103254e12
+      ],
+      [
+        70.0,
+        1.773103257e12
+      ],
+      [
+        215.0,
+        1.773185399e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Dict/Any/pop!/unspecified)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        146.0,
+        1.773185401e12
+      ],
+      [
+        126.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Vector/String/push!)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        66.0,
+        1.77310325e12
+      ],
+      [
+        166.0,
+        1.773103254e12
+      ],
+      [
+        137.0,
+        1.773185399e12
+      ],
+      [
+        69.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/iteration/(BitSet/Int/iterate second)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        137.0,
+        1.773103247e12
+      ],
+      [
+        70.0,
+        1.773103267e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(BitSet/Int/symdiff!/BitSet)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        148.0,
+        1.77302643e12
+      ],
+      [
+        142.0,
+        1.773103253e12
+      ],
+      [
+        69.0,
+        1.77310327e12
+      ],
+      [
+        75.0,
+        1.7731854e12
+      ],
+      [
+        65.0,
+        1.773185403e12
+      ],
+      [
+        70.0,
+        1.773185406e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Vector/Any/in/false)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        132.0,
+        1.773103254e12
+      ],
+      [
+        127.0,
+        1.773185399e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Dict/Int/pop!/unspecified)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        139.0,
+        1.773103254e12
+      ],
+      [
+        65.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/deletion/(Set/Int/filter)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        91.0,
+        1.77310325e12
+      ],
+      [
+        128.0,
+        1.773103254e12
+      ],
+      [
+        101.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(IdDict/Any/getindex)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        128.0,
+        1.773103254e12
+      ],
+      [
+        129.0,
+        1.773185399e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/iteration/(Vector/String/iterate)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        167.0,
+        1.773103254e12
+      ],
+      [
+        41.0,
+        1.773103257e12
+      ],
+      [
+        175.0,
+        1.773185399e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/initialization/(Dict/Int/loop/sizehint!)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        265.0,
+        1.773103259e12
+      ],
+      [
+        72.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Set/String/pop!/specified)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        126.0,
+        1.773103254e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/deletion/(\\Vector\\/\\Any\\/\\filter\\)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        126.0,
+        1.773185401e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Set/Int/union/Set)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        128.0,
+        1.773103247e12
+      ],
+      [
+        168.0,
+        1.773103254e12
+      ],
+      [
+        129.0,
+        1.773185398e12
+      ],
+      [
+        131.0,
+        1.773185407e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Dict/String/setindex!/overwrite)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        71.0,
+        1.773185407e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/initialization/(BitSet/Int/sorted/loop)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        99.0,
+        1.77310325e12
+      ],
+      [
+        97.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(IdDict/Any/in/false)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        132.0,
+        1.773103254e12
+      ],
+      [
+        134.00000000000003,
+        1.773185399e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(Vector/Int/union/Vector/Vector)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        88.0,
+        1.77310325e12
+      ],
+      [
+        87.0,
+        1.773103251e12
+      ],
+      [
+        148.0,
+        1.773103254e12
+      ],
+      [
+        89.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/iteration/(Vector/Int/iterate)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        72.0,
+        1.773103249e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/queries & updates/(Set/Int/push!/overwrite)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        127.0,
+        1.773103247e12
+      ],
+      [
+        179.0,
+        1.773103254e12
+      ],
+      [
+        61.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/deletion/(Set/Any/pop!)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        181.0,
+        1.773185401e12
+      ]
+    ]
+  },
+  {
+    "target": "collection/set operations/(BitSet/Int/symdiff/BitSet)",
+    "tags": {
+      "group": "nanosoldier_collection"
+    },
+    "datapoints": [
+      [
+        151.0,
+        1.77310325e12
+      ],
+      [
+        127.0,
+        1.773103254e12
+      ],
+      [
+        74.0,
+        1.773103259e12
+      ],
+      [
+        129.0,
+        1.773185397e12
+      ],
+      [
+        112.00000000000001,
+        1.773185416e12
+      ]
+    ]
+  }
+]

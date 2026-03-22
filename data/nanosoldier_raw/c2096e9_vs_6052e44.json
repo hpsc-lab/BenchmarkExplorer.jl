@@ -1,0 +1,232 @@
+{
+  "metadata": {
+    "head_hash": "c2096e9",
+    "comparison": "c2096e9_vs_6052e44",
+    "source": "NanosoldierReports",
+    "base_hash": "6052e44",
+    "imported_at": "2026-03-10T00:41:06.332",
+    "source_type": "report_md"
+  },
+  "benchmarks": {
+    "[\"scalar\", \"asin\", (\"abs(x) < 0.5\", \"negative argument\", \"Float32\")]": {
+      "time_ratio": 0.88,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"rem_pio2\", (\"argument reduction (easy) abs(x) < 2π/4\", \"negative argument\", \"Float64\")]": {
+      "time_ratio": 1.17,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"asinh\", (\"very small\", \"positive argument\", \"Float64\")]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan\", (\"0 <= abs(x) < 7/16\", \"positive argument\", \"Float32\")]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"asinh\", (\"0 <= abs(x) < 2^-28\", \"negative argument\", \"Float32\")]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan\", (\"very small\", \"negative argument\", \"Float32\")]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"exp2\", (\"one\", \"Float32\")]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"mod2pi\", (\"argument reduction (hard) abs(x) < 6π/4\", \"negative argument\", \"Float64\")]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"mod2pi\", (\"argument reduction (easy) abs(x) < 2.0^20π/4\", \"positive argument\", \"Float64\")]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan\", (\"very small\", \"positive argument\", \"Float32\")]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"asin\", (\"0.5 <= abs(x) < 0.975\", \"positive argument\", \"Float64\")]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"x one\", \"Float32\")]": {
+      "time_ratio": 0.69,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"rem_pio2\", (\"argument reduction (easy) abs(x) < 4π/4\", \"positive argument\", \"Float64\")]": {
+      "time_ratio": 0.85,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"asin\", (\"one\", \"positive argument\", \"Float64\")]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"asin\", (\"0.5 <= abs(x) < 0.975\", \"negative argument\", \"Float32\")]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"rem_pio2\", (\"argument reduction (easy) abs(x) < 6π/4\", \"negative argument\", \"Float64\")]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"tan\", (\"large\", \"negative argument\", \"Float32\")]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"tan\", (\"very small\", \"positive argument\", \"Float64\")]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"rem_pio2\", (\"argument reduction (easy) abs(x) < 5π/4\", \"positive argument\", \"Float64\")]": {
+      "time_ratio": 1.17,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"asin\", (\"abs(x) < 0.5\", \"positive argument\", \"Float32\")]": {
+      "time_ratio": 0.88,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan\", (\"very small\", \"negative argument\", \"Float64\")]": {
+      "time_ratio": 1.16,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"asin\", (\"one\", \"positive argument\", \"Float32\")]": {
+      "time_ratio": 1.11,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"tan\", (\"small\", \"negative argument\", \"Float32\")]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"asin\", (\"one\", \"negative argument\", \"Float32\")]": {
+      "time_ratio": 1.11,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan\", (\"zero\", \"Float32\")]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"exp2\", (\"2pow35\", \"negative argument\", \"Float32\")]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"mod2pi\", (\"argument reduction (easy) abs(x) < 6π/4\", \"negative argument\", \"Float64\")]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"rem_pio2\", (\"argument reduction (easy) abs(x) < 4π/4\", \"negative argument\", \"Float64\")]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"acosh\", (\"one\", \"Float32\")]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"acosh\", (\"one\", \"Float64\")]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"expm1\", (\"medium\", \"positive argument\", \"Float32\")]": {
+      "time_ratio": 0.89,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"tan\", (\"zero\", \"Float32\")]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"exp2\", (\"one\", \"Float64\")]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan\", (\"very small\", \"positive argument\", \"Float64\")]": {
+      "time_ratio": 1.16,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"asinh\", (\"0 <= abs(x) < 2^-28\", \"positive argument\", \"Float32\")]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"x one\", \"Float64\")]": {
+      "time_ratio": 0.61,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"asinh\", (\"zero\", \"Float64\")]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"y zero\", \"y negative\", \"x negative\", \"Float32\")]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"asin\", (\"one\", \"negative argument\", \"Float64\")]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"expm1\", (\"zero\", \"Float32\")]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"rem_pio2\", (\"argument reduction (easy) abs(x) < 3π/4\", \"negative argument\", \"Float64\")]": {
+      "time_ratio": 0.85,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"expm1\", (\"arg reduction I\", \"positive argument\", \"Float32\")]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan\", (\"very large\", \"negative argument\", \"Float64\")]": {
+      "time_ratio": 1.12,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"mod2pi\", (\"no reduction\", \"negative argument\", \"Float64\")]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"rem_pio2\", (\"argument reduction (easy) abs(x) < 5π/4\", \"negative argument\", \"Float64\")]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"mod2pi\", (\"argument reduction (easy) abs(x) < 7π/4\", \"negative argument\", \"Float64\")]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"mod2pi\", (\"argument reduction (easy) abs(x) < 2.0^20π/4\", \"negative argument\", \"Float64\")]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"expm1\", (\"large\", \"positive argument\", \"Float32\")]": {
+      "time_ratio": 0.9,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan\", (\"11/16 <= abs(x) < 19/16\", \"negative argument\", \"Float32\")]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan\", (\"39/16 <= abs(x) < 2^66\", \"positive argument\", \"Float32\")]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"rem_pio2\", (\"argument reduction (easy) abs(x) < 2π/4\", \"positive argument\", \"Float64\")]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan\", (\"zero\", \"Float64\")]": {
+      "time_ratio": 1.16,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"expm1\", (\"one\", \"Float32\")]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"mod2pi\", (\"argument reduction (easy) abs(x) < 8π/4\", \"negative argument\", \"Float64\")]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan\", (\"very large\", \"positive argument\", \"Float64\")]": {
+      "time_ratio": 1.12,
+      "memory_ratio": 1.0
+    }
+  }
+}

@@ -1,0 +1,8002 @@
+[
+  {
+    "target": "simd/(CartesianPartition/two_reductions/Int32/2/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        143.0,
+        1.77302643e12
+      ],
+      [
+        50.0,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(auto_axpy!/Int64/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        323.0,
+        1.773103253e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/manual_partition!/Float32/3/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        59.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/conditional_loop!/Int32/2/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        65.0,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/axpy!_aliased/Float64/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        122.0,
+        1.773103264e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(\\two_reductions_aliased\\/\\Int32\\/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        133.0,
+        1.773185419e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/manual_example!/Int64/3/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        72.0,
+        1.773103251e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/axpy!_aliased/Int32/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        132.0,
+        1.773103264e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/two_reductions/Int32/2/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        54.0,
+        1.773185412e12
+      ],
+      [
+        55.00000000000001,
+        1.773185415e12
+      ],
+      [
+        49.0,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/two_reductions/Float32/2/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        49.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(auto_manual_example!/Int64/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        252.0,
+        1.773103253e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/axpy!/Int64/4/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        74.0,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/axpy!/Float32/3/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        73.0,
+        1.77302643e12
+      ],
+      [
+        71.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/two_reductions/Float64/2/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        65.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/two_reductions/Float32/4/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        56.99999999999999,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/manual_example!/Float64/2/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        135.0,
+        1.773103247e12
+      ],
+      [
+        136.0,
+        1.773103248e12
+      ],
+      [
+        128.0,
+        1.773103251e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/manual_example!/Float32/3/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        56.00000000000001,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/manual_example!/Float32/3/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        72.0,
+        1.773103254e12
+      ],
+      [
+        78.0,
+        1.773103259e12
+      ],
+      [
+        123.0,
+        1.773185412e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(auto_manual_example!/Int32/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        600.0,
+        1.773103253e12
+      ],
+      [
+        139.0,
+        1.77310326e12
+      ],
+      [
+        80.0,
+        1.773103267e12
+      ],
+      [
+        76.0,
+        1.773185411e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/auto_axpy!/Float64/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        186.0,
+        1.773103247e12
+      ],
+      [
+        126.0,
+        1.773185399e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/axpy!/Int32/4/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        70.0,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/conditional_loop!/Int64/2/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        158.0,
+        1.77302643e12
+      ],
+      [
+        70.0,
+        1.77310325e12
+      ],
+      [
+        71.0,
+        1.773103251e12
+      ],
+      [
+        68.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/two_reductions/Float64/4/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        79.0,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/manual_example!_aliased/Int64/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        124.0,
+        1.773103264e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/auto_axpy!/Float32/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        121.0,
+        1.773103253e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/two_reductions/Int64/3/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        146.0,
+        1.773185412e12
+      ],
+      [
+        150.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/inner/Float32/3/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        43.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(auto_sum_reduce/Int64/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        549.0,
+        1.773103253e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/two_reductions/Float32/3/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        48.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/manual_example!/Float64/2/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        69.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/axpy!/Float64/2/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        69.0,
+        1.77302643e12
+      ],
+      [
+        146.0,
+        1.773103248e12
+      ],
+      [
+        188.0,
+        1.773103261e12
+      ],
+      [
+        124.0,
+        1.773103263e12
+      ],
+      [
+        132.0,
+        1.773185399e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/axpy!/Float64/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        186.0,
+        1.773103247e12
+      ],
+      [
+        127.0,
+        1.773185399e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(auto_sum_reduce/Int32/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        1066.0,
+        1.773103253e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/two_reductions/Int32/4/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        150.0,
+        1.77302643e12
+      ],
+      [
+        50.0,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/manual_example!/Float32/3/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        49.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/inner/Int32/2/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        129.0,
+        1.77302643e12
+      ],
+      [
+        206.99999999999997,
+        1.773103253e12
+      ],
+      [
+        50.0,
+        1.773103254e12
+      ],
+      [
+        129.0,
+        1.773103254e12
+      ],
+      [
+        50.0,
+        1.773103266e12
+      ],
+      [
+        129.0,
+        1.773185397e12
+      ],
+      [
+        206.0,
+        1.773185399e12
+      ],
+      [
+        77.0,
+        1.7731854e12
+      ],
+      [
+        43.0,
+        1.773185402e12
+      ],
+      [
+        197.0,
+        1.773185405e12
+      ],
+      [
+        124.0,
+        1.773185418e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/axpy!/Int32/4/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        122.0,
+        1.773103247e12
+      ],
+      [
+        132.0,
+        1.773103266e12
+      ],
+      [
+        72.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/axpy!/Int64/2/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        69.0,
+        1.773103259e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/local_arrays/Int32/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        131.0,
+        1.773103264e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/two_reductions/Int64/4/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        77.0,
+        1.77302643e12
+      ],
+      [
+        78.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/auto_two_reductions/Int32/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        19.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/manual_example!/Float32/4/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        60.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/inner/Float64/3/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        150.0,
+        1.773185412e12
+      ],
+      [
+        147.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/inner/Float32/2/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        44.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/two_reductions/Float64/2/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        70.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(\\loop_fields!\\/\\Float32\\/\\BaseBenchmarks.SIMDBenchmarks.ImmutableFields\\/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        133.0,
+        1.773185401e12
+      ],
+      [
+        133.0,
+        1.773185419e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(\\auto_two_reductions\\/\\Int32\\/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        127.0,
+        1.77310325e12
+      ],
+      [
+        77.0,
+        1.773185401e12
+      ],
+      [
+        78.0,
+        1.773185419e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/axpy!/Float32/3/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        61.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/sum_reduce/Int64/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        139.0,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/axpy!/Int32/2/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        79.0,
+        1.773103253e12
+      ],
+      [
+        76.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/loop_fields!/Float32/BaseBenchmarks.SIMDBenchmarks.ImmutableFields/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        363.0,
+        1.77310325e12
+      ],
+      [
+        367.0,
+        1.773103251e12
+      ],
+      [
+        171.0,
+        1.773185401e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/inner/Int64/4/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        120.0,
+        1.773185412e12
+      ],
+      [
+        121.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/sum_reduce/Float64/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        136.0,
+        1.773103259e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/inner/Float32/4/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        44.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/manual_example!/Float32/4/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        44.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(auto_conditional_loop!/Int64/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        126.0,
+        1.773103247e12
+      ],
+      [
+        627.0,
+        1.773103253e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/inner/Float64/2/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        69.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(\\loop_fields!\\/\\Int64\\/\\BaseBenchmarks.SIMDBenchmarks.ImmutableFields\\/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        76.0,
+        1.773185401e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(auto_axpy!/Float32/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        120.0,
+        1.773026431e12
+      ],
+      [
+        1110.0,
+        1.773103253e12
+      ],
+      [
+        120.0,
+        1.77310327e12
+      ],
+      [
+        74.0,
+        1.773185407e12
+      ],
+      [
+        121.0,
+        1.773185413e12
+      ],
+      [
+        120.0,
+        1.773185414e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/conditional_loop!/Int64/3/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        75.0,
+        1.773103267e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/auto_conditional_loop!/Int64/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        150.0,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/manual_example!/Int64/4/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        74.0,
+        1.773103247e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/two_reductions/Float32/2/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        131.0,
+        1.773185412e12
+      ],
+      [
+        131.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/axpy!/Float32/3/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        126.0,
+        1.773103254e12
+      ],
+      [
+        67.00000000000001,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(\\loop_fields!\\/\\Int32\\/\\BaseBenchmarks.SIMDBenchmarks.ImmutableFields\\/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        133.0,
+        1.77310325e12
+      ],
+      [
+        75.0,
+        1.773185401e12
+      ],
+      [
+        75.0,
+        1.773185419e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/axpy!/Float32/4/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        76.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/manual_example!/Float32/2/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        50.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/axpy!/Float64/3/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        131.0,
+        1.773185412e12
+      ],
+      [
+        128.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/inner/Int32/4/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        140.0,
+        1.773185412e12
+      ],
+      [
+        139.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/axpy!/Float64/2/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        79.0,
+        1.77302643e12
+      ],
+      [
+        127.0,
+        1.773103248e12
+      ],
+      [
+        161.0,
+        1.773103261e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/axpy!/Int32/4/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        78.0,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/two_reductions/Float64/4/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        66.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(conditional_loop!/Float64/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        74.0,
+        1.773185407e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/manual_partition!/Int32/2/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        130.0,
+        1.773103254e12
+      ],
+      [
+        56.99999999999999,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/conditional_loop!/Int32/4/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        178.0,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/conditional_loop!/Int32/3/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        172.0,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/two_reductions/Int32/4/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        143.0,
+        1.77302643e12
+      ],
+      [
+        80.0,
+        1.773185415e12
+      ],
+      [
+        49.0,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/axpy!/Int32/3/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        79.0,
+        1.77302643e12
+      ],
+      [
+        75.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/conditional_loop!/Int64/3/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        127.0,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/axpy!/Float64/4/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        125.0,
+        1.773103252e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/two_reductions/Float64/2/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        67.00000000000001,
+        1.773185402e12
+      ],
+      [
+        134.00000000000003,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(axpy!/Float32/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        121.0,
+        1.773026431e12
+      ],
+      [
+        127.0,
+        1.773103247e12
+      ],
+      [
+        67.00000000000001,
+        1.773103256e12
+      ],
+      [
+        122.0,
+        1.773185408e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/axpy!/Int32/2/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        72.0,
+        1.773103262e12
+      ],
+      [
+        121.0,
+        1.773185407e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/loop_fields!/Int64/BaseBenchmarks.SIMDBenchmarks.ImmutableFields/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        154.0,
+        1.77310325e12
+      ],
+      [
+        150.0,
+        1.773103251e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/inner/Int64/3/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        121.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/inner/Float64/3/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        66.0,
+        1.77302643e12
+      ],
+      [
+        74.0,
+        1.773103247e12
+      ],
+      [
+        68.0,
+        1.773185402e12
+      ],
+      [
+        131.0,
+        1.773185418e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(\\axpy!\\/\\Float64\\/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        145.0,
+        1.77318541e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/axpy!/Float64/4/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        78.0,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/loop_fields!/Int64/BaseBenchmarks.SIMDBenchmarks.MutableFields/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        154.0,
+        1.77310325e12
+      ],
+      [
+        156.0,
+        1.773103251e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/manual_example!/Int32/3/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        125.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/two_reductions/Float32/2/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        47.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/manual_example!/Float64/4/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        74.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/axpy!/Float32/2/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        79.0,
+        1.773026431e12
+      ],
+      [
+        133.0,
+        1.773103249e12
+      ],
+      [
+        139.0,
+        1.773103253e12
+      ],
+      [
+        79.0,
+        1.773103254e12
+      ],
+      [
+        71.0,
+        1.773103263e12
+      ],
+      [
+        79.0,
+        1.773103266e12
+      ],
+      [
+        56.00000000000001,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/axpy!/Int32/2/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        129.0,
+        1.773185412e12
+      ],
+      [
+        133.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/two_reductions/Int32/2/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        188.0,
+        1.77302643e12
+      ],
+      [
+        59.0,
+        1.773185412e12
+      ],
+      [
+        61.0,
+        1.773185415e12
+      ],
+      [
+        50.0,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/manual_example!/Int64/3/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        129.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/conditional_loop!/Int64/2/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        124.0,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/conditional_loop!/Int64/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        148.0,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/loop_fields!/Float32/BaseBenchmarks.SIMDBenchmarks.MutableFields/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        337.0,
+        1.77310325e12
+      ],
+      [
+        360.0,
+        1.773103251e12
+      ],
+      [
+        178.0,
+        1.773185401e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/manual_example!_aliased/Int32/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        124.0,
+        1.773103264e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/axpy!/Int32/4/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        126.0,
+        1.773026431e12
+      ],
+      [
+        127.0,
+        1.773103253e12
+      ],
+      [
+        121.0,
+        1.773103264e12
+      ],
+      [
+        61.0,
+        1.773185402e12
+      ],
+      [
+        127.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/axpy!/Int64/3/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        120.0,
+        1.773185412e12
+      ],
+      [
+        125.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/conditional_loop!/Int64/4/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        121.0,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/conditional_loop!/Int32/3/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        61.0,
+        1.77302643e12
+      ],
+      [
+        125.0,
+        1.773103246e12
+      ],
+      [
+        77.0,
+        1.773103254e12
+      ],
+      [
+        125.0,
+        1.773103264e12
+      ],
+      [
+        76.0,
+        1.773103267e12
+      ],
+      [
+        170.0,
+        1.773185403e12
+      ],
+      [
+        76.0,
+        1.773185406e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/manual_example!/Int32/4/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        70.0,
+        1.77302643e12
+      ],
+      [
+        77.0,
+        1.773103247e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/conditional_loop!/Int32/3/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        260.0,
+        1.77302643e12
+      ],
+      [
+        122.0,
+        1.773185399e12
+      ],
+      [
+        128.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/axpy!/Float32/3/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        77.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(\\loop_fields!\\/\\Float64\\/\\BaseBenchmarks.SIMDBenchmarks.MutableFields\\/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        75.0,
+        1.77310325e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(two_reductions/Int32/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        68.0,
+        1.773103253e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/manual_partition!/Int32/2/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        57.99999999999999,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(manual_example!/Int32/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        140.0,
+        1.77310326e12
+      ],
+      [
+        79.0,
+        1.773103267e12
+      ],
+      [
+        76.0,
+        1.773185411e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/axpy!/Int32/2/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        56.00000000000001,
+        1.773103259e12
+      ],
+      [
+        74.0,
+        1.773103262e12
+      ],
+      [
+        130.0,
+        1.773185412e12
+      ],
+      [
+        134.00000000000003,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/two_reductions/Float32/4/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        47.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/auto_local_arrays/Float32/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        128.0,
+        1.773103264e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/axpy!/Float64/3/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        56.99999999999999,
+        1.773185402e12
+      ],
+      [
+        123.0,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(\\manual_example!\\/\\Float64\\/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        130.0,
+        1.77318541e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(manual_example!/Float64/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        143.0,
+        1.77302643e12
+      ],
+      [
+        70.0,
+        1.773026433e12
+      ],
+      [
+        120.0,
+        1.773103256e12
+      ],
+      [
+        126.0,
+        1.773185408e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/inner/Int32/3/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        74.0,
+        1.773103253e12
+      ],
+      [
+        180.0,
+        1.773103254e12
+      ],
+      [
+        130.0,
+        1.773103254e12
+      ],
+      [
+        137.0,
+        1.773103266e12
+      ],
+      [
+        42.0,
+        1.773185402e12
+      ],
+      [
+        72.0,
+        1.773185405e12
+      ],
+      [
+        144.0,
+        1.773185412e12
+      ],
+      [
+        139.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/two_reductions_aliased/Float32/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        120.0,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/manual_example!/Float64/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        125.0,
+        1.773103263e12
+      ],
+      [
+        131.0,
+        1.773103266e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(loop_fields!/Float64/BaseBenchmarks.SIMDBenchmarks.MutableFields/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        76.0,
+        1.773103253e12
+      ],
+      [
+        132.0,
+        1.773103267e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/inner/Float64/3/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        78.0,
+        1.77302643e12
+      ],
+      [
+        74.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/inner/Int32/2/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        72.0,
+        1.773185402e12
+      ],
+      [
+        149.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/inner/Int32/2/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        121.0,
+        1.773185412e12
+      ],
+      [
+        123.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(two_reductions/Int32/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        68.0,
+        1.773103253e12
+      ],
+      [
+        120.0,
+        1.773103253e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(\\loop_fields!\\/\\Int32\\/\\BaseBenchmarks.SIMDBenchmarks.ImmutableFields\\/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        133.0,
+        1.77310325e12
+      ],
+      [
+        75.0,
+        1.773185401e12
+      ],
+      [
+        75.0,
+        1.773185419e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/auto_axpy!/Int32/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        78.0,
+        1.773103249e12
+      ],
+      [
+        157.0,
+        1.773103263e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/inner/Float32/4/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        50.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/manual_example!/Float64/3/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        127.0,
+        1.773103261e12
+      ],
+      [
+        69.0,
+        1.773185402e12
+      ],
+      [
+        135.0,
+        1.773185412e12
+      ],
+      [
+        123.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/two_reductions/Float32/4/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        42.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/local_arrays/Int32/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        131.0,
+        1.773103264e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/axpy!/Float64/3/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        153.0,
+        1.773185412e12
+      ],
+      [
+        151.0,
+        1.773185415e12
+      ],
+      [
+        76.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/conditional_loop!/Int64/3/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        176.0,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/local_arrays/Float32/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        128.0,
+        1.773103264e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/axpy!/Float32/2/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        121.0,
+        1.773103253e12
+      ],
+      [
+        73.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(local_arrays/Float32/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        78.0,
+        1.773103247e12
+      ],
+      [
+        128.0,
+        1.773103253e12
+      ],
+      [
+        78.0,
+        1.773103267e12
+      ],
+      [
+        127.0,
+        1.773103267e12
+      ],
+      [
+        78.0,
+        1.773103268e12
+      ],
+      [
+        78.0,
+        1.773185408e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/two_reductions/Float64/3/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        65.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/manual_example!/Int32/3/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        80.0,
+        1.773103254e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/auto_sum_reduce/Int64/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        138.0,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(conditional_loop!/Int64/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        121.0,
+        1.773103247e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/axpy!/Float32/2/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        63.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/two_reductions/Int32/3/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        204.0,
+        1.77302643e12
+      ],
+      [
+        65.0,
+        1.773185412e12
+      ],
+      [
+        62.0,
+        1.773185415e12
+      ],
+      [
+        49.0,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/loop_fields!/Float64/BaseBenchmarks.SIMDBenchmarks.MutableFields/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        254.0,
+        1.77310325e12
+      ],
+      [
+        249.00000000000003,
+        1.773103251e12
+      ],
+      [
+        135.0,
+        1.773185401e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/axpy!/Int32/4/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        79.0,
+        1.773103253e12
+      ],
+      [
+        127.0,
+        1.773103254e12
+      ],
+      [
+        126.0,
+        1.773103263e12
+      ],
+      [
+        121.0,
+        1.773103266e12
+      ],
+      [
+        144.0,
+        1.773185399e12
+      ],
+      [
+        78.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/inner/Float64/3/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        68.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/manual_example!_aliased/Int64/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        124.0,
+        1.773103264e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/inner/Int32/4/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        77.0,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/inner_aliased/Float32/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        142.0,
+        1.77302643e12
+      ],
+      [
+        123.0,
+        1.773185405e12
+      ],
+      [
+        76.0,
+        1.773185416e12
+      ],
+      [
+        131.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/two_reductions/Int32/2/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        75.0,
+        1.773185412e12
+      ],
+      [
+        73.0,
+        1.773185415e12
+      ],
+      [
+        52.0,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/manual_example!/Int32/2/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        125.0,
+        1.773103264e12
+      ],
+      [
+        76.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/axpy!/Int64/3/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        125.0,
+        1.773185419e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/axpy!/Float32/4/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        75.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(\\auto_axpy!\\/\\Float32\\/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        122.0,
+        1.773185401e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/inner/Int32/4/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        137.0,
+        1.773026431e12
+      ],
+      [
+        137.0,
+        1.773103263e12
+      ],
+      [
+        44.0,
+        1.773185402e12
+      ],
+      [
+        137.0,
+        1.773185405e12
+      ],
+      [
+        122.0,
+        1.773185418e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(axpy!/Float64/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        166.0,
+        1.77302643e12
+      ],
+      [
+        126.0,
+        1.773185408e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/two_reductions/Int32/2/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        56.00000000000001,
+        1.773185412e12
+      ],
+      [
+        61.0,
+        1.773185415e12
+      ],
+      [
+        50.0,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(auto_axpy!/Float64/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        336.0,
+        1.773103253e12
+      ],
+      [
+        79.0,
+        1.773185414e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/two_reductions/Int32/2/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        139.0,
+        1.77302643e12
+      ],
+      [
+        55.00000000000001,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/two_reductions/Float32/2/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        43.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/two_reductions/Int64/2/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        127.0,
+        1.773185412e12
+      ],
+      [
+        125.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/axpy!/Int64/4/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        78.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/conditional_loop!/Int64/2/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        128.0,
+        1.77302643e12
+      ],
+      [
+        77.0,
+        1.773103259e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/axpy!/Int64/2/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        121.0,
+        1.773185412e12
+      ],
+      [
+        122.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(auto_sum_reduce/Int32/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        1069.9999999999998,
+        1.773103253e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/manual_example!/Float32/2/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        46.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/axpy!/Float32/4/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        78.0,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/axpy!/Float32/4/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        56.99999999999999,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/conditional_loop!/Int32/3/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        68.0,
+        1.77302643e12
+      ],
+      [
+        127.0,
+        1.773103251e12
+      ],
+      [
+        77.0,
+        1.773103267e12
+      ],
+      [
+        70.0,
+        1.773185406e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/manual_example!/Float64/2/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        78.0,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(loop_fields!/Float64/BaseBenchmarks.SIMDBenchmarks.ImmutableFields/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        76.0,
+        1.773103253e12
+      ],
+      [
+        132.0,
+        1.773103267e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/manual_example!/Float64/4/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        70.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/axpy!/Float64/4/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        128.0,
+        1.77302643e12
+      ],
+      [
+        61.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(auto_two_reductions/Int64/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        256.0,
+        1.773103253e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/axpy!/Float32/2/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        120.0,
+        1.773185412e12
+      ],
+      [
+        149.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/manual_example!/Int32/4/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        79.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/inner/Int32/2/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        128.0,
+        1.773103253e12
+      ],
+      [
+        128.0,
+        1.773103254e12
+      ],
+      [
+        128.0,
+        1.773103263e12
+      ],
+      [
+        127.0,
+        1.773103266e12
+      ],
+      [
+        129.0,
+        1.773185399e12
+      ],
+      [
+        62.0,
+        1.773185402e12
+      ],
+      [
+        136.0,
+        1.773185404e12
+      ],
+      [
+        121.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/axpy!/Float32/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        122.0,
+        1.773103253e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/manual_example!/Float64/2/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        145.0,
+        1.773185399e12
+      ],
+      [
+        78.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/axpy!/Int64/2/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        61.0,
+        1.773103251e12
+      ],
+      [
+        68.0,
+        1.773103264e12
+      ],
+      [
+        130.0,
+        1.773185412e12
+      ],
+      [
+        127.0,
+        1.773185415e12
+      ],
+      [
+        139.0,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/conditional_loop!_aliased/Int64/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        142.0,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(\\auto_axpy!\\/\\Float64\\/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        144.0,
+        1.77318541e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/auto_sum_reduce/Int32/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        139.0,
+        1.77302643e12
+      ],
+      [
+        77.0,
+        1.773185404e12
+      ],
+      [
+        71.0,
+        1.77318542e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/conditional_loop!/Int32/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        71.0,
+        1.77302643e12
+      ],
+      [
+        121.0,
+        1.773185397e12
+      ],
+      [
+        77.0,
+        1.773185418e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/axpy!/Int32/3/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        70.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(loop_fields!/Float32/BaseBenchmarks.SIMDBenchmarks.ImmutableFields/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        75.0,
+        1.773103253e12
+      ],
+      [
+        133.0,
+        1.773103268e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/inner/Float64/2/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        69.0,
+        1.773185402e12
+      ],
+      [
+        122.0,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(\\two_reductions\\/\\Int32\\/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        133.0,
+        1.773185419e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/manual_example!/Float32/3/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        44.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(loop_fields!/Int64/BaseBenchmarks.SIMDBenchmarks.MutableFields/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        125.0,
+        1.773103253e12
+      ],
+      [
+        125.0,
+        1.773103267e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/conditional_loop!/Int32/2/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        48.0,
+        1.77302643e12
+      ],
+      [
+        127.0,
+        1.773103246e12
+      ],
+      [
+        125.0,
+        1.773103247e12
+      ],
+      [
+        80.0,
+        1.773103249e12
+      ],
+      [
+        75.0,
+        1.773103251e12
+      ],
+      [
+        151.0,
+        1.773103252e12
+      ],
+      [
+        180.0,
+        1.773103254e12
+      ],
+      [
+        150.0,
+        1.773103259e12
+      ],
+      [
+        122.0,
+        1.773103262e12
+      ],
+      [
+        126.0,
+        1.773103263e12
+      ],
+      [
+        80.0,
+        1.773103265e12
+      ],
+      [
+        76.0,
+        1.773185397e12
+      ],
+      [
+        78.0,
+        1.7731854e12
+      ],
+      [
+        66.0,
+        1.773185403e12
+      ],
+      [
+        126.0,
+        1.773185407e12
+      ],
+      [
+        80.0,
+        1.773185412e12
+      ],
+      [
+        151.0,
+        1.773185415e12
+      ],
+      [
+        128.0,
+        1.773185416e12
+      ],
+      [
+        126.0,
+        1.773185416e12
+      ],
+      [
+        80.0,
+        1.773185416e12
+      ],
+      [
+        53.0,
+        1.77318542e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/axpy!/Float64/4/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        124.0,
+        1.773103252e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/auto_conditional_loop!/Int32/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        67.00000000000001,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/inner/Float64/4/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        70.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(auto_conditional_loop!/Int32/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        1394.0,
+        1.773103253e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/axpy!/Int64/4/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        66.0,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/conditional_loop!/Int64/4/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        163.0,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/conditional_loop!_aliased/Int32/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        74.0,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(\\loop_fields!\\/\\Int32\\/\\BaseBenchmarks.SIMDBenchmarks.MutableFields\\/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        133.0,
+        1.77310325e12
+      ],
+      [
+        75.0,
+        1.773185401e12
+      ],
+      [
+        75.0,
+        1.773185419e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/two_reductions/Float32/3/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        52.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/manual_example!/Float32/2/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        73.0,
+        1.77310325e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/axpy!/Int32/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        77.0,
+        1.773103249e12
+      ],
+      [
+        157.0,
+        1.773103263e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/inner_aliased/Float32/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        136.0,
+        1.77302643e12
+      ],
+      [
+        121.0,
+        1.773185405e12
+      ],
+      [
+        78.0,
+        1.773185416e12
+      ],
+      [
+        124.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/conditional_loop!/Int64/2/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        121.0,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(auto_conditional_loop!/Int64/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        120.0,
+        1.773103247e12
+      ],
+      [
+        628.0,
+        1.773103253e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(auto_conditional_loop!/Float32/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        1376.0,
+        1.773103253e12
+      ],
+      [
+        71.0,
+        1.773185407e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/manual_partition!/Float32/2/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        56.99999999999999,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/conditional_loop!/Int32/2/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        59.0,
+        1.77302643e12
+      ],
+      [
+        138.0,
+        1.773103254e12
+      ],
+      [
+        59.0,
+        1.773103263e12
+      ],
+      [
+        71.0,
+        1.773185406e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/two_reductions/Float64/3/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        69.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(loop_fields!/Float32/BaseBenchmarks.SIMDBenchmarks.MutableFields/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        75.0,
+        1.773103253e12
+      ],
+      [
+        133.0,
+        1.773103268e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/manual_example!/Int64/4/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        79.0,
+        1.77302643e12
+      ],
+      [
+        77.0,
+        1.773103247e12
+      ],
+      [
+        78.0,
+        1.773103254e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(auto_axpy!/Float32/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        121.0,
+        1.773026431e12
+      ],
+      [
+        127.0,
+        1.773103247e12
+      ],
+      [
+        972.0000000000001,
+        1.773103253e12
+      ],
+      [
+        67.00000000000001,
+        1.773103256e12
+      ],
+      [
+        80.0,
+        1.773103264e12
+      ],
+      [
+        122.0,
+        1.773185408e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/axpy!/Int64/4/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        123.0,
+        1.773103263e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/two_reductions/Float64/3/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        123.0,
+        1.773103254e12
+      ],
+      [
+        79.0,
+        1.773185418e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/axpy!/Int64/3/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        131.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/inner/Float64/2/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        74.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/two_reductions/Int64/4/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        78.0,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/two_reductions/Int32/3/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        122.0,
+        1.773185405e12
+      ],
+      [
+        54.0,
+        1.773185412e12
+      ],
+      [
+        54.0,
+        1.773185415e12
+      ],
+      [
+        47.0,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/manual_example!/Float32/4/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        50.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/auto_two_reductions/Int32/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        19.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/inner/Int32/3/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        154.0,
+        1.773185412e12
+      ],
+      [
+        154.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/auto_sum_reduce/Int64/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        135.0,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/two_reductions/Int64/3/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        135.0,
+        1.773185412e12
+      ],
+      [
+        137.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/manual_example!/Float64/4/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        59.0,
+        1.773103247e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(auto_two_reductions/Int32/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        132.0,
+        1.773103253e12
+      ],
+      [
+        132.0,
+        1.773185407e12
+      ],
+      [
+        71.0,
+        1.773185408e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/sum_reduce/Int64/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        134.00000000000003,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/two_reductions/Float64/4/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        72.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/axpy!/Int32/3/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        74.0,
+        1.773103251e12
+      ],
+      [
+        148.0,
+        1.773185412e12
+      ],
+      [
+        149.0,
+        1.773185415e12
+      ],
+      [
+        74.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/auto_manual_example!/Int32/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        78.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/manual_example!/Int32/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        78.0,
+        1.773026431e12
+      ],
+      [
+        77.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/axpy!/Float32/2/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        123.0,
+        1.773185412e12
+      ],
+      [
+        135.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/two_reductions/Int32/4/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        75.0,
+        1.773185412e12
+      ],
+      [
+        76.0,
+        1.773185415e12
+      ],
+      [
+        42.0,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/manual_example!/Float32/3/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        127.0,
+        1.773185412e12
+      ],
+      [
+        128.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/manual_example!/Int32/3/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        68.0,
+        1.773185402e12
+      ],
+      [
+        139.0,
+        1.773185412e12
+      ],
+      [
+        139.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/two_reductions/Int64/3/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        128.0,
+        1.773185412e12
+      ],
+      [
+        127.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/axpy!/Int32/4/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        75.0,
+        1.77302643e12
+      ],
+      [
+        121.0,
+        1.773103264e12
+      ],
+      [
+        70.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/inner/Float64/4/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        128.0,
+        1.773103247e12
+      ],
+      [
+        73.0,
+        1.773103254e12
+      ],
+      [
+        79.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/conditional_loop!/Int32/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        74.0,
+        1.77302643e12
+      ],
+      [
+        74.0,
+        1.7731854e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/inner/Int64/3/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        130.0,
+        1.773185412e12
+      ],
+      [
+        130.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(\\auto_two_reductions\\/\\Int32\\/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        77.0,
+        1.77310325e12
+      ],
+      [
+        127.0,
+        1.773185401e12
+      ],
+      [
+        127.0,
+        1.773185419e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/conditional_loop!/Float32/4/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        72.0,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/conditional_loop!/Int32/3/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        138.0,
+        1.77302643e12
+      ],
+      [
+        120.0,
+        1.773185399e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/loop_fields!/Int32/BaseBenchmarks.SIMDBenchmarks.ImmutableFields/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        356.0,
+        1.77310325e12
+      ],
+      [
+        346.0,
+        1.773103251e12
+      ],
+      [
+        152.0,
+        1.773185401e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/manual_example!/Float64/2/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        136.0,
+        1.773103265e12
+      ],
+      [
+        127.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/axpy!/Float64/4/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        71.0,
+        1.77302643e12
+      ],
+      [
+        79.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/conditional_loop!/Int32/4/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        46.0,
+        1.77302643e12
+      ],
+      [
+        56.00000000000001,
+        1.773103249e12
+      ],
+      [
+        173.0,
+        1.773103254e12
+      ],
+      [
+        175.0,
+        1.773185406e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/axpy!/Int32/3/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        75.0,
+        1.773103259e12
+      ],
+      [
+        164.0,
+        1.773185412e12
+      ],
+      [
+        161.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/manual_example!/Int32/4/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        139.0,
+        1.773103254e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(conditional_loop!/Float32/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        71.0,
+        1.773185407e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(\\loop_fields!\\/\\Int64\\/\\BaseBenchmarks.SIMDBenchmarks.MutableFields\\/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        76.0,
+        1.773185401e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/conditional_loop!/Int32/4/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        235.0,
+        1.77302643e12
+      ],
+      [
+        121.0,
+        1.773103254e12
+      ],
+      [
+        126.0,
+        1.773103266e12
+      ],
+      [
+        122.0,
+        1.773185405e12
+      ],
+      [
+        78.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/two_reductions/Int32/4/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        192.0,
+        1.77302643e12
+      ],
+      [
+        61.0,
+        1.773185412e12
+      ],
+      [
+        59.0,
+        1.773185415e12
+      ],
+      [
+        48.0,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/manual_example!/Int32/3/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        70.0,
+        1.773185402e12
+      ],
+      [
+        128.0,
+        1.773185412e12
+      ],
+      [
+        131.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(loop_fields!/Int32/BaseBenchmarks.SIMDBenchmarks.MutableFields/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        75.0,
+        1.773103253e12
+      ],
+      [
+        75.0,
+        1.773103253e12
+      ],
+      [
+        75.0,
+        1.773103267e12
+      ],
+      [
+        75.0,
+        1.773185407e12
+      ],
+      [
+        133.0,
+        1.773185408e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/conditional_loop!/Int32/2/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        140.0,
+        1.77302643e12
+      ],
+      [
+        72.0,
+        1.77310325e12
+      ],
+      [
+        69.0,
+        1.773103251e12
+      ],
+      [
+        65.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(two_reductions_aliased/Int32/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        68.0,
+        1.773103253e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/axpy!_aliased/Float64/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        122.0,
+        1.773103264e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(conditional_loop!_aliased/Int64/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        121.0,
+        1.773103247e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/loop_fields!/Float64/BaseBenchmarks.SIMDBenchmarks.MutableFields/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        247.00000000000003,
+        1.77310325e12
+      ],
+      [
+        247.00000000000003,
+        1.773103251e12
+      ],
+      [
+        141.0,
+        1.773185401e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/manual_partition!/Float32/3/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        46.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/manual_partition!/Float64/4/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        79.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/inner/Float32/2/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        44.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/two_reductions/Float64/2/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        120.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/two_reductions/Int32/2/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        75.0,
+        1.773185412e12
+      ],
+      [
+        75.0,
+        1.773185415e12
+      ],
+      [
+        48.0,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/inner/Int32/4/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        79.0,
+        1.77302643e12
+      ],
+      [
+        154.0,
+        1.773103254e12
+      ],
+      [
+        155.0,
+        1.773103266e12
+      ],
+      [
+        129.0,
+        1.773185397e12
+      ],
+      [
+        154.0,
+        1.773185405e12
+      ],
+      [
+        137.0,
+        1.773185407e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/conditional_loop!/Int64/4/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        69.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/inner/Float32/3/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        73.0,
+        1.77302643e12
+      ],
+      [
+        44.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/inner/Float32/2/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        49.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/manual_example!/Int32/3/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        63.0,
+        1.773103261e12
+      ],
+      [
+        137.0,
+        1.773185412e12
+      ],
+      [
+        136.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/axpy!/Float32/2/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        73.0,
+        1.773026431e12
+      ],
+      [
+        71.0,
+        1.773185402e12
+      ],
+      [
+        138.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/manual_partition!/Float32/2/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        45.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(\\loop_fields!\\/\\Float64\\/\\BaseBenchmarks.SIMDBenchmarks.ImmutableFields\\/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        75.0,
+        1.77310325e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/axpy!/Int32/2/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        73.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(auto_axpy!/Int32/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        905.0000000000001,
+        1.773103253e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/two_reductions/Float32/2/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        44.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(\\two_reductions_aliased\\/\\Int32\\/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        133.0,
+        1.773185419e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(loop_fields!/Int64/BaseBenchmarks.SIMDBenchmarks.ImmutableFields/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        124.0,
+        1.773103253e12
+      ],
+      [
+        125.0,
+        1.773103267e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/axpy!/Int32/3/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        125.0,
+        1.773103264e12
+      ],
+      [
+        127.0,
+        1.773185402e12
+      ],
+      [
+        59.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(auto_sum_reduce/Int64/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        549.0,
+        1.773103253e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/manual_example!/Int64/3/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        120.0,
+        1.773185412e12
+      ],
+      [
+        122.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(\\loop_fields!\\/\\Float64\\/\\BaseBenchmarks.SIMDBenchmarks.MutableFields\\/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        75.0,
+        1.77310325e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/inner/Int64/3/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        125.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/two_reductions/Int32/3/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        145.0,
+        1.77302643e12
+      ],
+      [
+        52.0,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/inner/Int64/3/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        77.0,
+        1.773103247e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/manual_example!/Float64/3/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        76.0,
+        1.773103264e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/two_reductions/Int64/3/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        146.0,
+        1.773185412e12
+      ],
+      [
+        156.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(loop_fields!/Float32/BaseBenchmarks.SIMDBenchmarks.ImmutableFields/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        75.0,
+        1.773103253e12
+      ],
+      [
+        133.0,
+        1.773103268e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(auto_conditional_loop!/Float64/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        722.0,
+        1.773103253e12
+      ],
+      [
+        73.0,
+        1.773185407e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/two_reductions/Int32/4/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        59.0,
+        1.773185412e12
+      ],
+      [
+        57.99999999999999,
+        1.773185415e12
+      ],
+      [
+        42.0,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/two_reductions/Float32/3/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        43.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(conditional_loop!/Float32/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        74.0,
+        1.773185407e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/axpy!_aliased/Int64/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        127.0,
+        1.773103264e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/two_reductions/Int32/4/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        190.0,
+        1.77302643e12
+      ],
+      [
+        61.0,
+        1.773185412e12
+      ],
+      [
+        61.0,
+        1.773185415e12
+      ],
+      [
+        48.0,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(auto_manual_example!/Int64/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        289.0,
+        1.773103253e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/conditional_loop!/Int32/4/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        56.00000000000001,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/manual_example!/Float32/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        76.0,
+        1.773103254e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/axpy!/Float32/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        122.0,
+        1.773103253e12
+      ],
+      [
+        79.0,
+        1.773103263e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/two_reductions/Float32/3/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        43.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/manual_partition!/Float64/2/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        78.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/two_reductions_aliased/Int32/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        79.0,
+        1.773185412e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/conditional_loop!/Int64/3/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        124.0,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/manual_partition!/Int32/4/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        138.0,
+        1.77310325e12
+      ],
+      [
+        77.0,
+        1.773103254e12
+      ],
+      [
+        72.0,
+        1.773103256e12
+      ],
+      [
+        124.0,
+        1.773103259e12
+      ],
+      [
+        64.0,
+        1.773185402e12
+      ],
+      [
+        71.0,
+        1.773185406e12
+      ],
+      [
+        74.0,
+        1.773185418e12
+      ],
+      [
+        135.0,
+        1.773185419e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/two_reductions/Int32/3/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        121.0,
+        1.773185405e12
+      ],
+      [
+        56.00000000000001,
+        1.773185412e12
+      ],
+      [
+        56.99999999999999,
+        1.773185415e12
+      ],
+      [
+        48.0,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/manual_example!/Float32/2/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        44.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/axpy!/Float64/2/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        122.0,
+        1.773103264e12
+      ],
+      [
+        121.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(\\auto_axpy!\\/\\Float64\\/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        125.0,
+        1.77318541e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/manual_example!/Float64/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        128.0,
+        1.773103254e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(loop_fields!/Float32/BaseBenchmarks.SIMDBenchmarks.MutableFields/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        75.0,
+        1.773103253e12
+      ],
+      [
+        133.0,
+        1.773103268e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/inner/Float64/4/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        133.0,
+        1.773185412e12
+      ],
+      [
+        132.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/manual_example!/Int32/2/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        76.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(loop_fields!/Int64/BaseBenchmarks.SIMDBenchmarks.ImmutableFields/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        125.0,
+        1.773103253e12
+      ],
+      [
+        125.0,
+        1.773103267e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/auto_local_arrays/Int32/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        137.0,
+        1.773103264e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(auto_conditional_loop!/Int32/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        1499.0,
+        1.773103253e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/manual_example!/Int32/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        78.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(auto_axpy!/Float64/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        166.0,
+        1.77302643e12
+      ],
+      [
+        336.0,
+        1.773103253e12
+      ],
+      [
+        126.0,
+        1.773185408e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/loop_fields!/Int64/BaseBenchmarks.SIMDBenchmarks.MutableFields/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        153.0,
+        1.77310325e12
+      ],
+      [
+        154.0,
+        1.773103251e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(\\loop_fields!\\/\\Float32\\/\\BaseBenchmarks.SIMDBenchmarks.MutableFields\\/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        133.0,
+        1.773185401e12
+      ],
+      [
+        133.0,
+        1.773185419e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/conditional_loop!/Int32/4/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        51.0,
+        1.77302643e12
+      ],
+      [
+        63.0,
+        1.773103252e12
+      ],
+      [
+        151.0,
+        1.773103259e12
+      ],
+      [
+        67.00000000000001,
+        1.773103264e12
+      ],
+      [
+        155.0,
+        1.773185403e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/axpy!/Int64/3/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        75.0,
+        1.773103263e12
+      ],
+      [
+        131.0,
+        1.773185412e12
+      ],
+      [
+        124.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/inner/Int32/4/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        78.0,
+        1.77302643e12
+      ],
+      [
+        145.0,
+        1.773185412e12
+      ],
+      [
+        146.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/inner/Float32/2/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        50.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(auto_local_arrays/Float32/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        79.0,
+        1.773103247e12
+      ],
+      [
+        128.0,
+        1.773103253e12
+      ],
+      [
+        79.0,
+        1.773103267e12
+      ],
+      [
+        127.0,
+        1.773103267e12
+      ],
+      [
+        78.0,
+        1.773103268e12
+      ],
+      [
+        79.0,
+        1.773185408e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/axpy!/Float32/4/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        65.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/conditional_loop!/Int32/2/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        182.0,
+        1.77302643e12
+      ],
+      [
+        122.0,
+        1.7731854e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/two_reductions/Float64/2/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        122.0,
+        1.773185412e12
+      ],
+      [
+        121.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/conditional_loop!/Int32/2/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        175.0,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/conditional_loop!/Int32/4/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        68.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/inner/Float64/2/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        76.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/manual_example!/Int64/3/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        66.0,
+        1.773103251e12
+      ],
+      [
+        126.0,
+        1.773185412e12
+      ],
+      [
+        123.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/inner/Float64/4/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        69.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/inner/Float32/4/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        71.0,
+        1.77302643e12
+      ],
+      [
+        44.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/axpy!/Float32/4/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        48.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/manual_example!/Float64/3/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        127.0,
+        1.77302643e12
+      ],
+      [
+        140.0,
+        1.773185412e12
+      ],
+      [
+        132.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(\\loop_fields!\\/\\Int64\\/\\BaseBenchmarks.SIMDBenchmarks.ImmutableFields\\/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        76.0,
+        1.773185401e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/conditional_loop!/Int64/2/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        176.0,
+        1.77302643e12
+      ],
+      [
+        76.0,
+        1.773103259e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/two_reductions/Float64/2/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        78.0,
+        1.773103256e12
+      ],
+      [
+        78.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/conditional_loop!/Int64/3/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        123.0,
+        1.77302643e12
+      ],
+      [
+        124.0,
+        1.773103251e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/manual_partition!/Float32/4/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        60.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/two_reductions/Int64/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        123.0,
+        1.77310325e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/axpy!/Int64/2/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        121.0,
+        1.773103251e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/manual_example!/Float64/2/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        129.0,
+        1.773103247e12
+      ],
+      [
+        143.0,
+        1.773103248e12
+      ],
+      [
+        134.00000000000003,
+        1.773103251e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/conditional_loop!/Int32/3/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        123.0,
+        1.77302643e12
+      ],
+      [
+        79.0,
+        1.773103254e12
+      ],
+      [
+        78.0,
+        1.773103263e12
+      ],
+      [
+        127.0,
+        1.773185399e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(auto_two_reductions/Int64/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        256.0,
+        1.773103253e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/two_reductions/Int32/3/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        120.0,
+        1.773185405e12
+      ],
+      [
+        75.0,
+        1.773185412e12
+      ],
+      [
+        75.0,
+        1.773185415e12
+      ],
+      [
+        50.0,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/auto_local_arrays/Int32/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        137.0,
+        1.773103264e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/manual_example!/Float32/2/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        52.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/inner/Int32/3/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        163.0,
+        1.773185412e12
+      ],
+      [
+        162.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/conditional_loop!/Int64/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        146.0,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/inner/Int32/2/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        154.0,
+        1.773103253e12
+      ],
+      [
+        66.0,
+        1.773103254e12
+      ],
+      [
+        65.0,
+        1.773103266e12
+      ],
+      [
+        153.0,
+        1.773185399e12
+      ],
+      [
+        59.0,
+        1.773185402e12
+      ],
+      [
+        153.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/conditional_loop!_aliased/Int32/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        69.0,
+        1.77302643e12
+      ],
+      [
+        136.0,
+        1.773185397e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/inner/Int32/3/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        122.0,
+        1.773185402e12
+      ],
+      [
+        60.0,
+        1.773185402e12
+      ],
+      [
+        134.00000000000003,
+        1.773185412e12
+      ],
+      [
+        134.00000000000003,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/axpy!/Float64/3/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        75.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/axpy!/Int32/2/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        71.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/axpy!/Float32/3/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        163.0,
+        1.773185412e12
+      ],
+      [
+        173.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(auto_inner/Int64/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        314.0,
+        1.773103253e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/manual_example!/Float64/2/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        126.0,
+        1.773103265e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/axpy!/Float32/3/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        51.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/axpy!_aliased/Float32/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        123.0,
+        1.773103264e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/inner/Float64/2/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        122.0,
+        1.773185412e12
+      ],
+      [
+        121.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/sum_reduce/Float32/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        129.0,
+        1.773185416e12
+      ],
+      [
+        79.0,
+        1.77318542e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/manual_partition!/Int32/4/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        72.0,
+        1.773185402e12
+      ],
+      [
+        122.0,
+        1.773185403e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/axpy!/Float64/3/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        123.0,
+        1.773185412e12
+      ],
+      [
+        124.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/manual_example!/Float32/4/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        78.0,
+        1.77302643e12
+      ],
+      [
+        75.0,
+        1.773103261e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/inner/Float64/3/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        72.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/manual_example!/Float32/3/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        66.0,
+        1.773103254e12
+      ],
+      [
+        77.0,
+        1.773103259e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/two_reductions/Float32/3/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        142.0,
+        1.773185412e12
+      ],
+      [
+        143.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/two_reductions/Int64/2/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        122.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/auto_sum_reduce/Int32/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        122.0,
+        1.77302643e12
+      ],
+      [
+        67.00000000000001,
+        1.773185404e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/two_reductions/Float64/4/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        123.0,
+        1.77302643e12
+      ],
+      [
+        79.0,
+        1.773185418e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/two_reductions/Float64/3/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        68.0,
+        1.77302643e12
+      ],
+      [
+        79.0,
+        1.773103247e12
+      ],
+      [
+        77.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(conditional_loop!/Float64/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        74.0,
+        1.773185407e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/manual_partition!/Int32/3/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        70.0,
+        1.773185402e12
+      ],
+      [
+        130.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(two_reductions_aliased/Int32/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        68.0,
+        1.773103253e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/manual_example!/Float64/2/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        78.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(auto_inner/Int32/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        891.0,
+        1.773103253e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/axpy!_aliased/Int32/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        131.0,
+        1.773103264e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/two_reductions/Float64/3/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        130.0,
+        1.773185412e12
+      ],
+      [
+        128.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/manual_example!/Int32/4/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        57.99999999999999,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(local_arrays/Float32/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        78.0,
+        1.773103247e12
+      ],
+      [
+        128.0,
+        1.773103253e12
+      ],
+      [
+        78.0,
+        1.773103267e12
+      ],
+      [
+        127.0,
+        1.773103267e12
+      ],
+      [
+        78.0,
+        1.773103268e12
+      ],
+      [
+        79.0,
+        1.773185408e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/loop_fields!/Float32/BaseBenchmarks.SIMDBenchmarks.ImmutableFields/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        363.0,
+        1.77310325e12
+      ],
+      [
+        374.0,
+        1.773103251e12
+      ],
+      [
+        170.0,
+        1.773185401e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/two_reductions/Float32/3/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        141.0,
+        1.773185412e12
+      ],
+      [
+        147.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/inner/Float64/4/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        68.0,
+        1.77302643e12
+      ],
+      [
+        130.0,
+        1.773103247e12
+      ],
+      [
+        71.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/manual_example!/Int64/4/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        77.0,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(auto_inner/Int64/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        327.0,
+        1.773103253e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/two_reductions/Float32/4/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        48.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/conditional_loop!/Int32/4/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        63.0,
+        1.77302643e12
+      ],
+      [
+        135.0,
+        1.773103254e12
+      ],
+      [
+        127.0,
+        1.773103259e12
+      ],
+      [
+        78.0,
+        1.773103263e12
+      ],
+      [
+        130.0,
+        1.773185405e12
+      ],
+      [
+        126.0,
+        1.77318542e12
+      ],
+      [
+        77.0,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/axpy!/Float64/2/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        124.0,
+        1.773103246e12
+      ],
+      [
+        133.0,
+        1.773103253e12
+      ],
+      [
+        74.0,
+        1.773103254e12
+      ],
+      [
+        77.0,
+        1.773103266e12
+      ],
+      [
+        75.0,
+        1.773185399e12
+      ],
+      [
+        75.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/two_reductions_aliased/Float32/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        120.0,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/manual_example!_aliased/Int32/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        125.0,
+        1.773103264e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/auto_axpy!/Float32/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        123.0,
+        1.773103253e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(manual_example!/Float32/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        74.0,
+        1.773103262e12
+      ],
+      [
+        73.0,
+        1.773103267e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/manual_example!/Int32/2/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        121.0,
+        1.773185412e12
+      ],
+      [
+        123.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(auto_manual_example!/Int32/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        534.0,
+        1.773103253e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/axpy!/Float32/3/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        67.00000000000001,
+        1.77302643e12
+      ],
+      [
+        156.0,
+        1.773185412e12
+      ],
+      [
+        153.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(\\loop_fields!\\/\\Int64\\/\\BaseBenchmarks.SIMDBenchmarks.MutableFields\\/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        76.0,
+        1.773185401e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(auto_inner/Int32/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        853.9999999999999,
+        1.773103253e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/manual_example!/Float64/3/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        76.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/inner/Int32/4/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        51.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/two_reductions/Float32/4/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        78.0,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(auto_local_arrays/Float32/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        78.0,
+        1.773103247e12
+      ],
+      [
+        128.0,
+        1.773103253e12
+      ],
+      [
+        79.0,
+        1.773103267e12
+      ],
+      [
+        127.0,
+        1.773103267e12
+      ],
+      [
+        78.0,
+        1.773103268e12
+      ],
+      [
+        79.0,
+        1.773185408e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/manual_example!/Int32/3/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        78.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/conditional_loop!/Int64/2/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        79.0,
+        1.773103259e12
+      ],
+      [
+        74.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/loop_fields!/Int32/BaseBenchmarks.SIMDBenchmarks.MutableFields/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        77.0,
+        1.77302643e12
+      ],
+      [
+        342.0,
+        1.77310325e12
+      ],
+      [
+        354.0,
+        1.773103251e12
+      ],
+      [
+        151.0,
+        1.773185401e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/inner/Int32/3/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        77.0,
+        1.773185402e12
+      ],
+      [
+        122.0,
+        1.773185418e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/auto_manual_example!/Int32/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        76.0,
+        1.773026431e12
+      ],
+      [
+        76.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/conditional_loop!_aliased/Int64/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        145.0,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/loop_fields!/Int32/BaseBenchmarks.SIMDBenchmarks.ImmutableFields/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        326.0,
+        1.77310325e12
+      ],
+      [
+        360.0,
+        1.773103251e12
+      ],
+      [
+        153.0,
+        1.773185401e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(\\loop_fields!\\/\\Float64\\/\\BaseBenchmarks.SIMDBenchmarks.ImmutableFields\\/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        75.0,
+        1.77310325e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(loop_fields!/Float64/BaseBenchmarks.SIMDBenchmarks.MutableFields/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        76.0,
+        1.773103253e12
+      ],
+      [
+        133.0,
+        1.773103267e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/axpy!_aliased/Int64/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        130.0,
+        1.773103264e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/manual_example!/Float64/4/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        57.99999999999999,
+        1.773103247e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/conditional_loop!/Int32/4/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        69.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(\\loop_fields!\\/\\Float32\\/\\BaseBenchmarks.SIMDBenchmarks.MutableFields\\/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        133.0,
+        1.773185401e12
+      ],
+      [
+        133.0,
+        1.773185419e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(axpy!/Float64/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        79.0,
+        1.773185414e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(\\manual_example!\\/\\Float64\\/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        71.0,
+        1.773185401e12
+      ],
+      [
+        132.0,
+        1.77318541e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/conditional_loop!/Int32/3/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        55.00000000000001,
+        1.77302643e12
+      ],
+      [
+        79.0,
+        1.773026431e12
+      ],
+      [
+        141.0,
+        1.773103249e12
+      ],
+      [
+        149.0,
+        1.773103251e12
+      ],
+      [
+        120.0,
+        1.773103254e12
+      ],
+      [
+        127.0,
+        1.773185397e12
+      ],
+      [
+        72.0,
+        1.773185404e12
+      ],
+      [
+        122.0,
+        1.773185406e12
+      ],
+      [
+        171.0,
+        1.773185416e12
+      ],
+      [
+        169.0,
+        1.773185418e12
+      ],
+      [
+        183.0,
+        1.773185418e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(\\axpy!\\/\\Float64\\/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        124.0,
+        1.77318541e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/inner/Int64/3/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        127.0,
+        1.77302643e12
+      ],
+      [
+        130.0,
+        1.773185412e12
+      ],
+      [
+        133.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/loop_fields!/Float64/BaseBenchmarks.SIMDBenchmarks.ImmutableFields/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        238.0,
+        1.77310325e12
+      ],
+      [
+        250.0,
+        1.773103251e12
+      ],
+      [
+        138.0,
+        1.773185401e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/auto_two_reductions/Int64/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        123.0,
+        1.77310325e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/local_arrays/Float32/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        128.0,
+        1.773103264e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(auto_axpy!/Int32/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        922.0000000000001,
+        1.773103253e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/two_reductions/Int32/4/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        57.99999999999999,
+        1.773185412e12
+      ],
+      [
+        55.00000000000001,
+        1.773185415e12
+      ],
+      [
+        41.0,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/sum_reduce/Int32/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        132.0,
+        1.77302643e12
+      ],
+      [
+        122.0,
+        1.773103251e12
+      ],
+      [
+        71.0,
+        1.773185404e12
+      ],
+      [
+        143.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(\\loop_fields!\\/\\Int32\\/\\BaseBenchmarks.SIMDBenchmarks.MutableFields\\/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        133.0,
+        1.77310325e12
+      ],
+      [
+        75.0,
+        1.773185401e12
+      ],
+      [
+        75.0,
+        1.773185419e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/axpy!/Float64/3/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        124.0,
+        1.77302643e12
+      ],
+      [
+        122.0,
+        1.773103257e12
+      ],
+      [
+        70.0,
+        1.773185402e12
+      ],
+      [
+        147.0,
+        1.773185412e12
+      ],
+      [
+        143.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/axpy!/Float64/2/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        133.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(loop_fields!/Int32/BaseBenchmarks.SIMDBenchmarks.ImmutableFields/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        75.0,
+        1.773103253e12
+      ],
+      [
+        75.0,
+        1.773103253e12
+      ],
+      [
+        75.0,
+        1.773103267e12
+      ],
+      [
+        75.0,
+        1.773185407e12
+      ],
+      [
+        133.0,
+        1.773185408e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/manual_partition!/Float32/4/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        46.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/conditional_loop!/Int32/3/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        59.0,
+        1.77302643e12
+      ],
+      [
+        146.0,
+        1.773103264e12
+      ],
+      [
+        63.0,
+        1.773185397e12
+      ],
+      [
+        68.0,
+        1.773185406e12
+      ],
+      [
+        69.0,
+        1.773185416e12
+      ],
+      [
+        63.0,
+        1.773185418e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/sum_reduce/Float64/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        128.0,
+        1.773103259e12
+      ],
+      [
+        76.0,
+        1.77310327e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/loop_fields!/Int64/BaseBenchmarks.SIMDBenchmarks.ImmutableFields/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        152.0,
+        1.77310325e12
+      ],
+      [
+        154.0,
+        1.773103251e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/loop_fields!/Float64/BaseBenchmarks.SIMDBenchmarks.ImmutableFields/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        249.00000000000003,
+        1.77310325e12
+      ],
+      [
+        237.0,
+        1.773103251e12
+      ],
+      [
+        132.0,
+        1.773185401e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/axpy!/Int64/4/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        123.0,
+        1.773103263e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/sum_reduce/Int32/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        136.0,
+        1.77302643e12
+      ],
+      [
+        121.0,
+        1.773103251e12
+      ],
+      [
+        74.0,
+        1.773185404e12
+      ],
+      [
+        126.0,
+        1.773185416e12
+      ],
+      [
+        74.0,
+        1.77318542e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/conditional_loop!/Int32/2/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        51.0,
+        1.77302643e12
+      ],
+      [
+        206.0,
+        1.77310325e12
+      ],
+      [
+        77.0,
+        1.773103251e12
+      ],
+      [
+        143.0,
+        1.773185412e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/manual_partition!/Int32/3/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        63.0,
+        1.773185402e12
+      ],
+      [
+        133.0,
+        1.773185406e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/manual_example!/Float32/4/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        79.0,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/auto_conditional_loop!/Int32/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        72.0,
+        1.77302643e12
+      ],
+      [
+        139.0,
+        1.773185397e12
+      ],
+      [
+        79.0,
+        1.7731854e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/inner/Float32/3/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        60.0,
+        1.77302643e12
+      ],
+      [
+        49.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/conditional_loop!/Int64/2/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        120.0,
+        1.77310325e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(manual_example!/Float64/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        133.0,
+        1.77302643e12
+      ],
+      [
+        124.0,
+        1.773103256e12
+      ],
+      [
+        79.0,
+        1.773185398e12
+      ],
+      [
+        133.0,
+        1.773185408e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/inner/Float32/3/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        49.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/two_reductions/Int32/2/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        178.0,
+        1.77302643e12
+      ],
+      [
+        61.0,
+        1.773185412e12
+      ],
+      [
+        62.0,
+        1.773185415e12
+      ],
+      [
+        50.0,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/axpy!/Int32/2/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        125.0,
+        1.773026431e12
+      ],
+      [
+        136.0,
+        1.773103254e12
+      ],
+      [
+        60.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(axpy!/Float32/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        124.0,
+        1.773026431e12
+      ],
+      [
+        121.0,
+        1.77310327e12
+      ],
+      [
+        74.0,
+        1.773185407e12
+      ],
+      [
+        121.0,
+        1.773185413e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/axpy!/Int64/2/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        133.0,
+        1.773103251e12
+      ],
+      [
+        126.0,
+        1.773103264e12
+      ],
+      [
+        121.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(loop_fields!/Float64/BaseBenchmarks.SIMDBenchmarks.ImmutableFields/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        76.0,
+        1.773103253e12
+      ],
+      [
+        133.0,
+        1.773103267e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/manual_example!/Float32/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        76.0,
+        1.773026431e12
+      ],
+      [
+        134.00000000000003,
+        1.773103266e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(loop_fields!/Int32/BaseBenchmarks.SIMDBenchmarks.MutableFields/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        75.0,
+        1.773103253e12
+      ],
+      [
+        75.0,
+        1.773103253e12
+      ],
+      [
+        75.0,
+        1.773103267e12
+      ],
+      [
+        75.0,
+        1.773185407e12
+      ],
+      [
+        133.0,
+        1.773185408e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/manual_example!/Int32/4/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        76.0,
+        1.77302643e12
+      ],
+      [
+        70.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/inner/Int64/4/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        128.0,
+        1.773185405e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/conditional_loop!/Int64/4/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        133.0,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/manual_example!/Int64/4/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        73.0,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/conditional_loop!/Int32/2/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        76.0,
+        1.773185416e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/auto_local_arrays/Float32/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        128.0,
+        1.773103264e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/manual_example!/Float32/4/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        64.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/inner/Int32/3/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        65.0,
+        1.77302643e12
+      ],
+      [
+        80.0,
+        1.773103253e12
+      ],
+      [
+        128.0,
+        1.773103254e12
+      ],
+      [
+        124.0,
+        1.773103266e12
+      ],
+      [
+        68.0,
+        1.773185402e12
+      ],
+      [
+        80.0,
+        1.773185405e12
+      ],
+      [
+        123.0,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/two_reductions/Int32/3/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        196.0,
+        1.77302643e12
+      ],
+      [
+        63.0,
+        1.773185412e12
+      ],
+      [
+        60.0,
+        1.773185415e12
+      ],
+      [
+        48.0,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(\\loop_fields!\\/\\Float32\\/\\BaseBenchmarks.SIMDBenchmarks.ImmutableFields\\/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        133.0,
+        1.773185401e12
+      ],
+      [
+        133.0,
+        1.773185419e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/conditional_loop!/Float32/2/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        123.0,
+        1.773185412e12
+      ],
+      [
+        127.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/axpy!_aliased/Float32/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        122.0,
+        1.773103264e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/manual_example!/Float64/3/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        76.0,
+        1.77302643e12
+      ],
+      [
+        69.0,
+        1.773103264e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/inner/Float32/4/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        48.0,
+        1.773026431e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(auto_axpy!/Int64/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        311.0,
+        1.773103253e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/axpy!/Int32/4/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        43.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/manual_example!/Float32/3/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        56.00000000000001,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/axpy!/Int32/3/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        46.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/loop_fields!/Float32/BaseBenchmarks.SIMDBenchmarks.MutableFields/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        367.0,
+        1.77310325e12
+      ],
+      [
+        386.0,
+        1.773103251e12
+      ],
+      [
+        179.0,
+        1.773185401e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(loop_fields!/Int32/BaseBenchmarks.SIMDBenchmarks.ImmutableFields/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        75.0,
+        1.773103253e12
+      ],
+      [
+        75.0,
+        1.773103253e12
+      ],
+      [
+        75.0,
+        1.773103267e12
+      ],
+      [
+        75.0,
+        1.773185407e12
+      ],
+      [
+        133.0,
+        1.773185408e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(loop_fields!/Int64/BaseBenchmarks.SIMDBenchmarks.MutableFields/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        124.0,
+        1.773103253e12
+      ],
+      [
+        125.0,
+        1.773103267e12
+      ],
+      [
+        80.0,
+        1.773185407e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/axpy!/Int64/2/64)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        78.0,
+        1.773103259e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/manual_example!/Int32/2/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        70.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/two_reductions_aliased/Int32/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        79.0,
+        1.773185412e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(\\two_reductions\\/\\Int32\\/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        133.0,
+        1.773185419e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/manual_example!/Int32/2/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        127.0,
+        1.773103264e12
+      ],
+      [
+        60.0,
+        1.773185402e12
+      ],
+      [
+        123.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/two_reductions/Int32/3/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        149.0,
+        1.77302643e12
+      ],
+      [
+        55.00000000000001,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(auto_conditional_loop!/Float64/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        703.0,
+        1.773103253e12
+      ],
+      [
+        76.0,
+        1.773185407e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/two_reductions/Int32/3/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        74.0,
+        1.773185412e12
+      ],
+      [
+        74.0,
+        1.773185415e12
+      ],
+      [
+        47.0,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/two_reductions/Float64/3/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        140.0,
+        1.773185412e12
+      ],
+      [
+        138.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(auto_two_reductions/Int32/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        72.0,
+        1.773103253e12
+      ],
+      [
+        131.0,
+        1.773103253e12
+      ],
+      [
+        70.0,
+        1.773103267e12
+      ],
+      [
+        72.0,
+        1.773103268e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/loop_fields!/Int32/BaseBenchmarks.SIMDBenchmarks.MutableFields/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        341.0,
+        1.77310325e12
+      ],
+      [
+        343.0,
+        1.773103251e12
+      ],
+      [
+        148.0,
+        1.773185401e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/two_reductions/Float64/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        79.0,
+        1.773103257e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/inner/Float64/4/32)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        133.0,
+        1.773185412e12
+      ],
+      [
+        134.00000000000003,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Linear/auto_conditional_loop!/Int64/4095)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        141.0,
+        1.77302643e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/manual_example!/Int64/2/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        125.0,
+        1.773185415e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/manual_example!/Float64/4/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        77.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/inner/Float32/4/63)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        61.0,
+        1.77302643e12
+      ],
+      [
+        50.0,
+        1.773185402e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(Cartesian/two_reductions/Int32/4/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        76.0,
+        1.773185412e12
+      ],
+      [
+        77.0,
+        1.773185415e12
+      ],
+      [
+        44.0,
+        1.773185421e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(CartesianPartition/axpy!/Int32/3/31)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        79.0,
+        1.77302643e12
+      ],
+      [
+        80.0,
+        1.773103251e12
+      ],
+      [
+        126.0,
+        1.773185402e12
+      ],
+      [
+        77.0,
+        1.773185402e12
+      ],
+      [
+        121.0,
+        1.773185412e12
+      ]
+    ]
+  },
+  {
+    "target": "simd/(auto_conditional_loop!/Float32/4096)",
+    "tags": {
+      "group": "nanosoldier_simd"
+    },
+    "datapoints": [
+      [
+        1387.0,
+        1.773103253e12
+      ],
+      [
+        75.0,
+        1.773185407e12
+      ]
+    ]
+  }
+]

@@ -1,0 +1,28 @@
+{
+  "metadata": {
+    "head_hash": "bebeb97",
+    "comparison": "bebeb97_vs_dd19c5a",
+    "source": "NanosoldierReports",
+    "base_hash": "dd19c5a",
+    "imported_at": "2026-03-10T00:41:10.675",
+    "source_type": "report_md"
+  },
+  "benchmarks": {
+    "[\"inference\", \"optimization\", \"sin(42)\"]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"REPL.REPLCompletions.completions\"]": {
+      "time_ratio": 1.01,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"allinference\", \"Base.init_stdio(::Ptr{Cvoid})\"]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"Base.init_stdio(::Ptr{Cvoid})\"]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    }
+  }
+}

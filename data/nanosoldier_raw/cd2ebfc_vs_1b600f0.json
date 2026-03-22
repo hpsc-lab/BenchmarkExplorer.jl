@@ -1,0 +1,1944 @@
+{
+  "metadata": {
+    "head_hash": "cd2ebfc",
+    "comparison": "cd2ebfc_vs_1b600f0",
+    "source": "NanosoldierReports",
+    "base_hash": "1b600f0",
+    "imported_at": "2026-03-10T00:40:54.113",
+    "source_type": "report_md"
+  },
+  "benchmarks": {
+    "[\"scalar\", \"atan\", (\"11/16 <= abs(x) < 19/16\", \"negative argument\", \"Float64\")]": {
+      "time_ratio": 0.84,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Cartesian\", \"inner\", \"Int32\", 2, 63)]": {
+      "time_ratio": 0.66,
+      "memory_ratio": 1.0
+    },
+    "[\"random\", \"collections\", (\"rand\", \"ImplicitRNG\", \"'a':'z'\")]": {
+      "time_ratio": 2.17,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"growth\", (\"push_single!\", 8)]": {
+      "time_ratio": 1.81,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findnext\", (\"ispos\", \"Vector{Bool}\")]": {
+      "time_ratio": 0.84,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"sincos\", (\"argument reduction (easy) abs(x) < 5π/4\", \"negative argument\", \"Float32\")]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"expm1\", (\"huge\", \"positive argument\", \"Float64\")]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"random\", \"ranges\", (\"rand\", \"MersenneTwister\", \"BigInt\", \"RangeGenerator(1:4294967297)\")]": {
+      "time_ratio": 1.27,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"y finite\", \"y positive\", \"x infinite\", \"x negative\", \"Float32\")]": {
+      "time_ratio": 1.17,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"abs(y/x) high\", \"y infinite\", \"y negative\", \"x finite\", \"x negative\", \"Float32\")]": {
+      "time_ratio": 1.12,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Set\", \"Int\", \"union\", \"Set\")]": {
+      "time_ratio": 1.68,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"growth\", (\"append!\", 8)]": {
+      "time_ratio": 1.5,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", (\"sort! forwards\", \"descending\")]": {
+      "time_ratio": 1.3,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"sum\", \"Union{Missing, ComplexF64}\", 1)]": {
+      "time_ratio": 1.19,
+      "memory_ratio": 1.0
+    },
+    "[\"random\", \"collections\", (\"rand\", \"ImplicitRNG\", \"small Set\")]": {
+      "time_ratio": 1.65,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"rem_pio2\", (\"argument reduction (paynehanek) abs(x) > 2.0^20*π/2\", \"positive argument\", \"Float64\")]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Vector\", \"Int\", \"symdiff\", \"Set\")]": {
+      "time_ratio": 1.26,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"abs(y/x) safe (large)\", \"y positive\", \"x positive\", \"Float64\")]": {
+      "time_ratio": 0.79,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_simplecopy\", \"BigFloat\", 0)]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"cbrt\", (\"zero\", \"Float64\")]": {
+      "time_ratio": 0.84,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", (\"> q0.99\", \"Vector{Float32}\")]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"mod2pi\", (\"argument reduction (hard) abs(x) < 6π/4\", \"positive argument\", \"Float64\")]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"iteration\", (\"IdDict\", \"Any\", \"iterate\")]": {
+      "time_ratio": 2.3,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"comprehension\", (\"comprehension_indexing\", \"Vector{Float64}\")]": {
+      "time_ratio": 2.06,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"issue 12165\", \"Float64\"]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"tuple\", \"linear algebra\", (\"matvec\", \"(16, 16)\", \"(16,)\")]": {
+      "time_ratio": 0.74,
+      "memory_ratio": 1.0
+    },
+    "[\"broadcast\", \"mix_scalar_tuple\", (5, \"scal_tup\")]": {
+      "time_ratio": 0.84,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan\", (\"39/16 <= abs(x) < 2^66\", \"negative argument\", \"Float64\")]": {
+      "time_ratio": 0.83,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"acos\", (\"one\", \"negative argument\", \"Float64\")]": {
+      "time_ratio": 0.87,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", (\"sort! forwards\", \"random\")]": {
+      "time_ratio": 0.66,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"iterators\", \"zip(1:1, 1:1, 1:1)\"]": {
+      "time_ratio": 1.14,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"abs\", \"Int64\", 0)]": {
+      "time_ratio": 1.4,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"identity\", \"Bool\", 1)]": {
+      "time_ratio": 0.86,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Vector\", \"Int\", \"⊆\", \"Set\")]": {
+      "time_ratio": 1.88,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"sin\", (\"no reduction\", \"negative argument\", \"Float32\", \"sin_kernel\")]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"abs(y/x) safe (small)\", \"y negative\", \"x positive\", \"Float64\")]": {
+      "time_ratio": 0.82,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"expm1\", (\"medium\", \"negative argument\", \"Float64\")]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"sparse solves\", \"square system (lu), vector rhs\"]": {
+      "time_ratio": 1.11,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"sort\", \"Float64\", 0)]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"queries & updates\", (\"IdDict\", \"Any\", \"getindex\")]": {
+      "time_ratio": 1.28,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"queries & updates\", (\"Set\", \"Int\", \"pop!\", \"specified\")]": {
+      "time_ratio": 1.74,
+      "memory_ratio": 1.0
+    },
+    "[\"random\", \"ranges\", (\"rand\", \"MersenneTwister\", \"BigInt\", \"RangeGenerator(1:1)\")]": {
+      "time_ratio": 1.39,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"asin\", (\"one\", \"positive argument\", \"Float32\")]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"abs(y/x) safe (large)\", \"y negative\", \"x negative\", \"Float64\")]": {
+      "time_ratio": 0.82,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"sort\", \"Union{Missing, Float64}\", 1)]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"y infinite\", \"y negative\", \"x finite\", \"x positive\", \"Float64\")]": {
+      "time_ratio": 0.45,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"*\", \"Int64\", \"(false, false)\")]": {
+      "time_ratio": 1.12,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"queries & updates\", (\"Dict\", \"Int\", \"pop!\", \"specified\")]": {
+      "time_ratio": 1.31,
+      "memory_ratio": 1.0
+    },
+    "[\"random\", \"ranges\", (\"rand!\", \"ImplicitRNG\", \"Int\", \"1:1000\")]": {
+      "time_ratio": 2.27,
+      "memory_ratio": 1.0
+    },
+    "[\"random\", \"ranges\", (\"rand\", \"ImplicitRNG\", \"Int\", \"1:1000\")]": {
+      "time_ratio": 2.57,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"y zero\", \"y negative\", \"x positive\", \"Float32\")]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"y zero\", \"y positive\", \"x positive\", \"Float64\")]": {
+      "time_ratio": 0.4,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"optimizations\", (\"Vector\", \"abstract\", \"Nothing\")]": {
+      "time_ratio": 1.39,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"iteration\", (\"Vector\", \"String\", \"iterate\")]": {
+      "time_ratio": 1.67,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"mergesort\", (\"sortperm reverse\", \"descending\")]": {
+      "time_ratio": 1.32,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"growth\", (\"push_single!\", 256)]": {
+      "time_ratio": 1.71,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"tanh\", (\"very large\", \"positive argument\", \"Float64\")]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_binaryop\", \"*\", \"Float32\", \"(true, true)\")]": {
+      "time_ratio": 1.22,
+      "memory_ratio": 1.0
+    },
+    "[\"problem\", \"imdb\", \"centrality\"]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"random\", \"collections\", (\"rand!\", \"ImplicitRNG\", \"'a':'z'\")]": {
+      "time_ratio": 2.48,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"acos\", (\"zero\", \"Float32\")]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_countequals\", \"ComplexF64\")]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Vector\", \"Int\", \"union\", \"BitSet\", \"BitSet\")]": {
+      "time_ratio": 1.49,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum\", \"ComplexF64\", 1)]": {
+      "time_ratio": 1.22,
+      "memory_ratio": 1.0
+    },
+    "[\"broadcast\", \"typeargs\", (\"array\", 5)]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan\", (\"39/16 <= abs(x) < 2^66\", \"positive argument\", \"Float64\")]": {
+      "time_ratio": 0.83,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"mod2pi\", (\"no reduction\", \"zero\", \"Float64\")]": {
+      "time_ratio": 0.85,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_binaryop\", \"*\", \"Float32\", \"(false, true)\")]": {
+      "time_ratio": 1.23,
+      "memory_ratio": 1.0
+    },
+    "[\"random\", \"collections\", (\"rand!\", \"ImplicitRNG\", \"small Vector\")]": {
+      "time_ratio": 2.32,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum3\", \"Bool\", 0)]": {
+      "time_ratio": 1.6,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"arithmetic\", (\"div\", \"ComplexF64\", \"ComplexF64\")]": {
+      "time_ratio": 0.55,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"*\", \"Int8\", \"(true, true)\")]": {
+      "time_ratio": 1.27,
+      "memory_ratio": 1.0
+    },
+    "[\"random\", \"collections\", (\"rand\", \"ImplicitRNG\", \"large Vector\")]": {
+      "time_ratio": 2.43,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"collect\", \"Union{Missing, BigFloat}\", 1)]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"sparse solves\", \"square system (ldlt), matrix rhs\"]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"random\", \"collections\", (\"rand!\", \"ImplicitRNG\", \"large BitSet\")]": {
+      "time_ratio": 1.92,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"iteration\", (\"IdDict\", \"Any\", \"iterate second\")]": {
+      "time_ratio": 2.21,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"expm1\", (\"arg reduction I\", \"positive argument\", \"Float64\")]": {
+      "time_ratio": 0.9,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_countequals\", \"Float64\")]": {
+      "time_ratio": 0.83,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_binaryop\", \"*\", \"Int64\", \"(true, true)\")]": {
+      "time_ratio": 0.89,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"asin\", (\"zero\", \"Float64\")]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"bitshift\", (\"Int\", \"Int\")]": {
+      "time_ratio": 1.14,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"iterators\", \"zip(1:1, 1:1)\"]": {
+      "time_ratio": 1.18,
+      "memory_ratio": 1.0
+    },
+    "[\"broadcast\", \"mix_scalar_tuple\", (10, \"scal_tup_x3\")]": {
+      "time_ratio": 1.2,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"iterators\", \"zip(1:1, 1:1, 1:1, 1:1)\"]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", (\"sortperm! reverse\", \"descending\")]": {
+      "time_ratio": 1.38,
+      "memory_ratio": 1.0
+    },
+    "[\"random\", \"collections\", (\"rand!\", \"ImplicitRNG\", \"large Set\")]": {
+      "time_ratio": 1.43,
+      "memory_ratio": 1.0
+    },
+    "[\"tuple\", \"linear algebra\", (\"matmat\", \"(2, 2)\", \"(2, 2)\")]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"collect\", \"all\", \"ComplexF64\", 1)]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"identity\", \"ComplexF64\", 1)]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"identity\", \"Int64\", 1)]": {
+      "time_ratio": 0.86,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"cat\", (\"catnd_setind\", 5)]": {
+      "time_ratio": 1.11,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan\", (\"7/16 <= abs(x) < 11/16\", \"negative argument\", \"Float64\")]": {
+      "time_ratio": 0.83,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"*\", \"Bool\", \"(true, true)\")]": {
+      "time_ratio": 0.8,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"asin\", (\"small\", \"negative argument\", \"Float32\")]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"queries & updates\", (\"IdDict\", \"Int\", \"in\", \"true\")]": {
+      "time_ratio": 1.34,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"y infinite\", \"y positive\", \"x finite\", \"x negative\", \"Float32\")]": {
+      "time_ratio": 1.12,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"acos\", (\"one\", \"positive argument\", \"Float32\")]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"exp2\", (\"2pow3\", \"positive argument\", \"Float64\")]": {
+      "time_ratio": 0.6,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Set\", \"Int\", \"union!\", \"BitSet\")]": {
+      "time_ratio": 1.77,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"bitshift\", (\"Int\", \"UInt\")]": {
+      "time_ratio": 1.16,
+      "memory_ratio": 1.0
+    },
+    "[\"random\", \"collections\", (\"rand!\", \"ImplicitRNG\", \"large Vector\")]": {
+      "time_ratio": 2.31,
+      "memory_ratio": 1.0
+    },
+    "[\"random\", \"collections\", (\"rand!\", \"ImplicitRNG\", \"small Dict\")]": {
+      "time_ratio": 1.56,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"parse\", \"Int\"]": {
+      "time_ratio": 1.19,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"y finite\", \"y positive\", \"x infinite\", \"x positive\", \"Float64\")]": {
+      "time_ratio": 0.43,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"issorted\", (\"forwards\", \"ones\")]": {
+      "time_ratio": 1.33,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"convert\", (\"Float64\", \"Int\")]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"initialization\", (\"Vector\", \"String\", \"loop\")]": {
+      "time_ratio": 1.58,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"abs(y/x) high\", \"y negative\", \"x negative\", \"Float32\")]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"y infinite\", \"y positive\", \"x infinite\", \"x negative\", \"Float64\")]": {
+      "time_ratio": 0.39,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"growth\", (\"push_multiple!\", 8)]": {
+      "time_ratio": 1.81,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"abs(y/x) high\", \"y positive\", \"x negative\", \"Float64\")]": {
+      "time_ratio": 0.47,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"y zero\", \"y negative\", \"x negative\", \"Float64\")]": {
+      "time_ratio": 0.39,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Set\", \"Int\", \"==\", \"self\")]": {
+      "time_ratio": 2.04,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findnext\", (\"ispos\", \"Vector{Float64}\")]": {
+      "time_ratio": 0.82,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"y finite\", \"y negative\", \"x infinite\", \"x positive\", \"Float32\")]": {
+      "time_ratio": 1.17,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"sum\", \"Bool\", 0)]": {
+      "time_ratio": 0.76,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"*\", \"Bool\", \"(false, false)\")]": {
+      "time_ratio": 1.28,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"mergesort\", (\"sort forwards\", \"ones\")]": {
+      "time_ratio": 1.31,
+      "memory_ratio": 1.0
+    },
+    "[\"random\", \"collections\", (\"rand\", \"ImplicitRNG\", \"large Dict\")]": {
+      "time_ratio": 1.39,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"comprehension\", (\"comprehension_iteration\", \"Vector{Float64}\")]": {
+      "time_ratio": 1.83,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan\", (\"19/16 <= abs(x) < 39/16\", \"negative argument\", \"Float64\")]": {
+      "time_ratio": 0.87,
+      "memory_ratio": 1.0
+    },
+    "[\"broadcast\", \"mix_scalar_tuple\", (10, \"scal_tup\")]": {
+      "time_ratio": 0.88,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", (\"> q0.8\", \"Vector{Int8}\")]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_countequals\", \"Int8\")]": {
+      "time_ratio": 0.84,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"optimizations\", (\"IdDict\", \"abstract\", \"Nothing\")]": {
+      "time_ratio": 1.33,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"growth\", (\"prerend!\", 8)]": {
+      "time_ratio": 1.34,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Set\", \"Int\", \"intersect\", \"Set\", \"Set\")]": {
+      "time_ratio": 1.5,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"acos\", (\"abs(x) < 0.5\", \"negative argument\", \"Float32\")]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_simplecopy\", \"BigFloat\", 1)]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"abs(y/x) small\", \"y positive\", \"x positive\", \"Float32\")]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Set\", \"Int\", \"intersect\", \"Set\")]": {
+      "time_ratio": 1.47,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"*\", \"Int8\", \"(false, true)\")]": {
+      "time_ratio": 1.25,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"sincos\", (\"argument reduction (easy) abs(x) < 5π/4\", \"positive argument\", \"Float64\")]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"queries & updates\", (\"Vector\", \"Any\", \"in\", \"true\")]": {
+      "time_ratio": 1.33,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findprev\", (\"ispos\", \"Vector{Bool}\")]": {
+      "time_ratio": 0.83,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"CartesianPartition\", \"conditional_loop!\", \"Int32\", 3, 32)]": {
+      "time_ratio": 0.79,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"x zero\", \"y negative\", \"Float64\")]": {
+      "time_ratio": 0.42,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Cartesian\", \"axpy!\", \"Int32\", 2, 31)]": {
+      "time_ratio": 1.36,
+      "memory_ratio": 1.0
+    },
+    "[\"random\", \"ranges\", (\"rand\", \"MersenneTwister\", \"BigInt\", \"RangeGenerator(1:4294967295)\")]": {
+      "time_ratio": 1.26,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"y infinite\", \"y positive\", \"x infinite\", \"x positive\", \"Float64\")]": {
+      "time_ratio": 0.41,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"queries & updates\", (\"Vector\", \"String\", \"in\", \"true\")]": {
+      "time_ratio": 3.7,
+      "memory_ratio": 1.0
+    },
+    "[\"broadcast\", \"mix_scalar_tuple\", (5, \"tup_tup\")]": {
+      "time_ratio": 1.63,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"abs(y/x) safe (small)\", \"y positive\", \"x positive\", \"Float64\")]": {
+      "time_ratio": 0.82,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_binaryop\", \"*\", \"Int64\", \"(false, true)\")]": {
+      "time_ratio": 0.87,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"y finite\", \"y negative\", \"x infinite\", \"x negative\", \"Float64\")]": {
+      "time_ratio": 0.39,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"optimizations\", (\"Dict\", \"abstract\", \"Nothing\")]": {
+      "time_ratio": 1.68,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"y infinite\", \"y negative\", \"x finite\", \"x negative\", \"Float32\")]": {
+      "time_ratio": 1.12,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"tanh\", (\"zero\", \"Float32\")]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"queries & updates\", (\"IdDict\", \"Any\", \"in\", \"false\")]": {
+      "time_ratio": 1.32,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"queries & updates\", (\"Set\", \"Int\", \"push!\", \"new\")]": {
+      "time_ratio": 1.79,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"*\", \"Float64\", \"(false, true)\")]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"random\", \"collections\", (\"rand!\", \"ImplicitRNG\", \"small String\")]": {
+      "time_ratio": 2.18,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"abs\", \"Bool\", 1)]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Vector\", \"Int\", \"union\", \"Set\", \"Set\")]": {
+      "time_ratio": 1.49,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"mod2pi\", (\"argument reduction (easy) abs(x) < 2.0^20π/4\", \"positive argument\", \"Float64\")]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"optimizations\", (\"Set\", \"abstract\", \"Nothing\")]": {
+      "time_ratio": 1.26,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"queries & updates\", (\"Set\", \"String\", \"in\", \"true\")]": {
+      "time_ratio": 1.45,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Vector\", \"Int\", \"intersect\")]": {
+      "time_ratio": 1.48,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"foldl\", \"foldl(+, filter(...); init = 0.0)\"]": {
+      "time_ratio": 2.61,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"abs\", \"Int64\", 1)]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Set\", \"Int\", \"intersect\", \"BitSet\", \"BitSet\")]": {
+      "time_ratio": 1.39,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", (\"> q0.99\", \"Vector{Int8}\")]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Set\", \"Int\", \"union!\", \"Set\")]": {
+      "time_ratio": 1.75,
+      "memory_ratio": 1.0
+    },
+    "[\"broadcast\", \"mix_scalar_tuple\", (5, \"scal_tup_x3\")]": {
+      "time_ratio": 1.27,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"iterators\", \"zip(1:1)\"]": {
+      "time_ratio": 1.18,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"y infinite\", \"y positive\", \"x infinite\", \"x positive\", \"Float32\")]": {
+      "time_ratio": 0.9,
+      "memory_ratio": 1.0
+    },
+    "[\"linalg\", \"small exp #29116\"]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"expm1\", (\"large\", \"positive argument\", \"Float64\")]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"problem\", \"monte carlo\", \"euro_option_vec\"]": {
+      "time_ratio": 1.5,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"expm1\", (\"large\", \"negative argument\", \"Float64\")]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_binaryop\", \"*\", \"Int64\", \"(false, false)\")]": {
+      "time_ratio": 0.87,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"collect\", \"Union{Missing, Int64}\", 1)]": {
+      "time_ratio": 0.9,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"tanh\", (\"2f0^-12 <= abs(x) < 1f0\", \"positive argument\", \"Float32\")]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Set\", \"Int\", \"setdiff!\", \"Vector\")]": {
+      "time_ratio": 1.91,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Set\", \"Int\", \"union\", \"Set\", \"Set\")]": {
+      "time_ratio": 1.7,
+      "memory_ratio": 1.0
+    },
+    "[\"random\", \"collections\", (\"rand\", \"ImplicitRNG\", \"large BitSet\")]": {
+      "time_ratio": 1.31,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"iteration\", (\"IdDict\", \"Int\", \"iterate second\")]": {
+      "time_ratio": 2.12,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"mod2pi\", (\"argument reduction (easy) abs(x) < 7π/4\", \"positive argument\", \"Float64\")]": {
+      "time_ratio": 0.85,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"abs(y/x) small\", \"y positive\", \"x positive\", \"Float64\")]": {
+      "time_ratio": 0.88,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Set\", \"Int\", \"symdiff\", \"Vector\")]": {
+      "time_ratio": 1.34,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"BitSet\", \"Int\", \"symdiff\", \"BitSet\")]": {
+      "time_ratio": 1.27,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"growth\", (\"push_multiple!\", 2048)]": {
+      "time_ratio": 1.82,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"CartesianPartition\", \"inner\", \"Int32\", 4, 31)]": {
+      "time_ratio": 1.54,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findprev\", (\"ispos\", \"Vector{Int64}\")]": {
+      "time_ratio": 0.81,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"y infinite\", \"y negative\", \"x infinite\", \"x negative\", \"Float64\")]": {
+      "time_ratio": 0.39,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Set\", \"Int\", \"⊆\", \"BitSet\")]": {
+      "time_ratio": 1.35,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"23042\", \"Float64\"]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findnext\", (\"ispos\", \"Vector{Float32}\")]": {
+      "time_ratio": 0.79,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"queries & updates\", (\"Set\", \"Int\", \"in\", \"true\")]": {
+      "time_ratio": 2.39,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"y infinite\", \"y negative\", \"x infinite\", \"x positive\", \"Float64\")]": {
+      "time_ratio": 0.39,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"issorted\", (\"reverse\", \"ones\")]": {
+      "time_ratio": 1.32,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Set\", \"Int\", \"union\", \"BitSet\")]": {
+      "time_ratio": 1.66,
+      "memory_ratio": 1.0
+    },
+    "[\"sparse\", \"sparse solves\", \"square system (lu), matrix rhs\"]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"broadcast\", \"mix_scalar_tuple\", (10, \"tup_tup\")]": {
+      "time_ratio": 1.13,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"iteration\", (\"Dict\", \"Any\", \"iterate second\")]": {
+      "time_ratio": 1.79,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"asin\", (\"zero\", \"Float32\")]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"y infinite\", \"y negative\", \"x finite\", \"x positive\", \"Float32\")]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"BitSet\", \"Int\", \"==\", \"self\")]": {
+      "time_ratio": 1.46,
+      "memory_ratio": 1.0
+    },
+    "[\"broadcast\", \"mix_scalar_tuple\", (3, \"tup_tup\")]": {
+      "time_ratio": 1.19,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Set\", \"Int\", \"intersect\", \"Vector\", \"Vector\")]": {
+      "time_ratio": 1.28,
+      "memory_ratio": 1.0
+    },
+    "[\"micro\", \"fib\"]": {
+      "time_ratio": 0.9,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Linear\", \"manual_example!\", \"Float64\", 4096)]": {
+      "time_ratio": 1.28,
+      "memory_ratio": 1.0
+    },
+    "[\"random\", \"collections\", (\"rand\", \"ImplicitRNG\", \"large Set\")]": {
+      "time_ratio": 1.37,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findprev\", (\"ispos\", \"Vector{UInt64}\")]": {
+      "time_ratio": 0.84,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"cbrt\", (\"large\", \"positive argument\", \"Float32\")]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"abs(y/x) safe (small)\", \"y negative\", \"x negative\", \"Float64\")]": {
+      "time_ratio": 0.85,
+      "memory_ratio": 1.0
+    },
+    "[\"shootout\", \"binary_trees\"]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", (\"sort reverse\", \"ascending\")]": {
+      "time_ratio": 1.5,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"*\", \"Bool\", \"(false, false)\")]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"random\", \"collections\", (\"rand!\", \"ImplicitRNG\", \"large String\")]": {
+      "time_ratio": 1.72,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"CartesianPartition\", \"axpy!\", \"Int32\", 4, 31)]": {
+      "time_ratio": 1.27,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"sincos\", (\"argument reduction (easy) abs(x) < 4π/4\", \"negative argument\", \"Float64\")]": {
+      "time_ratio": 0.93,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"growth\", (\"push_single!\", 2048)]": {
+      "time_ratio": 1.64,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"BitSet\", \"Int\", \"intersect\", \"Set\", \"Set\")]": {
+      "time_ratio": 1.41,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumcartesian\", \"Base.ReinterpretArray{Int32, 3, Float64, Array{Float64, 3}, false}\")]": {
+      "time_ratio": 1.59,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"deletion\", (\"Vector\", \"String\", \"pop!\")]": {
+      "time_ratio": 2.3,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum4\", \"ComplexF64\", 1)]": {
+      "time_ratio": 1.2,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Vector\", \"Int\", \"union\", \"Vector\")]": {
+      "time_ratio": 1.48,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findnext\", (\"ispos\", \"Vector{UInt8}\")]": {
+      "time_ratio": 0.81,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan\", (\"0 <= abs(x) < 7/16\", \"negative argument\", \"Float64\")]": {
+      "time_ratio": 0.84,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"*\", \"Float32\", \"(false, true)\")]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"iteration\", (\"Set\", \"String\", \"iterate second\")]": {
+      "time_ratio": 1.72,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"initialization\", (\"Vector\", \"Any\", \"loop\", \"sizehint!\")]": {
+      "time_ratio": 1.76,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"queries & updates\", (\"Vector\", \"Any\", \"in\", \"false\")]": {
+      "time_ratio": 1.32,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"queries & updates\", (\"Dict\", \"Int\", \"push!\", \"new\")]": {
+      "time_ratio": 1.78,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"mod2pi\", (\"no reduction\", \"positive argument\", \"Float64\")]": {
+      "time_ratio": 0.88,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"queries & updates\", (\"Dict\", \"Int\", \"push!\", \"overwrite\")]": {
+      "time_ratio": 1.76,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"cos\", (\"argument reduction (easy) abs(x) < 6π/4\", \"positive argument\", \"Float32\", \"sin_kernel\")]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"problem\", \"laplacian\", \"laplace_iter_sub\"]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Set\", \"Int\", \"symdiff\", \"Set\")]": {
+      "time_ratio": 1.31,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan\", (\"7/16 <= abs(x) < 11/16\", \"positive argument\", \"Float64\")]": {
+      "time_ratio": 0.85,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"mod2pi\", (\"argument reduction (easy) abs(x) > 2.0^20*π/2\", \"positive argument\", \"Float64\")]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"queries & updates\", (\"Dict\", \"Int\", \"setindex!\", \"overwrite\")]": {
+      "time_ratio": 1.89,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"20517\"]": {
+      "time_ratio": 0.89,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Set\", \"Int\", \"setdiff!\", \"Set\")]": {
+      "time_ratio": 1.83,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"exp2\", (\"2pow127\", \"positive argument\", \"Float32\")]": {
+      "time_ratio": 0.78,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"initialization\", (\"Vector\", \"String\", \"loop\", \"sizehint!\")]": {
+      "time_ratio": 1.62,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Set\", \"Int\", \"symdiff\", \"BitSet\", \"BitSet\")]": {
+      "time_ratio": 1.32,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Vector\", \"Int\", \"union\", \"BitSet\")]": {
+      "time_ratio": 1.49,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"expm1\", (\"arg reduction I\", \"negative argument\", \"Float64\")]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"y zero\", \"y negative\", \"x positive\", \"Float64\")]": {
+      "time_ratio": 0.4,
+      "memory_ratio": 1.0
+    },
+    "[\"broadcast\", \"mix_scalar_tuple\", (3, \"scal_tup\")]": {
+      "time_ratio": 1.19,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findnext\", (\"ispos\", \"Vector{Int8}\")]": {
+      "time_ratio": 0.84,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"issue 12165\", \"Float32\"]": {
+      "time_ratio": 1.16,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", (\"sort! reverse\", \"ascending\")]": {
+      "time_ratio": 1.5,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"iterators\", \"zip(1:1000, 1:1000)\"]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"tuple\", \"misc\", \"longtuple\"]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"abs\", \"Int64\", 0)]": {
+      "time_ratio": 0.83,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"sincos\", (\"argument reduction (hard) abs(x) < 4π/4\", \"negative argument\", \"Float32\")]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"23042\", \"Float32\"]": {
+      "time_ratio": 0.85,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"cat\", \"4467\"]": {
+      "time_ratio": 1.11,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"asin\", (\"abs(x) < 0.5\", \"negative argument\", \"Float32\")]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", (\"Vector{Bool}\", \"50-50\")]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"problem\", \"json\", \"parse_json\"]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"collect\", \"Union{Nothing, Float32}\", 0)]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"y zero\", \"y positive\", \"x positive\", \"Float32\")]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"collect\", \"all\", \"Int64\", 1)]": {
+      "time_ratio": 0.86,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"mod2pi\", (\"argument reduction (easy) abs(x) < 5π/4\", \"positive argument\", \"Float64\")]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"sinh\", (\"0 <= abs(x) < 2f-12\", \"negative argument\", \"Float32\")]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"queries & updates\", (\"Vector\", \"Int\", \"push!\")]": {
+      "time_ratio": 1.81,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Vector\", \"Int\", \"union\", \"Set\")]": {
+      "time_ratio": 1.49,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"y zero\", \"y positive\", \"x negative\", \"Float64\")]": {
+      "time_ratio": 0.39,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"tanh\", (\"1f0 <= abs(x) < 9f0\", \"negative argument\", \"Float32\")]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"deletion\", (\"Vector\", \"Any\", \"pop!\")]": {
+      "time_ratio": 2.09,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"mod2pi\", (\"argument reduction (easy) abs(x) < 6π/4\", \"positive argument\", \"Float64\")]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"queries & updates\", (\"Set\", \"Int\", \"push!\", \"overwrite\")]": {
+      "time_ratio": 1.79,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"queries & updates\", (\"Vector\", \"String\", \"pop!\", \"unspecified\")]": {
+      "time_ratio": 2.24,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"BitSet\", \"Int\", \"union!\", \"small\")]": {
+      "time_ratio": 1.27,
+      "memory_ratio": 1.0
+    },
+    "[\"random\", \"collections\", (\"rand\", \"ImplicitRNG\", \"large String\")]": {
+      "time_ratio": 1.57,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"tanh\", (\"very large\", \"negative argument\", \"Float64\")]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"tanh\", (\"very large\", \"negative argument\", \"Float32\")]": {
+      "time_ratio": 0.8,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Cartesian\", \"axpy!\", \"Float32\", 3, 31)]": {
+      "time_ratio": 1.26,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"abs(y/x) safe (small)\", \"y positive\", \"x negative\", \"Float64\")]": {
+      "time_ratio": 0.86,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"exp2\", (\"small\", \"positive argument\", \"Float64\")]": {
+      "time_ratio": 0.54,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", (\"Vector{Bool}\", \"90-10\")]": {
+      "time_ratio": 0.82,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"exp2\", (\"zero\", \"Float32\")]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"acos\", (\"abs(x) < 0.5\", \"positive argument\", \"Float32\")]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"tanh\", (\"1f0 <= abs(x) < 9f0\", \"positive argument\", \"Float32\")]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"queries & updates\", (\"Vector\", \"Any\", \"setindex!\")]": {
+      "time_ratio": 1.29,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"deletion\", (\"IdDict\", \"Any\", \"filter!\")]": {
+      "time_ratio": 1.29,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumvector_view\", \"BitMatrix\")]": {
+      "time_ratio": 1.89,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Set\", \"Int\", \"symdiff\", \"Vector\", \"Vector\")]": {
+      "time_ratio": 1.32,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", (\"sort! forwards\", \"ascending\")]": {
+      "time_ratio": 0.67,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"sincos\", (\"argument reduction (hard) abs(x) < 4π/4\", \"positive argument\", \"Float32\")]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"parse\", \"Float64\"]": {
+      "time_ratio": 1.17,
+      "memory_ratio": 1.0
+    },
+    "[\"random\", \"sequences\", (\"randsubseq!\", \"MersenneTwister\", \"0.8\")]": {
+      "time_ratio": 1.68,
+      "memory_ratio": 1.0
+    },
+    "[\"random\", \"collections\", (\"rand\", \"ImplicitRNG\", \"small BitSet\")]": {
+      "time_ratio": 1.27,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Cartesian\", \"conditional_loop!\", \"Int32\", 4, 32)]": {
+      "time_ratio": 1.21,
+      "memory_ratio": 1.0
+    },
+    "[\"random\", \"collections\", (\"rand\", \"ImplicitRNG\", \"small String\")]": {
+      "time_ratio": 1.34,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atanh\", (\"one\", \"Float32\")]": {
+      "time_ratio": 1.11,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"sinh\", (\"2.0^-28 <= abs(x) < 22.0\", \"negative argument\", \"Float64\")]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"iteration\", (\"Dict\", \"Any\", \"iterate\")]": {
+      "time_ratio": 1.53,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"exp2\", (\"2pow35\", \"negative argument\", \"Float64\")]": {
+      "time_ratio": 0.54,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum2\", \"Bool\", 0)]": {
+      "time_ratio": 1.12,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Linear\", \"manual_example!\", \"Float32\", 4095)]": {
+      "time_ratio": 0.76,
+      "memory_ratio": 1.0
+    },
+    "[\"problem\", \"chaosgame\", \"chaosgame\"]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Set\", \"Int\", \"union\", \"Vector\")]": {
+      "time_ratio": 1.67,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"acos\", (\"one\", \"negative argument\", \"Float32\")]": {
+      "time_ratio": 0.87,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Cartesian\", \"conditional_loop!\", \"Int32\", 4, 63)]": {
+      "time_ratio": 1.35,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"queries & updates\", (\"Dict\", \"Int\", \"pop!\", \"unspecified\")]": {
+      "time_ratio": 1.39,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"collect\", \"all\", \"Float64\", 1)]": {
+      "time_ratio": 1.17,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"queries & updates\", (\"Vector\", \"Any\", \"pop!\", \"unspecified\")]": {
+      "time_ratio": 2.15,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"*\", \"Bool\", \"(true, true)\")]": {
+      "time_ratio": 1.22,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"sincos\", (\"argument reduction (easy) abs(x) < 4π/4\", \"positive argument\", \"Float32\")]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"collect\", \"all\", \"Bool\", 1)]": {
+      "time_ratio": 0.86,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"allocation elision view\", \"conditional\"]": {
+      "time_ratio": 0.45,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"iteration\", (\"IdDict\", \"String\", \"iterate second\")]": {
+      "time_ratio": 2.05,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"BitSet\", \"Int\", \"intersect\", \"Vector\")]": {
+      "time_ratio": 1.29,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"initialization\", (\"Set\", \"Int\", \"loop\")]": {
+      "time_ratio": 1.33,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"y infinite\", \"y positive\", \"x finite\", \"x positive\", \"Float32\")]": {
+      "time_ratio": 1.12,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"*\", \"Int8\", \"(true, true)\")]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan\", (\"very small\", \"positive argument\", \"Float64\")]": {
+      "time_ratio": 0.85,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"iteration\", (\"Set\", \"String\", \"iterate\")]": {
+      "time_ratio": 1.73,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"sinh\", (\"very large\", \"negative argument\", \"Float64\")]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"growth\", (\"push_multiple!\", 256)]": {
+      "time_ratio": 1.79,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumcartesian_view\", \"100000:-1:1\")]": {
+      "time_ratio": 1.53,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", (\"> q0.95\", \"Vector{Int8}\")]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", (\"sort forwards\", \"random\")]": {
+      "time_ratio": 0.66,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"mod2pi\", (\"argument reduction (easy) abs(x) < 9π/4\", \"positive argument\", \"Float64\")]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum3\", \"Float64\", 1)]": {
+      "time_ratio": 1.14,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"iteration\", (\"IdDict\", \"Int\", \"iterate\")]": {
+      "time_ratio": 1.77,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"exp2\", (\"2pow127\", \"negative argument\", \"Float32\")]": {
+      "time_ratio": 0.84,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", (\"sort! reverse\", \"random\")]": {
+      "time_ratio": 1.51,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", (\"> q0.99\", \"Vector{Bool}\")]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"broadcast\", \"typeargs\", (\"array\", 10)]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"BitSet\", \"Int\", \"union\", \"BitSet\")]": {
+      "time_ratio": 1.25,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"initialization\", (\"Vector\", \"Any\", \"loop\")]": {
+      "time_ratio": 1.69,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"expm1\", (\"small\", \"negative argument\", \"Float64\")]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"iteration\", (\"Vector\", \"String\", \"iterate second\")]": {
+      "time_ratio": 1.84,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Set\", \"Int\", \"intersect\", \"Vector\")]": {
+      "time_ratio": 1.53,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findprev\", (\"ispos\", \"Vector{Float32}\")]": {
+      "time_ratio": 0.8,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"queries & updates\", (\"Set\", \"String\", \"in\", \"false\")]": {
+      "time_ratio": 1.34,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumcolon_view\", \"100000:-1:1\")]": {
+      "time_ratio": 1.51,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"abs(y/x) high\", \"y positive\", \"x negative\", \"Float32\")]": {
+      "time_ratio": 1.11,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"mod2pi\", (\"argument reduction (easy) abs(x) > 2.0^20*π/2\", \"negative argument\", \"Float64\")]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findprev\", (\"Vector{Bool}\", \"50-50\")]": {
+      "time_ratio": 0.88,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"CartesianPartition\", \"inner\", \"Int32\", 3, 31)]": {
+      "time_ratio": 1.28,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"optimizations\", (\"Dict\", \"concrete\", \"Nothing\")]": {
+      "time_ratio": 1.68,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findnext\", (\"ispos\", \"Vector{Int64}\")]": {
+      "time_ratio": 0.83,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"*\", \"Bool\", \"(false, true)\")]": {
+      "time_ratio": 1.18,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan\", (\"zero\", \"Float64\")]": {
+      "time_ratio": 0.85,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"queries & updates\", (\"Vector\", \"Int\", \"pop!\", \"unspecified\")]": {
+      "time_ratio": 2.3,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"*\", \"ComplexF64\", \"(true, true)\")]": {
+      "time_ratio": 1.11,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Vector\", \"Int\", \"symdiff\", \"BitSet\")]": {
+      "time_ratio": 1.26,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"abs(y/x) high\", \"y negative\", \"x negative\", \"Float64\")]": {
+      "time_ratio": 0.48,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan\", (\"very large\", \"positive argument\", \"Float64\")]": {
+      "time_ratio": 0.79,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"y infinite\", \"y positive\", \"x finite\", \"x positive\", \"Float64\")]": {
+      "time_ratio": 0.44,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findprev\", (\"ispos\", \"Vector{UInt8}\")]": {
+      "time_ratio": 0.85,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"acos\", (\"0.5 <= abs(x) < 1\", \"positive argument\", \"Float32\")]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"issue 12165\", \"Float16\"]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", (\"sort reverse\", \"random\")]": {
+      "time_ratio": 1.51,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"exp2\", (\"2pow3\", \"negative argument\", \"Float64\")]": {
+      "time_ratio": 0.6,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", (\"sortperm! reverse\", \"ones\")]": {
+      "time_ratio": 0.7,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"CartesianPartition\", \"axpy!\", \"Float64\", 2, 31)]": {
+      "time_ratio": 0.74,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"mod2pi\", (\"argument reduction (easy) abs(x) < 9π/4\", \"negative argument\", \"Float64\")]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"queries & updates\", (\"Dict\", \"Any\", \"setindex!\", \"overwrite\")]": {
+      "time_ratio": 1.25,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"y infinite\", \"y negative\", \"x finite\", \"x negative\", \"Float64\")]": {
+      "time_ratio": 0.44,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"expm1\", (\"arg reduction II\", \"negative argument\", \"Float64\")]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Vector\", \"Int\", \"symdiff\", \"Vector\")]": {
+      "time_ratio": 1.26,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Set\", \"Int\", \"⊆\", \"self\")]": {
+      "time_ratio": 2.15,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"queries & updates\", (\"Dict\", \"Int\", \"setindex!\", \"new\")]": {
+      "time_ratio": 1.83,
+      "memory_ratio": 1.0
+    },
+    "[\"problem\", \"laplacian\", \"laplace_iter_vec\"]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_sum3\", \"Float32\", 1)]": {
+      "time_ratio": 0.88,
+      "memory_ratio": 1.0
+    },
+    "[\"random\", \"collections\", (\"rand\", \"ImplicitRNG\", \"small Vector\")]": {
+      "time_ratio": 2.44,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan\", (\"19/16 <= abs(x) < 39/16\", \"positive argument\", \"Float64\")]": {
+      "time_ratio": 0.87,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"mod2pi\", (\"argument reduction (easy) abs(x) < 8π/4\", \"positive argument\", \"Float64\")]": {
+      "time_ratio": 0.85,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"skipmissing\", \"collect\", \"Union{Nothing, Int64}\", 0)]": {
+      "time_ratio": 0.95,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"cos\", (\"argument reduction (easy) abs(x) < 3π/4\", \"negative argument\", \"Float64\", \"sin_kernel\")]": {
+      "time_ratio": 1.11,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"initialization\", (\"Set\", \"Int\", \"loop\", \"sizehint!\")]": {
+      "time_ratio": 1.28,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"cat\", (\"catnd\", 5)]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"queries & updates\", (\"IdDict\", \"Any\", \"in\", \"true\")]": {
+      "time_ratio": 1.25,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"BitSet\", \"Int\", \"symdiff!\", \"small\")]": {
+      "time_ratio": 1.27,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"abs(y/x) high\", \"y negative\", \"x positive\", \"Float64\")]": {
+      "time_ratio": 0.81,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Vector\", \"Int\", \"union\", \"Vector\", \"Vector\")]": {
+      "time_ratio": 1.48,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findnext\", (\"ispos\", \"Vector{UInt64}\")]": {
+      "time_ratio": 0.81,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"*\", \"Int8\", \"(false, true)\")]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"queries & updates\", (\"Set\", \"Int\", \"in\", \"false\")]": {
+      "time_ratio": 2.33,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"abs(y/x) high\", \"y infinite\", \"y negative\", \"x finite\", \"x negative\", \"Float64\")]": {
+      "time_ratio": 0.46,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findprev\", (\"ispos\", \"Vector{Float64}\")]": {
+      "time_ratio": 0.8,
+      "memory_ratio": 1.0
+    },
+    "[\"tuple\", \"linear algebra\", (\"matvec\", \"(4, 4)\", \"(4,)\")]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"sort\", \"Union{Missing, Bool}\", 1)]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"x zero\", \"y positive\", \"Float64\")]": {
+      "time_ratio": 0.42,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"identity\", \"Float64\", 1)]": {
+      "time_ratio": 1.17,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Set\", \"Int\", \"union\", \"Vector\", \"Vector\")]": {
+      "time_ratio": 1.65,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumeach_view\", \"100000:-1:1\")]": {
+      "time_ratio": 1.53,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"queries & updates\", (\"IdDict\", \"Int\", \"first\")]": {
+      "time_ratio": 1.88,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Cartesian\", \"inner\", \"Int32\", 3, 31)]": {
+      "time_ratio": 1.8,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"CartesianPartition\", \"inner\", \"Int32\", 2, 31)]": {
+      "time_ratio": 1.28,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"queries & updates\", (\"Dict\", \"String\", \"in\", \"true\")]": {
+      "time_ratio": 1.34,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Vector\", \"Int\", \"⊆\", \"Vector\")]": {
+      "time_ratio": 1.27,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"initialization\", (\"Vector\", \"Int\", \"loop\")]": {
+      "time_ratio": 1.96,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"allocation elision view\", \"no conditional\"]": {
+      "time_ratio": 1.15,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"equality\", (\"==\", \"BitArray\")]": {
+      "time_ratio": 1.25,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"*\", \"ComplexF64\", \"(false, true)\")]": {
+      "time_ratio": 1.21,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"asin\", (\"small\", \"positive argument\", \"Float32\")]": {
+      "time_ratio": 0.9,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"queries & updates\", (\"Vector\", \"String\", \"push!\")]": {
+      "time_ratio": 1.66,
+      "memory_ratio": 1.0
+    },
+    "[\"random\", \"collections\", (\"rand!\", \"ImplicitRNG\", \"small BitSet\")]": {
+      "time_ratio": 1.92,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"asin\", (\"abs(x) < 0.5\", \"positive argument\", \"Float32\")]": {
+      "time_ratio": 0.91,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_binaryop\", \"*\", \"Float32\", \"(false, false)\")]": {
+      "time_ratio": 1.26,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan\", (\"very small\", \"negative argument\", \"Float64\")]": {
+      "time_ratio": 0.85,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"sincos\", (\"argument reduction (easy) abs(x) < 4π/4\", \"negative argument\", \"Float32\")]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"problem\", \"stockcorr\", \"stockcorr\"]": {
+      "time_ratio": 1.36,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", (\"sort! reverse\", \"descending\")]": {
+      "time_ratio": 0.67,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Vector\", \"Int\", \"setdiff\", \"Set\")]": {
+      "time_ratio": 1.25,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"deletion\", (\"Set\", \"Int\", \"filter\")]": {
+      "time_ratio": 1.28,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"abs(y/x) high\", \"y positive\", \"x positive\", \"Float64\")]": {
+      "time_ratio": 0.81,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"abs\", \"Int8\", 1)]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"queries & updates\", (\"IdDict\", \"String\", \"in\", \"true\")]": {
+      "time_ratio": 1.6,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"reductions\", (\"sum\", \"Int64\")]": {
+      "time_ratio": 1.08,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Cartesian\", \"inner\", \"Int32\", 2, 31)]": {
+      "time_ratio": 0.5,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"18129\"]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Set\", \"Int\", \"setdiff!\", \"BitSet\")]": {
+      "time_ratio": 1.99,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"initialization\", (\"Vector\", \"Int\", \"loop\", \"sizehint!\")]": {
+      "time_ratio": 2.22,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Set\", \"Int\", \"symdiff\", \"Set\", \"Set\")]": {
+      "time_ratio": 1.32,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Set\", \"Int\", \"symdiff\", \"BitSet\")]": {
+      "time_ratio": 1.34,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"identity\", \"Float32\", 1)]": {
+      "time_ratio": 1.22,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", (\"sort forwards\", \"descending\")]": {
+      "time_ratio": 1.3,
+      "memory_ratio": 1.0
+    },
+    "[\"misc\", \"foldl\", \"foldl(+, filter(...))\"]": {
+      "time_ratio": 1.28,
+      "memory_ratio": 1.0
+    },
+    "[\"random\", \"ranges\", (\"rand\", \"MersenneTwister\", \"BigInt\", \"RangeGenerator(1:18446744073709551616)\")]": {
+      "time_ratio": 1.35,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"y finite\", \"y positive\", \"x infinite\", \"x negative\", \"Float64\")]": {
+      "time_ratio": 0.39,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"exp2\", (\"2pow1023\", \"negative argument\", \"Float64\")]": {
+      "time_ratio": 0.77,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"tanh\", (\"2f0^-12 <= abs(x) < 1f0\", \"negative argument\", \"Float32\")]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"problem\", \"spellcheck\", \"spellcheck\"]": {
+      "time_ratio": 1.1,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"queries & updates\", (\"Set\", \"Int\", \"pop!\", \"unspecified\")]": {
+      "time_ratio": 1.34,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan\", (\"0 <= abs(x) < 7/16\", \"positive argument\", \"Float64\")]": {
+      "time_ratio": 0.84,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"cosh\", (\"very small\", \"positive argument\", \"Float32\")]": {
+      "time_ratio": 0.92,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"deletion\", (\"IdDict\", \"Int\", \"filter!\")]": {
+      "time_ratio": 2.02,
+      "memory_ratio": 1.0
+    },
+    "[\"dates\", \"parse\", (\"DateTime\", \"DateFormat\")]": {
+      "time_ratio": 1.05,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"abs\", \"Bool\", 0)]": {
+      "time_ratio": 0.82,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"perf_countequals\", \"Float32\")]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"iteration\", (\"IdDict\", \"String\", \"iterate\")]": {
+      "time_ratio": 2.23,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"BitSet\", \"Int\", \"intersect!\", \"big\")]": {
+      "time_ratio": 1.52,
+      "memory_ratio": 1.0
+    },
+    "[\"dates\", \"construction\", \"Date\"]": {
+      "time_ratio": 1.12,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"abs(y/x) small\", \"y positive\", \"x negative\", \"Float64\")]": {
+      "time_ratio": 0.47,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"x one\", \"Float64\")]": {
+      "time_ratio": 0.71,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan\", (\"11/16 <= abs(x) < 19/16\", \"positive argument\", \"Float64\")]": {
+      "time_ratio": 0.84,
+      "memory_ratio": 1.0
+    },
+    "[\"random\", \"types\", (\"randn\", \"ImplicitRNG\", \"Float64\")]": {
+      "time_ratio": 1.71,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"iteration\", (\"Dict\", \"String\", \"iterate second\")]": {
+      "time_ratio": 1.58,
+      "memory_ratio": 1.0
+    },
+    "[\"array\", \"index\", (\"sumlinear_view\", \"100000:-1:1\")]": {
+      "time_ratio": 1.53,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"cbrt\", (\"large\", \"negative argument\", \"Float32\")]": {
+      "time_ratio": 1.18,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"queries & updates\", (\"IdDict\", \"Int\", \"in\", \"false\")]": {
+      "time_ratio": 1.26,
+      "memory_ratio": 1.0
+    },
+    "[\"random\", \"collections\", (\"rand!\", \"ImplicitRNG\", \"small Set\")]": {
+      "time_ratio": 1.64,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"tanh\", (\"very large\", \"positive argument\", \"Float32\")]": {
+      "time_ratio": 0.8,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"collect\", \"all\", \"Float32\", 1)]": {
+      "time_ratio": 1.22,
+      "memory_ratio": 1.0
+    },
+    "[\"simd\", (\"Cartesian\", \"axpy!\", \"Float32\", 2, 31)]": {
+      "time_ratio": 0.79,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"mergesort\", (\"sort! forwards\", \"ones\")]": {
+      "time_ratio": 1.34,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan\", (\"very large\", \"negative argument\", \"Float64\")]": {
+      "time_ratio": 0.77,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"abs(y/x) safe (large)\", \"y negative\", \"x positive\", \"Float64\")]": {
+      "time_ratio": 0.79,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Vector\", \"Int\", \"union\")]": {
+      "time_ratio": 1.48,
+      "memory_ratio": 1.0
+    },
+    "[\"random\", \"collections\", (\"rand\", \"MersenneTwister\", \"'a':'z'\")]": {
+      "time_ratio": 1.76,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"abs(y/x) safe (large)\", \"y positive\", \"x negative\", \"Float64\")]": {
+      "time_ratio": 0.82,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"queries & updates\", (\"IdDict\", \"String\", \"in\", \"false\")]": {
+      "time_ratio": 1.26,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"y infinite\", \"y positive\", \"x finite\", \"x negative\", \"Float64\")]": {
+      "time_ratio": 0.45,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"abs\", \"Float64\", 0)]": {
+      "time_ratio": 1.4,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"sort\", \"Float32\", 0)]": {
+      "time_ratio": 1.07,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"sort\", \"Int64\", 0)]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"exp2\", (\"small\", \"positive argument\", \"Float32\")]": {
+      "time_ratio": 0.5,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Set\", \"Int\", \"intersect\", \"BitSet\")]": {
+      "time_ratio": 1.49,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findnext\", (\"Vector{Bool}\", \"50-50\")]": {
+      "time_ratio": 0.8,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"abs\", \"Int8\", 0)]": {
+      "time_ratio": 0.88,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"iteration\", (\"Dict\", \"String\", \"iterate\")]": {
+      "time_ratio": 1.54,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"queries & updates\", (\"IdDict\", \"Int\", \"getindex\")]": {
+      "time_ratio": 1.29,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"deletion\", (\"Vector\", \"Int\", \"pop!\")]": {
+      "time_ratio": 1.91,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"mod2pi\", (\"argument reduction (easy) abs(x) < 2.0^20π/4\", \"negative argument\", \"Float64\")]": {
+      "time_ratio": 1.09,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"map\", \"*\", \"Int64\", \"(false, false)\")]": {
+      "time_ratio": 1.2,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"y finite\", \"y negative\", \"x infinite\", \"x positive\", \"Float64\")]": {
+      "time_ratio": 0.39,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"atan2\", (\"y finite\", \"y negative\", \"x infinite\", \"x negative\", \"Float32\")]": {
+      "time_ratio": 1.17,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"sin\", (\"argument reduction (easy) abs(x) < 9π/4\", \"positive argument\", \"Float64\", \"sin_kernel\")]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"scalar\", \"expm1\", (\"medium\", \"positive argument\", \"Float64\")]": {
+      "time_ratio": 0.87,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findall\", (\"> q0.5\", \"Vector{Int8}\")]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"optimizations\", (\"IdDict\", \"concrete\", \"Nothing\")]": {
+      "time_ratio": 1.29,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"initialization\", (\"Dict\", \"Int\", \"loop\")]": {
+      "time_ratio": 1.28,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"queries & updates\", (\"Set\", \"String\", \"pop!\", \"specified\")]": {
+      "time_ratio": 1.26,
+      "memory_ratio": 1.0
+    },
+    "[\"random\", \"collections\", (\"rand!\", \"ImplicitRNG\", \"large Dict\")]": {
+      "time_ratio": 1.38,
+      "memory_ratio": 1.0
+    },
+    "[\"find\", \"findprev\", (\"ispos\", \"Vector{Int8}\")]": {
+      "time_ratio": 0.89,
+      "memory_ratio": 1.0
+    },
+    "[\"random\", \"ranges\", (\"rand\", \"MersenneTwister\", \"BigInt\", \"RangeGenerator(1:18446744073709551615)\")]": {
+      "time_ratio": 1.26,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"abs\", \"Float32\", 0)]": {
+      "time_ratio": 1.25,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"queries & updates\", (\"Vector\", \"String\", \"in\", \"false\")]": {
+      "time_ratio": 3.86,
+      "memory_ratio": 1.0
+    },
+    "[\"random\", \"collections\", (\"rand\", \"ImplicitRNG\", \"small Dict\")]": {
+      "time_ratio": 1.63,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"set operations\", (\"Set\", \"Int\", \"union\", \"BitSet\", \"BitSet\")]": {
+      "time_ratio": 1.65,
+      "memory_ratio": 1.0
+    },
+    "[\"union\", \"array\", (\"broadcast\", \"*\", \"Bool\", \"(false, true)\")]": {
+      "time_ratio": 0.8,
+      "memory_ratio": 1.0
+    },
+    "[\"collection\", \"queries & updates\", (\"Vector\", \"Any\", \"push!\")]": {
+      "time_ratio": 1.53,
+      "memory_ratio": 1.0
+    }
+  }
+}

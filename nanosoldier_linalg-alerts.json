@@ -1,0 +1,440 @@
+{
+  "threshold": 1.05,
+  "count": 48,
+  "group": "nanosoldier_linalg",
+  "generated": "2026-03-22T15:56:09.485",
+  "alerts": [
+    {
+      "latest_mean_ms": 390.0,
+      "commit": "d03508a",
+      "ratio": 3.9,
+      "timestamp": "2026-03-10T00:40:50.823",
+      "benchmark": "linalg/arithmetic/(\\-\\/\\Matrix\\/\\Matrix\\/1024)",
+      "group": "nanosoldier_linalg",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 343.0,
+      "commit": "018a9ae",
+      "ratio": 3.43,
+      "timestamp": "2026-03-09T03:20:30.585",
+      "benchmark": "linalg/arithmetic/(\\\\/HermitianSparseWithNonZeroPivots/Vector/256)",
+      "group": "nanosoldier_linalg",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 330.0,
+      "commit": "cd660ad",
+      "ratio": 3.3,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "linalg/blas/scal!",
+      "group": "nanosoldier_linalg",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 325.0,
+      "commit": "cd660ad",
+      "ratio": 3.25,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "linalg/blas/axpy!",
+      "group": "nanosoldier_linalg",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 308.0,
+      "commit": "018a9ae",
+      "ratio": 3.08,
+      "timestamp": "2026-03-09T03:20:30.585",
+      "benchmark": "linalg/arithmetic/(\\\\/HermitianSparseWithNonZeroPivots/Vector/1024)",
+      "group": "nanosoldier_linalg",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 301.0,
+      "commit": "d03508a",
+      "ratio": 3.01,
+      "timestamp": "2026-03-10T00:40:50.823",
+      "benchmark": "linalg/arithmetic/(\\+\\/\\typename(Bidiagonal)\\/\\typename(Bidiagonal)\\/1024)",
+      "group": "nanosoldier_linalg",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 222.0,
+      "commit": "b7ff634",
+      "ratio": 2.22,
+      "timestamp": "2026-03-10T23:30:03.073",
+      "benchmark": "linalg/arithmetic/(+/typename(LowerTriangular)/typename(LowerTriangular)/1024)",
+      "group": "nanosoldier_linalg",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 214.0,
+      "commit": "c85eee5",
+      "ratio": 2.14,
+      "timestamp": "2026-03-10T00:40:58.856",
+      "benchmark": "linalg/arithmetic/(*/typename(Diagonal)/typename(Diagonal)/1024)",
+      "group": "nanosoldier_linalg",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 211.0,
+      "commit": "be17de3",
+      "ratio": 2.11,
+      "timestamp": "2026-03-10T00:41:11.166",
+      "benchmark": "linalg/factorization/(\\eigen\\/\\typename(Diagonal)\\/256)",
+      "group": "nanosoldier_linalg",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 195.0,
+      "commit": "b46df09",
+      "ratio": 1.95,
+      "timestamp": "2026-03-10T23:30:08.960",
+      "benchmark": "linalg/arithmetic/(cumsum!/Int32/1024)",
+      "group": "nanosoldier_linalg",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 195.0,
+      "commit": "b46df09",
+      "ratio": 1.95,
+      "timestamp": "2026-03-10T23:30:08.960",
+      "benchmark": "linalg/arithmetic/(cumsum!/Int64/1024)",
+      "group": "nanosoldier_linalg",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 187.0,
+      "commit": "b46df09",
+      "ratio": 1.87,
+      "timestamp": "2026-03-10T23:30:08.960",
+      "benchmark": "linalg/arithmetic/(cumsum!/Int32/256)",
+      "group": "nanosoldier_linalg",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 182.0,
+      "commit": "b46df09",
+      "ratio": 1.82,
+      "timestamp": "2026-03-10T23:30:08.960",
+      "benchmark": "linalg/arithmetic/(cumsum!/Int64/256)",
+      "group": "nanosoldier_linalg",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 177.0,
+      "commit": "b2adc93",
+      "ratio": 1.77,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "linalg/arithmetic/(-/typename(SymTridiagonal)/typename(SymTridiagonal)/1024)",
+      "group": "nanosoldier_linalg",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 167.0,
+      "commit": "b6bca19",
+      "ratio": 1.67,
+      "timestamp": "2026-03-10T23:30:05.064",
+      "benchmark": "linalg/factorization/(eigen/typename(Diagonal)/256)",
+      "group": "nanosoldier_linalg",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 155.0,
+      "commit": "b2adc93",
+      "ratio": 1.55,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "linalg/arithmetic/(-/typename(UpperTriangular)/typename(UpperTriangular)/256)",
+      "group": "nanosoldier_linalg",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 155.0,
+      "commit": "b2adc93",
+      "ratio": 1.55,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "linalg/arithmetic/(+/typename(LowerTriangular)/typename(LowerTriangular)/256)",
+      "group": "nanosoldier_linalg",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 155.0,
+      "commit": "b2adc93",
+      "ratio": 1.55,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "linalg/arithmetic/(+/typename(SymTridiagonal)/typename(SymTridiagonal)/1024)",
+      "group": "nanosoldier_linalg",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 155.0,
+      "commit": "b2adc93",
+      "ratio": 1.55,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "linalg/arithmetic/(-/Matrix/Matrix/256)",
+      "group": "nanosoldier_linalg",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 153.0,
+      "commit": "b2adc93",
+      "ratio": 1.53,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "linalg/arithmetic/(-/typename(LowerTriangular)/typename(LowerTriangular)/256)",
+      "group": "nanosoldier_linalg",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 152.0,
+      "commit": "b421eca",
+      "ratio": 1.52,
+      "timestamp": "2026-03-10T23:30:10.268",
+      "benchmark": "linalg/arithmetic/(\\5-arg mul!\\/3)",
+      "group": "nanosoldier_linalg",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 152.0,
+      "commit": "b2adc93",
+      "ratio": 1.52,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "linalg/arithmetic/(+/Matrix/Matrix/256)",
+      "group": "nanosoldier_linalg",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 152.0,
+      "commit": "b2adc93",
+      "ratio": 1.52,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "linalg/arithmetic/(+/typename(UpperTriangular)/typename(UpperTriangular)/256)",
+      "group": "nanosoldier_linalg",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 151.0,
+      "commit": "b46df09",
+      "ratio": 1.51,
+      "timestamp": "2026-03-10T23:30:08.960",
+      "benchmark": "linalg/arithmetic/(cumsum!/Float64/1024)",
+      "group": "nanosoldier_linalg",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 150.0,
+      "commit": "ce3909c",
+      "ratio": 1.5,
+      "timestamp": "2026-03-10T00:40:52.888",
+      "benchmark": "linalg/arithmetic/(3-arg mul!/2)",
+      "group": "nanosoldier_linalg",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 150.0,
+      "commit": "b46df09",
+      "ratio": 1.5,
+      "timestamp": "2026-03-10T23:30:08.960",
+      "benchmark": "linalg/arithmetic/(cumsum!/Float32/1024)",
+      "group": "nanosoldier_linalg",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 146.0,
+      "commit": "b46df09",
+      "ratio": 1.46,
+      "timestamp": "2026-03-10T23:30:08.960",
+      "benchmark": "linalg/arithmetic/(cumsum!/Float64/256)",
+      "group": "nanosoldier_linalg",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 145.0,
+      "commit": "b46df09",
+      "ratio": 1.45,
+      "timestamp": "2026-03-10T23:30:08.960",
+      "benchmark": "linalg/arithmetic/(cumsum!/Float32/256)",
+      "group": "nanosoldier_linalg",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 144.0,
+      "commit": "b146a70",
+      "ratio": 1.44,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "linalg/arithmetic/(+/typename(Tridiagonal)/typename(Tridiagonal)/256)",
+      "group": "nanosoldier_linalg",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 138.0,
+      "commit": "b146a70",
+      "ratio": 1.38,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "linalg/arithmetic/(-/typename(Tridiagonal)/typename(Tridiagonal)/256)",
+      "group": "nanosoldier_linalg",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 137.0,
+      "commit": "b146a70",
+      "ratio": 1.37,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "linalg/arithmetic/(*/typename(Diagonal)/typename(Diagonal)/256)",
+      "group": "nanosoldier_linalg",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 136.0,
+      "commit": "b146a70",
+      "ratio": 1.36,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "linalg/arithmetic/(*/typename(Diagonal)/Vector/256)",
+      "group": "nanosoldier_linalg",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 130.0,
+      "commit": "b146a70",
+      "ratio": 1.3,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "linalg/arithmetic/(+/typename(Diagonal)/typename(Diagonal)/256)",
+      "group": "nanosoldier_linalg",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 129.0,
+      "commit": "b146a70",
+      "ratio": 1.29,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "linalg/arithmetic/(-/Vector/Vector/256)",
+      "group": "nanosoldier_linalg",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 128.0,
+      "commit": "b146a70",
+      "ratio": 1.28,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "linalg/arithmetic/(*/typename(SymTridiagonal)/Vector/256)",
+      "group": "nanosoldier_linalg",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 127.0,
+      "commit": "b146a70",
+      "ratio": 1.27,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "linalg/arithmetic/(+/Vector/Vector/256)",
+      "group": "nanosoldier_linalg",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 127.0,
+      "commit": "b146a70",
+      "ratio": 1.27,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "linalg/arithmetic/(*/typename(Bidiagonal)/Vector/256)",
+      "group": "nanosoldier_linalg",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 123.0,
+      "commit": "b146a70",
+      "ratio": 1.23,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "linalg/arithmetic/(+/typename(SymTridiagonal)/typename(SymTridiagonal)/256)",
+      "group": "nanosoldier_linalg",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 120.0,
+      "commit": "b146a70",
+      "ratio": 1.2,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "linalg/arithmetic/(\\\\/typename(Tridiagonal)/Vector/256)",
+      "group": "nanosoldier_linalg",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 120.0,
+      "commit": "b146a70",
+      "ratio": 1.2,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "linalg/arithmetic/(*/typename(Tridiagonal)/Vector/256)",
+      "group": "nanosoldier_linalg",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 120.0,
+      "commit": "b146a70",
+      "ratio": 1.2,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "linalg/factorization/(lu/typename(Tridiagonal)/256)",
+      "group": "nanosoldier_linalg",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 118.0,
+      "commit": "b146a70",
+      "ratio": 1.18,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "linalg/arithmetic/(-/typename(SymTridiagonal)/typename(SymTridiagonal)/256)",
+      "group": "nanosoldier_linalg",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 118.0,
+      "commit": "b146a70",
+      "ratio": 1.18,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "linalg/arithmetic/(+/typename(Bidiagonal)/typename(Bidiagonal)/256)",
+      "group": "nanosoldier_linalg",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 116.0,
+      "commit": "b146a70",
+      "ratio": 1.16,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "linalg/arithmetic/(-/typename(Bidiagonal)/typename(Bidiagonal)/256)",
+      "group": "nanosoldier_linalg",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 111.0,
+      "commit": "b146a70",
+      "ratio": 1.11,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "linalg/arithmetic/(//typename(Diagonal)/typename(Diagonal)/256)",
+      "group": "nanosoldier_linalg",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 109.0,
+      "commit": "b146a70",
+      "ratio": 1.09,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "linalg/arithmetic/(-/typename(Diagonal)/typename(Diagonal)/256)",
+      "group": "nanosoldier_linalg",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 109.0,
+      "commit": "b146a70",
+      "ratio": 1.09,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "linalg/arithmetic/(\\\\/typename(Diagonal)/Vector/256)",
+      "group": "nanosoldier_linalg",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 106.0,
+      "commit": "b146a70",
+      "ratio": 1.06,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "linalg/arithmetic/(\\\\/typename(SymTridiagonal)/Vector/256)",
+      "group": "nanosoldier_linalg",
+      "trend": "stable"
+    }
+  ]
+}

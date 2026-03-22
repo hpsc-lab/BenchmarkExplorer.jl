@@ -1,0 +1,1457 @@
+{
+  "threshold": 1.05,
+  "count": 161,
+  "group": "nanosoldier_sparse",
+  "generated": "2026-03-22T15:56:13.599",
+  "alerts": [
+    {
+      "latest_mean_ms": 1595.0,
+      "commit": "b00614a",
+      "ratio": 15.95,
+      "timestamp": "2026-03-10T23:30:19.395",
+      "benchmark": "sparse/transpose/(transpose/(20000/20000))",
+      "group": "nanosoldier_sparse",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 1050.0,
+      "commit": "b00614a",
+      "ratio": 10.5,
+      "timestamp": "2026-03-10T23:30:19.395",
+      "benchmark": "sparse/transpose/(transpose/(20000/10000))",
+      "group": "nanosoldier_sparse",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 446.0,
+      "commit": "b00614a",
+      "ratio": 4.46,
+      "timestamp": "2026-03-10T23:30:19.395",
+      "benchmark": "sparse/transpose/(adjoint/(20000/10000))",
+      "group": "nanosoldier_sparse",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 372.0,
+      "commit": "be17de3",
+      "ratio": 3.72,
+      "timestamp": "2026-03-10T00:41:11.166",
+      "benchmark": "sparse/matmul/(\\At_mul_Bt!\\/\\dense 4000x40/sparse 400x4000 -> dense 40x400\\)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 366.0,
+      "commit": "be17de3",
+      "ratio": 3.66,
+      "timestamp": "2026-03-10T00:41:11.166",
+      "benchmark": "sparse/matmul/(\\At_mul_Bt\\/\\dense 50x50/sparse 5x50 -> dense 50x5\\)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 306.0,
+      "commit": "be17de3",
+      "ratio": 3.06,
+      "timestamp": "2026-03-10T00:41:11.166",
+      "benchmark": "sparse/matmul/(\\Ac_mul_Bc\\/\\dense 50x50/sparse 5x50 -> dense 50x5\\)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 286.0,
+      "commit": "be17de3",
+      "ratio": 2.86,
+      "timestamp": "2026-03-10T00:41:11.166",
+      "benchmark": "sparse/matmul/(\\Ac_mul_Bc!\\/\\dense 2000x20/sparse 200x2000 -> dense 20x200\\)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 256.0,
+      "commit": "03de024",
+      "ratio": 2.56,
+      "timestamp": "2026-03-09T03:20:31.529",
+      "benchmark": "sparse/index/(spmat/range/10)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 252.0,
+      "commit": "03de024",
+      "ratio": 2.52,
+      "timestamp": "2026-03-09T03:20:31.529",
+      "benchmark": "sparse/index/(spmat/OneTo/10)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 235.0,
+      "commit": "be17de3",
+      "ratio": 2.35,
+      "timestamp": "2026-03-10T00:41:11.166",
+      "benchmark": "sparse/matmul/(\\Ac_mul_Bc!\\/\\dense 200x200/sparse 20x200 -> dense 200x20\\)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 211.0,
+      "commit": "be17de3",
+      "ratio": 2.11,
+      "timestamp": "2026-03-10T00:41:11.166",
+      "benchmark": "sparse/matmul/(\\At_mul_Bt\\/\\dense 500x5/sparse 50x500 -> dense 5x50\\)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 203.0,
+      "commit": "be17de3",
+      "ratio": 2.03,
+      "timestamp": "2026-03-10T00:41:11.166",
+      "benchmark": "sparse/matmul/(\\Ac_mul_Bc\\/\\dense 500x5/sparse 50x500 -> dense 5x50\\)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 201.0,
+      "commit": "be17de3",
+      "ratio": 2.01,
+      "timestamp": "2026-03-10T00:41:11.166",
+      "benchmark": "sparse/matmul/(\\At_mul_Bt!\\/\\dense 400x400/sparse 40x400 -> dense 400x40\\)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 195.0,
+      "commit": "03de024",
+      "ratio": 1.95,
+      "timestamp": "2026-03-09T03:20:31.529",
+      "benchmark": "sparse/index/(spmat/logical/10)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 191.0,
+      "commit": "be17de3",
+      "ratio": 1.91,
+      "timestamp": "2026-03-10T00:41:11.166",
+      "benchmark": "sparse/matmul/(\\At_mul_Bt!\\/\\dense 40x40/sparse 4000x40 -> dense 40x4000\\)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 182.0,
+      "commit": "b0154e3",
+      "ratio": 1.82,
+      "timestamp": "2026-03-10T23:30:19.065",
+      "benchmark": "sparse/matmul/(\\At_mul_B\\/\\dense 50x5/sparse 50x500 -> dense 5x500\\)",
+      "group": "nanosoldier_sparse",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 177.0,
+      "commit": "be17de3",
+      "ratio": 1.77,
+      "timestamp": "2026-03-10T00:41:11.166",
+      "benchmark": "sparse/matmul/(\\At_mul_Bt!\\/\\dense 4000x40/sparse 4000x4000 -> dense 40x4000\\)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 177.0,
+      "commit": "aebcebc",
+      "ratio": 1.77,
+      "timestamp": "2026-03-10T23:30:21.284",
+      "benchmark": "sparse/matmul/(Ac_mul_Bc/dense 500x5/sparse 50x500 -> dense 5x50)",
+      "group": "nanosoldier_sparse",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 173.0,
+      "commit": "b0154e3",
+      "ratio": 1.73,
+      "timestamp": "2026-03-10T23:30:19.065",
+      "benchmark": "sparse/matmul/(\\At_mul_B\\/\\dense 500x5/sparse 500x500 -> dense 5x500\\)",
+      "group": "nanosoldier_sparse",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 172.0,
+      "commit": "b0154e3",
+      "ratio": 1.72,
+      "timestamp": "2026-03-10T23:30:19.065",
+      "benchmark": "sparse/matmul/(\\At_mul_B\\/\\dense 5x5/sparse 5x500 -> dense 5x500\\)",
+      "group": "nanosoldier_sparse",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 172.0,
+      "commit": "b6bca19",
+      "ratio": 1.72,
+      "timestamp": "2026-03-10T23:30:05.064",
+      "benchmark": "sparse/matmul/(A_mul_B/sparse 500x50/dense 50x5 -> dense 500x5)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 172.0,
+      "commit": "b00614a",
+      "ratio": 1.72,
+      "timestamp": "2026-03-10T23:30:19.395",
+      "benchmark": "sparse/transpose/(adjoint/(20000/20000))",
+      "group": "nanosoldier_sparse",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 171.0,
+      "commit": "aebcebc",
+      "ratio": 1.71,
+      "timestamp": "2026-03-10T23:30:21.284",
+      "benchmark": "sparse/matmul/(Ac_mul_Bc/dense 500x5/sparse 500x500 -> dense 5x500)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 170.0,
+      "commit": "b6bca19",
+      "ratio": 1.7,
+      "timestamp": "2026-03-10T23:30:05.064",
+      "benchmark": "sparse/matmul/(A_mul_Bt/sparse 500x50/dense 5x50 -> dense 500x5)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 169.0,
+      "commit": "b7ff634",
+      "ratio": 1.69,
+      "timestamp": "2026-03-10T23:30:03.073",
+      "benchmark": "sparse/index/(spvec/integer/10000)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 169.0,
+      "commit": "03de024",
+      "ratio": 1.69,
+      "timestamp": "2026-03-09T03:20:31.529",
+      "benchmark": "sparse/index/(spmat/col/logical/100)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 168.0,
+      "commit": "be17de3",
+      "ratio": 1.68,
+      "timestamp": "2026-03-10T00:41:11.166",
+      "benchmark": "sparse/matmul/(\\At_mul_Bt!\\/\\dense 400x40/sparse 4000x400 -> dense 40x4000\\)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 168.0,
+      "commit": "b6bca19",
+      "ratio": 1.68,
+      "timestamp": "2026-03-10T23:30:05.064",
+      "benchmark": "sparse/matmul/(A_mul_Bt/sparse 500x5/dense 5x5 -> dense 500x5)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 166.0,
+      "commit": "b6bca19",
+      "ratio": 1.66,
+      "timestamp": "2026-03-10T23:30:05.064",
+      "benchmark": "sparse/matmul/(A_mul_Bt/dense 500x5/sparse 5x5 -> dense 500x5)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 165.0,
+      "commit": "b6bca19",
+      "ratio": 1.65,
+      "timestamp": "2026-03-10T23:30:05.064",
+      "benchmark": "sparse/matmul/(A_mul_Bc/sparse 500x5/dense 5x5 -> dense 500x5)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 165.0,
+      "commit": "b6bca19",
+      "ratio": 1.65,
+      "timestamp": "2026-03-10T23:30:05.064",
+      "benchmark": "sparse/matmul/(A_mul_B/sparse 50x5/dense 5x50 -> dense 50x50)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 165.0,
+      "commit": "b6bca19",
+      "ratio": 1.65,
+      "timestamp": "2026-03-10T23:30:05.064",
+      "benchmark": "sparse/matmul/(A_mul_B/sparse 500x5/dense 5x5 -> dense 500x5)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 163.0,
+      "commit": "b6bca19",
+      "ratio": 1.63,
+      "timestamp": "2026-03-10T23:30:05.064",
+      "benchmark": "sparse/matmul/(A_mul_Bt/sparse 50x5/dense 50x5 -> dense 50x50)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 163.0,
+      "commit": "b6bca19",
+      "ratio": 1.63,
+      "timestamp": "2026-03-10T23:30:05.064",
+      "benchmark": "sparse/matmul/(A_mul_Bc/sparse 500x50/dense 5x50 -> dense 500x5)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 160.0,
+      "commit": "b16a231",
+      "ratio": 1.6,
+      "timestamp": "2026-03-10T23:30:16.214",
+      "benchmark": "sparse/transpose/(transpose/(600/600))",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 159.0,
+      "commit": "b146a70",
+      "ratio": 1.59,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "sparse/matmul/(Ac_mul_B!/dense 20x20/sparse 20x2000 -> dense 20x2000)",
+      "group": "nanosoldier_sparse",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 159.0,
+      "commit": "be17de3",
+      "ratio": 1.59,
+      "timestamp": "2026-03-10T00:41:11.166",
+      "benchmark": "sparse/matmul/(\\At_mul_Bt\\/\\dense 5x500/sparse 5x5 -> dense 500x5\\)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 157.0,
+      "commit": "be17de3",
+      "ratio": 1.57,
+      "timestamp": "2026-03-10T00:41:11.166",
+      "benchmark": "sparse/matmul/(\\Ac_mul_Bc!\\/\\dense 2000x20/sparse 2000x2000 -> dense 20x2000\\)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 157.0,
+      "commit": "b6bca19",
+      "ratio": 1.57,
+      "timestamp": "2026-03-10T23:30:05.064",
+      "benchmark": "sparse/matmul/(A_mul_Bt/dense 50x50/sparse 50x50 -> dense 50x50)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 155.0,
+      "commit": "b0154e3",
+      "ratio": 1.55,
+      "timestamp": "2026-03-10T23:30:19.065",
+      "benchmark": "sparse/matmul/(\\At_mul_B!\\/\\sparse 400x4000/dense 400x40 -> dense 4000x40\\)",
+      "group": "nanosoldier_sparse",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 154.0,
+      "commit": "be17de3",
+      "ratio": 1.54,
+      "timestamp": "2026-03-10T00:41:11.166",
+      "benchmark": "sparse/matmul/(\\At_mul_Bt\\/\\dense 500x5/sparse 500x500 -> dense 5x500\\)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 154.0,
+      "commit": "b146a70",
+      "ratio": 1.54,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "sparse/matmul/(Ac_mul_B!/dense 200x20/sparse 200x2000 -> dense 20x2000)",
+      "group": "nanosoldier_sparse",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 153.0,
+      "commit": "b6bca19",
+      "ratio": 1.53,
+      "timestamp": "2026-03-10T23:30:05.064",
+      "benchmark": "sparse/matmul/(A_mul_Bc/sparse 50x5/dense 50x5 -> dense 50x50)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 153.0,
+      "commit": "b146a70",
+      "ratio": 1.53,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "sparse/matmul/(Ac_mul_B/dense 50x5/sparse 50x500 -> dense 5x500)",
+      "group": "nanosoldier_sparse",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 153.0,
+      "commit": "aebcebc",
+      "ratio": 1.53,
+      "timestamp": "2026-03-10T23:30:21.284",
+      "benchmark": "sparse/matmul/(Ac_mul_Bc!/dense 20x2000/sparse 20x20 -> dense 2000x20)",
+      "group": "nanosoldier_sparse",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 152.0,
+      "commit": "b6bca19",
+      "ratio": 1.52,
+      "timestamp": "2026-03-10T23:30:05.064",
+      "benchmark": "sparse/matmul/(A_mul_B/dense 500x5/sparse 5x5 -> dense 500x5)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 151.0,
+      "commit": "b146a70",
+      "ratio": 1.51,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "sparse/matmul/(Ac_mul_B!/dense 200x200/sparse 200x200 -> dense 200x200)",
+      "group": "nanosoldier_sparse",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 151.0,
+      "commit": "aebcebc",
+      "ratio": 1.51,
+      "timestamp": "2026-03-10T23:30:21.284",
+      "benchmark": "sparse/matmul/(Ac_mul_Bc!/dense 20x200/sparse 200x20 -> dense 200x200)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 151.0,
+      "commit": "b146a70",
+      "ratio": 1.51,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "sparse/matmul/(Ac_mul_B/dense 500x5/sparse 500x500 -> dense 5x500)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 150.0,
+      "commit": "b146a70",
+      "ratio": 1.5,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "sparse/matmul/(A_mul_Bc!/dense 2000x20/sparse 20x20 -> dense 2000x20)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 149.0,
+      "commit": "be17de3",
+      "ratio": 1.49,
+      "timestamp": "2026-03-10T00:41:11.166",
+      "benchmark": "sparse/matmul/(\\At_mul_Bt!\\/\\dense 400x400/sparse 400x400 -> dense 400x400\\)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 149.0,
+      "commit": "b146a70",
+      "ratio": 1.49,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "sparse/matmul/(Ac_mul_B!/dense 20x200/sparse 20x200 -> dense 200x200)",
+      "group": "nanosoldier_sparse",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 148.0,
+      "commit": "b2adc93",
+      "ratio": 1.48,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "sparse/matmul/(Ac_mul_B/sparse 500x500/dense 500x5 -> dense 500x5)",
+      "group": "nanosoldier_sparse",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 148.0,
+      "commit": "b2adc93",
+      "ratio": 1.48,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "sparse/matmul/(Ac_mul_B/sparse 50x50/dense 50x50 -> dense 50x50)",
+      "group": "nanosoldier_sparse",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 148.0,
+      "commit": "03de024",
+      "ratio": 1.48,
+      "timestamp": "2026-03-09T03:20:31.529",
+      "benchmark": "sparse/index/(spmat/col/array/10)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 146.0,
+      "commit": "b146a70",
+      "ratio": 1.46,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "sparse/matmul/(Ac_mul_B!/dense 2000x20/sparse 2000x200 -> dense 20x200)",
+      "group": "nanosoldier_sparse",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 146.0,
+      "commit": "cd660ad",
+      "ratio": 1.46,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "sparse/matmul/(A_mul_Bc!/sparse 2000x20/dense 20x20 -> dense 2000x20)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 146.0,
+      "commit": "cd660ad",
+      "ratio": 1.46,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "sparse/matmul/(At_mul_B!/dense 4000x40/sparse 4000x400 -> dense 40x400)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 145.0,
+      "commit": "be17de3",
+      "ratio": 1.45,
+      "timestamp": "2026-03-10T00:41:11.166",
+      "benchmark": "sparse/matmul/(\\At_mul_Bt!\\/\\sparse 400x4000/dense 40x400 -> dense 4000x40\\)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 145.0,
+      "commit": "b146a70",
+      "ratio": 1.45,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "sparse/matmul/(Ac_mul_B!/dense 2000x20/sparse 2000x2000 -> dense 20x2000)",
+      "group": "nanosoldier_sparse",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 144.0,
+      "commit": "be17de3",
+      "ratio": 1.44,
+      "timestamp": "2026-03-10T00:41:11.166",
+      "benchmark": "sparse/matmul/(\\Ac_mul_Bc!\\/\\dense 20x20/sparse 2000x20 -> dense 20x2000\\)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 142.0,
+      "commit": "b378d19",
+      "ratio": 1.42,
+      "timestamp": "2026-03-10T23:30:12.231",
+      "benchmark": "sparse/matmul/(Ac_mul_Bc!/sparse 20x2000/dense 20x20 -> dense 2000x20)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 142.0,
+      "commit": "be17de3",
+      "ratio": 1.42,
+      "timestamp": "2026-03-10T00:41:11.166",
+      "benchmark": "sparse/matmul/(\\Ac_mul_Bc\\/\\dense 5x500/sparse 5x5 -> dense 500x5\\)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 142.0,
+      "commit": "be17de3",
+      "ratio": 1.42,
+      "timestamp": "2026-03-10T00:41:11.166",
+      "benchmark": "sparse/matmul/(\\Ac_mul_Bc\\/\\dense 50x50/sparse 50x50 -> dense 50x50\\)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 142.0,
+      "commit": "b6bca19",
+      "ratio": 1.42,
+      "timestamp": "2026-03-10T23:30:05.064",
+      "benchmark": "sparse/matmul/(Ac_mul_B/sparse 50x500/dense 50x5 -> dense 500x5)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 141.0,
+      "commit": "b093917",
+      "ratio": 1.41,
+      "timestamp": "2026-03-10T23:30:18.101",
+      "benchmark": "sparse/matmul/(At_mul_B/dense 5x5/sparse 5x500 -> dense 5x500)",
+      "group": "nanosoldier_sparse",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 141.0,
+      "commit": "c46c227",
+      "ratio": 1.41,
+      "timestamp": "2026-03-10T00:41:04.382",
+      "benchmark": "sparse/matmul/(A_mul_Bt/sparse 50x50/dense 50x50 -> dense 50x50)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 141.0,
+      "commit": "b6bca19",
+      "ratio": 1.41,
+      "timestamp": "2026-03-10T23:30:05.064",
+      "benchmark": "sparse/matmul/(A_mul_Bt/dense 50x5/sparse 50x5 -> dense 50x50)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 140.0,
+      "commit": "cf188c3",
+      "ratio": 1.4,
+      "timestamp": "2026-03-10T00:40:51.209",
+      "benchmark": "sparse/matmul/(A_mul_Bc/dense 500x5/sparse 5x5 -> dense 500x5)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 140.0,
+      "commit": "aebcebc",
+      "ratio": 1.4,
+      "timestamp": "2026-03-10T23:30:21.284",
+      "benchmark": "sparse/matmul/(Ac_mul_Bc!/dense 2000x20/sparse 200x2000 -> dense 20x200)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 140.0,
+      "commit": "c5ee39f",
+      "ratio": 1.4,
+      "timestamp": "2026-03-10T00:41:01.463",
+      "benchmark": "sparse/transpose/(transpose/(600/400))",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 140.0,
+      "commit": "b6bca19",
+      "ratio": 1.4,
+      "timestamp": "2026-03-10T23:30:05.064",
+      "benchmark": "sparse/matmul/(Ac_mul_Bc/sparse 5x500/dense 5x5 -> dense 500x5)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 140.0,
+      "commit": "b3aa91d",
+      "ratio": 1.4,
+      "timestamp": "2026-03-10T23:30:11.264",
+      "benchmark": "sparse/matmul/(A_mul_Bc/sparse 500x500/dense 5x500 -> dense 500x5)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 139.0,
+      "commit": "d03508a",
+      "ratio": 1.39,
+      "timestamp": "2026-03-10T00:40:50.823",
+      "benchmark": "sparse/matmul/(\\A_mul_Bc\\/\\sparse 500x500/dense 5x500 -> dense 500x5\\)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 139.0,
+      "commit": "aebcebc",
+      "ratio": 1.39,
+      "timestamp": "2026-03-10T23:30:21.284",
+      "benchmark": "sparse/matmul/(Ac_mul_Bc/dense 5x50/sparse 50x5 -> dense 50x50)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 139.0,
+      "commit": "b6bca19",
+      "ratio": 1.39,
+      "timestamp": "2026-03-10T23:30:05.064",
+      "benchmark": "sparse/matmul/(Ac_mul_B/sparse 5x50/dense 5x50 -> dense 50x50)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 138.0,
+      "commit": "c46c227",
+      "ratio": 1.38,
+      "timestamp": "2026-03-10T00:41:04.382",
+      "benchmark": "sparse/matmul/(A_mul_B/sparse 500x500/dense 500x5 -> dense 500x5)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 138.0,
+      "commit": "b146a70",
+      "ratio": 1.38,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "sparse/matmul/(Ac_mul_B/dense 5x5/sparse 5x500 -> dense 5x500)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 138.0,
+      "commit": "b6bca19",
+      "ratio": 1.38,
+      "timestamp": "2026-03-10T23:30:05.064",
+      "benchmark": "sparse/matmul/(Ac_mul_B/sparse 5x500/dense 5x5 -> dense 500x5)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 138.0,
+      "commit": "be17de3",
+      "ratio": 1.38,
+      "timestamp": "2026-03-10T00:41:11.166",
+      "benchmark": "sparse/matmul/(\\Ac_mul_Bc!\\/\\dense 200x200/sparse 200x200 -> dense 200x200\\)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 137.0,
+      "commit": "aebcebc",
+      "ratio": 1.37,
+      "timestamp": "2026-03-10T23:30:21.284",
+      "benchmark": "sparse/matmul/(Ac_mul_Bc/dense 50x50/sparse 50x50 -> dense 50x50)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 137.0,
+      "commit": "b2adc93",
+      "ratio": 1.37,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "sparse/matmul/(At_mul_Bt/sparse 50x50/dense 50x50 -> dense 50x50)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 137.0,
+      "commit": "cd660ad",
+      "ratio": 1.37,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "sparse/matmul/(A_mul_Bt!/sparse 40x40/dense 4000x40 -> dense 40x4000)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 137.0,
+      "commit": "b6bca19",
+      "ratio": 1.37,
+      "timestamp": "2026-03-10T23:30:05.064",
+      "benchmark": "sparse/matmul/(A_mul_B/dense 50x5/sparse 5x50 -> dense 50x50)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 137.0,
+      "commit": "b146a70",
+      "ratio": 1.37,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "sparse/matmul/(A_mul_Bc!/dense 200x20/sparse 200x20 -> dense 200x200)",
+      "group": "nanosoldier_sparse",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 137.0,
+      "commit": "b2adc93",
+      "ratio": 1.37,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "sparse/matmul/(Ac_mul_Bc/sparse 50x50/dense 50x50 -> dense 50x50)",
+      "group": "nanosoldier_sparse",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 136.0,
+      "commit": "b4c79e7",
+      "ratio": 1.36,
+      "timestamp": "2026-03-10T23:30:07.325",
+      "benchmark": "sparse/matmul/(At_mul_B!/dense 40x400/sparse 40x400 -> dense 400x400)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 136.0,
+      "commit": "b6bca19",
+      "ratio": 1.36,
+      "timestamp": "2026-03-10T23:30:05.064",
+      "benchmark": "sparse/matmul/(A_mul_B/dense 50x50/sparse 50x50 -> dense 50x50)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 136.0,
+      "commit": "b146a70",
+      "ratio": 1.36,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "sparse/matmul/(A_mul_Bc!/dense 200x200/sparse 20x200 -> dense 200x20)",
+      "group": "nanosoldier_sparse",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 136.0,
+      "commit": "b3aa91d",
+      "ratio": 1.36,
+      "timestamp": "2026-03-10T23:30:11.264",
+      "benchmark": "sparse/matmul/(A_mul_Bt/sparse 500x500/dense 5x500 -> dense 500x5)",
+      "group": "nanosoldier_sparse",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 136.0,
+      "commit": "b2adc93",
+      "ratio": 1.36,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "sparse/matmul/(At_mul_Bt/sparse 500x500/dense 5x500 -> dense 500x5)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 135.0,
+      "commit": "b146a70",
+      "ratio": 1.35,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "sparse/matmul/(A_mul_Bc!/dense 200x200/sparse 200x200 -> dense 200x200)",
+      "group": "nanosoldier_sparse",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 135.0,
+      "commit": "aebcebc",
+      "ratio": 1.35,
+      "timestamp": "2026-03-10T23:30:21.284",
+      "benchmark": "sparse/matmul/(Ac_mul_Bc!/dense 20x20/sparse 2000x20 -> dense 20x2000)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 135.0,
+      "commit": "ce5dbf5",
+      "ratio": 1.35,
+      "timestamp": "2026-03-10T00:40:52.251",
+      "benchmark": "sparse/matmul/(A_mul_Bc!/dense 20x200/sparse 2000x200 -> dense 20x2000)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 135.0,
+      "commit": "cd660ad",
+      "ratio": 1.35,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "sparse/matmul/(At_mul_B!/dense 40x4000/sparse 40x40 -> dense 4000x40)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 135.0,
+      "commit": "b146a70",
+      "ratio": 1.35,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "sparse/matmul/(Ac_mul_B!/dense 20x2000/sparse 20x20 -> dense 2000x20)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 135.0,
+      "commit": "b6bca19",
+      "ratio": 1.35,
+      "timestamp": "2026-03-10T23:30:05.064",
+      "benchmark": "sparse/index/(spmat/col/array/1000)",
+      "group": "nanosoldier_sparse",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 134.0,
+      "commit": "cf188c3",
+      "ratio": 1.34,
+      "timestamp": "2026-03-10T00:40:51.209",
+      "benchmark": "sparse/matmul/(A_mul_Bc/dense 5x5/sparse 500x5 -> dense 5x500)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 134.0,
+      "commit": "aebcebc",
+      "ratio": 1.34,
+      "timestamp": "2026-03-10T23:30:21.284",
+      "benchmark": "sparse/matmul/(Ac_mul_Bc!/dense 200x20/sparse 2000x200 -> dense 20x2000)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 134.0,
+      "commit": "aebcebc",
+      "ratio": 1.34,
+      "timestamp": "2026-03-10T23:30:21.284",
+      "benchmark": "sparse/matmul/(Ac_mul_Bc/dense 50x5/sparse 500x50 -> dense 5x500)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 134.0,
+      "commit": "b6bca19",
+      "ratio": 1.34,
+      "timestamp": "2026-03-10T23:30:05.064",
+      "benchmark": "sparse/matmul/(At_mul_Bt/sparse 5x500/dense 5x5 -> dense 500x5)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 134.0,
+      "commit": "c0b95ac",
+      "ratio": 1.34,
+      "timestamp": "2026-03-10T00:41:08.226",
+      "benchmark": "sparse/matmul/(At_mul_B!/sparse 400x400/dense 400x400 -> dense 400x400)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 134.0,
+      "commit": "b0154e3",
+      "ratio": 1.34,
+      "timestamp": "2026-03-10T23:30:19.065",
+      "benchmark": "sparse/matmul/(\\At_mul_B!\\/\\dense 40x400/sparse 40x400 -> dense 400x400\\)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 134.0,
+      "commit": "aebcebc",
+      "ratio": 1.34,
+      "timestamp": "2026-03-10T23:30:21.284",
+      "benchmark": "sparse/matmul/(Ac_mul_Bc!/dense 2000x20/sparse 2000x2000 -> dense 20x2000)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 134.0,
+      "commit": "b378d19",
+      "ratio": 1.34,
+      "timestamp": "2026-03-10T23:30:12.231",
+      "benchmark": "sparse/matmul/(At_mul_B/sparse 500x500/dense 500x5 -> dense 500x5)",
+      "group": "nanosoldier_sparse",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 134.0,
+      "commit": "be17de3",
+      "ratio": 1.34,
+      "timestamp": "2026-03-10T00:41:11.166",
+      "benchmark": "sparse/matmul/(\\At_mul_Bt!\\/\\dense 40x400/sparse 400x40 -> dense 400x400\\)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 134.0,
+      "commit": "cf188c3",
+      "ratio": 1.34,
+      "timestamp": "2026-03-10T00:40:51.209",
+      "benchmark": "sparse/matmul/(A_mul_Bc/dense 5x50/sparse 500x50 -> dense 5x500)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 134.0,
+      "commit": "b146a70",
+      "ratio": 1.34,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "sparse/matmul/(Ac_mul_B!/dense 200x200/sparse 200x20 -> dense 200x20)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 133.0,
+      "commit": "b6bca19",
+      "ratio": 1.33,
+      "timestamp": "2026-03-10T23:30:05.064",
+      "benchmark": "sparse/index/(spvec/array/1000)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 133.0,
+      "commit": "cf188c3",
+      "ratio": 1.33,
+      "timestamp": "2026-03-10T00:40:51.209",
+      "benchmark": "sparse/matmul/(A_mul_Bc/dense 5x500/sparse 500x500 -> dense 5x500)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 132.0,
+      "commit": "cf188c3",
+      "ratio": 1.32,
+      "timestamp": "2026-03-10T00:40:51.209",
+      "benchmark": "sparse/matmul/(A_mul_Bc/dense 50x5/sparse 50x5 -> dense 50x50)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 132.0,
+      "commit": "b4c79e7",
+      "ratio": 1.32,
+      "timestamp": "2026-03-10T23:30:07.325",
+      "benchmark": "sparse/matmul/(At_mul_B!/dense 400x400/sparse 400x400 -> dense 400x400)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 131.0,
+      "commit": "b6bca19",
+      "ratio": 1.31,
+      "timestamp": "2026-03-10T23:30:05.064",
+      "benchmark": "sparse/matmul/(Ac_mul_Bc/sparse 5x50/dense 50x5 -> dense 50x50)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 131.0,
+      "commit": "b0154e3",
+      "ratio": 1.31,
+      "timestamp": "2026-03-10T23:30:19.065",
+      "benchmark": "sparse/matmul/(\\At_mul_B!\\/\\dense 400x400/sparse 400x400 -> dense 400x400\\)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 131.0,
+      "commit": "cd660ad",
+      "ratio": 1.31,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "sparse/matmul/(At_mul_Bt!/sparse 40x400/dense 400x40 -> dense 400x400)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 131.0,
+      "commit": "cd660ad",
+      "ratio": 1.31,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "sparse/matmul/(A_mul_B!/sparse 400x400/dense 400x400 -> dense 400x400)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 131.0,
+      "commit": "b3aa91d",
+      "ratio": 1.31,
+      "timestamp": "2026-03-10T23:30:11.264",
+      "benchmark": "sparse/matmul/(A_mul_Bc!/sparse 2000x200/dense 20x200 -> dense 2000x20)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 131.0,
+      "commit": "be17de3",
+      "ratio": 1.31,
+      "timestamp": "2026-03-10T00:41:11.166",
+      "benchmark": "sparse/matmul/(\\At_mul_Bt\\/\\dense 50x50/sparse 50x50 -> dense 50x50\\)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 130.0,
+      "commit": "aebcebc",
+      "ratio": 1.3,
+      "timestamp": "2026-03-10T23:30:21.284",
+      "benchmark": "sparse/matmul/(A_mul_Bc!/sparse 200x2000/dense 20x2000 -> dense 200x20)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 130.0,
+      "commit": "be17de3",
+      "ratio": 1.3,
+      "timestamp": "2026-03-10T00:41:11.166",
+      "benchmark": "sparse/matmul/(\\Ac_mul_Bc!\\/\\dense 200x20/sparse 2000x200 -> dense 20x2000\\)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 130.0,
+      "commit": "cf188c3",
+      "ratio": 1.3,
+      "timestamp": "2026-03-10T00:40:51.209",
+      "benchmark": "sparse/matmul/(A_mul_Bc/dense 50x50/sparse 50x50 -> dense 50x50)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 130.0,
+      "commit": "cd660ad",
+      "ratio": 1.3,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "sparse/matmul/(A_mul_B!/sparse 40x40/dense 40x4000 -> dense 40x4000)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 130.0,
+      "commit": "b6bca19",
+      "ratio": 1.3,
+      "timestamp": "2026-03-10T23:30:05.064",
+      "benchmark": "sparse/matmul/(Ac_mul_B!/sparse 200x200/dense 200x200 -> dense 200x200)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 130.0,
+      "commit": "b2adc93",
+      "ratio": 1.3,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "sparse/matmul/(Ac_mul_Bc/sparse 500x500/dense 5x500 -> dense 500x5)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 130.0,
+      "commit": "b3aa91d",
+      "ratio": 1.3,
+      "timestamp": "2026-03-10T23:30:11.264",
+      "benchmark": "sparse/matmul/(A_mul_Bc!/sparse 20x200/dense 200x200 -> dense 20x200)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 129.0,
+      "commit": "b146a70",
+      "ratio": 1.29,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "sparse/index/(spvec/range/100000)",
+      "group": "nanosoldier_sparse",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 126.0,
+      "commit": "b146a70",
+      "ratio": 1.26,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "sparse/matmul/(Ac_mul_B/dense 500x5/sparse 500x50 -> dense 5x50)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 126.0,
+      "commit": "b146a70",
+      "ratio": 1.26,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "sparse/matmul/(Ac_mul_B/dense 50x50/sparse 50x5 -> dense 50x5)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 125.0,
+      "commit": "b146a70",
+      "ratio": 1.25,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "sparse/matmul/(A_mul_Bc/dense 50x50/sparse 5x50 -> dense 50x5)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 124.0,
+      "commit": "d03508a",
+      "ratio": 1.24,
+      "timestamp": "2026-03-10T00:40:50.823",
+      "benchmark": "sparse/constructors/(\\Bidiagonal\\/100)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 119.0,
+      "commit": "b146a70",
+      "ratio": 1.19,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "sparse/matmul/(A_mul_B/sparse 5x50/dense 50x50 -> dense 5x50)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 118.0,
+      "commit": "b146a70",
+      "ratio": 1.18,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "sparse/matmul/(A_mul_B/sparse 50x500/dense 500x5 -> dense 50x5)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 115.0,
+      "commit": "d03508a",
+      "ratio": 1.15,
+      "timestamp": "2026-03-10T00:40:50.823",
+      "benchmark": "sparse/constructors/(\\Diagonal\\/1000)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 114.0,
+      "commit": "b146a70",
+      "ratio": 1.14,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "sparse/matmul/(A_mul_Bt/sparse 5x50/dense 50x50 -> dense 5x50)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 113.0,
+      "commit": "aebcebc",
+      "ratio": 1.13,
+      "timestamp": "2026-03-10T23:30:21.284",
+      "benchmark": "sparse/constructors/(IJV/10)",
+      "group": "nanosoldier_sparse",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 112.0,
+      "commit": "b146a70",
+      "ratio": 1.12,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "sparse/matmul/(A_mul_Bt/sparse 50x500/dense 5x500 -> dense 50x5)",
+      "group": "nanosoldier_sparse",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 112.0,
+      "commit": "b146a70",
+      "ratio": 1.12,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "sparse/sparse matvec/adjoint",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 111.0,
+      "commit": "b146a70",
+      "ratio": 1.11,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "sparse/constructors/(IJV/1000)",
+      "group": "nanosoldier_sparse",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 111.0,
+      "commit": "aebcebc",
+      "ratio": 1.11,
+      "timestamp": "2026-03-10T23:30:21.284",
+      "benchmark": "sparse/constructors/(SymTridiagonal/100)",
+      "group": "nanosoldier_sparse",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 111.0,
+      "commit": "aebcebc",
+      "ratio": 1.11,
+      "timestamp": "2026-03-10T23:30:21.284",
+      "benchmark": "sparse/constructors/(Diagonal/100)",
+      "group": "nanosoldier_sparse",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 110.0,
+      "commit": "aebcebc",
+      "ratio": 1.1,
+      "timestamp": "2026-03-10T23:30:21.284",
+      "benchmark": "sparse/sparse solves/square system (ldlt)/vector rhs",
+      "group": "nanosoldier_sparse",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 109.0,
+      "commit": "b146a70",
+      "ratio": 1.09,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "sparse/index/(spmat/col/logical/1000)",
+      "group": "nanosoldier_sparse",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 109.0,
+      "commit": "aebcebc",
+      "ratio": 1.09,
+      "timestamp": "2026-03-10T23:30:21.284",
+      "benchmark": "sparse/constructors/(SymTridiagonal/1000)",
+      "group": "nanosoldier_sparse",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 109.0,
+      "commit": "b0772ee",
+      "ratio": 1.09,
+      "timestamp": "2026-03-10T23:30:18.437",
+      "benchmark": "sparse/constructors/(IV/1000)",
+      "group": "nanosoldier_sparse",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 109.0,
+      "commit": "b146a70",
+      "ratio": 1.09,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "sparse/matmul/(A_mul_Bc/sparse 50x500/dense 5x500 -> dense 50x5)",
+      "group": "nanosoldier_sparse",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 109.0,
+      "commit": "aebcebc",
+      "ratio": 1.09,
+      "timestamp": "2026-03-10T23:30:21.284",
+      "benchmark": "sparse/constructors/(Tridiagonal/100)",
+      "group": "nanosoldier_sparse",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 109.0,
+      "commit": "b97eb35",
+      "ratio": 1.09,
+      "timestamp": "2026-03-10T23:30:01.752",
+      "benchmark": "sparse/constructors/(\\IJV\\/100)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 109.0,
+      "commit": "b146a70",
+      "ratio": 1.09,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "sparse/matmul/(A_mul_Bc/sparse 5x50/dense 50x50 -> dense 5x50)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 108.0,
+      "commit": "b146a70",
+      "ratio": 1.08,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "sparse/constructors/(Bidiagonal/1000)",
+      "group": "nanosoldier_sparse",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 108.0,
+      "commit": "aebcebc",
+      "ratio": 1.08,
+      "timestamp": "2026-03-10T23:30:21.284",
+      "benchmark": "sparse/constructors/(Tridiagonal/1000)",
+      "group": "nanosoldier_sparse",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 108.0,
+      "commit": "b146a70",
+      "ratio": 1.08,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "sparse/matmul/(At_mul_B/dense 500x5/sparse 500x50 -> dense 5x50)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 108.0,
+      "commit": "b146a70",
+      "ratio": 1.08,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "sparse/matmul/(At_mul_B/dense 50x50/sparse 50x5 -> dense 50x5)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 107.0,
+      "commit": "b31a638",
+      "ratio": 1.07,
+      "timestamp": "2026-03-10T23:30:13.586",
+      "benchmark": "sparse/sparse solves/square system (lu)/vector rhs",
+      "group": "nanosoldier_sparse",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 107.0,
+      "commit": "b31a638",
+      "ratio": 1.07,
+      "timestamp": "2026-03-10T23:30:13.586",
+      "benchmark": "sparse/sparse solves/square system (lu)/matrix rhs",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 107.0,
+      "commit": "aebcebc",
+      "ratio": 1.07,
+      "timestamp": "2026-03-10T23:30:21.284",
+      "benchmark": "sparse/sparse solves/square system (default)/vector rhs",
+      "group": "nanosoldier_sparse",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 106.0,
+      "commit": "aebcebc",
+      "ratio": 1.06,
+      "timestamp": "2026-03-10T23:30:21.284",
+      "benchmark": "sparse/sparse solves/square system (default)/matrix rhs",
+      "group": "nanosoldier_sparse",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 106.0,
+      "commit": "b0772ee",
+      "ratio": 1.06,
+      "timestamp": "2026-03-10T23:30:18.437",
+      "benchmark": "sparse/constructors/(Diagonal/1000)",
+      "group": "nanosoldier_sparse",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 106.0,
+      "commit": "be17de3",
+      "ratio": 1.06,
+      "timestamp": "2026-03-10T00:41:11.166",
+      "benchmark": "sparse/constructors/(\\IV\\/10)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 106.0,
+      "commit": "aebcebc",
+      "ratio": 1.06,
+      "timestamp": "2026-03-10T23:30:21.284",
+      "benchmark": "sparse/constructors/(IJV/100)",
+      "group": "nanosoldier_sparse",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 106.0,
+      "commit": "b093917",
+      "ratio": 1.06,
+      "timestamp": "2026-03-10T23:30:18.101",
+      "benchmark": "sparse/constructors/(IV/10)",
+      "group": "nanosoldier_sparse",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 106.0,
+      "commit": "b421eca",
+      "ratio": 1.06,
+      "timestamp": "2026-03-10T23:30:10.268",
+      "benchmark": "sparse/constructors/(\\SymTridiagonal\\/1000)",
+      "group": "nanosoldier_sparse",
+      "trend": "stable"
+    }
+  ]
+}

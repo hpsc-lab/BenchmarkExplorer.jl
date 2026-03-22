@@ -1,0 +1,35 @@
+{
+  "threshold": 1.05,
+  "count": 3,
+  "group": "nanosoldier_micro",
+  "generated": "2026-03-22T15:56:14.643",
+  "alerts": [
+    {
+      "latest_mean_ms": 109.0,
+      "commit": "aebcebc",
+      "ratio": 1.09,
+      "timestamp": "2026-03-10T23:30:21.284",
+      "benchmark": "micro/parseint",
+      "group": "nanosoldier_micro",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 106.0,
+      "commit": "b00614a",
+      "ratio": 1.06,
+      "timestamp": "2026-03-10T23:30:19.395",
+      "benchmark": "micro/mandel",
+      "group": "nanosoldier_micro",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 106.0,
+      "commit": "b97eb35",
+      "ratio": 1.06,
+      "timestamp": "2026-03-10T23:30:01.752",
+      "benchmark": "micro/randmatmul",
+      "group": "nanosoldier_micro",
+      "trend": "stable"
+    }
+  ]
+}

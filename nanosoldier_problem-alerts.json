@@ -1,0 +1,71 @@
+{
+  "threshold": 1.05,
+  "count": 7,
+  "group": "nanosoldier_problem",
+  "generated": "2026-03-22T15:56:07.525",
+  "alerts": [
+    {
+      "latest_mean_ms": 126.0,
+      "commit": "b146a70",
+      "ratio": 1.26,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "problem/stockcorr/stockcorr",
+      "group": "nanosoldier_problem",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 120.0,
+      "commit": "b146a70",
+      "ratio": 1.2,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "problem/raytrace/raytrace",
+      "group": "nanosoldier_problem",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 110.0,
+      "commit": "be17de3",
+      "ratio": 1.1,
+      "timestamp": "2026-03-10T00:41:11.166",
+      "benchmark": "problem/monte carlo/euro_option_devec",
+      "group": "nanosoldier_problem",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 107.0,
+      "commit": "aebcebc",
+      "ratio": 1.07,
+      "timestamp": "2026-03-10T23:30:21.284",
+      "benchmark": "problem/laplacian/laplace_iter_sub",
+      "group": "nanosoldier_problem",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 106.0,
+      "commit": "b146a70",
+      "ratio": 1.06,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "problem/laplacian/laplace_sparse_matvec",
+      "group": "nanosoldier_problem",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 106.0,
+      "commit": "be17de3",
+      "ratio": 1.06,
+      "timestamp": "2026-03-10T00:41:11.166",
+      "benchmark": "problem/seismic/(\\seismic\\/\\Float64\\)",
+      "group": "nanosoldier_problem",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 106.0,
+      "commit": "afca0b4",
+      "ratio": 1.06,
+      "timestamp": "2026-03-10T23:30:20.015",
+      "benchmark": "problem/monte carlo/euro_option_vec",
+      "group": "nanosoldier_problem",
+      "trend": "stable"
+    }
+  ]
+}

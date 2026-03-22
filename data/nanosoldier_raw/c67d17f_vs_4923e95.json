@@ -1,0 +1,373 @@
+{
+  "metadata": {
+    "head_hash": "c67d17f",
+    "comparison": "c67d17f_vs_4923e95",
+    "julia_version": "1.11.0-DEV.518",
+    "source": "NanosoldierReports",
+    "base_hash": "4923e95",
+    "imported_at": "2026-03-12T10:35:21.187",
+    "source_type": "data_zst"
+  },
+  "benchmarks": {
+    "inference/abstract interpretation/REPL.REPLCompletions.completions": {
+      "max_time_ns": 4.244804916e8,
+      "allocs": 2106630,
+      "min_time_ns": 4.22756092e8,
+      "mean_time_ns": 4.244804916e8,
+      "samples": 1,
+      "std_time_ns": 1.1530532606202543e6,
+      "median_time_ns": 4.24397211e8,
+      "memory_bytes": 130377936
+    },
+    "inference/optimization/Base.init_stdio(::Ptr{Cvoid})": {
+      "max_time_ns": 315683.78571428574,
+      "allocs": 2204,
+      "min_time_ns": 309784.0,
+      "mean_time_ns": 315683.78571428574,
+      "samples": 1,
+      "std_time_ns": 10031.638134227363,
+      "median_time_ns": 312569.5,
+      "memory_bytes": 182752
+    },
+    "inference/abstract interpretation/println(::QuoteNode)": {
+      "max_time_ns": 1.0588040558333333e8,
+      "allocs": 644390,
+      "min_time_ns": 1.04698684e8,
+      "mean_time_ns": 1.0588040558333333e8,
+      "samples": 1,
+      "std_time_ns": 706546.4883231221,
+      "median_time_ns": 1.05760751e8,
+      "memory_bytes": 41164312
+    },
+    "inference/optimization/many_method_matches": {
+      "max_time_ns": 1.4386583472222222e7,
+      "allocs": 209192,
+      "min_time_ns": 1.4181777e7,
+      "mean_time_ns": 1.4386583472222222e7,
+      "samples": 1,
+      "std_time_ns": 263178.6253365341,
+      "median_time_ns": 1.42667185e7,
+      "memory_bytes": 12512144
+    },
+    "inference/optimization/println(::QuoteNode)": {
+      "max_time_ns": 50032.74074074074,
+      "allocs": 444,
+      "min_time_ns": 48055.0,
+      "mean_time_ns": 50032.74074074074,
+      "samples": 1,
+      "std_time_ns": 1780.5237905349563,
+      "median_time_ns": 49731.0,
+      "memory_bytes": 31712
+    },
+    "inference/allinference/many_global_refs": {
+      "max_time_ns": 8.358937575675675e7,
+      "allocs": 1207314,
+      "min_time_ns": 8.30937e7,
+      "mean_time_ns": 8.358937575675675e7,
+      "samples": 1,
+      "std_time_ns": 666441.6114099905,
+      "median_time_ns": 8.3390856e7,
+      "memory_bytes": 50901296
+    },
+    "inference/abstract interpretation/many_opaque_closures": {
+      "max_time_ns": 2.4858545026666668e8,
+      "allocs": 1181160,
+      "min_time_ns": 2.46034797e8,
+      "mean_time_ns": 2.4858545026666668e8,
+      "samples": 1,
+      "std_time_ns": 4.0887344564674282e6,
+      "median_time_ns": 2.472177345e8,
+      "memory_bytes": 71908752
+    },
+    "inference/allinference/println(::QuoteNode)": {
+      "max_time_ns": 3.9539496053846157e8,
+      "allocs": 2847705,
+      "min_time_ns": 3.91912437e8,
+      "mean_time_ns": 3.9539496053846157e8,
+      "samples": 1,
+      "std_time_ns": 1.0647316732153404e6,
+      "median_time_ns": 3.95242119e8,
+      "memory_bytes": 207891528
+    },
+    "inference/optimization/many_invoke_calls": {
+      "max_time_ns": 8.705304463414634e6,
+      "allocs": 125076,
+      "min_time_ns": 8.663786e6,
+      "mean_time_ns": 8.705304463414634e6,
+      "samples": 1,
+      "std_time_ns": 54519.68716440767,
+      "median_time_ns": 8.686745e6,
+      "memory_bytes": 8042784
+    },
+    "inference/abstract interpretation/many_global_refs": {
+      "max_time_ns": 3.778748664102564e7,
+      "allocs": 529597,
+      "min_time_ns": 3.7594219e7,
+      "mean_time_ns": 3.778748664102564e7,
+      "samples": 1,
+      "std_time_ns": 214893.2160663557,
+      "median_time_ns": 3.7749646e7,
+      "memory_bytes": 25763856
+    },
+    "inference/allinference/many_local_vars": {
+      "max_time_ns": 3.0052772048275864e8,
+      "allocs": 1543143,
+      "min_time_ns": 2.99335835e8,
+      "mean_time_ns": 3.0052772048275864e8,
+      "samples": 1,
+      "std_time_ns": 890968.7209997338,
+      "median_time_ns": 3.00373976e8,
+      "memory_bytes": 88838896
+    },
+    "inference/abstract interpretation/many_invoke_calls": {
+      "max_time_ns": 3.813857761904762e6,
+      "allocs": 30650,
+      "min_time_ns": 3.687168e6,
+      "mean_time_ns": 3.813857761904762e6,
+      "samples": 1,
+      "std_time_ns": 48791.0552352203,
+      "median_time_ns": 3.8248385e6,
+      "memory_bytes": 1863920
+    },
+    "inference/abstract interpretation/sin(42)": {
+      "max_time_ns": 5.829259214285715e6,
+      "allocs": 44423,
+      "min_time_ns": 5.725701e6,
+      "mean_time_ns": 5.829259214285715e6,
+      "samples": 1,
+      "std_time_ns": 51883.940690613585,
+      "median_time_ns": 5.8198095e6,
+      "memory_bytes": 2831184
+    },
+    "inference/optimization/sin(42)": {
+      "max_time_ns": 62792.07317073171,
+      "allocs": 499,
+      "min_time_ns": 60577.0,
+      "mean_time_ns": 62792.07317073171,
+      "samples": 1,
+      "std_time_ns": 1364.4580680666575,
+      "median_time_ns": 62693.0,
+      "memory_bytes": 37344
+    },
+    "inference/allinference/sin(42)": {
+      "max_time_ns": 2.2302851048780486e7,
+      "allocs": 187679,
+      "min_time_ns": 2.200059e7,
+      "mean_time_ns": 2.2302851048780486e7,
+      "samples": 1,
+      "std_time_ns": 144286.7542255614,
+      "median_time_ns": 2.2286553e7,
+      "memory_bytes": 12784088
+    },
+    "inference/abstract interpretation/rand(Float64)": {
+      "max_time_ns": 5.7235065e6,
+      "allocs": 40464,
+      "min_time_ns": 5.596723e6,
+      "mean_time_ns": 5.7235065e6,
+      "samples": 1,
+      "std_time_ns": 67570.05749310822,
+      "median_time_ns": 5.737042e6,
+      "memory_bytes": 2600928
+    },
+    "inference/allinference/many_const_calls": {
+      "max_time_ns": 2.9692705125e7,
+      "allocs": 257293,
+      "min_time_ns": 2.9301773e7,
+      "mean_time_ns": 2.9692705125e7,
+      "samples": 1,
+      "std_time_ns": 264043.93983938935,
+      "median_time_ns": 2.97112185e7,
+      "memory_bytes": 17363512
+    },
+    "inference/optimization/rand(Float64)": {
+      "max_time_ns": 125594.60975609756,
+      "allocs": 1377,
+      "min_time_ns": 118757.0,
+      "mean_time_ns": 125594.60975609756,
+      "samples": 1,
+      "std_time_ns": 4999.9479441192625,
+      "median_time_ns": 123053.0,
+      "memory_bytes": 86208
+    },
+    "inference/allinference/rand(Float64)": {
+      "max_time_ns": 2.048412931707317e7,
+      "allocs": 165465,
+      "min_time_ns": 2.0171248e7,
+      "mean_time_ns": 2.048412931707317e7,
+      "samples": 1,
+      "std_time_ns": 171094.36223666737,
+      "median_time_ns": 2.0465005e7,
+      "memory_bytes": 11873224
+    },
+    "inference/allinference/REPL.REPLCompletions.completions": {
+      "max_time_ns": 1.302265963642857e9,
+      "allocs": 8780780,
+      "min_time_ns": 1.294573739e9,
+      "mean_time_ns": 1.302265963642857e9,
+      "samples": 1,
+      "std_time_ns": 3.268142506359552e6,
+      "median_time_ns": 1.3019768565e9,
+      "memory_bytes": 640098328
+    },
+    "inference/abstract interpretation/Base.init_stdio(::Ptr{Cvoid})": {
+      "max_time_ns": 1.2004937442857143e8,
+      "allocs": 687236,
+      "min_time_ns": 1.1896432e8,
+      "mean_time_ns": 1.2004937442857143e8,
+      "samples": 1,
+      "std_time_ns": 699702.5477382299,
+      "median_time_ns": 1.19880237e8,
+      "memory_bytes": 42353424
+    },
+    "inference/abstract interpretation/many_local_vars": {
+      "max_time_ns": 1.8481777045454547e8,
+      "allocs": 368129,
+      "min_time_ns": 1.83649222e8,
+      "mean_time_ns": 1.8481777045454547e8,
+      "samples": 1,
+      "std_time_ns": 1.5694966001951487e6,
+      "median_time_ns": 1.84347398e8,
+      "memory_bytes": 19925536
+    },
+    "inference/optimization/many_global_refs": {
+      "max_time_ns": 4.419020110526316e7,
+      "allocs": 737732,
+      "min_time_ns": 4.3873854e7,
+      "mean_time_ns": 4.419020110526316e7,
+      "samples": 1,
+      "std_time_ns": 504714.48505792447,
+      "median_time_ns": 4.40687665e7,
+      "memory_bytes": 28668656
+    },
+    "inference/optimization/many_opaque_closures": {
+      "max_time_ns": 1.183461225e7,
+      "allocs": 181356,
+      "min_time_ns": 1.176694e7,
+      "mean_time_ns": 1.183461225e7,
+      "samples": 1,
+      "std_time_ns": 62926.13868059918,
+      "median_time_ns": 1.1815549e7,
+      "memory_bytes": 10455008
+    },
+    "inference/optimization/REPL.REPLCompletions.completions": {
+      "max_time_ns": 44709.53333333333,
+      "allocs": 356,
+      "min_time_ns": 43049.0,
+      "mean_time_ns": 44709.53333333333,
+      "samples": 1,
+      "std_time_ns": 756.9251582805892,
+      "median_time_ns": 44775.0,
+      "memory_bytes": 26256
+    },
+    "inference/optimization/broadcasting": {
+      "max_time_ns": 306820.0571428572,
+      "allocs": 2535,
+      "min_time_ns": 300549.0,
+      "mean_time_ns": 306820.0571428572,
+      "samples": 1,
+      "std_time_ns": 5517.670128206059,
+      "median_time_ns": 303879.0,
+      "memory_bytes": 202192
+    },
+    "inference/abstract interpretation/many_const_calls": {
+      "max_time_ns": 1.0043339510588236e9,
+      "allocs": 2052045,
+      "min_time_ns": 9.94393485e8,
+      "mean_time_ns": 1.0043339510588236e9,
+      "samples": 1,
+      "std_time_ns": 4.2818942765367795e6,
+      "median_time_ns": 1.00561642e9,
+      "memory_bytes": 114033824
+    },
+    "inference/allinference/many_opaque_closures": {
+      "max_time_ns": 8.150679227368422e8,
+      "allocs": 5557550,
+      "min_time_ns": 8.1345298e8,
+      "mean_time_ns": 8.150679227368422e8,
+      "samples": 1,
+      "std_time_ns": 1.4762954616888121e6,
+      "median_time_ns": 8.14611189e8,
+      "memory_bytes": 397922808
+    },
+    "inference/allinference/broadcasting": {
+      "max_time_ns": 1.5719631820588234e8,
+      "allocs": 1210130,
+      "min_time_ns": 1.56101637e8,
+      "mean_time_ns": 1.5719631820588234e8,
+      "samples": 1,
+      "std_time_ns": 616455.0168785342,
+      "median_time_ns": 1.57114978e8,
+      "memory_bytes": 87785040
+    },
+    "inference/abstract interpretation/broadcasting": {
+      "max_time_ns": 7.92406495945946e7,
+      "allocs": 488746,
+      "min_time_ns": 7.8231964e7,
+      "mean_time_ns": 7.92406495945946e7,
+      "samples": 1,
+      "std_time_ns": 1.3157937717264364e6,
+      "median_time_ns": 7.8678282e7,
+      "memory_bytes": 30524208
+    },
+    "inference/optimization/many_local_vars": {
+      "max_time_ns": 8.377144083870968e7,
+      "allocs": 1214703,
+      "min_time_ns": 8.2167987e7,
+      "mean_time_ns": 8.377144083870968e7,
+      "samples": 1,
+      "std_time_ns": 569034.1770389015,
+      "median_time_ns": 8.3755875e7,
+      "memory_bytes": 71221552
+    },
+    "inference/optimization/many_const_calls": {
+      "max_time_ns": 24926.658536585364,
+      "allocs": 281,
+      "min_time_ns": 23856.0,
+      "mean_time_ns": 24926.658536585364,
+      "samples": 1,
+      "std_time_ns": 1543.5448909856186,
+      "median_time_ns": 24752.0,
+      "memory_bytes": 21024
+    },
+    "inference/abstract interpretation/many_method_matches": {
+      "max_time_ns": 1.0473987902439024e7,
+      "allocs": 87042,
+      "min_time_ns": 1.0082956e7,
+      "mean_time_ns": 1.0473987902439024e7,
+      "samples": 1,
+      "std_time_ns": 114954.9352324216,
+      "median_time_ns": 1.0517218e7,
+      "memory_bytes": 5160816
+    },
+    "inference/allinference/Base.init_stdio(::Ptr{Cvoid})": {
+      "max_time_ns": 3.73757417037037e8,
+      "allocs": 2628164,
+      "min_time_ns": 3.71558359e8,
+      "mean_time_ns": 3.73757417037037e8,
+      "samples": 1,
+      "std_time_ns": 1.0084828359994143e6,
+      "median_time_ns": 3.73609742e8,
+      "memory_bytes": 191062728
+    },
+    "inference/allinference/many_invoke_calls": {
+      "max_time_ns": 2.324277451219512e7,
+      "allocs": 235458,
+      "min_time_ns": 2.2563281e7,
+      "mean_time_ns": 2.324277451219512e7,
+      "samples": 1,
+      "std_time_ns": 475491.94145643106,
+      "median_time_ns": 2.322459e7,
+      "memory_bytes": 15117504
+    },
+    "inference/allinference/many_method_matches": {
+      "max_time_ns": 1.1502139419444445e8,
+      "allocs": 1005216,
+      "min_time_ns": 1.13863942e8,
+      "mean_time_ns": 1.1502139419444445e8,
+      "samples": 1,
+      "std_time_ns": 582569.9906253727,
+      "median_time_ns": 1.14999837e8,
+      "memory_bytes": 69079512
+    }
+  }
+}

@@ -1,0 +1,193 @@
+{
+  "metadata": {
+    "head_hash": "b8b2354",
+    "comparison": "b8b2354_vs_c919811",
+    "julia_version": "1.9.0-DEV.1727",
+    "source": "NanosoldierReports",
+    "base_hash": "c919811",
+    "imported_at": "2026-03-12T10:35:21.870",
+    "source_type": "data_zst"
+  },
+  "benchmarks": {
+    "inference/abstract interpretation/construct_ssa!": {
+      "max_time_ns": 9.707247873529412e7,
+      "allocs": 581064,
+      "min_time_ns": 9.6267043e7,
+      "mean_time_ns": 9.707247873529412e7,
+      "samples": 1,
+      "std_time_ns": 574220.3592652789,
+      "median_time_ns": 9.70277415e7,
+      "memory_bytes": 42589168
+    },
+    "inference/abstract interpretation/println(::QuoteNode)": {
+      "max_time_ns": 1.9344088176666668e8,
+      "allocs": 695424,
+      "min_time_ns": 1.92633799e8,
+      "mean_time_ns": 1.9344088176666668e8,
+      "samples": 1,
+      "std_time_ns": 1.2569978584562363e6,
+      "median_time_ns": 1.93042308e8,
+      "memory_bytes": 46556152
+    },
+    "inference/construct_ssa!": {
+      "max_time_ns": 4.082062287916667e8,
+      "allocs": 3193111,
+      "min_time_ns": 4.07650008e8,
+      "mean_time_ns": 4.082062287916667e8,
+      "samples": 1,
+      "std_time_ns": 542236.6117023388,
+      "median_time_ns": 4.080854755e8,
+      "memory_bytes": 225405769
+    },
+    "inference/optimization/println(::QuoteNode)": {
+      "max_time_ns": 49068.86956521739,
+      "allocs": 451,
+      "min_time_ns": 47749.0,
+      "mean_time_ns": 49068.86956521739,
+      "samples": 1,
+      "std_time_ns": 729.5437742706569,
+      "median_time_ns": 48955.0,
+      "memory_bytes": 31600
+    },
+    "inference/println(::QuoteNode)": {
+      "max_time_ns": 5.731677637619047e8,
+      "allocs": 3728740,
+      "min_time_ns": 5.72230199e8,
+      "mean_time_ns": 5.731677637619047e8,
+      "samples": 1,
+      "std_time_ns": 1.219443569787832e6,
+      "median_time_ns": 5.72676755e8,
+      "memory_bytes": 259816882
+    },
+    "inference/abstract_call_gf_by_type": {
+      "max_time_ns": 1.714596462909091e9,
+      "allocs": 12239729,
+      "min_time_ns": 1.711813759e9,
+      "mean_time_ns": 1.714596462909091e9,
+      "samples": 1,
+      "std_time_ns": 4.0592053738106545e6,
+      "median_time_ns": 1.713493635e9,
+      "memory_bytes": 866780733
+    },
+    "inference/optimization/construct_ssa!": {
+      "max_time_ns": 1.7789431846153848e7,
+      "allocs": 193955,
+      "min_time_ns": 1.7735446e7,
+      "mean_time_ns": 1.7789431846153848e7,
+      "samples": 1,
+      "std_time_ns": 45572.32412830604,
+      "median_time_ns": 1.77769065e7,
+      "memory_bytes": 12310916
+    },
+    "inference/domsort_ssa!": {
+      "max_time_ns": 1.3144625606060606e8,
+      "allocs": 1061549,
+      "min_time_ns": 1.3122491e8,
+      "mean_time_ns": 1.3144625606060606e8,
+      "samples": 1,
+      "std_time_ns": 264546.90045232757,
+      "median_time_ns": 1.31375007e8,
+      "memory_bytes": 74331998
+    },
+    "inference/abstract interpretation/sin(42)": {
+      "max_time_ns": 7.050721743589744e6,
+      "allocs": 43584,
+      "min_time_ns": 6.836134e6,
+      "mean_time_ns": 7.050721743589744e6,
+      "samples": 1,
+      "std_time_ns": 365468.86937141,
+      "median_time_ns": 6.995205e6,
+      "memory_bytes": 2918592
+    },
+    "inference/optimization/sin(42)": {
+      "max_time_ns": 70839.08108108108,
+      "allocs": 582,
+      "min_time_ns": 68481.0,
+      "mean_time_ns": 70839.08108108108,
+      "samples": 1,
+      "std_time_ns": 921.053695454239,
+      "median_time_ns": 70890.0,
+      "memory_bytes": 42384
+    },
+    "inference/abstract interpretation/abstract_call_gf_by_type": {
+      "max_time_ns": 4.47589043e8,
+      "allocs": 2239513,
+      "min_time_ns": 4.46350175e8,
+      "mean_time_ns": 4.47589043e8,
+      "samples": 1,
+      "std_time_ns": 1.096075802692123e6,
+      "median_time_ns": 4.47159747e8,
+      "memory_bytes": 160792672
+    },
+    "inference/sin(42)": {
+      "max_time_ns": 3.530461391891892e7,
+      "allocs": 296137,
+      "min_time_ns": 3.4910432e7,
+      "mean_time_ns": 3.530461391891892e7,
+      "samples": 1,
+      "std_time_ns": 623878.4542934438,
+      "median_time_ns": 3.5129989e7,
+      "memory_bytes": 20490201
+    },
+    "inference/optimization/abstract_call_gf_by_type": {
+      "max_time_ns": 5.426799916666667e6,
+      "allocs": 56700,
+      "min_time_ns": 5.404764e6,
+      "mean_time_ns": 5.426799916666667e6,
+      "samples": 1,
+      "std_time_ns": 17296.822138281164,
+      "median_time_ns": 5.4226015e6,
+      "memory_bytes": 3844144
+    },
+    "inference/abstract interpretation/rand(Float64)": {
+      "max_time_ns": 1.0483527789473685e7,
+      "allocs": 42601,
+      "min_time_ns": 1.0417546e7,
+      "mean_time_ns": 1.0483527789473685e7,
+      "samples": 1,
+      "std_time_ns": 88357.65488554683,
+      "median_time_ns": 1.0461977e7,
+      "memory_bytes": 2741872
+    },
+    "inference/optimization/rand(Float64)": {
+      "max_time_ns": 157598.57894736843,
+      "allocs": 1474,
+      "min_time_ns": 155592.0,
+      "mean_time_ns": 157598.57894736843,
+      "samples": 1,
+      "std_time_ns": 1009.4678724410966,
+      "median_time_ns": 157522.0,
+      "memory_bytes": 98512
+    },
+    "inference/abstract interpretation/domsort_ssa!": {
+      "max_time_ns": 2.9459935216216218e7,
+      "allocs": 176400,
+      "min_time_ns": 2.9316717e7,
+      "mean_time_ns": 2.9459935216216218e7,
+      "samples": 1,
+      "std_time_ns": 155131.71199036986,
+      "median_time_ns": 2.9426873e7,
+      "memory_bytes": 12075744
+    },
+    "inference/optimization/domsort_ssa!": {
+      "max_time_ns": 7.108351484848484e6,
+      "allocs": 69540,
+      "min_time_ns": 7.077036e6,
+      "mean_time_ns": 7.108351484848484e6,
+      "samples": 1,
+      "std_time_ns": 19612.549185918586,
+      "median_time_ns": 7.103731e6,
+      "memory_bytes": 4701376
+    },
+    "inference/rand(Float64)": {
+      "max_time_ns": 2.9777099108108107e7,
+      "allocs": 218277,
+      "min_time_ns": 2.9693149e7,
+      "mean_time_ns": 2.9777099108108107e7,
+      "samples": 1,
+      "std_time_ns": 56371.346226894675,
+      "median_time_ns": 2.9771848e7,
+      "memory_bytes": 15218202
+    }
+  }
+}

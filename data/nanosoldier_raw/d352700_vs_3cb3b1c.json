@@ -1,0 +1,28 @@
+{
+  "metadata": {
+    "head_hash": "d352700",
+    "comparison": "d352700_vs_3cb3b1c",
+    "source": "NanosoldierReports",
+    "base_hash": "3cb3b1c",
+    "imported_at": "2026-03-10T00:40:46.414",
+    "source_type": "report_md"
+  },
+  "benchmarks": {
+    "[\"inference\", \"abstract interpretation\", \"Base.init_stdio(::Ptr{Cvoid})\"]": {
+      "time_ratio": 0.99,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"quadratic\"]": {
+      "time_ratio": 0.94,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"rand(Float64)\"]": {
+      "time_ratio": 0.97,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"abstract interpretation\", \"REPL.REPLCompletions.completions\"]": {
+      "time_ratio": 0.99,
+      "memory_ratio": 1.0
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "metadata": {
+    "head_hash": "bb31b55",
+    "comparison": "bb31b55_vs_965bc7d",
+    "source": "NanosoldierReports",
+    "base_hash": "965bc7d",
+    "imported_at": "2026-03-10T23:29:58.535",
+    "source_type": "report_md"
+  },
+  "benchmarks": {
+    "[\"union\", \"array\", (\"sort\", \"Union{Missing, Bool}\", 1)]": {
+      "time_ratio": 0.87,
+      "memory_ratio": 1.0
+    }
+  }
+}

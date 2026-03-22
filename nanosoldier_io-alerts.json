@@ -1,0 +1,80 @@
+{
+  "threshold": 1.05,
+  "count": 8,
+  "group": "nanosoldier_io",
+  "generated": "2026-03-22T15:56:14.890",
+  "alerts": [
+    {
+      "latest_mean_ms": 130.0,
+      "commit": "b16a231",
+      "ratio": 1.3,
+      "timestamp": "2026-03-10T23:30:16.214",
+      "benchmark": "io/serialization/(deserialize/Vector{String})",
+      "group": "nanosoldier_io",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 111.0,
+      "commit": "b146a70",
+      "ratio": 1.11,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "io/read/read",
+      "group": "nanosoldier_io",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 109.0,
+      "commit": "aebcebc",
+      "ratio": 1.09,
+      "timestamp": "2026-03-10T23:30:21.284",
+      "benchmark": "io/serialization/(deserialize/Matrix{Float64})",
+      "group": "nanosoldier_io",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 108.0,
+      "commit": "b146a70",
+      "ratio": 1.08,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "io/array_limit/(display/Matrix{Float64}(10000/10000))",
+      "group": "nanosoldier_io",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 106.0,
+      "commit": "b146a70",
+      "ratio": 1.06,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "io/array_limit/(display/Vector{Float64}(100000000,))",
+      "group": "nanosoldier_io",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 106.0,
+      "commit": "b146a70",
+      "ratio": 1.06,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "io/array_limit/(display/Matrix{Float64}(100000000/1))",
+      "group": "nanosoldier_io",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 106.0,
+      "commit": "aebcebc",
+      "ratio": 1.06,
+      "timestamp": "2026-03-10T23:30:21.284",
+      "benchmark": "io/read/readstring",
+      "group": "nanosoldier_io",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 106.0,
+      "commit": "b093917",
+      "ratio": 1.06,
+      "timestamp": "2026-03-10T23:30:18.101",
+      "benchmark": "io/serialization/(serialize/Matrix{Float64})",
+      "group": "nanosoldier_io",
+      "trend": "slower"
+    }
+  ]
+}

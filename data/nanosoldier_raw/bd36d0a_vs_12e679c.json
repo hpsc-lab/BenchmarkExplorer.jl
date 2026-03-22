@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "head_hash": "bd36d0a",
+    "comparison": "bd36d0a_vs_12e679c",
+    "source": "NanosoldierReports",
+    "base_hash": "12e679c",
+    "imported_at": "2026-03-10T00:41:11.920",
+    "source_type": "report_md"
+  },
+  "benchmarks": {
+    "[\"sort\", \"quicksort\", (\"sortperm! forwards\", \"descending\")]": {
+      "time_ratio": 1.0,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", (\"sortperm! forwards\", \"ascending\")]": {
+      "time_ratio": 0.98,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", (\"sortperm! forwards\", \"ones\")]": {
+      "time_ratio": 0.99,
+      "memory_ratio": 1.0
+    },
+    "[\"micro\", \"printfd\"]": {
+      "time_ratio": 0.86,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", (\"sortperm! forwards\", \"descending\")]": {
+      "time_ratio": 1.0,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"quicksort\", (\"sortperm! forwards\", \"random\")]": {
+      "time_ratio": 0.99,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"insertionsort\", (\"sortperm! forwards\", \"random\")]": {
+      "time_ratio": 1.0,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"quicksort\", (\"sortperm! forwards\", \"ascending\")]": {
+      "time_ratio": 1.0,
+      "memory_ratio": 1.0
+    },
+    "[\"sort\", \"quicksort\", (\"sortperm! forwards\", \"ones\")]": {
+      "time_ratio": 1.0,
+      "memory_ratio": 1.0
+    }
+  }
+}

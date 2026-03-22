@@ -1,0 +1,20 @@
+{
+  "metadata": {
+    "head_hash": "c67ad27",
+    "comparison": "c67ad27_vs_1bfdf98",
+    "source": "NanosoldierReports",
+    "base_hash": "1bfdf98",
+    "imported_at": "2026-03-10T00:41:00.493",
+    "source_type": "report_md"
+  },
+  "benchmarks": {
+    "[\"inference\", \"optimization\", \"many_global_refs\"]": {
+      "time_ratio": 1.02,
+      "memory_ratio": 1.0
+    },
+    "[\"inference\", \"optimization\", \"many_const_calls\"]": {
+      "time_ratio": 1.06,
+      "memory_ratio": 1.0
+    }
+  }
+}

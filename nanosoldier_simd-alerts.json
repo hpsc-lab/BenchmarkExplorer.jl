@@ -1,0 +1,2213 @@
+{
+  "threshold": 1.05,
+  "count": 245,
+  "group": "nanosoldier_simd",
+  "generated": "2026-03-22T15:56:08.612",
+  "alerts": [
+    {
+      "latest_mean_ms": 1499.0,
+      "commit": "cd660ad",
+      "ratio": 14.99,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "simd/(auto_conditional_loop!/Int32/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 1394.0,
+      "commit": "cd660ad",
+      "ratio": 13.94,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "simd/(auto_conditional_loop!/Int32/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 1070.0,
+      "commit": "cd660ad",
+      "ratio": 10.7,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "simd/(auto_sum_reduce/Int32/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 1066.0,
+      "commit": "cd660ad",
+      "ratio": 10.66,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "simd/(auto_sum_reduce/Int32/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 922.0,
+      "commit": "cd660ad",
+      "ratio": 9.22,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "simd/(auto_axpy!/Int32/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 905.0,
+      "commit": "cd660ad",
+      "ratio": 9.05,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "simd/(auto_axpy!/Int32/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 891.0,
+      "commit": "cd660ad",
+      "ratio": 8.91,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "simd/(auto_inner/Int32/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 854.0,
+      "commit": "cd660ad",
+      "ratio": 8.54,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "simd/(auto_inner/Int32/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 628.0,
+      "commit": "cd660ad",
+      "ratio": 6.28,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "simd/(auto_conditional_loop!/Int64/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 627.0,
+      "commit": "cd660ad",
+      "ratio": 6.27,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "simd/(auto_conditional_loop!/Int64/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 549.0,
+      "commit": "cd660ad",
+      "ratio": 5.49,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "simd/(auto_sum_reduce/Int64/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 549.0,
+      "commit": "cd660ad",
+      "ratio": 5.49,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "simd/(auto_sum_reduce/Int64/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 534.0,
+      "commit": "cd660ad",
+      "ratio": 5.34,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "simd/(auto_manual_example!/Int32/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 327.0,
+      "commit": "cd660ad",
+      "ratio": 3.27,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "simd/(auto_inner/Int64/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 323.0,
+      "commit": "cd660ad",
+      "ratio": 3.23,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "simd/(auto_axpy!/Int64/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 314.0,
+      "commit": "cd660ad",
+      "ratio": 3.14,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "simd/(auto_inner/Int64/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 311.0,
+      "commit": "cd660ad",
+      "ratio": 3.11,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "simd/(auto_axpy!/Int64/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 289.0,
+      "commit": "cd660ad",
+      "ratio": 2.89,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "simd/(auto_manual_example!/Int64/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 256.0,
+      "commit": "cd660ad",
+      "ratio": 2.56,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "simd/(auto_two_reductions/Int64/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 256.0,
+      "commit": "cd660ad",
+      "ratio": 2.56,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "simd/(auto_two_reductions/Int64/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 252.0,
+      "commit": "cd660ad",
+      "ratio": 2.52,
+      "timestamp": "2026-03-10T00:40:53.667",
+      "benchmark": "simd/(auto_manual_example!/Int64/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 183.0,
+      "commit": "b0772ee",
+      "ratio": 1.83,
+      "timestamp": "2026-03-10T23:30:18.437",
+      "benchmark": "simd/(CartesianPartition/conditional_loop!/Int32/3/31)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 179.0,
+      "commit": "b9b271f",
+      "ratio": 1.79,
+      "timestamp": "2026-03-10T23:30:01.104",
+      "benchmark": "simd/(Linear/loop_fields!/Float32/BaseBenchmarks.SIMDBenchmarks.MutableFields/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 178.0,
+      "commit": "016630a",
+      "ratio": 1.78,
+      "timestamp": "2026-03-09T03:20:30.409",
+      "benchmark": "simd/(Cartesian/conditional_loop!/Int32/4/64)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 178.0,
+      "commit": "b9b271f",
+      "ratio": 1.78,
+      "timestamp": "2026-03-10T23:30:01.104",
+      "benchmark": "simd/(Linear/loop_fields!/Float32/BaseBenchmarks.SIMDBenchmarks.MutableFields/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 176.0,
+      "commit": "016630a",
+      "ratio": 1.76,
+      "timestamp": "2026-03-09T03:20:30.409",
+      "benchmark": "simd/(Cartesian/conditional_loop!/Int64/3/32)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 175.0,
+      "commit": "b57a57a",
+      "ratio": 1.75,
+      "timestamp": "2026-03-10T23:30:06.385",
+      "benchmark": "simd/(Cartesian/conditional_loop!/Int32/4/31)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 175.0,
+      "commit": "016630a",
+      "ratio": 1.75,
+      "timestamp": "2026-03-09T03:20:30.409",
+      "benchmark": "simd/(Cartesian/conditional_loop!/Int32/2/64)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 173.0,
+      "commit": "b2adc93",
+      "ratio": 1.73,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/axpy!/Float32/3/32)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 172.0,
+      "commit": "016630a",
+      "ratio": 1.72,
+      "timestamp": "2026-03-09T03:20:30.409",
+      "benchmark": "simd/(Cartesian/conditional_loop!/Int32/3/64)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 171.0,
+      "commit": "b9b271f",
+      "ratio": 1.71,
+      "timestamp": "2026-03-10T23:30:01.104",
+      "benchmark": "simd/(Linear/loop_fields!/Float32/BaseBenchmarks.SIMDBenchmarks.ImmutableFields/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 170.0,
+      "commit": "b9b271f",
+      "ratio": 1.7,
+      "timestamp": "2026-03-10T23:30:01.104",
+      "benchmark": "simd/(Linear/loop_fields!/Float32/BaseBenchmarks.SIMDBenchmarks.ImmutableFields/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 163.0,
+      "commit": "016630a",
+      "ratio": 1.63,
+      "timestamp": "2026-03-09T03:20:30.409",
+      "benchmark": "simd/(Cartesian/conditional_loop!/Int64/4/32)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 162.0,
+      "commit": "b2adc93",
+      "ratio": 1.62,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/inner/Int32/3/32)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 161.0,
+      "commit": "c5ee39f",
+      "ratio": 1.61,
+      "timestamp": "2026-03-10T00:41:01.463",
+      "benchmark": "simd/(CartesianPartition/axpy!/Float64/2/64)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 161.0,
+      "commit": "b2adc93",
+      "ratio": 1.61,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/axpy!/Int32/3/32)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 157.0,
+      "commit": "c502c88",
+      "ratio": 1.57,
+      "timestamp": "2026-03-10T00:41:03.149",
+      "benchmark": "simd/(Linear/auto_axpy!/Int32/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 157.0,
+      "commit": "c502c88",
+      "ratio": 1.57,
+      "timestamp": "2026-03-10T00:41:03.149",
+      "benchmark": "simd/(Linear/axpy!/Int32/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 156.0,
+      "commit": "cf188c3",
+      "ratio": 1.56,
+      "timestamp": "2026-03-10T00:40:51.209",
+      "benchmark": "simd/(Linear/loop_fields!/Int64/BaseBenchmarks.SIMDBenchmarks.MutableFields/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 156.0,
+      "commit": "b2adc93",
+      "ratio": 1.56,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/two_reductions/Int64/3/31)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 155.0,
+      "commit": "b7ff634",
+      "ratio": 1.55,
+      "timestamp": "2026-03-10T23:30:03.073",
+      "benchmark": "simd/(CartesianPartition/conditional_loop!/Int32/4/31)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 154.0,
+      "commit": "b2adc93",
+      "ratio": 1.54,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/inner/Int32/3/64)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 154.0,
+      "commit": "cf188c3",
+      "ratio": 1.54,
+      "timestamp": "2026-03-10T00:40:51.209",
+      "benchmark": "simd/(Linear/loop_fields!/Int64/BaseBenchmarks.SIMDBenchmarks.MutableFields/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 154.0,
+      "commit": "cf188c3",
+      "ratio": 1.54,
+      "timestamp": "2026-03-10T00:40:51.209",
+      "benchmark": "simd/(Linear/loop_fields!/Int64/BaseBenchmarks.SIMDBenchmarks.ImmutableFields/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 153.0,
+      "commit": "b6bca19",
+      "ratio": 1.53,
+      "timestamp": "2026-03-10T23:30:05.064",
+      "benchmark": "simd/(Cartesian/inner/Int32/2/63)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 153.0,
+      "commit": "b2adc93",
+      "ratio": 1.53,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/axpy!/Float32/3/64)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 153.0,
+      "commit": "b9b271f",
+      "ratio": 1.53,
+      "timestamp": "2026-03-10T23:30:01.104",
+      "benchmark": "simd/(Linear/loop_fields!/Int32/BaseBenchmarks.SIMDBenchmarks.ImmutableFields/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 152.0,
+      "commit": "b9b271f",
+      "ratio": 1.52,
+      "timestamp": "2026-03-10T23:30:01.104",
+      "benchmark": "simd/(Linear/loop_fields!/Int32/BaseBenchmarks.SIMDBenchmarks.ImmutableFields/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 151.0,
+      "commit": "b9b271f",
+      "ratio": 1.51,
+      "timestamp": "2026-03-10T23:30:01.104",
+      "benchmark": "simd/(Linear/loop_fields!/Int32/BaseBenchmarks.SIMDBenchmarks.MutableFields/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 150.0,
+      "commit": "b2adc93",
+      "ratio": 1.5,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/two_reductions/Int64/3/32)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 150.0,
+      "commit": "016630a",
+      "ratio": 1.5,
+      "timestamp": "2026-03-09T03:20:30.409",
+      "benchmark": "simd/(Linear/auto_conditional_loop!/Int64/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 150.0,
+      "commit": "cf188c3",
+      "ratio": 1.5,
+      "timestamp": "2026-03-10T00:40:51.209",
+      "benchmark": "simd/(Linear/loop_fields!/Int64/BaseBenchmarks.SIMDBenchmarks.ImmutableFields/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 149.0,
+      "commit": "b2adc93",
+      "ratio": 1.49,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(CartesianPartition/inner/Int32/2/63)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 149.0,
+      "commit": "b2adc93",
+      "ratio": 1.49,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/axpy!/Float32/2/32)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 148.0,
+      "commit": "016630a",
+      "ratio": 1.48,
+      "timestamp": "2026-03-09T03:20:30.409",
+      "benchmark": "simd/(Linear/conditional_loop!/Int64/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 148.0,
+      "commit": "b9b271f",
+      "ratio": 1.48,
+      "timestamp": "2026-03-10T23:30:01.104",
+      "benchmark": "simd/(Linear/loop_fields!/Int32/BaseBenchmarks.SIMDBenchmarks.MutableFields/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 147.0,
+      "commit": "b2adc93",
+      "ratio": 1.47,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/inner/Float64/3/64)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 147.0,
+      "commit": "b2adc93",
+      "ratio": 1.47,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/two_reductions/Float32/3/64)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 146.0,
+      "commit": "b2adc93",
+      "ratio": 1.46,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/inner/Int32/4/32)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 146.0,
+      "commit": "016630a",
+      "ratio": 1.46,
+      "timestamp": "2026-03-09T03:20:30.409",
+      "benchmark": "simd/(Linear/conditional_loop!/Int64/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 145.0,
+      "commit": "b421eca",
+      "ratio": 1.45,
+      "timestamp": "2026-03-10T23:30:10.268",
+      "benchmark": "simd/(\\axpy!\\/\\Float64\\/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 145.0,
+      "commit": "016630a",
+      "ratio": 1.45,
+      "timestamp": "2026-03-09T03:20:30.409",
+      "benchmark": "simd/(Linear/conditional_loop!_aliased/Int64/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 144.0,
+      "commit": "b421eca",
+      "ratio": 1.44,
+      "timestamp": "2026-03-10T23:30:10.268",
+      "benchmark": "simd/(\\auto_axpy!\\/\\Float64\\/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 143.0,
+      "commit": "b2adc93",
+      "ratio": 1.43,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/two_reductions/Float32/3/32)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 143.0,
+      "commit": "b16a231",
+      "ratio": 1.43,
+      "timestamp": "2026-03-10T23:30:16.214",
+      "benchmark": "simd/(Linear/sum_reduce/Int32/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 143.0,
+      "commit": "b2adc93",
+      "ratio": 1.43,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/axpy!/Float64/3/31)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 143.0,
+      "commit": "b378d19",
+      "ratio": 1.43,
+      "timestamp": "2026-03-10T23:30:12.231",
+      "benchmark": "simd/(Cartesian/conditional_loop!/Int32/2/31)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 142.0,
+      "commit": "016630a",
+      "ratio": 1.42,
+      "timestamp": "2026-03-09T03:20:30.409",
+      "benchmark": "simd/(Linear/conditional_loop!_aliased/Int64/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 141.0,
+      "commit": "b9b271f",
+      "ratio": 1.41,
+      "timestamp": "2026-03-10T23:30:01.104",
+      "benchmark": "simd/(Linear/loop_fields!/Float64/BaseBenchmarks.SIMDBenchmarks.MutableFields/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 141.0,
+      "commit": "016630a",
+      "ratio": 1.41,
+      "timestamp": "2026-03-09T03:20:30.409",
+      "benchmark": "simd/(Linear/auto_conditional_loop!/Int64/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 139.0,
+      "commit": "016630a",
+      "ratio": 1.39,
+      "timestamp": "2026-03-09T03:20:30.409",
+      "benchmark": "simd/(Linear/sum_reduce/Int64/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 139.0,
+      "commit": "b2adc93",
+      "ratio": 1.39,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/inner/Int32/4/64)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 139.0,
+      "commit": "b2adc93",
+      "ratio": 1.39,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/inner/Int32/3/31)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 139.0,
+      "commit": "aebcebc",
+      "ratio": 1.39,
+      "timestamp": "2026-03-10T23:30:21.284",
+      "benchmark": "simd/(Cartesian/axpy!/Int64/2/32)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 139.0,
+      "commit": "b2adc93",
+      "ratio": 1.39,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/manual_example!/Int32/3/31)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 139.0,
+      "commit": "ccceac2",
+      "ratio": 1.39,
+      "timestamp": "2026-03-10T00:40:54.548",
+      "benchmark": "simd/(Cartesian/manual_example!/Int32/4/64)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 138.0,
+      "commit": "016630a",
+      "ratio": 1.38,
+      "timestamp": "2026-03-09T03:20:30.409",
+      "benchmark": "simd/(Linear/auto_sum_reduce/Int64/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 138.0,
+      "commit": "b6bca19",
+      "ratio": 1.38,
+      "timestamp": "2026-03-10T23:30:05.064",
+      "benchmark": "simd/(CartesianPartition/axpy!/Float32/2/31)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 138.0,
+      "commit": "b9b271f",
+      "ratio": 1.38,
+      "timestamp": "2026-03-10T23:30:01.104",
+      "benchmark": "simd/(Linear/loop_fields!/Float64/BaseBenchmarks.SIMDBenchmarks.ImmutableFields/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 138.0,
+      "commit": "b2adc93",
+      "ratio": 1.38,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/two_reductions/Float64/3/32)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 137.0,
+      "commit": "b2adc93",
+      "ratio": 1.37,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/two_reductions/Int64/3/63)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 137.0,
+      "commit": "b4ce107",
+      "ratio": 1.37,
+      "timestamp": "2026-03-10T23:30:07.045",
+      "benchmark": "simd/(CartesianPartition/inner/Int32/4/31)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 137.0,
+      "commit": "c46c227",
+      "ratio": 1.37,
+      "timestamp": "2026-03-10T00:41:04.382",
+      "benchmark": "simd/(Linear/auto_local_arrays/Int32/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 137.0,
+      "commit": "c46c227",
+      "ratio": 1.37,
+      "timestamp": "2026-03-10T00:41:04.382",
+      "benchmark": "simd/(Linear/auto_local_arrays/Int32/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 136.0,
+      "commit": "c6a98e3",
+      "ratio": 1.36,
+      "timestamp": "2026-03-10T00:40:59.866",
+      "benchmark": "simd/(Linear/sum_reduce/Float64/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 136.0,
+      "commit": "b2adc93",
+      "ratio": 1.36,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/manual_example!/Int32/3/32)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 136.0,
+      "commit": "bc12b12",
+      "ratio": 1.36,
+      "timestamp": "2026-03-10T23:29:57.276",
+      "benchmark": "simd/(Linear/conditional_loop!_aliased/Int32/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 135.0,
+      "commit": "b9b271f",
+      "ratio": 1.35,
+      "timestamp": "2026-03-10T23:30:01.104",
+      "benchmark": "simd/(Linear/loop_fields!/Float64/BaseBenchmarks.SIMDBenchmarks.MutableFields/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 135.0,
+      "commit": "016630a",
+      "ratio": 1.35,
+      "timestamp": "2026-03-09T03:20:30.409",
+      "benchmark": "simd/(Linear/auto_sum_reduce/Int64/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 135.0,
+      "commit": "b2adc93",
+      "ratio": 1.35,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/axpy!/Float32/2/64)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 135.0,
+      "commit": "b00614a",
+      "ratio": 1.35,
+      "timestamp": "2026-03-10T23:30:19.395",
+      "benchmark": "simd/(CartesianPartition/manual_partition!/Int32/4/31)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 134.0,
+      "commit": "aebcebc",
+      "ratio": 1.34,
+      "timestamp": "2026-03-10T23:30:21.284",
+      "benchmark": "simd/(CartesianPartition/two_reductions/Float64/2/31)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 134.0,
+      "commit": "b2adc93",
+      "ratio": 1.34,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/axpy!/Int32/2/64)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 134.0,
+      "commit": "016630a",
+      "ratio": 1.34,
+      "timestamp": "2026-03-09T03:20:30.409",
+      "benchmark": "simd/(Linear/sum_reduce/Int64/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 134.0,
+      "commit": "ce6fbae",
+      "ratio": 1.34,
+      "timestamp": "2026-03-10T00:40:51.832",
+      "benchmark": "simd/(Cartesian/manual_example!/Float64/2/64)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 134.0,
+      "commit": "b2adc93",
+      "ratio": 1.34,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/inner/Int32/3/63)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 134.0,
+      "commit": "c1a287e",
+      "ratio": 1.34,
+      "timestamp": "2026-03-10T00:41:06.619",
+      "benchmark": "simd/(Linear/manual_example!/Float32/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 134.0,
+      "commit": "b2adc93",
+      "ratio": 1.34,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/inner/Float64/4/32)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 133.0,
+      "commit": "b0154e3",
+      "ratio": 1.33,
+      "timestamp": "2026-03-10T23:30:19.065",
+      "benchmark": "simd/(\\two_reductions_aliased\\/\\Int32\\/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 133.0,
+      "commit": "b0154e3",
+      "ratio": 1.33,
+      "timestamp": "2026-03-10T23:30:19.065",
+      "benchmark": "simd/(\\loop_fields!\\/\\Float32\\/\\BaseBenchmarks.SIMDBenchmarks.ImmutableFields\\/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 133.0,
+      "commit": "b2adc93",
+      "ratio": 1.33,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/axpy!/Int32/2/32)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 133.0,
+      "commit": "c0b95ac",
+      "ratio": 1.33,
+      "timestamp": "2026-03-10T00:41:08.226",
+      "benchmark": "simd/(loop_fields!/Float32/BaseBenchmarks.SIMDBenchmarks.ImmutableFields/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 133.0,
+      "commit": "b0154e3",
+      "ratio": 1.33,
+      "timestamp": "2026-03-10T23:30:19.065",
+      "benchmark": "simd/(\\two_reductions\\/\\Int32\\/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 133.0,
+      "commit": "c0b95ac",
+      "ratio": 1.33,
+      "timestamp": "2026-03-10T00:41:08.226",
+      "benchmark": "simd/(loop_fields!/Float32/BaseBenchmarks.SIMDBenchmarks.MutableFields/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 133.0,
+      "commit": "b46df09",
+      "ratio": 1.33,
+      "timestamp": "2026-03-10T23:30:08.960",
+      "benchmark": "simd/(loop_fields!/Int32/BaseBenchmarks.SIMDBenchmarks.MutableFields/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 133.0,
+      "commit": "b0154e3",
+      "ratio": 1.33,
+      "timestamp": "2026-03-10T23:30:19.065",
+      "benchmark": "simd/(\\two_reductions_aliased\\/\\Int32\\/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 133.0,
+      "commit": "c0b95ac",
+      "ratio": 1.33,
+      "timestamp": "2026-03-10T00:41:08.226",
+      "benchmark": "simd/(loop_fields!/Float32/BaseBenchmarks.SIMDBenchmarks.ImmutableFields/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 133.0,
+      "commit": "c0b95ac",
+      "ratio": 1.33,
+      "timestamp": "2026-03-10T00:41:08.226",
+      "benchmark": "simd/(loop_fields!/Float32/BaseBenchmarks.SIMDBenchmarks.MutableFields/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 133.0,
+      "commit": "b0154e3",
+      "ratio": 1.33,
+      "timestamp": "2026-03-10T23:30:19.065",
+      "benchmark": "simd/(\\loop_fields!\\/\\Float32\\/\\BaseBenchmarks.SIMDBenchmarks.MutableFields\\/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 133.0,
+      "commit": "c13f74b",
+      "ratio": 1.33,
+      "timestamp": "2026-03-10T00:41:07.423",
+      "benchmark": "simd/(loop_fields!/Float64/BaseBenchmarks.SIMDBenchmarks.MutableFields/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 133.0,
+      "commit": "b0154e3",
+      "ratio": 1.33,
+      "timestamp": "2026-03-10T23:30:19.065",
+      "benchmark": "simd/(\\loop_fields!\\/\\Float32\\/\\BaseBenchmarks.SIMDBenchmarks.MutableFields\\/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 133.0,
+      "commit": "b2adc93",
+      "ratio": 1.33,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/inner/Int64/3/31)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 133.0,
+      "commit": "b2adc93",
+      "ratio": 1.33,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/axpy!/Float64/2/32)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 133.0,
+      "commit": "b46df09",
+      "ratio": 1.33,
+      "timestamp": "2026-03-10T23:30:08.960",
+      "benchmark": "simd/(loop_fields!/Int32/BaseBenchmarks.SIMDBenchmarks.ImmutableFields/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 133.0,
+      "commit": "b57a57a",
+      "ratio": 1.33,
+      "timestamp": "2026-03-10T23:30:06.385",
+      "benchmark": "simd/(CartesianPartition/manual_partition!/Int32/3/31)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 133.0,
+      "commit": "b46df09",
+      "ratio": 1.33,
+      "timestamp": "2026-03-10T23:30:08.960",
+      "benchmark": "simd/(manual_example!/Float64/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 133.0,
+      "commit": "c13f74b",
+      "ratio": 1.33,
+      "timestamp": "2026-03-10T00:41:07.423",
+      "benchmark": "simd/(loop_fields!/Float64/BaseBenchmarks.SIMDBenchmarks.ImmutableFields/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 133.0,
+      "commit": "b46df09",
+      "ratio": 1.33,
+      "timestamp": "2026-03-10T23:30:08.960",
+      "benchmark": "simd/(loop_fields!/Int32/BaseBenchmarks.SIMDBenchmarks.MutableFields/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 133.0,
+      "commit": "016630a",
+      "ratio": 1.33,
+      "timestamp": "2026-03-09T03:20:30.409",
+      "benchmark": "simd/(Cartesian/conditional_loop!/Int64/4/64)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 133.0,
+      "commit": "b0154e3",
+      "ratio": 1.33,
+      "timestamp": "2026-03-10T23:30:19.065",
+      "benchmark": "simd/(\\loop_fields!\\/\\Float32\\/\\BaseBenchmarks.SIMDBenchmarks.ImmutableFields\\/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 133.0,
+      "commit": "b46df09",
+      "ratio": 1.33,
+      "timestamp": "2026-03-10T23:30:08.960",
+      "benchmark": "simd/(loop_fields!/Int32/BaseBenchmarks.SIMDBenchmarks.ImmutableFields/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 133.0,
+      "commit": "b0154e3",
+      "ratio": 1.33,
+      "timestamp": "2026-03-10T23:30:19.065",
+      "benchmark": "simd/(\\two_reductions\\/\\Int32\\/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 132.0,
+      "commit": "c46c227",
+      "ratio": 1.32,
+      "timestamp": "2026-03-10T00:41:04.382",
+      "benchmark": "simd/(Linear/axpy!_aliased/Int32/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 132.0,
+      "commit": "bae2d8d",
+      "ratio": 1.32,
+      "timestamp": "2026-03-10T23:29:59.543",
+      "benchmark": "simd/(Cartesian/axpy!/Float64/2/64)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 132.0,
+      "commit": "c13f74b",
+      "ratio": 1.32,
+      "timestamp": "2026-03-10T00:41:07.423",
+      "benchmark": "simd/(loop_fields!/Float64/BaseBenchmarks.SIMDBenchmarks.MutableFields/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 132.0,
+      "commit": "c13f74b",
+      "ratio": 1.32,
+      "timestamp": "2026-03-10T00:41:07.423",
+      "benchmark": "simd/(loop_fields!/Float64/BaseBenchmarks.SIMDBenchmarks.ImmutableFields/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 132.0,
+      "commit": "b2adc93",
+      "ratio": 1.32,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/inner/Float64/4/64)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 132.0,
+      "commit": "b2adc93",
+      "ratio": 1.32,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/manual_example!/Float64/3/32)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 132.0,
+      "commit": "b421eca",
+      "ratio": 1.32,
+      "timestamp": "2026-03-10T23:30:10.268",
+      "benchmark": "simd/(\\manual_example!\\/\\Float64\\/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 132.0,
+      "commit": "b9b271f",
+      "ratio": 1.32,
+      "timestamp": "2026-03-10T23:30:01.104",
+      "benchmark": "simd/(Linear/loop_fields!/Float64/BaseBenchmarks.SIMDBenchmarks.ImmutableFields/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 131.0,
+      "commit": "c46c227",
+      "ratio": 1.31,
+      "timestamp": "2026-03-10T00:41:04.382",
+      "benchmark": "simd/(Linear/local_arrays/Int32/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 131.0,
+      "commit": "b2adc93",
+      "ratio": 1.31,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/two_reductions/Float32/2/64)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 131.0,
+      "commit": "b01e7a7",
+      "ratio": 1.31,
+      "timestamp": "2026-03-10T23:30:18.767",
+      "benchmark": "simd/(CartesianPartition/inner/Float64/3/31)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 131.0,
+      "commit": "c1a287e",
+      "ratio": 1.31,
+      "timestamp": "2026-03-10T00:41:06.619",
+      "benchmark": "simd/(Linear/manual_example!/Float64/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 131.0,
+      "commit": "c46c227",
+      "ratio": 1.31,
+      "timestamp": "2026-03-10T00:41:04.382",
+      "benchmark": "simd/(Linear/local_arrays/Int32/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 131.0,
+      "commit": "b146a70",
+      "ratio": 1.31,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "simd/(Linear/inner_aliased/Float32/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 131.0,
+      "commit": "b2adc93",
+      "ratio": 1.31,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/axpy!/Int64/3/31)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 131.0,
+      "commit": "b2adc93",
+      "ratio": 1.31,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/manual_example!/Int32/3/63)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 131.0,
+      "commit": "c46c227",
+      "ratio": 1.31,
+      "timestamp": "2026-03-10T00:41:04.382",
+      "benchmark": "simd/(Linear/axpy!_aliased/Int32/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 130.0,
+      "commit": "b421eca",
+      "ratio": 1.3,
+      "timestamp": "2026-03-10T23:30:10.268",
+      "benchmark": "simd/(\\manual_example!\\/\\Float64\\/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 130.0,
+      "commit": "b2adc93",
+      "ratio": 1.3,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/inner/Int64/3/32)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 130.0,
+      "commit": "b64b578",
+      "ratio": 1.3,
+      "timestamp": "2026-03-10T23:30:05.672",
+      "benchmark": "simd/(CartesianPartition/manual_partition!/Int32/3/63)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 130.0,
+      "commit": "c46c227",
+      "ratio": 1.3,
+      "timestamp": "2026-03-10T00:41:04.382",
+      "benchmark": "simd/(Linear/axpy!_aliased/Int64/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 129.0,
+      "commit": "b2adc93",
+      "ratio": 1.29,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/manual_example!/Int64/3/31)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 128.0,
+      "commit": "ce6fbae",
+      "ratio": 1.28,
+      "timestamp": "2026-03-10T00:40:51.832",
+      "benchmark": "simd/(CartesianPartition/manual_example!/Float64/2/64)",
+      "group": "nanosoldier_simd",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 128.0,
+      "commit": "b2adc93",
+      "ratio": 1.28,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/axpy!/Float64/3/63)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 128.0,
+      "commit": "b2adc93",
+      "ratio": 1.28,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/conditional_loop!/Int32/3/32)",
+      "group": "nanosoldier_simd",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 128.0,
+      "commit": "c46c227",
+      "ratio": 1.28,
+      "timestamp": "2026-03-10T00:41:04.382",
+      "benchmark": "simd/(Linear/auto_local_arrays/Float32/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 128.0,
+      "commit": "c46c227",
+      "ratio": 1.28,
+      "timestamp": "2026-03-10T00:41:04.382",
+      "benchmark": "simd/(Linear/local_arrays/Float32/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 128.0,
+      "commit": "b2adc93",
+      "ratio": 1.28,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/manual_example!/Float32/3/32)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 128.0,
+      "commit": "cd2ebfc",
+      "ratio": 1.28,
+      "timestamp": "2026-03-10T00:40:54.113",
+      "benchmark": "simd/(Linear/manual_example!/Float64/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 128.0,
+      "commit": "b2adc93",
+      "ratio": 1.28,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/two_reductions/Float64/3/64)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 128.0,
+      "commit": "c46c227",
+      "ratio": 1.28,
+      "timestamp": "2026-03-10T00:41:04.382",
+      "benchmark": "simd/(Linear/local_arrays/Float32/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 128.0,
+      "commit": "b64b578",
+      "ratio": 1.28,
+      "timestamp": "2026-03-10T23:30:05.672",
+      "benchmark": "simd/(CartesianPartition/inner/Int64/4/32)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 128.0,
+      "commit": "c46c227",
+      "ratio": 1.28,
+      "timestamp": "2026-03-10T00:41:04.382",
+      "benchmark": "simd/(Linear/auto_local_arrays/Float32/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 127.0,
+      "commit": "bae2d8d",
+      "ratio": 1.27,
+      "timestamp": "2026-03-10T23:29:59.543",
+      "benchmark": "simd/(Linear/axpy!/Float64/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 127.0,
+      "commit": "016630a",
+      "ratio": 1.27,
+      "timestamp": "2026-03-09T03:20:30.409",
+      "benchmark": "simd/(Cartesian/conditional_loop!/Int64/3/63)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 127.0,
+      "commit": "b6bca19",
+      "ratio": 1.27,
+      "timestamp": "2026-03-10T23:30:05.064",
+      "benchmark": "simd/(Cartesian/axpy!/Int32/4/31)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 127.0,
+      "commit": "b2adc93",
+      "ratio": 1.27,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/two_reductions/Int64/3/64)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 127.0,
+      "commit": "b0154e3",
+      "ratio": 1.27,
+      "timestamp": "2026-03-10T23:30:19.065",
+      "benchmark": "simd/(\\auto_two_reductions\\/\\Int32\\/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 127.0,
+      "commit": "b2adc93",
+      "ratio": 1.27,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/manual_example!/Float64/2/32)",
+      "group": "nanosoldier_simd",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 127.0,
+      "commit": "c46c227",
+      "ratio": 1.27,
+      "timestamp": "2026-03-10T00:41:04.382",
+      "benchmark": "simd/(Linear/axpy!_aliased/Int64/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 127.0,
+      "commit": "bae2d8d",
+      "ratio": 1.27,
+      "timestamp": "2026-03-10T23:29:59.543",
+      "benchmark": "simd/(CartesianPartition/conditional_loop!/Int32/3/32)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 127.0,
+      "commit": "b2adc93",
+      "ratio": 1.27,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/conditional_loop!/Float32/2/32)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 126.0,
+      "commit": "bae2d8d",
+      "ratio": 1.26,
+      "timestamp": "2026-03-10T23:29:59.543",
+      "benchmark": "simd/(Linear/auto_axpy!/Float64/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 126.0,
+      "commit": "b46df09",
+      "ratio": 1.26,
+      "timestamp": "2026-03-10T23:30:08.960",
+      "benchmark": "simd/(manual_example!/Float64/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 126.0,
+      "commit": "b46df09",
+      "ratio": 1.26,
+      "timestamp": "2026-03-10T23:30:08.960",
+      "benchmark": "simd/(axpy!/Float64/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 126.0,
+      "commit": "b46df09",
+      "ratio": 1.26,
+      "timestamp": "2026-03-10T23:30:08.960",
+      "benchmark": "simd/(auto_axpy!/Float64/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 126.0,
+      "commit": "c299527",
+      "ratio": 1.26,
+      "timestamp": "2026-03-10T00:41:05.290",
+      "benchmark": "simd/(CartesianPartition/manual_example!/Float64/2/32)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 125.0,
+      "commit": "ce4b085",
+      "ratio": 1.25,
+      "timestamp": "2026-03-10T00:40:52.472",
+      "benchmark": "simd/(Cartesian/axpy!/Float64/4/64)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 125.0,
+      "commit": "b2adc93",
+      "ratio": 1.25,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/manual_example!/Int32/3/64)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 125.0,
+      "commit": "b2adc93",
+      "ratio": 1.25,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/axpy!/Int64/3/63)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 125.0,
+      "commit": "b00614a",
+      "ratio": 1.25,
+      "timestamp": "2026-03-10T23:30:19.395",
+      "benchmark": "simd/(CartesianPartition/axpy!/Int64/3/32)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 125.0,
+      "commit": "b2adc93",
+      "ratio": 1.25,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/two_reductions/Int64/2/32)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 125.0,
+      "commit": "c13f74b",
+      "ratio": 1.25,
+      "timestamp": "2026-03-10T00:41:07.423",
+      "benchmark": "simd/(loop_fields!/Int64/BaseBenchmarks.SIMDBenchmarks.MutableFields/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 125.0,
+      "commit": "c13f74b",
+      "ratio": 1.25,
+      "timestamp": "2026-03-10T00:41:07.423",
+      "benchmark": "simd/(loop_fields!/Int64/BaseBenchmarks.SIMDBenchmarks.ImmutableFields/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 125.0,
+      "commit": "b15100f",
+      "ratio": 1.25,
+      "timestamp": "2026-03-10T23:30:16.538",
+      "benchmark": "simd/(CartesianPartition/inner/Int64/3/32)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 125.0,
+      "commit": "b421eca",
+      "ratio": 1.25,
+      "timestamp": "2026-03-10T23:30:10.268",
+      "benchmark": "simd/(\\auto_axpy!\\/\\Float64\\/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 125.0,
+      "commit": "c13f74b",
+      "ratio": 1.25,
+      "timestamp": "2026-03-10T00:41:07.423",
+      "benchmark": "simd/(loop_fields!/Int64/BaseBenchmarks.SIMDBenchmarks.ImmutableFields/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 125.0,
+      "commit": "c46c227",
+      "ratio": 1.25,
+      "timestamp": "2026-03-10T00:41:04.382",
+      "benchmark": "simd/(Linear/manual_example!_aliased/Int32/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 125.0,
+      "commit": "b2adc93",
+      "ratio": 1.25,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/manual_example!/Int64/2/31)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 124.0,
+      "commit": "c46c227",
+      "ratio": 1.24,
+      "timestamp": "2026-03-10T00:41:04.382",
+      "benchmark": "simd/(Linear/manual_example!_aliased/Int64/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 124.0,
+      "commit": "b01e7a7",
+      "ratio": 1.24,
+      "timestamp": "2026-03-10T23:30:18.767",
+      "benchmark": "simd/(Cartesian/inner/Int32/2/31)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 124.0,
+      "commit": "016630a",
+      "ratio": 1.24,
+      "timestamp": "2026-03-09T03:20:30.409",
+      "benchmark": "simd/(Cartesian/conditional_loop!/Int64/2/63)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 124.0,
+      "commit": "c46c227",
+      "ratio": 1.24,
+      "timestamp": "2026-03-10T00:41:04.382",
+      "benchmark": "simd/(Linear/manual_example!_aliased/Int32/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 124.0,
+      "commit": "c46c227",
+      "ratio": 1.24,
+      "timestamp": "2026-03-10T00:41:04.382",
+      "benchmark": "simd/(Linear/manual_example!_aliased/Int64/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 124.0,
+      "commit": "ce4b085",
+      "ratio": 1.24,
+      "timestamp": "2026-03-10T00:40:52.472",
+      "benchmark": "simd/(CartesianPartition/axpy!/Float64/4/64)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 124.0,
+      "commit": "b146a70",
+      "ratio": 1.24,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "benchmark": "simd/(Linear/inner_aliased/Float32/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 124.0,
+      "commit": "016630a",
+      "ratio": 1.24,
+      "timestamp": "2026-03-09T03:20:30.409",
+      "benchmark": "simd/(Cartesian/conditional_loop!/Int64/3/64)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 124.0,
+      "commit": "b2adc93",
+      "ratio": 1.24,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/axpy!/Int64/3/32)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 124.0,
+      "commit": "cf188c3",
+      "ratio": 1.24,
+      "timestamp": "2026-03-10T00:40:51.209",
+      "benchmark": "simd/(CartesianPartition/conditional_loop!/Int64/3/32)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 124.0,
+      "commit": "b2adc93",
+      "ratio": 1.24,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/axpy!/Float64/3/64)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 124.0,
+      "commit": "b421eca",
+      "ratio": 1.24,
+      "timestamp": "2026-03-10T23:30:10.268",
+      "benchmark": "simd/(\\axpy!\\/\\Float64\\/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 123.0,
+      "commit": "b378d19",
+      "ratio": 1.23,
+      "timestamp": "2026-03-10T23:30:12.231",
+      "benchmark": "simd/(Cartesian/manual_example!/Float32/3/64)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 123.0,
+      "commit": "aebcebc",
+      "ratio": 1.23,
+      "timestamp": "2026-03-10T23:30:21.284",
+      "benchmark": "simd/(CartesianPartition/axpy!/Float64/3/32)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 123.0,
+      "commit": "b2adc93",
+      "ratio": 1.23,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/inner/Int32/2/32)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 123.0,
+      "commit": "b2adc93",
+      "ratio": 1.23,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/manual_example!/Float64/3/31)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 123.0,
+      "commit": "c4fe739",
+      "ratio": 1.23,
+      "timestamp": "2026-03-10T00:41:03.344",
+      "benchmark": "simd/(Cartesian/axpy!/Int64/4/64)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 123.0,
+      "commit": "b2adc93",
+      "ratio": 1.23,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/manual_example!/Int64/3/32)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 123.0,
+      "commit": "d13bdc0",
+      "ratio": 1.23,
+      "timestamp": "2026-03-10T00:40:50.051",
+      "benchmark": "simd/(Linear/two_reductions/Int64/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 123.0,
+      "commit": "c46c227",
+      "ratio": 1.23,
+      "timestamp": "2026-03-10T00:41:04.382",
+      "benchmark": "simd/(Linear/axpy!_aliased/Float32/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 123.0,
+      "commit": "cd9ab83",
+      "ratio": 1.23,
+      "timestamp": "2026-03-10T00:40:53.453",
+      "benchmark": "simd/(Linear/auto_axpy!/Float32/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 123.0,
+      "commit": "b2adc93",
+      "ratio": 1.23,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/manual_example!/Int32/2/32)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 123.0,
+      "commit": "d13bdc0",
+      "ratio": 1.23,
+      "timestamp": "2026-03-10T00:40:50.051",
+      "benchmark": "simd/(Linear/auto_two_reductions/Int64/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 123.0,
+      "commit": "c4fe739",
+      "ratio": 1.23,
+      "timestamp": "2026-03-10T00:41:03.344",
+      "benchmark": "simd/(CartesianPartition/axpy!/Int64/4/64)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 123.0,
+      "commit": "aebcebc",
+      "ratio": 1.23,
+      "timestamp": "2026-03-10T23:30:21.284",
+      "benchmark": "simd/(CartesianPartition/inner/Int32/3/31)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 123.0,
+      "commit": "b2adc93",
+      "ratio": 1.23,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/manual_example!/Int32/2/31)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 122.0,
+      "commit": "c46c227",
+      "ratio": 1.22,
+      "timestamp": "2026-03-10T00:41:04.382",
+      "benchmark": "simd/(Linear/axpy!_aliased/Float64/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 122.0,
+      "commit": "b46df09",
+      "ratio": 1.22,
+      "timestamp": "2026-03-10T23:30:08.960",
+      "benchmark": "simd/(axpy!/Float32/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 122.0,
+      "commit": "b97eb35",
+      "ratio": 1.22,
+      "timestamp": "2026-03-10T23:30:01.752",
+      "benchmark": "simd/(\\auto_axpy!\\/\\Float32\\/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 122.0,
+      "commit": "b01e7a7",
+      "ratio": 1.22,
+      "timestamp": "2026-03-10T23:30:18.767",
+      "benchmark": "simd/(Cartesian/inner/Int32/4/31)",
+      "group": "nanosoldier_simd",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 122.0,
+      "commit": "b2adc93",
+      "ratio": 1.22,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/axpy!/Int64/2/31)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 122.0,
+      "commit": "cd9ab83",
+      "ratio": 1.22,
+      "timestamp": "2026-03-10T00:40:53.453",
+      "benchmark": "simd/(Linear/axpy!/Float32/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 122.0,
+      "commit": "aebcebc",
+      "ratio": 1.22,
+      "timestamp": "2026-03-10T23:30:21.284",
+      "benchmark": "simd/(CartesianPartition/inner/Float64/2/31)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 122.0,
+      "commit": "b46df09",
+      "ratio": 1.22,
+      "timestamp": "2026-03-10T23:30:08.960",
+      "benchmark": "simd/(auto_axpy!/Float32/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 122.0,
+      "commit": "c46c227",
+      "ratio": 1.22,
+      "timestamp": "2026-03-10T00:41:04.382",
+      "benchmark": "simd/(Linear/axpy!_aliased/Float64/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 122.0,
+      "commit": "b2adc93",
+      "ratio": 1.22,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/manual_example!/Int64/3/63)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 122.0,
+      "commit": "b9ce885",
+      "ratio": 1.22,
+      "timestamp": "2026-03-10T23:30:00.792",
+      "benchmark": "simd/(Cartesian/conditional_loop!/Int32/2/32)",
+      "group": "nanosoldier_simd",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 122.0,
+      "commit": "b7ff634",
+      "ratio": 1.22,
+      "timestamp": "2026-03-10T23:30:03.073",
+      "benchmark": "simd/(CartesianPartition/manual_partition!/Int32/4/63)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 122.0,
+      "commit": "b2adc93",
+      "ratio": 1.22,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/two_reductions/Int64/2/31)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 122.0,
+      "commit": "b01e7a7",
+      "ratio": 1.22,
+      "timestamp": "2026-03-10T23:30:18.767",
+      "benchmark": "simd/(CartesianPartition/inner/Int32/3/63)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 122.0,
+      "commit": "c46c227",
+      "ratio": 1.22,
+      "timestamp": "2026-03-10T00:41:04.382",
+      "benchmark": "simd/(Linear/axpy!_aliased/Float32/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 121.0,
+      "commit": "cd9ab83",
+      "ratio": 1.21,
+      "timestamp": "2026-03-10T00:40:53.453",
+      "benchmark": "simd/(Linear/auto_axpy!/Float32/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 121.0,
+      "commit": "b2adc93",
+      "ratio": 1.21,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/inner/Int64/4/32)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 121.0,
+      "commit": "b4ce107",
+      "ratio": 1.21,
+      "timestamp": "2026-03-10T23:30:07.045",
+      "benchmark": "simd/(CartesianPartition/axpy!/Int32/2/64)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 121.0,
+      "commit": "b2adc93",
+      "ratio": 1.21,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/inner/Int64/3/63)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 121.0,
+      "commit": "016630a",
+      "ratio": 1.21,
+      "timestamp": "2026-03-09T03:20:30.409",
+      "benchmark": "simd/(Cartesian/conditional_loop!/Int64/4/63)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 121.0,
+      "commit": "d27fe45",
+      "ratio": 1.21,
+      "timestamp": "2026-03-10T00:40:47.111",
+      "benchmark": "simd/(conditional_loop!/Int64/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 121.0,
+      "commit": "b6bca19",
+      "ratio": 1.21,
+      "timestamp": "2026-03-10T23:30:05.064",
+      "benchmark": "simd/(CartesianPartition/inner/Int32/2/31)",
+      "group": "nanosoldier_simd",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 121.0,
+      "commit": "016630a",
+      "ratio": 1.21,
+      "timestamp": "2026-03-09T03:20:30.409",
+      "benchmark": "simd/(CartesianPartition/conditional_loop!/Int64/2/63)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 121.0,
+      "commit": "d27fe45",
+      "ratio": 1.21,
+      "timestamp": "2026-03-10T00:40:47.111",
+      "benchmark": "simd/(conditional_loop!_aliased/Int64/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 121.0,
+      "commit": "b2adc93",
+      "ratio": 1.21,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/axpy!/Float64/2/31)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 121.0,
+      "commit": "b2adc93",
+      "ratio": 1.21,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/two_reductions/Float64/2/64)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 121.0,
+      "commit": "cffd656",
+      "ratio": 1.21,
+      "timestamp": "2026-03-10T00:40:51.014",
+      "benchmark": "simd/(CartesianPartition/axpy!/Int64/2/63)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 121.0,
+      "commit": "b2adc93",
+      "ratio": 1.21,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/inner/Float64/2/64)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 121.0,
+      "commit": "b31a638",
+      "ratio": 1.21,
+      "timestamp": "2026-03-10T23:30:13.586",
+      "benchmark": "simd/(axpy!/Float32/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 121.0,
+      "commit": "b16a231",
+      "ratio": 1.21,
+      "timestamp": "2026-03-10T23:30:16.214",
+      "benchmark": "simd/(Cartesian/axpy!/Int64/2/63)",
+      "group": "nanosoldier_simd",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 121.0,
+      "commit": "b378d19",
+      "ratio": 1.21,
+      "timestamp": "2026-03-10T23:30:12.231",
+      "benchmark": "simd/(CartesianPartition/axpy!/Int32/3/31)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 120.0,
+      "commit": "b2f4cd0",
+      "ratio": 1.2,
+      "timestamp": "2026-03-10T23:30:14.653",
+      "benchmark": "simd/(auto_axpy!/Float32/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 120.0,
+      "commit": "016630a",
+      "ratio": 1.2,
+      "timestamp": "2026-03-09T03:20:30.409",
+      "benchmark": "simd/(Linear/two_reductions_aliased/Float32/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 120.0,
+      "commit": "cd5b8fb",
+      "ratio": 1.2,
+      "timestamp": "2026-03-10T00:40:53.913",
+      "benchmark": "simd/(two_reductions/Int32/4095)",
+      "group": "nanosoldier_simd",
+      "trend": "slower"
+    },
+    {
+      "latest_mean_ms": 120.0,
+      "commit": "bae2d8d",
+      "ratio": 1.2,
+      "timestamp": "2026-03-10T23:29:59.543",
+      "benchmark": "simd/(CartesianPartition/conditional_loop!/Int32/3/64)",
+      "group": "nanosoldier_simd",
+      "trend": "faster"
+    },
+    {
+      "latest_mean_ms": 120.0,
+      "commit": "b2adc93",
+      "ratio": 1.2,
+      "timestamp": "2026-03-10T23:30:15.314",
+      "benchmark": "simd/(Cartesian/two_reductions/Float64/2/32)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 120.0,
+      "commit": "016630a",
+      "ratio": 1.2,
+      "timestamp": "2026-03-09T03:20:30.409",
+      "benchmark": "simd/(Linear/two_reductions_aliased/Float32/4096)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    },
+    {
+      "latest_mean_ms": 120.0,
+      "commit": "d13bdc0",
+      "ratio": 1.2,
+      "timestamp": "2026-03-10T00:40:50.051",
+      "benchmark": "simd/(Cartesian/conditional_loop!/Int64/2/31)",
+      "group": "nanosoldier_simd",
+      "trend": "stable"
+    }
+  ]
+}

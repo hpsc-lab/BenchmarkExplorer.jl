@@ -1,0 +1,133 @@
+{
+  "metadata": {
+    "head_hash": "c18909d",
+    "comparison": "c18909d_vs_b84fcc8",
+    "julia_version": "1.10.0-DEV.469",
+    "source": "NanosoldierReports",
+    "base_hash": "b84fcc8",
+    "imported_at": "2026-03-12T10:35:21.298",
+    "source_type": "data_zst"
+  },
+  "benchmarks": {
+    "shootout/pidigits": {
+      "max_time_ns": 1.77283965035461e7,
+      "allocs": 89236,
+      "min_time_ns": 1.054728e7,
+      "mean_time_ns": 1.77283965035461e7,
+      "samples": 1,
+      "std_time_ns": 2.2903392679840975e7,
+      "median_time_ns": 1.0998535e7,
+      "memory_bytes": 65940576
+    },
+    "shootout/mandelbrot": {
+      "max_time_ns": 3.2265901478373143e6,
+      "allocs": 14,
+      "min_time_ns": 3.212019e6,
+      "mean_time_ns": 3.2265901478373143e6,
+      "samples": 1,
+      "std_time_ns": 63077.614606676754,
+      "median_time_ns": 3.214837e6,
+      "memory_bytes": 10856
+    },
+    "shootout/spectralnorm": {
+      "max_time_ns": 1.4436010442068765e6,
+      "allocs": 3,
+      "min_time_ns": 1.437707e6,
+      "mean_time_ns": 1.4436010442068765e6,
+      "samples": 1,
+      "std_time_ns": 13671.35763492965,
+      "median_time_ns": 1.438171e6,
+      "memory_bytes": 2688
+    },
+    "shootout/k_nucleotide": {
+      "max_time_ns": 2.4367073524271846e7,
+      "allocs": 254258,
+      "min_time_ns": 2.345649e7,
+      "mean_time_ns": 2.4367073524271846e7,
+      "samples": 1,
+      "std_time_ns": 4.940187475546257e6,
+      "median_time_ns": 2.40283125e7,
+      "memory_bytes": 7497224
+    },
+    "shootout/fannkuch": {
+      "max_time_ns": 134137.3098,
+      "allocs": 3,
+      "min_time_ns": 131526.0,
+      "mean_time_ns": 134137.3098,
+      "samples": 1,
+      "std_time_ns": 4850.310685821977,
+      "median_time_ns": 133339.0,
+      "memory_bytes": 288
+    },
+    "shootout/regex_dna": {
+      "max_time_ns": 3.619358610869565e6,
+      "allocs": 208,
+      "min_time_ns": 3.562534e6,
+      "mean_time_ns": 3.619358610869565e6,
+      "samples": 1,
+      "std_time_ns": 366498.24336791376,
+      "median_time_ns": 3.590011e6,
+      "memory_bytes": 1773160
+    },
+    "shootout/revcomp": {
+      "max_time_ns": 146521.9829,
+      "allocs": 375,
+      "min_time_ns": 140812.0,
+      "mean_time_ns": 146521.9829,
+      "samples": 1,
+      "std_time_ns": 4661.571496490135,
+      "median_time_ns": 145725.5,
+      "memory_bytes": 68968
+    },
+    "shootout/fasta": {
+      "max_time_ns": 12491.5227,
+      "allocs": 806,
+      "min_time_ns": 11051.0,
+      "mean_time_ns": 12491.5227,
+      "samples": 1,
+      "std_time_ns": 1184.6767327760042,
+      "median_time_ns": 12305.0,
+      "memory_bytes": 14336
+    },
+    "shootout/meteor_contest": {
+      "max_time_ns": 1.0311356754e9,
+      "allocs": 34061581,
+      "min_time_ns": 9.67353656e8,
+      "mean_time_ns": 1.0311356754e9,
+      "samples": 1,
+      "std_time_ns": 3.579067687866008e7,
+      "median_time_ns": 1.048328867e9,
+      "memory_bytes": 808540952
+    },
+    "shootout/nbody": {
+      "max_time_ns": 103252.4192,
+      "allocs": 6,
+      "min_time_ns": 102182.0,
+      "mean_time_ns": 103252.4192,
+      "samples": 1,
+      "std_time_ns": 3552.81848393488,
+      "median_time_ns": 102306.0,
+      "memory_bytes": 416
+    },
+    "shootout/binary_trees": {
+      "max_time_ns": 1.5931203477707006e7,
+      "allocs": 783717,
+      "min_time_ns": 1.4101815e7,
+      "mean_time_ns": 1.5931203477707006e7,
+      "samples": 1,
+      "std_time_ns": 9.93111648650129e6,
+      "median_time_ns": 1.4734149e7,
+      "memory_bytes": 14642176
+    },
+    "shootout/nbody_vec": {
+      "max_time_ns": 366120.3648,
+      "allocs": 1017,
+      "min_time_ns": 356046.0,
+      "mean_time_ns": 366120.3648,
+      "samples": 1,
+      "std_time_ns": 9389.158926988966,
+      "median_time_ns": 363008.0,
+      "memory_bytes": 81136
+    }
+  }
+}
