@@ -38,6 +38,8 @@ concurrency:
 permissions:
   contents: write
   pull-requests: write
+  pages: write
+  id-token: write
 
 jobs:
   check-changes:
@@ -265,3 +267,21 @@ jobs:
 
           gh pr comment ${{ github.event.pull_request.number }} --body "$BODY" \
             --repo ${{ github.repository }} 2>/dev/null || true
+
+  deploy-pages:
+    runs-on: ubuntu-latest
+    needs: [check-changes, update-index]
+    if: always() && github.event_name != 'pull_request'
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: gh-pages
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deploy
+        uses: actions/deploy-pages@v4
