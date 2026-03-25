@@ -2345,7 +2345,7 @@ function generate_html_template(benchmarks_json, stats_json, commit_stats_json, 
                         bdata.mean.commit_hashes.forEach((h, i) => { cmap[h] = bdata.mean.y[i]; });
                         rows.push([bname, ...commits.map(h => cmap[h] !== undefined ? cmap[h].toFixed(4) : '')]);
                     });
-                    const csv = rows.map(r => r.map(v => '"' + String(v).replace(/"/g, '""') + '"').join(',')).join('\n');
+                    const csv = rows.map(r => r.map(v => '"' + String(v).replace(/"/g, '""') + '"').join(',')).join('\\n');
                     const a = document.createElement('a');
                     a.download = groupName + '-heatmap.csv';
                     a.href = 'data:text/csv;charset=utf-8,' + encodeURIComponent(csv);
