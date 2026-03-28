@@ -38,6 +38,7 @@ concurrency:
 permissions:
   contents: write
   pull-requests: write
+  actions: write
 
 jobs:
   check-changes:
@@ -234,13 +235,15 @@ jobs:
           cp /tmp/data_hash.txt data_hash.txt 2>/dev/null || true
 
           git add -A
-          if git commit -m "Rebuild data and update pages" && git push origin gh-pages; then
-            echo "PAGES_UPDATED=true" >> $GITHUB_ENV
-          else
-            echo "No changes, skipping push"
-          fi
+          git commit -m "Rebuild data and update pages" && git push origin gh-pages || echo "No changes, skipping push"
 
           git checkout -f ${{ github.sha }}
+
+      - name: Trigger pages deployment
+        if: github.event_name != 'pull_request'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run pages.yml
 
       - name: Comment on PR with regression summary
         if: github.event_name == 'pull_request'
