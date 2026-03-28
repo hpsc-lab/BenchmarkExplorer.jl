@@ -2458,12 +2458,17 @@ function generate_html_template(benchmarks_json, stats_json, commit_stats_json, 
 
                 container.appendChild(wrap);
 
-                requestAnimationFrame(() => {
+                const updateStickyHeaders = () => {
                     const ctrlH = (document.querySelector('.controls') || {}).offsetHeight || 0;
                     table.querySelectorAll('thead th').forEach(th => {
                         th.style.top = ctrlH + 'px';
                     });
-                });
+                };
+                requestAnimationFrame(() => requestAnimationFrame(updateStickyHeaders));
+                const ctrl = document.querySelector('.controls');
+                if (ctrl && window.ResizeObserver) {
+                    new ResizeObserver(updateStickyHeaders).observe(ctrl);
+                }
 
                 const CHUNK_SIZE = 200;
                 let rowIndex = 0;
