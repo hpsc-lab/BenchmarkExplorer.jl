@@ -920,7 +920,7 @@ function generate_html_template(benchmarks_json, stats_json, commit_stats_json, 
                 transition: width 0.3s ease, opacity 0.4s ease;
             }
 
-            .heatmap-wrap { overflow-x: auto; padding: 24px 32px 32px; display: flex; justify-content: center; }
+            .heatmap-wrap { overflow-x: auto; overflow-y: clip; padding: 24px 32px 32px; display: flex; justify-content: center; }
             .heatmap-table { border-collapse: separate; border-spacing: 2px; font-size: 0.72em; white-space: nowrap; }
             .heatmap-table th { padding: 4px 8px; font-weight: 600; border-bottom: 2px solid #191919; font-size: 0.9em; color: #555; position: sticky; top: 0; z-index: 10; background: #f7f6f3; }
             .heatmap-table td { height: 28px; min-width: 38px; text-align: center; font-size: 0.85em; transition: opacity 0.15s; border-radius: 3px; }
