@@ -241,9 +241,14 @@ jobs:
 
       - name: Trigger pages deployment
         if: github.event_name != 'pull_request'
+        continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh workflow run pages.yml
+        run: |
+          for i in 1 2 3; do
+            gh workflow run pages.yml && break
+            sleep 60
+          done
 
       - name: Comment on PR with regression summary
         if: github.event_name == 'pull_request'
