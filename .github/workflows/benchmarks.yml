@@ -243,7 +243,7 @@ jobs:
         if: github.event_name != 'pull_request'
         continue-on-error: true
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           for i in 1 2 3; do
             gh workflow run pages.yml && break
@@ -254,7 +254,7 @@ jobs:
         if: github.event_name == 'pull_request'
         shell: bash
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           REG_COUNT=$(julia --project=ci -e '
             using JSON
