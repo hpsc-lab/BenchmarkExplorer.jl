@@ -2116,6 +2116,7 @@ function generate_html_template(benchmarks_json, stats_json, commit_stats_json, 
                 const memory = data.mean.memory ? data.mean.memory[idx] : data.stats.latest_memory;
                 const allocs = data.mean.allocs ? data.mean.allocs[idx] : data.stats.latest_allocs;
                 const errVal = data.mean.error_y ? (data.mean.error_y.array[idx] || 0) : 0;
+                const cs = commitStats[commit] || {};
 
                 const { label: tUnit, factor: tFactor } = autoUnit([meanVal, minVal, medianVal].filter(v => v > 0));
                 const fmt = (v) => (v * tFactor).toFixed(3) + '\u00a0' + tUnit;
@@ -2141,7 +2142,6 @@ function generate_html_template(benchmarks_json, stats_json, commit_stats_json, 
                 const commitMsg = data.mean.commit_messages ? data.mean.commit_messages[idx] : '';
                 const timeRatio = data.mean.time_ratios ? data.mean.time_ratios[idx] : 0;
                 const gctimeNs = data.mean.gctime_ns ? data.mean.gctime_ns[idx] : 0;
-                const cs = commitStats[commit] || {};
 
                 const bg = darkMode ? '#191919' : '#fff';
                 const fg = darkMode ? '#e9e9e7' : '#191919';
