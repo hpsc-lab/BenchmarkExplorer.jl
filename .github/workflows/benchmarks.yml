@@ -39,7 +39,6 @@ permissions:
   contents: write
   pull-requests: write
   actions: write
-  workflows: write
 
 jobs:
   check-changes:
@@ -239,17 +238,6 @@ jobs:
           git commit -m "Rebuild data and update pages" && git push origin gh-pages || echo "No changes, skipping push"
 
           git checkout -f ${{ github.sha }}
-
-      - name: Trigger pages deployment
-        if: github.event_name != 'pull_request'
-        continue-on-error: true
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          for i in 1 2 3; do
-            gh workflow run pages.yml && break
-            sleep 60
-          done
 
       - name: Comment on PR with regression summary
         if: github.event_name == 'pull_request'
