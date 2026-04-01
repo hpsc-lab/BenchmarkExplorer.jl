@@ -33,5 +33,15 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: .
+      - run: |
+          curl -sS -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/rate_limit | jq .
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        name: Rate limits github.token
+      - run: |
+          curl -sS -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/rate_limit | jq .
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        name: Rate limits GITHUB_TOKEN
       - id: deploy
         uses: actions/deploy-pages@v4
