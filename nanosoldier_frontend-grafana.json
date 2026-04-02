@@ -1,9 +1,5 @@
 [
   {
-    "target": "frontend/nestedscopes",
-    "tags": {
-      "group": "nanosoldier_frontend"
-    },
     "datapoints": [
       [
         100.0,
@@ -13,6 +9,10 @@
         101.0,
         1.773185416e12
       ]
-    ]
+    ],
+    "tags": {
+      "group": "nanosoldier_frontend"
+    },
+    "target": "frontend/nestedscopes"
   }
 ]

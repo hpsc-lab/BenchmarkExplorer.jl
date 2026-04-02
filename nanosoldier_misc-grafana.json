@@ -1,9 +1,5 @@
 [
   {
-    "target": "misc/allocation elision view/no conditional",
-    "tags": {
-      "group": "nanosoldier_misc"
-    },
     "datapoints": [
       [
         71.0,
@@ -153,13 +149,13 @@
         67.00000000000001,
         1.773185418e12
       ]
-    ]
-  },
-  {
-    "target": "misc/iterators/zip(1:1000/1:1000/1:1000)",
+    ],
     "tags": {
       "group": "nanosoldier_misc"
     },
+    "target": "misc/allocation elision view/no conditional"
+  },
+  {
     "datapoints": [
       [
         90.0,
@@ -209,13 +205,13 @@
         105.0,
         1.773185415e12
       ]
-    ]
-  },
-  {
-    "target": "misc/iterators/zip(1:1/1:1/1:1/1:1)",
+    ],
     "tags": {
       "group": "nanosoldier_misc"
     },
+    "target": "misc/iterators/zip(1:1000/1:1000/1:1000)"
+  },
+  {
     "datapoints": [
       [
         109.00000000000001,
@@ -277,13 +273,13 @@
         93.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "misc/julia/(parse/function)",
+    ],
     "tags": {
       "group": "nanosoldier_misc"
     },
+    "target": "misc/iterators/zip(1:1/1:1/1:1/1:1)"
+  },
+  {
     "datapoints": [
       [
         199.0,
@@ -313,13 +309,13 @@
         86.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "misc/bitshift/(UInt/UInt)",
+    ],
     "tags": {
       "group": "nanosoldier_misc"
     },
+    "target": "misc/julia/(parse/function)"
+  },
+  {
     "datapoints": [
       [
         113.99999999999999,
@@ -373,13 +369,13 @@
         108.0,
         1.77318542e12
       ]
-    ]
-  },
-  {
-    "target": "misc/23042/ComplexF32",
+    ],
     "tags": {
       "group": "nanosoldier_misc"
     },
+    "target": "misc/bitshift/(UInt/UInt)"
+  },
+  {
     "datapoints": [
       [
         138.0,
@@ -477,13 +473,13 @@
         75.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "misc/foldl/foldl(+/filter(...); init = 0.0)",
+    ],
     "tags": {
       "group": "nanosoldier_misc"
     },
+    "target": "misc/23042/ComplexF32"
+  },
+  {
     "datapoints": [
       [
         94.0,
@@ -621,13 +617,13 @@
         790.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "misc/issue 12165/Float32",
+    ],
     "tags": {
       "group": "nanosoldier_misc"
     },
+    "target": "misc/foldl/foldl(+/filter(...); init = 0.0)"
+  },
+  {
     "datapoints": [
       [
         111.00000000000001,
@@ -717,13 +713,13 @@
         117.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "misc/iterators/zip(1:1000/1:1000/1:1000/1:1000)",
+    ],
     "tags": {
       "group": "nanosoldier_misc"
     },
+    "target": "misc/issue 12165/Float32"
+  },
+  {
     "datapoints": [
       [
         108.0,
@@ -785,13 +781,13 @@
         106.0,
         1.77318541e12
       ]
-    ]
-  },
-  {
-    "target": "misc/parse/Int",
+    ],
     "tags": {
       "group": "nanosoldier_misc"
     },
+    "target": "misc/iterators/zip(1:1000/1:1000/1:1000/1:1000)"
+  },
+  {
     "datapoints": [
       [
         108.0,
@@ -841,13 +837,13 @@
         77.0,
         1.773185406e12
       ]
-    ]
-  },
-  {
-    "target": "misc/iterators/zip(1:1/1:1)",
+    ],
     "tags": {
       "group": "nanosoldier_misc"
     },
+    "target": "misc/parse/Int"
+  },
+  {
     "datapoints": [
       [
         110.00000000000001,
@@ -901,13 +897,13 @@
         106.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "misc/fastmath many args",
+    ],
     "tags": {
       "group": "nanosoldier_misc"
     },
+    "target": "misc/iterators/zip(1:1/1:1)"
+  },
+  {
     "datapoints": [
       [
         91.0,
@@ -985,13 +981,13 @@
         134.00000000000003,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "misc/iterators/zip(1:1000/1:1000)",
+    ],
     "tags": {
       "group": "nanosoldier_misc"
     },
+    "target": "misc/fastmath many args"
+  },
+  {
     "datapoints": [
       [
         111.00000000000001,
@@ -1073,13 +1069,13 @@
         93.0,
         1.77318542e12
       ]
-    ]
-  },
-  {
-    "target": "misc/issue 12165/Float16",
+    ],
     "tags": {
       "group": "nanosoldier_misc"
     },
+    "target": "misc/iterators/zip(1:1000/1:1000)"
+  },
+  {
     "datapoints": [
       [
         112.99999999999999,
@@ -1153,13 +1149,13 @@
         115.99999999999999,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "misc/parse/Float64",
+    ],
     "tags": {
       "group": "nanosoldier_misc"
     },
+    "target": "misc/issue 12165/Float16"
+  },
+  {
     "datapoints": [
       [
         105.0,
@@ -1197,13 +1193,13 @@
         94.0,
         1.773185406e12
       ]
-    ]
-  },
-  {
-    "target": "misc/julia/(parse/nested)",
+    ],
     "tags": {
       "group": "nanosoldier_misc"
     },
+    "target": "misc/parse/Float64"
+  },
+  {
     "datapoints": [
       [
         120.0,
@@ -1221,13 +1217,13 @@
         96.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "misc/splatting/(3/3/3)",
+    ],
     "tags": {
       "group": "nanosoldier_misc"
     },
+    "target": "misc/julia/(parse/nested)"
+  },
+  {
     "datapoints": [
       [
         106.0,
@@ -1277,13 +1273,13 @@
         107.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "misc/23042/Float32",
+    ],
     "tags": {
       "group": "nanosoldier_misc"
     },
+    "target": "misc/splatting/(3/3/3)"
+  },
+  {
     "datapoints": [
       [
         90.0,
@@ -1349,13 +1345,13 @@
         107.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "misc/23042/ComplexF64",
+    ],
     "tags": {
       "group": "nanosoldier_misc"
     },
+    "target": "misc/23042/Float32"
+  },
+  {
     "datapoints": [
       [
         109.00000000000001,
@@ -1381,13 +1377,13 @@
         107.0,
         1.77310327e12
       ]
-    ]
-  },
-  {
-    "target": "misc/foldl/foldl(+/flatten(filter(...)))",
+    ],
     "tags": {
       "group": "nanosoldier_misc"
     },
+    "target": "misc/23042/ComplexF64"
+  },
+  {
     "datapoints": [
       [
         94.0,
@@ -1401,13 +1397,13 @@
         150.0,
         1.773185406e12
       ]
-    ]
-  },
-  {
-    "target": "misc/iterators/zip(1:1000)",
+    ],
     "tags": {
       "group": "nanosoldier_misc"
     },
+    "target": "misc/foldl/foldl(+/flatten(filter(...)))"
+  },
+  {
     "datapoints": [
       [
         120.0,
@@ -1473,13 +1469,13 @@
         94.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "misc/afoldl/Int",
+    ],
     "tags": {
       "group": "nanosoldier_misc"
     },
+    "target": "misc/iterators/zip(1:1000)"
+  },
+  {
     "datapoints": [
       [
         93.0,
@@ -1545,25 +1541,25 @@
         93.0,
         1.77318542e12
       ]
-    ]
-  },
-  {
-    "target": "misc/iterators/sum(flatten(collect((i,i+1) for i in 1:1000))",
+    ],
     "tags": {
       "group": "nanosoldier_misc"
     },
+    "target": "misc/afoldl/Int"
+  },
+  {
     "datapoints": [
       [
         105.0,
         1.773185401e12
       ]
-    ]
-  },
-  {
-    "target": "misc/repeat/(200/24/1)",
+    ],
     "tags": {
       "group": "nanosoldier_misc"
     },
+    "target": "misc/iterators/sum(flatten(collect((i,i+1) for i in 1:1000))"
+  },
+  {
     "datapoints": [
       [
         120.0,
@@ -1641,13 +1637,13 @@
         82.0,
         1.77318541e12
       ]
-    ]
-  },
-  {
-    "target": "misc/18129",
+    ],
     "tags": {
       "group": "nanosoldier_misc"
     },
+    "target": "misc/repeat/(200/24/1)"
+  },
+  {
     "datapoints": [
       [
         200.99999999999997,
@@ -1685,13 +1681,13 @@
         98.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "misc/iterators/zip(1:1)",
+    ],
     "tags": {
       "group": "nanosoldier_misc"
     },
+    "target": "misc/18129"
+  },
+  {
     "datapoints": [
       [
         81.0,
@@ -1737,13 +1733,13 @@
         92.0,
         1.77318542e12
       ]
-    ]
-  },
-  {
-    "target": "misc/julia/(macroexpand/evalpoly)",
+    ],
     "tags": {
       "group": "nanosoldier_misc"
     },
+    "target": "misc/iterators/zip(1:1)"
+  },
+  {
     "datapoints": [
       [
         98.0,
@@ -1773,13 +1769,13 @@
         98.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "misc/issue 12165/Float64",
+    ],
     "tags": {
       "group": "nanosoldier_misc"
     },
+    "target": "misc/julia/(macroexpand/evalpoly)"
+  },
+  {
     "datapoints": [
       [
         108.0,
@@ -1877,13 +1873,13 @@
         122.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "misc/afoldl/Float64",
+    ],
     "tags": {
       "group": "nanosoldier_misc"
     },
+    "target": "misc/issue 12165/Float64"
+  },
+  {
     "datapoints": [
       [
         69.0,
@@ -1913,13 +1909,13 @@
         106.0,
         1.773185397e12
       ]
-    ]
-  },
-  {
-    "target": "misc/repeat/(200/1/24)",
+    ],
     "tags": {
       "group": "nanosoldier_misc"
     },
+    "target": "misc/afoldl/Float64"
+  },
+  {
     "datapoints": [
       [
         106.0,
@@ -1981,13 +1977,13 @@
         106.0,
         1.77318542e12
       ]
-    ]
-  },
-  {
-    "target": "misc/perf highdim generator",
+    ],
     "tags": {
       "group": "nanosoldier_misc"
     },
+    "target": "misc/repeat/(200/1/24)"
+  },
+  {
     "datapoints": [
       [
         92.0,
@@ -2053,13 +2049,13 @@
         94.0,
         1.773185412e12
       ]
-    ]
-  },
-  {
-    "target": "misc/allocation elision view/conditional",
+    ],
     "tags": {
       "group": "nanosoldier_misc"
     },
+    "target": "misc/perf highdim generator"
+  },
+  {
     "datapoints": [
       [
         71.0,
@@ -2209,13 +2205,13 @@
         152.0,
         1.773185418e12
       ]
-    ]
-  },
-  {
-    "target": "misc/iterators/zip(1:1/1:1/1:1)",
+    ],
     "tags": {
       "group": "nanosoldier_misc"
     },
+    "target": "misc/allocation elision view/conditional"
+  },
+  {
     "datapoints": [
       [
         114.99999999999999,
@@ -2261,25 +2257,25 @@
         107.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "misc/julia/(\\macroexpand\\/\\evalpoly\\)",
+    ],
     "tags": {
       "group": "nanosoldier_misc"
     },
+    "target": "misc/iterators/zip(1:1/1:1/1:1)"
+  },
+  {
     "datapoints": [
       [
         105.0,
         1.77310325e12
       ]
-    ]
-  },
-  {
-    "target": "misc/afoldl/Complex{Float64}",
+    ],
     "tags": {
       "group": "nanosoldier_misc"
     },
+    "target": "misc/julia/(\\macroexpand\\/\\evalpoly\\)"
+  },
+  {
     "datapoints": [
       [
         118.0,
@@ -2301,13 +2297,13 @@
         138.0,
         1.77318542e12
       ]
-    ]
-  },
-  {
-    "target": "misc/23042/Float64",
+    ],
     "tags": {
       "group": "nanosoldier_misc"
     },
+    "target": "misc/afoldl/Complex{Float64}"
+  },
+  {
     "datapoints": [
       [
         133.0,
@@ -2429,13 +2425,13 @@
         112.00000000000001,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "misc/bitshift/(Int/UInt)",
+    ],
     "tags": {
       "group": "nanosoldier_misc"
     },
+    "target": "misc/23042/Float64"
+  },
+  {
     "datapoints": [
       [
         115.99999999999999,
@@ -2509,13 +2505,13 @@
         93.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "misc/bitshift/(Int/Int)",
+    ],
     "tags": {
       "group": "nanosoldier_misc"
     },
+    "target": "misc/bitshift/(Int/UInt)"
+  },
+  {
     "datapoints": [
       [
         113.99999999999999,
@@ -2585,13 +2581,13 @@
         108.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "misc/bitshift/(UInt32/UInt32)",
+    ],
     "tags": {
       "group": "nanosoldier_misc"
     },
+    "target": "misc/bitshift/(Int/Int)"
+  },
+  {
     "datapoints": [
       [
         120.0,
@@ -2709,13 +2705,13 @@
         110.00000000000001,
         1.77318542e12
       ]
-    ]
-  },
-  {
-    "target": "misc/20517",
+    ],
     "tags": {
       "group": "nanosoldier_misc"
     },
+    "target": "misc/bitshift/(UInt32/UInt32)"
+  },
+  {
     "datapoints": [
       [
         540.0,
@@ -2741,25 +2737,25 @@
         120.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "misc/bitshift/(\\Int\\/\\UInt\\)",
+    ],
     "tags": {
       "group": "nanosoldier_misc"
     },
+    "target": "misc/20517"
+  },
+  {
     "datapoints": [
       [
         89.0,
         1.77310325e12
       ]
-    ]
-  },
-  {
-    "target": "misc/julia/(parse/array)",
+    ],
     "tags": {
       "group": "nanosoldier_misc"
     },
+    "target": "misc/bitshift/(\\Int\\/\\UInt\\)"
+  },
+  {
     "datapoints": [
       [
         114.99999999999999,
@@ -2793,13 +2789,13 @@
         94.0,
         1.773185418e12
       ]
-    ]
-  },
-  {
-    "target": "misc/foldl/foldl(+/filter(...))",
+    ],
     "tags": {
       "group": "nanosoldier_misc"
     },
+    "target": "misc/julia/(parse/array)"
+  },
+  {
     "datapoints": [
       [
         86.0,
@@ -3013,6 +3009,10 @@
         80.0,
         1.773185421e12
       ]
-    ]
+    ],
+    "tags": {
+      "group": "nanosoldier_misc"
+    },
+    "target": "misc/foldl/foldl(+/filter(...))"
   }
 ]

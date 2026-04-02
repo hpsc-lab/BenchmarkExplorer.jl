@@ -1,21 +1,17 @@
 [
   {
-    "target": "broadcast/typeargs/(\\array\\/5)",
-    "tags": {
-      "group": "nanosoldier_broadcast"
-    },
     "datapoints": [
       [
         94.0,
         1.773185401e12
       ]
-    ]
-  },
-  {
-    "target": "broadcast/dotop/(Float64/(1000000,)/2)",
+    ],
     "tags": {
       "group": "nanosoldier_broadcast"
     },
+    "target": "broadcast/typeargs/(\\array\\/5)"
+  },
+  {
     "datapoints": [
       [
         88.0,
@@ -89,49 +85,49 @@
         114.99999999999999,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "broadcast/fusion/(\\Float64\\/(1000000,)/1)",
+    ],
     "tags": {
       "group": "nanosoldier_broadcast"
     },
+    "target": "broadcast/dotop/(Float64/(1000000,)/2)"
+  },
+  {
     "datapoints": [
       [
         112.00000000000001,
         1.77318541e12
       ]
-    ]
-  },
-  {
-    "target": "broadcast/mix_scalar_tuple/(3/\\scal_tup_x3\\)",
+    ],
     "tags": {
       "group": "nanosoldier_broadcast"
     },
+    "target": "broadcast/fusion/(\\Float64\\/(1000000,)/1)"
+  },
+  {
     "datapoints": [
       [
         114.99999999999999,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "broadcast/fusion/(Float64/(1000000,)/2)",
+    ],
     "tags": {
       "group": "nanosoldier_broadcast"
     },
+    "target": "broadcast/mix_scalar_tuple/(3/\\scal_tup_x3\\)"
+  },
+  {
     "datapoints": [
       [
         95.0,
         1.773103256e12
       ]
-    ]
-  },
-  {
-    "target": "broadcast/sparse/((10000000,)/2)",
+    ],
     "tags": {
       "group": "nanosoldier_broadcast"
     },
+    "target": "broadcast/fusion/(Float64/(1000000,)/2)"
+  },
+  {
     "datapoints": [
       [
         111.00000000000001,
@@ -181,13 +177,13 @@
         81.0,
         1.77318541e12
       ]
-    ]
-  },
-  {
-    "target": "broadcast/sparse/((1000/1000)/1)",
+    ],
     "tags": {
       "group": "nanosoldier_broadcast"
     },
+    "target": "broadcast/sparse/((10000000,)/2)"
+  },
+  {
     "datapoints": [
       [
         92.0,
@@ -261,13 +257,13 @@
         111.00000000000001,
         1.773185413e12
       ]
-    ]
-  },
-  {
-    "target": "broadcast/typeargs/(array/10)",
+    ],
     "tags": {
       "group": "nanosoldier_broadcast"
     },
+    "target": "broadcast/sparse/((1000/1000)/1)"
+  },
+  {
     "datapoints": [
       [
         90.0,
@@ -357,25 +353,25 @@
         90.0,
         1.773185418e12
       ]
-    ]
-  },
-  {
-    "target": "broadcast/fusion/(\\Float64\\/(1000000,)/2)",
+    ],
     "tags": {
       "group": "nanosoldier_broadcast"
     },
+    "target": "broadcast/typeargs/(array/10)"
+  },
+  {
     "datapoints": [
       [
         109.00000000000001,
         1.77318541e12
       ]
-    ]
-  },
-  {
-    "target": "broadcast/typeargs/(tuple/10)",
+    ],
     "tags": {
       "group": "nanosoldier_broadcast"
     },
+    "target": "broadcast/fusion/(\\Float64\\/(1000000,)/2)"
+  },
+  {
     "datapoints": [
       [
         72.0,
@@ -461,13 +457,13 @@
         95.0,
         1.77318542e12
       ]
-    ]
-  },
-  {
-    "target": "broadcast/fusion/(Float64/(1000000,)/1)",
+    ],
     "tags": {
       "group": "nanosoldier_broadcast"
     },
+    "target": "broadcast/typeargs/(tuple/10)"
+  },
+  {
     "datapoints": [
       [
         93.0,
@@ -477,13 +473,13 @@
         109.00000000000001,
         1.773185412e12
       ]
-    ]
-  },
-  {
-    "target": "broadcast/dotop/(Float64/(1000/1000)/2)",
+    ],
     "tags": {
       "group": "nanosoldier_broadcast"
     },
+    "target": "broadcast/fusion/(Float64/(1000000,)/1)"
+  },
+  {
     "datapoints": [
       [
         112.00000000000001,
@@ -629,13 +625,13 @@
         110.00000000000001,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "broadcast/typeargs/(tuple/3)",
+    ],
     "tags": {
       "group": "nanosoldier_broadcast"
     },
+    "target": "broadcast/dotop/(Float64/(1000/1000)/2)"
+  },
+  {
     "datapoints": [
       [
         106.0,
@@ -657,13 +653,13 @@
         106.0,
         1.773185412e12
       ]
-    ]
-  },
-  {
-    "target": "broadcast/mix_scalar_tuple/(3/scal_tup)",
+    ],
     "tags": {
       "group": "nanosoldier_broadcast"
     },
+    "target": "broadcast/typeargs/(tuple/3)"
+  },
+  {
     "datapoints": [
       [
         120.0,
@@ -757,13 +753,13 @@
         120.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "broadcast/mix_scalar_tuple/(10/tup_tup)",
+    ],
     "tags": {
       "group": "nanosoldier_broadcast"
     },
+    "target": "broadcast/mix_scalar_tuple/(3/scal_tup)"
+  },
+  {
     "datapoints": [
       [
         42.0,
@@ -901,25 +897,25 @@
         120.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "broadcast/mix_scalar_tuple/(10/\\scal_tup_x3\\)",
+    ],
     "tags": {
       "group": "nanosoldier_broadcast"
     },
+    "target": "broadcast/mix_scalar_tuple/(10/tup_tup)"
+  },
+  {
     "datapoints": [
       [
         107.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "broadcast/mix_scalar_tuple/(3/scal_tup_x3)",
+    ],
     "tags": {
       "group": "nanosoldier_broadcast"
     },
+    "target": "broadcast/mix_scalar_tuple/(10/\\scal_tup_x3\\)"
+  },
+  {
     "datapoints": [
       [
         128.0,
@@ -981,13 +977,13 @@
         118.0,
         1.77318542e12
       ]
-    ]
-  },
-  {
-    "target": "broadcast/fusion/(Float64/(1000/1000)/3)",
+    ],
     "tags": {
       "group": "nanosoldier_broadcast"
     },
+    "target": "broadcast/mix_scalar_tuple/(3/scal_tup_x3)"
+  },
+  {
     "datapoints": [
       [
         179.0,
@@ -1017,13 +1013,13 @@
         179.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "broadcast/typeargs/(array/3)",
+    ],
     "tags": {
       "group": "nanosoldier_broadcast"
     },
+    "target": "broadcast/fusion/(Float64/(1000/1000)/3)"
+  },
+  {
     "datapoints": [
       [
         90.0,
@@ -1081,13 +1077,13 @@
         106.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "broadcast/mix_scalar_tuple/(5/scal_tup)",
+    ],
     "tags": {
       "group": "nanosoldier_broadcast"
     },
+    "target": "broadcast/typeargs/(array/3)"
+  },
+  {
     "datapoints": [
       [
         91.0,
@@ -1169,13 +1165,13 @@
         91.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "broadcast/dotop/(\\Float64\\/(1000000,)/1)",
+    ],
     "tags": {
       "group": "nanosoldier_broadcast"
     },
+    "target": "broadcast/mix_scalar_tuple/(5/scal_tup)"
+  },
+  {
     "datapoints": [
       [
         89.0,
@@ -1185,13 +1181,13 @@
         112.99999999999999,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "broadcast/mix_scalar_tuple/(3/tup_tup)",
+    ],
     "tags": {
       "group": "nanosoldier_broadcast"
     },
+    "target": "broadcast/dotop/(\\Float64\\/(1000000,)/1)"
+  },
+  {
     "datapoints": [
       [
         109.00000000000001,
@@ -1233,13 +1229,13 @@
         112.99999999999999,
         1.773185418e12
       ]
-    ]
-  },
-  {
-    "target": "broadcast/sparse/((1000/1000)/2)",
+    ],
     "tags": {
       "group": "nanosoldier_broadcast"
     },
+    "target": "broadcast/mix_scalar_tuple/(3/tup_tup)"
+  },
+  {
     "datapoints": [
       [
         108.0,
@@ -1305,13 +1301,13 @@
         107.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "broadcast/typeargs/(tuple/5)",
+    ],
     "tags": {
       "group": "nanosoldier_broadcast"
     },
+    "target": "broadcast/sparse/((1000/1000)/2)"
+  },
+  {
     "datapoints": [
       [
         94.0,
@@ -1365,13 +1361,13 @@
         94.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "broadcast/26942",
+    ],
     "tags": {
       "group": "nanosoldier_broadcast"
     },
+    "target": "broadcast/typeargs/(tuple/5)"
+  },
+  {
     "datapoints": [
       [
         60.0,
@@ -1425,25 +1421,25 @@
         99.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "broadcast/mix_scalar_tuple/(10/\\scal_tup\\)",
+    ],
     "tags": {
       "group": "nanosoldier_broadcast"
     },
+    "target": "broadcast/26942"
+  },
+  {
     "datapoints": [
       [
         93.0,
         1.773103271e12
       ]
-    ]
-  },
-  {
-    "target": "broadcast/mix_scalar_tuple/(10/scal_tup)",
+    ],
     "tags": {
       "group": "nanosoldier_broadcast"
     },
+    "target": "broadcast/mix_scalar_tuple/(10/\\scal_tup\\)"
+  },
+  {
     "datapoints": [
       [
         109.00000000000001,
@@ -1529,13 +1525,13 @@
         109.00000000000001,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "broadcast/mix_scalar_tuple/(5/tup_tup)",
+    ],
     "tags": {
       "group": "nanosoldier_broadcast"
     },
+    "target": "broadcast/mix_scalar_tuple/(10/scal_tup)"
+  },
+  {
     "datapoints": [
       [
         110.00000000000001,
@@ -1657,37 +1653,37 @@
         110.00000000000001,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "broadcast/typeargs/(\\array\\/3)",
+    ],
     "tags": {
       "group": "nanosoldier_broadcast"
     },
+    "target": "broadcast/mix_scalar_tuple/(5/tup_tup)"
+  },
+  {
     "datapoints": [
       [
         92.0,
         1.773185401e12
       ]
-    ]
-  },
-  {
-    "target": "broadcast/mix_scalar_tuple/(5/\\scal_tup_x3\\)",
+    ],
     "tags": {
       "group": "nanosoldier_broadcast"
     },
+    "target": "broadcast/typeargs/(\\array\\/3)"
+  },
+  {
     "datapoints": [
       [
         108.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "broadcast/mix_scalar_tuple/(10/scal_tup_x3)",
+    ],
     "tags": {
       "group": "nanosoldier_broadcast"
     },
+    "target": "broadcast/mix_scalar_tuple/(5/\\scal_tup_x3\\)"
+  },
+  {
     "datapoints": [
       [
         52.0,
@@ -1769,25 +1765,25 @@
         73479.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "broadcast/mix_scalar_tuple/(10/\\tup_tup\\)",
+    ],
     "tags": {
       "group": "nanosoldier_broadcast"
     },
+    "target": "broadcast/mix_scalar_tuple/(10/scal_tup_x3)"
+  },
+  {
     "datapoints": [
       [
         92.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "broadcast/typeargs/(array/5)",
+    ],
     "tags": {
       "group": "nanosoldier_broadcast"
     },
+    "target": "broadcast/mix_scalar_tuple/(10/\\tup_tup\\)"
+  },
+  {
     "datapoints": [
       [
         91.0,
@@ -1881,13 +1877,13 @@
         106.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "broadcast/mix_scalar_tuple/(5/scal_tup_x3)",
+    ],
     "tags": {
       "group": "nanosoldier_broadcast"
     },
+    "target": "broadcast/typeargs/(array/5)"
+  },
+  {
     "datapoints": [
       [
         92.0,
@@ -1985,13 +1981,13 @@
         92.0,
         1.77318542e12
       ]
-    ]
-  },
-  {
-    "target": "broadcast/sparse/((10000000,)/1)",
+    ],
     "tags": {
       "group": "nanosoldier_broadcast"
     },
+    "target": "broadcast/mix_scalar_tuple/(5/scal_tup_x3)"
+  },
+  {
     "datapoints": [
       [
         90.0,
@@ -2009,25 +2005,25 @@
         88.0,
         1.773185408e12
       ]
-    ]
-  },
-  {
-    "target": "broadcast/dotop/(\\Float64\\/(1000000,)/2)",
+    ],
     "tags": {
       "group": "nanosoldier_broadcast"
     },
+    "target": "broadcast/sparse/((10000000,)/1)"
+  },
+  {
     "datapoints": [
       [
         95.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "broadcast/dotop/(Float64/(1000000,)/1)",
+    ],
     "tags": {
       "group": "nanosoldier_broadcast"
     },
+    "target": "broadcast/dotop/(\\Float64\\/(1000000,)/2)"
+  },
+  {
     "datapoints": [
       [
         112.00000000000001,
@@ -2093,6 +2089,10 @@
         113.99999999999999,
         1.773185421e12
       ]
-    ]
+    ],
+    "tags": {
+      "group": "nanosoldier_broadcast"
+    },
+    "target": "broadcast/dotop/(Float64/(1000000,)/1)"
   }
 ]

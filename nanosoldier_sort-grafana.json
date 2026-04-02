@@ -1,9 +1,5 @@
 [
   {
-    "target": "sort/mergesort/(sort! forwards/ascending)",
-    "tags": {
-      "group": "nanosoldier_sort"
-    },
     "datapoints": [
       [
         132.0,
@@ -25,13 +21,13 @@
         140.0,
         1.773185408e12
       ]
-    ]
-  },
-  {
-    "target": "sort/length = 3/sort(rand(2n/2n/n); dims=3)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/mergesort/(sort! forwards/ascending)"
+  },
+  {
     "datapoints": [
       [
         164.0,
@@ -41,13 +37,13 @@
         80.0,
         1.773185406e12
       ]
-    ]
-  },
-  {
-    "target": "sort/length = 10/descending",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/length = 3/sort(rand(2n/2n/n); dims=3)"
+  },
+  {
     "datapoints": [
       [
         182.0,
@@ -57,25 +53,25 @@
         70.0,
         1.773185418e12
       ]
-    ]
-  },
-  {
-    "target": "sort/length = 3/sort!(fill(missing/length)/rev=true)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/length = 10/descending"
+  },
+  {
     "datapoints": [
       [
         122.0,
         1.773103257e12
       ]
-    ]
-  },
-  {
-    "target": "sort/issorted/(reverse/random)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/length = 3/sort!(fill(missing/length)/rev=true)"
+  },
+  {
     "datapoints": [
       [
         25.0,
@@ -85,13 +81,13 @@
         176.0,
         1.773185401e12
       ]
-    ]
-  },
-  {
-    "target": "sort/mergesort/(sort! forwards/ones)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/issorted/(reverse/random)"
+  },
+  {
     "datapoints": [
       [
         148.0,
@@ -125,25 +121,25 @@
         136.0,
         1.773185405e12
       ]
-    ]
-  },
-  {
-    "target": "sort/issorted/(\\forwards\\/\\ones\\)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/mergesort/(sort! forwards/ones)"
+  },
+  {
     "datapoints": [
       [
         131.0,
         1.77318541e12
       ]
-    ]
-  },
-  {
-    "target": "sort/length = 3/sort(rand(2n/2n/n); dims=2)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/issorted/(\\forwards\\/\\ones\\)"
+  },
+  {
     "datapoints": [
       [
         155.0,
@@ -153,37 +149,37 @@
         79.0,
         1.773185406e12
       ]
-    ]
-  },
-  {
-    "target": "sort/length = 30/sort(rand(2n/2n/n); dims=2)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/length = 3/sort(rand(2n/2n/n); dims=2)"
+  },
+  {
     "datapoints": [
       [
         148.0,
         1.77302643e12
       ]
-    ]
-  },
-  {
-    "target": "sort/length = 3/sort!(rand(2n/2n/n); dims=1)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/length = 30/sort(rand(2n/2n/n); dims=2)"
+  },
+  {
     "datapoints": [
       [
         121.0,
         1.773103267e12
       ]
-    ]
-  },
-  {
-    "target": "sort/insertionsort/(sortperm! forwards/ones)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/length = 3/sort!(rand(2n/2n/n); dims=1)"
+  },
+  {
     "datapoints": [
       [
         88.0,
@@ -193,25 +189,25 @@
         99.0,
         1.773103271e12
       ]
-    ]
-  },
-  {
-    "target": "sort/length = 3/Int unions with missing",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/insertionsort/(sortperm! forwards/ones)"
+  },
+  {
     "datapoints": [
       [
         73.0,
         1.773185407e12
       ]
-    ]
-  },
-  {
-    "target": "sort/insertionsort/(sort! forwards/random)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/length = 3/Int unions with missing"
+  },
+  {
     "datapoints": [
       [
         150.0,
@@ -237,25 +233,25 @@
         66.0,
         1.773185408e12
       ]
-    ]
-  },
-  {
-    "target": "sort/quicksort/(sortperm! reverse/descending)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/insertionsort/(sort! forwards/random)"
+  },
+  {
     "datapoints": [
       [
         101.0,
         1.773026431e12
       ]
-    ]
-  },
-  {
-    "target": "sort/insertionsort/(\\sortperm! reverse\\/\\descending\\)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/quicksort/(sortperm! reverse/descending)"
+  },
+  {
     "datapoints": [
       [
         150.0,
@@ -265,13 +261,13 @@
         137.0,
         1.77318541e12
       ]
-    ]
-  },
-  {
-    "target": "sort/insertionsort/(sort forwards/random)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/insertionsort/(\\sortperm! reverse\\/\\descending\\)"
+  },
+  {
     "datapoints": [
       [
         151.0,
@@ -297,13 +293,13 @@
         66.0,
         1.773185408e12
       ]
-    ]
-  },
-  {
-    "target": "sort/insertionsort/(sort! reverse/ascending)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/insertionsort/(sort forwards/random)"
+  },
+  {
     "datapoints": [
       [
         150.0,
@@ -361,49 +357,49 @@
         150.0,
         1.773185414e12
       ]
-    ]
-  },
-  {
-    "target": "sort/insertionsort/(\\sort forwards\\/\\descending\\)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/insertionsort/(sort! reverse/ascending)"
+  },
+  {
     "datapoints": [
       [
         130.0,
         1.77310325e12
       ]
-    ]
-  },
-  {
-    "target": "sort/mergesort/(sort reverse/descending)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/insertionsort/(\\sort forwards\\/\\descending\\)"
+  },
+  {
     "datapoints": [
       [
         133.0,
         1.773103247e12
       ]
-    ]
-  },
-  {
-    "target": "sort/insertionsort/(\\sortperm! forwards\\/\\ascending\\)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/mergesort/(sort reverse/descending)"
+  },
+  {
     "datapoints": [
       [
         151.0,
         1.77318541e12
       ]
-    ]
-  },
-  {
-    "target": "sort/insertionsort/(sortperm! forwards/descending)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/insertionsort/(\\sortperm! forwards\\/\\ascending\\)"
+  },
+  {
     "datapoints": [
       [
         100.0,
@@ -413,49 +409,49 @@
         100.0,
         1.773103271e12
       ]
-    ]
-  },
-  {
-    "target": "sort/issues/Float16",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/insertionsort/(sortperm! forwards/descending)"
+  },
+  {
     "datapoints": [
       [
         78.0,
         1.773185402e12
       ]
-    ]
-  },
-  {
-    "target": "sort/insertionsort/(\\sort! reverse\\/\\ascending\\)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/issues/Float16"
+  },
+  {
     "datapoints": [
       [
         150.0,
         1.773185401e12
       ]
-    ]
-  },
-  {
-    "target": "sort/length = 10/Float64 unions with missing",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/insertionsort/(\\sort! reverse\\/\\ascending\\)"
+  },
+  {
     "datapoints": [
       [
         124.0,
         1.773103254e12
       ]
-    ]
-  },
-  {
-    "target": "sort/issorted/(reverse/ones)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/length = 10/Float64 unions with missing"
+  },
+  {
     "datapoints": [
       [
         133.0,
@@ -477,25 +473,25 @@
         132.0,
         1.773103268e12
       ]
-    ]
-  },
-  {
-    "target": "sort/insertionsort/(\\sortperm forwards\\/\\ascending\\)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/issorted/(reverse/ones)"
+  },
+  {
     "datapoints": [
       [
         137.0,
         1.77318541e12
       ]
-    ]
-  },
-  {
-    "target": "sort/insertionsort/(\\sort! reverse\\/\\random\\)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/insertionsort/(\\sortperm forwards\\/\\ascending\\)"
+  },
+  {
     "datapoints": [
       [
         66.0,
@@ -505,13 +501,13 @@
         151.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "sort/issorted/(forwards/descending)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/insertionsort/(\\sort! reverse\\/\\random\\)"
+  },
+  {
     "datapoints": [
       [
         149.0,
@@ -521,25 +517,25 @@
         77.0,
         1.773103257e12
       ]
-    ]
-  },
-  {
-    "target": "sort/length = 100/sort(rand(2n/2n/n); dims=3)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/issorted/(forwards/descending)"
+  },
+  {
     "datapoints": [
       [
         124.0,
         1.77302643e12
       ]
-    ]
-  },
-  {
-    "target": "sort/quicksort/(sortperm! reverse/ones)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/length = 100/sort(rand(2n/2n/n); dims=3)"
+  },
+  {
     "datapoints": [
       [
         97.0,
@@ -549,25 +545,25 @@
         131.0,
         1.773185405e12
       ]
-    ]
-  },
-  {
-    "target": "sort/length = 10/sort(rand(2n/2n/n); dims=3)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/quicksort/(sortperm! reverse/ones)"
+  },
+  {
     "datapoints": [
       [
         149.0,
         1.77302643e12
       ]
-    ]
-  },
-  {
-    "target": "sort/quicksort/(sort forwards/ones)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/length = 10/sort(rand(2n/2n/n); dims=3)"
+  },
+  {
     "datapoints": [
       [
         140.0,
@@ -577,13 +573,13 @@
         142.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "sort/insertionsort/(sortperm reverse/descending)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/quicksort/(sort forwards/ones)"
+  },
+  {
     "datapoints": [
       [
         139.0,
@@ -593,49 +589,49 @@
         131.0,
         1.773185398e12
       ]
-    ]
-  },
-  {
-    "target": "sort/length = 30/sort(rand(2n/2n/n); dims=3)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/insertionsort/(sortperm reverse/descending)"
+  },
+  {
     "datapoints": [
       [
         140.0,
         1.77302643e12
       ]
-    ]
-  },
-  {
-    "target": "sort/length = 100/descending",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/length = 30/sort(rand(2n/2n/n); dims=3)"
+  },
+  {
     "datapoints": [
       [
         77.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "sort/length = 10/sort!(rand(Int/length))",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/length = 100/descending"
+  },
+  {
     "datapoints": [
       [
         125.0,
         1.773103254e12
       ]
-    ]
-  },
-  {
-    "target": "sort/mergesort/(sort forwards/ones)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/length = 10/sort!(rand(Int/length))"
+  },
+  {
     "datapoints": [
       [
         142.0,
@@ -653,13 +649,13 @@
         143.0,
         1.77310326e12
       ]
-    ]
-  },
-  {
-    "target": "sort/insertionsort/(sort forwards/descending)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/mergesort/(sort forwards/ones)"
+  },
+  {
     "datapoints": [
       [
         130.0,
@@ -669,13 +665,13 @@
         130.0,
         1.773103254e12
       ]
-    ]
-  },
-  {
-    "target": "sort/insertionsort/(\\sort! forwards\\/\\random\\)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/insertionsort/(sort forwards/descending)"
+  },
+  {
     "datapoints": [
       [
         66.0,
@@ -685,37 +681,37 @@
         151.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "sort/length = 10/sort(rand(2n/2n/n); dims=2)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/insertionsort/(\\sort! forwards\\/\\random\\)"
+  },
+  {
     "datapoints": [
       [
         139.0,
         1.77302643e12
       ]
-    ]
-  },
-  {
-    "target": "sort/length = 30/sort!(fill(missing/length)/rev=true)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/length = 10/sort(rand(2n/2n/n); dims=2)"
+  },
+  {
     "datapoints": [
       [
         143.0,
         1.773103257e12
       ]
-    ]
-  },
-  {
-    "target": "sort/insertionsort/sort forwards",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/length = 30/sort!(fill(missing/length)/rev=true)"
+  },
+  {
     "datapoints": [
       [
         120.0,
@@ -725,13 +721,13 @@
         121.0,
         1.773185406e12
       ]
-    ]
-  },
-  {
-    "target": "sort/quicksort/(sort reverse/ones)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/insertionsort/sort forwards"
+  },
+  {
     "datapoints": [
       [
         141.0,
@@ -741,37 +737,37 @@
         142.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "sort/issorted/(forwards/random)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/quicksort/(sort reverse/ones)"
+  },
+  {
     "datapoints": [
       [
         140.0,
         1.773185407e12
       ]
-    ]
-  },
-  {
-    "target": "sort/length = 3/mixed eltype with by order",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/issorted/(forwards/random)"
+  },
+  {
     "datapoints": [
       [
         76.0,
         1.773185407e12
       ]
-    ]
-  },
-  {
-    "target": "sort/issorted/(forwards/ones)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/length = 3/mixed eltype with by order"
+  },
+  {
     "datapoints": [
       [
         132.0,
@@ -793,13 +789,13 @@
         133.0,
         1.773103268e12
       ]
-    ]
-  },
-  {
-    "target": "sort/quicksort/(sortperm! forwards/descending)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/issorted/(forwards/ones)"
+  },
+  {
     "datapoints": [
       [
         101.0,
@@ -809,13 +805,13 @@
         100.0,
         1.773103271e12
       ]
-    ]
-  },
-  {
-    "target": "sort/insertionsort/(sort reverse/random)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/quicksort/(sortperm! forwards/descending)"
+  },
+  {
     "datapoints": [
       [
         66.0,
@@ -845,13 +841,13 @@
         151.0,
         1.773185414e12
       ]
-    ]
-  },
-  {
-    "target": "sort/insertionsort/(sort! forwards/descending)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/insertionsort/(sort reverse/random)"
+  },
+  {
     "datapoints": [
       [
         130.0,
@@ -861,37 +857,37 @@
         130.0,
         1.773103254e12
       ]
-    ]
-  },
-  {
-    "target": "sort/quicksort/(sortperm! reverse/random)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/insertionsort/(sort! forwards/descending)"
+  },
+  {
     "datapoints": [
       [
         100.0,
         1.773026431e12
       ]
-    ]
-  },
-  {
-    "target": "sort/insertionsort/(sortperm! reverse/ascending)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/quicksort/(sortperm! reverse/random)"
+  },
+  {
     "datapoints": [
       [
         100.0,
         1.773026431e12
       ]
-    ]
-  },
-  {
-    "target": "sort/mergesort/(sort forwards/ascending)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/insertionsort/(sortperm! reverse/ascending)"
+  },
+  {
     "datapoints": [
       [
         134.00000000000003,
@@ -905,13 +901,13 @@
         135.0,
         1.773185408e12
       ]
-    ]
-  },
-  {
-    "target": "sort/insertionsort/(sortperm! reverse/descending)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/mergesort/(sort forwards/ascending)"
+  },
+  {
     "datapoints": [
       [
         138.0,
@@ -961,37 +957,37 @@
         67.00000000000001,
         1.773185407e12
       ]
-    ]
-  },
-  {
-    "target": "sort/mergesort/(sortperm! reverse/descending)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/insertionsort/(sortperm! reverse/descending)"
+  },
+  {
     "datapoints": [
       [
         131.0,
         1.773103267e12
       ]
-    ]
-  },
-  {
-    "target": "sort/length = 1000/Int unions with missing",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/mergesort/(sortperm! reverse/descending)"
+  },
+  {
     "datapoints": [
       [
         122.0,
         1.773103257e12
       ]
-    ]
-  },
-  {
-    "target": "sort/insertionsort/(\\sort reverse\\/\\random\\)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/length = 1000/Int unions with missing"
+  },
+  {
     "datapoints": [
       [
         66.0,
@@ -1001,49 +997,49 @@
         151.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "sort/length = 30/descending",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/insertionsort/(\\sort reverse\\/\\random\\)"
+  },
+  {
     "datapoints": [
       [
         72.0,
         1.773185406e12
       ]
-    ]
-  },
-  {
-    "target": "sort/insertionsort/(sortperm reverse/ones)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/length = 30/descending"
+  },
+  {
     "datapoints": [
       [
         135.0,
         1.773103253e12
       ]
-    ]
-  },
-  {
-    "target": "sort/insertionsort/(sortperm! reverse/random)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/insertionsort/(sortperm reverse/ones)"
+  },
+  {
     "datapoints": [
       [
         100.0,
         1.773026431e12
       ]
-    ]
-  },
-  {
-    "target": "sort/issues/partialsort!(rand(10_000)/1:3/rev=true)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/insertionsort/(sortperm! reverse/random)"
+  },
+  {
     "datapoints": [
       [
         99.0,
@@ -1085,13 +1081,13 @@
         98.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "sort/insertionsort/(sortperm! forwards/random)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/issues/partialsort!(rand(10_000)/1:3/rev=true)"
+  },
+  {
     "datapoints": [
       [
         100.0,
@@ -1101,25 +1097,25 @@
         100.0,
         1.773103271e12
       ]
-    ]
-  },
-  {
-    "target": "sort/length = 1000/sort!(fill(missing/length))",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/insertionsort/(sortperm! forwards/random)"
+  },
+  {
     "datapoints": [
       [
         151.0,
         1.773103254e12
       ]
-    ]
-  },
-  {
-    "target": "sort/quicksort/(sortperm! forwards/ascending)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/length = 1000/sort!(fill(missing/length))"
+  },
+  {
     "datapoints": [
       [
         101.0,
@@ -1129,13 +1125,13 @@
         100.0,
         1.773103271e12
       ]
-    ]
-  },
-  {
-    "target": "sort/quicksort/(sortperm! forwards/ones)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/quicksort/(sortperm! forwards/ascending)"
+  },
+  {
     "datapoints": [
       [
         97.0,
@@ -1145,13 +1141,13 @@
         100.0,
         1.773103271e12
       ]
-    ]
-  },
-  {
-    "target": "sort/quicksort/(sort! reverse/ones)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/quicksort/(sortperm! forwards/ones)"
+  },
+  {
     "datapoints": [
       [
         143.0,
@@ -1165,13 +1161,13 @@
         145.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "sort/insertionsort/(sortperm! forwards/ascending)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/quicksort/(sort! reverse/ones)"
+  },
+  {
     "datapoints": [
       [
         101.0,
@@ -1197,13 +1193,13 @@
         150.0,
         1.773185405e12
       ]
-    ]
-  },
-  {
-    "target": "sort/mergesort/(sortperm reverse/descending)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/insertionsort/(sortperm! forwards/ascending)"
+  },
+  {
     "datapoints": [
       [
         132.0,
@@ -1213,25 +1209,25 @@
         131.0,
         1.773103266e12
       ]
-    ]
-  },
-  {
-    "target": "sort/length = 100/sort(rand(2n/2n/n); dims=2)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/mergesort/(sortperm reverse/descending)"
+  },
+  {
     "datapoints": [
       [
         123.0,
         1.77302643e12
       ]
-    ]
-  },
-  {
-    "target": "sort/insertionsort/(sort reverse/ascending)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/length = 100/sort(rand(2n/2n/n); dims=2)"
+  },
+  {
     "datapoints": [
       [
         150.0,
@@ -1289,37 +1285,37 @@
         150.0,
         1.773185414e12
       ]
-    ]
-  },
-  {
-    "target": "sort/insertionsort/(\\sort! forwards\\/\\ascending\\)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/insertionsort/(sort reverse/ascending)"
+  },
+  {
     "datapoints": [
       [
         152.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "sort/length = 1000/Float64 unions with missing",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/insertionsort/(\\sort! forwards\\/\\ascending\\)"
+  },
+  {
     "datapoints": [
       [
         125.0,
         1.773103257e12
       ]
-    ]
-  },
-  {
-    "target": "sort/insertionsort/sort! reverse",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/length = 1000/Float64 unions with missing"
+  },
+  {
     "datapoints": [
       [
         121.0,
@@ -1329,13 +1325,13 @@
         130.0,
         1.773103264e12
       ]
-    ]
-  },
-  {
-    "target": "sort/insertionsort/(\\sort forwards\\/\\random\\)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/insertionsort/sort! reverse"
+  },
+  {
     "datapoints": [
       [
         66.0,
@@ -1345,25 +1341,25 @@
         151.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "sort/length = 3/ascending",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/insertionsort/(\\sort forwards\\/\\random\\)"
+  },
+  {
     "datapoints": [
       [
         79.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "sort/insertionsort/(sort! reverse/descending)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/length = 3/ascending"
+  },
+  {
     "datapoints": [
       [
         67.00000000000001,
@@ -1417,13 +1413,13 @@
         150.0,
         1.773185408e12
       ]
-    ]
-  },
-  {
-    "target": "sort/insertionsort/(sort! forwards/ascending)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/insertionsort/(sort! reverse/descending)"
+  },
+  {
     "datapoints": [
       [
         151.0,
@@ -1477,25 +1473,25 @@
         151.0,
         1.773185411e12
       ]
-    ]
-  },
-  {
-    "target": "sort/insertionsort/(\\sort! forwards\\/\\descending\\)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/insertionsort/(sort! forwards/ascending)"
+  },
+  {
     "datapoints": [
       [
         130.0,
         1.77310325e12
       ]
-    ]
-  },
-  {
-    "target": "sort/mergesort/(sort reverse/ones)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/insertionsort/(\\sort! forwards\\/\\descending\\)"
+  },
+  {
     "datapoints": [
       [
         144.0,
@@ -1509,13 +1505,13 @@
         68.0,
         1.773185405e12
       ]
-    ]
-  },
-  {
-    "target": "sort/insertionsort/(sort! reverse/random)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/mergesort/(sort reverse/ones)"
+  },
+  {
     "datapoints": [
       [
         66.0,
@@ -1545,25 +1541,25 @@
         151.0,
         1.773185414e12
       ]
-    ]
-  },
-  {
-    "target": "sort/insertionsort/(sortperm forwards/ascending)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/insertionsort/(sort! reverse/random)"
+  },
+  {
     "datapoints": [
       [
         136.0,
         1.773185405e12
       ]
-    ]
-  },
-  {
-    "target": "sort/insertionsort/(\\sortperm reverse\\/\\descending\\)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/insertionsort/(sortperm forwards/ascending)"
+  },
+  {
     "datapoints": [
       [
         139.0,
@@ -1573,13 +1569,13 @@
         132.0,
         1.77318541e12
       ]
-    ]
-  },
-  {
-    "target": "sort/quicksort/(sortperm! forwards/random)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/insertionsort/(\\sortperm reverse\\/\\descending\\)"
+  },
+  {
     "datapoints": [
       [
         101.0,
@@ -1589,25 +1585,25 @@
         99.0,
         1.773103271e12
       ]
-    ]
-  },
-  {
-    "target": "sort/length = 10/ascending",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/quicksort/(sortperm! forwards/random)"
+  },
+  {
     "datapoints": [
       [
         140.0,
         1.773103254e12
       ]
-    ]
-  },
-  {
-    "target": "sort/insertionsort/(sortperm! reverse/ones)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/length = 10/ascending"
+  },
+  {
     "datapoints": [
       [
         87.0,
@@ -1621,49 +1617,49 @@
         70.0,
         1.773103254e12
       ]
-    ]
-  },
-  {
-    "target": "sort/quicksort/(sortperm! reverse/ascending)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/insertionsort/(sortperm! reverse/ones)"
+  },
+  {
     "datapoints": [
       [
         100.0,
         1.773026431e12
       ]
-    ]
-  },
-  {
-    "target": "sort/insertionsort/(\\sort reverse\\/\\ascending\\)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/quicksort/(sortperm! reverse/ascending)"
+  },
+  {
     "datapoints": [
       [
         150.0,
         1.773185401e12
       ]
-    ]
-  },
-  {
-    "target": "sort/length = 30/sort!(fill(missing/length))",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/insertionsort/(\\sort reverse\\/\\ascending\\)"
+  },
+  {
     "datapoints": [
       [
         70.0,
         1.773185418e12
       ]
-    ]
-  },
-  {
-    "target": "sort/issorted/(reverse/ascending)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/length = 30/sort!(fill(missing/length))"
+  },
+  {
     "datapoints": [
       [
         20.0,
@@ -1673,25 +1669,25 @@
         185.0,
         1.773185401e12
       ]
-    ]
-  },
-  {
-    "target": "sort/mergesort/(\\sort! forwards\\/\\ones\\)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/issorted/(reverse/ascending)"
+  },
+  {
     "datapoints": [
       [
         132.0,
         1.77318541e12
       ]
-    ]
-  },
-  {
-    "target": "sort/quicksort/(sort! forwards/ones)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/mergesort/(\\sort! forwards\\/\\ones\\)"
+  },
+  {
     "datapoints": [
       [
         142.0,
@@ -1705,13 +1701,13 @@
         145.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "sort/mergesort/(sort! reverse/descending)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/quicksort/(sort! forwards/ones)"
+  },
+  {
     "datapoints": [
       [
         138.0,
@@ -1721,25 +1717,25 @@
         134.00000000000003,
         1.773103268e12
       ]
-    ]
-  },
-  {
-    "target": "sort/mergesort/(sortperm! forwards/ascending)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/mergesort/(sort! reverse/descending)"
+  },
+  {
     "datapoints": [
       [
         131.0,
         1.773103267e12
       ]
-    ]
-  },
-  {
-    "target": "sort/insertionsort/(\\sort! reverse\\/\\descending\\)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/mergesort/(sortperm! forwards/ascending)"
+  },
+  {
     "datapoints": [
       [
         67.00000000000001,
@@ -1749,25 +1745,25 @@
         66.0,
         1.77318541e12
       ]
-    ]
-  },
-  {
-    "target": "sort/length = 3/sortperm(rand(length))",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/insertionsort/(\\sort! reverse\\/\\descending\\)"
+  },
+  {
     "datapoints": [
       [
         73.0,
         1.773185407e12
       ]
-    ]
-  },
-  {
-    "target": "sort/mergesort/(sort! reverse/ones)",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/length = 3/sortperm(rand(length))"
+  },
+  {
     "datapoints": [
       [
         149.0,
@@ -1781,18 +1777,22 @@
         66.0,
         1.773185405e12
       ]
-    ]
-  },
-  {
-    "target": "sort/length = 30/Float64 unions with missing",
+    ],
     "tags": {
       "group": "nanosoldier_sort"
     },
+    "target": "sort/mergesort/(sort! reverse/ones)"
+  },
+  {
     "datapoints": [
       [
         122.0,
         1.773103257e12
       ]
-    ]
+    ],
+    "tags": {
+      "group": "nanosoldier_sort"
+    },
+    "target": "sort/length = 30/Float64 unions with missing"
   }
 ]

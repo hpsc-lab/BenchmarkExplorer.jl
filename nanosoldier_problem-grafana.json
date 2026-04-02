@@ -1,9 +1,5 @@
 [
   {
-    "target": "problem/json/parse_json",
-    "tags": {
-      "group": "nanosoldier_problem"
-    },
     "datapoints": [
       [
         105.0,
@@ -73,13 +69,13 @@
         1.2102562926474159,
         1.773311721e12
       ]
-    ]
-  },
-  {
-    "target": "problem/fem/sparse_fem",
+    ],
     "tags": {
       "group": "nanosoldier_problem"
     },
+    "target": "problem/json/parse_json"
+  },
+  {
     "datapoints": [
       [
         110.00000000000001,
@@ -129,13 +125,13 @@
         105.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "problem/laplacian/laplace_iter_devec",
+    ],
     "tags": {
       "group": "nanosoldier_problem"
     },
+    "target": "problem/fem/sparse_fem"
+  },
+  {
     "datapoints": [
       [
         92.0,
@@ -217,13 +213,13 @@
         75.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "problem/imdb/centrality",
+    ],
     "tags": {
       "group": "nanosoldier_problem"
     },
+    "target": "problem/laplacian/laplace_iter_devec"
+  },
+  {
     "datapoints": [
       [
         105.0,
@@ -269,13 +265,13 @@
         104.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "problem/monte carlo/euro_option_devec",
+    ],
     "tags": {
       "group": "nanosoldier_problem"
     },
+    "target": "problem/imdb/centrality"
+  },
+  {
     "datapoints": [
       [
         92.0,
@@ -285,13 +281,13 @@
         110.00000000000001,
         1.773103271e12
       ]
-    ]
-  },
-  {
-    "target": "problem/raytrace/raytrace",
+    ],
     "tags": {
       "group": "nanosoldier_problem"
     },
+    "target": "problem/monte carlo/euro_option_devec"
+  },
+  {
     "datapoints": [
       [
         92.0,
@@ -305,13 +301,13 @@
         120.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "problem/go/go_game",
+    ],
     "tags": {
       "group": "nanosoldier_problem"
     },
+    "target": "problem/raytrace/raytrace"
+  },
+  {
     "datapoints": [
       [
         112.99999999999999,
@@ -345,13 +341,13 @@
         95.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "problem/chaosgame/chaosgame",
+    ],
     "tags": {
       "group": "nanosoldier_problem"
     },
+    "target": "problem/go/go_game"
+  },
+  {
     "datapoints": [
       [
         106.0,
@@ -381,13 +377,13 @@
         92.0,
         1.773185405e12
       ]
-    ]
-  },
-  {
-    "target": "problem/grigoriadis khachiyan/grigoriadis_khachiyan",
+    ],
     "tags": {
       "group": "nanosoldier_problem"
     },
+    "target": "problem/chaosgame/chaosgame"
+  },
+  {
     "datapoints": [
       [
         117.0,
@@ -409,13 +405,13 @@
         92.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "problem/laplacian/laplace_iter_sub",
+    ],
     "tags": {
       "group": "nanosoldier_problem"
     },
+    "target": "problem/grigoriadis khachiyan/grigoriadis_khachiyan"
+  },
+  {
     "datapoints": [
       [
         90.0,
@@ -505,13 +501,13 @@
         107.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "problem/laplacian/laplace_iter_vec",
+    ],
     "tags": {
       "group": "nanosoldier_problem"
     },
+    "target": "problem/laplacian/laplace_iter_sub"
+  },
+  {
     "datapoints": [
       [
         126.0,
@@ -597,13 +593,13 @@
         84.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "problem/ziggurat/ziggurat",
+    ],
     "tags": {
       "group": "nanosoldier_problem"
     },
+    "target": "problem/laplacian/laplace_iter_vec"
+  },
+  {
     "datapoints": [
       [
         106.0,
@@ -645,13 +641,13 @@
         95.0,
         1.773185408e12
       ]
-    ]
-  },
-  {
-    "target": "problem/laplacian/laplace_sparse_matvec",
+    ],
     "tags": {
       "group": "nanosoldier_problem"
     },
+    "target": "problem/ziggurat/ziggurat"
+  },
+  {
     "datapoints": [
       [
         108.0,
@@ -677,13 +673,13 @@
         106.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "problem/stockcorr/stockcorr",
+    ],
     "tags": {
       "group": "nanosoldier_problem"
     },
+    "target": "problem/laplacian/laplace_sparse_matvec"
+  },
+  {
     "datapoints": [
       [
         110.00000000000001,
@@ -741,25 +737,25 @@
         126.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "problem/seismic/(\\seismic\\/\\Float64\\)",
+    ],
     "tags": {
       "group": "nanosoldier_problem"
     },
+    "target": "problem/stockcorr/stockcorr"
+  },
+  {
     "datapoints": [
       [
         106.0,
         1.773103271e12
       ]
-    ]
-  },
-  {
-    "target": "problem/spellcheck/spellcheck",
+    ],
     "tags": {
       "group": "nanosoldier_problem"
     },
+    "target": "problem/seismic/(\\seismic\\/\\Float64\\)"
+  },
+  {
     "datapoints": [
       [
         110.00000000000001,
@@ -793,13 +789,13 @@
         86.0,
         1.77318542e12
       ]
-    ]
-  },
-  {
-    "target": "problem/simplex/simplex",
+    ],
     "tags": {
       "group": "nanosoldier_problem"
     },
+    "target": "problem/spellcheck/spellcheck"
+  },
+  {
     "datapoints": [
       [
         129.0,
@@ -929,13 +925,13 @@
         90.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "problem/seismic/(seismic/Float32)",
+    ],
     "tags": {
       "group": "nanosoldier_problem"
     },
+    "target": "problem/simplex/simplex"
+  },
+  {
     "datapoints": [
       [
         105.0,
@@ -949,13 +945,13 @@
         51.0,
         1.773185415e12
       ]
-    ]
-  },
-  {
-    "target": "problem/monte carlo/euro_option_vec",
+    ],
     "tags": {
       "group": "nanosoldier_problem"
     },
+    "target": "problem/seismic/(seismic/Float32)"
+  },
+  {
     "datapoints": [
       [
         107.0,
@@ -1009,13 +1005,13 @@
         106.0,
         1.77318542e12
       ]
-    ]
-  },
-  {
-    "target": "problem/seismic/(seismic/Float64)",
+    ],
     "tags": {
       "group": "nanosoldier_problem"
     },
+    "target": "problem/monte carlo/euro_option_vec"
+  },
+  {
     "datapoints": [
       [
         95.0,
@@ -1029,6 +1025,10 @@
         72.0,
         1.773185415e12
       ]
-    ]
+    ],
+    "tags": {
+      "group": "nanosoldier_problem"
+    },
+    "target": "problem/seismic/(seismic/Float64)"
   }
 ]

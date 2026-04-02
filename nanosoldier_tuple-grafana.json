@@ -1,9 +1,5 @@
 [
   {
-    "target": "tuple/reduction/(minimum/(8,))",
-    "tags": {
-      "group": "nanosoldier_tuple"
-    },
     "datapoints": [
       [
         107.0,
@@ -45,13 +41,13 @@
         108.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "tuple/reduction/(minimum/(2,))",
+    ],
     "tags": {
       "group": "nanosoldier_tuple"
     },
+    "target": "tuple/reduction/(minimum/(8,))"
+  },
+  {
     "datapoints": [
       [
         94.0,
@@ -121,37 +117,37 @@
         107.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "tuple/reduction/(\\sum\\/(2/2))",
+    ],
     "tags": {
       "group": "nanosoldier_tuple"
     },
+    "target": "tuple/reduction/(minimum/(2,))"
+  },
+  {
     "datapoints": [
       [
         82.0,
         1.773103271e12
       ]
-    ]
-  },
-  {
-    "target": "tuple/index/(sumelt/TupleWrapper/3/Float32)",
+    ],
     "tags": {
       "group": "nanosoldier_tuple"
     },
+    "target": "tuple/reduction/(\\sum\\/(2/2))"
+  },
+  {
     "datapoints": [
       [
         200.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "tuple/reduction/(sum/(4,))",
+    ],
     "tags": {
       "group": "nanosoldier_tuple"
     },
+    "target": "tuple/index/(sumelt/TupleWrapper/3/Float32)"
+  },
+  {
     "datapoints": [
       [
         112.99999999999999,
@@ -225,13 +221,13 @@
         57.99999999999999,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "tuple/linear algebra/(matmat/(4/4)/(4/4))",
+    ],
     "tags": {
       "group": "nanosoldier_tuple"
     },
+    "target": "tuple/reduction/(sum/(4,))"
+  },
+  {
     "datapoints": [
       [
         106.0,
@@ -313,13 +309,13 @@
         78.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "tuple/reduction/(sumabs/(8,))",
+    ],
     "tags": {
       "group": "nanosoldier_tuple"
     },
+    "target": "tuple/linear algebra/(matmat/(4/4)/(4/4))"
+  },
+  {
     "datapoints": [
       [
         106.0,
@@ -373,13 +369,13 @@
         95.0,
         1.77318542e12
       ]
-    ]
-  },
-  {
-    "target": "tuple/linear algebra/(matvec/(2/2)/(2,))",
+    ],
     "tags": {
       "group": "nanosoldier_tuple"
     },
+    "target": "tuple/reduction/(sumabs/(8,))"
+  },
+  {
     "datapoints": [
       [
         70.0,
@@ -449,13 +445,13 @@
         107.0,
         1.773185418e12
       ]
-    ]
-  },
-  {
-    "target": "tuple/linear algebra/(matmat/(2/2)/(2/2))",
+    ],
     "tags": {
       "group": "nanosoldier_tuple"
     },
+    "target": "tuple/linear algebra/(matvec/(2/2)/(2,))"
+  },
+  {
     "datapoints": [
       [
         113.99999999999999,
@@ -509,13 +505,13 @@
         109.00000000000001,
         1.77318542e12
       ]
-    ]
-  },
-  {
-    "target": "tuple/reduction/(sumabs/(4,))",
+    ],
     "tags": {
       "group": "nanosoldier_tuple"
     },
+    "target": "tuple/linear algebra/(matmat/(2/2)/(2/2))"
+  },
+  {
     "datapoints": [
       [
         109.00000000000001,
@@ -609,13 +605,13 @@
         88.0,
         1.77318542e12
       ]
-    ]
-  },
-  {
-    "target": "tuple/reduction/(\\sum\\/(4/4))",
+    ],
     "tags": {
       "group": "nanosoldier_tuple"
     },
+    "target": "tuple/reduction/(sumabs/(4,))"
+  },
+  {
     "datapoints": [
       [
         107.0,
@@ -625,13 +621,13 @@
         90.0,
         1.773185401e12
       ]
-    ]
-  },
-  {
-    "target": "tuple/reduction/(sum/(8,))",
+    ],
     "tags": {
       "group": "nanosoldier_tuple"
     },
+    "target": "tuple/reduction/(\\sum\\/(4/4))"
+  },
+  {
     "datapoints": [
       [
         80.0,
@@ -737,13 +733,13 @@
         80.0,
         1.773185415e12
       ]
-    ]
-  },
-  {
-    "target": "tuple/linear algebra/(matmat/(8/8)/(8/8))",
+    ],
     "tags": {
       "group": "nanosoldier_tuple"
     },
+    "target": "tuple/reduction/(sum/(8,))"
+  },
+  {
     "datapoints": [
       [
         94.0,
@@ -857,13 +853,13 @@
         94.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "tuple/linear algebra/(matvec/(16/16)/(16,))",
+    ],
     "tags": {
       "group": "nanosoldier_tuple"
     },
+    "target": "tuple/linear algebra/(matmat/(8/8)/(8/8))"
+  },
+  {
     "datapoints": [
       [
         108.0,
@@ -973,25 +969,25 @@
         83.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "tuple/reduction/(sumabs/(8/8))",
+    ],
     "tags": {
       "group": "nanosoldier_tuple"
     },
+    "target": "tuple/linear algebra/(matvec/(16/16)/(16,))"
+  },
+  {
     "datapoints": [
       [
         94.0,
         1.773103247e12
       ]
-    ]
-  },
-  {
-    "target": "tuple/reduction/(sum/(8/8))",
+    ],
     "tags": {
       "group": "nanosoldier_tuple"
     },
+    "target": "tuple/reduction/(sumabs/(8/8))"
+  },
+  {
     "datapoints": [
       [
         107.0,
@@ -1045,13 +1041,13 @@
         78.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "tuple/reduction/(minimum/(2/2))",
+    ],
     "tags": {
       "group": "nanosoldier_tuple"
     },
+    "target": "tuple/reduction/(sum/(8/8))"
+  },
+  {
     "datapoints": [
       [
         107.0,
@@ -1145,13 +1141,13 @@
         106.0,
         1.773185418e12
       ]
-    ]
-  },
-  {
-    "target": "tuple/reduction/(sumabs/(2,))",
+    ],
     "tags": {
       "group": "nanosoldier_tuple"
     },
+    "target": "tuple/reduction/(minimum/(2/2))"
+  },
+  {
     "datapoints": [
       [
         94.0,
@@ -1209,13 +1205,13 @@
         93.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "tuple/reduction/(sum/(2/2))",
+    ],
     "tags": {
       "group": "nanosoldier_tuple"
     },
+    "target": "tuple/reduction/(sumabs/(2,))"
+  },
+  {
     "datapoints": [
       [
         107.0,
@@ -1285,13 +1281,13 @@
         107.0,
         1.773185418e12
       ]
-    ]
-  },
-  {
-    "target": "tuple/misc/11899",
+    ],
     "tags": {
       "group": "nanosoldier_tuple"
     },
+    "target": "tuple/reduction/(sum/(2/2))"
+  },
+  {
     "datapoints": [
       [
         110.00000000000001,
@@ -1389,13 +1385,13 @@
         91.0,
         1.773185418e12
       ]
-    ]
-  },
-  {
-    "target": "tuple/linear algebra/(matvec/(4/4)/(4,))",
+    ],
     "tags": {
       "group": "nanosoldier_tuple"
     },
+    "target": "tuple/misc/11899"
+  },
+  {
     "datapoints": [
       [
         112.00000000000001,
@@ -1505,13 +1501,13 @@
         108.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "tuple/linear algebra/(matvec/(8/8)/(8,))",
+    ],
     "tags": {
       "group": "nanosoldier_tuple"
     },
+    "target": "tuple/linear algebra/(matvec/(4/4)/(4,))"
+  },
+  {
     "datapoints": [
       [
         110.00000000000001,
@@ -1649,13 +1645,13 @@
         120.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "tuple/reduction/(sumabs/(4/4))",
+    ],
     "tags": {
       "group": "nanosoldier_tuple"
     },
+    "target": "tuple/linear algebra/(matvec/(8/8)/(8,))"
+  },
+  {
     "datapoints": [
       [
         108.0,
@@ -1673,13 +1669,13 @@
         88.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "tuple/reduction/(sum/(16,))",
+    ],
     "tags": {
       "group": "nanosoldier_tuple"
     },
+    "target": "tuple/reduction/(sumabs/(4/4))"
+  },
+  {
     "datapoints": [
       [
         88.0,
@@ -1765,25 +1761,25 @@
         110.00000000000001,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "tuple/reduction/(\\minimum\\/(4,))",
+    ],
     "tags": {
       "group": "nanosoldier_tuple"
     },
+    "target": "tuple/reduction/(sum/(16,))"
+  },
+  {
     "datapoints": [
       [
         85.0,
         1.773103271e12
       ]
-    ]
-  },
-  {
-    "target": "tuple/reduction/(sumabs/(2/2))",
+    ],
     "tags": {
       "group": "nanosoldier_tuple"
     },
+    "target": "tuple/reduction/(\\minimum\\/(4,))"
+  },
+  {
     "datapoints": [
       [
         54.0,
@@ -1889,25 +1885,25 @@
         88.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "tuple/reduction/(\\sumabs\\/(8,))",
+    ],
     "tags": {
       "group": "nanosoldier_tuple"
     },
+    "target": "tuple/reduction/(sumabs/(2/2))"
+  },
+  {
     "datapoints": [
       [
         106.0,
         1.773103271e12
       ]
-    ]
-  },
-  {
-    "target": "tuple/reduction/(minimum/(4,))",
+    ],
     "tags": {
       "group": "nanosoldier_tuple"
     },
+    "target": "tuple/reduction/(\\sumabs\\/(8,))"
+  },
+  {
     "datapoints": [
       [
         110.00000000000001,
@@ -2049,25 +2045,25 @@
         90.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "tuple/reduction/(\\sum\\/(2,))",
+    ],
     "tags": {
       "group": "nanosoldier_tuple"
     },
+    "target": "tuple/reduction/(minimum/(4,))"
+  },
+  {
     "datapoints": [
       [
         107.0,
         1.773103271e12
       ]
-    ]
-  },
-  {
-    "target": "tuple/linear algebra/(matmat/(16/16)/(16/16))",
+    ],
     "tags": {
       "group": "nanosoldier_tuple"
     },
+    "target": "tuple/reduction/(\\sum\\/(2,))"
+  },
+  {
     "datapoints": [
       [
         106.0,
@@ -2153,13 +2149,13 @@
         210.0,
         1.77318542e12
       ]
-    ]
-  },
-  {
-    "target": "tuple/reduction/(sumabs/(16,))",
+    ],
     "tags": {
       "group": "nanosoldier_tuple"
     },
+    "target": "tuple/linear algebra/(matmat/(16/16)/(16/16))"
+  },
+  {
     "datapoints": [
       [
         108.0,
@@ -2177,13 +2173,13 @@
         92.0,
         1.773185406e12
       ]
-    ]
-  },
-  {
-    "target": "tuple/reduction/(minimum/(8/8))",
+    ],
     "tags": {
       "group": "nanosoldier_tuple"
     },
+    "target": "tuple/reduction/(sumabs/(16,))"
+  },
+  {
     "datapoints": [
       [
         107.0,
@@ -2225,13 +2221,13 @@
         107.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "tuple/reduction/(sum/(16/16))",
+    ],
     "tags": {
       "group": "nanosoldier_tuple"
     },
+    "target": "tuple/reduction/(minimum/(8/8))"
+  },
+  {
     "datapoints": [
       [
         91.0,
@@ -2285,13 +2281,13 @@
         91.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "tuple/reduction/(\\sum\\/(16/16))",
+    ],
     "tags": {
       "group": "nanosoldier_tuple"
     },
+    "target": "tuple/reduction/(sum/(16/16))"
+  },
+  {
     "datapoints": [
       [
         90.0,
@@ -2301,25 +2297,25 @@
         109.00000000000001,
         1.77318541e12
       ]
-    ]
-  },
-  {
-    "target": "tuple/reduction/(\\sumabs\\/(4/4))",
+    ],
     "tags": {
       "group": "nanosoldier_tuple"
     },
+    "target": "tuple/reduction/(\\sum\\/(16/16))"
+  },
+  {
     "datapoints": [
       [
         112.99999999999999,
         1.773103271e12
       ]
-    ]
-  },
-  {
-    "target": "tuple/reduction/(minimum/(4/4))",
+    ],
     "tags": {
       "group": "nanosoldier_tuple"
     },
+    "target": "tuple/reduction/(\\sumabs\\/(4/4))"
+  },
+  {
     "datapoints": [
       [
         89.0,
@@ -2341,25 +2337,25 @@
         110.00000000000001,
         1.773185405e12
       ]
-    ]
-  },
-  {
-    "target": "tuple/reduction/(\\minimum\\/(8,))",
+    ],
     "tags": {
       "group": "nanosoldier_tuple"
     },
+    "target": "tuple/reduction/(minimum/(4/4))"
+  },
+  {
     "datapoints": [
       [
         85.0,
         1.773103271e12
       ]
-    ]
-  },
-  {
-    "target": "tuple/reduction/(sum/(2,))",
+    ],
     "tags": {
       "group": "nanosoldier_tuple"
     },
+    "target": "tuple/reduction/(\\minimum\\/(8,))"
+  },
+  {
     "datapoints": [
       [
         93.0,
@@ -2457,25 +2453,25 @@
         107.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "tuple/reduction/(\\sum\\/(8,))",
+    ],
     "tags": {
       "group": "nanosoldier_tuple"
     },
+    "target": "tuple/reduction/(sum/(2,))"
+  },
+  {
     "datapoints": [
       [
         89.0,
         1.77310325e12
       ]
-    ]
-  },
-  {
-    "target": "tuple/reduction/(sum/(4/4))",
+    ],
     "tags": {
       "group": "nanosoldier_tuple"
     },
+    "target": "tuple/reduction/(\\sum\\/(8,))"
+  },
+  {
     "datapoints": [
       [
         113.99999999999999,
@@ -2565,25 +2561,25 @@
         113.99999999999999,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "tuple/reduction/(\\sum\\/(4,))",
+    ],
     "tags": {
       "group": "nanosoldier_tuple"
     },
+    "target": "tuple/reduction/(sum/(4/4))"
+  },
+  {
     "datapoints": [
       [
         88.0,
         1.773103271e12
       ]
-    ]
-  },
-  {
-    "target": "tuple/misc/longtuple",
+    ],
     "tags": {
       "group": "nanosoldier_tuple"
     },
+    "target": "tuple/reduction/(\\sum\\/(4,))"
+  },
+  {
     "datapoints": [
       [
         111.00000000000001,
@@ -2605,13 +2601,13 @@
         111.00000000000001,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "tuple/reduction/(minimum/(16,))",
+    ],
     "tags": {
       "group": "nanosoldier_tuple"
     },
+    "target": "tuple/misc/longtuple"
+  },
+  {
     "datapoints": [
       [
         93.0,
@@ -2641,13 +2637,13 @@
         70.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "tuple/reduction/(\\sum\\/(16,))",
+    ],
     "tags": {
       "group": "nanosoldier_tuple"
     },
+    "target": "tuple/reduction/(minimum/(16,))"
+  },
+  {
     "datapoints": [
       [
         90.0,
@@ -2657,6 +2653,10 @@
         107.0,
         1.773185401e12
       ]
-    ]
+    ],
+    "tags": {
+      "group": "nanosoldier_tuple"
+    },
+    "target": "tuple/reduction/(\\sum\\/(16,))"
   }
 ]

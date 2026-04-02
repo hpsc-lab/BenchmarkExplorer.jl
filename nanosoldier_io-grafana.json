@@ -1,9 +1,5 @@
 [
   {
-    "target": "io/array_limit/(display/Vector{Float64}(100000000,))",
-    "tags": {
-      "group": "nanosoldier_io"
-    },
     "datapoints": [
       [
         106.0,
@@ -25,13 +21,13 @@
         106.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "io/array_limit/(display/Matrix{Float64}(100000000/1))",
+    ],
     "tags": {
       "group": "nanosoldier_io"
     },
+    "target": "io/array_limit/(display/Vector{Float64}(100000000,))"
+  },
+  {
     "datapoints": [
       [
         106.0,
@@ -53,25 +49,25 @@
         106.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "io/serialization/(\\serialize\\/\\Matrix{Float64}\\)",
+    ],
     "tags": {
       "group": "nanosoldier_io"
     },
+    "target": "io/array_limit/(display/Matrix{Float64}(100000000/1))"
+  },
+  {
     "datapoints": [
       [
         80.0,
         1.773185401e12
       ]
-    ]
-  },
-  {
-    "target": "io/read/read",
+    ],
     "tags": {
       "group": "nanosoldier_io"
     },
+    "target": "io/serialization/(\\serialize\\/\\Matrix{Float64}\\)"
+  },
+  {
     "datapoints": [
       [
         110.00000000000001,
@@ -153,13 +149,13 @@
         111.00000000000001,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "io/array_limit/(\\display\\/\\Matrix{Float64}(10000/10000)\\)",
+    ],
     "tags": {
       "group": "nanosoldier_io"
     },
+    "target": "io/read/read"
+  },
+  {
     "datapoints": [
       [
         99.0,
@@ -169,13 +165,13 @@
         99.0,
         1.773103271e12
       ]
-    ]
-  },
-  {
-    "target": "io/serialization/(deserialize/Matrix{Float64})",
+    ],
     "tags": {
       "group": "nanosoldier_io"
     },
+    "target": "io/array_limit/(\\display\\/\\Matrix{Float64}(10000/10000)\\)"
+  },
+  {
     "datapoints": [
       [
         109.00000000000001,
@@ -253,13 +249,13 @@
         109.00000000000001,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "io/array_limit/(display/Matrix{Float64}(10000/10000))",
+    ],
     "tags": {
       "group": "nanosoldier_io"
     },
+    "target": "io/serialization/(deserialize/Matrix{Float64})"
+  },
+  {
     "datapoints": [
       [
         95.0,
@@ -297,13 +293,13 @@
         108.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "io/serialization/(deserialize/Vector{String})",
+    ],
     "tags": {
       "group": "nanosoldier_io"
     },
+    "target": "io/array_limit/(display/Matrix{Float64}(10000/10000))"
+  },
+  {
     "datapoints": [
       [
         107.0,
@@ -329,13 +325,13 @@
         130.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "io/read/readstring",
+    ],
     "tags": {
       "group": "nanosoldier_io"
     },
+    "target": "io/serialization/(deserialize/Vector{String})"
+  },
+  {
     "datapoints": [
       [
         94.0,
@@ -401,13 +397,13 @@
         106.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "io/skipchars",
+    ],
     "tags": {
       "group": "nanosoldier_io"
     },
+    "target": "io/read/readstring"
+  },
+  {
     "datapoints": [
       [
         98.0,
@@ -441,13 +437,13 @@
         99.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "io/serialization/(serialize/Matrix{Float64})",
+    ],
     "tags": {
       "group": "nanosoldier_io"
     },
+    "target": "io/skipchars"
+  },
+  {
     "datapoints": [
       [
         94.0,
@@ -529,13 +525,13 @@
         106.0,
         1.773185418e12
       ]
-    ]
-  },
-  {
-    "target": "io/serialization/(serialize/Vector{String})",
+    ],
     "tags": {
       "group": "nanosoldier_io"
     },
+    "target": "io/serialization/(serialize/Matrix{Float64})"
+  },
+  {
     "datapoints": [
       [
         89.0,
@@ -553,6 +549,10 @@
         84.0,
         1.773185416e12
       ]
-    ]
+    ],
+    "tags": {
+      "group": "nanosoldier_io"
+    },
+    "target": "io/serialization/(serialize/Vector{String})"
   }
 ]

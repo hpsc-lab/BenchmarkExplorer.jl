@@ -1,9 +1,5 @@
 [
   {
-    "target": "inference/abstract interpretation/REPL.REPLCompletions.completions",
-    "tags": {
-      "group": "nanosoldier_inference"
-    },
     "datapoints": [
       [
         98.0,
@@ -209,13 +205,13 @@
         813.3034085,
         1.773311722e12
       ]
-    ]
-  },
-  {
-    "target": "inference/optimization/many_method_matches",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/abstract interpretation/REPL.REPLCompletions.completions"
+  },
+  {
     "datapoints": [
       [
         112.00000000000001,
@@ -341,13 +337,13 @@
         15.61173778125,
         1.773311722e12
       ]
-    ]
-  },
-  {
-    "target": "inference/optimization/Base.init_stdio(::Ptr{Cvoid})",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/optimization/many_method_matches"
+  },
+  {
     "datapoints": [
       [
         118.0,
@@ -489,13 +485,13 @@
         0.34234488888888887,
         1.773311722e12
       ]
-    ]
-  },
-  {
-    "target": "inference/println(::QuoteNode)",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/optimization/Base.init_stdio(::Ptr{Cvoid})"
+  },
+  {
     "datapoints": [
       [
         99.0,
@@ -521,13 +517,13 @@
         573.1677637619047,
         1.773311721e12
       ]
-    ]
-  },
-  {
-    "target": "inference/allinference/many_global_refs",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/println(::QuoteNode)"
+  },
+  {
     "datapoints": [
       [
         639.0,
@@ -661,13 +657,13 @@
         440.31013566666667,
         1.773311722e12
       ]
-    ]
-  },
-  {
-    "target": "inference/allinference/println(::QuoteNode)",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/allinference/many_global_refs"
+  },
+  {
     "datapoints": [
       [
         106.0,
@@ -829,25 +825,25 @@
         488.93378122727273,
         1.773311722e12
       ]
-    ]
-  },
-  {
-    "target": "inference/allinference/quadratic",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/allinference/println(::QuoteNode)"
+  },
+  {
     "datapoints": [
       [
         1013.5131658333333,
         1.77331172e12
       ]
-    ]
-  },
-  {
-    "target": "inference/optimization/many_invoke_calls",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/allinference/quadratic"
+  },
+  {
     "datapoints": [
       [
         106.0,
@@ -981,13 +977,13 @@
         10.655077166666667,
         1.773311722e12
       ]
-    ]
-  },
-  {
-    "target": "inference/optimization/quadratic",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/optimization/many_invoke_calls"
+  },
+  {
     "datapoints": [
       [
         94.0,
@@ -1001,13 +997,13 @@
         110.17472547826087,
         1.77331172e12
       ]
-    ]
-  },
-  {
-    "target": "inference/sin(42)",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/optimization/quadratic"
+  },
+  {
     "datapoints": [
       [
         97.0,
@@ -1033,13 +1029,13 @@
         35.304613918918925,
         1.773311721e12
       ]
-    ]
-  },
-  {
-    "target": "inference/allinference/sin(42)",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/sin(42)"
+  },
+  {
     "datapoints": [
       [
         108.0,
@@ -1205,13 +1201,13 @@
         25.745335277777777,
         1.773311722e12
       ]
-    ]
-  },
-  {
-    "target": "inference/abstract interpretation/rand(Float64)",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/allinference/sin(42)"
+  },
+  {
     "datapoints": [
       [
         102.0,
@@ -1465,25 +1461,25 @@
         6.985785297297297,
         1.773311722e12
       ]
-    ]
-  },
-  {
-    "target": "inference/abstract interpretation/method_match_cache",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/abstract interpretation/rand(Float64)"
+  },
+  {
     "datapoints": [
       [
         1.7787543023255814,
         1.77331172e12
       ]
-    ]
-  },
-  {
-    "target": "inference/abstract interpretation/Base.init_stdio(::Ptr{Cvoid})",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/abstract interpretation/method_match_cache"
+  },
+  {
     "datapoints": [
       [
         102.0,
@@ -1681,13 +1677,13 @@
         1225.8978743571429,
         1.773311722e12
       ]
-    ]
-  },
-  {
-    "target": "inference/abstract interpretation/many_local_vars",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/abstract interpretation/Base.init_stdio(::Ptr{Cvoid})"
+  },
+  {
     "datapoints": [
       [
         42.0,
@@ -1841,13 +1837,13 @@
         706.63209585,
         1.773311722e12
       ]
-    ]
-  },
-  {
-    "target": "inference/abstract interpretation/many_const_calls",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/abstract interpretation/many_local_vars"
+  },
+  {
     "datapoints": [
       [
         97.0,
@@ -1989,13 +1985,13 @@
         895.3485138823529,
         1.773311722e12
       ]
-    ]
-  },
-  {
-    "target": "inference/allinference/many_opaque_closures",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/abstract interpretation/many_const_calls"
+  },
+  {
     "datapoints": [
       [
         105.0,
@@ -2093,13 +2089,13 @@
         1388.3405364615385,
         1.773311722e12
       ]
-    ]
-  },
-  {
-    "target": "inference/allinference/broadcasting",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/allinference/many_opaque_closures"
+  },
+  {
     "datapoints": [
       [
         107.0,
@@ -2229,13 +2225,13 @@
         161.3251772333333,
         1.773311722e12
       ]
-    ]
-  },
-  {
-    "target": "inference/allinference/Base.init_stdio(::Ptr{Cvoid})",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/allinference/broadcasting"
+  },
+  {
     "datapoints": [
       [
         105.0,
@@ -2413,13 +2409,13 @@
         2919.36838175,
         1.773311722e12
       ]
-    ]
-  },
-  {
-    "target": "inference/abstract interpretation/construct_ssa!",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/allinference/Base.init_stdio(::Ptr{Cvoid})"
+  },
+  {
     "datapoints": [
       [
         96.0,
@@ -2489,13 +2485,13 @@
         97.07247873529411,
         1.773311721e12
       ]
-    ]
-  },
-  {
-    "target": "inference/optimization/println(::QuoteNode)",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/abstract interpretation/construct_ssa!"
+  },
+  {
     "datapoints": [
       [
         104.0,
@@ -2685,13 +2681,13 @@
         0.04785695833333334,
         1.773311722e12
       ]
-    ]
-  },
-  {
-    "target": "inference/optimization/construct_ssa!",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/optimization/println(::QuoteNode)"
+  },
+  {
     "datapoints": [
       [
         109.00000000000001,
@@ -2741,13 +2737,13 @@
         17.78943184615385,
         1.773311721e12
       ]
-    ]
-  },
-  {
-    "target": "inference/allinference/many_local_vars",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/optimization/construct_ssa!"
+  },
+  {
     "datapoints": [
       [
         35.0,
@@ -2885,13 +2881,13 @@
         1133.7408914375,
         1.773311722e12
       ]
-    ]
-  },
-  {
-    "target": "inference/abstract interpretation/many_invoke_calls",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/allinference/many_local_vars"
+  },
+  {
     "datapoints": [
       [
         90.0,
@@ -3105,13 +3101,13 @@
         4.797351675675675,
         1.773311722e12
       ]
-    ]
-  },
-  {
-    "target": "inference/abstract interpretation/sin(42)",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/abstract interpretation/many_invoke_calls"
+  },
+  {
     "datapoints": [
       [
         90.0,
@@ -3345,13 +3341,13 @@
         7.217472027027027,
         1.773311722e12
       ]
-    ]
-  },
-  {
-    "target": "inference/abstract interpretation/abstract_call_gf_by_type",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/abstract interpretation/sin(42)"
+  },
+  {
     "datapoints": [
       [
         101.0,
@@ -3437,13 +3433,13 @@
         447.589043,
         1.773311721e12
       ]
-    ]
-  },
-  {
-    "target": "inference/allinference/many_const_calls",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/abstract interpretation/abstract_call_gf_by_type"
+  },
+  {
     "datapoints": [
       [
         108.0,
@@ -3613,13 +3609,13 @@
         35.43175863888889,
         1.773311722e12
       ]
-    ]
-  },
-  {
-    "target": "inference/optimization/many_global_refs",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/allinference/many_const_calls"
+  },
+  {
     "datapoints": [
       [
         105.0,
@@ -3729,13 +3725,13 @@
         43.60275175,
         1.773311722e12
       ]
-    ]
-  },
-  {
-    "target": "inference/optimization/many_const_calls",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/optimization/many_global_refs"
+  },
+  {
     "datapoints": [
       [
         106.0,
@@ -3853,13 +3849,13 @@
         0.028386972222222223,
         1.773311722e12
       ]
-    ]
-  },
-  {
-    "target": "inference/allinference/many_invoke_calls",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/optimization/many_const_calls"
+  },
+  {
     "datapoints": [
       [
         104.0,
@@ -4009,13 +4005,13 @@
         27.780517805555554,
         1.773311722e12
       ]
-    ]
-  },
-  {
-    "target": "inference/abstract interpretation/many_method_matches",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/allinference/many_invoke_calls"
+  },
+  {
     "datapoints": [
       [
         95.0,
@@ -4201,13 +4197,13 @@
         18.644536527777777,
         1.773311722e12
       ]
-    ]
-  },
-  {
-    "target": "inference/construct_ssa!",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/abstract interpretation/many_method_matches"
+  },
+  {
     "datapoints": [
       [
         98.0,
@@ -4233,13 +4229,13 @@
         408.20622879166666,
         1.773311721e12
       ]
-    ]
-  },
-  {
-    "target": "inference/abstract interpretation/println(::QuoteNode)",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/construct_ssa!"
+  },
+  {
     "datapoints": [
       [
         102.0,
@@ -4453,13 +4449,13 @@
         192.1111871724138,
         1.773311722e12
       ]
-    ]
-  },
-  {
-    "target": "inference/allinference/broadcast",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/abstract interpretation/println(::QuoteNode)"
+  },
+  {
     "datapoints": [
       [
         93.0,
@@ -4469,13 +4465,13 @@
         180.58645433333334,
         1.77331172e12
       ]
-    ]
-  },
-  {
-    "target": "inference/allinference/construct_ssa!",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/allinference/broadcast"
+  },
+  {
     "datapoints": [
       [
         106.0,
@@ -4509,13 +4505,13 @@
         360.1909554444444,
         1.77331172e12
       ]
-    ]
-  },
-  {
-    "target": "inference/abstract interpretation/many_global_refs",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/allinference/construct_ssa!"
+  },
+  {
     "datapoints": [
       [
         1293.0,
@@ -4653,13 +4649,13 @@
         394.38978624000003,
         1.773311722e12
       ]
-    ]
-  },
-  {
-    "target": "inference/allinference/abstract_call_gf_by_type",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/abstract interpretation/many_global_refs"
+  },
+  {
     "datapoints": [
       [
         106.0,
@@ -4725,13 +4721,13 @@
         2743.77646925,
         1.77331172e12
       ]
-    ]
-  },
-  {
-    "target": "inference/optimization/sin(42)",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/allinference/abstract_call_gf_by_type"
+  },
+  {
     "datapoints": [
       [
         113.99999999999999,
@@ -4889,13 +4885,13 @@
         0.067635,
         1.773311722e12
       ]
-    ]
-  },
-  {
-    "target": "inference/allinference/domsort_ssa!",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/optimization/sin(42)"
+  },
+  {
     "datapoints": [
       [
         107.0,
@@ -4933,13 +4929,13 @@
         86.342426,
         1.77331172e12
       ]
-    ]
-  },
-  {
-    "target": "inference/optimization/rand(Float64)",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/allinference/domsort_ssa!"
+  },
+  {
     "datapoints": [
       [
         106.0,
@@ -5073,13 +5069,13 @@
         0.13536378378378378,
         1.773311722e12
       ]
-    ]
-  },
-  {
-    "target": "inference/allinference/rand(Float64)",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/optimization/rand(Float64)"
+  },
+  {
     "datapoints": [
       [
         107.0,
@@ -5221,13 +5217,13 @@
         21.26117916666667,
         1.773311722e12
       ]
-    ]
-  },
-  {
-    "target": "inference/optimization/domsort_ssa!",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/allinference/rand(Float64)"
+  },
+  {
     "datapoints": [
       [
         112.99999999999999,
@@ -5305,13 +5301,13 @@
         7.108351484848485,
         1.773311721e12
       ]
-    ]
-  },
-  {
-    "target": "inference/optimization/many_opaque_closures",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/optimization/domsort_ssa!"
+  },
+  {
     "datapoints": [
       [
         107.0,
@@ -5397,25 +5393,25 @@
         13.110379785714285,
         1.773311722e12
       ]
-    ]
-  },
-  {
-    "target": "inference/optimization/method_match_cache",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/optimization/many_opaque_closures"
+  },
+  {
     "datapoints": [
       [
         0.0990973488372093,
         1.77331172e12
       ]
-    ]
-  },
-  {
-    "target": "inference/optimization/many_local_vars",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/optimization/method_match_cache"
+  },
+  {
     "datapoints": [
       [
         93.0,
@@ -5573,13 +5569,13 @@
         88.53426842105263,
         1.773311722e12
       ]
-    ]
-  },
-  {
-    "target": "inference/abstract interpretation/broadcasting",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/optimization/many_local_vars"
+  },
+  {
     "datapoints": [
       [
         100.0,
@@ -5777,13 +5773,13 @@
         38.75730468571428,
         1.773311722e12
       ]
-    ]
-  },
-  {
-    "target": "inference/allinference/many_method_matches",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/abstract interpretation/broadcasting"
+  },
+  {
     "datapoints": [
       [
         105.0,
@@ -5901,13 +5897,13 @@
         135.42690622580645,
         1.773311722e12
       ]
-    ]
-  },
-  {
-    "target": "inference/abstract_call_gf_by_type",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/allinference/many_method_matches"
+  },
+  {
     "datapoints": [
       [
         97.0,
@@ -5933,13 +5929,13 @@
         1714.596462909091,
         1.773311721e12
       ]
-    ]
-  },
-  {
-    "target": "inference/abstract interpretation/many_opaque_closures",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/abstract_call_gf_by_type"
+  },
+  {
     "datapoints": [
       [
         100.0,
@@ -6133,25 +6129,25 @@
         784.4872969473683,
         1.773311722e12
       ]
-    ]
-  },
-  {
-    "target": "inference/allinference/method_match_cache",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/abstract interpretation/many_opaque_closures"
+  },
+  {
     "datapoints": [
       [
         3.864213418604651,
         1.77331172e12
       ]
-    ]
-  },
-  {
-    "target": "inference/domsort_ssa!",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/allinference/method_match_cache"
+  },
+  {
     "datapoints": [
       [
         98.0,
@@ -6181,13 +6177,13 @@
         131.44625606060606,
         1.773311721e12
       ]
-    ]
-  },
-  {
-    "target": "inference/abstract interpretation/broadcast",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/domsort_ssa!"
+  },
+  {
     "datapoints": [
       [
         1426.0,
@@ -6201,13 +6197,13 @@
         42.445596125,
         1.77331172e12
       ]
-    ]
-  },
-  {
-    "target": "inference/optimization/abstract_call_gf_by_type",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/abstract interpretation/broadcast"
+  },
+  {
     "datapoints": [
       [
         108.0,
@@ -6277,25 +6273,25 @@
         5.426799916666667,
         1.773311721e12
       ]
-    ]
-  },
-  {
-    "target": "inference/abstract interpretation/quadratic",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/optimization/abstract_call_gf_by_type"
+  },
+  {
     "datapoints": [
       [
         526.1031282,
         1.77331172e12
       ]
-    ]
-  },
-  {
-    "target": "inference/abstract interpretation/domsort_ssa!",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/abstract interpretation/quadratic"
+  },
+  {
     "datapoints": [
       [
         96.0,
@@ -6381,13 +6377,13 @@
         29.459935216216216,
         1.773311721e12
       ]
-    ]
-  },
-  {
-    "target": "inference/allinference/REPL.REPLCompletions.completions",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/abstract interpretation/domsort_ssa!"
+  },
+  {
     "datapoints": [
       [
         105.0,
@@ -6533,25 +6529,25 @@
         1580.8756023333333,
         1.773311722e12
       ]
-    ]
-  },
-  {
-    "target": "inference/optimization/broadcast",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/allinference/REPL.REPLCompletions.completions"
+  },
+  {
     "datapoints": [
       [
         0.3504541176470588,
         1.77331172e12
       ]
-    ]
-  },
-  {
-    "target": "inference/optimization/broadcasting",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/optimization/broadcast"
+  },
+  {
     "datapoints": [
       [
         105.0,
@@ -6657,13 +6653,13 @@
         0.31956996774193547,
         1.773311722e12
       ]
-    ]
-  },
-  {
-    "target": "inference/optimization/REPL.REPLCompletions.completions",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/optimization/broadcasting"
+  },
+  {
     "datapoints": [
       [
         107.0,
@@ -6841,13 +6837,13 @@
         0.04615707692307692,
         1.773311722e12
       ]
-    ]
-  },
-  {
-    "target": "inference/rand(Float64)",
+    ],
     "tags": {
       "group": "nanosoldier_inference"
     },
+    "target": "inference/optimization/REPL.REPLCompletions.completions"
+  },
+  {
     "datapoints": [
       [
         98.0,
@@ -6877,6 +6873,10 @@
         29.777099108108107,
         1.773311721e12
       ]
-    ]
+    ],
+    "tags": {
+      "group": "nanosoldier_inference"
+    },
+    "target": "inference/rand(Float64)"
   }
 ]

@@ -1,107 +1,107 @@
 {
-  "threshold": 1.05,
-  "count": 11,
-  "group": "nanosoldier_string",
-  "generated": "2026-04-01T10:30:04.802",
   "alerts": [
     {
-      "latest_mean_ms": 191.0,
+      "benchmark": "string/join",
       "commit": "b00614a",
+      "group": "nanosoldier_string",
+      "latest_mean_ms": 191.0,
       "ratio": 1.91,
       "timestamp": "2026-03-10T23:30:19.395",
-      "benchmark": "string/join",
-      "group": "nanosoldier_string",
       "trend": "slower"
     },
     {
-      "latest_mean_ms": 144.0,
+      "benchmark": "string/findfirst/Char",
       "commit": "b0772ee",
+      "group": "nanosoldier_string",
+      "latest_mean_ms": 144.0,
       "ratio": 1.44,
       "timestamp": "2026-03-10T23:30:18.437",
-      "benchmark": "string/findfirst/Char",
-      "group": "nanosoldier_string",
       "trend": "slower"
     },
     {
-      "latest_mean_ms": 122.0,
+      "benchmark": "string/readuntil/target length 1",
       "commit": "aebcebc",
+      "group": "nanosoldier_string",
+      "latest_mean_ms": 122.0,
       "ratio": 1.22,
       "timestamp": "2026-03-10T23:30:21.284",
-      "benchmark": "string/readuntil/target length 1",
-      "group": "nanosoldier_string",
       "trend": "slower"
     },
     {
-      "latest_mean_ms": 121.0,
-      "commit": "b0154e3",
-      "ratio": 1.21,
-      "timestamp": "2026-03-10T23:30:19.065",
       "benchmark": "string/==(::AbstractString/::AbstractString)/different length",
-      "group": "nanosoldier_string",
-      "trend": "slower"
-    },
-    {
-      "latest_mean_ms": 121.0,
       "commit": "b0154e3",
+      "group": "nanosoldier_string",
+      "latest_mean_ms": 121.0,
       "ratio": 1.21,
       "timestamp": "2026-03-10T23:30:19.065",
-      "benchmark": "string/==(::AbstractString/::AbstractString)/equal",
-      "group": "nanosoldier_string",
       "trend": "slower"
     },
     {
-      "latest_mean_ms": 116.0,
+      "benchmark": "string/==(::AbstractString/::AbstractString)/equal",
+      "commit": "b0154e3",
+      "group": "nanosoldier_string",
+      "latest_mean_ms": 121.0,
+      "ratio": 1.21,
+      "timestamp": "2026-03-10T23:30:19.065",
+      "trend": "slower"
+    },
+    {
+      "benchmark": "string/==(::AbstractString/::AbstractString)/identical",
       "commit": "b6bca19",
+      "group": "nanosoldier_string",
+      "latest_mean_ms": 116.0,
       "ratio": 1.16,
       "timestamp": "2026-03-10T23:30:05.064",
-      "benchmark": "string/==(::AbstractString/::AbstractString)/identical",
-      "group": "nanosoldier_string",
       "trend": "slower"
     },
     {
-      "latest_mean_ms": 108.0,
+      "benchmark": "string/==(::SubString/::String)/different length",
       "commit": "aebcebc",
+      "group": "nanosoldier_string",
+      "latest_mean_ms": 108.0,
       "ratio": 1.08,
       "timestamp": "2026-03-10T23:30:21.284",
-      "benchmark": "string/==(::SubString/::String)/different length",
-      "group": "nanosoldier_string",
       "trend": "faster"
     },
     {
-      "latest_mean_ms": 108.0,
+      "benchmark": "string/readuntil/target length 2",
       "commit": "aebcebc",
+      "group": "nanosoldier_string",
+      "latest_mean_ms": 108.0,
       "ratio": 1.08,
       "timestamp": "2026-03-10T23:30:21.284",
-      "benchmark": "string/readuntil/target length 2",
-      "group": "nanosoldier_string",
       "trend": "stable"
     },
     {
-      "latest_mean_ms": 108.0,
+      "benchmark": "string/repeat/repeat char 1",
       "commit": "b0772ee",
+      "group": "nanosoldier_string",
+      "latest_mean_ms": 108.0,
       "ratio": 1.08,
       "timestamp": "2026-03-10T23:30:18.437",
-      "benchmark": "string/repeat/repeat char 1",
-      "group": "nanosoldier_string",
       "trend": "slower"
     },
     {
-      "latest_mean_ms": 107.0,
+      "benchmark": "string/readuntil/target length 1000",
       "commit": "aebcebc",
+      "group": "nanosoldier_string",
+      "latest_mean_ms": 107.0,
       "ratio": 1.07,
       "timestamp": "2026-03-10T23:30:21.284",
-      "benchmark": "string/readuntil/target length 1000",
-      "group": "nanosoldier_string",
       "trend": "faster"
     },
     {
-      "latest_mean_ms": 106.0,
+      "benchmark": "string/readuntil/target length 50000",
       "commit": "aebcebc",
+      "group": "nanosoldier_string",
+      "latest_mean_ms": 106.0,
       "ratio": 1.06,
       "timestamp": "2026-03-10T23:30:21.284",
-      "benchmark": "string/readuntil/target length 50000",
-      "group": "nanosoldier_string",
       "trend": "faster"
     }
-  ]
+  ],
+  "count": 11,
+  "generated": "2026-04-02T03:28:38.812",
+  "group": "nanosoldier_string",
+  "threshold": 1.05
 }

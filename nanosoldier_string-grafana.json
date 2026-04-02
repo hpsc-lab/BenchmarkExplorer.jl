@@ -1,9 +1,5 @@
 [
   {
-    "target": "string/join",
-    "tags": {
-      "group": "nanosoldier_string"
-    },
     "datapoints": [
       [
         101.0,
@@ -49,13 +45,13 @@
         191.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "string/findfirst/Char",
+    ],
     "tags": {
       "group": "nanosoldier_string"
     },
+    "target": "string/join"
+  },
+  {
     "datapoints": [
       [
         91.0,
@@ -121,13 +117,13 @@
         144.0,
         1.773185418e12
       ]
-    ]
-  },
-  {
-    "target": "string/==(::SubString/::String)/different length",
+    ],
     "tags": {
       "group": "nanosoldier_string"
     },
+    "target": "string/findfirst/Char"
+  },
+  {
     "datapoints": [
       [
         117.0,
@@ -245,13 +241,13 @@
         108.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "string/repeat/repeat char 2",
+    ],
     "tags": {
       "group": "nanosoldier_string"
     },
+    "target": "string/==(::SubString/::String)/different length"
+  },
+  {
     "datapoints": [
       [
         109.00000000000001,
@@ -321,13 +317,13 @@
         82.0,
         1.773185408e12
       ]
-    ]
-  },
-  {
-    "target": "string/readuntil/backtracking",
+    ],
     "tags": {
       "group": "nanosoldier_string"
     },
+    "target": "string/repeat/repeat char 2"
+  },
+  {
     "datapoints": [
       [
         105.0,
@@ -393,13 +389,13 @@
         91.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "string/readuntil/target length 1",
+    ],
     "tags": {
       "group": "nanosoldier_string"
     },
+    "target": "string/readuntil/backtracking"
+  },
+  {
     "datapoints": [
       [
         107.0,
@@ -497,13 +493,13 @@
         122.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "string/repeat/repeat str len 16",
+    ],
     "tags": {
       "group": "nanosoldier_string"
     },
+    "target": "string/readuntil/target length 1"
+  },
+  {
     "datapoints": [
       [
         109.00000000000001,
@@ -609,13 +605,13 @@
         93.0,
         1.77318542e12
       ]
-    ]
-  },
-  {
-    "target": "string/readuntil/target length 1000",
+    ],
     "tags": {
       "group": "nanosoldier_string"
     },
+    "target": "string/repeat/repeat str len 16"
+  },
+  {
     "datapoints": [
       [
         123.0,
@@ -701,13 +697,13 @@
         107.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "string/readuntil/barbarian backtrack",
+    ],
     "tags": {
       "group": "nanosoldier_string"
     },
+    "target": "string/readuntil/target length 1000"
+  },
+  {
     "datapoints": [
       [
         106.0,
@@ -769,13 +765,13 @@
         93.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "string/==(::SubString/::String)/equal",
+    ],
     "tags": {
       "group": "nanosoldier_string"
     },
+    "target": "string/readuntil/barbarian backtrack"
+  },
+  {
     "datapoints": [
       [
         115.99999999999999,
@@ -789,13 +785,13 @@
         70.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "string/==(::AbstractString/::AbstractString)/identical",
+    ],
     "tags": {
       "group": "nanosoldier_string"
     },
+    "target": "string/==(::SubString/::String)/equal"
+  },
+  {
     "datapoints": [
       [
         70.0,
@@ -805,13 +801,13 @@
         115.99999999999999,
         1.773185405e12
       ]
-    ]
-  },
-  {
-    "target": "string/readuntil/target length 50000",
+    ],
     "tags": {
       "group": "nanosoldier_string"
     },
+    "target": "string/==(::AbstractString/::AbstractString)/identical"
+  },
+  {
     "datapoints": [
       [
         122.0,
@@ -901,13 +897,13 @@
         106.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "string/findfirst/String",
+    ],
     "tags": {
       "group": "nanosoldier_string"
     },
+    "target": "string/readuntil/target length 50000"
+  },
+  {
     "datapoints": [
       [
         125.0,
@@ -985,13 +981,13 @@
         88.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "string/readuntil/target length 2",
+    ],
     "tags": {
       "group": "nanosoldier_string"
     },
+    "target": "string/findfirst/String"
+  },
+  {
     "datapoints": [
       [
         111.00000000000001,
@@ -1061,13 +1057,13 @@
         108.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "string/==(::AbstractString/::AbstractString)/different length",
+    ],
     "tags": {
       "group": "nanosoldier_string"
     },
+    "target": "string/readuntil/target length 2"
+  },
+  {
     "datapoints": [
       [
         89.0,
@@ -1141,13 +1137,13 @@
         121.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "string/repeat/repeat char 1",
+    ],
     "tags": {
       "group": "nanosoldier_string"
     },
+    "target": "string/==(::AbstractString/::AbstractString)/different length"
+  },
+  {
     "datapoints": [
       [
         94.0,
@@ -1177,13 +1173,13 @@
         108.0,
         1.773185418e12
       ]
-    ]
-  },
-  {
-    "target": "string/==(::AbstractString/::AbstractString)/equal",
+    ],
     "tags": {
       "group": "nanosoldier_string"
     },
+    "target": "string/repeat/repeat char 1"
+  },
+  {
     "datapoints": [
       [
         89.0,
@@ -1265,13 +1261,13 @@
         121.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "string/repeat/repeat str len 1",
+    ],
     "tags": {
       "group": "nanosoldier_string"
     },
+    "target": "string/==(::AbstractString/::AbstractString)/equal"
+  },
+  {
     "datapoints": [
       [
         107.0,
@@ -1301,13 +1297,13 @@
         105.0,
         1.773185418e12
       ]
-    ]
-  },
-  {
-    "target": "string/replace",
+    ],
     "tags": {
       "group": "nanosoldier_string"
     },
+    "target": "string/repeat/repeat str len 1"
+  },
+  {
     "datapoints": [
       [
         94.0,
@@ -1345,13 +1341,13 @@
         95.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "string/readuntil/no backtracking",
+    ],
     "tags": {
       "group": "nanosoldier_string"
     },
+    "target": "string/replace"
+  },
+  {
     "datapoints": [
       [
         88.0,
@@ -1397,13 +1393,13 @@
         51.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "string/==(::SubString/::String)/different",
+    ],
     "tags": {
       "group": "nanosoldier_string"
     },
+    "target": "string/readuntil/no backtracking"
+  },
+  {
     "datapoints": [
       [
         136.0,
@@ -1513,13 +1509,13 @@
         92.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "string/==(::AbstractString/::AbstractString)/different",
+    ],
     "tags": {
       "group": "nanosoldier_string"
     },
+    "target": "string/==(::SubString/::String)/different"
+  },
+  {
     "datapoints": [
       [
         93.0,
@@ -1589,6 +1585,10 @@
         92.0,
         1.773185419e12
       ]
-    ]
+    ],
+    "tags": {
+      "group": "nanosoldier_string"
+    },
+    "target": "string/==(::AbstractString/::AbstractString)/different"
   }
 ]

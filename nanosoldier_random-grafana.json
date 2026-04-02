@@ -1,9 +1,5 @@
 [
   {
-    "target": "random/ranges/(RangeGenerator/UInt128/1:4294967297)",
-    "tags": {
-      "group": "nanosoldier_random"
-    },
     "datapoints": [
       [
         129.0,
@@ -17,25 +13,25 @@
         181.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(\\rand!\\/\\MersenneTwister\\/\\ComplexF32\\)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(RangeGenerator/UInt128/1:4294967297)"
+  },
+  {
     "datapoints": [
       [
         69.0,
         1.77310325e12
       ]
-    ]
-  },
-  {
-    "target": "random/collections/(rand/ImplicitRNG/a:z)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(\\rand!\\/\\MersenneTwister\\/\\ComplexF32\\)"
+  },
+  {
     "datapoints": [
       [
         217.0,
@@ -45,13 +41,13 @@
         46.0,
         1.773185405e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(RangeGenerator/UInt64/1:1)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/collections/(rand/ImplicitRNG/a:z)"
+  },
+  {
     "datapoints": [
       [
         73.0,
@@ -61,25 +57,25 @@
         163.0,
         1.773185397e12
       ]
-    ]
-  },
-  {
-    "target": "random/collections/(rand/ImplicitRNG/small BitSet)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(RangeGenerator/UInt64/1:1)"
+  },
+  {
     "datapoints": [
       [
         127.0,
         1.773103254e12
       ]
-    ]
-  },
-  {
-    "target": "random/collections/(rand!/ImplicitRNG/small Dict)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/collections/(rand/ImplicitRNG/small BitSet)"
+  },
+  {
     "datapoints": [
       [
         156.0,
@@ -89,13 +85,13 @@
         61.0,
         1.773185405e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(rand/MersenneTwister/Int16)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/collections/(rand!/ImplicitRNG/small Dict)"
+  },
+  {
     "datapoints": [
       [
         127.0,
@@ -109,37 +105,37 @@
         133.0,
         1.773185407e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(rand!/MersenneTwister/Complex{UInt8})",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(rand/MersenneTwister/Int16)"
+  },
+  {
     "datapoints": [
       [
         133.0,
         1.77310325e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(randexp/ImplicitRNG/ImplicitFloat64)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(rand!/MersenneTwister/Complex{UInt8})"
+  },
+  {
     "datapoints": [
       [
         131.0,
         1.773103247e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(RangeGenerator/UInt64/1:4294967297)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(randexp/ImplicitRNG/ImplicitFloat64)"
+  },
+  {
     "datapoints": [
       [
         72.0,
@@ -149,61 +145,61 @@
         163.0,
         1.773185397e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(\\rand\\/\\MersenneTwister\\/\\Int128\\/\\RangeGenerator(1:4294967297)\\)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(RangeGenerator/UInt64/1:4294967297)"
+  },
+  {
     "datapoints": [
       [
         130.0,
         1.773103271e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(rand/MersenneTwister/Int128/RangeGenerator(1:4294967295))",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(\\rand\\/\\MersenneTwister\\/\\Int128\\/\\RangeGenerator(1:4294967297)\\)"
+  },
+  {
     "datapoints": [
       [
         60.0,
         1.773103247e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(RangeGenerator/Int128/1:1)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(rand/MersenneTwister/Int128/RangeGenerator(1:4294967295))"
+  },
+  {
     "datapoints": [
       [
         71.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(rand/MersenneTwister/Float64)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(RangeGenerator/Int128/1:1)"
+  },
+  {
     "datapoints": [
       [
         132.0,
         1.773103262e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(rand/MersenneTwister/Complex{UInt128})",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(rand/MersenneTwister/Float64)"
+  },
+  {
     "datapoints": [
       [
         182.0,
@@ -217,13 +213,13 @@
         54.0,
         1.773185408e12
       ]
-    ]
-  },
-  {
-    "target": "random/collections/(rand/ImplicitRNG/large Set)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(rand/MersenneTwister/Complex{UInt128})"
+  },
+  {
     "datapoints": [
       [
         137.0,
@@ -233,13 +229,13 @@
         68.0,
         1.773185405e12
       ]
-    ]
-  },
-  {
-    "target": "random/collections/(rand!/RandomDevice/large String)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/collections/(rand/ImplicitRNG/large Set)"
+  },
+  {
     "datapoints": [
       [
         103.0,
@@ -249,13 +245,13 @@
         100.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(RangeGenerator/Int64/1:4294967295)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/collections/(rand!/RandomDevice/large String)"
+  },
+  {
     "datapoints": [
       [
         72.0,
@@ -265,37 +261,37 @@
         163.0,
         1.773185397e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(rand/MersenneTwister/ComplexF64)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(RangeGenerator/Int64/1:4294967295)"
+  },
+  {
     "datapoints": [
       [
         132.0,
         1.77310325e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(\\rand\\/\\MersenneTwister\\/\\Bool\\/\\RangeGenerator(true:true)\\)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(rand/MersenneTwister/ComplexF64)"
+  },
+  {
     "datapoints": [
       [
         129.0,
         1.773103271e12
       ]
-    ]
-  },
-  {
-    "target": "random/collections/(rand!/ImplicitRNG/small BitSet)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(\\rand\\/\\MersenneTwister\\/\\Bool\\/\\RangeGenerator(true:true)\\)"
+  },
+  {
     "datapoints": [
       [
         149.0,
@@ -309,25 +305,25 @@
         52.0,
         1.773185405e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(randn/RandomDevice/Float64)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/collections/(rand!/ImplicitRNG/small BitSet)"
+  },
+  {
     "datapoints": [
       [
         125.0,
         1.773103263e12
       ]
-    ]
-  },
-  {
-    "target": "random/collections/(rand!/ImplicitRNG/small Vector)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(randn/RandomDevice/Float64)"
+  },
+  {
     "datapoints": [
       [
         231.99999999999997,
@@ -341,25 +337,25 @@
         43.0,
         1.773185405e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(randn/MersenneTwister/Float32)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/collections/(rand!/ImplicitRNG/small Vector)"
+  },
+  {
     "datapoints": [
       [
         138.0,
         1.77310325e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(rand/ImplicitRNG/Int/1:1000)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(randn/MersenneTwister/Float32)"
+  },
+  {
     "datapoints": [
       [
         142.0,
@@ -377,13 +373,13 @@
         47.0,
         1.773185405e12
       ]
-    ]
-  },
-  {
-    "target": "random/collections/(rand!/ImplicitRNG/large Vector)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(rand/ImplicitRNG/Int/1:1000)"
+  },
+  {
     "datapoints": [
       [
         231.0,
@@ -405,73 +401,73 @@
         125.0,
         1.773185418e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(rand!/MersenneTwister/ComplexF16)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/collections/(rand!/ImplicitRNG/large Vector)"
+  },
+  {
     "datapoints": [
       [
         139.0,
         1.77310325e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(randn!/ImplicitRNG/Float64)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(rand!/MersenneTwister/ComplexF16)"
+  },
+  {
     "datapoints": [
       [
         128.0,
         1.773103256e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(randn/RandomDevice/ImplicitFloat64)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(randn!/ImplicitRNG/Float64)"
+  },
+  {
     "datapoints": [
       [
         126.0,
         1.773103263e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(rand/ImplicitRNG/Int64)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(randn/RandomDevice/ImplicitFloat64)"
+  },
+  {
     "datapoints": [
       [
         74.0,
         1.773103264e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(\\RangeGenerator\\/\\UInt128\\/\\1:18446744073709551616\\)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(rand/ImplicitRNG/Int64)"
+  },
+  {
     "datapoints": [
       [
         128.0,
         1.773103271e12
       ]
-    ]
-  },
-  {
-    "target": "random/collections/(rand/ImplicitRNG/large String)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(\\RangeGenerator\\/\\UInt128\\/\\1:18446744073709551616\\)"
+  },
+  {
     "datapoints": [
       [
         157.0,
@@ -489,13 +485,13 @@
         135.0,
         1.773185418e12
       ]
-    ]
-  },
-  {
-    "target": "random/collections/(rand!/ImplicitRNG/large String)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/collections/(rand/ImplicitRNG/large String)"
+  },
+  {
     "datapoints": [
       [
         102.0,
@@ -517,13 +513,13 @@
         106.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "random/collections/(rand/ImplicitRNG/small Dict)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/collections/(rand!/ImplicitRNG/large String)"
+  },
+  {
     "datapoints": [
       [
         163.0,
@@ -533,73 +529,73 @@
         64.0,
         1.773185405e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(rand!/MersenneTwister/Complex{Int64})",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/collections/(rand/ImplicitRNG/small Dict)"
+  },
+  {
     "datapoints": [
       [
         38.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(rand!/MersenneTwister/Float32)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(rand!/MersenneTwister/Complex{Int64})"
+  },
+  {
     "datapoints": [
       [
         175.0,
         1.773103253e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(rand/MersenneTwister/UInt128/RangeGenerator(1:170141183460469231731687303715884105728))",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(rand!/MersenneTwister/Float32)"
+  },
+  {
     "datapoints": [
       [
         66.0,
         1.773103247e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(RangeGenerator/BigInt/1:18446744073709551616)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(rand/MersenneTwister/UInt128/RangeGenerator(1:170141183460469231731687303715884105728))"
+  },
+  {
     "datapoints": [
       [
         68.0,
         1.773103249e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(rand/MersenneTwister/Int128/RangeGenerator(1:1))",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(RangeGenerator/BigInt/1:18446744073709551616)"
+  },
+  {
     "datapoints": [
       [
         60.0,
         1.773103247e12
       ]
-    ]
-  },
-  {
-    "target": "random/collections/(rand/ImplicitRNG/small Vector)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(rand/MersenneTwister/Int128/RangeGenerator(1:1))"
+  },
+  {
     "datapoints": [
       [
         129.0,
@@ -617,13 +613,13 @@
         49.0,
         1.773185405e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(rand!/ImplicitRNG/Int/1:1000)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/collections/(rand/ImplicitRNG/small Vector)"
+  },
+  {
     "datapoints": [
       [
         227.0,
@@ -633,13 +629,13 @@
         46.0,
         1.773185405e12
       ]
-    ]
-  },
-  {
-    "target": "random/collections/(rand!/ImplicitRNG/large BitSet)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(rand!/ImplicitRNG/Int/1:1000)"
+  },
+  {
     "datapoints": [
       [
         150.0,
@@ -653,37 +649,37 @@
         52.0,
         1.773185405e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(rand/MersenneTwister/UInt128/RangeGenerator(1:4294967295))",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/collections/(rand!/ImplicitRNG/large BitSet)"
+  },
+  {
     "datapoints": [
       [
         60.0,
         1.773103247e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(rand/MersenneTwister/Int/1:1000)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(rand/MersenneTwister/UInt128/RangeGenerator(1:4294967295))"
+  },
+  {
     "datapoints": [
       [
         132.0,
         1.773103247e12
       ]
-    ]
-  },
-  {
-    "target": "random/sequences/(randsubseq!/MersenneTwister/0.8)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(rand/MersenneTwister/Int/1:1000)"
+  },
+  {
     "datapoints": [
       [
         59.0,
@@ -701,13 +697,13 @@
         56.99999999999999,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(RangeGenerator/UInt128/1:18446744073709551615)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/sequences/(randsubseq!/MersenneTwister/0.8)"
+  },
+  {
     "datapoints": [
       [
         132.0,
@@ -717,13 +713,13 @@
         74.0,
         1.773185412e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(rand!/MersenneTwister/ComplexF32)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(RangeGenerator/UInt128/1:18446744073709551615)"
+  },
+  {
     "datapoints": [
       [
         73.0,
@@ -741,13 +737,13 @@
         133.0,
         1.773185405e12
       ]
-    ]
-  },
-  {
-    "target": "random/collections/(rand!/ImplicitRNG/small Set)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(rand!/MersenneTwister/ComplexF32)"
+  },
+  {
     "datapoints": [
       [
         164.0,
@@ -757,13 +753,13 @@
         62.0,
         1.773185405e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(rand/MersenneTwister/Int8)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/collections/(rand!/ImplicitRNG/small Set)"
+  },
+  {
     "datapoints": [
       [
         133.0,
@@ -781,37 +777,37 @@
         127.0,
         1.77318542e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(rand!/MersenneTwister/Complex{UInt32})",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(rand/MersenneTwister/Int8)"
+  },
+  {
     "datapoints": [
       [
         127.0,
         1.77310325e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(rand/MersenneTwister/BigInt/RangeGenerator(1:18446744073709551615))",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(rand!/MersenneTwister/Complex{UInt32})"
+  },
+  {
     "datapoints": [
       [
         126.0,
         1.773103254e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(RangeGenerator/UInt128/1:1)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(rand/MersenneTwister/BigInt/RangeGenerator(1:18446744073709551615))"
+  },
+  {
     "datapoints": [
       [
         130.0,
@@ -825,25 +821,25 @@
         126.0,
         1.773185405e12
       ]
-    ]
-  },
-  {
-    "target": "random/collections/(rand!/MersenneTwister/large Dict)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(RangeGenerator/UInt128/1:1)"
+  },
+  {
     "datapoints": [
       [
         125.0,
         1.77310325e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(RangeGenerator/UInt16/1:1)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/collections/(rand!/MersenneTwister/large Dict)"
+  },
+  {
     "datapoints": [
       [
         67.00000000000001,
@@ -861,73 +857,73 @@
         126.0,
         1.773185418e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(rand!/MersenneTwister/Complex{UInt128})",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(RangeGenerator/UInt16/1:1)"
+  },
+  {
     "datapoints": [
       [
         172.0,
         1.77310325e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(randn!/MersenneTwister/Float32)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(rand!/MersenneTwister/Complex{UInt128})"
+  },
+  {
     "datapoints": [
       [
         135.0,
         1.77310325e12
       ]
-    ]
-  },
-  {
-    "target": "random/collections/(rand!/MersenneTwister/small BitSet)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(randn!/MersenneTwister/Float32)"
+  },
+  {
     "datapoints": [
       [
         137.0,
         1.77310325e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(rand/MersenneTwister/UInt32)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/collections/(rand!/MersenneTwister/small BitSet)"
+  },
+  {
     "datapoints": [
       [
         127.0,
         1.773185403e12
       ]
-    ]
-  },
-  {
-    "target": "random/collections/(rand!/MersenneTwister/large BitSet)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(rand/MersenneTwister/UInt32)"
+  },
+  {
     "datapoints": [
       [
         142.0,
         1.77310325e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(rand/MersenneTwister/BigInt/RangeGenerator(1:4294967297))",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/collections/(rand!/MersenneTwister/large BitSet)"
+  },
+  {
     "datapoints": [
       [
         127.0,
@@ -937,13 +933,13 @@
         126.0,
         1.773103256e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(RangeGenerator/UInt128/1:4294967295)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(rand/MersenneTwister/BigInt/RangeGenerator(1:4294967297))"
+  },
+  {
     "datapoints": [
       [
         126.0,
@@ -957,37 +953,37 @@
         129.0,
         1.773185397e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(rand/MersenneTwister/Float16)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(RangeGenerator/UInt128/1:4294967295)"
+  },
+  {
     "datapoints": [
       [
         136.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "random/collections/(rand/ImplicitRNG/large Dict)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(rand/MersenneTwister/Float16)"
+  },
+  {
     "datapoints": [
       [
         139.0,
         1.773103254e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(\\rand!\\/\\MersenneTwister\\/\\Complex{Int32}\\)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/collections/(rand/ImplicitRNG/large Dict)"
+  },
+  {
     "datapoints": [
       [
         128.0,
@@ -997,13 +993,13 @@
         129.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(RangeGenerator/Int128/1:4294967295)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(\\rand!\\/\\MersenneTwister\\/\\Complex{Int32}\\)"
+  },
+  {
     "datapoints": [
       [
         129.0,
@@ -1013,85 +1009,85 @@
         129.0,
         1.773185397e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(rand/MersenneTwister/Complex{UInt32})",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(RangeGenerator/Int128/1:4294967295)"
+  },
+  {
     "datapoints": [
       [
         126.0,
         1.77310325e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(rand!/MersenneTwister/Complex{Int32})",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(rand/MersenneTwister/Complex{UInt32})"
+  },
+  {
     "datapoints": [
       [
         129.0,
         1.77310325e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(rand/MersenneTwister/Complex{Int32})",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(rand!/MersenneTwister/Complex{Int32})"
+  },
+  {
     "datapoints": [
       [
         126.0,
         1.77310325e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(rand/MersenneTwister/Complex{Int64})",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(rand/MersenneTwister/Complex{Int32})"
+  },
+  {
     "datapoints": [
       [
         55.00000000000001,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "random/randstring/(randstring/MersenneTwister/collect(UInt8/\\qwerty\\)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(rand/MersenneTwister/Complex{Int64})"
+  },
+  {
     "datapoints": [
       [
         126.0,
         1.773185399e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(\\rand\\/\\MersenneTwister\\/\\Complex{Int32}\\)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/randstring/(randstring/MersenneTwister/collect(UInt8/\\qwerty\\)"
+  },
+  {
     "datapoints": [
       [
         127.0,
         1.773103271e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(rand/MersenneTwister/Bool)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(\\rand\\/\\MersenneTwister\\/\\Complex{Int32}\\)"
+  },
+  {
     "datapoints": [
       [
         132.0,
@@ -1105,25 +1101,25 @@
         132.0,
         1.773185408e12
       ]
-    ]
-  },
-  {
-    "target": "random/collections/(\\rand\\/\\MersenneTwister\\/\\large BitSet\\)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(rand/MersenneTwister/Bool)"
+  },
+  {
     "datapoints": [
       [
         133.0,
         1.773103271e12
       ]
-    ]
-  },
-  {
-    "target": "random/collections/(rand/MersenneTwister/a:z)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/collections/(\\rand\\/\\MersenneTwister\\/\\large BitSet\\)"
+  },
+  {
     "datapoints": [
       [
         72.0,
@@ -1137,13 +1133,13 @@
         64.0,
         1.773185405e12
       ]
-    ]
-  },
-  {
-    "target": "random/collections/(rand!/ImplicitRNG/large Set)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/collections/(rand/MersenneTwister/a:z)"
+  },
+  {
     "datapoints": [
       [
         143.0,
@@ -1157,13 +1153,13 @@
         70.0,
         1.773185405e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(rand/MersenneTwister/Int32)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/collections/(rand!/ImplicitRNG/large Set)"
+  },
+  {
     "datapoints": [
       [
         134.00000000000003,
@@ -1173,25 +1169,25 @@
         127.0,
         1.77318542e12
       ]
-    ]
-  },
-  {
-    "target": "random/collections/(\\rand\\/\\MersenneTwister\\/\\small Set\\)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(rand/MersenneTwister/Int32)"
+  },
+  {
     "datapoints": [
       [
         145.0,
         1.773103271e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(rand/MersenneTwister/Float32)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/collections/(\\rand\\/\\MersenneTwister\\/\\small Set\\)"
+  },
+  {
     "datapoints": [
       [
         132.0,
@@ -1201,25 +1197,25 @@
         127.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(rand!/MersenneTwister/Complex{UInt64})",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(rand/MersenneTwister/Float32)"
+  },
+  {
     "datapoints": [
       [
         38.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(RangeGenerator/Int64/1:1)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(rand!/MersenneTwister/Complex{UInt64})"
+  },
+  {
     "datapoints": [
       [
         72.0,
@@ -1229,25 +1225,25 @@
         163.0,
         1.773185397e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(\\RangeGenerator\\/\\Int32\\/\\1:1\\)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(RangeGenerator/Int64/1:1)"
+  },
+  {
     "datapoints": [
       [
         127.0,
         1.77318541e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(RangeGenerator/Int32/1:1)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(\\RangeGenerator\\/\\Int32\\/\\1:1\\)"
+  },
+  {
     "datapoints": [
       [
         72.0,
@@ -1261,13 +1257,13 @@
         134.00000000000003,
         1.773185397e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(RangeGenerator/Int8/1:1)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(RangeGenerator/Int32/1:1)"
+  },
+  {
     "datapoints": [
       [
         68.0,
@@ -1285,25 +1281,25 @@
         128.0,
         1.773185418e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(rand/MersenneTwister/Int128/RangeGenerator(1:18446744073709551615))",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(RangeGenerator/Int8/1:1)"
+  },
+  {
     "datapoints": [
       [
         64.0,
         1.773103247e12
       ]
-    ]
-  },
-  {
-    "target": "random/collections/(rand!/ImplicitRNG/a:z)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(rand/MersenneTwister/Int128/RangeGenerator(1:18446744073709551615))"
+  },
+  {
     "datapoints": [
       [
         65.0,
@@ -1325,85 +1321,85 @@
         38.0,
         1.773185405e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(rand!/MersenneTwister/Complex{Int8})",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/collections/(rand!/ImplicitRNG/a:z)"
+  },
+  {
     "datapoints": [
       [
         130.0,
         1.77310325e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(randexp/ImplicitRNG/Float64)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(rand!/MersenneTwister/Complex{Int8})"
+  },
+  {
     "datapoints": [
       [
         130.0,
         1.773103247e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(rand/MersenneTwister/UInt128/RangeGenerator(1:18446744073709551616))",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(randexp/ImplicitRNG/Float64)"
+  },
+  {
     "datapoints": [
       [
         64.0,
         1.773103247e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(rand/MersenneTwister/UInt16)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(rand/MersenneTwister/UInt128/RangeGenerator(1:18446744073709551616))"
+  },
+  {
     "datapoints": [
       [
         127.0,
         1.773103263e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(rand/MersenneTwister/Complex{UInt64})",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(rand/MersenneTwister/UInt16)"
+  },
+  {
     "datapoints": [
       [
         59.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(rand/ImplicitRNG/Float64)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(rand/MersenneTwister/Complex{UInt64})"
+  },
+  {
     "datapoints": [
       [
         68.0,
         1.773103264e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(rand!/MersenneTwister/Float16)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(rand/ImplicitRNG/Float64)"
+  },
+  {
     "datapoints": [
       [
         34.0,
@@ -1413,25 +1409,25 @@
         34.0,
         1.773185415e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(RangeGenerator/UInt32/1:1)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(rand!/MersenneTwister/Float16)"
+  },
+  {
     "datapoints": [
       [
         72.0,
         1.773103252e12
       ]
-    ]
-  },
-  {
-    "target": "random/collections/(rand!/ImplicitRNG/small String)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(RangeGenerator/UInt32/1:1)"
+  },
+  {
     "datapoints": [
       [
         218.00000000000003,
@@ -1449,13 +1445,13 @@
         43.0,
         1.773185405e12
       ]
-    ]
-  },
-  {
-    "target": "random/collections/(rand/ImplicitRNG/small String)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/collections/(rand!/ImplicitRNG/small String)"
+  },
+  {
     "datapoints": [
       [
         134.00000000000003,
@@ -1473,13 +1469,13 @@
         133.0,
         1.773185418e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(RangeGenerator/UInt128/1:170141183460469231731687303715884105728)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/collections/(rand/ImplicitRNG/small String)"
+  },
+  {
     "datapoints": [
       [
         129.0,
@@ -1489,37 +1485,37 @@
         129.0,
         1.773185397e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(RangeGenerator/Int128/1:4294967297)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(RangeGenerator/UInt128/1:170141183460469231731687303715884105728)"
+  },
+  {
     "datapoints": [
       [
         129.0,
         1.77310327e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(rand!/MersenneTwister/ComplexF64)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(RangeGenerator/Int128/1:4294967297)"
+  },
+  {
     "datapoints": [
       [
         137.0,
         1.77310325e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(randn/ImplicitRNG/Float64)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(rand!/MersenneTwister/ComplexF64)"
+  },
+  {
     "datapoints": [
       [
         171.0,
@@ -1533,13 +1529,13 @@
         41.0,
         1.773185405e12
       ]
-    ]
-  },
-  {
-    "target": "random/collections/(rand/ImplicitRNG/large Vector)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(randn/ImplicitRNG/Float64)"
+  },
+  {
     "datapoints": [
       [
         144.0,
@@ -1553,49 +1549,49 @@
         48.0,
         1.773185405e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(randn/ImplicitRNG/ImplicitFloat64)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/collections/(rand/ImplicitRNG/large Vector)"
+  },
+  {
     "datapoints": [
       [
         73.0,
         1.773103264e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(rand!/MersenneTwister/Complex{UInt16})",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(randn/ImplicitRNG/ImplicitFloat64)"
+  },
+  {
     "datapoints": [
       [
         133.0,
         1.77310325e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(\\rand!\\/\\MersenneTwister\\/\\Complex{UInt32}\\)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(rand!/MersenneTwister/Complex{UInt16})"
+  },
+  {
     "datapoints": [
       [
         129.0,
         1.77310325e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(rand/MersenneTwister/UInt8)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(\\rand!\\/\\MersenneTwister\\/\\Complex{UInt32}\\)"
+  },
+  {
     "datapoints": [
       [
         138.0,
@@ -1609,37 +1605,37 @@
         127.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(rand/MersenneTwister/UInt64)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(rand/MersenneTwister/UInt8)"
+  },
+  {
     "datapoints": [
       [
         129.0,
         1.773185403e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(RangeGenerator/BigInt/1:170141183460469231731687303715884105728)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(rand/MersenneTwister/UInt64)"
+  },
+  {
     "datapoints": [
       [
         68.0,
         1.773103249e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(rand/MersenneTwister/Complex{Int128})",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(RangeGenerator/BigInt/1:170141183460469231731687303715884105728)"
+  },
+  {
     "datapoints": [
       [
         182.0,
@@ -1653,13 +1649,13 @@
         54.0,
         1.773185408e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(RangeGenerator/Int64/1:4294967297)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(rand/MersenneTwister/Complex{Int128})"
+  },
+  {
     "datapoints": [
       [
         72.0,
@@ -1669,13 +1665,13 @@
         163.0,
         1.773185397e12
       ]
-    ]
-  },
-  {
-    "target": "random/collections/(rand/ImplicitRNG/small Set)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(RangeGenerator/Int64/1:4294967297)"
+  },
+  {
     "datapoints": [
       [
         165.0,
@@ -1689,49 +1685,49 @@
         56.99999999999999,
         1.773185405e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(rand!/MersenneTwister/Complex{Int16})",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/collections/(rand/ImplicitRNG/small Set)"
+  },
+  {
     "datapoints": [
       [
         137.0,
         1.77310325e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(RangeGenerator/UInt32/1:4294967295)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(rand!/MersenneTwister/Complex{Int16})"
+  },
+  {
     "datapoints": [
       [
         72.0,
         1.773103252e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(rand/MersenneTwister/BigInt/RangeGenerator(1:1))",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(RangeGenerator/UInt32/1:4294967295)"
+  },
+  {
     "datapoints": [
       [
         139.0,
         1.773103254e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(RangeGenerator/UInt64/1:18446744073709551615)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(rand/MersenneTwister/BigInt/RangeGenerator(1:1))"
+  },
+  {
     "datapoints": [
       [
         73.0,
@@ -1741,13 +1737,13 @@
         163.0,
         1.773185397e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(rand/MersenneTwister/Int64)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(RangeGenerator/UInt64/1:18446744073709551615)"
+  },
+  {
     "datapoints": [
       [
         129.0,
@@ -1757,13 +1753,13 @@
         136.0,
         1.773185403e12
       ]
-    ]
-  },
-  {
-    "target": "random/collections/(rand!/ImplicitRNG/large Dict)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(rand/MersenneTwister/Int64)"
+  },
+  {
     "datapoints": [
       [
         129.0,
@@ -1777,13 +1773,13 @@
         72.0,
         1.773185405e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(rand/MersenneTwister/BigInt/RangeGenerator(1:18446744073709551616))",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/collections/(rand!/ImplicitRNG/large Dict)"
+  },
+  {
     "datapoints": [
       [
         135.0,
@@ -1793,13 +1789,13 @@
         71.0,
         1.773185404e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(RangeGenerator/Int16/1:1)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(rand/MersenneTwister/BigInt/RangeGenerator(1:18446744073709551616))"
+  },
+  {
     "datapoints": [
       [
         67.00000000000001,
@@ -1821,13 +1817,13 @@
         126.0,
         1.773185418e12
       ]
-    ]
-  },
-  {
-    "target": "random/randstring/(randstring/MersenneTwister/\\qwèrtï\\/100)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(RangeGenerator/Int16/1:1)"
+  },
+  {
     "datapoints": [
       [
         98.0,
@@ -1837,49 +1833,49 @@
         98.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "random/collections/(rand/ImplicitRNG/large BitSet)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/randstring/(randstring/MersenneTwister/\\qwèrtï\\/100)"
+  },
+  {
     "datapoints": [
       [
         131.0,
         1.773103254e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(rand/ImplicitRNG/ImplicitFloat64)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/collections/(rand/ImplicitRNG/large BitSet)"
+  },
+  {
     "datapoints": [
       [
         68.0,
         1.773103264e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(rand/MersenneTwister/UInt128/RangeGenerator(1:1))",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(rand/ImplicitRNG/ImplicitFloat64)"
+  },
+  {
     "datapoints": [
       [
         60.0,
         1.773103247e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(rand/MersenneTwister/BigInt/RangeGenerator(1:4294967295))",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(rand/MersenneTwister/UInt128/RangeGenerator(1:1))"
+  },
+  {
     "datapoints": [
       [
         126.0,
@@ -1889,37 +1885,37 @@
         134.00000000000003,
         1.773103256e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(\\RangeGenerator\\/\\BigInt\\/\\1:18446744073709551615\\)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(rand/MersenneTwister/BigInt/RangeGenerator(1:4294967295))"
+  },
+  {
     "datapoints": [
       [
         128.0,
         1.773103271e12
       ]
-    ]
-  },
-  {
-    "target": "random/types/(rand!/MersenneTwister/Complex{Int128})",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(\\RangeGenerator\\/\\BigInt\\/\\1:18446744073709551615\\)"
+  },
+  {
     "datapoints": [
       [
         168.0,
         1.77310325e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(RangeGenerator/Int128/1:18446744073709551616)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/types/(rand!/MersenneTwister/Complex{Int128})"
+  },
+  {
     "datapoints": [
       [
         129.0,
@@ -1929,49 +1925,49 @@
         129.0,
         1.773185397e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(RangeGenerator/UInt64/1:4294967295)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(RangeGenerator/Int128/1:18446744073709551616)"
+  },
+  {
     "datapoints": [
       [
         163.0,
         1.773185397e12
       ]
-    ]
-  },
-  {
-    "target": "random/randstring/(randstring/MersenneTwister)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(RangeGenerator/UInt64/1:4294967295)"
+  },
+  {
     "datapoints": [
       [
         127.0,
         1.773185399e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(rand/MersenneTwister/UInt128/RangeGenerator(1:18446744073709551615))",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/randstring/(randstring/MersenneTwister)"
+  },
+  {
     "datapoints": [
       [
         64.0,
         1.773103247e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(RangeGenerator/UInt8/1:1)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(rand/MersenneTwister/UInt128/RangeGenerator(1:18446744073709551615))"
+  },
+  {
     "datapoints": [
       [
         68.0,
@@ -1985,13 +1981,13 @@
         126.0,
         1.773185397e12
       ]
-    ]
-  },
-  {
-    "target": "random/collections/(rand!/MersenneTwister/large String)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(RangeGenerator/UInt8/1:1)"
+  },
+  {
     "datapoints": [
       [
         103.0,
@@ -2001,30 +1997,34 @@
         104.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(rand/MersenneTwister/Int128/RangeGenerator(1:18446744073709551616))",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/collections/(rand!/MersenneTwister/large String)"
+  },
+  {
     "datapoints": [
       [
         64.0,
         1.773103247e12
       ]
-    ]
-  },
-  {
-    "target": "random/ranges/(\\rand\\/\\MersenneTwister\\/\\Int128\\/\\RangeGenerator(1:1)\\)",
+    ],
     "tags": {
       "group": "nanosoldier_random"
     },
+    "target": "random/ranges/(rand/MersenneTwister/Int128/RangeGenerator(1:18446744073709551616))"
+  },
+  {
     "datapoints": [
       [
         130.0,
         1.773103271e12
       ]
-    ]
+    ],
+    "tags": {
+      "group": "nanosoldier_random"
+    },
+    "target": "random/ranges/(\\rand\\/\\MersenneTwister\\/\\Int128\\/\\RangeGenerator(1:1)\\)"
   }
 ]

@@ -1,9 +1,5 @@
 [
   {
-    "target": "shootout/pidigits",
-    "tags": {
-      "group": "nanosoldier_shootout"
-    },
     "datapoints": [
       [
         106.0,
@@ -13,25 +9,25 @@
         17.7283965035461,
         1.773311721e12
       ]
-    ]
-  },
-  {
-    "target": "shootout/mandelbrot",
+    ],
     "tags": {
       "group": "nanosoldier_shootout"
     },
+    "target": "shootout/pidigits"
+  },
+  {
     "datapoints": [
       [
         3.2265901478373142,
         1.773311721e12
       ]
-    ]
-  },
-  {
-    "target": "shootout/spectralnorm",
+    ],
     "tags": {
       "group": "nanosoldier_shootout"
     },
+    "target": "shootout/mandelbrot"
+  },
+  {
     "datapoints": [
       [
         100.0,
@@ -45,13 +41,13 @@
         1.4436010442068765,
         1.773311721e12
       ]
-    ]
-  },
-  {
-    "target": "shootout/k_nucleotide",
+    ],
     "tags": {
       "group": "nanosoldier_shootout"
     },
+    "target": "shootout/spectralnorm"
+  },
+  {
     "datapoints": [
       [
         93.0,
@@ -97,13 +93,13 @@
         24.367073524271845,
         1.773311721e12
       ]
-    ]
-  },
-  {
-    "target": "shootout/fannkuch",
+    ],
     "tags": {
       "group": "nanosoldier_shootout"
     },
+    "target": "shootout/k_nucleotide"
+  },
+  {
     "datapoints": [
       [
         107.0,
@@ -165,13 +161,13 @@
         0.1341373098,
         1.773311721e12
       ]
-    ]
-  },
-  {
-    "target": "shootout/regex_dna",
+    ],
     "tags": {
       "group": "nanosoldier_shootout"
     },
+    "target": "shootout/fannkuch"
+  },
+  {
     "datapoints": [
       [
         95.0,
@@ -189,13 +185,13 @@
         3.6193586108695652,
         1.773311721e12
       ]
-    ]
-  },
-  {
-    "target": "shootout/revcomp",
+    ],
     "tags": {
       "group": "nanosoldier_shootout"
     },
+    "target": "shootout/regex_dna"
+  },
+  {
     "datapoints": [
       [
         98.0,
@@ -209,13 +205,13 @@
         0.14652198290000001,
         1.773311721e12
       ]
-    ]
-  },
-  {
-    "target": "shootout/fasta",
+    ],
     "tags": {
       "group": "nanosoldier_shootout"
     },
+    "target": "shootout/revcomp"
+  },
+  {
     "datapoints": [
       [
         105.0,
@@ -273,13 +269,13 @@
         0.0124915227,
         1.773311721e12
       ]
-    ]
-  },
-  {
-    "target": "shootout/meteor_contest",
+    ],
     "tags": {
       "group": "nanosoldier_shootout"
     },
+    "target": "shootout/fasta"
+  },
+  {
     "datapoints": [
       [
         105.0,
@@ -325,25 +321,25 @@
         1031.1356754,
         1.773311721e12
       ]
-    ]
-  },
-  {
-    "target": "shootout/nbody",
+    ],
     "tags": {
       "group": "nanosoldier_shootout"
     },
+    "target": "shootout/meteor_contest"
+  },
+  {
     "datapoints": [
       [
         0.1032524192,
         1.773311721e12
       ]
-    ]
-  },
-  {
-    "target": "shootout/binary_trees",
+    ],
     "tags": {
       "group": "nanosoldier_shootout"
     },
+    "target": "shootout/nbody"
+  },
+  {
     "datapoints": [
       [
         105.0,
@@ -405,13 +401,13 @@
         15.931203477707006,
         1.773311721e12
       ]
-    ]
-  },
-  {
-    "target": "shootout/nbody_vec",
+    ],
     "tags": {
       "group": "nanosoldier_shootout"
     },
+    "target": "shootout/binary_trees"
+  },
+  {
     "datapoints": [
       [
         146.0,
@@ -453,6 +449,10 @@
         0.3661203648,
         1.773311721e12
       ]
-    ]
+    ],
+    "tags": {
+      "group": "nanosoldier_shootout"
+    },
+    "target": "shootout/nbody_vec"
   }
 ]

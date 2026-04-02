@@ -1,9 +1,5 @@
 [
   {
-    "target": "array/index/(sumlogical_view/Matrix{Int64})",
-    "tags": {
-      "group": "nanosoldier_array"
-    },
     "datapoints": [
       [
         99.0,
@@ -17,25 +13,25 @@
         100.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/any/all/(all/BitArray)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlogical_view/Matrix{Int64})"
+  },
+  {
     "datapoints": [
       [
         136.0,
         1.773103253e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumeach_view/Matrix{Float32})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/any/all/(all/BitArray)"
+  },
+  {
     "datapoints": [
       [
         12.0,
@@ -53,13 +49,13 @@
         4.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/subarray/(lucompletepivSub!/250)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumeach_view/Matrix{Float32})"
+  },
+  {
     "datapoints": [
       [
         142.0,
@@ -81,13 +77,13 @@
         90.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumvector_view/Matrix{Float64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/subarray/(lucompletepivSub!/250)"
+  },
+  {
     "datapoints": [
       [
         385.0,
@@ -101,25 +97,25 @@
         384.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumeach_view/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Float32}/2/Float32/Matrix{Float32}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumvector_view/Matrix{Float64})"
+  },
+  {
     "datapoints": [
       [
         18.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumeach/Matrix{Int32})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumeach_view/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Float32}/2/Float32/Matrix{Float32}/false})"
+  },
+  {
     "datapoints": [
       [
         618.0,
@@ -129,25 +125,25 @@
         152.0,
         1.773185408e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlogical_view/SubArray{Int32/2/Base.ReshapedArray{Int32/2/SubArray{Int32/3/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/3}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false}/Tuple{Base.MultiplicativeInverses.SignedMultiplicativeInverse{Int64}/Base.MultiplicativeInverses.SignedMultiplicativeInverse{Int64}}}/Tuple{Base.Slice{Base.OneTo{Int64}}/UnitRange{Int64}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumeach/Matrix{Int32})"
+  },
+  {
     "datapoints": [
       [
         158.0,
         1.773103268e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumeach/SubArray{Int32/2/Matrix{Int32}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlogical_view/SubArray{Int32/2/Base.ReshapedArray{Int32/2/SubArray{Int32/3/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/3}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false}/Tuple{Base.MultiplicativeInverses.SignedMultiplicativeInverse{Int64}/Base.MultiplicativeInverses.SignedMultiplicativeInverse{Int64}}}/Tuple{Base.Slice{Base.OneTo{Int64}}/UnitRange{Int64}}/false})"
+  },
+  {
     "datapoints": [
       [
         810.0,
@@ -157,13 +153,13 @@
         152.0,
         1.773185408e12
       ]
-    ]
-  },
-  {
-    "target": "array/equality/(==/Vector{Int64} == UnitRange{Int64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumeach/SubArray{Int32/2/Matrix{Int32}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})"
+  },
+  {
     "datapoints": [
       [
         89.0,
@@ -225,13 +221,13 @@
         86.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/accumulate/(cumsum!/Float64/dim1)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/equality/(==/Vector{Int64} == UnitRange{Int64})"
+  },
+  {
     "datapoints": [
       [
         92.0,
@@ -289,13 +285,13 @@
         105.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/subarray/(\\gramschmidt!\\/1000)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/accumulate/(cumsum!/Float64/dim1)"
+  },
+  {
     "datapoints": [
       [
         94.0,
@@ -305,25 +301,25 @@
         106.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "array/any/all/(any/UnitRange{Int64} generator)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/subarray/(\\gramschmidt!\\/1000)"
+  },
+  {
     "datapoints": [
       [
         299.0,
         1.773103253e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(\\sumelt\\/\\BaseBenchmarks.ArrayBenchmarks.ArrayLSLS{Int32/2}\\)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/any/all/(any/UnitRange{Int64} generator)"
+  },
+  {
     "datapoints": [
       [
         185.0,
@@ -337,13 +333,13 @@
         185.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumelt_boundscheck/Matrix{Int64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(\\sumelt\\/\\BaseBenchmarks.ArrayBenchmarks.ArrayLSLS{Int32/2}\\)"
+  },
+  {
     "datapoints": [
       [
         204.99999999999997,
@@ -353,13 +349,13 @@
         211.0,
         1.773103267e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumvector_view/Matrix{Int32})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumelt_boundscheck/Matrix{Int64})"
+  },
+  {
     "datapoints": [
       [
         374.0,
@@ -373,13 +369,13 @@
         366.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/equality/(isequal/Vector{Int64} isequal UnitRange{Int64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumvector_view/Matrix{Int32})"
+  },
+  {
     "datapoints": [
       [
         113.99999999999999,
@@ -433,25 +429,25 @@
         88.0,
         1.77318542e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlinear_view/BaseBenchmarks.ArrayBenchmarks.ArrayLF{Float32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/equality/(isequal/Vector{Int64} isequal UnitRange{Int64})"
+  },
+  {
     "datapoints": [
       [
         48.0,
         1.773185407e12
       ]
-    ]
-  },
-  {
-    "target": "array/any/all/(any/Vector{Float32})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlinear_view/BaseBenchmarks.ArrayBenchmarks.ArrayLF{Float32/2})"
+  },
+  {
     "datapoints": [
       [
         130.0,
@@ -497,13 +493,13 @@
         129.0,
         1.773185408e12
       ]
-    ]
-  },
-  {
-    "target": "array/equality/(==/Vector{Int64} == Vector{Float32})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/any/all/(any/Vector{Float32})"
+  },
+  {
     "datapoints": [
       [
         86.0,
@@ -577,25 +573,25 @@
         107.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/reductions/(\\norm1\\/\\Float64\\)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/equality/(==/Vector{Int64} == Vector{Float32})"
+  },
+  {
     "datapoints": [
       [
         109.00000000000001,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcolon/Matrix{Float32})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/reductions/(\\norm1\\/\\Float64\\)"
+  },
+  {
     "datapoints": [
       [
         64.0,
@@ -609,13 +605,13 @@
         69.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/cat/(hcat/5)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcolon/Matrix{Float32})"
+  },
+  {
     "datapoints": [
       [
         122.0,
@@ -669,25 +665,25 @@
         86.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/cat/(\\catnd_setind\\/5)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/cat/(hcat/5)"
+  },
+  {
     "datapoints": [
       [
         94.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "array/bool/boolarray_true_load!",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/cat/(\\catnd_setind\\/5)"
+  },
+  {
     "datapoints": [
       [
         88.0,
@@ -741,13 +737,13 @@
         107.0,
         1.773185414e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlogical_view/BaseBenchmarks.ArrayBenchmarks.ArrayLSLS{Int32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/bool/boolarray_true_load!"
+  },
+  {
     "datapoints": [
       [
         98.0,
@@ -761,13 +757,13 @@
         98.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumeach_view/Base.ReinterpretArray{Int32/3/Float64/Array{Float64/3}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlogical_view/BaseBenchmarks.ArrayBenchmarks.ArrayLSLS{Int32/2})"
+  },
+  {
     "datapoints": [
       [
         167.0,
@@ -777,13 +773,13 @@
         20.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumvector_view/SubArray{Float32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32/2}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumeach_view/Base.ReinterpretArray{Int32/3/Float64/Array{Float64/3}/false})"
+  },
+  {
     "datapoints": [
       [
         151.0,
@@ -793,13 +789,13 @@
         100.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "array/equality/(==/Vector{Int64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumvector_view/SubArray{Float32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32/2}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})"
+  },
+  {
     "datapoints": [
       [
         89.0,
@@ -841,13 +837,13 @@
         138.0,
         1.773185418e12
       ]
-    ]
-  },
-  {
-    "target": "array/equality/(isequal/UnitRange{Int64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/equality/(==/Vector{Int64})"
+  },
+  {
     "datapoints": [
       [
         84.0,
@@ -969,13 +965,13 @@
         111.00000000000001,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/reverse/rev_load_slow!",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/equality/(isequal/UnitRange{Int64})"
+  },
+  {
     "datapoints": [
       [
         105.0,
@@ -1017,13 +1013,13 @@
         109.00000000000001,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(mapr_access/SubArray{Float32/2/Base.ReshapedArray{Float32/2/SubArray{Float32/3/Array{Float32/3}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true}/Tuple{}}/Tuple{Base.Slice{Base.OneTo{Int64}}/UnitRange{Int64}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/reverse/rev_load_slow!"
+  },
+  {
     "datapoints": [
       [
         204.0,
@@ -1033,37 +1029,37 @@
         45.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumeach_view/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Float32}/2/Float64/Matrix{Float64}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(mapr_access/SubArray{Float32/2/Base.ReshapedArray{Float32/2/SubArray{Float32/3/Array{Float32/3}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true}/Tuple{}}/Tuple{Base.Slice{Base.OneTo{Int64}}/UnitRange{Int64}}/true})"
+  },
+  {
     "datapoints": [
       [
         19.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcartesian/BitMatrix)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumeach_view/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Float32}/2/Float64/Matrix{Float64}/false})"
+  },
+  {
     "datapoints": [
       [
         175.0,
         1.77302643e12
       ]
-    ]
-  },
-  {
-    "target": "array/reductions/(sum/Float64)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcartesian/BitMatrix)"
+  },
+  {
     "datapoints": [
       [
         108.0,
@@ -1097,13 +1093,13 @@
         94.0,
         1.773185407e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(mapr_access/SubArray{Int32/2/Array{Int32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/reductions/(sum/Float64)"
+  },
+  {
     "datapoints": [
       [
         372.0,
@@ -1113,25 +1109,25 @@
         373.0,
         1.773103251e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlinear_view/Base.ReinterpretArray{Float32/2/Int32/Matrix{Int32}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(mapr_access/SubArray{Int32/2/Array{Int32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})"
+  },
+  {
     "datapoints": [
       [
         2.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/equality/(==/Vector{Int64} == Vector{Int16})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlinear_view/Base.ReinterpretArray{Float32/2/Int32/Matrix{Int32}/false})"
+  },
+  {
     "datapoints": [
       [
         88.0,
@@ -1145,13 +1141,13 @@
         88.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlogical_view/BitMatrix)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/equality/(==/Vector{Int64} == Vector{Int16})"
+  },
+  {
     "datapoints": [
       [
         101.0,
@@ -1165,13 +1161,13 @@
         98.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/growth/(push_single!/2048)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlogical_view/BitMatrix)"
+  },
+  {
     "datapoints": [
       [
         105.0,
@@ -1273,13 +1269,13 @@
         110.00000000000001,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "array/comprehension/(comprehension_indexing/Vector{Float64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/growth/(push_single!/2048)"
+  },
+  {
     "datapoints": [
       [
         37.0,
@@ -1305,13 +1301,13 @@
         150.0,
         1.773185408e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumrange/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/comprehension/(comprehension_indexing/Vector{Float64})"
+  },
+  {
     "datapoints": [
       [
         74.0,
@@ -1325,13 +1321,13 @@
         76.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumrange/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int32/Matrix{Int32}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumrange/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/2})"
+  },
+  {
     "datapoints": [
       [
         69.0,
@@ -1345,13 +1341,13 @@
         68.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(mapr_access/Matrix{Float32})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumrange/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int32/Matrix{Int32}/false})"
+  },
+  {
     "datapoints": [
       [
         550.0,
@@ -1361,13 +1357,13 @@
         552.0,
         1.773103251e12
       ]
-    ]
-  },
-  {
-    "target": "array/cat/(hvcat_setind/5)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(mapr_access/Matrix{Float32})"
+  },
+  {
     "datapoints": [
       [
         95.0,
@@ -1401,13 +1397,13 @@
         107.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlogical_view/SubArray{Int32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/cat/(hvcat_setind/5)"
+  },
+  {
     "datapoints": [
       [
         97.0,
@@ -1421,13 +1417,13 @@
         96.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(mapr_access/SubArray{Int32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlogical_view/SubArray{Int32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})"
+  },
+  {
     "datapoints": [
       [
         372.0,
@@ -1437,25 +1433,25 @@
         373.0,
         1.773103251e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumeach_view/SubArray{Int32/2/Matrix{Int32}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(mapr_access/SubArray{Int32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})"
+  },
+  {
     "datapoints": [
       [
         152.0,
         1.773185408e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlinear_view/1:100000)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumeach_view/SubArray{Int32/2/Matrix{Int32}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})"
+  },
+  {
     "datapoints": [
       [
         256.0,
@@ -1465,13 +1461,13 @@
         47.0,
         1.773103247e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumeach_view/BitMatrix)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlinear_view/1:100000)"
+  },
+  {
     "datapoints": [
       [
         4.0,
@@ -1489,13 +1485,13 @@
         32.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlogical_view/BaseBenchmarks.ArrayBenchmarks.ArrayLF{Int32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumeach_view/BitMatrix)"
+  },
+  {
     "datapoints": [
       [
         97.0,
@@ -1509,37 +1505,37 @@
         99.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumrange/BitMatrix)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlogical_view/BaseBenchmarks.ArrayBenchmarks.ArrayLF{Int32/2})"
+  },
+  {
     "datapoints": [
       [
         69.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumeach/100000:-1:1)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumrange/BitMatrix)"
+  },
+  {
     "datapoints": [
       [
         1.0091540000000001e6,
         1.773103253e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumrange/Matrix{Int32})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumeach/100000:-1:1)"
+  },
+  {
     "datapoints": [
       [
         65.0,
@@ -1553,13 +1549,13 @@
         70.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/comprehension/(comprehension_collect/StepRangeLen{Float64/Base.TwicePrecision{Float64}/Base.TwicePrecision{Float64}/Int64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumrange/Matrix{Int32})"
+  },
+  {
     "datapoints": [
       [
         56.99999999999999,
@@ -1577,13 +1573,13 @@
         53.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "array/reductions/(norm1/Float64)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/comprehension/(comprehension_collect/StepRangeLen{Float64/Base.TwicePrecision{Float64}/Base.TwicePrecision{Float64}/Int64})"
+  },
+  {
     "datapoints": [
       [
         95.0,
@@ -1633,25 +1629,25 @@
         112.00000000000001,
         1.773185414e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumelt_boundscheck/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int64/Matrix{Int64}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/reductions/(norm1/Float64)"
+  },
+  {
     "datapoints": [
       [
         343.0,
         1.773103267e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlinear_view/BitMatrix)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumelt_boundscheck/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int64/Matrix{Int64}/false})"
+  },
+  {
     "datapoints": [
       [
         4.0,
@@ -1669,25 +1665,25 @@
         32.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/growth/(append!/2048)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlinear_view/BitMatrix)"
+  },
+  {
     "datapoints": [
       [
         90.0,
         1.773103247e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlogical_view/BaseBenchmarks.ArrayBenchmarks.ArrayLSLS{Float32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/growth/(append!/2048)"
+  },
+  {
     "datapoints": [
       [
         97.0,
@@ -1701,13 +1697,13 @@
         99.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/any/all/(\\all\\/\\Vector{Float64}\\)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlogical_view/BaseBenchmarks.ArrayBenchmarks.ArrayLSLS{Float32/2})"
+  },
+  {
     "datapoints": [
       [
         78.0,
@@ -1717,25 +1713,25 @@
         128.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "array/reductions/(\\mean\\/\\Float64\\)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/any/all/(\\all\\/\\Vector{Float64}\\)"
+  },
+  {
     "datapoints": [
       [
         94.0,
         1.773103271e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumrange/SubArray{Int32/2/Matrix{Int32}/Tuple{UnitRange{Int64}/UnitRange{Int64}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/reductions/(\\mean\\/\\Float64\\)"
+  },
+  {
     "datapoints": [
       [
         78.0,
@@ -1749,13 +1745,13 @@
         78.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/comprehension/(collect/Vector{Float64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumrange/SubArray{Int32/2/Matrix{Int32}/Tuple{UnitRange{Int64}/UnitRange{Int64}}/false})"
+  },
+  {
     "datapoints": [
       [
         25.0,
@@ -1777,13 +1773,13 @@
         330.0,
         1.773185408e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumelt/BaseBenchmarks.ArrayBenchmarks.ArrayLF{Int32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/comprehension/(collect/Vector{Float64})"
+  },
+  {
     "datapoints": [
       [
         180.0,
@@ -1805,13 +1801,13 @@
         183.0,
         1.773185407e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(\\sumelt\\/\\BaseBenchmarks.ArrayBenchmarks.ArrayLF{Int32/2}\\)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumelt/BaseBenchmarks.ArrayBenchmarks.ArrayLF{Int32/2})"
+  },
+  {
     "datapoints": [
       [
         183.0,
@@ -1821,25 +1817,25 @@
         179.0,
         1.773185401e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcartesian_view/SubArray{Int32/2/Base.ReshapedArray{Int32/2/SubArray{Int32/3/Array{Int32/3}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true}/Tuple{}}/Tuple{Base.Slice{Base.OneTo{Int64}}/UnitRange{Int64}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(\\sumelt\\/\\BaseBenchmarks.ArrayBenchmarks.ArrayLF{Int32/2}\\)"
+  },
+  {
     "datapoints": [
       [
         172.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumvector_view/BitMatrix)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcartesian_view/SubArray{Int32/2/Base.ReshapedArray{Int32/2/SubArray{Int32/3/Array{Int32/3}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true}/Tuple{}}/Tuple{Base.Slice{Base.OneTo{Int64}}/UnitRange{Int64}}/true})"
+  },
+  {
     "datapoints": [
       [
         157.0,
@@ -1857,25 +1853,25 @@
         195.0,
         1.773185399e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcartesian/SubArray{Int32/2/Matrix{Int32}/Tuple{UnitRange{Int64}/UnitRange{Int64}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumvector_view/BitMatrix)"
+  },
+  {
     "datapoints": [
       [
         16.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumrange_view/SubArray{Int32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcartesian/SubArray{Int32/2/Matrix{Int32}/Tuple{UnitRange{Int64}/UnitRange{Int64}}/false})"
+  },
+  {
     "datapoints": [
       [
         215.0,
@@ -1889,13 +1885,13 @@
         168.0,
         1.773185415e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumvector_view/SubArray{Float32/2/Base.ReshapedArray{Float32/2/SubArray{Float32/3/Array{Float32/3}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true}/Tuple{}}/Tuple{Base.Slice{Base.OneTo{Int64}}/UnitRange{Int64}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumrange_view/SubArray{Int32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})"
+  },
+  {
     "datapoints": [
       [
         150.0,
@@ -1929,25 +1925,25 @@
         97.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlinear/Matrix{Int64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumvector_view/SubArray{Float32/2/Base.ReshapedArray{Float32/2/SubArray{Float32/3/Array{Float32/3}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true}/Tuple{}}/Tuple{Base.Slice{Base.OneTo{Int64}}/UnitRange{Int64}}/true})"
+  },
+  {
     "datapoints": [
       [
         204.0,
         1.773103253e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/sub2ind",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlinear/Matrix{Int64})"
+  },
+  {
     "datapoints": [
       [
         508.0,
@@ -1957,13 +1953,13 @@
         505.99999999999994,
         1.773185415e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumrange/SubArray{Int32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/2}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/sub2ind"
+  },
+  {
     "datapoints": [
       [
         75.0,
@@ -1977,13 +1973,13 @@
         77.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumrange/Matrix{Float64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumrange/SubArray{Int32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/2}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})"
+  },
+  {
     "datapoints": [
       [
         120.0,
@@ -1997,13 +1993,13 @@
         119.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/subarray/(gramschmidt!/500)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumrange/Matrix{Float64})"
+  },
+  {
     "datapoints": [
       [
         106.0,
@@ -2045,13 +2041,13 @@
         190.0,
         1.773185415e12
       ]
-    ]
-  },
-  {
-    "target": "array/comprehension/(\\comprehension_iteration\\/\\StepRangeLen{Float64/Base.TwicePrecision{Float64}/Base.TwicePrecision{Float64}}\\)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/subarray/(gramschmidt!/500)"
+  },
+  {
     "datapoints": [
       [
         82.0,
@@ -2061,37 +2057,37 @@
         123.0,
         1.77318541e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlinear/SubArray{Int32/2/Base.ReshapedArray{Int32/2/SubArray{Int32/3/Array{Int32/3}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true}/Tuple{}}/Tuple{Base.Slice{Base.OneTo{Int64}}/UnitRange{Int64}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/comprehension/(\\comprehension_iteration\\/\\StepRangeLen{Float64/Base.TwicePrecision{Float64}/Base.TwicePrecision{Float64}}\\)"
+  },
+  {
     "datapoints": [
       [
         1467.0,
         1.773103253e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumrange_view/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Float32}/2/Float64/Matrix{Float64}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlinear/SubArray{Int32/2/Base.ReshapedArray{Int32/2/SubArray{Int32/3/Array{Int32/3}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true}/Tuple{}}/Tuple{Base.Slice{Base.OneTo{Int64}}/UnitRange{Int64}}/true})"
+  },
+  {
     "datapoints": [
       [
         15.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/accumulate/(cumsum/Float64/dim2)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumrange_view/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Float32}/2/Float64/Matrix{Float64}/false})"
+  },
+  {
     "datapoints": [
       [
         83.0,
@@ -2145,13 +2141,13 @@
         107.0,
         1.773185418e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumvector_view/SubArray{Int32/2/Base.ReshapedArray{Int32/2/SubArray{Int32/3/Array{Int32/3}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true}/Tuple{}}/Tuple{Base.Slice{Base.OneTo{Int64}}/UnitRange{Int64}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/accumulate/(cumsum/Float64/dim2)"
+  },
+  {
     "datapoints": [
       [
         736.0,
@@ -2181,13 +2177,13 @@
         98.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "array/cat/(hcat_setind/500)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumvector_view/SubArray{Int32/2/Base.ReshapedArray{Int32/2/SubArray{Int32/3/Array{Int32/3}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true}/Tuple{}}/Tuple{Base.Slice{Base.OneTo{Int64}}/UnitRange{Int64}}/true})"
+  },
+  {
     "datapoints": [
       [
         140.0,
@@ -2197,49 +2193,49 @@
         109.00000000000001,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumelt_boundscheck/BaseBenchmarks.ArrayBenchmarks.ArrayLSLS{Int32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/cat/(hcat_setind/500)"
+  },
+  {
     "datapoints": [
       [
         160.0,
         1.773103253e12
       ]
-    ]
-  },
-  {
-    "target": "array/reverse/rev_loadmul_fast!",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumelt_boundscheck/BaseBenchmarks.ArrayBenchmarks.ArrayLSLS{Int32/2})"
+  },
+  {
     "datapoints": [
       [
         105.0,
         1.773103247e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumvector_view/SubArray{Float32/2/Base.ReshapedArray{Float32/2/SubArray{Float32/3/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32/3}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false}/Tuple{Base.MultiplicativeInverses.SignedMultiplicativeInverse{Int64}/Base.MultiplicativeInverses.SignedMultiplicativeInverse{Int64}}}/Tuple{Base.Slice{Base.OneTo{Int64}}/UnitRange{Int64}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/reverse/rev_loadmul_fast!"
+  },
+  {
     "datapoints": [
       [
         101.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumvector_view/SubArray{Float32/2/Matrix{Float32}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumvector_view/SubArray{Float32/2/Base.ReshapedArray{Float32/2/SubArray{Float32/3/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32/3}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false}/Tuple{Base.MultiplicativeInverses.SignedMultiplicativeInverse{Int64}/Base.MultiplicativeInverses.SignedMultiplicativeInverse{Int64}}}/Tuple{Base.Slice{Base.OneTo{Int64}}/UnitRange{Int64}}/false})"
+  },
+  {
     "datapoints": [
       [
         390.0,
@@ -2257,13 +2253,13 @@
         96.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "array/reductions/(mean/Float64)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumvector_view/SubArray{Float32/2/Matrix{Float32}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})"
+  },
+  {
     "datapoints": [
       [
         112.00000000000001,
@@ -2289,13 +2285,13 @@
         95.0,
         1.773185407e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumrange/SubArray{Float32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32/2}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/reductions/(mean/Float64)"
+  },
+  {
     "datapoints": [
       [
         74.0,
@@ -2309,13 +2305,13 @@
         77.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/equality/(\\isequal\\/\\BitArray\\)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumrange/SubArray{Float32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32/2}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})"
+  },
+  {
     "datapoints": [
       [
         120.0,
@@ -2325,37 +2321,37 @@
         120.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumelt/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int32/Matrix{Int32}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/equality/(\\isequal\\/\\BitArray\\)"
+  },
+  {
     "datapoints": [
       [
         33.0,
         1.773103264e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumelt_boundscheck/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int32/Matrix{Int32}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumelt/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int32/Matrix{Int32}/false})"
+  },
+  {
     "datapoints": [
       [
         42.0,
         1.773103264e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcolon/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Float32}/2/Float32/Matrix{Float32}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumelt_boundscheck/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int32/Matrix{Int32}/false})"
+  },
+  {
     "datapoints": [
       [
         70.0,
@@ -2369,13 +2365,13 @@
         68.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumrange_view/BaseBenchmarks.ArrayBenchmarks.ArrayLF{Int32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcolon/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Float32}/2/Float32/Matrix{Float32}/false})"
+  },
+  {
     "datapoints": [
       [
         192.0,
@@ -2385,25 +2381,25 @@
         153.0,
         1.773185412e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcartesian/SubArray{Int32/2/Matrix{Int32}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumrange_view/BaseBenchmarks.ArrayBenchmarks.ArrayLF{Int32/2})"
+  },
+  {
     "datapoints": [
       [
         16.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumelt_boundscheck/100000:-1:1)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcartesian/SubArray{Int32/2/Matrix{Int32}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})"
+  },
+  {
     "datapoints": [
       [
         200.0,
@@ -2449,13 +2445,13 @@
         296.0,
         1.773185415e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcolon_view/BaseBenchmarks.ArrayBenchmarks.ArrayLSLS{Int32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumelt_boundscheck/100000:-1:1)"
+  },
+  {
     "datapoints": [
       [
         194.0,
@@ -2465,13 +2461,13 @@
         153.0,
         1.773185412e12
       ]
-    ]
-  },
-  {
-    "target": "array/setindex!/(setindex!/1)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcolon_view/BaseBenchmarks.ArrayBenchmarks.ArrayLSLS{Int32/2})"
+  },
+  {
     "datapoints": [
       [
         108.0,
@@ -2569,25 +2565,25 @@
         108.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlogical_view/SubArray{Float32/2/Base.ReshapedArray{Float32/2/SubArray{Float32/3/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32/3}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false}/Tuple{Base.MultiplicativeInverses.SignedMultiplicativeInverse{Int64}/Base.MultiplicativeInverses.SignedMultiplicativeInverse{Int64}}}/Tuple{Base.Slice{Base.OneTo{Int64}}/UnitRange{Int64}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/setindex!/(setindex!/1)"
+  },
+  {
     "datapoints": [
       [
         156.0,
         1.773103268e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlogical_view/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlogical_view/SubArray{Float32/2/Base.ReshapedArray{Float32/2/SubArray{Float32/3/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32/3}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false}/Tuple{Base.MultiplicativeInverses.SignedMultiplicativeInverse{Int64}/Base.MultiplicativeInverses.SignedMultiplicativeInverse{Int64}}}/Tuple{Base.Slice{Base.OneTo{Int64}}/UnitRange{Int64}}/false})"
+  },
+  {
     "datapoints": [
       [
         100.0,
@@ -2601,25 +2597,25 @@
         98.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumrange_view/Matrix{Int64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlogical_view/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32/2})"
+  },
+  {
     "datapoints": [
       [
         196.0,
         1.773103253e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumrange/BaseBenchmarks.ArrayBenchmarks.ArrayLF{Int32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumrange_view/Matrix{Int64})"
+  },
+  {
     "datapoints": [
       [
         77.0,
@@ -2633,13 +2629,13 @@
         59.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumeach/BaseBenchmarks.ArrayBenchmarks.ArrayLSLS{Int32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumrange/BaseBenchmarks.ArrayBenchmarks.ArrayLF{Int32/2})"
+  },
+  {
     "datapoints": [
       [
         626.0,
@@ -2649,37 +2645,37 @@
         625.0,
         1.773103251e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumelt/100000:-1:1)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumeach/BaseBenchmarks.ArrayBenchmarks.ArrayLSLS{Int32/2})"
+  },
+  {
     "datapoints": [
       [
         153.0,
         1.773103253e12
       ]
-    ]
-  },
-  {
-    "target": "array/any/all/(\\any\\/\\BitArray\\)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumelt/100000:-1:1)"
+  },
+  {
     "datapoints": [
       [
         92.0,
         1.773103271e12
       ]
-    ]
-  },
-  {
-    "target": "array/growth/(prerend!/2048)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/any/all/(\\any\\/\\BitArray\\)"
+  },
+  {
     "datapoints": [
       [
         83.0,
@@ -2693,13 +2689,13 @@
         81.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumeach/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/growth/(prerend!/2048)"
+  },
+  {
     "datapoints": [
       [
         611.0,
@@ -2709,13 +2705,13 @@
         627.0,
         1.773103251e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(mapr_access/BaseBenchmarks.ArrayBenchmarks.ArrayLSLS{Int32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumeach/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/2})"
+  },
+  {
     "datapoints": [
       [
         312.0,
@@ -2725,13 +2721,13 @@
         313.0,
         1.773103251e12
       ]
-    ]
-  },
-  {
-    "target": "array/equality/(\\isequal\\/\\Vector{Int64} isequal UnitRange{Int64}\\)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(mapr_access/BaseBenchmarks.ArrayBenchmarks.ArrayLSLS{Int32/2})"
+  },
+  {
     "datapoints": [
       [
         75.0,
@@ -2741,13 +2737,13 @@
         133.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "array/subarray/(lucompletepivCopy!/500)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/equality/(\\isequal\\/\\Vector{Int64} isequal UnitRange{Int64}\\)"
+  },
+  {
     "datapoints": [
       [
         134.00000000000003,
@@ -2769,13 +2765,13 @@
         106.0,
         1.773185407e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumrange_view/SubArray{Int32/2/Base.ReshapedArray{Int32/2/SubArray{Int32/3/Array{Int32/3}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true}/Tuple{}}/Tuple{Base.Slice{Base.OneTo{Int64}}/UnitRange{Int64}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/subarray/(lucompletepivCopy!/500)"
+  },
+  {
     "datapoints": [
       [
         353.0,
@@ -2785,13 +2781,13 @@
         182.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcolon/SubArray{Int32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumrange_view/SubArray{Int32/2/Base.ReshapedArray{Int32/2/SubArray{Int32/3/Array{Int32/3}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true}/Tuple{}}/Tuple{Base.Slice{Base.OneTo{Int64}}/UnitRange{Int64}}/true})"
+  },
+  {
     "datapoints": [
       [
         82.0,
@@ -2809,13 +2805,13 @@
         81.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/bool/bitarray_bool_load!",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcolon/SubArray{Int32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})"
+  },
+  {
     "datapoints": [
       [
         114.99999999999999,
@@ -2885,25 +2881,25 @@
         108.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/accumulate/(\\cumsum\\/\\Float64\\/\\dim2\\)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/bool/bitarray_bool_load!"
+  },
+  {
     "datapoints": [
       [
         122.0,
         1.77310325e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(\\sumcartesian\\/\\Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int64/Matrix{Int64}/false}\\)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/accumulate/(\\cumsum\\/\\Float64\\/\\dim2\\)"
+  },
+  {
     "datapoints": [
       [
         151.0,
@@ -2913,13 +2909,13 @@
         180.0,
         1.773185401e12
       ]
-    ]
-  },
-  {
-    "target": "array/subarray/(lucompletepivCopy!/100)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(\\sumcartesian\\/\\Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int64/Matrix{Int64}/false}\\)"
+  },
+  {
     "datapoints": [
       [
         132.0,
@@ -2933,13 +2929,13 @@
         95.0,
         1.773103259e12
       ]
-    ]
-  },
-  {
-    "target": "array/growth/(append!/8)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/subarray/(lucompletepivCopy!/100)"
+  },
+  {
     "datapoints": [
       [
         106.0,
@@ -2985,13 +2981,13 @@
         61.0,
         1.773185418e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(mapr_access/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/growth/(append!/8)"
+  },
+  {
     "datapoints": [
       [
         312.0,
@@ -3001,13 +2997,13 @@
         313.0,
         1.773103251e12
       ]
-    ]
-  },
-  {
-    "target": "array/growth/(push_multiple!/2048)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(mapr_access/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/2})"
+  },
+  {
     "datapoints": [
       [
         94.0,
@@ -3085,13 +3081,13 @@
         30.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/cat/(vcat_setind/500)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/growth/(push_multiple!/2048)"
+  },
+  {
     "datapoints": [
       [
         133.0,
@@ -3101,25 +3097,25 @@
         107.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcolon_view/Matrix{Int64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/cat/(vcat_setind/500)"
+  },
+  {
     "datapoints": [
       [
         196.0,
         1.773103253e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumelt_boundscheck/SubArray{Int32/2/Base.ReshapedArray{Int32/2/SubArray{Int32/3/Array{Int32/3}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true}/Tuple{}}/Tuple{Base.Slice{Base.OneTo{Int64}}/UnitRange{Int64}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcolon_view/Matrix{Int64})"
+  },
+  {
     "datapoints": [
       [
         12.0,
@@ -3141,13 +3137,13 @@
         9.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlinear_view/Base.ReinterpretArray{Int32/3/Float64/Array{Float64/3}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumelt_boundscheck/SubArray{Int32/2/Base.ReshapedArray{Int32/2/SubArray{Int32/3/Array{Int32/3}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true}/Tuple{}}/Tuple{Base.Slice{Base.OneTo{Int64}}/UnitRange{Int64}}/true})"
+  },
+  {
     "datapoints": [
       [
         167.0,
@@ -3157,25 +3153,25 @@
         20.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(\\sumelt_boundscheck\\/\\BaseBenchmarks.ArrayBenchmarks.ArrayLF{Int32/2}\\)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlinear_view/Base.ReinterpretArray{Int32/3/Float64/Array{Float64/3}/false})"
+  },
+  {
     "datapoints": [
       [
         179.0,
         1.77318541e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlinear_view/Matrix{Float32})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(\\sumelt_boundscheck\\/\\BaseBenchmarks.ArrayBenchmarks.ArrayLF{Int32/2}\\)"
+  },
+  {
     "datapoints": [
       [
         12.0,
@@ -3193,13 +3189,13 @@
         4.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumelt/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlinear_view/Matrix{Float32})"
+  },
+  {
     "datapoints": [
       [
         185.0,
@@ -3225,13 +3221,13 @@
         185.0,
         1.773103268e12
       ]
-    ]
-  },
-  {
-    "target": "array/comprehension/(\\comprehension_collect\\/\\StepRangeLen{Float64/Base.TwicePrecision{Float64}/Base.TwicePrecision{Float64}}\\)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumelt/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/2})"
+  },
+  {
     "datapoints": [
       [
         41.0,
@@ -3241,13 +3237,13 @@
         247.00000000000003,
         1.77318541e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcolon/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/comprehension/(\\comprehension_collect\\/\\StepRangeLen{Float64/Base.TwicePrecision{Float64}/Base.TwicePrecision{Float64}}\\)"
+  },
+  {
     "datapoints": [
       [
         97.0,
@@ -3273,13 +3269,13 @@
         76.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/equality/(isequal/Vector{Int64} isequal Vector{Int16})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcolon/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32/2})"
+  },
+  {
     "datapoints": [
       [
         88.0,
@@ -3293,13 +3289,13 @@
         88.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumvector_view/Matrix{Float32})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/equality/(isequal/Vector{Int64} isequal Vector{Int16})"
+  },
+  {
     "datapoints": [
       [
         401.99999999999994,
@@ -3313,25 +3309,25 @@
         389.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumeach/SubArray{Int32/2/Matrix{Int32}/Tuple{UnitRange{Int64}/UnitRange{Int64}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumvector_view/Matrix{Float32})"
+  },
+  {
     "datapoints": [
       [
         16.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/reductions/(perf_mapreduce/Int64)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumeach/SubArray{Int32/2/Matrix{Int32}/Tuple{UnitRange{Int64}/UnitRange{Int64}}/false})"
+  },
+  {
     "datapoints": [
       [
         94.0,
@@ -3401,13 +3397,13 @@
         109.00000000000001,
         1.77318542e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(mapr_access/SubArray{Float32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32/2}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/reductions/(perf_mapreduce/Int64)"
+  },
+  {
     "datapoints": [
       [
         620.0,
@@ -3417,13 +3413,13 @@
         627.0,
         1.773103251e12
       ]
-    ]
-  },
-  {
-    "target": "array/equality/(==/Vector{Float64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(mapr_access/SubArray{Float32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32/2}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})"
+  },
+  {
     "datapoints": [
       [
         106.0,
@@ -3457,13 +3453,13 @@
         109.00000000000001,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcolon_view/SubArray{Int32/2/Array{Int32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/equality/(==/Vector{Float64})"
+  },
+  {
     "datapoints": [
       [
         210.0,
@@ -3481,13 +3477,13 @@
         302.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcolon/Matrix{Int64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcolon_view/SubArray{Int32/2/Array{Int32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})"
+  },
+  {
     "datapoints": [
       [
         115.99999999999999,
@@ -3501,25 +3497,25 @@
         118.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/growth/(append!/256)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcolon/Matrix{Int64})"
+  },
+  {
     "datapoints": [
       [
         105.0,
         1.773185406e12
       ]
-    ]
-  },
-  {
-    "target": "array/accumulate/(accumulate!/Float64)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/growth/(append!/256)"
+  },
+  {
     "datapoints": [
       [
         153.0,
@@ -3541,13 +3537,13 @@
         153.0,
         1.773185408e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumelt_boundscheck/Matrix{Int32})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/accumulate/(accumulate!/Float64)"
+  },
+  {
     "datapoints": [
       [
         860.0,
@@ -3561,13 +3557,13 @@
         152.0,
         1.773185408e12
       ]
-    ]
-  },
-  {
-    "target": "array/reductions/(sumabs2/Float64)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumelt_boundscheck/Matrix{Int32})"
+  },
+  {
     "datapoints": [
       [
         113.99999999999999,
@@ -3681,13 +3677,13 @@
         109.00000000000001,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumrange_view/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/reductions/(sumabs2/Float64)"
+  },
+  {
     "datapoints": [
       [
         190.0,
@@ -3697,25 +3693,25 @@
         153.0,
         1.773185412e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlinear/1:100000)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumrange_view/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/2})"
+  },
+  {
     "datapoints": [
       [
         3.715499e6,
         1.773103253e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumvector_view/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int32/Matrix{Int32}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlinear/1:100000)"
+  },
+  {
     "datapoints": [
       [
         152.0,
@@ -3729,25 +3725,25 @@
         150.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/any/all/(all/UnitRange{Int64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumvector_view/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int32/Matrix{Int32}/false})"
+  },
+  {
     "datapoints": [
       [
         125.0,
         1.773103253e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcolon_view/SubArray{Float32/2/Base.ReshapedArray{Float32/2/SubArray{Float32/3/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32/3}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false}/Tuple{Base.MultiplicativeInverses.SignedMultiplicativeInverse{Int64}/Base.MultiplicativeInverses.SignedMultiplicativeInverse{Int64}}}/Tuple{Base.Slice{Base.OneTo{Int64}}/UnitRange{Int64}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/any/all/(all/UnitRange{Int64})"
+  },
+  {
     "datapoints": [
       [
         225.0,
@@ -3757,13 +3753,13 @@
         45.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/bool/bitarray_true_load!",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcolon_view/SubArray{Float32/2/Base.ReshapedArray{Float32/2/SubArray{Float32/3/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32/3}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false}/Tuple{Base.MultiplicativeInverses.SignedMultiplicativeInverse{Int64}/Base.MultiplicativeInverses.SignedMultiplicativeInverse{Int64}}}/Tuple{Base.Slice{Base.OneTo{Int64}}/UnitRange{Int64}}/false})"
+  },
+  {
     "datapoints": [
       [
         94.0,
@@ -3781,13 +3777,13 @@
         106.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/equality/(isequal/Vector{Int64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/bool/bitarray_true_load!"
+  },
+  {
     "datapoints": [
       [
         88.0,
@@ -3801,13 +3797,13 @@
         88.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumvector_view/SubArray{Int32/2/Matrix{Int32}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/equality/(isequal/Vector{Int64})"
+  },
+  {
     "datapoints": [
       [
         388.0,
@@ -3825,13 +3821,13 @@
         98.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcolon/BaseBenchmarks.ArrayBenchmarks.ArrayLSLS{Int32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumvector_view/SubArray{Int32/2/Matrix{Int32}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})"
+  },
+  {
     "datapoints": [
       [
         98.0,
@@ -3857,25 +3853,25 @@
         76.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/any/all/(any/UnitRange{Int64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcolon/BaseBenchmarks.ArrayBenchmarks.ArrayLSLS{Int32/2})"
+  },
+  {
     "datapoints": [
       [
         125.0,
         1.773103253e12
       ]
-    ]
-  },
-  {
-    "target": "array/any/all/(\\all\\/\\Vector{Float32} generator\\)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/any/all/(any/UnitRange{Int64})"
+  },
+  {
     "datapoints": [
       [
         78.0,
@@ -3885,13 +3881,13 @@
         129.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcolon/BaseBenchmarks.ArrayBenchmarks.ArrayLF{Int32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/any/all/(\\all\\/\\Vector{Float32} generator\\)"
+  },
+  {
     "datapoints": [
       [
         78.0,
@@ -3913,13 +3909,13 @@
         59.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcolon/SubArray{Float32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32/2}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcolon/BaseBenchmarks.ArrayBenchmarks.ArrayLF{Int32/2})"
+  },
+  {
     "datapoints": [
       [
         76.0,
@@ -3937,13 +3933,13 @@
         77.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/3d",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcolon/SubArray{Float32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32/2}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})"
+  },
+  {
     "datapoints": [
       [
         106.0,
@@ -4009,13 +4005,13 @@
         154.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcolon_view/SubArray{Int32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/3d"
+  },
+  {
     "datapoints": [
       [
         213.0,
@@ -4029,25 +4025,25 @@
         169.0,
         1.773185415e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcartesian/SubArray{Int32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/2}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcolon_view/SubArray{Int32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})"
+  },
+  {
     "datapoints": [
       [
         16.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/equality/(isequal/Vector{Int64} isequal Vector{Float64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcartesian/SubArray{Int32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/2}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})"
+  },
+  {
     "datapoints": [
       [
         106.0,
@@ -4109,13 +4105,13 @@
         115.99999999999999,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/comprehension/(comprehension_collect/Vector{Float64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/equality/(isequal/Vector{Int64} isequal Vector{Float64})"
+  },
+  {
     "datapoints": [
       [
         91.0,
@@ -4149,13 +4145,13 @@
         322.0,
         1.773185408e12
       ]
-    ]
-  },
-  {
-    "target": "array/reductions/(sumabs/Float64)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/comprehension/(comprehension_collect/Vector{Float64})"
+  },
+  {
     "datapoints": [
       [
         105.0,
@@ -4181,13 +4177,13 @@
         90.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/any/all/(any/BitArray)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/reductions/(sumabs/Float64)"
+  },
+  {
     "datapoints": [
       [
         93.0,
@@ -4205,25 +4201,25 @@
         93.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumrange_view/SubArray{Float32/2/Base.ReshapedArray{Float32/2/SubArray{Float32/3/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32/3}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false}/Tuple{Base.MultiplicativeInverses.SignedMultiplicativeInverse{Int64}/Base.MultiplicativeInverses.SignedMultiplicativeInverse{Int64}}}/Tuple{Base.Slice{Base.OneTo{Int64}}/UnitRange{Int64}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/any/all/(any/BitArray)"
+  },
+  {
     "datapoints": [
       [
         43.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/any/all/(any/Vector{Float64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumrange_view/SubArray{Float32/2/Base.ReshapedArray{Float32/2/SubArray{Float32/3/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32/3}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false}/Tuple{Base.MultiplicativeInverses.SignedMultiplicativeInverse{Int64}/Base.MultiplicativeInverses.SignedMultiplicativeInverse{Int64}}}/Tuple{Base.Slice{Base.OneTo{Int64}}/UnitRange{Int64}}/false})"
+  },
+  {
     "datapoints": [
       [
         78.0,
@@ -4269,13 +4265,13 @@
         107.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/growth/(prerend!/256)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/any/all/(any/Vector{Float64})"
+  },
+  {
     "datapoints": [
       [
         50.0,
@@ -4293,13 +4289,13 @@
         50.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/any/all/(all/Vector{Bool})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/growth/(prerend!/256)"
+  },
+  {
     "datapoints": [
       [
         81.0,
@@ -4313,13 +4309,13 @@
         81.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/cat/(vcat/5)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/any/all/(all/Vector{Bool})"
+  },
+  {
     "datapoints": [
       [
         95.0,
@@ -4349,13 +4345,13 @@
         106.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(mapr_access/BaseBenchmarks.ArrayBenchmarks.ArrayLF{Int32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/cat/(vcat/5)"
+  },
+  {
     "datapoints": [
       [
         330.0,
@@ -4365,13 +4361,13 @@
         329.0,
         1.773103251e12
       ]
-    ]
-  },
-  {
-    "target": "array/subarray/(gramschmidt!/100)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(mapr_access/BaseBenchmarks.ArrayBenchmarks.ArrayLF{Int32/2})"
+  },
+  {
     "datapoints": [
       [
         107.0,
@@ -4417,13 +4413,13 @@
         127.0,
         1.773185415e12
       ]
-    ]
-  },
-  {
-    "target": "array/comprehension/(\\comprehension_collect\\/\\Vector{Float64}\\)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/subarray/(gramschmidt!/100)"
+  },
+  {
     "datapoints": [
       [
         33.0,
@@ -4433,13 +4429,13 @@
         311.0,
         1.77318541e12
       ]
-    ]
-  },
-  {
-    "target": "array/any/all/(any/Vector{Bool})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/comprehension/(\\comprehension_collect\\/\\Vector{Float64}\\)"
+  },
+  {
     "datapoints": [
       [
         81.0,
@@ -4453,13 +4449,13 @@
         81.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumrange/SubArray{Int32/2/Matrix{Int32}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/any/all/(any/Vector{Bool})"
+  },
+  {
     "datapoints": [
       [
         75.0,
@@ -4473,13 +4469,13 @@
         77.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcartesian/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumrange/SubArray{Int32/2/Matrix{Int32}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})"
+  },
+  {
     "datapoints": [
       [
         611.0,
@@ -4489,13 +4485,13 @@
         626.0,
         1.773103251e12
       ]
-    ]
-  },
-  {
-    "target": "array/growth/(push_single!/8)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcartesian/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/2})"
+  },
+  {
     "datapoints": [
       [
         108.0,
@@ -4601,25 +4597,25 @@
         107.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumvector_view/SubArray{Int32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/2}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/growth/(push_single!/8)"
+  },
+  {
     "datapoints": [
       [
         99.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumelt_boundscheck/SubArray{Int32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumvector_view/SubArray{Int32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/2}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})"
+  },
+  {
     "datapoints": [
       [
         159.0,
@@ -4629,13 +4625,13 @@
         175.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(mapr_access/Matrix{Float64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumelt_boundscheck/SubArray{Int32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})"
+  },
+  {
     "datapoints": [
       [
         540.0,
@@ -4645,13 +4641,13 @@
         540.0,
         1.773103251e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumrange/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(mapr_access/Matrix{Float64})"
+  },
+  {
     "datapoints": [
       [
         78.0,
@@ -4665,13 +4661,13 @@
         77.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/any/all/(all/Vector{Int16} generator)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumrange/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32/2})"
+  },
+  {
     "datapoints": [
       [
         81.0,
@@ -4685,13 +4681,13 @@
         81.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/any/all/(all/Vector{Int64} generator)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/any/all/(all/Vector{Int16} generator)"
+  },
+  {
     "datapoints": [
       [
         92.0,
@@ -4713,13 +4709,13 @@
         120.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/any/all/(any/Vector{Float32} generator)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/any/all/(all/Vector{Int64} generator)"
+  },
+  {
     "datapoints": [
       [
         129.0,
@@ -4765,13 +4761,13 @@
         130.0,
         1.77318542e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(mapr_access/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/any/all/(any/Vector{Float32} generator)"
+  },
+  {
     "datapoints": [
       [
         643.0,
@@ -4781,13 +4777,13 @@
         551.0,
         1.773103251e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcolon/SubArray{Float32/2/Matrix{Float32}/Tuple{UnitRange{Int64}/UnitRange{Int64}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(mapr_access/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32/2})"
+  },
+  {
     "datapoints": [
       [
         76.0,
@@ -4813,13 +4809,13 @@
         74.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/comprehension/(collect/StepRangeLen{Float64/Base.TwicePrecision{Float64}/Base.TwicePrecision{Float64}})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcolon/SubArray{Float32/2/Matrix{Float32}/Tuple{UnitRange{Int64}/UnitRange{Int64}}/false})"
+  },
+  {
     "datapoints": [
       [
         249.00000000000003,
@@ -4829,13 +4825,13 @@
         249.00000000000003,
         1.773185408e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumeach_view/Matrix{Int64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/comprehension/(collect/StepRangeLen{Float64/Base.TwicePrecision{Float64}/Base.TwicePrecision{Float64}})"
+  },
+  {
     "datapoints": [
       [
         49.0,
@@ -4853,25 +4849,25 @@
         2.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlinear/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int64/Matrix{Int64}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumeach_view/Matrix{Int64})"
+  },
+  {
     "datapoints": [
       [
         223.0,
         1.773103253e12
       ]
-    ]
-  },
-  {
-    "target": "array/equality/(\\==\\/\\Vector{Int64} == Vector{Float32}\\)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlinear/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int64/Matrix{Int64}/false})"
+  },
+  {
     "datapoints": [
       [
         130.0,
@@ -4881,13 +4877,13 @@
         77.0,
         1.77318541e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlinear/BaseBenchmarks.ArrayBenchmarks.ArrayLF{Int32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/equality/(\\==\\/\\Vector{Int64} == Vector{Float32}\\)"
+  },
+  {
     "datapoints": [
       [
         620.0,
@@ -4897,13 +4893,13 @@
         152.0,
         1.773185408e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcolon_view/SubArray{Int32/2/Base.ReshapedArray{Int32/2/SubArray{Int32/3/Array{Int32/3}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true}/Tuple{}}/Tuple{Base.Slice{Base.OneTo{Int64}}/UnitRange{Int64}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlinear/BaseBenchmarks.ArrayBenchmarks.ArrayLF{Int32/2})"
+  },
+  {
     "datapoints": [
       [
         336.0,
@@ -4913,13 +4909,13 @@
         199.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/4d",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcolon_view/SubArray{Int32/2/Base.ReshapedArray{Int32/2/SubArray{Int32/3/Array{Int32/3}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true}/Tuple{}}/Tuple{Base.Slice{Base.OneTo{Int64}}/UnitRange{Int64}}/true})"
+  },
+  {
     "datapoints": [
       [
         147.0,
@@ -4941,13 +4937,13 @@
         146.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/accumulate/(cumsum!/Float64/dim2)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/4d"
+  },
+  {
     "datapoints": [
       [
         93.0,
@@ -5049,13 +5045,13 @@
         110.00000000000001,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/comprehension/(comprehension_iteration/StepRangeLen{Float64/Base.TwicePrecision{Float64}/Base.TwicePrecision{Float64}})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/accumulate/(cumsum!/Float64/dim2)"
+  },
+  {
     "datapoints": [
       [
         123.0,
@@ -5065,13 +5061,13 @@
         123.0,
         1.773185408e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlogical_view/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int64/Matrix{Int64}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/comprehension/(comprehension_iteration/StepRangeLen{Float64/Base.TwicePrecision{Float64}/Base.TwicePrecision{Float64}})"
+  },
+  {
     "datapoints": [
       [
         96.0,
@@ -5085,13 +5081,13 @@
         99.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/reductions/(norm1/Int64)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlogical_view/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int64/Matrix{Int64}/false})"
+  },
+  {
     "datapoints": [
       [
         10.0,
@@ -5105,49 +5101,49 @@
         47.0,
         1.773185415e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumeach_view/100000:-1:1)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/reductions/(norm1/Int64)"
+  },
+  {
     "datapoints": [
       [
         153.0,
         1.773103254e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumelt_boundscheck/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Float32}/2/Float64/Matrix{Float64}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumeach_view/100000:-1:1)"
+  },
+  {
     "datapoints": [
       [
         175.0,
         1.773185408e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlinear/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int32/Matrix{Int32}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumelt_boundscheck/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Float32}/2/Float64/Matrix{Float64}/false})"
+  },
+  {
     "datapoints": [
       [
         351.0,
         1.773103253e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlogical_view/SubArray{Int32/2/Matrix{Int32}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlinear/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int32/Matrix{Int32}/false})"
+  },
+  {
     "datapoints": [
       [
         100.0,
@@ -5161,13 +5157,13 @@
         101.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcolon/Matrix{Float64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlogical_view/SubArray{Int32/2/Matrix{Int32}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})"
+  },
+  {
     "datapoints": [
       [
         119.0,
@@ -5181,13 +5177,13 @@
         121.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/convert/(Int/Complex{Float64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcolon/Matrix{Float64})"
+  },
+  {
     "datapoints": [
       [
         128.0,
@@ -5213,13 +5209,13 @@
         106.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/comprehension/(\\collect\\/\\Vector{Float64}\\)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/convert/(Int/Complex{Float64})"
+  },
+  {
     "datapoints": [
       [
         30.0,
@@ -5229,13 +5225,13 @@
         338.0,
         1.77318541e12
       ]
-    ]
-  },
-  {
-    "target": "array/equality/(==/Vector{Int16})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/comprehension/(\\collect\\/\\Vector{Float64}\\)"
+  },
+  {
     "datapoints": [
       [
         94.0,
@@ -5249,13 +5245,13 @@
         106.0,
         1.773103256e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumrange/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Float32}/2/Float32/Matrix{Float32}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/equality/(==/Vector{Int16})"
+  },
+  {
     "datapoints": [
       [
         68.0,
@@ -5269,13 +5265,13 @@
         68.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(mapr_access/BaseBenchmarks.ArrayBenchmarks.ArrayLSLS{Float32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumrange/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Float32}/2/Float32/Matrix{Float32}/false})"
+  },
+  {
     "datapoints": [
       [
         646.0,
@@ -5285,13 +5281,13 @@
         551.0,
         1.773103251e12
       ]
-    ]
-  },
-  {
-    "target": "array/any/all/(any/Vector{Int64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(mapr_access/BaseBenchmarks.ArrayBenchmarks.ArrayLSLS{Float32/2})"
+  },
+  {
     "datapoints": [
       [
         92.0,
@@ -5313,13 +5309,13 @@
         120.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumrange/SubArray{Int32/2/Array{Int32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/any/all/(any/Vector{Int64})"
+  },
+  {
     "datapoints": [
       [
         81.0,
@@ -5337,13 +5333,13 @@
         81.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/cat/(hvcat/5)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumrange/SubArray{Int32/2/Array{Int32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})"
+  },
+  {
     "datapoints": [
       [
         107.0,
@@ -5373,37 +5369,37 @@
         103.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/any/all/(\\all\\/\\Vector{Float64} generator\\)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/cat/(hvcat/5)"
+  },
+  {
     "datapoints": [
       [
         127.0,
         1.77318541e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcolon_view/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Float32}/2/Float64/Matrix{Float64}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/any/all/(\\all\\/\\Vector{Float64} generator\\)"
+  },
+  {
     "datapoints": [
       [
         17.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlogical_view/BaseBenchmarks.ArrayBenchmarks.ArrayLF{Float32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcolon_view/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Float32}/2/Float64/Matrix{Float64}/false})"
+  },
+  {
     "datapoints": [
       [
         100.0,
@@ -5417,13 +5413,13 @@
         101.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/2d",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlogical_view/BaseBenchmarks.ArrayBenchmarks.ArrayLF{Float32/2})"
+  },
+  {
     "datapoints": [
       [
         107.0,
@@ -5469,13 +5465,13 @@
         105.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/accumulate/(cumsum/Float64)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/2d"
+  },
+  {
     "datapoints": [
       [
         141.0,
@@ -5509,13 +5505,13 @@
         112.00000000000001,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/subarray/(gramschmidt!/250)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/accumulate/(cumsum/Float64)"
+  },
+  {
     "datapoints": [
       [
         109.00000000000001,
@@ -5533,13 +5529,13 @@
         114.99999999999999,
         1.773185415e12
       ]
-    ]
-  },
-  {
-    "target": "array/equality/(isequal/Vector{Int16})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/subarray/(gramschmidt!/250)"
+  },
+  {
     "datapoints": [
       [
         88.0,
@@ -5553,13 +5549,13 @@
         88.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlogical_view/SubArray{Float32/2/Array{Float32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/equality/(isequal/Vector{Int16})"
+  },
+  {
     "datapoints": [
       [
         99.0,
@@ -5573,13 +5569,13 @@
         102.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/reverse/rev_load_fast!",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlogical_view/SubArray{Float32/2/Array{Float32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})"
+  },
+  {
     "datapoints": [
       [
         94.0,
@@ -5697,13 +5693,13 @@
         105.0,
         1.773185418e12
       ]
-    ]
-  },
-  {
-    "target": "array/equality/(isequal/Vector{Float64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/reverse/rev_load_fast!"
+  },
+  {
     "datapoints": [
       [
         117.0,
@@ -5737,25 +5733,25 @@
         117.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(mapr_access/BitMatrix)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/equality/(isequal/Vector{Float64})"
+  },
+  {
     "datapoints": [
       [
         28.999999999999996,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/any/all/(all/Vector{Int64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(mapr_access/BitMatrix)"
+  },
+  {
     "datapoints": [
       [
         92.0,
@@ -5777,13 +5773,13 @@
         120.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumeach_view/Matrix{Int32})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/any/all/(all/Vector{Int64})"
+  },
+  {
     "datapoints": [
       [
         25.0,
@@ -5801,13 +5797,13 @@
         2.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/equality/(==/UnitRange{Int64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumeach_view/Matrix{Int32})"
+  },
+  {
     "datapoints": [
       [
         109.00000000000001,
@@ -5957,13 +5953,13 @@
         91.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcolon/SubArray{Int32/2/Matrix{Int32}/Tuple{UnitRange{Int64}/UnitRange{Int64}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/equality/(==/UnitRange{Int64})"
+  },
+  {
     "datapoints": [
       [
         73.0,
@@ -5993,13 +5989,13 @@
         71.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/subarray/(lucompletepivSub!/100)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcolon/SubArray{Int32/2/Matrix{Int32}/Tuple{UnitRange{Int64}/UnitRange{Int64}}/false})"
+  },
+  {
     "datapoints": [
       [
         138.0,
@@ -6013,13 +6009,13 @@
         91.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(mapr_access/SubArray{Float32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/subarray/(lucompletepivSub!/100)"
+  },
+  {
     "datapoints": [
       [
         694.0,
@@ -6033,13 +6029,13 @@
         155.0,
         1.773185418e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(mapr_access/SubArray{Int32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/2}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(mapr_access/SubArray{Float32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})"
+  },
+  {
     "datapoints": [
       [
         371.0,
@@ -6049,13 +6045,13 @@
         382.0,
         1.773103251e12
       ]
-    ]
-  },
-  {
-    "target": "array/cat/(catnd_setind/500)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(mapr_access/SubArray{Int32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/2}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})"
+  },
+  {
     "datapoints": [
       [
         81.0,
@@ -6073,13 +6069,13 @@
         82.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlogical_view/Matrix{Float64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/cat/(catnd_setind/500)"
+  },
+  {
     "datapoints": [
       [
         100.0,
@@ -6093,13 +6089,13 @@
         100.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcolon/SubArray{Int32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/2}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlogical_view/Matrix{Float64})"
+  },
+  {
     "datapoints": [
       [
         74.0,
@@ -6125,13 +6121,13 @@
         77.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumeach/BaseBenchmarks.ArrayBenchmarks.ArrayLF{Int32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcolon/SubArray{Int32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/2}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})"
+  },
+  {
     "datapoints": [
       [
         859.0,
@@ -6141,13 +6137,13 @@
         152.0,
         1.773185408e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumrange_view/BaseBenchmarks.ArrayBenchmarks.ArrayLSLS{Int32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumeach/BaseBenchmarks.ArrayBenchmarks.ArrayLF{Int32/2})"
+  },
+  {
     "datapoints": [
       [
         194.0,
@@ -6157,13 +6153,13 @@
         153.0,
         1.773185412e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumvector_view/SubArray{Float32/2/Array{Float32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumrange_view/BaseBenchmarks.ArrayBenchmarks.ArrayLSLS{Int32/2})"
+  },
+  {
     "datapoints": [
       [
         426.0,
@@ -6181,13 +6177,13 @@
         104.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(mapr_access/BaseBenchmarks.ArrayBenchmarks.ArrayLF{Float32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumvector_view/SubArray{Float32/2/Array{Float32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})"
+  },
+  {
     "datapoints": [
       [
         484.99999999999994,
@@ -6197,13 +6193,13 @@
         484.99999999999994,
         1.773103251e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumrange/SubArray{Float32/2/Array{Float32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(mapr_access/BaseBenchmarks.ArrayBenchmarks.ArrayLF{Float32/2})"
+  },
+  {
     "datapoints": [
       [
         80.0,
@@ -6221,13 +6217,13 @@
         79.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcolon_view/SubArray{Int32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/2}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumrange/SubArray{Float32/2/Array{Float32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})"
+  },
+  {
     "datapoints": [
       [
         189.0,
@@ -6241,13 +6237,13 @@
         177.0,
         1.773185415e12
       ]
-    ]
-  },
-  {
-    "target": "array/cat/(catnd/5)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcolon_view/SubArray{Int32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/2}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})"
+  },
+  {
     "datapoints": [
       [
         120.0,
@@ -6341,13 +6337,13 @@
         109.00000000000001,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(\\sumelt_boundscheck\\/\\100000:-1:1\\)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/cat/(catnd/5)"
+  },
+  {
     "datapoints": [
       [
         200.0,
@@ -6357,13 +6353,13 @@
         200.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "array/any/all/(any/Vector{Float64} generator)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(\\sumelt_boundscheck\\/\\100000:-1:1\\)"
+  },
+  {
     "datapoints": [
       [
         127.0,
@@ -6425,25 +6421,25 @@
         107.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/reductions/(\\sum\\/\\Float64\\)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/any/all/(any/Vector{Float64} generator)"
+  },
+  {
     "datapoints": [
       [
         95.0,
         1.773103271e12
       ]
-    ]
-  },
-  {
-    "target": "array/setindex!/(setindex!/2)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/reductions/(\\sum\\/\\Float64\\)"
+  },
+  {
     "datapoints": [
       [
         93.0,
@@ -6505,13 +6501,13 @@
         118.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlogical_view/SubArray{Float32/2/Matrix{Float32}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/setindex!/(setindex!/2)"
+  },
+  {
     "datapoints": [
       [
         99.0,
@@ -6525,13 +6521,13 @@
         95.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcartesian/Matrix{Int32})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlogical_view/SubArray{Float32/2/Matrix{Float32}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})"
+  },
+  {
     "datapoints": [
       [
         630.0,
@@ -6541,13 +6537,13 @@
         627.0,
         1.773103251e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumeach_view/Array{Float64/3})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcartesian/Matrix{Int32})"
+  },
+  {
     "datapoints": [
       [
         12.0,
@@ -6565,13 +6561,13 @@
         4.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/comprehension/(\\comprehension_indexing\\/\\Vector{Float64}\\)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumeach_view/Array{Float64/3})"
+  },
+  {
     "datapoints": [
       [
         61.0,
@@ -6581,25 +6577,25 @@
         140.0,
         1.77318541e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumvector_view/SubArray{Int32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/comprehension/(\\comprehension_indexing\\/\\Vector{Float64}\\)"
+  },
+  {
     "datapoints": [
       [
         89.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "array/accumulate/(cumsum/Int)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumvector_view/SubArray{Int32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})"
+  },
+  {
     "datapoints": [
       [
         74.0,
@@ -6665,25 +6661,25 @@
         109.00000000000001,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcolon_view/SubArray{Int32/2/Base.ReshapedArray{Int32/2/SubArray{Int32/3/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/3}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false}/Tuple{Base.MultiplicativeInverses.SignedMultiplicativeInverse{Int64}/Base.MultiplicativeInverses.SignedMultiplicativeInverse{Int64}}}/Tuple{Base.Slice{Base.OneTo{Int64}}/UnitRange{Int64}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/accumulate/(cumsum/Int)"
+  },
+  {
     "datapoints": [
       [
         215.0,
         1.773103262e12
       ]
-    ]
-  },
-  {
-    "target": "array/cat/(hvcat/500)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcolon_view/SubArray{Int32/2/Base.ReshapedArray{Int32/2/SubArray{Int32/3/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/3}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false}/Tuple{Base.MultiplicativeInverses.SignedMultiplicativeInverse{Int64}/Base.MultiplicativeInverses.SignedMultiplicativeInverse{Int64}}}/Tuple{Base.Slice{Base.OneTo{Int64}}/UnitRange{Int64}}/false})"
+  },
+  {
     "datapoints": [
       [
         132.0,
@@ -6693,13 +6689,13 @@
         107.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/equality/(==/Vector{Int64} == Vector{Float64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/cat/(hvcat/500)"
+  },
+  {
     "datapoints": [
       [
         147.0,
@@ -6757,13 +6753,13 @@
         112.99999999999999,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/subarray/(lucompletepivSub!/1000)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/equality/(==/Vector{Int64} == Vector{Float64})"
+  },
+  {
     "datapoints": [
       [
         94.0,
@@ -6793,13 +6789,13 @@
         106.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/reductions/(sum/Int64)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/subarray/(lucompletepivSub!/1000)"
+  },
+  {
     "datapoints": [
       [
         106.0,
@@ -6853,13 +6849,13 @@
         107.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlinear/SubArray{Int32/2/Matrix{Int32}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/reductions/(sum/Int64)"
+  },
+  {
     "datapoints": [
       [
         863.0000000000001,
@@ -6869,13 +6865,13 @@
         152.0,
         1.773185408e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumeach_view/Matrix{Float64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlinear/SubArray{Int32/2/Matrix{Int32}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})"
+  },
+  {
     "datapoints": [
       [
         23.0,
@@ -6893,13 +6889,13 @@
         4.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/accumulate/(accumulate/Int)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumeach_view/Matrix{Float64})"
+  },
+  {
     "datapoints": [
       [
         157.0,
@@ -6961,49 +6957,49 @@
         94.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "array/setindex!/(\\setindex!\\/5)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/accumulate/(accumulate/Int)"
+  },
+  {
     "datapoints": [
       [
         125.0,
         1.773103271e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcolon_view/SubArray{Int32/2/Matrix{Int32}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/setindex!/(\\setindex!\\/5)"
+  },
+  {
     "datapoints": [
       [
         187.0,
         1.773103253e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumeach_view/1:100000)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcolon_view/SubArray{Int32/2/Matrix{Int32}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})"
+  },
+  {
     "datapoints": [
       [
         160.0,
         1.7731854e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumrange/BaseBenchmarks.ArrayBenchmarks.ArrayLSLS{Int32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumeach_view/1:100000)"
+  },
+  {
     "datapoints": [
       [
         75.0,
@@ -7017,25 +7013,25 @@
         76.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumelt/SubArray{Int32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumrange/BaseBenchmarks.ArrayBenchmarks.ArrayLSLS{Int32/2})"
+  },
+  {
     "datapoints": [
       [
         154.0,
         1.773185414e12
       ]
-    ]
-  },
-  {
-    "target": "array/subarray/(lucompletepivCopy!/1000)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumelt/SubArray{Int32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})"
+  },
+  {
     "datapoints": [
       [
         105.0,
@@ -7085,49 +7081,49 @@
         109.00000000000001,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumelt_boundscheck/1:100000)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/subarray/(lucompletepivCopy!/1000)"
+  },
+  {
     "datapoints": [
       [
         167.0,
         1.773103253e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumeach_view/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int32/Matrix{Int32}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumelt_boundscheck/1:100000)"
+  },
+  {
     "datapoints": [
       [
         15.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/equality/(\\==\\/\\Vector{Int64} == UnitRange{Int64}\\)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumeach_view/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int32/Matrix{Int32}/false})"
+  },
+  {
     "datapoints": [
       [
         133.0,
         1.773185401e12
       ]
-    ]
-  },
-  {
-    "target": "array/cat/(vcat_setind/5)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/equality/(\\==\\/\\Vector{Int64} == UnitRange{Int64}\\)"
+  },
+  {
     "datapoints": [
       [
         88.0,
@@ -7161,49 +7157,49 @@
         107.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/reductions/(norminf/Float64)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/cat/(vcat_setind/5)"
+  },
+  {
     "datapoints": [
       [
         72.0,
         1.773185405e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumeach/SubArray{Int32/2/Base.ReshapedArray{Int32/2/SubArray{Int32/3/Array{Int32/3}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true}/Tuple{}}/Tuple{Base.Slice{Base.OneTo{Int64}}/UnitRange{Int64}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/reductions/(norminf/Float64)"
+  },
+  {
     "datapoints": [
       [
         1480.0,
         1.773103253e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumeach_view/Base.ReinterpretArray{Float32/2/Int32/Matrix{Int32}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumeach/SubArray{Int32/2/Base.ReshapedArray{Int32/2/SubArray{Int32/3/Array{Int32/3}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true}/Tuple{}}/Tuple{Base.Slice{Base.OneTo{Int64}}/UnitRange{Int64}}/true})"
+  },
+  {
     "datapoints": [
       [
         3.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/accumulate/(cumsum!/Int)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumeach_view/Base.ReinterpretArray{Float32/2/Int32/Matrix{Int32}/false})"
+  },
+  {
     "datapoints": [
       [
         60.0,
@@ -7269,13 +7265,13 @@
         195.0,
         1.773185408e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlogical/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int64/Matrix{Int64}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/accumulate/(cumsum!/Int)"
+  },
+  {
     "datapoints": [
       [
         107.0,
@@ -7289,13 +7285,13 @@
         108.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcartesian/100000:-1:1)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlogical/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int64/Matrix{Int64}/false})"
+  },
+  {
     "datapoints": [
       [
         280.0,
@@ -7309,25 +7305,25 @@
         0.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/accumulate/(\\cumsum!\\/\\Float64\\/\\dim1\\)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcartesian/100000:-1:1)"
+  },
+  {
     "datapoints": [
       [
         107.0,
         1.77318541e12
       ]
-    ]
-  },
-  {
-    "target": "array/cat/(catnd_setind/5)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/accumulate/(\\cumsum!\\/\\Float64\\/\\dim1\\)"
+  },
+  {
     "datapoints": [
       [
         109.00000000000001,
@@ -7377,13 +7373,13 @@
         86.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/setindex!/(setindex!/4)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/cat/(catnd_setind/5)"
+  },
+  {
     "datapoints": [
       [
         112.00000000000001,
@@ -7445,13 +7441,13 @@
         118.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "array/accumulate/(cumsum!/Float64)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/setindex!/(setindex!/4)"
+  },
+  {
     "datapoints": [
       [
         150.0,
@@ -7473,13 +7469,13 @@
         149.0,
         1.773185408e12
       ]
-    ]
-  },
-  {
-    "target": "array/reductions/(mean/Int64)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/accumulate/(cumsum!/Float64)"
+  },
+  {
     "datapoints": [
       [
         51.0,
@@ -7489,25 +7485,25 @@
         51.0,
         1.773185415e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumeach_view/BaseBenchmarks.ArrayBenchmarks.ArrayLF{Float32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/reductions/(mean/Int64)"
+  },
+  {
     "datapoints": [
       [
         47.0,
         1.773185407e12
       ]
-    ]
-  },
-  {
-    "target": "array/growth/(\\push_single!\\/256)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumeach_view/BaseBenchmarks.ArrayBenchmarks.ArrayLF{Float32/2})"
+  },
+  {
     "datapoints": [
       [
         95.0,
@@ -7517,13 +7513,13 @@
         106.0,
         1.77318541e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumrange/SubArray{Float32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/growth/(\\push_single!\\/256)"
+  },
+  {
     "datapoints": [
       [
         80.0,
@@ -7541,13 +7537,13 @@
         79.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumvector_view/Base.ReinterpretArray{Float32/2/Int32/Matrix{Int32}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumrange/SubArray{Float32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})"
+  },
+  {
     "datapoints": [
       [
         418.0,
@@ -7561,25 +7557,25 @@
         424.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcolon/SubArray{Int32/2/Base.ReshapedArray{Int32/2/SubArray{Int32/3/Array{Int32/3}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true}/Tuple{}}/Tuple{Base.Slice{Base.OneTo{Int64}}/UnitRange{Int64}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumvector_view/Base.ReinterpretArray{Float32/2/Int32/Matrix{Int32}/false})"
+  },
+  {
     "datapoints": [
       [
         150.0,
         1.773103267e12
       ]
-    ]
-  },
-  {
-    "target": "array/comprehension/(collect/StepRangeLen{Float64/Base.TwicePrecision{Float64}/Base.TwicePrecision{Float64}/Int64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcolon/SubArray{Int32/2/Base.ReshapedArray{Int32/2/SubArray{Int32/3/Array{Int32/3}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true}/Tuple{}}/Tuple{Base.Slice{Base.OneTo{Int64}}/UnitRange{Int64}}/true})"
+  },
+  {
     "datapoints": [
       [
         56.99999999999999,
@@ -7597,13 +7593,13 @@
         53.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlogical_view/SubArray{Float32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/comprehension/(collect/StepRangeLen{Float64/Base.TwicePrecision{Float64}/Base.TwicePrecision{Float64}/Int64})"
+  },
+  {
     "datapoints": [
       [
         100.0,
@@ -7617,13 +7613,13 @@
         98.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumrange_view/SubArray{Int32/2/Array{Int32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlogical_view/SubArray{Float32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})"
+  },
+  {
     "datapoints": [
       [
         211.0,
@@ -7641,37 +7637,37 @@
         298.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlinear_view/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int32/Matrix{Int32}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumrange_view/SubArray{Int32/2/Array{Int32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})"
+  },
+  {
     "datapoints": [
       [
         15.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlinear_view/BaseBenchmarks.ArrayBenchmarks.ArrayLF{Int32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlinear_view/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int32/Matrix{Int32}/false})"
+  },
+  {
     "datapoints": [
       [
         151.0,
         1.773185408e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlogical_view/Matrix{Int32})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlinear_view/BaseBenchmarks.ArrayBenchmarks.ArrayLF{Int32/2})"
+  },
+  {
     "datapoints": [
       [
         100.0,
@@ -7685,13 +7681,13 @@
         102.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/any/all/(\\any\\/\\Vector{Float64} generator\\)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlogical_view/Matrix{Int32})"
+  },
+  {
     "datapoints": [
       [
         78.0,
@@ -7701,13 +7697,13 @@
         128.0,
         1.77318541e12
       ]
-    ]
-  },
-  {
-    "target": "array/convert/(Int/Float64)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/any/all/(\\any\\/\\Vector{Float64} generator\\)"
+  },
+  {
     "datapoints": [
       [
         113.99999999999999,
@@ -7717,13 +7713,13 @@
         86.0,
         1.773185402e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlogical_view/SubArray{Float32/2/Matrix{Float32}/Tuple{UnitRange{Int64}/UnitRange{Int64}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/convert/(Int/Float64)"
+  },
+  {
     "datapoints": [
       [
         97.0,
@@ -7737,25 +7733,25 @@
         99.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumrange_view/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int64/Matrix{Int64}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlogical_view/SubArray{Float32/2/Matrix{Float32}/Tuple{UnitRange{Int64}/UnitRange{Int64}}/false})"
+  },
+  {
     "datapoints": [
       [
         37.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(mapr_access/SubArray{Float32/2/Matrix{Float32}/Tuple{UnitRange{Int64}/UnitRange{Int64}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumrange_view/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int64/Matrix{Int64}/false})"
+  },
+  {
     "datapoints": [
       [
         843.0,
@@ -7769,13 +7765,13 @@
         444.00000000000006,
         1.773103253e12
       ]
-    ]
-  },
-  {
-    "target": "array/setindex!/(setindex!/3)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(mapr_access/SubArray{Float32/2/Matrix{Float32}/Tuple{UnitRange{Int64}/UnitRange{Int64}}/false})"
+  },
+  {
     "datapoints": [
       [
         123.0,
@@ -7837,13 +7833,13 @@
         108.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(mapr_access/Matrix{Int32})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/setindex!/(setindex!/3)"
+  },
+  {
     "datapoints": [
       [
         405.0,
@@ -7853,13 +7849,13 @@
         405.99999999999994,
         1.773103251e12
       ]
-    ]
-  },
-  {
-    "target": "array/growth/(prerend!/8)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(mapr_access/Matrix{Int32})"
+  },
+  {
     "datapoints": [
       [
         86.0,
@@ -7897,13 +7893,13 @@
         66.0,
         1.773185418e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumvector_view/Matrix{Int64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/growth/(prerend!/8)"
+  },
+  {
     "datapoints": [
       [
         360.0,
@@ -7917,13 +7913,13 @@
         355.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlogical_view/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumvector_view/Matrix{Int64})"
+  },
+  {
     "datapoints": [
       [
         99.0,
@@ -7937,13 +7933,13 @@
         97.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/convert/(\\Float64\\/\\Int\\)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlogical_view/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/2})"
+  },
+  {
     "datapoints": [
       [
         83.0,
@@ -7953,13 +7949,13 @@
         132.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "array/equality/(==/Vector{Int64} == Vector{Int64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/convert/(\\Float64\\/\\Int\\)"
+  },
+  {
     "datapoints": [
       [
         107.0,
@@ -7969,25 +7965,25 @@
         94.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumeach/1:100000)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/equality/(==/Vector{Int64} == Vector{Int64})"
+  },
+  {
     "datapoints": [
       [
         2.976107e6,
         1.773103253e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumrange/BaseBenchmarks.ArrayBenchmarks.ArrayLSLS{Float32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumeach/1:100000)"
+  },
+  {
     "datapoints": [
       [
         73.0,
@@ -8001,13 +7997,13 @@
         76.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumelt/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Float32}/2/Float32/Matrix{Float32}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumrange/BaseBenchmarks.ArrayBenchmarks.ArrayLSLS{Float32/2})"
+  },
+  {
     "datapoints": [
       [
         154.0,
@@ -8029,13 +8025,13 @@
         181.0,
         1.773185408e12
       ]
-    ]
-  },
-  {
-    "target": "array/comprehension/(\\comprehension_iteration\\/\\Vector{Float64}\\)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumelt/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Float32}/2/Float32/Matrix{Float32}/false})"
+  },
+  {
     "datapoints": [
       [
         106.0,
@@ -8049,13 +8045,13 @@
         141.0,
         1.77318541e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumvector_view/SubArray{Int32/2/Array{Int32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/comprehension/(\\comprehension_iteration\\/\\Vector{Float64}\\)"
+  },
+  {
     "datapoints": [
       [
         326.0,
@@ -8073,13 +8069,13 @@
         93.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumelt_boundscheck/BaseBenchmarks.ArrayBenchmarks.ArrayLF{Int32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumvector_view/SubArray{Int32/2/Array{Int32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})"
+  },
+  {
     "datapoints": [
       [
         178.0,
@@ -8117,49 +8113,49 @@
         25.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumeach/Matrix{Int64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumelt_boundscheck/BaseBenchmarks.ArrayBenchmarks.ArrayLF{Int32/2})"
+  },
+  {
     "datapoints": [
       [
         202.99999999999997,
         1.773103253e12
       ]
-    ]
-  },
-  {
-    "target": "array/cat/(\\hcat\\/5)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumeach/Matrix{Int64})"
+  },
+  {
     "datapoints": [
       [
         86.0,
         1.773103271e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlinear_view/SubArray{Float32/2/Matrix{Float32}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/cat/(\\hcat\\/5)"
+  },
+  {
     "datapoints": [
       [
         47.0,
         1.773185407e12
       ]
-    ]
-  },
-  {
-    "target": "array/equality/(==/Vector{Float32})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlinear_view/SubArray{Float32/2/Matrix{Float32}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})"
+  },
+  {
     "datapoints": [
       [
         107.0,
@@ -8177,13 +8173,13 @@
         109.00000000000001,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlinear_view/Matrix{Int32})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/equality/(==/Vector{Float32})"
+  },
+  {
     "datapoints": [
       [
         25.0,
@@ -8201,25 +8197,25 @@
         2.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumelt_boundscheck/BitMatrix)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlinear_view/Matrix{Int32})"
+  },
+  {
     "datapoints": [
       [
         14.000000000000002,
         1.77302643e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumvector_view/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int64/Matrix{Int64}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumelt_boundscheck/BitMatrix)"
+  },
+  {
     "datapoints": [
       [
         154.0,
@@ -8233,25 +8229,25 @@
         155.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/subarray/(\\lucompletepivSub!\\/1000)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumvector_view/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int64/Matrix{Int64}/false})"
+  },
+  {
     "datapoints": [
       [
         111.00000000000001,
         1.773185401e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlogical/Matrix{Int64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/subarray/(\\lucompletepivSub!\\/1000)"
+  },
+  {
     "datapoints": [
       [
         100.0,
@@ -8265,13 +8261,13 @@
         98.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(mapr_access/SubArray{Float32/2/Array{Float32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlogical/Matrix{Int64})"
+  },
+  {
     "datapoints": [
       [
         701.0,
@@ -8285,13 +8281,13 @@
         156.0,
         1.773185418e12
       ]
-    ]
-  },
-  {
-    "target": "array/subarray/(lucompletepivCopy!/250)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(mapr_access/SubArray{Float32/2/Array{Float32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})"
+  },
+  {
     "datapoints": [
       [
         135.0,
@@ -8309,13 +8305,13 @@
         93.0,
         1.773103259e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlogical/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Float32}/2/Float64/Matrix{Float64}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/subarray/(lucompletepivCopy!/250)"
+  },
+  {
     "datapoints": [
       [
         106.0,
@@ -8329,25 +8325,25 @@
         106.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/reductions/(norm/Int64)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlogical/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Float32}/2/Float64/Matrix{Float64}/false})"
+  },
+  {
     "datapoints": [
       [
         81.0,
         1.773185405e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlinear/SubArray{Int32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/reductions/(norm/Int64)"
+  },
+  {
     "datapoints": [
       [
         179.0,
@@ -8357,13 +8353,13 @@
         180.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/convert/(Complex{Float64}/Int)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlinear/SubArray{Int32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})"
+  },
+  {
     "datapoints": [
       [
         88.0,
@@ -8461,37 +8457,37 @@
         108.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/any/all/(all/UnitRange{Int64} generator)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/convert/(Complex{Float64}/Int)"
+  },
+  {
     "datapoints": [
       [
         125.0,
         1.773103253e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlinear_view/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Float32}/2/Float64/Matrix{Float64}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/any/all/(all/UnitRange{Int64} generator)"
+  },
+  {
     "datapoints": [
       [
         19.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcartesian/Matrix{Int64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlinear_view/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Float32}/2/Float64/Matrix{Float64}/false})"
+  },
+  {
     "datapoints": [
       [
         329.0,
@@ -8501,13 +8497,13 @@
         329.0,
         1.773103251e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlogical_view/SubArray{Int32/2/Matrix{Int32}/Tuple{UnitRange{Int64}/UnitRange{Int64}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcartesian/Matrix{Int64})"
+  },
+  {
     "datapoints": [
       [
         99.0,
@@ -8521,49 +8517,49 @@
         100.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcolon_view/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int64/Matrix{Int64}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlogical_view/SubArray{Int32/2/Matrix{Int32}/Tuple{UnitRange{Int64}/UnitRange{Int64}}/false})"
+  },
+  {
     "datapoints": [
       [
         40.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/any/all/(\\all\\/\\BitArray\\)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcolon_view/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int64/Matrix{Int64}/false})"
+  },
+  {
     "datapoints": [
       [
         90.0,
         1.773103271e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlinear_view/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Float32}/2/Float32/Matrix{Float32}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/any/all/(\\all\\/\\BitArray\\)"
+  },
+  {
     "datapoints": [
       [
         19.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/accumulate/(\\cumsum!\\/\\Float64\\/\\dim2\\)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlinear_view/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Float32}/2/Float32/Matrix{Float32}/false})"
+  },
+  {
     "datapoints": [
       [
         153.0,
@@ -8573,13 +8569,13 @@
         106.0,
         1.77318541e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcolon/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int64/Matrix{Int64}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/accumulate/(\\cumsum!\\/\\Float64\\/\\dim2\\)"
+  },
+  {
     "datapoints": [
       [
         112.99999999999999,
@@ -8597,13 +8593,13 @@
         110.00000000000001,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumrange/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int64/Matrix{Int64}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcolon/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int64/Matrix{Int64}/false})"
+  },
+  {
     "datapoints": [
       [
         114.99999999999999,
@@ -8617,13 +8613,13 @@
         112.99999999999999,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/equality/(isequal/Vector{Bool})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumrange/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int64/Matrix{Int64}/false})"
+  },
+  {
     "datapoints": [
       [
         140.0,
@@ -8653,13 +8649,13 @@
         109.00000000000001,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/cat/(vcat/500)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/equality/(isequal/Vector{Bool})"
+  },
+  {
     "datapoints": [
       [
         133.0,
@@ -8669,13 +8665,13 @@
         108.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/accumulate/(cumsum/Float64/dim1)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/cat/(vcat/500)"
+  },
+  {
     "datapoints": [
       [
         106.0,
@@ -8689,13 +8685,13 @@
         107.0,
         1.773185418e12
       ]
-    ]
-  },
-  {
-    "target": "array/growth/(\\push_multiple!\\/256)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/accumulate/(cumsum/Float64/dim1)"
+  },
+  {
     "datapoints": [
       [
         95.0,
@@ -8705,13 +8701,13 @@
         107.0,
         1.77318541e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/7d",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/growth/(\\push_multiple!\\/256)"
+  },
+  {
     "datapoints": [
       [
         173.0,
@@ -8725,13 +8721,13 @@
         172.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcartesian/BaseBenchmarks.ArrayBenchmarks.ArrayLF{Int32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/7d"
+  },
+  {
     "datapoints": [
       [
         629.0,
@@ -8741,25 +8737,25 @@
         627.0,
         1.773103251e12
       ]
-    ]
-  },
-  {
-    "target": "array/accumulate/(\\accumulate!\\/\\Int\\)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcartesian/BaseBenchmarks.ArrayBenchmarks.ArrayLF{Int32/2})"
+  },
+  {
     "datapoints": [
       [
         119.0,
         1.77318541e12
       ]
-    ]
-  },
-  {
-    "target": "array/subarray/(\\gramschmidt!\\/100)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/accumulate/(\\accumulate!\\/\\Int\\)"
+  },
+  {
     "datapoints": [
       [
         94.0,
@@ -8769,13 +8765,13 @@
         107.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumrange_view/SubArray{Int32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/2}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/subarray/(\\gramschmidt!\\/100)"
+  },
+  {
     "datapoints": [
       [
         189.0,
@@ -8789,13 +8785,13 @@
         175.0,
         1.773185415e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlogical_view/Base.ReinterpretArray{Float32/2/Int32/Matrix{Int32}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumrange_view/SubArray{Int32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/2}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})"
+  },
+  {
     "datapoints": [
       [
         102.0,
@@ -8809,13 +8805,13 @@
         101.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumelt/SubArray{Int32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/2}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlogical_view/Base.ReinterpretArray{Float32/2/Int32/Matrix{Int32}/false})"
+  },
+  {
     "datapoints": [
       [
         197.0,
@@ -8829,13 +8825,13 @@
         197.0,
         1.773185399e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/5d",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumelt/SubArray{Int32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/2}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})"
+  },
+  {
     "datapoints": [
       [
         150.0,
@@ -8853,25 +8849,25 @@
         149.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlinear_view/SubArray{Int32/2/Matrix{Int32}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/5d"
+  },
+  {
     "datapoints": [
       [
         152.0,
         1.773185408e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlinear_view/Matrix{Float64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlinear_view/SubArray{Int32/2/Matrix{Int32}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})"
+  },
+  {
     "datapoints": [
       [
         23.0,
@@ -8889,13 +8885,13 @@
         4.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/any/all/(any/Vector{Int64} generator)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlinear_view/Matrix{Float64})"
+  },
+  {
     "datapoints": [
       [
         92.0,
@@ -8917,13 +8913,13 @@
         120.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/equality/(isequal/Vector{Int64} isequal Vector{Float32})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/any/all/(any/Vector{Int64} generator)"
+  },
+  {
     "datapoints": [
       [
         79.0,
@@ -9005,13 +9001,13 @@
         110.00000000000001,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlogical/Matrix{Float64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/equality/(isequal/Vector{Int64} isequal Vector{Float32})"
+  },
+  {
     "datapoints": [
       [
         99.0,
@@ -9025,13 +9021,13 @@
         99.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumelt/SubArray{Float32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32/2}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlogical/Matrix{Float64})"
+  },
+  {
     "datapoints": [
       [
         173.0,
@@ -9041,13 +9037,13 @@
         173.0,
         1.773185411e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(mapr_access/SubArray{Int32/2/Matrix{Int32}/Tuple{UnitRange{Int64}/UnitRange{Int64}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumelt/SubArray{Float32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32/2}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})"
+  },
+  {
     "datapoints": [
       [
         411.00000000000006,
@@ -9073,13 +9069,13 @@
         156.0,
         1.773185415e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcartesian/BaseBenchmarks.ArrayBenchmarks.ArrayLSLS{Int32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(mapr_access/SubArray{Int32/2/Matrix{Int32}/Tuple{UnitRange{Int64}/UnitRange{Int64}}/false})"
+  },
+  {
     "datapoints": [
       [
         610.0,
@@ -9089,25 +9085,25 @@
         626.0,
         1.773103251e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcolon_view/SubArray{Int32/2/Matrix{Int32}/Tuple{UnitRange{Int64}/UnitRange{Int64}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcartesian/BaseBenchmarks.ArrayBenchmarks.ArrayLSLS{Int32/2})"
+  },
+  {
     "datapoints": [
       [
         241.0,
         1.773103253e12
       ]
-    ]
-  },
-  {
-    "target": "array/comprehension/(comprehension_iteration/Vector{Float64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcolon_view/SubArray{Int32/2/Matrix{Int32}/Tuple{UnitRange{Int64}/UnitRange{Int64}}/false})"
+  },
+  {
     "datapoints": [
       [
         90.0,
@@ -9225,13 +9221,13 @@
         105.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcolon/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Float32}/2/Float64/Matrix{Float64}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/comprehension/(comprehension_iteration/Vector{Float64})"
+  },
+  {
     "datapoints": [
       [
         112.99999999999999,
@@ -9249,13 +9245,13 @@
         112.00000000000001,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/bool/bitarray_true_fill!",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcolon/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Float32}/2/Float64/Matrix{Float64}/false})"
+  },
+  {
     "datapoints": [
       [
         105.0,
@@ -9305,13 +9301,13 @@
         88.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "array/reductions/(perf_reduce/Int64)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/bool/bitarray_true_fill!"
+  },
+  {
     "datapoints": [
       [
         94.0,
@@ -9369,25 +9365,25 @@
         95.0,
         1.773185415e12
       ]
-    ]
-  },
-  {
-    "target": "array/setindex!/(\\setindex!\\/1)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/reductions/(perf_reduce/Int64)"
+  },
+  {
     "datapoints": [
       [
         80.0,
         1.773103271e12
       ]
-    ]
-  },
-  {
-    "target": "array/any/all/(\\any\\/\\Vector{Float64}\\)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/setindex!/(\\setindex!\\/1)"
+  },
+  {
     "datapoints": [
       [
         128.0,
@@ -9397,13 +9393,13 @@
         78.0,
         1.77318541e12
       ]
-    ]
-  },
-  {
-    "target": "array/growth/(push_multiple!/8)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/any/all/(\\any\\/\\Vector{Float64}\\)"
+  },
+  {
     "datapoints": [
       [
         114.99999999999999,
@@ -9485,13 +9481,13 @@
         87.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlinear/Matrix{Int32})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/growth/(push_multiple!/8)"
+  },
+  {
     "datapoints": [
       [
         858.0,
@@ -9501,13 +9497,13 @@
         152.0,
         1.773185408e12
       ]
-    ]
-  },
-  {
-    "target": "array/equality/(\\==\\/\\Vector{Int64} == Vector{Float64}\\)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlinear/Matrix{Int32})"
+  },
+  {
     "datapoints": [
       [
         130.0,
@@ -9517,25 +9513,25 @@
         77.0,
         1.77318541e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumeach/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int64/Matrix{Int64}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/equality/(\\==\\/\\Vector{Int64} == Vector{Float64}\\)"
+  },
+  {
     "datapoints": [
       [
         223.0,
         1.773103253e12
       ]
-    ]
-  },
-  {
-    "target": "array/setindex!/(setindex!/5)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumeach/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int64/Matrix{Int64}/false})"
+  },
+  {
     "datapoints": [
       [
         107.0,
@@ -9601,13 +9597,13 @@
         93.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(mapr_access/Matrix{Int64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/setindex!/(setindex!/5)"
+  },
+  {
     "datapoints": [
       [
         415.00000000000006,
@@ -9617,13 +9613,13 @@
         417.0,
         1.773103251e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(mapr_access/SubArray{Int32/2/Matrix{Int32}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(mapr_access/Matrix{Int64})"
+  },
+  {
     "datapoints": [
       [
         397.0,
@@ -9633,25 +9629,25 @@
         401.0,
         1.773103251e12
       ]
-    ]
-  },
-  {
-    "target": "array/growth/(\\push_multiple!\\/8)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(mapr_access/SubArray{Int32/2/Matrix{Int32}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})"
+  },
+  {
     "datapoints": [
       [
         94.0,
         1.773103271e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlogical_view/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Float32}/2/Float64/Matrix{Float64}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/growth/(\\push_multiple!\\/8)"
+  },
+  {
     "datapoints": [
       [
         100.0,
@@ -9665,13 +9661,13 @@
         97.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/equality/(isequal/BitArray)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlogical_view/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Float32}/2/Float64/Matrix{Float64}/false})"
+  },
+  {
     "datapoints": [
       [
         106.0,
@@ -9709,13 +9705,13 @@
         125.0,
         1.773185402e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcolon/SubArray{Float32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/equality/(isequal/BitArray)"
+  },
+  {
     "datapoints": [
       [
         79.0,
@@ -9737,37 +9733,37 @@
         79.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/setindex!/(\\setindex!\\/4)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcolon/SubArray{Float32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})"
+  },
+  {
     "datapoints": [
       [
         119.0,
         1.773103271e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumeach_view/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int64/Matrix{Int64}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/setindex!/(\\setindex!\\/4)"
+  },
+  {
     "datapoints": [
       [
         32.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/convert/(Float64/Int)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumeach_view/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int64/Matrix{Int64}/false})"
+  },
+  {
     "datapoints": [
       [
         110.00000000000001,
@@ -9873,13 +9869,13 @@
         111.00000000000001,
         1.773185418e12
       ]
-    ]
-  },
-  {
-    "target": "array/any/all/(\\any\\/\\Vector{Float32}\\)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/convert/(Float64/Int)"
+  },
+  {
     "datapoints": [
       [
         130.0,
@@ -9889,13 +9885,13 @@
         77.0,
         1.77318541e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/6d",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/any/all/(\\any\\/\\Vector{Float32}\\)"
+  },
+  {
     "datapoints": [
       [
         106.0,
@@ -9913,13 +9909,13 @@
         163.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcolon/SubArray{Float32/2/Array{Float32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/6d"
+  },
+  {
     "datapoints": [
       [
         80.0,
@@ -9937,37 +9933,37 @@
         79.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumeach/SubArray{Int32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/2}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcolon/SubArray{Float32/2/Array{Float32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})"
+  },
+  {
     "datapoints": [
       [
         18.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumeach_view/BaseBenchmarks.ArrayBenchmarks.ArrayLF{Int32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumeach/SubArray{Int32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/2}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})"
+  },
+  {
     "datapoints": [
       [
         151.0,
         1.773185408e12
       ]
-    ]
-  },
-  {
-    "target": "array/growth/(push_multiple!/256)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumeach_view/BaseBenchmarks.ArrayBenchmarks.ArrayLF{Int32/2})"
+  },
+  {
     "datapoints": [
       [
         95.0,
@@ -10045,13 +10041,13 @@
         33.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/any/all/(\\all\\/\\Vector{Float32}\\)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/growth/(push_multiple!/256)"
+  },
+  {
     "datapoints": [
       [
         78.0,
@@ -10061,13 +10057,13 @@
         129.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "array/growth/(push_single!/256)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/any/all/(\\all\\/\\Vector{Float32}\\)"
+  },
+  {
     "datapoints": [
       [
         107.0,
@@ -10153,25 +10149,25 @@
         108.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "array/equality/(\\isequal\\/\\Vector{Int64} isequal Vector{Float64}\\)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/growth/(push_single!/256)"
+  },
+  {
     "datapoints": [
       [
         86.0,
         1.77318541e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlogical_view/SubArray{Int32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/2}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/equality/(\\isequal\\/\\Vector{Int64} isequal Vector{Float64}\\)"
+  },
+  {
     "datapoints": [
       [
         96.0,
@@ -10185,13 +10181,13 @@
         96.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcolon/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int32/Matrix{Int32}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlogical_view/SubArray{Int32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/2}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})"
+  },
+  {
     "datapoints": [
       [
         68.0,
@@ -10205,25 +10201,25 @@
         68.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(mapr_access/SubArray{Int32/2/Base.ReshapedArray{Int32/2/SubArray{Int32/3/Array{Int32/3}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true}/Tuple{}}/Tuple{Base.Slice{Base.OneTo{Int64}}/UnitRange{Int64}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcolon/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int32/Matrix{Int32}/false})"
+  },
+  {
     "datapoints": [
       [
         187.0,
         1.773103254e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumrange/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Float32}/2/Float64/Matrix{Float64}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(mapr_access/SubArray{Int32/2/Base.ReshapedArray{Int32/2/SubArray{Int32/3/Array{Int32/3}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true}/Tuple{}}/Tuple{Base.Slice{Base.OneTo{Int64}}/UnitRange{Int64}}/true})"
+  },
+  {
     "datapoints": [
       [
         112.00000000000001,
@@ -10237,13 +10233,13 @@
         112.99999999999999,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlogical_view/SubArray{Float32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32/2}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumrange/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Float32}/2/Float64/Matrix{Float64}/false})"
+  },
+  {
     "datapoints": [
       [
         97.0,
@@ -10257,25 +10253,25 @@
         100.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcolon/SubArray{Float32/2/Base.ReshapedArray{Float32/2/SubArray{Float32/3/Array{Float32/3}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true}/Tuple{}}/Tuple{Base.Slice{Base.OneTo{Int64}}/UnitRange{Int64}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlogical_view/SubArray{Float32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32/2}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})"
+  },
+  {
     "datapoints": [
       [
         154.0,
         1.773103267e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlinear_view/Array{Float64/3})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcolon/SubArray{Float32/2/Base.ReshapedArray{Float32/2/SubArray{Float32/3/Array{Float32/3}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true}/Tuple{}}/Tuple{Base.Slice{Base.OneTo{Int64}}/UnitRange{Int64}}/true})"
+  },
+  {
     "datapoints": [
       [
         12.0,
@@ -10293,13 +10289,13 @@
         4.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/cat/4467",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlinear_view/Array{Float64/3})"
+  },
+  {
     "datapoints": [
       [
         82.0,
@@ -10353,13 +10349,13 @@
         109.00000000000001,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/equality/(==/Vector{Bool})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/cat/4467"
+  },
+  {
     "datapoints": [
       [
         139.0,
@@ -10397,13 +10393,13 @@
         109.00000000000001,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/comprehension/(\\collect\\/\\StepRangeLen{Float64/Base.TwicePrecision{Float64}/Base.TwicePrecision{Float64}}\\)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/equality/(==/Vector{Bool})"
+  },
+  {
     "datapoints": [
       [
         40.0,
@@ -10413,13 +10409,13 @@
         248.0,
         1.77318541e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcolon/SubArray{Float32/2/Matrix{Float32}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/comprehension/(\\collect\\/\\StepRangeLen{Float64/Base.TwicePrecision{Float64}/Base.TwicePrecision{Float64}}\\)"
+  },
+  {
     "datapoints": [
       [
         73.0,
@@ -10441,25 +10437,25 @@
         78.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/reductions/(norminf/Int64)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcolon/SubArray{Float32/2/Matrix{Float32}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})"
+  },
+  {
     "datapoints": [
       [
         70.0,
         1.773185405e12
       ]
-    ]
-  },
-  {
-    "target": "array/comprehension/(comprehension_indexing/StepRangeLen{Float64/Base.TwicePrecision{Float64}/Base.TwicePrecision{Float64}/Int64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/reductions/(norminf/Int64)"
+  },
+  {
     "datapoints": [
       [
         162.0,
@@ -10469,13 +10465,13 @@
         211.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumrange/Matrix{Int64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/comprehension/(comprehension_indexing/StepRangeLen{Float64/Base.TwicePrecision{Float64}/Base.TwicePrecision{Float64}/Int64})"
+  },
+  {
     "datapoints": [
       [
         114.99999999999999,
@@ -10489,13 +10485,13 @@
         115.99999999999999,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/accumulate/(accumulate/Float64)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumrange/Matrix{Int64})"
+  },
+  {
     "datapoints": [
       [
         141.0,
@@ -10533,25 +10529,25 @@
         112.99999999999999,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumelt_boundscheck/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Float32}/2/Float32/Matrix{Float32}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/accumulate/(accumulate/Float64)"
+  },
+  {
     "datapoints": [
       [
         26.0,
         1.773103264e12
       ]
-    ]
-  },
-  {
-    "target": "array/equality/(\\isequal\\/\\Vector{Int64} isequal Vector{Float32}\\)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumelt_boundscheck/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Float32}/2/Float32/Matrix{Float32}/false})"
+  },
+  {
     "datapoints": [
       [
         137.0,
@@ -10561,25 +10557,25 @@
         107.0,
         1.77318541e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcartesian/1:100000)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/equality/(\\isequal\\/\\Vector{Int64} isequal Vector{Float32}\\)"
+  },
+  {
     "datapoints": [
       [
         0.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumrange/Base.ReinterpretArray{Float32/2/Int32/Matrix{Int32}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcartesian/1:100000)"
+  },
+  {
     "datapoints": [
       [
         73.0,
@@ -10593,37 +10589,37 @@
         77.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcolon_view/Matrix{Int32})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumrange/Base.ReinterpretArray{Float32/2/Int32/Matrix{Int32}/false})"
+  },
+  {
     "datapoints": [
       [
         197.0,
         1.773103253e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlinear/100000:-1:1)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcolon_view/Matrix{Int32})"
+  },
+  {
     "datapoints": [
       [
         1.0091379999999999e6,
         1.773103253e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(mapr_access/Base.ReinterpretArray{Float32/2/Int32/Matrix{Int32}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlinear/100000:-1:1)"
+  },
+  {
     "datapoints": [
       [
         241.0,
@@ -10633,49 +10629,49 @@
         242.0,
         1.773103251e12
       ]
-    ]
-  },
-  {
-    "target": "array/reductions/(sumabs2/Int64)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(mapr_access/Base.ReinterpretArray{Float32/2/Int32/Matrix{Int32}/false})"
+  },
+  {
     "datapoints": [
       [
         94.0,
         1.773103268e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumeach/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int32/Matrix{Int32}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/reductions/(sumabs2/Int64)"
+  },
+  {
     "datapoints": [
       [
         216.0,
         1.773103253e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumvector_view/SubArray{Float32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumeach/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int32/Matrix{Int32}/false})"
+  },
+  {
     "datapoints": [
       [
         102.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "array/subarray/(\\lucompletepivCopy!\\/1000)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumvector_view/SubArray{Float32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})"
+  },
+  {
     "datapoints": [
       [
         86.0,
@@ -10685,25 +10681,25 @@
         106.0,
         1.77318541e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumelt_boundscheck/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/subarray/(\\lucompletepivCopy!\\/1000)"
+  },
+  {
     "datapoints": [
       [
         160.0,
         1.773103253e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcolon/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumelt_boundscheck/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32/2})"
+  },
+  {
     "datapoints": [
       [
         98.0,
@@ -10737,25 +10733,25 @@
         77.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/ind2sub",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcolon/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/2})"
+  },
+  {
     "datapoints": [
       [
         10.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/subarray/(\\gramschmidt!\\/250)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/ind2sub"
+  },
+  {
     "datapoints": [
       [
         93.0,
@@ -10765,13 +10761,13 @@
         106.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumrange/SubArray{Float32/2/Matrix{Float32}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/subarray/(\\gramschmidt!\\/250)"
+  },
+  {
     "datapoints": [
       [
         74.0,
@@ -10785,13 +10781,13 @@
         77.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumrange/SubArray{Float32/2/Matrix{Float32}/Tuple{UnitRange{Int64}/UnitRange{Int64}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumrange/SubArray{Float32/2/Matrix{Float32}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})"
+  },
+  {
     "datapoints": [
       [
         77.0,
@@ -10805,13 +10801,13 @@
         78.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/bool/boolarray_bool_load!",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumrange/SubArray{Float32/2/Matrix{Float32}/Tuple{UnitRange{Int64}/UnitRange{Int64}}/false})"
+  },
+  {
     "datapoints": [
       [
         91.0,
@@ -10877,13 +10873,13 @@
         115.99999999999999,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/comprehension/(comprehension_iteration/StepRangeLen{Float64/Base.TwicePrecision{Float64}/Base.TwicePrecision{Float64}/Int64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/bool/boolarray_bool_load!"
+  },
+  {
     "datapoints": [
       [
         82.0,
@@ -10901,13 +10897,13 @@
         107.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/any/all/(\\any\\/\\Vector{Float32} generator\\)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/comprehension/(comprehension_iteration/StepRangeLen{Float64/Base.TwicePrecision{Float64}/Base.TwicePrecision{Float64}/Int64})"
+  },
+  {
     "datapoints": [
       [
         130.0,
@@ -10917,25 +10913,25 @@
         77.0,
         1.77318541e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlogical_view/SubArray{Float32/2/Base.ReshapedArray{Float32/2/SubArray{Float32/3/Array{Float32/3}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true}/Tuple{}}/Tuple{Base.Slice{Base.OneTo{Int64}}/UnitRange{Int64}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/any/all/(\\any\\/\\Vector{Float32} generator\\)"
+  },
+  {
     "datapoints": [
       [
         181.0,
         1.773103268e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcolon/SubArray{Int32/2/Matrix{Int32}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlogical_view/SubArray{Float32/2/Base.ReshapedArray{Float32/2/SubArray{Float32/3/Array{Float32/3}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true}/Tuple{}}/Tuple{Base.Slice{Base.OneTo{Int64}}/UnitRange{Int64}}/true})"
+  },
+  {
     "datapoints": [
       [
         75.0,
@@ -10965,37 +10961,37 @@
         77.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumrange_view/Matrix{Int32})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcolon/SubArray{Int32/2/Matrix{Int32}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})"
+  },
+  {
     "datapoints": [
       [
         194.0,
         1.773103253e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumvector_view/SubArray{Int32/2/Base.ReshapedArray{Int32/2/SubArray{Int32/3/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/3}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false}/Tuple{Base.MultiplicativeInverses.SignedMultiplicativeInverse{Int64}/Base.MultiplicativeInverses.SignedMultiplicativeInverse{Int64}}}/Tuple{Base.Slice{Base.OneTo{Int64}}/UnitRange{Int64}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumrange_view/Matrix{Int32})"
+  },
+  {
     "datapoints": [
       [
         97.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "array/any/all/(all/Vector{Int16})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumvector_view/SubArray{Int32/2/Base.ReshapedArray{Int32/2/SubArray{Int32/3/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/3}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false}/Tuple{Base.MultiplicativeInverses.SignedMultiplicativeInverse{Int64}/Base.MultiplicativeInverses.SignedMultiplicativeInverse{Int64}}}/Tuple{Base.Slice{Base.OneTo{Int64}}/UnitRange{Int64}}/false})"
+  },
+  {
     "datapoints": [
       [
         81.0,
@@ -11009,13 +11005,13 @@
         81.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumrange/SubArray{Int32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/any/all/(all/Vector{Int16})"
+  },
+  {
     "datapoints": [
       [
         82.0,
@@ -11033,13 +11029,13 @@
         82.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/cat/(hvcat_setind/500)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumrange/SubArray{Int32/2/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/false})"
+  },
+  {
     "datapoints": [
       [
         133.0,
@@ -11049,25 +11045,25 @@
         108.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(\\sumelt\\/\\BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32/2}\\)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/cat/(hvcat_setind/500)"
+  },
+  {
     "datapoints": [
       [
         153.0,
         1.77318541e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(mapr_access/SubArray{Float32/2/Matrix{Float32}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(\\sumelt\\/\\BaseBenchmarks.ArrayBenchmarks.ArrayLS{Float32/2}\\)"
+  },
+  {
     "datapoints": [
       [
         654.0,
@@ -11077,13 +11073,13 @@
         655.0,
         1.773103251e12
       ]
-    ]
-  },
-  {
-    "target": "array/any/all/(all/Vector{Float64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(mapr_access/SubArray{Float32/2/Matrix{Float32}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})"
+  },
+  {
     "datapoints": [
       [
         79.0,
@@ -11117,37 +11113,37 @@
         108.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/reverse/rev_loadmul_slow!",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/any/all/(all/Vector{Float64})"
+  },
+  {
     "datapoints": [
       [
         105.0,
         1.773103247e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(\\sumelt\\/\\BaseBenchmarks.ArrayBenchmarks.ArrayLSLS{Float32/2}\\)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/reverse/rev_loadmul_slow!"
+  },
+  {
     "datapoints": [
       [
         153.0,
         1.77318541e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcolon/BaseBenchmarks.ArrayBenchmarks.ArrayLSLS{Float32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(\\sumelt\\/\\BaseBenchmarks.ArrayBenchmarks.ArrayLSLS{Float32/2}\\)"
+  },
+  {
     "datapoints": [
       [
         96.0,
@@ -11173,13 +11169,13 @@
         75.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/cat/(catnd/500)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcolon/BaseBenchmarks.ArrayBenchmarks.ArrayLSLS{Float32/2})"
+  },
+  {
     "datapoints": [
       [
         109.00000000000001,
@@ -11197,25 +11193,25 @@
         108.0,
         1.773185407e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcartesian_view/100000:-1:1)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/cat/(catnd/500)"
+  },
+  {
     "datapoints": [
       [
         153.0,
         1.773103254e12
       ]
-    ]
-  },
-  {
-    "target": "array/reductions/(maxabs/Int64)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcartesian_view/100000:-1:1)"
+  },
+  {
     "datapoints": [
       [
         124.0,
@@ -11233,13 +11229,13 @@
         68.0,
         1.773185408e12
       ]
-    ]
-  },
-  {
-    "target": "array/any/all/(all/Vector{Float32} generator)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/reductions/(maxabs/Int64)"
+  },
+  {
     "datapoints": [
       [
         78.0,
@@ -11269,13 +11265,13 @@
         78.0,
         1.773185402e12
       ]
-    ]
-  },
-  {
-    "target": "array/any/all/(all/Vector{Float32})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/any/all/(all/Vector{Float32} generator)"
+  },
+  {
     "datapoints": [
       [
         129.0,
@@ -11313,13 +11309,13 @@
         78.0,
         1.773185413e12
       ]
-    ]
-  },
-  {
-    "target": "array/cat/(hcat_setind/5)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/any/all/(all/Vector{Float32})"
+  },
+  {
     "datapoints": [
       [
         101.0,
@@ -11349,13 +11345,13 @@
         86.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcartesian/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int64/Matrix{Int64}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/cat/(hcat_setind/5)"
+  },
+  {
     "datapoints": [
       [
         47.0,
@@ -11365,13 +11361,13 @@
         213.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/comprehension/(comprehension_collect/StepRangeLen{Float64/Base.TwicePrecision{Float64}/Base.TwicePrecision{Float64}})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcartesian/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int64/Matrix{Int64}/false})"
+  },
+  {
     "datapoints": [
       [
         252.0,
@@ -11381,25 +11377,25 @@
         247.00000000000003,
         1.773185408e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlinear_view/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int64/Matrix{Int64}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/comprehension/(comprehension_collect/StepRangeLen{Float64/Base.TwicePrecision{Float64}/Base.TwicePrecision{Float64}})"
+  },
+  {
     "datapoints": [
       [
         32.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/any/all/(all/Vector{Float64} generator)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlinear_view/Base.ReinterpretArray{BaseBenchmarks.ArrayBenchmarks.PairVals{Int32}/2/Int64/Matrix{Int64}/false})"
+  },
+  {
     "datapoints": [
       [
         79.0,
@@ -11449,13 +11445,13 @@
         108.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/bool/boolarray_true_fill!",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/any/all/(all/Vector{Float64} generator)"
+  },
+  {
     "datapoints": [
       [
         107.0,
@@ -11525,25 +11521,25 @@
         107.0,
         1.773185414e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumrange_view/SubArray{Int32/2/Matrix{Int32}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/bool/boolarray_true_fill!"
+  },
+  {
     "datapoints": [
       [
         187.0,
         1.773103253e12
       ]
-    ]
-  },
-  {
-    "target": "array/accumulate/(accumulate!/Int)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumrange_view/SubArray{Int32/2/Matrix{Int32}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})"
+  },
+  {
     "datapoints": [
       [
         256.99999999999994,
@@ -11589,13 +11585,13 @@
         82.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcolon/BaseBenchmarks.ArrayBenchmarks.ArrayLF{Float32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/accumulate/(accumulate!/Int)"
+  },
+  {
     "datapoints": [
       [
         77.0,
@@ -11617,13 +11613,13 @@
         60.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumrange/BaseBenchmarks.ArrayBenchmarks.ArrayLF{Float32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcolon/BaseBenchmarks.ArrayBenchmarks.ArrayLF{Float32/2})"
+  },
+  {
     "datapoints": [
       [
         75.0,
@@ -11637,13 +11633,13 @@
         60.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/any/all/(any/Vector{Int16} generator)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumrange/BaseBenchmarks.ArrayBenchmarks.ArrayLF{Float32/2})"
+  },
+  {
     "datapoints": [
       [
         81.0,
@@ -11657,13 +11653,13 @@
         81.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlogical_view/SubArray{Int32/2/Array{Int32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/any/all/(any/Vector{Int16} generator)"
+  },
+  {
     "datapoints": [
       [
         102.0,
@@ -11677,13 +11673,13 @@
         101.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumelt/SubArray{Int32/2/Matrix{Int32}/Tuple{UnitRange{Int64}/UnitRange{Int64}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlogical_view/SubArray{Int32/2/Array{Int32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})"
+  },
+  {
     "datapoints": [
       [
         154.0,
@@ -11693,13 +11689,13 @@
         176.0,
         1.773103264e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcolon/SubArray{Int32/2/Array{Int32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumelt/SubArray{Int32/2/Matrix{Int32}/Tuple{UnitRange{Int64}/UnitRange{Int64}}/false})"
+  },
+  {
     "datapoints": [
       [
         82.0,
@@ -11717,13 +11713,13 @@
         82.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumelt_boundscheck/SubArray{Int32/2/Matrix{Int32}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcolon/SubArray{Int32/2/Array{Int32/3}/Tuple{Int64/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})"
+  },
+  {
     "datapoints": [
       [
         25.0,
@@ -11745,13 +11741,13 @@
         15.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcolon/Base.ReinterpretArray{Float32/2/Int32/Matrix{Int32}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumelt_boundscheck/SubArray{Int32/2/Matrix{Int32}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})"
+  },
+  {
     "datapoints": [
       [
         72.0,
@@ -11773,13 +11769,13 @@
         77.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/convert/(\\Complex{Float64}\\/\\Int\\)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcolon/Base.ReinterpretArray{Float32/2/Int32/Matrix{Int32}/false})"
+  },
+  {
     "datapoints": [
       [
         81.0,
@@ -11789,13 +11785,13 @@
         124.0,
         1.77318541e12
       ]
-    ]
-  },
-  {
-    "target": "array/equality/(isequal/Vector{Float32})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/convert/(\\Complex{Float64}\\/\\Int\\)"
+  },
+  {
     "datapoints": [
       [
         117.0,
@@ -11845,13 +11841,13 @@
         91.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcolon_view/BaseBenchmarks.ArrayBenchmarks.ArrayLF{Int32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/equality/(isequal/Vector{Float32})"
+  },
+  {
     "datapoints": [
       [
         190.0,
@@ -11861,25 +11857,25 @@
         156.0,
         1.773185412e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlogical_view/SubArray{Int32/2/Base.ReshapedArray{Int32/2/SubArray{Int32/3/Array{Int32/3}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true}/Tuple{}}/Tuple{Base.Slice{Base.OneTo{Int64}}/UnitRange{Int64}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcolon_view/BaseBenchmarks.ArrayBenchmarks.ArrayLF{Int32/2})"
+  },
+  {
     "datapoints": [
       [
         179.0,
         1.773103268e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlinear_view/Matrix{Int64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlogical_view/SubArray{Int32/2/Base.ReshapedArray{Int32/2/SubArray{Int32/3/Array{Int32/3}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true}/Tuple{}}/Tuple{Base.Slice{Base.OneTo{Int64}}/UnitRange{Int64}}/true})"
+  },
+  {
     "datapoints": [
       [
         49.0,
@@ -11897,25 +11893,25 @@
         2.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/setindex!/(\\setindex!\\/2)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlinear_view/Matrix{Int64})"
+  },
+  {
     "datapoints": [
       [
         80.0,
         1.773103271e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcolon_view/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/setindex!/(\\setindex!\\/2)"
+  },
+  {
     "datapoints": [
       [
         190.0,
@@ -11925,13 +11921,13 @@
         153.0,
         1.773185412e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumelt/BaseBenchmarks.ArrayBenchmarks.ArrayLSLS{Int32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcolon_view/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/2})"
+  },
+  {
     "datapoints": [
       [
         185.0,
@@ -11949,25 +11945,25 @@
         185.0,
         1.77310327e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcartesian_view/1:100000)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumelt/BaseBenchmarks.ArrayBenchmarks.ArrayLSLS{Int32/2})"
+  },
+  {
     "datapoints": [
       [
         196.0,
         1.773185402e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumrange/Matrix{Float32})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcartesian_view/1:100000)"
+  },
+  {
     "datapoints": [
       [
         64.0,
@@ -11981,13 +11977,13 @@
         69.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcolon/Matrix{Int32})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumrange/Matrix{Float32})"
+  },
+  {
     "datapoints": [
       [
         65.0,
@@ -12009,13 +12005,13 @@
         77.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/subarray/(\\gramschmidt!\\/500)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcolon/Matrix{Int32})"
+  },
+  {
     "datapoints": [
       [
         94.0,
@@ -12025,13 +12021,13 @@
         105.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "array/subarray/(lucompletepivSub!/500)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/subarray/(\\gramschmidt!\\/500)"
+  },
+  {
     "datapoints": [
       [
         94.0,
@@ -12057,25 +12053,25 @@
         90.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumelt_boundscheck/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/2})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/subarray/(lucompletepivSub!/500)"
+  },
+  {
     "datapoints": [
       [
         160.0,
         1.773103253e12
       ]
-    ]
-  },
-  {
-    "target": "array/any/all/(any/Vector{Int16})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumelt_boundscheck/BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/2})"
+  },
+  {
     "datapoints": [
       [
         81.0,
@@ -12089,49 +12085,49 @@
         81.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcolon_view/100000:-1:1)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/any/all/(any/Vector{Int16})"
+  },
+  {
     "datapoints": [
       [
         151.0,
         1.773103254e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumrange_view/SubArray{Int32/2/Matrix{Int32}/Tuple{UnitRange{Int64}/UnitRange{Int64}}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcolon_view/100000:-1:1)"
+  },
+  {
     "datapoints": [
       [
         240.0,
         1.773103253e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumelt/1:100000)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumrange_view/SubArray{Int32/2/Matrix{Int32}/Tuple{UnitRange{Int64}/UnitRange{Int64}}/false})"
+  },
+  {
     "datapoints": [
       [
         2.1728830000000005e6,
         1.773103253e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlogical_view/Matrix{Float32})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumelt/1:100000)"
+  },
+  {
     "datapoints": [
       [
         98.0,
@@ -12145,49 +12141,49 @@
         101.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumlinear_view/100000:-1:1)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlogical_view/Matrix{Float32})"
+  },
+  {
     "datapoints": [
       [
         153.0,
         1.773103254e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumelt/Matrix{Int32})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumlinear_view/100000:-1:1)"
+  },
+  {
     "datapoints": [
       [
         151.0,
         1.773185408e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumeach_view/SubArray{Float32/2/Matrix{Float32}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumelt/Matrix{Int32})"
+  },
+  {
     "datapoints": [
       [
         48.0,
         1.773185407e12
       ]
-    ]
-  },
-  {
-    "target": "array/equality/(isequal/Vector{Int64} isequal Vector{Int64})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumeach_view/SubArray{Float32/2/Matrix{Float32}/Tuple{Base.Slice{Base.OneTo{Int64}}/Base.Slice{Base.OneTo{Int64}}}/true})"
+  },
+  {
     "datapoints": [
       [
         120.0,
@@ -12317,37 +12313,37 @@
         93.0,
         1.77318542e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(sumcartesian/Base.ReinterpretArray{Int32/3/Float64/Array{Float64/3}/false})",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/equality/(isequal/Vector{Int64} isequal Vector{Int64})"
+  },
+  {
     "datapoints": [
       [
         159.0,
         1.773103254e12
       ]
-    ]
-  },
-  {
-    "target": "array/index/(\\sumelt\\/\\BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/2}\\)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(sumcartesian/Base.ReinterpretArray{Int32/3/Float64/Array{Float64/3}/false})"
+  },
+  {
     "datapoints": [
       [
         185.0,
         1.773185401e12
       ]
-    ]
-  },
-  {
-    "target": "array/growth/(\\push_multiple!\\/2048)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/index/(\\sumelt\\/\\BaseBenchmarks.ArrayBenchmarks.ArrayLS{Int32/2}\\)"
+  },
+  {
     "datapoints": [
       [
         95.0,
@@ -12357,13 +12353,13 @@
         108.0,
         1.77318541e12
       ]
-    ]
-  },
-  {
-    "target": "array/equality/(==/BitArray)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/growth/(\\push_multiple!\\/2048)"
+  },
+  {
     "datapoints": [
       [
         106.0,
@@ -12441,13 +12437,13 @@
         91.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "array/subarray/(gramschmidt!/1000)",
+    ],
     "tags": {
       "group": "nanosoldier_array"
     },
+    "target": "array/equality/(==/BitArray)"
+  },
+  {
     "datapoints": [
       [
         106.0,
@@ -12489,6 +12485,10 @@
         111.00000000000001,
         1.773185415e12
       ]
-    ]
+    ],
+    "tags": {
+      "group": "nanosoldier_array"
+    },
+    "target": "array/subarray/(gramschmidt!/1000)"
   }
 ]

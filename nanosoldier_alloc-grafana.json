@@ -1,9 +1,5 @@
 [
   {
-    "target": "alloc/strings",
-    "tags": {
-      "group": "nanosoldier_alloc"
-    },
     "datapoints": [
       [
         105.0,
@@ -41,13 +37,13 @@
         105.0,
         1.773185418e12
       ]
-    ]
-  },
-  {
-    "target": "alloc/grow_array",
+    ],
     "tags": {
       "group": "nanosoldier_alloc"
     },
+    "target": "alloc/strings"
+  },
+  {
     "datapoints": [
       [
         93.0,
@@ -73,13 +69,13 @@
         92.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "alloc/structs",
+    ],
     "tags": {
       "group": "nanosoldier_alloc"
     },
+    "target": "alloc/grow_array"
+  },
+  {
     "datapoints": [
       [
         113.99999999999999,
@@ -101,13 +97,13 @@
         113.99999999999999,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "alloc/arrays",
+    ],
     "tags": {
       "group": "nanosoldier_alloc"
     },
+    "target": "alloc/structs"
+  },
+  {
     "datapoints": [
       [
         94.0,
@@ -145,6 +141,10 @@
         40.0,
         1.773185416e12
       ]
-    ]
+    ],
+    "tags": {
+      "group": "nanosoldier_alloc"
+    },
+    "target": "alloc/arrays"
   }
 ]

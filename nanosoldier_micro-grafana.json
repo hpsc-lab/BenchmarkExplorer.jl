@@ -1,9 +1,5 @@
 [
   {
-    "target": "micro/parseint",
-    "tags": {
-      "group": "nanosoldier_micro"
-    },
     "datapoints": [
       [
         109.00000000000001,
@@ -61,13 +57,13 @@
         109.00000000000001,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "micro/mandel",
+    ],
     "tags": {
       "group": "nanosoldier_micro"
     },
+    "target": "micro/parseint"
+  },
+  {
     "datapoints": [
       [
         117.0,
@@ -97,13 +93,13 @@
         106.0,
         1.773185419e12
       ]
-    ]
-  },
-  {
-    "target": "micro/printfd",
+    ],
     "tags": {
       "group": "nanosoldier_micro"
     },
+    "target": "micro/mandel"
+  },
+  {
     "datapoints": [
       [
         106.0,
@@ -157,13 +153,13 @@
         87.0,
         1.773185418e12
       ]
-    ]
-  },
-  {
-    "target": "micro/randmatstat",
+    ],
     "tags": {
       "group": "nanosoldier_micro"
     },
+    "target": "micro/printfd"
+  },
+  {
     "datapoints": [
       [
         100.0,
@@ -185,13 +181,13 @@
         102.0,
         1.773185416e12
       ]
-    ]
-  },
-  {
-    "target": "micro/fib",
+    ],
     "tags": {
       "group": "nanosoldier_micro"
     },
+    "target": "micro/randmatstat"
+  },
+  {
     "datapoints": [
       [
         87.0,
@@ -309,18 +305,22 @@
         87.0,
         1.773185421e12
       ]
-    ]
-  },
-  {
-    "target": "micro/randmatmul",
+    ],
     "tags": {
       "group": "nanosoldier_micro"
     },
+    "target": "micro/fib"
+  },
+  {
     "datapoints": [
       [
         106.0,
         1.773185401e12
       ]
-    ]
+    ],
+    "tags": {
+      "group": "nanosoldier_micro"
+    },
+    "target": "micro/randmatmul"
   }
 ]

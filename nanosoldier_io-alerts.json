@@ -1,80 +1,80 @@
 {
-  "threshold": 1.05,
-  "count": 8,
-  "group": "nanosoldier_io",
-  "generated": "2026-04-01T10:30:02.510",
   "alerts": [
     {
-      "latest_mean_ms": 130.0,
+      "benchmark": "io/serialization/(deserialize/Vector{String})",
       "commit": "b16a231",
+      "group": "nanosoldier_io",
+      "latest_mean_ms": 130.0,
       "ratio": 1.3,
       "timestamp": "2026-03-10T23:30:16.214",
-      "benchmark": "io/serialization/(deserialize/Vector{String})",
-      "group": "nanosoldier_io",
       "trend": "slower"
     },
     {
-      "latest_mean_ms": 111.0,
+      "benchmark": "io/read/read",
       "commit": "b146a70",
+      "group": "nanosoldier_io",
+      "latest_mean_ms": 111.0,
       "ratio": 1.11,
       "timestamp": "2026-03-10T23:30:16.871",
-      "benchmark": "io/read/read",
-      "group": "nanosoldier_io",
       "trend": "stable"
     },
     {
-      "latest_mean_ms": 109.0,
+      "benchmark": "io/serialization/(deserialize/Matrix{Float64})",
       "commit": "aebcebc",
+      "group": "nanosoldier_io",
+      "latest_mean_ms": 109.0,
       "ratio": 1.09,
       "timestamp": "2026-03-10T23:30:21.284",
-      "benchmark": "io/serialization/(deserialize/Matrix{Float64})",
-      "group": "nanosoldier_io",
       "trend": "stable"
     },
     {
-      "latest_mean_ms": 108.0,
+      "benchmark": "io/array_limit/(display/Matrix{Float64}(10000/10000))",
       "commit": "b146a70",
+      "group": "nanosoldier_io",
+      "latest_mean_ms": 108.0,
       "ratio": 1.08,
       "timestamp": "2026-03-10T23:30:16.871",
-      "benchmark": "io/array_limit/(display/Matrix{Float64}(10000/10000))",
-      "group": "nanosoldier_io",
       "trend": "slower"
     },
     {
-      "latest_mean_ms": 106.0,
-      "commit": "b146a70",
-      "ratio": 1.06,
-      "timestamp": "2026-03-10T23:30:16.871",
       "benchmark": "io/array_limit/(display/Vector{Float64}(100000000,))",
-      "group": "nanosoldier_io",
-      "trend": "stable"
-    },
-    {
-      "latest_mean_ms": 106.0,
       "commit": "b146a70",
+      "group": "nanosoldier_io",
+      "latest_mean_ms": 106.0,
       "ratio": 1.06,
       "timestamp": "2026-03-10T23:30:16.871",
-      "benchmark": "io/array_limit/(display/Matrix{Float64}(100000000/1))",
-      "group": "nanosoldier_io",
       "trend": "stable"
     },
     {
+      "benchmark": "io/array_limit/(display/Matrix{Float64}(100000000/1))",
+      "commit": "b146a70",
+      "group": "nanosoldier_io",
       "latest_mean_ms": 106.0,
+      "ratio": 1.06,
+      "timestamp": "2026-03-10T23:30:16.871",
+      "trend": "stable"
+    },
+    {
+      "benchmark": "io/read/readstring",
       "commit": "aebcebc",
+      "group": "nanosoldier_io",
+      "latest_mean_ms": 106.0,
       "ratio": 1.06,
       "timestamp": "2026-03-10T23:30:21.284",
-      "benchmark": "io/read/readstring",
-      "group": "nanosoldier_io",
       "trend": "slower"
     },
     {
-      "latest_mean_ms": 106.0,
+      "benchmark": "io/serialization/(serialize/Matrix{Float64})",
       "commit": "b093917",
+      "group": "nanosoldier_io",
+      "latest_mean_ms": 106.0,
       "ratio": 1.06,
       "timestamp": "2026-03-10T23:30:18.101",
-      "benchmark": "io/serialization/(serialize/Matrix{Float64})",
-      "group": "nanosoldier_io",
       "trend": "slower"
     }
-  ]
+  ],
+  "count": 8,
+  "generated": "2026-04-02T03:28:34.856",
+  "group": "nanosoldier_io",
+  "threshold": 1.05
 }
