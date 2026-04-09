@@ -522,7 +522,7 @@
                 transition: width 0.3s ease, opacity 0.4s ease;
             }
 
-            .heatmap-wrap { overflow-x: auto; overflow-y: clip; padding: 24px 32px 32px; display: flex; justify-content: center; }
+            .heatmap-wrap { overflow: auto; max-height: 80vh; padding: 24px 32px 32px; display: flex; justify-content: center; }
             .heatmap-table { border-collapse: separate; border-spacing: 2px; font-size: 0.72em; white-space: nowrap; }
             .heatmap-table th { padding: 4px 8px; font-weight: 600; border-bottom: 2px solid #191919; font-size: 0.9em; color: #555; position: sticky; top: 0; z-index: 10; background: #f7f6f3; }
             .heatmap-table td { height: 28px; min-width: 38px; text-align: center; font-size: 0.85em; transition: opacity 0.15s; border-radius: 3px; }
@@ -730,7 +730,7 @@
         <div class="container">
             <header style="text-align: center;">
                 <h1>nanosoldier_scalar</h1>
-                <p>Commit: <a href="https://github.com/hpsc-lab/BenchmarkExplorer.jl/commit/b327c4eb57e71072cff6ad0e2f8242b02af26c4a" target="_blank" style="color: #666; text-decoration: none;">b327c4e</a></p>
+                <p>Commit: <a href="https://github.com/hpsc-lab/BenchmarkExplorer.jl/commit/6edd9d93bd9b6be4bc53975293b34195823e2c32" target="_blank" style="color: #666; text-decoration: none;">6edd9d9</a></p>
             </header>
 
             <div class="stats-panel" id="stats-panel"></div>
@@ -1987,16 +1987,11 @@
                 container.appendChild(wrap);
 
                 const updateStickyHeaders = () => {
-                    const ctrlH = (document.querySelector('.controls') || {}).offsetHeight || 0;
                     table.querySelectorAll('thead th').forEach(th => {
-                        th.style.top = ctrlH + 'px';
+                        th.style.top = '0';
                     });
                 };
-                requestAnimationFrame(() => requestAnimationFrame(updateStickyHeaders));
-                const ctrl = document.querySelector('.controls');
-                if (ctrl && window.ResizeObserver) {
-                    new ResizeObserver(updateStickyHeaders).observe(ctrl);
-                }
+                requestAnimationFrame(updateStickyHeaders);
 
                 const CHUNK_SIZE = 200;
                 let rowIndex = 0;
