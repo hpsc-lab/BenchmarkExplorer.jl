@@ -1,0 +1,35 @@
+{
+  "alerts": [
+    {
+      "benchmark": "globals/many_globals",
+      "commit": "c817747",
+      "group": "nanosoldier_globals",
+      "latest_mean_ms": 0.032,
+      "ratio": 1.6718990524537505,
+      "timestamp": "2026-07-24T03:31:46.363",
+      "trend": "stable"
+    },
+    {
+      "benchmark": "globals/swap_typed",
+      "commit": "c817747",
+      "group": "nanosoldier_globals",
+      "latest_mean_ms": 0.067,
+      "ratio": 1.3561732416538408,
+      "timestamp": "2026-07-24T03:31:46.363",
+      "trend": "stable"
+    },
+    {
+      "benchmark": "globals/rmw_typed",
+      "commit": "c817747",
+      "group": "nanosoldier_globals",
+      "latest_mean_ms": 0.086,
+      "ratio": 1.1353970577185901,
+      "timestamp": "2026-07-24T03:31:46.363",
+      "trend": "stable"
+    }
+  ],
+  "count": 3,
+  "generated": "2026-07-24T03:33:34.444",
+  "group": "nanosoldier_globals",
+  "threshold": 1.05
+}
