@@ -1,7 +1,17 @@
 {
-  "alerts": [],
-  "count": 0,
-  "generated": "2026-11-04T02:41:08.887",
+  "alerts": [
+    {
+      "benchmark": "parallel/remotecall/(identity/512)",
+      "commit": "b4c79e7",
+      "group": "nanosoldier_parallel",
+      "latest_mean_ms": 0.065,
+      "ratio": 1.0807941714212324,
+      "timestamp": "2026-11-05T02:38:19.820",
+      "trend": "faster"
+    }
+  ],
+  "count": 1,
+  "generated": "2026-11-05T02:39:57.330",
   "group": "nanosoldier_parallel",
   "threshold": 1.05
 }
